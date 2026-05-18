@@ -21,8 +21,11 @@ rockenhaus-litigation/
 |       ├── opposing/                   Motions, notices, responses authored by Opposing Party
 │       └── orders/                     Orders from the Court
 
-The Third Judicial Circuit Case Search Portal is available at [https://cmspublic.3rdcc.org/]. From there select "Non-Criminal Case Records" solve the captcha, select search by case, type in the case number 26-104594-DO, and press the search button. You will see the results next, select the case and you will be able to see the comparison Register of Actions to compare the contents of this repository to the Register of Actions.
+The Third Judicial Circuit Case Search Portal is available at [https://cmspublic.3rdcc.org/]. 
+From there select "Non-Criminal Case Records" solve the captcha, select search by case, type in the case number 26-104594-DO. 
+Press the search button. You will see the results next. Select the case and you will be able to see the comparison Register of Actions.
 
 ## License
 
-This repository contains private litigation work product and personal records. No license is granted for redistribution, reuse, or republication of any content. Inadvertent disclosure does not waive privilege.
+This repository contains private litigation work product and personal records. No license is granted for redistribution, 
+reuse, or republication of any content. Inadvertent disclosure does not waive privilege.
