@@ -14,7 +14,7 @@ Personal document repository for active state-court litigation in Michigan. Main
 ## Repository layout
 
 ```
-rockenhaus-litigation/
+rockenhaus-litigation-public/
 ├── cases/                              Per-matter directories
 │   └── <case_id>/
 │       ├── filed/                      Motions, notices, responses authored by Conrad
