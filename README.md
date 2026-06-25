@@ -2,6 +2,7 @@
 
 Personal document repository for active state-court litigation in Michigan. Maintained pro se by Conrad Alan Rockenhaus.
 
+Rendered filings and discovery PDFs for each active matter are synced automatically from the private source repository (`skyphusion-labs/rockenhaus-litigation`) on each successful CI build. Other paths (`opposing/`, `orders/`, `filed/Exhibits/`, etc.) are maintained manually.
 
 ## Active matters
 
@@ -15,18 +16,15 @@ Personal document repository for active state-court litigation in Michigan. Main
 
 ```
 rockenhaus-litigation-public/
-├── cases/                              Per-matter directories
-│   └── <case_id>/
-│       ├── filed/                      Motions, notices, responses authored by Conrad
-│       ├── discovery/                  Discovery requests (Interrogatories, RFAs, RFPs) and responses
-|       ├── opposing/                   Motions, notices, responses authored by Opposing Party
-│       └── orders/                     Orders from the Court
+├── <case_id>/                          Per-matter directory (e.g. wayne_ppo_26-102221-PP)
+│   ├── filed/                          Motions, notices, responses authored by Conrad
+│   ├── discovery/                      Discovery requests and responses
+│   ├── opposing/                       Motions, notices, responses authored by opposing party
+│   └── orders/                         Orders from the court
+```
 
-The Third Judicial Circuit Case Search Portal is available at [https://cmspublic.3rdcc.org/]. 
-From there select "Non-Criminal Case Records" solve the captcha, select search by case, type in the case number 26-104594-DO. 
-Press the search button. You will see the results next. Select the case and you will be able to see the comparison Register of Actions.
+The Third Judicial Circuit Case Search Portal is available at [https://cmspublic.3rdcc.org/](https://cmspublic.3rdcc.org/). From there select "Non-Criminal Case Records", solve the captcha, select search by case, type in the case number `26-104594-DO`, press the search button, then select the case to view the Register of Actions.
 
 ## License
 
-This repository contains private litigation work product and personal records. No license is granted for redistribution, 
-reuse, or republication of any content. Inadvertent disclosure does not waive privilege.
+This repository contains private litigation work product and personal records. No license is granted for redistribution, reuse, or republication of any content. Inadvertent disclosure does not waive privilege.
