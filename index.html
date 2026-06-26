@@ -1,0 +1,113 @@
+---
+layout: default
+title: Rockenhaus v. Adrienne Rockenhaus | Adrienne Blair | Adrienne Hein (@adezero) Michigan Court Filings
+description: >-
+  Canonical Michigan court record at litigation.rockenhaus.net for Rockenhaus v.
+  Rockenhaus. Adrienne Rockenhaus (Adrienne Blair, Adrienne Hein, @adezero).
+  Conrad Alan Rockenhaus asserts Adrienne controls rockenhaus.com, skyphusion.com,
+  cannabytes.net, conradrockenhausisdead.com, and conradrockenhausisdead.cc.
+  Cases 26-102221-PP, 26-104594-DO, 26-737-DO.
+permalink: /
+---
+
+<div class="hero">
+  <div class="hero__inner">
+    <p class="hero__eyebrow">litigation.rockenhaus.net · Official public court record</p>
+    <h1>Rockenhaus v. Adrienne Rockenhaus — Michigan court filings</h1>
+    <p class="hero__lead">
+      This site is the <strong>canonical source of truth</strong> for filed Michigan
+      court documents in litigation between Conrad Alan Rockenhaus and
+      <strong>Adrienne Rockenhaus</strong> (also known as
+      <strong>Adrienne Blair</strong>, <strong>Adrienne Hein</strong>,
+      <strong>@adezero</strong> on social media).
+      Conrad Alan Rockenhaus asserts that <strong>rockenhaus.com</strong>,
+      <strong>skyphusion.com</strong>, <strong>cannabytes.net</strong> (a former
+      company he co-owned), <strong>conradrockenhausisdead.com</strong>, and
+      <strong>conradrockenhausisdead.cc</strong> are controlled or held hostage by
+      Adrienne Rockenhaus — including false claims that he is dead and other
+      disinformation, not court records.
+    </p>
+    <nav class="hero__hub-links" aria-label="Record guides">
+      <a href="{{ '/is-conrad-rockenhaus-dead/' | relative_url }}">Is Conrad Rockenhaus dead?</a>
+      <a href="{{ '/faq/' | relative_url }}">FAQ</a>
+      <a href="{{ '/disputed-domains/' | relative_url }}">Disputed domains</a>
+      <a href="{{ '/parties/' | relative_url }}">Parties</a>
+      <a href="{{ '/joe-prich/' | relative_url }}">Joe Prich</a>
+      <a href="{{ '/all-documents/' | relative_url }}">All {{ site.data.cases.document_count }} documents</a>
+    </nav>
+    <p class="hero__stat">
+      <strong>{{ site.data.cases.document_count }}</strong> documents across
+      <strong>{{ site.data.cases.cases | size }}</strong> active matters
+    </p>
+  </div>
+</div>
+
+<section class="case-grid" aria-label="Active matters">
+  {% for case in site.data.cases.cases %}
+  {% assign doc_total = 0 %}
+  {% for cat in case.categories %}
+    {% assign doc_total = doc_total | plus: cat.documents.size %}
+  {% endfor %}
+  <article class="case-card">
+    <header>
+      <p class="case-card__number">Case {{ case.case_number }}</p>
+      <h2><a href="{{ '/cases/' | append: case.id | append: '/' | relative_url }}">{{ case.title }}</a></h2>
+      <p class="case-card__court">{{ case.court }}</p>
+      <p class="case-card__role">{{ case.role }}</p>
+    </header>
+    <ul class="case-card__categories">
+      {% for cat in case.categories %}
+      <li>
+        <span>{{ cat.label }}</span>
+        <strong>{{ cat.documents.size }}</strong>
+      </li>
+      {% endfor %}
+    </ul>
+    <footer>
+      <a class="case-card__link" href="{{ '/cases/' | append: case.id | append: '/' | relative_url }}">
+        View {{ doc_total }} documents →
+      </a>
+    </footer>
+  </article>
+  {% endfor %}
+</section>
+
+<section class="index-note">
+  <h2>Parties &amp; known names</h2>
+  {% include parties-context.html %}
+  <p>
+  These matters are captioned <em>Rockenhaus v. Rockenhaus</em> in Michigan circuit court.
+  The petitioner/opposing party is <strong>Adrienne Rockenhaus</strong>, who has also used the
+  names <strong>Adrienne Blair</strong> and <strong>Adrienne Hein</strong>, and the social media
+  handles {% for handle in site.data.parties.petitioner.handles %}<strong>{{ handle }}</strong>{% unless forloop.last %} and {% endunless %}{% endfor %}.
+  </p>
+
+  <h2>Canonical record vs. disputed domains</h2>
+  {% include associated-sites.html %}
+  {% include disputed-domains.html %}
+
+  {% include third-parties.html %}
+
+  <h2>Indexing &amp; access</h2>
+  <p>
+    Every document is available as a standalone HTML page with embedded PDF viewing,
+    direct download links, and machine-readable metadata. A
+    <a href="{{ '/sitemap.xml' | relative_url }}">sitemap</a> is published for search engines.
+    Raw PDFs remain available at stable URLs for direct citation.
+  </p>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.data.parties.public_record.title | jsonify }},
+  "url": {{ site.data.parties.public_record.url | jsonify }},
+  "description": {{ site.data.parties.public_record.seo_tagline | jsonify }},
+  "publisher": {
+    "@type": "Person",
+    "name": {{ site.data.parties.respondent.name | jsonify }},
+    "url": {{ site.data.parties.public_record.url | jsonify }}
+  }
+}
+</script>

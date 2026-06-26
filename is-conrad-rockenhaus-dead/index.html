@@ -1,0 +1,47 @@
+---
+layout: hub
+title: Is Conrad Rockenhaus dead? — Official court record
+description: >-
+  Conrad Alan Rockenhaus is not dead. conradrockenhausisdead.com and
+  conradrockenhausisdead.cc are disputed domains Conrad asserts were created by
+  Adrienne Rockenhaus. Filed Michigan court records at litigation.rockenhaus.net.
+permalink: /is-conrad-rockenhaus-dead/
+breadcrumbs:
+  - name: Home
+    url: /
+  - name: Is Conrad Rockenhaus dead?
+---
+
+<p class="hub-lead">
+  <strong>Conrad Alan Rockenhaus maintains this public court record and is litigating
+  pro se in Michigan circuit court.</strong> He asserts that Adrienne Rockenhaus
+  (Adrienne Blair, Adrienne Hein, @adezero) created
+  <a href="https://conradrockenhausisdead.com" rel="nofollow noopener">conradrockenhausisdead.com</a>
+  and
+  <a href="https://conradrockenhausisdead.cc" rel="nofollow noopener">conradrockenhausisdead.cc</a>
+  to falsely report that he is dead. Those domains are <strong>not authoritative</strong>.
+  Filed pleadings, orders, and exhibits indexed here are the canonical source of truth.
+</p>
+
+{% include disputed-domains.html %}
+
+<p class="hub-cta">
+  <a href="{{ '/faq/' | relative_url }}">Full FAQ</a> ·
+  <a href="{{ '/all-documents/' | relative_url }}">Browse all {{ site.data.cases.document_count }} court PDFs</a> ·
+  <a href="{{ '/' | relative_url }}">Home</a>
+</p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Is Conrad Rockenhaus dead?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": {{ site.data.faq.faqs | where: "question", "Is Conrad Rockenhaus dead?" | map: "answer" | first | jsonify }}
+    }
+  }]
+}
+</script>

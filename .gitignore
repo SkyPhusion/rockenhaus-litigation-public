@@ -1,0 +1,8 @@
+# Generated at build time
+_documents/
+cases/
+all-documents/
+_data/cases.json
+_data/pdf_text/
+_data/indexnow.json
+_site/

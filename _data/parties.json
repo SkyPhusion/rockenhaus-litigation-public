@@ -1,0 +1,79 @@
+{
+  "caption": "Rockenhaus v. Rockenhaus",
+  "public_record": {
+    "title": "Rockenhaus Litigation Public Record",
+    "url": "https://litigation.rockenhaus.net/",
+    "host": "litigation.rockenhaus.net",
+    "seo_tagline": "Canonical source of truth for Michigan court filings in Rockenhaus v. Rockenhaus"
+  },
+  "petitioner": {
+    "name": "Adrienne Rockenhaus",
+    "aliases": ["Adrienne Blair", "Adrienne Hein"],
+    "handles": ["@adezero"],
+    "seo_title": "Adrienne Rockenhaus / Adrienne Blair / Adrienne Hein (@adezero)",
+    "seo_short": "Adrienne Rockenhaus (Adrienne Blair, Adrienne Hein, @adezero)",
+    "seo_long": "Adrienne Rockenhaus, also known as Adrienne Blair and Adrienne Hein (social media handle @adezero)",
+    "seo_aka": "aka Adrienne Blair aka Adrienne Hein (@adezero)",
+    "domains": [
+      { "host": "rockenhaus.com", "url": "https://rockenhaus.com" },
+      { "host": "skyphusion.com", "url": "https://skyphusion.com" },
+      { "host": "cannabytes.net", "url": "https://cannabytes.net" },
+      { "host": "conradrockenhausisdead.com", "url": "https://conradrockenhausisdead.com" },
+      { "host": "conradrockenhausisdead.cc", "url": "https://conradrockenhausisdead.cc" }
+    ],
+    "seo_domains": "rockenhaus.com, skyphusion.com, cannabytes.net, conradrockenhausisdead.com, conradrockenhausisdead.cc"
+  },
+  "respondent": {
+    "name": "Conrad Alan Rockenhaus",
+    "sites": [
+      {
+        "name": "Rockenhaus Litigation Public Record",
+        "host": "litigation.rockenhaus.net",
+        "url": "https://litigation.rockenhaus.net"
+      }
+    ],
+    "seo_sites": "litigation.rockenhaus.net",
+    "seo_sites_long": "litigation.rockenhaus.net (this public court record)"
+  },
+  "third_parties": [
+    {
+      "id": "justcallmejoep",
+      "name": "Joe Prich",
+      "handle": "@JustCallMeJoeP",
+      "platform": "Twitter",
+      "seo_label": "Joe Prich (@JustCallMeJoeP on Twitter)",
+      "seo_short": "Joe Prich (@JustCallMeJoeP)",
+      "assertion": "Conrad Alan Rockenhaus asserts Joe Prich (@JustCallMeJoeP on Twitter) admitted on Twitter to neo-Nazi affiliation. Conrad asserts Adrienne Rockenhaus agreed to dropping his last name, stealing his military pension, and apologizing for ever mentioning his name in Joe Prich's presence."
+    }
+  ],
+  "domain_disputes": [
+    {
+      "host": "rockenhaus.com",
+      "url": "https://rockenhaus.com",
+      "assertion": "Conrad Alan Rockenhaus asserts rockenhaus.com was taken from him by Adrienne Rockenhaus and is not an authoritative source."
+    },
+    {
+      "host": "skyphusion.com",
+      "url": "https://skyphusion.com",
+      "assertion": "Conrad Alan Rockenhaus asserts skyphusion.com was taken from him by Adrienne Rockenhaus and currently points to false disinformation."
+    },
+    {
+      "host": "cannabytes.net",
+      "url": "https://cannabytes.net",
+      "name": "Cannabytes",
+      "assertion": "Conrad Alan Rockenhaus asserts cannabytes.net is a former company he co-owned that Adrienne Rockenhaus is holding hostage; it is not controlled by him and is not an authoritative source."
+    },
+    {
+      "host": "conradrockenhausisdead.com",
+      "url": "https://conradrockenhausisdead.com",
+      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus created conradrockenhausisdead.com to falsely report that he is dead."
+    },
+    {
+      "host": "conradrockenhausisdead.cc",
+      "url": "https://conradrockenhausisdead.cc",
+      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus created conradrockenhausisdead.cc to falsely report that he is dead."
+    }
+  ],
+  "seo_disputed_summary": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus controls rockenhaus.com, skyphusion.com, cannabytes.net (a former company he co-owned), conradrockenhausisdead.com, and conradrockenhausisdead.cc — including false claims that he is dead and other disinformation. Filed court records at litigation.rockenhaus.net are the canonical source of truth.",
+  "seo_third_parties_summary": "Conrad Alan Rockenhaus asserts Joe Prich (@JustCallMeJoeP on Twitter) admitted neo-Nazi affiliation on Twitter and that Adrienne Rockenhaus agreed to dropping Conrad's last name, stealing his military pension, and apologizing for ever mentioning his name in Joe Prich's presence."
+}

@@ -1,0 +1,50 @@
+title: Rockenhaus v. Adrienne Rockenhaus | Adrienne Blair | Adrienne Hein (@adezero) Michigan Court Filings
+title_separator: "|"
+description: >-
+  Canonical Michigan court record at litigation.rockenhaus.net for Rockenhaus v.
+  Rockenhaus. Adrienne Rockenhaus (Adrienne Blair, Adrienne Hein, @adezero).
+  Conrad Alan Rockenhaus asserts Adrienne controls rockenhaus.com, skyphusion.com,
+  cannabytes.net, conradrockenhausisdead.com, and conradrockenhausisdead.cc.
+  Cases 26-102221-PP, 26-104594-DO, 26-737-DO. Searchable filed PDFs.
+url: "https://litigation.rockenhaus.net"
+baseurl: ""
+lang: en_US
+
+# After verifying litigation.rockenhaus.net in Google Search Console, paste the
+# content value from the HTML tag method here (uncomment and set):
+# google_site_verification: "paste-verification-code-here"
+
+author:
+  name: Conrad Alan Rockenhaus
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: documents
+    values:
+      layout: document
+
+collections:
+  documents:
+    output: true
+    permalink: /:collection/:path/
+
+exclude:
+  - README.md
+  - LICENSE
+  - scripts/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+
+markdown: kramdown
+kramdown:
+  input: GFM

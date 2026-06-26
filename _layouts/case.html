@@ -1,0 +1,62 @@
+---
+layout: default
+---
+{% assign case = nil %}
+{% for c in site.data.cases.cases %}
+  {% if c.id == page.case_id %}
+    {% assign case = c %}
+  {% endif %}
+{% endfor %}
+
+<article class="case-page">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="{{ '/' | relative_url }}">All matters</a></li>
+      <li aria-current="page">{{ page.heading | default: page.title }}</li>
+    </ol>
+  </nav>
+
+  <header class="case-header">
+    <p class="case-header__number">Case {{ page.case_number }}</p>
+    <h1>{{ page.heading | default: page.title }}</h1>
+    <p class="case-header__parties">
+      Respondent: <strong>{{ site.data.parties.respondent.name }}</strong>
+      ({{ site.data.parties.respondent.seo_sites }}).
+      Petitioner / opposing party:
+      <strong>{{ site.data.parties.petitioner.name }}</strong>
+      ({{ site.data.parties.petitioner.seo_aka }}).
+      Court caption: <em>{{ site.data.parties.caption }}</em>.
+    </p>
+    <p class="case-header__court">{{ page.court }}</p>
+    <p class="case-header__role">{{ page.role }}</p>
+  </header>
+
+  {% if case %}
+  {% for category in case.categories %}
+  <section class="doc-section" id="{{ category.id }}">
+    <header class="doc-section__header">
+      <h2>{{ category.label }}</h2>
+      <span class="doc-section__count">{{ category.documents.size }} documents</span>
+    </header>
+    <ul class="doc-list">
+      {% for doc in category.documents %}
+      <li class="doc-list__item">
+        <a class="doc-list__link" href="{{ doc.url | relative_url }}">
+          <span class="doc-list__title">{{ doc.title }}</span>
+          <span class="doc-list__filename">{{ doc.filename }}</span>
+        </a>
+        <a class="doc-list__pdf" href="{{ doc.pdf_url | relative_url }}" title="Direct PDF" aria-label="Download {{ doc.title }} PDF">PDF</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+  {% endif %}
+
+  <section class="case-parties-note">
+    {% include parties-context.html %}
+    {% include associated-sites.html %}
+    {% include disputed-domains.html %}
+    {% include third-parties.html %}
+  </section>
+</article>

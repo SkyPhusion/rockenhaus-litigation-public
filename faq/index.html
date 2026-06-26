@@ -1,0 +1,47 @@
+---
+layout: hub
+title: FAQ — Is Conrad Rockenhaus dead? Rockenhaus court record
+description: >-
+  Answers about Rockenhaus v. Rockenhaus Michigan litigation: Is Conrad Rockenhaus
+  dead? Official court record at litigation.rockenhaus.net. Disputed domains
+  rockenhaus.com, skyphusion.com, conradrockenhausisdead.com. Case numbers
+  26-102221-PP, 26-104594-DO, 26-737-DO.
+permalink: /faq/
+breadcrumbs:
+  - name: Home
+    url: /
+  - name: FAQ
+---
+
+<section class="faq-list">
+  {% for item in site.data.faq.faqs %}
+  <details class="faq-item" {% if forloop.first %}open{% endif %}>
+    <summary class="faq-item__question">{{ item.question }}</summary>
+    <p>{{ item.answer }}</p>
+  </details>
+  {% endfor %}
+</section>
+
+<p class="hub-cta">
+  Browse <a href="{{ '/all-documents/' | relative_url }}">all filed court PDFs</a> or
+  <a href="{{ '/disputed-domains/' | relative_url }}">disputed domains</a> indexed in this record.
+</p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in site.data.faq.faqs %}
+    {
+      "@type": "Question",
+      "name": {{ item.question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.answer | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="alternate" type="text/plain" href="{{ '/llms.txt' | relative_url }}" title="LLM site summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  {% if page.pdf_path %}
+  <link rel="alternate" type="application/pdf" href="{{ page.pdf_path | relative_url }}">
+  {% endif %}
+  {% if page.layout == 'document' %}
+  <script src="{{ '/assets/js/pdf-viewer.js' | relative_url }}" defer></script>
+  {% endif %}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-brand" href="{{ '/' | relative_url }}">
+        <span class="site-brand__mark" aria-hidden="true">§</span>
+        <span class="site-brand__text">
+          <strong>Rockenhaus v. Adrienne Rockenhaus</strong>
+          <span>litigation.rockenhaus.net · canonical court record</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/is-conrad-rockenhaus-dead/' | relative_url }}">Is Conrad dead?</a>
+        <a href="{{ '/faq/' | relative_url }}">FAQ</a>
+        <a href="{{ '/disputed-domains/' | relative_url }}">Disputed domains</a>
+        <a href="{{ '/all-documents/' | relative_url }}">All documents</a>
+        {% for case in site.data.cases.cases %}
+        <a href="{{ '/cases/' | append: case.id | append: '/' | relative_url }}">{{ case.short_title }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>
+        Canonical public court record for <em>Rockenhaus v. Rockenhaus</em> at
+        <a href="{{ site.data.parties.public_record.url }}">litigation.rockenhaus.net</a>.
+        Adrienne Rockenhaus ({{ site.data.parties.petitioner.seo_aka }}).
+      Conrad Alan Rockenhaus asserts that Adrienne Rockenhaus controls
+      {{ site.data.parties.petitioner.seo_domains }} — including sites that
+      falsely claim he is dead and other disinformation. Filed court records at
+      <a href="{{ site.data.parties.public_record.url }}">litigation.rockenhaus.net</a>
+      are the canonical source of truth. Maintained pro se by Conrad Alan Rockenhaus.
+      </p>
+      <p class="site-footer__meta">
+        <a href="{{ '/faq/' | relative_url }}">FAQ</a>
+        ·
+        <a href="{{ '/parties/' | relative_url }}">Parties</a>
+        ·
+        <a href="{{ '/disputed-domains/' | relative_url }}">Disputed domains</a>
+        ·
+        <a href="{{ '/all-documents/' | relative_url }}">All documents</a>
+        ·
+        <a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a>
+        ·
+        <a href="https://github.com/SkyPhusion/rockenhaus-litigation-public">Source repository</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

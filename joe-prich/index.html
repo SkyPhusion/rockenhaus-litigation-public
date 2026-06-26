@@ -1,0 +1,38 @@
+---
+layout: hub
+title: Joe Prich (@JustCallMeJoeP) — Rockenhaus v. Rockenhaus public record
+description: >-
+  Joe Prich (@JustCallMeJoeP on Twitter) in Rockenhaus v. Rockenhaus Michigan
+  litigation. Conrad Alan Rockenhaus assertions indexed at litigation.rockenhaus.net.
+permalink: /joe-prich/
+breadcrumbs:
+  - name: Home
+    url: /
+  - name: Joe Prich
+---
+
+{% for person in site.data.parties.third_parties %}
+{% if person.id == "justcallmejoep" %}
+<p class="hub-lead">
+  <strong>{{ person.name }}</strong> ({{ person.handle }} on {{ person.platform }}) is indexed
+  in this public court record as a related third party in <em>Rockenhaus v. Rockenhaus</em>.
+</p>
+<p>{{ person.assertion }}</p>
+{% endif %}
+{% endfor %}
+
+<p class="hub-cta">
+  <a href="{{ '/parties/' | relative_url }}">All parties</a> ·
+  <a href="{{ '/faq/' | relative_url }}">FAQ</a> ·
+  <a href="{{ '/' | relative_url }}">Court filings</a>
+</p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Joe Prich",
+  "alternateName": "@JustCallMeJoeP",
+  "description": {{ site.data.parties.third_parties | where: "id", "justcallmejoep" | map: "assertion" | first | jsonify }}
+}
+</script>

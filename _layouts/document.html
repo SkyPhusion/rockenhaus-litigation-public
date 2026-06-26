@@ -1,0 +1,200 @@
+---
+layout: default
+---
+<article class="document-page" itemscope itemtype="https://schema.org/LegalDocument">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="{{ '/' | relative_url }}">All matters</a></li>
+      <li><a href="{{ '/cases/' | append: page.case_id | append: '/' | relative_url }}">{{ page.case_title }}</a></li>
+      <li><a href="{{ '/cases/' | append: page.case_id | append: '/#' | append: page.category | relative_url }}">{{ page.category_label }}</a></li>
+      <li aria-current="page">{{ page.heading | default: page.title }}</li>
+    </ol>
+  </nav>
+
+  <header class="document-header">
+    <p class="document-eyebrow">{{ page.category_label }} · Case {{ page.case_number }}</p>
+    <h1 itemprop="name">{{ page.heading | default: page.title }}</h1>
+    <p class="document-meta">
+      <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <meta itemprop="name" content="Conrad Alan Rockenhaus">
+      </span>
+      <span itemprop="isPartOf" itemscope itemtype="https://schema.org/CreativeWork">
+        <span itemprop="name">{{ page.case_title }}</span>
+      </span>
+      · {{ page.court }}
+    </p>
+    <p class="document-parties">
+      Canonical record:
+      <a href="{{ site.data.parties.public_record.url }}">{{ site.data.parties.public_record.host }}</a>.
+      Litigation between {{ site.data.parties.respondent.name }} and
+      {{ site.data.parties.petitioner.name }}
+      ({{ site.data.parties.petitioner.seo_aka }}).
+      Disputed domains {{ site.data.parties.petitioner.seo_domains }} are indexed
+      as asserted by {{ site.data.parties.respondent.name }}; not authoritative.
+    </p>
+    <div class="document-actions">
+      <a class="btn btn--primary" href="{{ page.pdf_path | relative_url }}" download>
+        Download PDF
+      </a>
+      <a class="btn btn--ghost" href="{{ page.pdf_path | relative_url }}" target="_blank" rel="noopener">
+        Open in new tab
+      </a>
+    </div>
+  </header>
+
+  <section class="document-viewer" aria-label="PDF viewer">
+    <div id="pdf-viewer" class="pdf-viewer" data-pdf="{{ page.pdf_path | relative_url }}">
+      <p class="pdf-viewer__loading">Loading document…</p>
+    </div>
+    <noscript>
+      <p>
+        JavaScript is required for inline viewing.
+        <a href="{{ page.pdf_path | relative_url }}">Download the PDF</a> instead.
+      </p>
+    </noscript>
+  </section>
+
+  {% assign pdf_text = site.data.pdf_text[page.doc_slug] %}
+  {% if pdf_text.excerpt and pdf_text.excerpt != "" %}
+  <section class="document-text" aria-label="Searchable filing text">
+    <h2>Filing text (searchable excerpt)</h2>
+    <pre class="document-text__body">{{ pdf_text.excerpt }}</pre>
+    {% if pdf_text.truncated %}
+    <p class="document-text__note">
+      Excerpt of {{ pdf_text.char_count }} characters.
+      <a href="{{ page.pdf_path | relative_url }}">Download the full PDF</a> for complete text.
+    </p>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  <section class="document-seo-text">
+    <h2>About this filing</h2>
+    <p>{{ page.description }}</p>
+    <dl class="document-details">
+      <div>
+        <dt>File name</dt>
+        <dd><code>{{ page.filename }}</code></dd>
+      </div>
+      <div>
+        <dt>Case number</dt>
+        <dd>{{ page.case_number }}</dd>
+      </div>
+      <div>
+        <dt>Category</dt>
+        <dd>{{ page.category_label }}</dd>
+      </div>
+      <div>
+        <dt>Respondent / filer</dt>
+        <dd>
+          {{ site.data.parties.respondent.name }}
+          ({{ site.data.parties.respondent.seo_sites }})
+        </dd>
+      </div>
+      <div>
+        <dt>Opposing party</dt>
+        <dd>
+          {{ site.data.parties.petitioner.name }}
+          ({{ site.data.parties.petitioner.aliases | join: ", " }},
+          {{ site.data.parties.petitioner.handles | join: ", " }})
+        </dd>
+      </div>
+      <div>
+        <dt>Disputed domains</dt>
+        <dd>
+          {% for domain in site.data.parties.domain_disputes %}
+          <a href="{{ domain.url }}" rel="nofollow noopener">{{ domain.host }}</a>{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+          (asserted taken by Adrienne Rockenhaus; not authoritative)
+        </dd>
+      </div>
+      <div>
+        <dt>Related third parties</dt>
+        <dd>
+          {% for person in site.data.parties.third_parties %}
+          {{ person.seo_label }}: {{ person.assertion }}{% unless forloop.last %} {% endunless %}
+          {% endfor %}
+        </dd>
+      </div>
+      <div>
+        <dt>Canonical record</dt>
+        <dd><a href="{{ site.data.parties.public_record.url }}">{{ site.data.parties.public_record.host }}</a></dd>
+      </div>
+      <div>
+        <dt>Associated sites</dt>
+        <dd>
+          {% for site_entry in site.data.parties.respondent.sites %}
+          <a href="{{ site_entry.url }}" rel="noopener">{{ site_entry.host }}</a>{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </dd>
+      </div>
+      <div>
+        <dt>Direct PDF link</dt>
+        <dd><a href="{{ page.pdf_path | relative_url }}">{{ site.url }}{{ site.baseurl }}{{ page.pdf_path }}</a></dd>
+      </div>
+    </dl>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalDocument",
+    "name": {{ page.heading | default: page.title | jsonify }},
+    "description": {{ page.description | jsonify }},
+    "encoding": {
+      "@type": "MediaObject",
+      "encodingFormat": "application/pdf",
+      "contentUrl": "{{ site.url }}{{ site.baseurl }}{{ page.pdf_path }}"
+    },
+    "isPartOf": {
+      "@type": "LegalCase",
+      "name": {{ page.case_title | jsonify }},
+      "caseNumber": {{ page.case_number | jsonify }},
+      "court": {
+        "@type": "Courthouse",
+        "name": {{ page.court | jsonify }}
+      }
+    },
+    "about": [
+      {
+        "@type": "Person",
+        "name": {{ site.data.parties.petitioner.name | jsonify }},
+        "alternateName": [
+          {% for alias in site.data.parties.petitioner.aliases %}
+          {{ alias | jsonify }}{% unless forloop.last %},{% endunless %}
+          {% endfor %}{% if site.data.parties.petitioner.handles.size > 0 %},{% endif %}
+          {% for handle in site.data.parties.petitioner.handles %}
+          {{ handle | jsonify }}{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ],
+        "sameAs": [
+          {% for domain in site.data.parties.petitioner.domains %}
+          {{ domain.url | jsonify }}{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ]
+      },
+      {
+        "@type": "Person",
+        "name": {{ site.data.parties.respondent.name | jsonify }},
+        "sameAs": [
+          {% for site_entry in site.data.parties.respondent.sites %}
+          {{ site_entry.url | jsonify }}{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "name": {{ site.data.parties.public_record.host | jsonify }},
+        "url": {{ site.data.parties.public_record.url | jsonify }},
+        "description": {{ site.data.parties.public_record.seo_tagline | jsonify }}
+      }{% for person in site.data.parties.third_parties %},
+      {
+        "@type": "Person",
+        "name": {{ person.name | jsonify }},
+        "alternateName": {{ person.handle | jsonify }},
+        "description": {{ person.assertion | jsonify }}
+      }{% endfor %}
+    ]
+  }
+  </script>
+</article>

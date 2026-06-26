@@ -1,0 +1,14 @@
+<p class="parties-context">
+  <strong>Parties:</strong>
+  {{ site.data.parties.respondent.name }} v.
+  {{ site.data.parties.petitioner.name }}
+  (also known as
+  {% for alias in site.data.parties.petitioner.aliases %}
+  {{ alias }}{% unless forloop.last %},{% endunless %}
+  {% endfor %},
+  and on social media as
+  {% for handle in site.data.parties.petitioner.handles %}
+  <span class="parties-context__handle">{{ handle }}</span>{% unless forloop.last %} and {% endunless %}
+  {% endfor %}).
+  Court caption: <em>{{ site.data.parties.caption }}</em>.
+</p>

@@ -1,0 +1,12 @@
+<p class="disputed-domains">
+  <strong>Disputed domains (not authoritative):</strong>
+  {{ site.data.parties.seo_disputed_summary }}
+</p>
+<ul class="disputed-domains__list">
+  {% for domain in site.data.parties.domain_disputes %}
+  <li>
+    <a href="{{ domain.url }}" rel="nofollow noopener">{{ domain.host }}</a> —
+    {{ domain.assertion }}
+  </li>
+  {% endfor %}
+</ul>

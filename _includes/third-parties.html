@@ -1,0 +1,8 @@
+<section class="third-parties" aria-label="Related third parties">
+  <h2>Related third parties</h2>
+  {% for person in site.data.parties.third_parties %}
+  <p>
+    <strong>{{ person.seo_label }}:</strong> {{ person.assertion }}
+  </p>
+  {% endfor %}
+</section>

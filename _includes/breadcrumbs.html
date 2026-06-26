@@ -1,0 +1,32 @@
+{% if include.items %}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    {% for crumb in include.items %}
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      {% if crumb.url %}
+      <a itemprop="item" href="{{ crumb.url | relative_url }}"><span itemprop="name">{{ crumb.name }}</span></a>
+      {% else %}
+      <span itemprop="name">{{ crumb.name }}</span>
+      {% endif %}
+      <meta itemprop="position" content="{{ forloop.index }}">
+    </li>
+    {% endfor %}
+  </ol>
+</nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {% for crumb in include.items %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "name": {{ crumb.name | jsonify }}{% if crumb.url %},
+      "item": "{{ site.url }}{{ site.baseurl }}{{ crumb.url }}"{% endif %}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
