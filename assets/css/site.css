@@ -2,7 +2,7 @@
   font-family: "EB Garamond";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
   src: url("../fonts/eb-garamond-400.woff2") format("woff2");
 }
 
@@ -10,7 +10,7 @@
   font-family: "EB Garamond";
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
+  font-display: optional;
   src: url("../fonts/eb-garamond-600.woff2") format("woff2");
 }
 
@@ -18,7 +18,7 @@
   font-family: "EB Garamond";
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
+  font-display: optional;
   src: url("../fonts/eb-garamond-700.woff2") format("woff2");
 }
 
@@ -26,7 +26,7 @@
   font-family: "IBM Plex Sans";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
   src: url("../fonts/ibm-plex-sans-400.woff2") format("woff2");
 }
 
@@ -34,7 +34,7 @@
   font-family: "IBM Plex Sans";
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
+  font-display: optional;
   src: url("../fonts/ibm-plex-sans-500.woff2") format("woff2");
 }
 
@@ -42,7 +42,7 @@
   font-family: "IBM Plex Sans";
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
+  font-display: optional;
   src: url("../fonts/ibm-plex-sans-600.woff2") format("woff2");
 }
 
