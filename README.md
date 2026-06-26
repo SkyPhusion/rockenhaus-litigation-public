@@ -46,7 +46,7 @@ Then in this repo: **Settings → Pages → Custom domain**, enter `litigation.r
 |---|---|
 | `/faq/` | FAQ with FAQPage schema (includes “Is Conrad Rockenhaus dead?”) |
 | `/is-conrad-rockenhaus-dead/` | Dedicated landing page for false-death domain queries |
-| `/disputed-domains/` | rockenhaus.com, skyphusion.com, cannabytes.net, conradrockenhausisdead.* |
+| `/disputed-domains/` | rockenhaus.com, skyphusion.com, cannabytes.net, lawflaws.com, conradrockenhausisdead.* |
 | `/parties/` | Adrienne Rockenhaus / Blair / Hein / @adezero and Conrad Alan Rockenhaus |
 | `/joe-prich/` | Joe Prich (@JustCallMeJoeP) assertions indexed in this record |
 | `/all-documents/` | HTML index of all document pages (generated at build) |

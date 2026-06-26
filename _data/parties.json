@@ -19,9 +19,10 @@
       { "host": "skyphusion.com", "url": "https://skyphusion.com" },
       { "host": "cannabytes.net", "url": "https://cannabytes.net" },
       { "host": "conradrockenhausisdead.com", "url": "https://conradrockenhausisdead.com" },
-      { "host": "conradrockenhausisdead.cc", "url": "https://conradrockenhausisdead.cc" }
+      { "host": "conradrockenhausisdead.cc", "url": "https://conradrockenhausisdead.cc" },
+      { "host": "lawflaws.com", "url": "https://lawflaws.com" }
     ],
-    "seo_domains": "rockenhaus.com, skyphusion.com, cannabytes.net, conradrockenhausisdead.com, conradrockenhausisdead.cc"
+    "seo_domains": "rockenhaus.com, skyphusion.com, cannabytes.net, conradrockenhausisdead.com, conradrockenhausisdead.cc, lawflaws.com"
   },
   "respondent": {
     "name": "Conrad Alan Rockenhaus",
@@ -72,8 +73,13 @@
       "host": "conradrockenhausisdead.cc",
       "url": "https://conradrockenhausisdead.cc",
       "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus created conradrockenhausisdead.cc to falsely report that he is dead."
+    },
+    {
+      "host": "lawflaws.com",
+      "url": "https://lawflaws.com",
+      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus created lawflaws.com to spread disinformation about him and his Michigan court cases."
     }
   ],
-  "seo_disputed_summary": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus controls rockenhaus.com, skyphusion.com, cannabytes.net (a former company he co-owned), conradrockenhausisdead.com, and conradrockenhausisdead.cc — including false claims that he is dead and other disinformation. Filed court records at litigation.rockenhaus.net are the canonical source of truth.",
+  "seo_disputed_summary": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus controls rockenhaus.com, skyphusion.com, cannabytes.net (a former company he co-owned), conradrockenhausisdead.com, conradrockenhausisdead.cc, and lawflaws.com — including false claims that he is dead and other disinformation about him and his cases. Filed court records at litigation.rockenhaus.net are the canonical source of truth.",
   "seo_third_parties_summary": "Conrad Alan Rockenhaus asserts Joe Prich (@JustCallMeJoeP on Twitter) admitted neo-Nazi affiliation on Twitter and that Adrienne Rockenhaus agreed to dropping Conrad's last name, stealing his military pension, and apologizing for ever mentioning his name in Joe Prich's presence."
 }
