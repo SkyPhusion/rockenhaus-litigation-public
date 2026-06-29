@@ -1,6 +1,6 @@
 ---
 layout: hub
-title: Is Conrad Rockenhaus dead? — Official court record
+title: Is Conrad Rockenhaus dead? | Official court record
 description: >-
   Conrad Alan Rockenhaus is not dead. conradrockenhausisdead.com and
   conradrockenhausisdead.cc are disputed domains Conrad asserts were created by
@@ -19,7 +19,12 @@ breadcrumbs:
   <a href="https://conradrockenhausisdead.com" rel="nofollow noopener">conradrockenhausisdead.com</a>
   and
   <a href="https://conradrockenhausisdead.cc" rel="nofollow noopener">conradrockenhausisdead.cc</a>
-  to falsely report that he is dead. Those domains are <strong>not authoritative</strong>.
+  to falsely report that he is dead. Conrad also asserts
+  <a href="{{ '/rob-hein/' | relative_url }}">Rob Hein of QOLity Financial</a>
+  actively funds Adrienne Rockenhaus's campaign to harass, defame, and spread those
+  false rumors, funding and enabling her conduct with
+  <a href="{{ '/joe-prich/' | relative_url }}">Joe Prich (@JustCallMeJoeP)</a>, who
+  admitted neo-Nazi affiliation as Nazzy. Those domains are <strong>not authoritative</strong>.
   Filed pleadings, orders, and exhibits indexed here are the canonical source of truth.
 </p>
 
@@ -40,7 +45,7 @@ breadcrumbs:
     "name": "Is Conrad Rockenhaus dead?",
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": {{ site.data.faq.faqs | where: "question", "Is Conrad Rockenhaus dead?" | map: "answer" | first | jsonify }}
+      "text": {{ site.data.faq.faqs | where: "id", "is-conrad-rockenhaus-dead" | map: "answer" | first | jsonify }}
     }
   }]
 }

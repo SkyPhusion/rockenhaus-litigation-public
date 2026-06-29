@@ -5,7 +5,7 @@
 <ul class="disputed-domains__list">
   {% for domain in site.data.parties.domain_disputes %}
   <li>
-    <a href="{{ domain.url }}" rel="nofollow noopener">{{ domain.host }}</a> —
+    <a href="{{ domain.url }}" rel="nofollow noopener">{{ domain.host }}</a>:
     {{ domain.assertion }}
   </li>
   {% endfor %}

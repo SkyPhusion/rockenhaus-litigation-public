@@ -1,9 +1,13 @@
 ---
 layout: hub
-title: Joe Prich (@JustCallMeJoeP) — Rockenhaus v. Rockenhaus public record
+title: Joe Prich @JustCallMeJoeP Nazzy Neo-Nazi | Adrienne @adezero Affair | Rockenhaus v. Rockenhaus
+heading: Joe Prich (@JustCallMeJoeP) and Adrienne Rockenhaus (@adezero) X evidence
 description: >-
-  Joe Prich (@JustCallMeJoeP on Twitter) in Rockenhaus v. Rockenhaus Michigan
-  litigation. Conrad Alan Rockenhaus assertions indexed at litigation.rockenhaus.net.
+  Archived X screenshots: Joe Prich (@JustCallMeJoeP) admits neo-Nazi affiliation
+  as Nazzy; Adrienne Rockenhaus (@adezero) flirted with Prich while married to
+  Conrad Alan Rockenhaus; @adezero dropped Conrad's last name at Prich's direction.
+  Rockenhaus v. Rockenhaus Michigan court record at litigation.rockenhaus.net.
+image: /assets/images/evidence/joe-prich-nazzy-thread-2026-05-26.png
 permalink: /joe-prich/
 breadcrumbs:
   - name: Home
@@ -14,25 +18,132 @@ breadcrumbs:
 {% for person in site.data.parties.third_parties %}
 {% if person.id == "justcallmejoep" %}
 <p class="hub-lead">
-  <strong>{{ person.name }}</strong> ({{ person.handle }} on {{ person.platform }}) is indexed
-  in this public court record as a related third party in <em>Rockenhaus v. Rockenhaus</em>.
+  <strong>{{ person.name }}</strong> ({{ person.handle }} on {{ person.platform }}) and
+  <strong>Adrienne Rockenhaus</strong> ({{ site.data.parties.petitioner.seo_aka }}) are indexed
+  in this public court record as related parties in <em>Rockenhaus v. Rockenhaus</em>.
+  Conrad Alan Rockenhaus asserts archived public X posts show Prich spelling Nazi as
+  <strong>Nazzy</strong>, @adezero taking direction from Prich to drop Conrad's last name,
+  and openly flirtatious @adezero timeline interactions with Prich while Conrad and Adrienne
+  remained married.
 </p>
 <p>{{ person.assertion }}</p>
+<p>
+  See also:
+  <a href="{{ '/parties/' | relative_url }}">Parties</a>,
+  <a href="{{ '/faq/' | relative_url }}#did-adrienne-rockenhaus-adezero-cheat-with-joe-prich-justcallmejoep">FAQ: Did Adrienne cheat with Joe Prich?</a>,
+  <a href="{{ '/faq/' | relative_url }}#did-joe-prich-admit-to-being-a-nazi-nazzy-on-x">FAQ: Did Joe Prich admit to being a Nazi?</a>,
+  <a href="{{ '/rob-hein/' | relative_url }}">Rob Hein (QOLity Financial)</a>.
+</p>
+{% include social-evidence.html third_party_id="justcallmejoep" section="primary" %}
+{% include social-evidence.html third_party_id="justcallmejoep" section="flirtation" intro_key="flirtation" title="Adrienne Rockenhaus (@adezero) flirtation with Joe Prich (@JustCallMeJoeP)" %}
 {% endif %}
 {% endfor %}
 
 <p class="hub-cta">
   <a href="{{ '/parties/' | relative_url }}">All parties</a> ·
   <a href="{{ '/faq/' | relative_url }}">FAQ</a> ·
+  <a href="{{ '/cases/wayne_ppo_26-102221-PP/' | relative_url }}">Wayne County PPO filings</a> ·
+  <a href="{{ '/rob-hein/' | relative_url }}">Rob Hein (QOLity Financial)</a> ·
   <a href="{{ '/' | relative_url }}">Court filings</a>
 </p>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Joe Prich",
-  "alternateName": "@JustCallMeJoeP",
-  "description": {{ site.data.parties.third_parties | where: "id", "justcallmejoep" | map: "assertion" | first | jsonify }}
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}{{ site.baseurl }}/joe-prich/#webpage",
+      "url": "{{ site.url }}{{ site.baseurl }}/joe-prich/",
+      "name": {{ page.title | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": {{ site.data.parties.public_record.title | jsonify }},
+        "url": {{ site.data.parties.public_record.url | jsonify }}
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}{{ site.baseurl }}/assets/images/evidence/joe-prich-nazzy-thread-2026-05-26.png",
+        "name": "Joe Prich Nazzy admission X thread screenshot archive"
+      },
+      "about": [
+        { "@type": "Person", "name": "Joe Prich", "alternateName": "@JustCallMeJoeP" },
+        { "@type": "Person", "name": "Adrienne Rockenhaus", "alternateName": ["@adezero", "Adrienne Blair", "Adrienne Hein"] },
+        { "@type": "Person", "name": "Conrad Alan Rockenhaus" }
+      ],
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}{{ site.baseurl }}/" },
+          { "@type": "ListItem", "position": 2, "name": "Joe Prich", "item": "{{ site.url }}{{ site.baseurl }}/joe-prich/" }
+        ]
+      },
+      "associatedMedia": {
+        "@type": "ImageGallery",
+        "name": "Joe Prich and Adrienne Rockenhaus archived X post screenshots",
+        "image": [
+          {% assign joep_images = site.data.social_evidence.threads | where: "third_party_id", "justcallmejoep" %}
+          {% for thread in joep_images %}
+          {
+            "@type": "ImageObject",
+            "name": {{ thread.title | jsonify }},
+            "description": {{ thread.caption | jsonify }},
+            "contentUrl": "{{ site.url }}{{ site.baseurl }}{{ thread.screenshot }}",
+            "url": {{ thread.post_url | jsonify }}
+          }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+          {% assign joep_items = site.data.social_evidence.items | where: "third_party_id", "justcallmejoep" %}
+          {% if joep_items.size > 0 %},{% endif %}
+          {% for item in joep_items %}
+          {
+            "@type": "ImageObject",
+            "name": {{ item.caption | jsonify }},
+            "description": {{ item.alt | jsonify }},
+            "contentUrl": "{{ site.url }}{{ site.baseurl }}{{ item.screenshot }}",
+            "url": {{ item.post_url | jsonify }}
+          }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}{{ site.baseurl }}/joe-prich/#joeprich",
+      "name": "Joe Prich",
+      "alternateName": "@JustCallMeJoeP",
+      "sameAs": "https://x.com/JustCallMeJoeP",
+      "description": {{ site.data.parties.third_parties | where: "id", "justcallmejoep" | map: "assertion" | first | jsonify }}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Did Joe Prich (@JustCallMeJoeP) admit to being a Nazi on X?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Conrad Alan Rockenhaus asserts Joe Prich admitted neo-Nazi affiliation on X, spelling it Nazzy in a May 26, 2026 thread archived at {{ site.url }}{{ site.baseurl }}/joe-prich/."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Did Adrienne Rockenhaus (@adezero) cheat with Joe Prich?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Conrad Alan Rockenhaus asserts archived @adezero X posts show openly flirtatious interactions with Joe Prich (@JustCallMeJoeP) while Conrad and Adrienne remained married. Screenshots are at {{ site.url }}{{ site.baseurl }}/joe-prich/."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Did Adrienne Rockenhaus drop Conrad Rockenhaus's last name for Joe Prich?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus (@adezero) took direction from Joe Prich to drop Conrad's last name, documented in archived X screenshots at {{ site.url }}{{ site.baseurl }}/joe-prich/."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>

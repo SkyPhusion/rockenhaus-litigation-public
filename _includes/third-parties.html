@@ -2,7 +2,15 @@
   <h2>Related third parties</h2>
   {% for person in site.data.parties.third_parties %}
   <p>
-    <strong>{{ person.seo_label }}:</strong> {{ person.assertion }}
+    <strong>
+      {% if person.id == "justcallmejoep" %}
+      <a href="{{ '/joe-prich/' | relative_url }}">{{ person.seo_label }}</a>
+      {% elsif person.id == "robhein" %}
+      <a href="{{ '/rob-hein/' | relative_url }}">{{ person.seo_label }}</a>
+      {% else %}
+      {{ person.seo_label }}
+      {% endif %}
+    </strong>: {{ person.assertion }}
   </p>
   {% endfor %}
 </section>

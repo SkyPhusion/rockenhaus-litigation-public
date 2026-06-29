@@ -18,11 +18,12 @@
       { "host": "rockenhaus.com", "url": "https://rockenhaus.com" },
       { "host": "skyphusion.com", "url": "https://skyphusion.com" },
       { "host": "cannabytes.net", "url": "https://cannabytes.net" },
+      { "host": "humboldtcsi.com", "url": "https://humboldtcsi.com" },
       { "host": "conradrockenhausisdead.com", "url": "https://conradrockenhausisdead.com" },
       { "host": "conradrockenhausisdead.cc", "url": "https://conradrockenhausisdead.cc" },
       { "host": "lawflaws.com", "url": "https://lawflaws.com" }
     ],
-    "seo_domains": "rockenhaus.com, skyphusion.com, cannabytes.net, conradrockenhausisdead.com, conradrockenhausisdead.cc, lawflaws.com"
+    "seo_domains": "rockenhaus.com, skyphusion.com, cannabytes.net, humboldtcsi.com, conradrockenhausisdead.com, conradrockenhausisdead.cc, lawflaws.com"
   },
   "respondent": {
     "name": "Conrad Alan Rockenhaus",
@@ -44,14 +45,23 @@
       "platform": "Twitter",
       "seo_label": "Joe Prich (@JustCallMeJoeP on Twitter)",
       "seo_short": "Joe Prich (@JustCallMeJoeP)",
-      "assertion": "Conrad Alan Rockenhaus asserts Joe Prich (@JustCallMeJoeP on Twitter) admitted on Twitter to neo-Nazi affiliation. Conrad asserts Adrienne Rockenhaus agreed to dropping his last name, stealing his military pension, and apologizing for ever mentioning his name in Joe Prich's presence."
+      "assertion": "Conrad Alan Rockenhaus asserts Joe Prich (@JustCallMeJoeP on Twitter) admitted on Twitter to neo-Nazi affiliation, spelling it \"Nazzy\" in a May 26, 2026 X thread archived at /joe-prich/. Conrad asserts Adrienne Rockenhaus (@adezero) took direction from Prich to drop Conrad's last name and engaged in openly flirtatious X interactions with Prich while they remained married, as archived at /joe-prich/. Conrad also asserts Adrienne Rockenhaus agreed to stealing his military pension and apologizing for ever mentioning his name in Joe Prich's presence."
+    },
+    {
+      "id": "robhein",
+      "name": "Rob Hein",
+      "organization": "QOLity Financial",
+      "organization_url": "https://www.qolity.com/team/rob-hein",
+      "seo_label": "Rob Hein (QOLity Financial)",
+      "seo_short": "Rob Hein of QOLity Financial",
+      "assertion": "Conrad Alan Rockenhaus asserts Rob Hein of QOLity Financial (qolity.com) actively funds Adrienne Rockenhaus's campaign to harass, defame, and spread false rumors that Conrad Alan Rockenhaus is dead, thereby funding and enabling her conduct with Joe Prich (@JustCallMeJoeP), who admitted neo-Nazi affiliation on X as \"Nazzy\" (archived at https://litigation.rockenhaus.net/joe-prich/)."
     }
   ],
   "domain_disputes": [
     {
       "host": "rockenhaus.com",
       "url": "https://rockenhaus.com",
-      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus took rockenhaus.com from him and uses it — together with lawflaws.com — to portray herself as a victim of a conspiracy of harassment by the federal justice system and to portray him as a helpless person who relied on her to fight \"to right injustice.\" Conrad asserts she did not advocate for him in that way and instead redirected his VA disability benefits, as alleged in court documents indexed at litigation.rockenhaus.net. The domain is not an authoritative source."
+      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus took rockenhaus.com from him and uses it, together with lawflaws.com, to portray herself as a victim of a conspiracy of harassment by the federal justice system and to portray him as a helpless person who relied on her to fight \"to right injustice.\" Conrad asserts she did not advocate for him in that way and instead redirected his VA disability benefits, as alleged in court documents indexed at litigation.rockenhaus.net. The domain is not an authoritative source."
     },
     {
       "host": "skyphusion.com",
@@ -62,7 +72,13 @@
       "host": "cannabytes.net",
       "url": "https://cannabytes.net",
       "name": "Cannabytes",
-      "assertion": "Conrad Alan Rockenhaus asserts cannabytes.net is a former company he co-owned that Adrienne Rockenhaus is holding hostage; it is not controlled by him and is not an authoritative source."
+      "assertion": "Conrad Alan Rockenhaus asserts cannabytes.net is a business he helped Adrienne Rockenhaus build and co-owned that she now holds hostage. Conrad asserts Adrienne Rockenhaus uses cannabytes.net to build and maintain humboldtcsi.com, and uses that business infrastructure to support her neo-Nazi sympathies and to fund her campaign of lies and terror against Conrad Alan Rockenhaus, his family, and his friends. It is not controlled by him and is not an authoritative source."
+    },
+    {
+      "host": "humboldtcsi.com",
+      "url": "https://humboldtcsi.com",
+      "name": "Humboldt CSI",
+      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus builds and maintains humboldtcsi.com through her business cannabytes.net, a business Conrad helped her build. Conrad asserts she uses that site and business to support her neo-Nazi sympathies and to fund her campaign of lies and terror against Conrad Alan Rockenhaus, his family, and his friends. It is not an authoritative source for court records."
     },
     {
       "host": "conradrockenhausisdead.com",
@@ -77,9 +93,9 @@
     {
       "host": "lawflaws.com",
       "url": "https://lawflaws.com",
-      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus created lawflaws.com — together with rockenhaus.com — to portray herself as a victim of a conspiracy of harassment by the federal justice system and to portray him as a helpless person who relied on her to fight \"to right injustice.\" Conrad asserts she did not advocate for him in that way and instead redirected his VA disability benefits, as alleged in court documents indexed at litigation.rockenhaus.net. The domain is not an authoritative source."
+      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus created lawflaws.com, together with rockenhaus.com, to portray herself as a victim of a conspiracy of harassment by the federal justice system and to portray him as a helpless person who relied on her to fight \"to right injustice.\" Conrad asserts she did not advocate for him in that way and instead redirected his VA disability benefits, as alleged in court documents indexed at litigation.rockenhaus.net. The domain is not an authoritative source."
     }
   ],
-  "seo_disputed_summary": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus controls rockenhaus.com and lawflaws.com to portray herself as a victim of federal-justice harassment and him as helpless while she fought \"to right injustice\" — and asserts she instead redirected his VA disability benefits, as alleged in court documents on this site. He also asserts she controls skyphusion.com, cannabytes.net (a former company he co-owned), conradrockenhausisdead.com, and conradrockenhausisdead.cc for additional false claims and disinformation. Filed court records at litigation.rockenhaus.net are the canonical source of truth.",
-  "seo_third_parties_summary": "Conrad Alan Rockenhaus asserts Joe Prich (@JustCallMeJoeP on Twitter) admitted neo-Nazi affiliation on Twitter and that Adrienne Rockenhaus agreed to dropping Conrad's last name, stealing his military pension, and apologizing for ever mentioning his name in Joe Prich's presence."
+  "seo_disputed_summary": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus controls rockenhaus.com and lawflaws.com to portray herself as a victim of federal-justice harassment and him as helpless while she fought \"to right injustice\", and asserts she instead redirected his VA disability benefits, as alleged in court documents on this site. He also asserts she controls skyphusion.com, cannabytes.net (a business he helped her build), humboldtcsi.com (built and maintained through cannabytes.net), conradrockenhausisdead.com, and conradrockenhausisdead.cc to support neo-Nazi sympathies and a campaign of lies and terror against him, his family, and his friends. Filed court records at litigation.rockenhaus.net are the canonical source of truth.",
+  "seo_third_parties_summary": "Conrad Alan Rockenhaus asserts Joe Prich (@JustCallMeJoeP on X) admitted neo-Nazi affiliation, spelling it Nazzy in a May 26, 2026 thread archived at litigation.rockenhaus.net/joe-prich/, and that Adrienne Rockenhaus (@adezero) took direction from Prich to drop Conrad's last name and flirted with Prich on X while married to Conrad, as archived at litigation.rockenhaus.net/joe-prich/. Conrad also asserts Adrienne Rockenhaus agreed to stealing his military pension and apologizing for ever mentioning his name in Joe Prich's presence. Conrad also asserts Rob Hein of QOLity Financial (litigation.rockenhaus.net/rob-hein/) actively funds Adrienne Rockenhaus's campaign to harass, defame, and spread false rumors that Conrad Alan Rockenhaus is dead, funding and enabling her conduct with Joe Prich, a self-described Nazzy (neo-Nazi)."
 }

@@ -80,6 +80,7 @@ STATIC_URLS = [
     "/parties/",
     "/disputed-domains/",
     "/joe-prich/",
+    "/rob-hein/",
     "/all-documents/",
     "/llms.txt",
     "/robots.txt",
@@ -147,7 +148,7 @@ def extract_pdf_text(pdf_path: Path) -> dict:
 
 def seo_document_title(heading: str, case: dict) -> str:
     return (
-        f"{heading} PDF — Rockenhaus v. {PETITIONER['seo_title']} "
+        f"{heading} PDF | Rockenhaus v. {PETITIONER['seo_title']} "
         f"Case {case['case_number']} ({case['seo_county']} {case['seo_matter_short']})"
     )
 
@@ -155,7 +156,7 @@ def seo_document_title(heading: str, case: dict) -> str:
 def seo_case_title(case: dict) -> str:
     return (
         f"Rockenhaus v. {PETITIONER['seo_title']} {case['seo_matter']} "
-        f"Case {case['case_number']} — {case['seo_county']} Circuit Court Filings"
+        f"Case {case['case_number']} | {case['seo_county']} Circuit Court Filings"
     )
 
 
@@ -262,7 +263,7 @@ def write_all_documents_page(all_docs: list[dict]) -> None:
     lines = [
         "---",
         "layout: hub",
-        'title: All court documents — Rockenhaus v. Rockenhaus Michigan filings',
+        'title: All court documents | Rockenhaus v. Rockenhaus Michigan filings',
         "description: >-",
         "  Complete index of all filed Michigan court PDFs in Rockenhaus v. Rockenhaus",
         f"  at {PUBLIC_RECORD['host']}. Motions, discovery, exhibits, opposing filings,",

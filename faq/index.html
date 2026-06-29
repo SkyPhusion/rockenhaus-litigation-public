@@ -1,11 +1,12 @@
 ---
 layout: hub
-title: FAQ — Is Conrad Rockenhaus dead? Rockenhaus court record
+title: FAQ | Joe Prich Nazzy | Rob Hein QOLity | Adrienne @adezero | Rockenhaus Court Record
 description: >-
-  Answers about Rockenhaus v. Rockenhaus Michigan litigation: Is Conrad Rockenhaus
-  dead? Official court record at litigation.rockenhaus.net. Disputed domains
-  rockenhaus.com, skyphusion.com, lawflaws.com, conradrockenhausisdead.com. Case numbers
-  26-102221-PP, 26-104594-DO, 26-737-DO.
+  FAQ for Rockenhaus v. Rockenhaus: Is Conrad Rockenhaus dead? Did Joe Prich
+  (@JustCallMeJoeP) admit to being a Nazi (Nazzy)? Does Rob Hein or QOLity
+  Financial fund Adrienne Rockenhaus and enable a neo-Nazi sympathizer? Official
+  court record at litigation.rockenhaus.net. Cases 26-102221-PP, 26-104594-DO,
+  26-737-DO.
 permalink: /faq/
 breadcrumbs:
   - name: Home
@@ -15,7 +16,7 @@ breadcrumbs:
 
 <section class="faq-list">
   {% for item in site.data.faq.faqs %}
-  <details class="faq-item" {% if forloop.first %}open{% endif %}>
+  <details class="faq-item" id="{{ item.id }}" {% if forloop.first %}open{% endif %}>
     <summary class="faq-item__question">{{ item.question }}</summary>
     <p>{{ item.answer }}</p>
   </details>
@@ -23,8 +24,10 @@ breadcrumbs:
 </section>
 
 <p class="hub-cta">
-  Browse <a href="{{ '/all-documents/' | relative_url }}">all filed court PDFs</a> or
-  <a href="{{ '/disputed-domains/' | relative_url }}">disputed domains</a> indexed in this record.
+  <a href="{{ '/joe-prich/' | relative_url }}">Joe Prich (@JustCallMeJoeP) X evidence</a> ·
+  <a href="{{ '/rob-hein/' | relative_url }}">Rob Hein (QOLity Financial)</a> ·
+  <a href="{{ '/all-documents/' | relative_url }}">All filed court PDFs</a> ·
+  <a href="{{ '/disputed-domains/' | relative_url }}">Disputed domains</a>
 </p>
 
 <script type="application/ld+json">

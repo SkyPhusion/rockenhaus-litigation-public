@@ -1,0 +1,61 @@
+{% assign section_name = include.section | default: "primary" %}
+{% assign intro_key = include.intro_key | default: section_name %}
+{% if section_name == "primary" and include.intro_key == nil %}
+  {% assign intro_key = include.third_party_id %}
+{% endif %}
+{% assign section_title = include.title | default: "X post evidence" %}
+
+{% assign evidence_threads = site.data.social_evidence.threads | where: "third_party_id", include.third_party_id | where: "section", section_name %}
+{% assign evidence_items = site.data.social_evidence.items | where: "third_party_id", include.third_party_id | where: "section", section_name %}
+
+{% if evidence_items.size > 0 or evidence_threads.size > 0 %}
+<section class="social-evidence" id="{% if section_name == 'flirtation' %}adezero-joep-flirtation{% else %}joep-x-evidence{% endif %}" aria-label="{{ section_title }}">
+  <h2>{{ section_title }}</h2>
+  <p class="social-evidence__intro">{{ site.data.social_evidence.intros[intro_key] }}</p>
+
+  {% for thread in evidence_threads %}
+  <figure class="social-evidence__thread" id="{{ thread.id }}">
+    <h3>{{ thread.title }}</h3>
+    <a href="{{ thread.post_url }}" rel="nofollow noopener">
+      <img
+        src="{{ thread.screenshot | relative_url }}"
+        alt="{{ thread.alt }}"
+        title="{{ thread.title }}"
+        loading="lazy"
+        decoding="async"
+      >
+    </a>
+    <figcaption>
+      <strong>{{ thread.posted_at }}</strong>.
+      {{ thread.caption }}
+      <a href="{{ thread.post_url }}" rel="nofollow noopener">View on X</a>
+    </figcaption>
+  </figure>
+  {% endfor %}
+
+  {% if evidence_items.size > 0 %}
+  <div class="social-evidence__grid">
+    {% for item in evidence_items %}
+    <figure class="social-evidence__item" id="{{ item.id }}">
+      <a href="{{ item.post_url }}" rel="nofollow noopener">
+        <img
+          src="{{ item.screenshot | relative_url }}"
+          alt="{{ item.alt }}"
+          title="{{ item.caption }}"
+          width="600"
+          height="400"
+          loading="lazy"
+          decoding="async"
+        >
+      </a>
+      <figcaption>
+        <strong>{{ item.author_name }} ({{ item.author_handle }})</strong>, {{ item.posted_at }}.
+        {{ item.caption }}
+        <a href="{{ item.post_url }}" rel="nofollow noopener">View on X</a>
+      </figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+{% endif %}
