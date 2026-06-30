@@ -81,11 +81,16 @@ STATIC_URLS = [
     "/disputed-domains/",
     "/joe-prich/",
     "/rob-hein/",
+    "/retractions/",
+    "/retractions/adrienne-rockenhaus/",
+    "/retractions/rob-hein/",
     "/all-documents/",
     "/llms.txt",
     "/robots.txt",
     "/sitemap.xml",
 ]
+
+RETRACTIONS_DATA_PATH = DATA_DIR / "retractions.json"
 
 
 def humanize_filename(name: str) -> str:
@@ -304,6 +309,36 @@ def site_data_lead(count: int) -> str:
     )
 
 
+def process_retraction_letters() -> list[str]:
+    """Extract OCR/searchable text from retraction PDFs; return permalink paths."""
+    if not RETRACTIONS_DATA_PATH.is_file():
+        return []
+
+    data = json.loads(RETRACTIONS_DATA_PATH.read_text(encoding="utf-8"))
+    urls = ["/retractions/"]
+    for letter in data.get("letters", []):
+        permalink = letter.get("permalink")
+        if permalink:
+            urls.append(permalink)
+
+        doc_slug = letter.get("doc_slug")
+        pdf_rel = letter.get("pdf_path", "").lstrip("/")
+        if not doc_slug or not pdf_rel:
+            continue
+
+        pdf_path = ROOT / pdf_rel
+        if not pdf_path.is_file():
+            print(f"Warning: retraction PDF not found: {pdf_path}")
+            continue
+
+        text_data = extract_pdf_text(pdf_path)
+        (PDF_TEXT_DIR / f"{doc_slug}.json").write_text(
+            json.dumps(text_data, indent=2), encoding="utf-8"
+        )
+
+    return urls
+
+
 def clean_generated_dir(path: Path) -> None:
     if not path.exists():
         path.mkdir(parents=True, exist_ok=True)
@@ -431,6 +466,8 @@ def main() -> None:
         json.dumps({"cases": case_list, "document_count": document_count}, indent=2),
         encoding="utf-8",
     )
+
+    process_retraction_letters()
 
     case_urls = [f"/cases/{c['id']}/" for c in case_list]
     indexnow_urls = [f"{SITE_URL}{path}" for path in STATIC_URLS + case_urls + document_urls]

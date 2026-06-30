@@ -1,0 +1,167 @@
+---
+layout: hub
+title: Retraction demands | Adrienne Rockenhaus | Rob Hein QOLity | Federal lawsuit Western District Texas Waco
+heading: Retraction and correction demands (June 30, 2026)
+description: >-
+  Executed June 30, 2026 retraction demands from Conrad Alan Rockenhaus to
+  Adrienne Rockenhaus (Adrienne Blair, Adrienne Hein, @adezero) and Rob Hein
+  (QOLity Financial, Deborah Dew Survivable Trust). Notice under MCL 600.2911(2)(b)
+  and Texas Defamation Mitigation Act Sec. 73.055. Delivered by email and certified
+  mail. Federal civil action intended in U.S. District Court, Western District of
+  Texas, Waco Division if demands are not met.
+permalink: /retractions/
+breadcrumbs:
+  - name: Home
+    url: /
+  - name: Retraction demands
+---
+
+<p class="hub-lead">
+  On <strong>{{ site.data.retractions.date_executed }}</strong>, Conrad Alan Rockenhaus
+  executed formal retraction and correction demands and served them by
+  <strong>email and certified mail, return receipt requested</strong>. The letters
+  give notice under <strong>{{ site.data.retractions.statutes.michigan }}</strong>
+  (Michigan) and <strong>{{ site.data.retractions.statutes.texas }}</strong>
+  (Texas Defamation Mitigation Act). Conrad documented that he is alive — the
+  {{ site.data.retractions.welfare_check.agency }} confirmed a welfare check on
+  {{ site.data.retractions.welfare_check.date }} — and demanded retraction of false
+  death claims, criminal-imposter allegations, fraudulent PPO statements, and
+  funding of tortious publications. This public record shows Conrad did everything
+  required by law before filing suit.
+</p>
+
+<section class="retraction-federal-notice" aria-label="Intended federal venue">
+  <h2>Intended federal venue if demands are not met</h2>
+  <p>{{ site.data.retractions.federal_venue.notice }}</p>
+  <p>
+    <strong>Court:</strong> {{ site.data.retractions.federal_venue.court }}<br>
+    <strong>Division:</strong> {{ site.data.retractions.federal_venue.division }}
+  </p>
+</section>
+
+<h2>Executed retraction letters</h2>
+<ul class="retraction-letter-list">
+  {% for letter in site.data.retractions.letters %}
+  <li class="retraction-letter-card">
+    <h3><a href="{{ letter.permalink | relative_url }}">{{ letter.heading }}</a></h3>
+    <p>{{ letter.summary }}</p>
+    <p>
+      <a class="btn btn--primary" href="{{ letter.permalink | relative_url }}">Read demand &amp; view PDF</a>
+      <a class="btn btn--ghost" href="{{ letter.pdf_path | relative_url }}" download>Download PDF</a>
+    </p>
+  </li>
+  {% endfor %}
+</ul>
+
+<h2>What these demands cover</h2>
+<ul>
+  <li>False claims that Conrad Alan Rockenhaus is dead, was murdered, or was &ldquo;burned alive&rdquo;</li>
+  <li>False claims that Conrad is a &ldquo;criminal imposter&rdquo; who murdered himself to steal VA disability benefits</li>
+  <li>Publications on <a href="https://conradrockenhausisdead.com" rel="nofollow noopener">conradrockenhausisdead.com</a> and <a href="https://conradrockenhausisdead.cc" rel="nofollow noopener">conradrockenhausisdead.cc</a></li>
+  <li>False statements in the Wayne County PPO petition (Case 26-102221-PP)</li>
+  <li>Stricken and denied federal filings published on skyphusion.com</li>
+  <li>Rob Hein / QOLity Financial / Deborah Dew Survivable Trust funding of false publications</li>
+  <li>Litigation-hold and preservation demands for all related records</li>
+</ul>
+
+<p class="hub-cta">
+  <a href="{{ '/is-conrad-rockenhaus-dead/' | relative_url }}">Is Conrad Rockenhaus dead?</a> ·
+  <a href="{{ '/rob-hein/' | relative_url }}">Rob Hein (QOLity Financial)</a> ·
+  <a href="{{ '/joe-prich/' | relative_url }}">Joe Prich (@JustCallMeJoeP)</a> ·
+  <a href="{{ '/faq/' | relative_url }}">FAQ</a> ·
+  <a href="{{ '/cases/wayne_ppo_26-102221-PP/' | relative_url }}">Wayne County PPO filings</a> ·
+  <a href="{{ '/' | relative_url }}">Court filings home</a>
+</p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}{{ site.baseurl }}/retractions/#webpage",
+      "url": "{{ site.url }}{{ site.baseurl }}/retractions/",
+      "name": {{ page.title | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "datePublished": {{ site.data.retractions.date_executed | jsonify }},
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": {{ site.data.parties.public_record.title | jsonify }},
+        "url": {{ site.data.parties.public_record.url | jsonify }}
+      },
+      "about": [
+        {
+          "@type": "Person",
+          "name": "Conrad Alan Rockenhaus",
+          "url": {{ site.data.parties.public_record.url | jsonify }}
+        },
+        {
+          "@type": "Person",
+          "name": "Adrienne Rockenhaus",
+          "alternateName": ["Adrienne Blair", "Adrienne Hein", "@adezero"]
+        },
+        {
+          "@type": "Person",
+          "name": "Rob Hein",
+          "worksFor": { "@type": "Organization", "name": "QOLity Financial" }
+        },
+        {
+          "@type": "Courthouse",
+          "name": {{ site.data.retractions.federal_venue.court | jsonify }},
+          "description": {{ site.data.retractions.federal_venue.notice | jsonify }}
+        }
+      ],
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}{{ site.baseurl }}/" },
+          { "@type": "ListItem", "position": 2, "name": "Retraction demands", "item": "{{ site.url }}{{ site.baseurl }}/retractions/" }
+        ]
+      },
+      "hasPart": [
+        {% for letter in site.data.retractions.letters %}
+        {
+          "@type": "LegalDocument",
+          "name": {{ letter.heading | jsonify }},
+          "url": "{{ site.url }}{{ site.baseurl }}{{ letter.permalink }}",
+          "encoding": {
+            "@type": "MediaObject",
+            "encodingFormat": "application/pdf",
+            "contentUrl": "{{ site.url }}{{ site.baseurl }}{{ letter.pdf_path }}"
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Did Conrad Rockenhaus send Adrienne Rockenhaus a retraction demand?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Conrad Alan Rockenhaus executed a formal retraction and correction demand to Adrienne Rockenhaus on June 30, 2026, under MCL 600.2911(2)(b) and Tex. Civ. Prac. & Rem. Code Sec. 73.055, delivered by email and certified mail. The executed PDF is published at {{ site.url }}{{ site.baseurl }}/retractions/adrienne-rockenhaus/."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Did Conrad Rockenhaus send Rob Hein a retraction demand?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Conrad Alan Rockenhaus executed a retraction demand, cease-funding notice, and litigation-hold demand to Rob Hein as Trustee of the Deborah Dew Survivable Trust on June 30, 2026, delivered by email and certified mail. The executed PDF is at {{ site.url }}{{ site.baseurl }}/retractions/rob-hein/."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where will Conrad Rockenhaus file a federal defamation lawsuit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If retraction demands are not fully satisfied, Conrad Alan Rockenhaus intends to file a federal civil action in the United States District Court for the Western District of Texas, Waco Division. See {{ site.url }}{{ site.baseurl }}/retractions/."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>

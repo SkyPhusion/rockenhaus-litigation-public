@@ -693,6 +693,64 @@ main {
   border-top: 1px solid var(--rule);
 }
 
+.retraction-federal-notice,
+.retraction-notice {
+  background: var(--paper-warm, #f8f5ef);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.retraction-federal-notice h2,
+.retraction-notice h2,
+.retraction-summary h2 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  margin: 0 0 0.75rem;
+}
+
+.retraction-summary {
+  margin-bottom: 2rem;
+}
+
+.retraction-summary h3 {
+  font-size: 1rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.retraction-letter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.retraction-letter-card {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+}
+
+.retraction-letter-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  margin: 0 0 0.75rem;
+}
+
+.retraction-letter-card p {
+  margin: 0 0 1rem;
+}
+
+.retraction-page .document-viewer h2 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+}
+
 .social-evidence {
   margin: 2rem 0;
 }

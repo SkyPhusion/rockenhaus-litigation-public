@@ -49,6 +49,7 @@ Then in this repo: **Settings → Pages → Custom domain**, enter `litigation.r
 | `/disputed-domains/` | rockenhaus.com, skyphusion.com, cannabytes.net, lawflaws.com, conradrockenhausisdead.* |
 | `/parties/` | Adrienne Rockenhaus / Blair / Hein / @adezero and Conrad Alan Rockenhaus |
 | `/joe-prich/` | Joe Prich (@JustCallMeJoeP) assertions indexed in this record |
+| `/retractions/` | June 30, 2026 retraction demands to Adrienne Rockenhaus and Rob Hein (executed PDFs) |
 | `/all-documents/` | HTML index of all document pages (generated at build) |
 
 Party and domain assertions are centralized in `_data/parties.json`.

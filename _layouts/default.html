@@ -11,7 +11,7 @@
   {% if page.pdf_path %}
   <link rel="alternate" type="application/pdf" href="{{ page.pdf_path | relative_url }}">
   {% endif %}
-  {% if page.layout == 'document' %}
+  {% if page.layout == 'document' or page.layout == 'retraction' %}
   <script src="{{ '/assets/js/pdf-viewer.js' | relative_url }}" defer></script>
   {% endif %}
 </head>
@@ -33,6 +33,7 @@
         <a href="{{ '/parties/' | relative_url }}">Parties</a>
         <a href="{{ '/joe-prich/' | relative_url }}">Joe Prich</a>
         <a href="{{ '/rob-hein/' | relative_url }}">Rob Hein</a>
+        <a href="{{ '/retractions/' | relative_url }}">Retractions</a>
         <a href="{{ '/disputed-domains/' | relative_url }}">Disputed domains</a>
         <a href="{{ '/all-documents/' | relative_url }}">All documents</a>
         {% for case in site.data.cases.cases %}
@@ -66,6 +67,8 @@
         <a href="{{ '/joe-prich/' | relative_url }}">Joe Prich</a>
         ·
         <a href="{{ '/rob-hein/' | relative_url }}">Rob Hein</a>
+        ·
+        <a href="{{ '/retractions/' | relative_url }}">Retraction demands</a>
         ·
         <a href="{{ '/disputed-domains/' | relative_url }}">Disputed domains</a>
         ·

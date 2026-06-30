@@ -1,0 +1,200 @@
+---
+layout: default
+---
+{% assign letter = site.data.retractions.letters | where: "id", page.letter_id | first %}
+<article class="document-page retraction-page" itemscope itemtype="https://schema.org/LegalDocument">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="{{ '/retractions/' | relative_url }}">Retraction demands</a></li>
+      <li aria-current="page">{{ letter.recipient_name }}</li>
+    </ol>
+  </nav>
+
+  <header class="document-header">
+    <p class="document-eyebrow">Retraction demand · Executed {{ site.data.retractions.date_executed }} · {{ site.data.retractions.statutes.michigan }} · {{ site.data.retractions.statutes.texas }}</p>
+    <h1 itemprop="name">{{ letter.heading }}</h1>
+    <p class="document-meta">
+      <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <meta itemprop="name" content="Conrad Alan Rockenhaus">
+        From Conrad Alan Rockenhaus
+      </span>
+      · To {{ letter.recipient_name }}
+      {% if letter.recipient_role %} ({{ letter.recipient_role }}){% endif %}
+      · Delivered by email and certified mail, return receipt requested
+    </p>
+    <p class="document-parties">
+      Canonical record:
+      <a href="{{ site.data.parties.public_record.url }}">{{ site.data.parties.public_record.host }}</a>.
+      This letter preserves Conrad Alan Rockenhaus's rights under Michigan and Texas defamation law.
+      If retraction demands are not met, a federal civil action is intended in the
+      {{ site.data.retractions.federal_venue.seo_long }}.
+    </p>
+    <div class="document-actions">
+      <a class="btn btn--primary" href="{{ letter.pdf_path | relative_url }}" download>
+        Download executed PDF
+      </a>
+      <a class="btn btn--ghost" href="{{ letter.pdf_path | relative_url }}" target="_blank" rel="noopener">
+        Open PDF in new tab
+      </a>
+      <a class="btn btn--ghost" href="{{ '/retractions/' | relative_url }}">
+        All retraction demands
+      </a>
+    </div>
+  </header>
+
+  <section class="retraction-notice" aria-label="Federal venue notice">
+    <h2>Federal venue if demands are not met</h2>
+    <p>{{ site.data.retractions.federal_venue.notice }}</p>
+  </section>
+
+  <section class="retraction-summary" aria-label="Letter summary">
+    <h2>Summary of demand</h2>
+    <p>{{ letter.summary }}</p>
+    {% if letter.demands %}
+    <h3>Specific demands</h3>
+    <ul>
+      {% for demand in letter.demands %}
+      <li>{{ demand }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </section>
+
+  <section class="document-viewer" aria-label="PDF viewer">
+    <h2>Executed letter (PDF)</h2>
+    <div id="pdf-viewer" class="pdf-viewer" data-pdf="{{ letter.pdf_path | relative_url }}">
+      <p class="pdf-viewer__loading">Loading document…</p>
+    </div>
+    <noscript>
+      <p>
+        JavaScript is required for inline viewing.
+        <a href="{{ letter.pdf_path | relative_url }}">Download the PDF</a> instead.
+      </p>
+    </noscript>
+  </section>
+
+  {% assign pdf_text = site.data.pdf_text[letter.doc_slug] %}
+  {% if pdf_text.excerpt and pdf_text.excerpt != "" %}
+  <section class="document-text" aria-label="Searchable letter text">
+    <h2>Letter text (searchable excerpt from OCR)</h2>
+    <pre class="document-text__body">{{ pdf_text.excerpt }}</pre>
+    {% if pdf_text.truncated %}
+    <p class="document-text__note">
+      Excerpt of {{ pdf_text.char_count }} characters.
+      <a href="{{ letter.pdf_path | relative_url }}">Download the full PDF</a> for complete text.
+    </p>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  <section class="document-seo-text">
+    <h2>About this retraction demand</h2>
+    <p>{{ letter.description }}</p>
+    <dl class="document-details">
+      <div>
+        <dt>Date executed</dt>
+        <dd>{{ site.data.retractions.date_executed }}</dd>
+      </div>
+      <div>
+        <dt>Delivery</dt>
+        <dd>Email and {{ site.data.retractions.delivery.certified_mail_note }}</dd>
+      </div>
+      <div>
+        <dt>Recipient</dt>
+        <dd>{{ letter.recipient_name }}{% if letter.recipient_aliases %} ({{ letter.recipient_aliases | join: ", " }}){% endif %}</dd>
+      </div>
+      {% if letter.recipient_organization %}
+      <div>
+        <dt>Organization</dt>
+        <dd><a href="{{ letter.recipient_organization_url }}" rel="nofollow noopener">{{ letter.recipient_organization }}</a></dd>
+      </div>
+      {% endif %}
+      <div>
+        <dt>Michigan statute</dt>
+        <dd>{{ site.data.retractions.statutes.michigan }}</dd>
+      </div>
+      <div>
+        <dt>Texas statute</dt>
+        <dd>{{ site.data.retractions.statutes.texas }}</dd>
+      </div>
+      <div>
+        <dt>Intended federal venue</dt>
+        <dd>{{ site.data.retractions.federal_venue.seo_long }}</dd>
+      </div>
+      <div>
+        <dt>Welfare check</dt>
+        <dd>{{ site.data.retractions.welfare_check.agency }}, {{ site.data.retractions.welfare_check.date }}: {{ site.data.retractions.welfare_check.result }}</dd>
+      </div>
+      <div>
+        <dt>File name</dt>
+        <dd><code>{{ letter.filename }}</code></dd>
+      </div>
+      <div>
+        <dt>Direct PDF link</dt>
+        <dd><a href="{{ letter.pdf_path | relative_url }}">{{ site.url }}{{ site.baseurl }}{{ letter.pdf_path }}</a></dd>
+      </div>
+      {% if letter.topics %}
+      <div>
+        <dt>Topics indexed</dt>
+        <dd>{{ letter.topics | join: "; " }}</dd>
+      </div>
+      {% endif %}
+    </dl>
+    <p>
+      See also:
+      <a href="{{ '/retractions/' | relative_url }}">All retraction demands</a>,
+      <a href="{{ '/is-conrad-rockenhaus-dead/' | relative_url }}">Is Conrad Rockenhaus dead?</a>,
+      <a href="{{ '/rob-hein/' | relative_url }}">Rob Hein (QOLity Financial)</a>,
+      <a href="{{ '/joe-prich/' | relative_url }}">Joe Prich (@JustCallMeJoeP)</a>,
+      <a href="{{ '/faq/' | relative_url }}">FAQ</a>.
+    </p>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LegalDocument",
+        "@id": "{{ site.url }}{{ site.baseurl }}{{ letter.permalink }}#document",
+        "name": {{ letter.heading | jsonify }},
+        "description": {{ letter.description | jsonify }},
+        "datePublished": {{ site.data.retractions.date_executed | jsonify }},
+        "author": {
+          "@type": "Person",
+          "name": {{ site.data.parties.respondent.name | jsonify }},
+          "url": {{ site.data.parties.public_record.url | jsonify }}
+        },
+        "encoding": {
+          "@type": "MediaObject",
+          "encodingFormat": "application/pdf",
+          "contentUrl": "{{ site.url }}{{ site.baseurl }}{{ letter.pdf_path }}"
+        },
+        "about": [
+          {
+            "@type": "Person",
+            "name": {{ letter.recipient_name | jsonify }}
+            {% if letter.recipient_aliases %},
+            "alternateName": {{ letter.recipient_aliases | jsonify }}
+            {% endif %}
+          },
+          {
+            "@type": "Courthouse",
+            "name": {{ site.data.retractions.federal_venue.court | jsonify }},
+            "description": {{ site.data.retractions.federal_venue.notice | jsonify }}
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}{{ site.baseurl }}/" },
+          { "@type": "ListItem", "position": 2, "name": "Retraction demands", "item": "{{ site.url }}{{ site.baseurl }}/retractions/" },
+          { "@type": "ListItem", "position": 3, "name": {{ letter.recipient_name | jsonify }}, "item": "{{ site.url }}{{ site.baseurl }}{{ letter.permalink }}" }
+        ]
+      }
+    ]
+  }
+  </script>
+</article>
