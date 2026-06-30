@@ -61,3 +61,9 @@ jobs:
 
       - name: Ping IndexNow
         run: python3 scripts/indexnow_ping.py
+
+      - name: Purge Cloudflare cache
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        run: python3 scripts/cloudflare_purge_cache.py

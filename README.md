@@ -19,7 +19,16 @@ Each PDF gets a dedicated HTML page with:
 - Automatic [sitemap](https://litigation.rockenhaus.net/sitemap.xml), `robots.txt`, and [llms.txt](https://litigation.rockenhaus.net/llms.txt)
 - IndexNow pings to Bing after each deploy
 
-On every push to `main`, GitHub Actions runs `scripts/generate_site.py` to index all PDFs, then builds and deploys the Jekyll site.
+On every push to `main`, GitHub Actions runs `scripts/generate_site.py` to index all PDFs, then builds and deploys the Jekyll site. After deploy, it pings IndexNow and purges Cloudflare cache for `litigation.rockenhaus.net`.
+
+**GitHub Actions secrets** (Settings → Secrets and variables → Actions):
+
+| Secret | Purpose |
+|---|---|
+| `CLOUDFLARE_API_TOKEN` | Zone-scoped token with **Cache Purge** on `rockenhaus.net` |
+| `CLOUDFLARE_ZONE_ID` | Zone ID for `rockenhaus.net` |
+
+`CLOUDFLARE_ACCOUNT_ID` is not required for hostname cache purge.
 
 ### Custom domain DNS (Cloudflare)
 
