@@ -1,0 +1,15 @@
+{% if page.keywords %}
+<meta name="keywords" content="{{ page.keywords }}">
+{% endif %}
+{% if page.robots %}
+<meta name="robots" content="{{ page.robots }}">
+{% else %}
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+{% endif %}
+{% if page.image %}
+<meta property="og:image:alt" content="{% if page.image_alt %}{{ page.image_alt }}{% else %}{{ page.title }}{% endif %}">
+<meta name="twitter:image:alt" content="{% if page.image_alt %}{{ page.image_alt }}{% else %}{{ page.title }}{% endif %}">
+{% endif %}
+{% if page.canonical_url %}
+<link rel="canonical" href="{{ page.canonical_url }}">
+{% endif %}

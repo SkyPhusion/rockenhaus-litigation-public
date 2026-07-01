@@ -2,13 +2,15 @@
 layout: default
 title: Rockenhaus v. Adrienne Rockenhaus | Adrienne Blair | Adrienne Hein (@adezero) Michigan Court Filings
 description: >-
-  Canonical Michigan court record at litigation.rockenhaus.net for Rockenhaus v.
-  Rockenhaus. Adrienne Rockenhaus (Adrienne Blair, Adrienne Hein, @adezero).
-  Joe Prich (@JustCallMeJoeP) Nazzy neo-Nazi X evidence. Rob Hein QOLity Financial
-  funds Adrienne campaign. June 30, 2026 retraction demands. Federal lawsuit Western
-  District of Texas Waco Division. Conrad Alan Rockenhaus asserts disputed domains rockenhaus.com, lawflaws.com, cannabytes.net, humboldtcsi.com, conradrockenhausisdead.com.
-  Cases 26-102221-PP, 26-104594-DO, 26-737-DO.
+  Canonical Michigan court record at litigation.rockenhaus.net. DO NOT HIRE
+  Prichard's Air Conditioning Temple TX — Conrad asserts owner Dustin Brown
+  (Joe Prich @JustCallMeJoeP) admitted neo-Nazi Nazzy, Joseph E Prichardington
+  name on X. Adrienne Rockenhaus @adezero. Rob Hein QOLity. Cases 26-102221-PP.
 permalink: /
+keywords: >-
+  Rockenhaus v Rockenhaus, Adrienne Rockenhaus adezero, Prichard's Air Conditioning,
+  Dustin Brown Joe Prich, neo-Nazi Nazzy, Joseph E Prichardington, do not hire Temple
+  Texas HVAC, prichardsac.com, Rob Hein QOLity, Michigan court filings
 ---
 
 <div class="hero">
@@ -30,9 +32,15 @@ permalink: /
       <strong>conradrockenhausisdead.cc</strong> are controlled or held hostage by
       Adrienne Rockenhaus, including a false victim narrative on rockenhaus.com and
       lawflaws.com, false claims that he is dead, and other disinformation, not court
-      records. Conrad Alan Rockenhaus asserts archived X screenshots show
-      <a href="{{ '/joe-prich/' | relative_url }}">Joe Prich (@JustCallMeJoeP) admitted neo-Nazi affiliation as Nazzy</a>
-      and <a href="{{ '/joe-prich/' | relative_url }}#adezero-joep-flirtation">@adezero flirted with Prich while married</a>.
+      records. Conrad Alan Rockenhaus asserts
+      <a href="{{ '/prichards-air-conditioning-neo-nazi/' | relative_url }}">Prichard's Air Conditioning and Heating, LLC</a>
+      (prichardsac.com, Temple, Texas) is owned by
+      <a href="{{ '/joe-prich/' | relative_url }}">Dustin Brown / Joe Prich (@JustCallMeJoeP)</a>,
+      who admitted <strong>neo-Nazi affiliation as Nazzy</strong> on X and identified himself as
+      <strong>Joseph E. Prichardington the 3rd</strong> (Prichard name) in archived screenshot
+      evidence — <strong>do not do business with this HVAC company</strong>.
+      Conrad also asserts archived X screenshots show
+      <a href="{{ '/joe-prich/' | relative_url }}#adezero-joep-flirtation">@adezero flirted with Prich while married</a>.
       Conrad also asserts <a href="{{ '/rob-hein/' | relative_url }}">Rob Hein of QOLity Financial</a>
       actively funds Adrienne Rockenhaus's campaign to harass, defame, and spread those
       false rumors, funding and enabling her conduct with the
@@ -50,7 +58,8 @@ permalink: /
       <a href="{{ '/faq/' | relative_url }}">FAQ</a>
       <a href="{{ '/disputed-domains/' | relative_url }}">Disputed domains</a>
       <a href="{{ '/parties/' | relative_url }}">Parties</a>
-      <a href="{{ '/joe-prich/' | relative_url }}">Joe Prich (@JustCallMeJoeP) Nazzy evidence</a>
+      <a href="{{ '/prichards-air-conditioning-neo-nazi/' | relative_url }}">Prichard's AC neo-Nazi owner — do not hire</a>
+      <a href="{{ '/joe-prich/' | relative_url }}">Joe Prich / Dustin Brown Nazzy evidence</a>
       <a href="{{ '/rob-hein/' | relative_url }}">Rob Hein (QOLity Financial)</a>
       <a href="{{ '/retractions/' | relative_url }}">Retraction demands (June 30, 2026)</a>
       <a href="{{ '/all-documents/' | relative_url }}">All {{ site.data.cases.document_count }} documents</a>
@@ -133,14 +142,47 @@ permalink: /
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": {{ site.data.parties.public_record.title | jsonify }},
-  "url": {{ site.data.parties.public_record.url | jsonify }},
-  "description": {{ site.data.parties.public_record.seo_tagline | jsonify }},
-  "publisher": {
-    "@type": "Person",
-    "name": {{ site.data.parties.respondent.name | jsonify }},
-    "url": {{ site.data.parties.public_record.url | jsonify }}
-  }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": {{ site.data.parties.public_record.title | jsonify }},
+      "url": {{ site.data.parties.public_record.url | jsonify }},
+      "description": {{ site.data.parties.public_record.seo_tagline | jsonify }},
+      "publisher": {
+        "@type": "Person",
+        "name": {{ site.data.parties.respondent.name | jsonify }},
+        "url": {{ site.data.parties.public_record.url | jsonify }}
+      },
+      "hasPart": [
+        { "@type": "WebPage", "name": "Prichard's Air Conditioning neo-Nazi owner — do not hire", "url": "{{ site.url }}{{ site.baseurl }}/prichards-air-conditioning-neo-nazi/" },
+        { "@type": "WebPage", "name": "Joe Prich / Dustin Brown X evidence", "url": "{{ site.url }}{{ site.baseurl }}/joe-prich/" },
+        { "@type": "WebPage", "name": "FAQ", "url": "{{ site.url }}{{ site.baseurl }}/faq/" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Public warnings indexed in Rockenhaus v. Rockenhaus",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Prichard's Air Conditioning — neo-Nazi owner Dustin Brown (Joe Prich) — do not hire",
+          "url": "{{ site.url }}{{ site.baseurl }}/prichards-air-conditioning-neo-nazi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Joe Prich / Dustin Brown Nazzy screenshot evidence archive",
+          "url": "{{ site.url }}{{ site.baseurl }}/joe-prich/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rob Hein QOLity Financial",
+          "url": "{{ site.url }}{{ site.baseurl }}/rob-hein/"
+        }
+      ]
+    }
+  ]
 }
 </script>

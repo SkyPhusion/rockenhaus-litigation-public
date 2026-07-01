@@ -30,6 +30,30 @@ breadcrumbs:
   Filed pleadings, orders, and exhibits indexed here are the canonical source of truth.
 </p>
 
+<section class="hub-section" aria-label="Rebuttals to conradrockenhausisdead.cc claims">
+  <h2>Rebuttals to claims on conradrockenhausisdead.cc</h2>
+  <p>
+    Conrad Alan Rockenhaus indexes factual rebuttals to specific false or misleading
+    narratives published on
+    <a href="https://conradrockenhausisdead.cc" rel="nofollow noopener">conradrockenhausisdead.cc</a>.
+    See also:
+    <a href="{{ '/faq/' | relative_url }}#conradrockenhausisdead-cc-american-airlines-aadvantage-rebuttal">FAQ: American Airlines AAdvantage account</a>.
+  </p>
+
+  <h3>American Airlines AAdvantage — not identity theft</h3>
+  <p>
+    Conrad Alan Rockenhaus asserts conradrockenhausisdead.cc falsely treats American
+    Airlines AAdvantage password-reset and profile-update emails as proof that a
+    criminal network hijacked his identity for a fraudulent flight and TSA bypass.
+    Conrad asserts the truth is the opposite: <strong>he personally contacted American
+    Airlines</strong>. His legacy AAdvantage account was mapped to an older email address
+    that Adrienne Rockenhaus controlled; Conrad had American Airlines change the account
+    to his current email.     Conrad asserts this was legitimate account recovery — not
+    post-mortem fraud by proxies.
+    <a href="{{ '/is-conrad-rockenhaus-dead/aadvantage-account-update/' | relative_url }}">Archived AAdvantage account update email (PDF) →</a>
+  </p>
+</section>
+
 {% include disputed-domains.html %}
 
 <p class="hub-cta">
@@ -43,13 +67,23 @@ breadcrumbs:
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "Is Conrad Rockenhaus dead?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": {{ site.data.faq.faqs | where: "id", "is-conrad-rockenhaus-dead" | map: "answer" | first | jsonify }}
-    }
-  }]
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Conrad Rockenhaus dead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ site.data.faq.faqs | where: "id", "is-conrad-rockenhaus-dead" | map: "answer" | first | jsonify }}
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Did criminals hijack Conrad Rockenhaus's American Airlines AAdvantage account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ site.data.faq.faqs | where: "id", "conradrockenhausisdead-cc-american-airlines-aadvantage-rebuttal" | map: "answer" | first | jsonify }}
+          }
+        }
+      ]
 }
 </script>

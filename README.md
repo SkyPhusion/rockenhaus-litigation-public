@@ -57,7 +57,8 @@ Then in this repo: **Settings → Pages → Custom domain**, enter `litigation.r
 | `/is-conrad-rockenhaus-dead/` | Dedicated landing page for false-death domain queries |
 | `/disputed-domains/` | rockenhaus.com, skyphusion.com, cannabytes.net, lawflaws.com, conradrockenhausisdead.* |
 | `/parties/` | Adrienne Rockenhaus / Blair / Hein / @adezero and Conrad Alan Rockenhaus |
-| `/joe-prich/` | Joe Prich (@JustCallMeJoeP) assertions indexed in this record |
+| `/prichards-air-conditioning-neo-nazi/` | **Do not hire** — Prichard's AC neo-Nazi owner (Dustin Brown / Joe Prich) |
+| `/joe-prich/` | Joe Prich / Dustin Brown (@JustCallMeJoeP) Nazzy neo-Nazi X evidence |
 | `/retractions/` | June 30, 2026 retraction demands to Adrienne Rockenhaus and Rob Hein (executed PDFs) |
 | `/all-documents/` | HTML index of all document pages (generated at build) |
 

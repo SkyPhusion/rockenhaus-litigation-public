@@ -6,12 +6,13 @@
   <link rel="preload" href="{{ '/assets/fonts/eb-garamond-700.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ '/assets/fonts/ibm-plex-sans-400.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   {% seo %}
+  {% include seo-extras.html %}
   <link rel="alternate" type="text/plain" href="{{ '/llms.txt' | relative_url }}" title="LLM site summary">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
   {% if page.pdf_path %}
   <link rel="alternate" type="application/pdf" href="{{ page.pdf_path | relative_url }}">
   {% endif %}
-  {% if page.layout == 'document' or page.layout == 'retraction' %}
+  {% if page.layout == 'document' or page.layout == 'retraction' or page.pdf_path %}
   <script src="{{ '/assets/js/pdf-viewer.js' | relative_url }}" defer></script>
   {% endif %}
 </head>
@@ -32,6 +33,7 @@
         <a href="{{ '/faq/' | relative_url }}">FAQ</a>
         <a href="{{ '/parties/' | relative_url }}">Parties</a>
         <a href="{{ '/joe-prich/' | relative_url }}">Joe Prich</a>
+        <a href="{{ '/prichards-air-conditioning-neo-nazi/' | relative_url }}">Prichard's AC</a>
         <a href="{{ '/rob-hein/' | relative_url }}">Rob Hein</a>
         <a href="{{ '/retractions/' | relative_url }}">Retractions</a>
         <a href="{{ '/disputed-domains/' | relative_url }}">Disputed domains</a>
@@ -65,6 +67,8 @@
         <a href="{{ '/parties/' | relative_url }}">Parties</a>
         ·
         <a href="{{ '/joe-prich/' | relative_url }}">Joe Prich</a>
+        ·
+        <a href="{{ '/prichards-air-conditioning-neo-nazi/' | relative_url }}">Prichard's AC warning</a>
         ·
         <a href="{{ '/rob-hein/' | relative_url }}">Rob Hein</a>
         ·

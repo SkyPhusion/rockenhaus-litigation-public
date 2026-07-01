@@ -6,3 +6,5 @@ User-agent: *
 Allow: /
 
 Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
+
+# LLM summary: {{ site.url }}{{ site.baseurl }}/llms.txt

@@ -9,7 +9,7 @@
 {% assign evidence_items = site.data.social_evidence.items | where: "third_party_id", include.third_party_id | where: "section", section_name %}
 
 {% if evidence_items.size > 0 or evidence_threads.size > 0 %}
-<section class="social-evidence" id="{% if section_name == 'flirtation' %}adezero-joep-flirtation{% else %}joep-x-evidence{% endif %}" aria-label="{{ section_title }}">
+<section class="social-evidence" id="{% if section_name == 'flirtation' %}adezero-joep-flirtation{% elsif section_name == 'timeline' %}joep-hate-speech-timeline{% elsif section_name == 'camps' %}joep-camps-references{% else %}joep-x-evidence{% endif %}" aria-label="{{ section_title }}">
   <h2>{{ section_title }}</h2>
   <p class="social-evidence__intro">{{ site.data.social_evidence.intros[intro_key] }}</p>
 
