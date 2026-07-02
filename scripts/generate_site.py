@@ -99,7 +99,8 @@ def humanize_filename(name: str) -> str:
 
     acronyms = {
         "PPO", "DO", "VA", "PD", "NOH", "RFA", "PII", "FCI", "USAA", "TRO",
-        "MCR", "CC", "MC07", "BP", "POA", "TC", "COS", "EPRAECIPE", "FBI",
+        "MCR", "CC", "MC07", "BP", "POA", "TC", "COS", "EPRAECIPE", "EPRAECIPES",
+        "FBI", "GAL",
     }
 
     words = []
@@ -199,6 +200,51 @@ def seo_document_description(heading: str, case: dict, category: str) -> str:
     )
 
 
+def seo_document_keywords(heading: str, case: dict, filename: str) -> str:
+    """Comma-separated meta keywords tuned for search discovery."""
+    parts = [
+        "Rockenhaus v Rockenhaus",
+        case["case_number"],
+        case["seo_county"],
+        case["seo_matter_short"],
+        PETITIONER["name"],
+        "Adrienne Blair",
+        "Adrienne Hein",
+        "@adezero",
+        RESPONDENT["name"],
+        "Michigan court filing",
+        "litigation.rockenhaus.net",
+    ]
+    lower_heading = heading.lower()
+    lower_name = filename.lower()
+    if "epraecipe" in lower_name or "praecipe" in lower_heading:
+        parts.extend([
+            "ePraecipe",
+            "praecipe accepted",
+            "motion hearing",
+            "August 26 2026",
+            "Hon Nicole N Goodson",
+            "Wayne County divorce",
+        ])
+    if "gal" in lower_name or "guardian ad litem" in lower_heading:
+        parts.extend([
+            "guardian ad litem",
+            "GAL",
+            "MCR 2.201(E)",
+            "plaintiff capacity",
+            "Adrienne Rockenhaus unrepresented",
+        ])
+    if "default judgment" in lower_heading:
+        parts.append("default judgment counterclaim")
+    if "preservation" in lower_heading or "spoliation" in lower_heading:
+        parts.extend(["preservation order", "spoliation of evidence"])
+    if "omnibus" in lower_heading:
+        parts.extend(["omnibus motion", "rockenhaus.com TRO"])
+    if "usaa" in lower_heading or "dissipation" in lower_heading:
+        parts.extend(["USAA account", "VA benefits", "dissipation TRO"])
+    return ", ".join(dict.fromkeys(parts))
+
+
 def seo_case_heading(case: dict) -> str:
     return (
         f"Rockenhaus v. Adrienne Rockenhaus ({case['seo_matter']}, Case {case['case_number']})"
@@ -219,6 +265,7 @@ def write_document_page(
     category_label = CATEGORIES[category]["label"]
     title = seo_document_title(heading, case)
     description = seo_document_description(heading, case, category)
+    keywords = seo_document_keywords(heading, case, filename)
 
     out_path = DOCUMENTS_DIR / f"{slug}.html"
     front_matter = f"""---
@@ -226,6 +273,7 @@ layout: document
 title: {yaml_quote(title)}
 heading: {yaml_quote(heading)}
 description: {yaml_quote(description)}
+keywords: {yaml_quote(keywords)}
 case_id: {yaml_quote(case_id)}
 case_title: {yaml_quote(case["title"])}
 case_number: {yaml_quote(case["case_number"])}

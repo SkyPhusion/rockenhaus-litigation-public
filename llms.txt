@@ -99,8 +99,35 @@ Related FAQ entries:
 ## Michigan cases
 
 - [Wayne County PPO 26-102221-PP](https://litigation.rockenhaus.net/cases/wayne_ppo_26-102221-PP/): Personal protection order; Conrad Alan Rockenhaus, respondent pro se.
-- [Wayne County divorce 26-104594-DO](https://litigation.rockenhaus.net/cases/wayne_do_26-104594-DO/): Divorce before Hon. Nicole N. Goodson; Conrad Alan Rockenhaus, defendant pro se.
+- [Wayne County divorce 26-104594-DO](https://litigation.rockenhaus.net/cases/wayne_do_26-104594-DO/): Divorce before Hon. Nicole N. Goodson; Conrad Alan Rockenhaus, defendant pro se. Ten defendant motions calendared for **August 26, 2026 at 11:30 a.m.** via court-accepted ePraecipes (accepted June 10, 2026). July 2, 2026 filings: notice of change of address, motion to inquire into plaintiff capacity and appoint guardian ad litem (GAL), and certificate of service for ePraecipe hearing notifications.
 - [Washtenaw County divorce 26-737-DO](https://litigation.rockenhaus.net/cases/washtenaw_do_26-737-DO/): Divorce before Hon. Darlene A. O'Brien; Conrad Alan Rockenhaus, plaintiff pro se.
+
+## Wayne County divorce 26-104594-DO — July 2, 2026 filings & August 26, 2026 hearing
+
+Conrad Alan Rockenhaus filed on **July 2, 2026** in Case 26-104594-DO (Hon. Nicole N. Goodson):
+
+- [Notice of change of address](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-38noticeofchangeofaddressdo2026-07-02/): Updated defendant contact information of record (Hewitt, Texas).
+- [Motion to inquire into plaintiff capacity and appoint GAL](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-39motionappointgalforplaintiff2026-07-02/): Defendant's motion under MCR 2.201(E) to inquire into Adrienne Marjorie Rockenhaus's capacity and appoint a guardian ad litem before dispositive relief, citing plaintiff's self-representation and due-process concerns.
+- [Certificate of service — ePraecipes for August 26 hearing](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-40certificateofserviceepraecipes8-26hearing2026-07-02/): Service of ten court-accepted ePraecipe notifications calendaring defendant motions for **August 26, 2026 at 11:30 a.m.**
+
+Ten ePraecipe acceptance notifications (each accepted **June 10, 2026**) calendaring motions for August 26, 2026 at 11:30 a.m. before Hon. Nicole N. Goodson:
+
+1. [Leave to exceed interrogatories](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-41aepraecipeacceptedleaveexceedinterrogatories8-26hearing2026-06-10/)
+2. [Issuance of subpoenas](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-41bepraecipeacceptedissuancesubpoenas8-26hearing2026-06-10/)
+3. [Omnibus motion (preservation, financial disclosure, rockenhaus.com TRO)](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-41cepraecipeacceptedomnibusmotion8-26hearing2026-06-10/)
+4. [USAA dissipation TRO (diverted VA/SS benefits)](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-41depraecipeacceptedusaadissipationtro8-26hearing2026-06-10/)
+5. [Motion to seal PII on filed exhibits](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-41eepraecipeacceptedmotionsealpii8-26hearing2026-06-10/)
+6. [Return of personal property and electronic account access](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-41fepraecipeacceptedreturnpersonalproperty8-26hearing2026-06-10/)
+7. [Preservation order / spoliation](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-41gepraecipeacceptedpreservationspoliation8-26hearing2026-06-10/)
+8. [Leave to file first amended counterclaim](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-41hepraecipeacceptedleaveamendcounterclaim8-26hearing2026-06-10/)
+9. [Discovery sanctions (RFA sufficiency, compel, sanctions)](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-41iepraecipeaccepteddiscoverysanctions8-26hearing2026-06-10/)
+10. [Default judgment on counterclaim](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-41jepraecipeaccepteddefaultjudgmentcounterclaim8-26hearing2026-06-10/)
+
+Related FAQ entries:
+
+- When is the August 26, 2026 hearing in Wayne County divorce 26-104594-DO? https://litigation.rockenhaus.net/faq/#august-26-2026-hearing-wayne-divorce-26-104594-do
+- What is Conrad Rockenhaus's GAL motion for Adrienne Rockenhaus? https://litigation.rockenhaus.net/faq/#gal-motion-adrienne-rockenhaus-capacity-26-104594-do
+- What motions are calendared for August 26, 2026 in Case 26-104594-DO? https://litigation.rockenhaus.net/faq/#motions-calendared-august-26-2026-26-104594-do
 
 ## Disputed domains (not authoritative)
 
