@@ -99,7 +99,7 @@ Related FAQ entries:
 ## Michigan cases
 
 - [Wayne County PPO 26-102221-PP](https://litigation.rockenhaus.net/cases/wayne_ppo_26-102221-PP/): Personal protection order; Conrad Alan Rockenhaus, respondent pro se.
-- [Wayne County divorce 26-104594-DO](https://litigation.rockenhaus.net/cases/wayne_do_26-104594-DO/): Divorce before Hon. Nicole N. Goodson; Conrad Alan Rockenhaus, defendant pro se. Ten defendant motions calendared for **August 26, 2026 at 11:30 a.m.** via court-accepted ePraecipes (accepted June 10, 2026). July 2, 2026 filings: notice of change of address, motion to inquire into plaintiff capacity and appoint guardian ad litem (GAL), and certificate of service for ePraecipe hearing notifications.
+- [Wayne County divorce 26-104594-DO](https://litigation.rockenhaus.net/cases/wayne_do_26-104594-DO/): Divorce before Hon. Nicole N. Goodson; Conrad Alan Rockenhaus, defendant pro se. Ten defendant motions calendared for **August 26, 2026 at 11:30 a.m.** via court-accepted ePraecipes (accepted June 10, 2026). July 2, 2026 filings: notice of change of address, GAL motion, consolidated notice of hearing, and proof of service for the August 26 hearing.
 - [Washtenaw County divorce 26-737-DO](https://litigation.rockenhaus.net/cases/washtenaw_do_26-737-DO/): Divorce before Hon. Darlene A. O'Brien; Conrad Alan Rockenhaus, plaintiff pro se.
 
 ## Wayne County divorce 26-104594-DO — July 2, 2026 filings & August 26, 2026 hearing
@@ -108,7 +108,8 @@ Conrad Alan Rockenhaus filed on **July 2, 2026** in Case 26-104594-DO (Hon. Nico
 
 - [Notice of change of address](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-38noticeofchangeofaddressdo2026-07-02/): Updated defendant contact information of record (Hewitt, Texas).
 - [Motion to inquire into plaintiff capacity and appoint GAL](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-39motionappointgalforplaintiff2026-07-02/): Defendant's motion under MCR 2.201(E) to inquire into Adrienne Marjorie Rockenhaus's capacity and appoint a guardian ad litem before dispositive relief, citing plaintiff's self-representation and due-process concerns.
-- [Certificate of service — ePraecipes for August 26 hearing](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-40certificateofserviceepraecipes8-26hearing2026-07-02/): Service of ten court-accepted ePraecipe notifications calendaring defendant motions for **August 26, 2026 at 11:30 a.m.**
+- [Consolidated notice of hearing — August 26, 2026](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-41consolidatednoticeofhearing8-262026-07-02/): Single notice setting all ten defendant motions for hearing **August 26, 2026 at 11:30 a.m.** via Zoom before Hon. Nicole N. Goodson (ePraecipes accepted June 10, 2026).
+- [Proof of service — consolidated notice of hearing](https://litigation.rockenhaus.net/documents/waynedo26-104594-do-filed-42proofofserviceconsolidatednoh2026-07-02/): July 2, 2026 service of the consolidated notice on plaintiff Adrienne Marjorie Rockenhaus by email and mail under MCR 2.107.
 
 Ten ePraecipe acceptance notifications (each accepted **June 10, 2026**) calendaring motions for August 26, 2026 at 11:30 a.m. before Hon. Nicole N. Goodson:
 

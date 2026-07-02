@@ -234,6 +234,13 @@ def seo_document_keywords(heading: str, case: dict, filename: str) -> str:
             "plaintiff capacity",
             "Adrienne Rockenhaus unrepresented",
         ])
+    if "consolidated" in lower_heading and "hearing" in lower_heading:
+        parts.extend([
+            "consolidated notice of hearing",
+            "NOH",
+            "August 26 2026",
+            "Zoom hearing",
+        ])
     if "default judgment" in lower_heading:
         parts.append("default judgment counterclaim")
     if "preservation" in lower_heading or "spoliation" in lower_heading:
