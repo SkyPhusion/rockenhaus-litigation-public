@@ -21,6 +21,8 @@ Each PDF gets a dedicated HTML page with:
 
 On every push to `main`, GitHub Actions runs `scripts/generate_site.py` to index all PDFs, then builds and deploys the Jekyll site. After deploy, it pings IndexNow and purges Cloudflare cache for `litigation.rockenhaus.net`.
 
+**GitHub Pages must use build type `GitHub Actions`** (workflow `Deploy GitHub Pages site`), not legacy “Deploy from branch”. Legacy mode runs a second Jekyll build without `generate_site.py` and can race the deploy step.
+
 **GitHub Actions secrets** (Settings → Secrets and variables → Actions):
 
 | Secret | Purpose |

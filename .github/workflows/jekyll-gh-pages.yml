@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -58,6 +58,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+        with:
+          timeout: 900000
+          error_count: 15
+          reporting_interval: 10000
 
       - name: Ping IndexNow
         run: python3 scripts/indexnow_ping.py
