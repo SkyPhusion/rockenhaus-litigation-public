@@ -46,12 +46,12 @@ Proxy status: DNS only (grey cloud) is typical for GitHub Pages; orange-cloud pr
 
 Then in this repo: **Settings → Pages → Custom domain**, enter `litigation.rockenhaus.net` and enable **Enforce HTTPS** once DNS propagates. The `CNAME` file in this repository must match.
 
-### Search engine setup (manual)
+### Search engine setup
 
-1. **Google Search Console** — Add property `https://litigation.rockenhaus.net/`, verify via HTML tag, then paste the verification code into `_config.yml` as `google_site_verification` and redeploy.
+1. **Google Search Console** — Property `https://litigation.rockenhaus.net/` is owner-verified via the existing Google site-verification DNS record on `rockenhaus.net`. No HTML meta tag in `_config.yml` is required.
 2. Submit sitemap: `https://litigation.rockenhaus.net/sitemap.xml`
-3. **Bing Webmaster Tools** — Add site and submit the same sitemap (IndexNow runs automatically on deploy).
-4. From `rockenhaus.net` (your domain), add a prominent link to `https://litigation.rockenhaus.net/` to reinforce canonical authority.
+3. **Bing Webmaster Tools** — Synced with Search Console; same sitemap (IndexNow runs automatically on deploy).
+4. **`rockenhaus.net`** — Cloudflare redirect to `litigation.rockenhaus.net` (no separate homepage needed).
 
 ### Hub pages
 
