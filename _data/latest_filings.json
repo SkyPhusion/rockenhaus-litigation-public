@@ -1,0 +1,48 @@
+{
+  "date": "2026-07-02",
+  "date_display": "July 2, 2026",
+  "groups": [
+    {
+      "case_id": "wayne_ppo_26-102221-PP",
+      "case_label": "Wayne County PPO 26-102221-PP",
+      "case_url": "/cases/wayne_ppo_26-102221-PP/",
+      "filings": [
+        {
+          "title": "16 Notice Of Change Of Address 2026-07-02",
+          "url": "/documents/wayneppo26-102221-pp-filed-16noticeofchangeofaddress2026-07-02/"
+        },
+        {
+          "title": "17 Notice Of Withdrawal Motion To Terminate PPO 2026-07-02",
+          "url": "/documents/wayneppo26-102221-pp-filed-17noticeofwithdrawalmotiontoterminateppo2026-07-02/"
+        }
+      ]
+    },
+    {
+      "case_id": "wayne_do_26-104594-DO",
+      "case_label": "Wayne County Divorce 26-104594-DO",
+      "case_url": "/cases/wayne_do_26-104594-DO/",
+      "filings": [
+        {
+          "title": "38 Notice Of Change Of Address DO 2026-07-02",
+          "url": "/documents/waynedo26-104594-do-filed-38noticeofchangeofaddressdo2026-07-02/"
+        },
+        {
+          "title": "39 Motion Appoint GAL For Plaintiff 2026-07-02",
+          "url": "/documents/waynedo26-104594-do-filed-39motionappointgalforplaintiff2026-07-02/"
+        },
+        {
+          "title": "40 Certificate Of Service EPRAECIPES 8-26 Hearing 2026-07-02",
+          "url": "/documents/waynedo26-104594-do-filed-40certificateofserviceepraecipes8-26hearing2026-07-02/"
+        },
+        {
+          "title": "41 Consolidated Notice Of Hearing 8-26 2026-07-02",
+          "url": "/documents/waynedo26-104594-do-filed-41consolidatednoticeofhearing8-262026-07-02/"
+        },
+        {
+          "title": "42 Proof Of Service Consolidated NOH 2026-07-02",
+          "url": "/documents/waynedo26-104594-do-filed-42proofofserviceconsolidatednoh2026-07-02/"
+        }
+      ]
+    }
+  ]
+}

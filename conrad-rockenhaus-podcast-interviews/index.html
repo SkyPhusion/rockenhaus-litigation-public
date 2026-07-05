@@ -1,0 +1,158 @@
+---
+layout: hub
+title: Conrad Rockenhaus podcast interviews | disputed Adrienne Rockenhaus claims
+description: >-
+  Google results for Conrad Rockenhaus include podcast interviews and Sleep4Real
+  YouTube videos where Adrienne Rockenhaus espoused false claims — including a
+  sockpuppet channel and a false Ann Arbor apartment video. Canonical record:
+  litigation.rockenhaus.net.
+permalink: /conrad-rockenhaus-podcast-interviews/
+keywords: >-
+  Conrad Rockenhaus podcast, Sleep4Real sockpuppet, Adrienne Rockenhaus YouTube,
+  false Ann Arbor apartment video, Watchman Privacy Conrad Rockenhaus,
+  disputed podcast claims, litigation.rockenhaus.net
+breadcrumbs:
+  - name: Home
+    url: /
+  - name: Conrad Rockenhaus podcast interviews (disputed)
+---
+
+<p class="hub-lead">
+  <strong>Podcast episodes titled with Conrad Alan Rockenhaus's name are not authoritative.</strong>
+  {{ site.data.podcast_interviews.summary }}
+  Conrad asserts Adrienne Rockenhaus stopped writing him in
+  <strong>October 2025</strong> during his supervised-release incarceration yet continued
+  podcast and media appearances portraying herself as his advocate — while misusing his
+  VA and SSA benefits and pursuing other relationships.
+</p>
+
+<section class="hub-section" aria-label="Sockpuppet YouTube accounts">
+  <h2>Sockpuppet YouTube accounts Conrad asserts Adrienne operates</h2>
+  {% for account in site.data.podcast_interviews.sockpuppet_accounts %}
+  <article class="hub-entry">
+    <h3>{{ account.name }} ({{ account.platform }}) — asserted sockpuppet</h3>
+    <p>
+      <strong>Presented as:</strong> {{ account.presented_as }}
+      {% if account.handle %} · <strong>Handle:</strong> {{ account.handle }}{% endif %}
+    </p>
+    <p>{{ account.assertion }}</p>
+    <p>
+      <a href="{{ account.url }}" rel="nofollow noopener">{{ account.url }}</a>
+      {% if account.indexed_at %}
+      · Indexed at
+      <a href="{{ account.indexed_at.url }}" rel="nofollow noopener">{{ account.indexed_at.label }}</a>
+      {% endif %}
+    </p>
+    {% if account.featured_videos %}
+    <h4>Featured content Conrad asserts is false or misleading</h4>
+    <ul>
+      {% for video in account.featured_videos %}
+      <li>
+        <strong>{{ video.title }}</strong>
+        {% if video.date %} ({{ video.date }}){% endif %}
+        {% if video.assertion %} — {{ video.assertion }}{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </article>
+  {% endfor %}
+</section>
+
+<section class="hub-section" aria-label="Indexed podcast and stream appearances">
+  <h2>Podcast and stream appearances Conrad asserts are false or misleading</h2>
+  <p>
+    Searching Google for <strong>Conrad Rockenhaus</strong> surfaces links like those below.
+    Conrad Alan Rockenhaus asserts Adrienne Rockenhaus (@adezero) was the speaker or
+    promoter — not Conrad — and that she used his case for internet clout (retweets,
+    podcast offers) while publishing disinformation on
+    <a href="{{ '/rockenhaus-com/' | relative_url }}">rockenhaus.com</a>,
+    <a href="{{ '/lawflaws-com/' | relative_url }}">lawflaws.com</a>, and
+    <a href="{{ '/fitspo-net/' | relative_url }}">fitspo.net</a>.
+  </p>
+
+  {% for entry in site.data.podcast_interviews.entries %}
+  <article class="hub-entry">
+    <h3>{{ entry.title }}</h3>
+    {% if entry.host %}<p><strong>Host:</strong> {{ entry.host }}</p>{% endif %}
+    {% if entry.guest %}<p><strong>Guest / subject:</strong> {{ entry.guest }}</p>{% endif %}
+    {% if entry.date %}<p><strong>Date:</strong> {{ entry.date }}</p>{% endif %}
+    <p>{{ entry.assertion }}</p>
+    <ul>
+      {% for link in entry.links %}
+      <li>
+        <a href="{{ link.url }}" rel="nofollow noopener">{{ link.label }}</a>
+      </li>
+      {% endfor %}
+      {% if entry.indexed_at %}
+      <li>
+        Indexed by Adrienne at
+        <a href="{{ entry.indexed_at.url }}" rel="nofollow noopener">{{ entry.indexed_at.label }}</a>
+      </li>
+      {% endif %}
+    </ul>
+  </article>
+  {% endfor %}
+</section>
+
+<section class="hub-section" aria-label="Third-party articles">
+  <h2>Third-party articles repeating the disputed narrative</h2>
+  {% for article in site.data.podcast_interviews.third_party_articles %}
+  <article class="hub-entry">
+    <h3>{{ article.title }}</h3>
+    <p>{{ article.assertion }}</p>
+    <p>
+      <a href="{{ article.url }}" rel="nofollow noopener">{{ article.url }}</a>
+    </p>
+  </article>
+  {% endfor %}
+</section>
+
+<section class="hub-section">
+  <h2>Canonical source of truth</h2>
+  <p>
+    Filed Michigan court PDFs indexed at
+    <a href="{{ site.data.parties.public_record.url }}">litigation.rockenhaus.net</a>
+    — not podcast interviews or rockenhaus.com — are Conrad Alan Rockenhaus's public court record.
+  </p>
+  <ul>
+    <li><a href="{{ '/all-documents/' | relative_url }}">All court filings</a></li>
+    <li><a href="{{ '/faq/#was-adrienne-rockenhaus-fighting-for-conrad-in-prison-2025' | relative_url }}">FAQ: Was she fighting for him in prison?</a></li>
+    <li><a href="{{ '/faq/#did-adrienne-rockenhaus-use-conrad-case-for-internet-clout' | relative_url }}">FAQ: Did she use his case for internet clout?</a></li>
+    <li><a href="{{ '/faq/#is-sleep4real-adrienne-rockenhaus-sockpuppet-youtube' | relative_url }}">FAQ: Is Sleep4Real Adrienne's sockpuppet?</a></li>
+    <li><a href="{{ '/faq/#sleep4real-ann-arbor-apartment-video-not-conrad-rockenhaus' | relative_url }}">FAQ: Ann Arbor apartment video</a></li>
+    <li><a href="{{ '/disputed-domains/' | relative_url }}">All disputed domains</a></li>
+  </ul>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Conrad Rockenhaus podcast interviews — disputed Adrienne Rockenhaus claims",
+  "description": {{ site.data.podcast_interviews.summary | jsonify }},
+  "url": "{{ site.url }}{{ site.baseurl }}/conrad-rockenhaus-podcast-interviews/",
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "Disputed podcast and media appearances indexed for Conrad Rockenhaus",
+    "itemListElement": [
+      {% for account in site.data.podcast_interviews.sockpuppet_accounts %}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "name": {{ account.name | append: " (asserted sockpuppet)" | jsonify }},
+        "description": {{ account.assertion | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}{% if site.data.podcast_interviews.entries.size > 0 %},{% endif %}
+      {% for entry in site.data.podcast_interviews.entries %}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index | plus: site.data.podcast_interviews.sockpuppet_accounts.size }},
+        "name": {{ entry.title | jsonify }},
+        "description": {{ entry.assertion | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+}
+</script>

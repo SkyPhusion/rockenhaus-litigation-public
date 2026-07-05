@@ -11,9 +11,14 @@ url: "https://litigation.rockenhaus.net"
 baseurl: ""
 lang: en_US
 
-# After verifying litigation.rockenhaus.net in Google Search Console, paste the
-# content value from the HTML tag method here (uncomment and set):
-# google_site_verification: "paste-verification-code-here"
+# Google Search Console: owner verified via DNS on rockenhaus.net (no HTML tag).
+# Bing Webmaster Tools synced with Search Console.
+
+logo: /assets/images/og-default.png
+image: /assets/images/og-default.png
+twitter:
+  card: summary_large_image
+  image: /assets/images/og-default.png
 
 author:
   name: Conrad Alan Rockenhaus
@@ -27,6 +32,8 @@ defaults:
       path: ""
     values:
       layout: default
+      image: /assets/images/og-default.png
+      image_alt: "Scales of justice — litigation.rockenhaus.net canonical Michigan court record"
   - scope:
       path: ""
       type: documents

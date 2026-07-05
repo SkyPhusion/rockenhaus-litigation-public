@@ -1,0 +1,35 @@
+{% assign lf = site.data.latest_filings %}
+{% if lf.groups.size > 0 %}
+<section class="index-note" aria-label="Latest court filings">
+  <h2>Latest filings — {{ lf.date_display }}</h2>
+  {% for group in lf.groups %}
+  {% if lf.groups.size > 1 %}
+  <h3>
+    <a href="{{ group.case_url | relative_url }}">{{ group.case_label }}</a>
+  </h3>
+  {% else %}
+  <p>
+    Conrad Alan Rockenhaus filed {{ group.filings.size }} document{% if group.filings.size != 1 %}s{% endif %}
+    on <strong>{{ lf.date_display }}</strong> in
+    <a href="{{ group.case_url | relative_url }}">{{ group.case_label }}</a>:
+  </p>
+  {% endif %}
+  <ul>
+    {% for filing in group.filings %}
+    <li><a href="{{ filing.url | relative_url }}">{{ filing.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <p>
+    All indexed with searchable PDF text on the
+    <a href="{{ group.case_url | relative_url }}">case page</a>.
+    See also the <a href="{{ '/faq/' | relative_url }}">FAQ</a>
+    {% if group.case_id == 'wayne_do_26-104594-DO' %}
+    and
+    <a href="{{ '/faq/#august-26-2026-hearing-wayne-divorce-26-104594-do' | relative_url }}">
+      August 26, 2026 hearing details
+    </a>
+    {% endif %}.
+  </p>
+  {% endfor %}
+</section>
+{% endif %}

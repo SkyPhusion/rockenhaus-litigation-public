@@ -77,10 +77,17 @@ STATIC_URLS = [
     "/",
     "/faq/",
     "/is-conrad-rockenhaus-dead/",
+    "/is-conrad-rockenhaus-dead/aadvantage-account-update/",
     "/parties/",
     "/disputed-domains/",
+    "/rockenhaus-com/",
+    "/lawflaws-com/",
+    "/fitspo-net/",
+    "/conrad-rockenhaus-podcast-interviews/",
+    "/skyphusion-com/",
     "/joe-prich/",
     "/rob-hein/",
+    "/prichards-air-conditioning-neo-nazi/",
     "/retractions/",
     "/retractions/adrienne-rockenhaus/",
     "/retractions/rob-hein/",
@@ -127,6 +134,24 @@ def pdf_last_modified(pdf_path: Path) -> str:
     return datetime.fromtimestamp(ts, tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+def parse_filing_date(filename: str, heading: str) -> str | None:
+    for text in (filename, heading):
+        match = re.search(r"(\d{4}-\d{2}-\d{2})", text)
+        if match:
+            return match.group(1)
+        match = re.search(r"(\d{4})(\d{2})(\d{2})", text)
+        if match:
+            year, month, day = match.group(1), match.group(2), match.group(3)
+            if 1 <= int(month) <= 12 and 1 <= int(day) <= 31:
+                return f"{year}-{month}-{day}"
+    return None
+
+
+def format_filing_date(iso_date: str) -> str:
+    dt = datetime.strptime(iso_date, "%Y-%m-%d")
+    return f"{dt.strftime('%B')} {dt.day}, {dt.year}"
+
+
 def extract_pdf_text(pdf_path: Path) -> dict:
     try:
         result = subprocess.run(
@@ -169,12 +194,10 @@ def seo_case_title(case: dict) -> str:
 def seo_case_description(case: dict) -> str:
     return (
         f"Public Rockenhaus v. Rockenhaus {case['seo_matter']} court filings "
-        f"involving {PETITIONER['seo_long']} and {RESPONDENT['name']} "
         f"for Michigan Case No. {case['case_number']} in {case['court']}. "
-        f"Canonical source of truth: {PUBLIC_RECORD['host']}. "
-        f"{PARTIES['seo_disputed_summary']} "
-        f"{PARTIES.get('seo_third_parties_summary', '')} "
-        f"Filed motions, discovery, exhibits, and court orders as searchable PDFs."
+        f"Filed motions, discovery, exhibits, opposing filings, and court orders "
+        f"as searchable PDFs at {PUBLIC_RECORD['host']} (canonical record). "
+        f"Disputed third-party domains indexed at /disputed-domains/."
     )
 
 
@@ -190,13 +213,10 @@ def category_seo_phrase(category: str) -> str:
 def seo_document_description(heading: str, case: dict, category: str) -> str:
     seo_phrase = category_seo_phrase(category)
     return (
-        f"Read and download the PDF of {heading}, a {seo_phrase} in "
-        f"Rockenhaus v. Rockenhaus ({case['seo_matter']}) involving "
-        f"{PETITIONER['seo_long']} and {RESPONDENT['name']}. "
-        f"Canonical court record at {PUBLIC_RECORD['host']}. "
-        f"{PARTIES['seo_disputed_summary']} "
-        f"{PARTIES.get('seo_third_parties_summary', '')} "
-        f"Michigan Case No. {case['case_number']}, {case['seo_county']} Circuit Court."
+        f"{heading}: {seo_phrase} in Rockenhaus v. Rockenhaus ({case['seo_matter']}), "
+        f"Michigan Case No. {case['case_number']}, {case['seo_county']} Circuit Court. "
+        f"PDF and searchable text at {PUBLIC_RECORD['host']} (canonical court record). "
+        f"Disputed third-party domains: /disputed-domains/."
     )
 
 
@@ -223,8 +243,25 @@ def seo_document_keywords(heading: str, case: dict, filename: str) -> str:
             "praecipe accepted",
             "motion hearing",
             "August 26 2026",
+            "August 26 2026 11:30 AM",
             "Hon Nicole N Goodson",
             "Wayne County divorce",
+            "Zoom hearing",
+        ])
+    if re.search(r"8[-_]?26", lower_name) or "august 26" in lower_heading:
+        parts.extend([
+            "August 26 2026 hearing",
+            "August 26 2026 11:30 AM",
+            "Wayne County divorce hearing",
+            "Hon Nicole N Goodson",
+        ])
+    if "consolidated" in lower_heading and "hearing" in lower_heading:
+        parts.extend([
+            "consolidated notice of hearing",
+            "NOH",
+            "August 26 2026",
+            "Zoom hearing",
+            "ten motions",
         ])
     if "gal" in lower_name or "guardian ad litem" in lower_heading:
         parts.extend([
@@ -234,13 +271,8 @@ def seo_document_keywords(heading: str, case: dict, filename: str) -> str:
             "plaintiff capacity",
             "Adrienne Rockenhaus unrepresented",
         ])
-    if "consolidated" in lower_heading and "hearing" in lower_heading:
-        parts.extend([
-            "consolidated notice of hearing",
-            "NOH",
-            "August 26 2026",
-            "Zoom hearing",
-        ])
+    if "notice of hearing" in lower_heading or "noh" in lower_name:
+        parts.extend(["notice of hearing", "August 26 2026"])
     if "default judgment" in lower_heading:
         parts.append("default judgment counterclaim")
     if "preservation" in lower_heading or "spoliation" in lower_heading:
@@ -267,6 +299,7 @@ def write_document_page(
     relative_pdf: str,
     filename: str,
     last_modified_at: str,
+    date_published: str | None,
 ) -> None:
     case = CASES[case_id]
     category_label = CATEGORIES[category]["label"]
@@ -275,6 +308,9 @@ def write_document_page(
     keywords = seo_document_keywords(heading, case, filename)
 
     out_path = DOCUMENTS_DIR / f"{slug}.html"
+    date_line = ""
+    if date_published:
+        date_line = f"date_published: {yaml_quote(date_published)}\n"
     front_matter = f"""---
 layout: document
 title: {yaml_quote(title)}
@@ -291,7 +327,7 @@ pdf_path: {yaml_quote(relative_pdf)}
 filename: {yaml_quote(filename)}
 doc_slug: {yaml_quote(slug)}
 last_modified_at: {yaml_quote(last_modified_at)}
-permalink: /documents/{slug}/
+{date_line}permalink: /documents/{slug}/
 ---
 """
     out_path.write_text(front_matter, encoding="utf-8")
@@ -364,6 +400,50 @@ def site_data_lead(count: int) -> str:
     )
 
 
+def write_latest_filings(filed_docs: list[dict]) -> None:
+    dated = [doc for doc in filed_docs if doc.get("date_published")]
+    if not dated:
+        (DATA_DIR / "latest_filings.json").write_text(
+            json.dumps({"date": None, "date_display": None, "groups": []}, indent=2),
+            encoding="utf-8",
+        )
+        return
+
+    max_date = max(doc["date_published"] for doc in dated)
+    latest = [doc for doc in dated if doc["date_published"] == max_date]
+    groups_map: dict[str, list[dict]] = {}
+    for doc in latest:
+        groups_map.setdefault(doc["case_id"], []).append(doc)
+
+    groups: list[dict] = []
+    for case_id in sorted(groups_map, key=lambda cid: CASES[cid]["sort"]):
+        case = CASES[case_id]
+        filings = sorted(groups_map[case_id], key=lambda doc: doc["filename"])
+        groups.append(
+            {
+                "case_id": case_id,
+                "case_label": f"{case['short_title']} {case['case_number']}",
+                "case_url": f"/cases/{case_id}/",
+                "filings": [
+                    {"title": filing["title"], "url": filing["url"]}
+                    for filing in filings
+                ],
+            }
+        )
+
+    (DATA_DIR / "latest_filings.json").write_text(
+        json.dumps(
+            {
+                "date": max_date,
+                "date_display": format_filing_date(max_date),
+                "groups": groups,
+            },
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+
+
 def process_retraction_letters() -> list[str]:
     """Extract OCR/searchable text from retraction PDFs; return permalink paths."""
     if not RETRACTIONS_DATA_PATH.is_file():
@@ -425,6 +505,7 @@ def main() -> None:
 
     case_list: list[dict] = []
     all_docs: list[dict] = []
+    filed_docs: list[dict] = []
     document_urls: list[str] = []
     document_count = 0
 
@@ -459,6 +540,7 @@ def main() -> None:
 
             relative_pdf = f"/{rel.as_posix()}"
             last_modified = pdf_last_modified(pdf)
+            date_published = parse_filing_date(filename, heading)
             text_data = extract_pdf_text(pdf)
             (PDF_TEXT_DIR / f"{slug}.json").write_text(
                 json.dumps(text_data, indent=2), encoding="utf-8"
@@ -472,20 +554,24 @@ def main() -> None:
                 relative_pdf=relative_pdf,
                 filename=filename,
                 last_modified_at=last_modified,
+                date_published=date_published,
             )
 
             doc_url = f"/documents/{slug}/"
             document_urls.append(doc_url)
-            all_docs.append(
-                {
-                    "title": heading,
-                    "filename": filename,
-                    "url": doc_url,
-                    "case_id": case_id,
-                    "case_title": case_meta["short_title"],
-                    "case_number": case_meta["case_number"],
-                }
-            )
+            doc_entry = {
+                "title": heading,
+                "filename": filename,
+                "url": doc_url,
+                "case_id": case_id,
+                "case_title": case_meta["short_title"],
+                "case_number": case_meta["case_number"],
+                "category": category,
+                "date_published": date_published,
+            }
+            all_docs.append(doc_entry)
+            if category == "filed":
+                filed_docs.append(doc_entry)
 
             cat = case_entry["categories"].setdefault(
                 category,
@@ -516,6 +602,7 @@ def main() -> None:
         write_case_page(case_id, case_meta)
 
     write_all_documents_page(all_docs)
+    write_latest_filings(filed_docs)
 
     (DATA_DIR / "cases.json").write_text(
         json.dumps({"cases": case_list, "document_count": document_count}, indent=2),

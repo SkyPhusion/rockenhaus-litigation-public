@@ -1,0 +1,91 @@
+{
+  "summary": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus (@adezero) used his federal CFAA case and incarceration to obtain podcast appearances, sockpuppet YouTube channels, and internet clout. Google search results for \"Conrad Rockenhaus\" surface podcast episodes and videos where Adrienne espoused false or misleading claims — not authoritative statements from Conrad. Filed Michigan court records at litigation.rockenhaus.net are the canonical source of truth.",
+  "sockpuppet_accounts": [
+    {
+      "id": "sleep4real",
+      "name": "Sleep4Real",
+      "platform": "YouTube",
+      "handle": "@Sleep4Real",
+      "url": "https://www.youtube.com/@Sleep4Real",
+      "presented_as": "Independent podcaster (featured on rockenhaus.com/podcasts/)",
+      "assertion": "Conrad Alan Rockenhaus asserts Sleep4Real is a sockpuppet YouTube account operated by Adrienne Rockenhaus (Adrienne Blair, Adrienne Hein, @adezero), not an independent journalist. Conrad asserts she presents it as third-party coverage while publishing false federal-conspiracy content about his CFAA case and incarceration for internet clout. Conrad asserts she also uses the channel to host a video falsely claiming to show Conrad Alan Rockenhaus outside an apartment in Ann Arbor, Michigan — Conrad asserts that person is not him.",
+      "indexed_at": {
+        "label": "rockenhaus.com/podcasts",
+        "url": "https://rockenhaus.com/podcasts/"
+      },
+      "featured_videos": [
+        {
+          "title": "W.D. Michigan's Sally Berens and Jane Beckering: Please Judge Yourselves Before Judging Conrad Rockenhaus",
+          "date": "2026-01-10"
+        },
+        {
+          "title": "The 'Lakin Logjam': How Attorney Marc Lakin Exploited a Disabled Veteran's TBI",
+          "assertion": "Conrad asserts false or misleading claims about Conrad's federal counsel and raids."
+        },
+        {
+          "title": "False Ann Arbor apartment surveillance video",
+          "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus published a video on Sleep4Real falsely identifying another person outside an Ann Arbor, Michigan apartment as Conrad Rockenhaus. Conrad asserts it is not him."
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "title": "Watchman Privacy Podcast — Episode 208: Conrad Rockenhaus: Tor Exit Node and Policing Abuse",
+      "guest": "Adrienne Rockenhaus",
+      "host": "Gabriel Custodiet (Watchman Privacy)",
+      "date": "2025-10-08",
+      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus was the guest, not Conrad. The episode title uses his name but Conrad asserts Adrienne espoused false or misleading claims about his CFAA case, supervised release, and federal raids while Conrad asserts she had stopped meaningful contact with him in prison by October 2025.",
+      "links": [
+        {
+          "label": "iHeart — Watchman Privacy (Episode 208)",
+          "url": "https://www.iheart.com/podcast/263-watchman-privacy-91505680/"
+        },
+        {
+          "label": "Podcast aggregator listing",
+          "url": "https://podcast24.fr/episodes/the-watchman-privacy-podcast/208-conrad-rockenhaus-tor-exit-node-and-policing-abuse-ehegBD1OO"
+        }
+      ],
+      "indexed_at": {
+        "label": "rockenhaus.com/podcasts",
+        "url": "https://rockenhaus.com/podcasts/"
+      }
+    },
+    {
+      "title": "Dangerous Rhetoric Chat 04 — Adrienne Rockenhaus",
+      "guest": "Adrienne Rockenhaus",
+      "host": "JL / ProfessorTieDye",
+      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus appeared on this stream and made misleading statements about his case.",
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/watch?v=-hfa7D4Fcqw"
+        },
+        {
+          "label": "rockenhaus.com/podcasts",
+          "url": "https://rockenhaus.com/podcasts/"
+        }
+      ]
+    },
+    {
+      "title": "North American Marlon Brando Look-Alikes (stream)",
+      "guest": "Adrienne Rockenhaus",
+      "host": "Unknown (stream)",
+      "date": "2025-09-21",
+      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus promoted this stream on X (@adezero) using #ConradRockenhaus and #JusticeForConrad while publishing false advocacy content about his case.",
+      "links": [
+        {
+          "label": "Adrienne's podcast index",
+          "url": "https://rockenhaus.com/podcasts/"
+        }
+      ]
+    }
+  ],
+  "third_party_articles": [
+    {
+      "title": "Dark Web Drama: The Conrad Rockenhaus Case Exposed (s9cyber.com)",
+      "url": "https://s9cyber.com/dark-web-drama-conrad-rockenhaus-case/",
+      "assertion": "Conrad Alan Rockenhaus asserts articles like this repeat Adrienne Rockenhaus's Tor/federal-conspiracy narrative — including content amplified through her Sleep4Real sockpuppet and rockenhaus.com. Conrad asserts filed federal court records show supervised-release violations, not noble privacy advocacy."
+    }
+  ]
+}

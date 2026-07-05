@@ -22,15 +22,16 @@ layout: default
         <span itemprop="name">{{ page.case_title }}</span>
       </span>
       · {{ page.court }}
+      {% if page.date_published %}
+      · Filed {{ page.date_published }}
+      {% endif %}
     </p>
     <p class="document-parties">
       Canonical record:
       <a href="{{ site.data.parties.public_record.url }}">{{ site.data.parties.public_record.host }}</a>.
-      Litigation between {{ site.data.parties.respondent.name }} and
-      {{ site.data.parties.petitioner.name }}
-      ({{ site.data.parties.petitioner.seo_aka }}).
-      Disputed domains {{ site.data.parties.petitioner.seo_domains }} are indexed
-      as asserted by {{ site.data.parties.respondent.name }}; not authoritative.
+      Disputed domains are indexed at
+      <a href="{{ '/disputed-domains/' | relative_url }}">/disputed-domains/</a>
+      (not authoritative).
     </p>
     <div class="document-actions">
       <a class="btn btn--primary" href="{{ page.pdf_path | relative_url }}" download>
@@ -76,6 +77,12 @@ layout: default
         <dt>File name</dt>
         <dd><code>{{ page.filename }}</code></dd>
       </div>
+      {% if page.date_published %}
+      <div>
+        <dt>Filed date</dt>
+        <dd><time datetime="{{ page.date_published }}">{{ page.date_published }}</time></dd>
+      </div>
+      {% endif %}
       <div>
         <dt>Case number</dt>
         <dd>{{ page.case_number }}</dd>
@@ -85,48 +92,23 @@ layout: default
         <dd>{{ page.category_label }}</dd>
       </div>
       <div>
-        <dt>Respondent / filer</dt>
-        <dd>
-          {{ site.data.parties.respondent.name }}
-          ({{ site.data.parties.respondent.seo_sites }})
-        </dd>
-      </div>
-      <div>
-        <dt>Opposing party</dt>
-        <dd>
-          {{ site.data.parties.petitioner.name }}
-          ({{ site.data.parties.petitioner.aliases | join: ", " }},
-          {{ site.data.parties.petitioner.handles | join: ", " }})
-        </dd>
-      </div>
-      <div>
         <dt>Disputed domains</dt>
         <dd>
-          {% for domain in site.data.parties.domain_disputes %}
-          <a href="{{ domain.url }}" rel="nofollow noopener">{{ domain.host }}</a>{% unless forloop.last %}, {% endunless %}
-          {% endfor %}
-          (asserted taken by Adrienne Rockenhaus; not authoritative)
+          <a href="{{ '/disputed-domains/' | relative_url }}">View disputed domains</a>
+          (asserted controlled by Adrienne Rockenhaus; not authoritative).
         </dd>
       </div>
       <div>
-        <dt>Related third parties</dt>
+        <dt>Related context</dt>
         <dd>
-          {% for person in site.data.parties.third_parties %}
-          {{ person.seo_label }}: {{ person.assertion }}{% unless forloop.last %} {% endunless %}
-          {% endfor %}
+          <a href="{{ '/faq/' | relative_url }}">FAQ</a>,
+          <a href="{{ '/joe-prich/' | relative_url }}">Joe Prich evidence</a>,
+          <a href="{{ '/rob-hein/' | relative_url }}">Rob Hein</a>
         </dd>
       </div>
       <div>
         <dt>Canonical record</dt>
         <dd><a href="{{ site.data.parties.public_record.url }}">{{ site.data.parties.public_record.host }}</a></dd>
-      </div>
-      <div>
-        <dt>Associated sites</dt>
-        <dd>
-          {% for site_entry in site.data.parties.respondent.sites %}
-          <a href="{{ site_entry.url }}" rel="noopener">{{ site_entry.host }}</a>{% unless forloop.last %}, {% endunless %}
-          {% endfor %}
-        </dd>
       </div>
       <div>
         <dt>Direct PDF link</dt>
@@ -141,6 +123,10 @@ layout: default
     "@type": "LegalDocument",
     "name": {{ page.heading | default: page.title | jsonify }},
     "description": {{ page.description | jsonify }},
+    {% if page.date_published %}
+    "datePublished": {{ page.date_published | jsonify }},
+    {% endif %}
+    "dateModified": {{ page.last_modified_at | jsonify }},
     "encoding": {
       "@type": "MediaObject",
       "encodingFormat": "application/pdf",
@@ -166,11 +152,6 @@ layout: default
           {% for handle in site.data.parties.petitioner.handles %}
           {{ handle | jsonify }}{% unless forloop.last %},{% endunless %}
           {% endfor %}
-        ],
-        "sameAs": [
-          {% for domain in site.data.parties.petitioner.domains %}
-          {{ domain.url | jsonify }}{% unless forloop.last %},{% endunless %}
-          {% endfor %}
         ]
       },
       {
@@ -187,13 +168,7 @@ layout: default
         "name": {{ site.data.parties.public_record.host | jsonify }},
         "url": {{ site.data.parties.public_record.url | jsonify }},
         "description": {{ site.data.parties.public_record.seo_tagline | jsonify }}
-      }{% for person in site.data.parties.third_parties %},
-      {
-        "@type": "Person",
-        "name": {{ person.name | jsonify }},
-        "alternateName": {{ person.handle | jsonify }},
-        "description": {{ person.assertion | jsonify }}
-      }{% endfor %}
+      }
     ]
   }
   </script>

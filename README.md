@@ -1,14 +1,16 @@
-# rockenhaus-litigation-public
+# Rockenhaus litigation site (private build repo)
 
-Personal document repository for active state-court litigation in Michigan. Maintained pro se by Conrad Alan Rockenhaus.
+**Public front door:** [https://litigation.rockenhaus.net/](https://litigation.rockenhaus.net/)
 
-**Public website:** [https://litigation.rockenhaus.net/](https://litigation.rockenhaus.net/)
+This private GitHub repository exists only to build and deploy that site. Visitors, search engines, and citations should use **litigation.rockenhaus.net**, not GitHub. The repo is private (GitHub Pro Pages); there is no public source link on the rendered site.
 
-Rendered filings and discovery PDFs for each active matter are synced automatically from the private source repository (`skyphusion-labs/rockenhaus-litigation`) on each successful CI build. Other paths (`opposing/`, `orders/`, `filed/Exhibits/`, etc.) are maintained manually.
+Maintained pro se by Conrad Alan Rockenhaus for active state-court litigation in Michigan.
 
-## GitHub Pages site
+Rendered filings and discovery PDFs for each active matter are synced automatically from a separate private source repository on each successful CI build. Other paths (`opposing/`, `orders/`, `filed/Exhibits/`, etc.) are maintained manually.
 
-Custom domain: **litigation.rockenhaus.net**
+## Deploy target: litigation.rockenhaus.net
+
+Custom domain: **litigation.rockenhaus.net** (this is the canonical public record)
 
 Each PDF gets a dedicated HTML page with:
 
@@ -19,9 +21,9 @@ Each PDF gets a dedicated HTML page with:
 - Automatic [sitemap](https://litigation.rockenhaus.net/sitemap.xml), `robots.txt`, and [llms.txt](https://litigation.rockenhaus.net/llms.txt)
 - IndexNow pings to Bing after each deploy
 
-On every push to `main`, GitHub Actions runs `scripts/generate_site.py` to index all PDFs, then builds and deploys the Jekyll site. After deploy, it pings IndexNow and purges Cloudflare cache for `litigation.rockenhaus.net`.
+On every push to `main`, GitHub Actions runs `scripts/generate_site.py` to index all PDFs, then builds and deploys the Jekyll site to GitHub Pages (private repo, GitHub Pro). After deploy, it pings IndexNow and purges Cloudflare cache for `litigation.rockenhaus.net`.
 
-**GitHub Pages must use build type `GitHub Actions`** (workflow `Deploy GitHub Pages site`), not legacy “Deploy from branch”. Legacy mode runs a second Jekyll build without `generate_site.py` and can race the deploy step.
+**GitHub Pages must use build type `GitHub Actions`** (workflow `Deploy GitHub Pages site`), not legacy “Deploy from branch”. Legacy mode runs a second Jekyll build without `generate_site.py` and can race the deploy step. **Pages visibility:** private repository publishing to the public custom domain above.
 
 **GitHub Actions secrets** (Settings → Secrets and variables → Actions):
 
@@ -38,7 +40,7 @@ At your `rockenhaus.net` DNS host, add:
 
 | Type | Name | Value |
 |---|---|---|
-| CNAME | `litigation` | `skyphusion.github.io` |
+| CNAME | `litigation` | your GitHub Pages host (e.g. `username.github.io`) |
 
 Proxy status: DNS only (grey cloud) is typical for GitHub Pages; orange-cloud proxy also works with Cloudflare.
 
@@ -89,8 +91,9 @@ bundle exec jekyll serve
 
 ## Repository layout
 
+Private build and deploy repo for the public site at litigation.rockenhaus.net:
+
 ```
-rockenhaus-litigation-public/
 ├── <case_id>/                          Per-matter directory (e.g. wayne_ppo_26-102221-PP)
 │   ├── filed/                          Motions, notices, responses authored by Conrad
 │   ├── discovery/                      Discovery requests and responses
