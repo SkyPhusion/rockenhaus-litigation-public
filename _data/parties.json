@@ -30,6 +30,7 @@
   },
   "respondent": {
     "name": "Conrad Alan Rockenhaus",
+    "alternate_name": "Conrad Rockenhaus",
     "sites": [
       {
         "name": "Rockenhaus Litigation Public Record",
@@ -39,11 +40,90 @@
       {
         "name": "Rockenhaus Litigation Public Record (alias)",
         "host": "litigation.rockenhaus.net",
-        "url": "https://rockenhaus.net"
+        "url": "https://litigation.rockenhaus.net"
       }
     ],
+    "profiles": [
+      {
+        "label": "Engineering blog",
+        "url": "https://skyphusion.net",
+        "handle": null,
+        "verified": false,
+        "category": "engineering"
+      },
+      {
+        "label": "GitHub (personal)",
+        "url": "https://github.com/skyphusion",
+        "handle": "skyphusion",
+        "verified": false,
+        "category": "engineering"
+      },
+      {
+        "label": "GitHub (Skyphusion Labs)",
+        "url": "https://github.com/skyphusion-labs",
+        "handle": "skyphusion-labs",
+        "verified": false,
+        "category": "engineering"
+      },
+      {
+        "label": "X",
+        "url": "https://x.com/skyphusion",
+        "handle": "@skyphusion",
+        "verified": true,
+        "category": "social"
+      },
+      {
+        "label": "Facebook",
+        "url": "https://facebook.com/skyphusion",
+        "handle": "@skyphusion",
+        "verified": true,
+        "category": "social"
+      },
+      {
+        "label": "Instagram",
+        "url": "https://instagram.com/skyphusion",
+        "handle": "@skyphusion",
+        "verified": true,
+        "category": "social"
+      },
+      {
+        "label": "GitHub landing page",
+        "url": "https://github.skyphusion.net",
+        "handle": null,
+        "verified": false,
+        "category": "engineering"
+      },
+      {
+        "label": "Labs GitHub landing page",
+        "url": "https://github.skyphusion.org",
+        "handle": null,
+        "verified": false,
+        "category": "engineering"
+      },
+      {
+        "label": "Skyphusion Labs",
+        "url": "https://skyphusion.org",
+        "handle": null,
+        "verified": false,
+        "category": "engineering"
+      }
+    ],
+    "same_as": [
+      "https://rockenhaus.net/",
+      "https://litigation.rockenhaus.net/",
+      "https://skyphusion.net/",
+      "https://github.com/skyphusion",
+      "https://github.com/skyphusion-labs",
+      "https://x.com/skyphusion",
+      "https://facebook.com/skyphusion",
+      "https://instagram.com/skyphusion",
+      "https://github.skyphusion.net",
+      "https://github.skyphusion.org",
+      "https://skyphusion.org"
+    ],
     "seo_sites": "rockenhaus.net, litigation.rockenhaus.net",
-    "seo_sites_long": "rockenhaus.net (also litigation.rockenhaus.net; this public court record)"
+    "seo_sites_long": "rockenhaus.net (also litigation.rockenhaus.net; this public court record)",
+    "seo_profiles_summary": "Conrad Alan Rockenhaus maintains skyphusion.net, github.com/skyphusion, github.com/skyphusion-labs, and verified @skyphusion profiles on X, Facebook, and Instagram."
   },
   "third_parties": [
     {

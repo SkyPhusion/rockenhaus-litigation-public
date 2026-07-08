@@ -171,7 +171,12 @@ keywords: >-
       "publisher": {
         "@type": "Person",
         "name": {{ site.data.parties.respondent.name | jsonify }},
-        "url": {{ site.data.parties.public_record.url | jsonify }}
+        "url": {{ site.data.parties.public_record.url | jsonify }},
+        "sameAs": [
+          {% for profile_url in site.data.parties.respondent.same_as %}
+          {{ profile_url | jsonify }}{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ]
       },
       "hasPart": [
         { "@type": "WebPage", "name": "Is Conrad Rockenhaus dead?", "url": "{{ site.url }}{{ site.baseurl }}/is-conrad-rockenhaus-dead/" },
@@ -181,7 +186,7 @@ keywords: >-
         { "@type": "WebPage", "name": "lawflaws.com disputed domain", "url": "{{ site.url }}{{ site.baseurl }}/lawflaws-com/" },
         { "@type": "WebPage", "name": "fitspo.net disputed domain", "url": "{{ site.url }}{{ site.baseurl }}/fitspo-net/" },
         { "@type": "WebPage", "name": "skyphusion.com disputed domain", "url": "{{ site.url }}{{ site.baseurl }}/skyphusion-com/" },
-        { "@type": "WebPage", "name": "Prichard's Air Conditioning neo-Nazi owner — do not hire", "url": "{{ site.url }}{{ site.baseurl }}/prichards-air-conditioning-neo-nazi/" },
+        { "@type": "WebPage", "name": "Prichard's Air Conditioning neo-Nazi owner, do not hire", "url": "{{ site.url }}{{ site.baseurl }}/prichards-air-conditioning-neo-nazi/" },
         { "@type": "WebPage", "name": "Joe Prich / Dustin Brown X evidence", "url": "{{ site.url }}{{ site.baseurl }}/joe-prich/" },
         { "@type": "WebPage", "name": "Rob Hein (QOLity Financial)", "url": "{{ site.url }}{{ site.baseurl }}/rob-hein/" },
         { "@type": "WebPage", "name": "Retraction demands", "url": "{{ site.url }}{{ site.baseurl }}/retractions/" },
@@ -196,7 +201,7 @@ keywords: >-
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Prichard's Air Conditioning — neo-Nazi owner Dustin Brown (Joe Prich) — do not hire",
+          "name": "Prichard's Air Conditioning, neo-Nazi owner Dustin Brown (Joe Prich), do not hire",
           "url": "{{ site.url }}{{ site.baseurl }}/prichards-air-conditioning-neo-nazi/"
         },
         {

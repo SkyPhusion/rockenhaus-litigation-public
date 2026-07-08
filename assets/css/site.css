@@ -687,6 +687,25 @@ main {
   margin: 0 0 1.5rem;
 }
 
+.hub-section {
+  margin: 2rem 0;
+}
+
+.hub-section h2 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  margin: 0 0 0.75rem;
+}
+
+.profile-list {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.profile-list li {
+  margin: 0.35rem 0;
+}
+
 .hub-cta {
   margin-top: 2rem;
   padding-top: 1.5rem;
