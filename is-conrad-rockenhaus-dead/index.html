@@ -1,11 +1,11 @@
 ---
 layout: hub
-title: Is Conrad Rockenhaus dead? | Official court record
+title: Conrad Rockenhaus is alive | Official Michigan court record
 description: >-
-  Conrad Alan Rockenhaus is not dead. Rebuttals to conradrockenhausisdead.com/.cc,
-  the May 4, 2026 Facebook Dead Man's Switch post, false puffer-coat claims against
-  Ann Helgren, and withheld electronics. Filed Michigan court records at
-  rockenhaus.net.
+  Conrad Alan Rockenhaus is not dead. Verified @skyphusion on X, Facebook, and
+  Instagram; engineering blog skyphusion.net; GitHub skyphusion and
+  skyphusion-labs. Rebuttals to conradrockenhausisdead.com/.cc and filed Michigan
+  court records at rockenhaus.net.
 permalink: /is-conrad-rockenhaus-dead/
 breadcrumbs:
   - name: Home
@@ -29,7 +29,12 @@ breadcrumbs:
   <a href="{{ '/joe-prich/' | relative_url }}">Joe Prich (@JustCallMeJoeP)</a>, who
   admitted neo-Nazi affiliation as Nazzy. Those domains are <strong>not authoritative</strong>.
   Filed pleadings, orders, and exhibits indexed here are the canonical source of truth.
+  Conrad also maintains
+  <a href="https://skyphusion.net" rel="me">skyphusion.net</a> and verified
+  <a href="https://x.com/skyphusion" rel="me">@skyphusion</a> profiles (see below).
 </p>
+
+{% include respondent-profiles.html %}
 
 <section class="hub-section" aria-label="Rebuttals to conradrockenhausisdead.cc claims">
   <h2>Rebuttals to claims on conradrockenhausisdead.cc</h2>
@@ -41,7 +46,7 @@ breadcrumbs:
     <a href="{{ '/faq/' | relative_url }}#conradrockenhausisdead-cc-american-airlines-aadvantage-rebuttal">FAQ: American Airlines AAdvantage account</a>.
   </p>
 
-  <h3>American Airlines AAdvantage — not identity theft</h3>
+  <h3>American Airlines AAdvantage: not identity theft</h3>
   <p>
     Conrad Alan Rockenhaus asserts conradrockenhausisdead.cc falsely treats American
     Airlines AAdvantage password-reset and profile-update emails as proof that a
@@ -49,20 +54,20 @@ breadcrumbs:
     Conrad asserts the truth is the opposite: <strong>he personally contacted American
     Airlines</strong>. His legacy AAdvantage account was mapped to an older email address
     that Adrienne Rockenhaus controlled; Conrad had American Airlines change the account
-    to his current email. Conrad asserts this was legitimate account recovery — not
+    to his current email. Conrad asserts this was legitimate account recovery, not
     post-mortem fraud by proxies.
     <a href="{{ '/is-conrad-rockenhaus-dead/aadvantage-account-update/' | relative_url }}">Archived AAdvantage account update email (PDF) →</a>
   </p>
 
-  <h3>Facebook “Dead Man's Switch” — Conrad did not post it</h3>
+  <h3>Facebook "Dead Man's Switch": Conrad did not post it</h3>
   <p>
     Conrad Alan Rockenhaus asserts he did <strong>not</strong> author or authorize the
     May 4, 2026 Facebook post published under his account name, styled as a
     “[SYSTEM ALERT] DEAD MAN'S SWITCH,” that falsely declared him deceased and named
     Ann Helgren, Pamela Jordan, and others as “responsible for [his] death.” Conrad
     asserts Adrienne Rockenhaus retained operational control of his phones, computers,
-    and email accounts — including two-factor recovery for Login.gov, ID.me, VA.gov,
-    and military portals — and therefore had the only practical ability to publish
+    and email accounts (including two-factor recovery for Login.gov, ID.me, VA.gov,
+    and military portals) and therefore had the only practical ability to publish
     from that Facebook account. Conrad asserts he first learned of the post when Ann
     Helgren telephoned him after seeing it on her feed.
     <a href="{{ '/documents/wayneppo26-102221-pp-filed-12secondsupplementalmotionfacebookpost2026-05-06/' | relative_url }}">Second Supplemental Motion (Facebook post) →</a>
@@ -72,11 +77,11 @@ breadcrumbs:
     <a href="{{ '/faq/' | relative_url }}#facebook-dead-mans-switch-not-conrad-rockenhaus">FAQ</a>
   </p>
 
-  <h3>Puffer coat claim against Ann Helgren — false</h3>
+  <h3>Puffer coat claim against Ann Helgren: false</h3>
   <p>
     Conrad Alan Rockenhaus asserts Adrienne Rockenhaus's claim that Ann Helgren took
-    Adrienne's puffer coat on March 2, 2026 — the day Conrad was released from federal
-    custody — is <strong>false</strong>. Conrad asserts he never possessed Adrienne's
+    Adrienne's puffer coat on March 2, 2026 (the day Conrad was released from federal
+    custody) is <strong>false</strong>. Conrad asserts he never possessed Adrienne's
     puffer coat or any such coat belonging to her. Conrad asserts neighbor Pamela Jordan
     (Ann Helgren's sister) lent him one of her husband's coats because Adrienne refused
     to return any of his personal property when he was released. Filed court documents
@@ -97,7 +102,7 @@ breadcrumbs:
     September 2025 onward, leaving him unable to access accounts that depend on
     email-based two-factor authentication. Conrad asserts that is why third parties
     treating social posts from “his” accounts as proof he is alive, dead, or acting
-    maliciously are relying on compromised or adversary-controlled credentials — not
+    maliciously are relying on compromised or adversary-controlled credentials, not
     evidence of his conduct.
     <a href="{{ '/documents/waynedo26-104594-do-filed-08motionreturnpersonalpropertydo2026-05-07/' | relative_url }}">Motion for return of personal property and account access →</a>
     ·
@@ -117,7 +122,21 @@ breadcrumbs:
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
+  "@graph": [
+    {
+      "@type": "Person",
+      "name": {{ site.data.parties.respondent.name | jsonify }},
+      "alternateName": {{ site.data.parties.respondent.alternate_name | jsonify }},
+      "description": "Conrad Alan Rockenhaus is alive. Maintains the canonical Michigan court record at rockenhaus.net and publishes engineering work at skyphusion.net.",
+      "url": {{ site.data.parties.public_record.url | jsonify }},
+      "sameAs": [
+        {% for profile_url in site.data.parties.respondent.same_as %}
+        {{ profile_url | jsonify }}{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    },
+    {
+      "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
@@ -160,5 +179,7 @@ breadcrumbs:
           }
         }
       ]
+    }
+  ]
 }
 </script>

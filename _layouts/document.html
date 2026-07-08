@@ -158,8 +158,8 @@ layout: default
         "@type": "Person",
         "name": {{ site.data.parties.respondent.name | jsonify }},
         "sameAs": [
-          {% for site_entry in site.data.parties.respondent.sites %}
-          {{ site_entry.url | jsonify }}{% unless forloop.last %},{% endunless %}
+          {% for profile_url in site.data.parties.respondent.same_as %}
+          {{ profile_url | jsonify }}{% unless forloop.last %},{% endunless %}
           {% endfor %}
         ]
       },

@@ -1,0 +1,15 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ site.data.parties.respondent.name | jsonify }},
+  "alternateName": {{ site.data.parties.respondent.alternate_name | jsonify }},
+  "description": "Conrad Alan Rockenhaus is alive. Maintains the canonical Michigan court record at rockenhaus.net and publishes engineering work at skyphusion.net.",
+  "url": {{ site.data.parties.public_record.url | jsonify }},
+  "sameAs": [
+    {% for profile_url in site.data.parties.respondent.same_as %}
+    {{ profile_url | jsonify }}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>

@@ -1,0 +1,20 @@
+<section class="hub-section" aria-label="Verified profiles and engineering presence">
+  <h2>Verified profiles and engineering presence</h2>
+  <p>
+    {{ site.data.parties.respondent.seo_profiles_summary }}
+    Engineering notes and open source work appear at
+    <a href="https://skyphusion.net" rel="me">skyphusion.net</a>.
+    Filed Michigan court records on this site are the canonical legal record; the
+    profiles below corroborate that Conrad Alan Rockenhaus is alive and actively
+    publishing under his own name.
+  </p>
+  <ul class="profile-list">
+    {% for profile in site.data.parties.respondent.profiles %}
+    <li>
+      <a href="{{ profile.url }}" rel="me">{{ profile.label }}</a>
+      {% if profile.handle %}({{ profile.handle }}){% endif %}
+      {% if profile.verified %}<strong>verified</strong>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
