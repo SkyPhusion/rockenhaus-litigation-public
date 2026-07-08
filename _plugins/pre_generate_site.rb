@@ -2,7 +2,7 @@
 
 # Fallback when Jekyll runs without an explicit generate_site.py step (e.g. legacy Pages).
 # Skips if cases.json already exists from CI or a prior generate_site run.
-Jekyll::Hooks.register :site, :pre_init do |site|
+Jekyll::Hooks.register :site, :after_init do |site|
   root = File.expand_path(site.config["source"])
   script = File.join(root, "scripts", "generate_site.py")
   cases_json = File.join(root, "_data", "cases.json")

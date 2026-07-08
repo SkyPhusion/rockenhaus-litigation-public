@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Purge Cloudflare cache for litigation.rockenhaus.net after deploy."""
+"""Purge Cloudflare cache for rockenhaus.net hostnames after deploy."""
 
 from __future__ import annotations
 
@@ -9,7 +9,11 @@ import sys
 import urllib.error
 import urllib.request
 
-PURGE_HOST = "litigation.rockenhaus.net"
+PURGE_HOSTS = [
+    "rockenhaus.net",
+    "www.rockenhaus.net",
+    "litigation.rockenhaus.net",
+]
 API_URL_TEMPLATE = "https://api.cloudflare.com/client/v4/zones/{zone_id}/purge_cache"
 
 
@@ -23,7 +27,7 @@ def main() -> int:
         )
         return 1
 
-    payload = {"hosts": [PURGE_HOST]}
+    payload = {"hosts": PURGE_HOSTS}
     body = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(
         API_URL_TEMPLATE.format(zone_id=zone_id),
@@ -51,7 +55,7 @@ def main() -> int:
         print(json.dumps(result, indent=2), file=sys.stderr)
         return 1
 
-    print(f"Purged Cloudflare cache for host: {PURGE_HOST}")
+    print(f"Purged Cloudflare cache for hosts: {', '.join(PURGE_HOSTS)}")
     return 0
 
 

@@ -1,16 +1,18 @@
 # Rockenhaus litigation site (private build repo)
 
-**Public front door:** [https://litigation.rockenhaus.net/](https://litigation.rockenhaus.net/)
+**Public front door:** [https://rockenhaus.net/](https://rockenhaus.net/) (also served at [https://litigation.rockenhaus.net/](https://litigation.rockenhaus.net/))
 
-This private GitHub repository exists only to build and deploy that site. Visitors, search engines, and citations should use **litigation.rockenhaus.net**, not GitHub. The repo is private (GitHub Pro Pages); there is no public source link on the rendered site.
+This private GitHub repository exists only to build and deploy that site. Visitors, search engines, and citations should use **rockenhaus.net** as the canonical URL. The repo is private; there is no public source link on the rendered site.
 
 Maintained pro se by Conrad Alan Rockenhaus for active state-court litigation in Michigan.
 
 Rendered filings and discovery PDFs for each active matter are synced automatically from a separate private source repository on each successful CI build. Other paths (`opposing/`, `orders/`, `filed/Exhibits/`, etc.) are maintained manually.
 
-## Deploy target: litigation.rockenhaus.net
+## Deploy target: Cloudflare Pages
 
-Custom domain: **litigation.rockenhaus.net** (this is the canonical public record)
+**Canonical domain:** **rockenhaus.net**
+
+**Alias (same site, no redirect):** **litigation.rockenhaus.net**
 
 Each PDF gets a dedicated HTML page with:
 
@@ -18,40 +20,36 @@ Each PDF gets a dedicated HTML page with:
 - Searchable text excerpts extracted from PDFs at build time (`pdftotext`)
 - Case metadata, breadcrumbs, FAQPage/LegalDocument JSON-LD, and keyword-rich descriptions
 - Hub pages for parties, disputed domains, false-death domains, and third parties
-- Automatic [sitemap](https://litigation.rockenhaus.net/sitemap.xml), `robots.txt`, and [llms.txt](https://litigation.rockenhaus.net/llms.txt)
+- Automatic [sitemap](https://rockenhaus.net/sitemap.xml), `robots.txt`, and [llms.txt](https://rockenhaus.net/llms.txt)
 - IndexNow pings to Bing after each deploy
 
-On every push to `main`, GitHub Actions runs `scripts/generate_site.py` to index all PDFs, then builds and deploys the Jekyll site to GitHub Pages (private repo, GitHub Pro). After deploy, it pings IndexNow and purges Cloudflare cache for `litigation.rockenhaus.net`.
-
-**GitHub Pages must use build type `GitHub Actions`** (workflow `Deploy GitHub Pages site`), not legacy “Deploy from branch”. Legacy mode runs a second Jekyll build without `generate_site.py` and can race the deploy step. **Pages visibility:** private repository publishing to the public custom domain above.
+On every push to `main`, GitHub Actions runs `scripts/generate_site.py` to index all PDFs, builds Jekyll, deploys `_site` to Cloudflare Pages, pings IndexNow, and purges Cloudflare cache for both hostnames.
 
 **GitHub Actions secrets** (Settings → Secrets and variables → Actions):
 
 | Secret | Purpose |
 |---|---|
-| `CLOUDFLARE_API_TOKEN` | Zone-scoped token with **Cache Purge** on `rockenhaus.net` |
+| `CLOUDFLARE_API_TOKEN` | Account token with **Cloudflare Pages Edit** and **Cache Purge** on `rockenhaus.net` |
+| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare account ID |
 | `CLOUDFLARE_ZONE_ID` | Zone ID for `rockenhaus.net` |
-
-`CLOUDFLARE_ACCOUNT_ID` is not required for hostname cache purge.
 
 ### Custom domain DNS (Cloudflare)
 
-At your `rockenhaus.net` DNS host, add:
+Both hostnames are attached to the Cloudflare Pages project `rockenhaus-litigation`. Cloudflare manages DNS records when custom domains are activated in Pages → Custom domains.
 
-| Type | Name | Value |
-|---|---|---|
-| CNAME | `litigation` | your GitHub Pages host (e.g. `username.github.io`) |
+| Hostname | Role |
+|---|---|
+| `rockenhaus.net` | Canonical public URL |
+| `litigation.rockenhaus.net` | Alias (same content, no redirect) |
+| `www.rockenhaus.net` | CNAME to apex (optional) |
 
-Proxy status: DNS only (grey cloud) is typical for GitHub Pages; orange-cloud proxy also works with Cloudflare.
-
-Then in this repo: **Settings → Pages → Custom domain**, enter `litigation.rockenhaus.net` and enable **Enforce HTTPS** once DNS propagates. The `CNAME` file in this repository must match.
+Do **not** use a dynamic redirect rule from apex to subdomain; both hostnames serve the same build. Canonical tags and the sitemap use `https://rockenhaus.net`.
 
 ### Search engine setup
 
-1. **Google Search Console** — Property `https://litigation.rockenhaus.net/` is owner-verified via the existing Google site-verification DNS record on `rockenhaus.net`. No HTML meta tag in `_config.yml` is required.
-2. Submit sitemap: `https://litigation.rockenhaus.net/sitemap.xml`
+1. **Google Search Console** — Property `https://rockenhaus.net/` is owner-verified via DNS on `rockenhaus.net`. Keep `https://litigation.rockenhaus.net/` as a domain property or URL-prefix alias if already verified.
+2. Submit sitemap: `https://rockenhaus.net/sitemap.xml`
 3. **Bing Webmaster Tools** — Synced with Search Console; same sitemap (IndexNow runs automatically on deploy).
-4. **`rockenhaus.net`** — Cloudflare redirect to `litigation.rockenhaus.net` (no separate homepage needed).
 
 ### Hub pages
 
@@ -75,10 +73,16 @@ Requires `poppler-utils` (`pdftotext`) for PDF text extraction:
 ```bash
 sudo apt-get install -y poppler-utils   # or equivalent
 python3 scripts/generate_site.py
-# GitHub Actions uses actions/jekyll-build-pages; locally:
-gem install bundler jekyll
-bundle init && bundle add jekyll jekyll-seo-tag jekyll-sitemap
+bundle install
 bundle exec jekyll serve
+```
+
+Manual deploy to Cloudflare Pages (after build):
+
+```bash
+python3 scripts/generate_site.py
+bundle exec jekyll build --destination _site
+wrangler pages deploy _site --project-name=rockenhaus-litigation --branch=main
 ```
 
 ## Active matters
@@ -91,7 +95,7 @@ bundle exec jekyll serve
 
 ## Repository layout
 
-Private build and deploy repo for the public site at litigation.rockenhaus.net:
+Private build and deploy repo for the public site at rockenhaus.net:
 
 ```
 ├── <case_id>/                          Per-matter directory (e.g. wayne_ppo_26-102221-PP)

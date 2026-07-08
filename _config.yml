@@ -1,13 +1,13 @@
 title: Rockenhaus v. Adrienne Rockenhaus | Adrienne Blair | Adrienne Hein (@adezero) Michigan Court Filings
 title_separator: "|"
 description: >-
-  Canonical Michigan court record at litigation.rockenhaus.net for Rockenhaus v.
+  Canonical Michigan court record at rockenhaus.net for Rockenhaus v.
   Rockenhaus. Wayne divorce 26-104594-DO: August 26, 2026 motion hearing, GAL
   motion filed July 2, 2026. DO NOT HIRE Prichard's Air Conditioning Temple TX —
   Conrad asserts owner Dustin Brown (Joe Prich @JustCallMeJoeP) admitted neo-Nazi
   Nazzy. Adrienne Rockenhaus @adezero. Rob Hein QOLity. Cases 26-102221-PP,
   26-104594-DO, 26-737-DO.
-url: "https://litigation.rockenhaus.net"
+url: "https://rockenhaus.net"
 baseurl: ""
 lang: en_US
 
@@ -33,7 +33,7 @@ defaults:
     values:
       layout: default
       image: /assets/images/og-default.png
-      image_alt: "Scales of justice — litigation.rockenhaus.net canonical Michigan court record"
+      image_alt: "Scales of justice — rockenhaus.net canonical Michigan court record"
   - scope:
       path: ""
       type: documents
