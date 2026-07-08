@@ -29,9 +29,18 @@ On every push to `main`, GitHub Actions runs `scripts/generate_site.py` to index
 
 | Secret | Purpose |
 |---|---|
-| `CLOUDFLARE_API_TOKEN` | Account token with **Cloudflare Pages Edit** and **Cache Purge** on `rockenhaus.net` |
+| `CLOUDFLARE_API_TOKEN` | Account-owned token **`github-actions-rockenhaus-litigation-pages-deploy`**: **Pages Write** (account) + **Cache Purge** (`rockenhaus.net` zone only) |
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare account ID |
 | `CLOUDFLARE_ZONE_ID` | Zone ID for `rockenhaus.net` |
+
+Mint a replacement token in Cloudflare Dashboard → **Manage Account** → **Account API tokens** → **Create Token** → **Create Custom Token**, or via API using an account token with **Account API Tokens Write**. Required permission groups:
+
+| Permission | Scope | Resource |
+|---|---|---|
+| Pages Write | Account | This account |
+| Cache Purge | Zone | `rockenhaus.net` |
+
+Label: `github-actions-rockenhaus-litigation-pages-deploy`. Store the token value only in GitHub Actions secret `CLOUDFLARE_API_TOKEN` (never commit it).
 
 ### Custom domain DNS (Cloudflare)
 
