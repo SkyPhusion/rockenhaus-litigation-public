@@ -2,8 +2,9 @@
   "caption": "Rockenhaus v. Rockenhaus",
   "public_record": {
     "title": "Rockenhaus Litigation Public Record",
-    "url": "https://litigation.rockenhaus.net/",
-    "host": "litigation.rockenhaus.net",
+    "url": "https://rockenhaus.net/",
+    "host": "rockenhaus.net",
+    "alias_host": "litigation.rockenhaus.net",
     "seo_tagline": "Canonical source of truth for Michigan court filings in Rockenhaus v. Rockenhaus"
   },
   "petitioner": {
@@ -32,12 +33,17 @@
     "sites": [
       {
         "name": "Rockenhaus Litigation Public Record",
+        "host": "rockenhaus.net",
+        "url": "https://rockenhaus.net"
+      },
+      {
+        "name": "Rockenhaus Litigation Public Record (alias)",
         "host": "litigation.rockenhaus.net",
-        "url": "https://litigation.rockenhaus.net"
+        "url": "https://rockenhaus.net"
       }
     ],
-    "seo_sites": "litigation.rockenhaus.net",
-    "seo_sites_long": "litigation.rockenhaus.net (this public court record)"
+    "seo_sites": "rockenhaus.net, litigation.rockenhaus.net",
+    "seo_sites_long": "rockenhaus.net (also litigation.rockenhaus.net; this public court record)"
   },
   "third_parties": [
     {
@@ -68,7 +74,7 @@
       "organization_url": "https://www.qolity.com/team/rob-hein",
       "seo_label": "Rob Hein (QOLity Financial)",
       "seo_short": "Rob Hein of QOLity Financial",
-      "assertion": "Conrad Alan Rockenhaus asserts Rob Hein of QOLity Financial (qolity.com) actively funds Adrienne Rockenhaus's campaign to harass, defame, and spread false rumors that Conrad Alan Rockenhaus is dead, thereby funding and enabling her conduct with Joe Prich (@JustCallMeJoeP), who admitted neo-Nazi affiliation on X as \"Nazzy\" (archived at https://litigation.rockenhaus.net/joe-prich/)."
+      "assertion": "Conrad Alan Rockenhaus asserts Rob Hein of QOLity Financial (qolity.com) actively funds Adrienne Rockenhaus's campaign to harass, defame, and spread false rumors that Conrad Alan Rockenhaus is dead, thereby funding and enabling her conduct with Joe Prich (@JustCallMeJoeP), who admitted neo-Nazi affiliation on X as \"Nazzy\" (archived at https://rockenhaus.net/joe-prich/)."
     }
   ],
   "domain_disputes": [

@@ -6,4 +6,5 @@ _data/cases.json
 _data/pdf_text/
 _data/indexnow.json
 _site/
+.wrangler/
 .playwright-mcp

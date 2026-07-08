@@ -18,7 +18,7 @@ PDF_TEXT_DIR = DATA_DIR / "pdf_text"
 PARTIES_PATH = DATA_DIR / "parties.json"
 INDEXNOW_KEY_FILE = ROOT / "rockenhauslitigationindexnow2026.txt"
 EXCERPT_MAX_CHARS = 4000
-SITE_URL = "https://litigation.rockenhaus.net"
+SITE_URL = "https://rockenhaus.net"
 
 
 def load_parties() -> dict:
@@ -233,6 +233,7 @@ def seo_document_keywords(heading: str, case: dict, filename: str) -> str:
         "@adezero",
         RESPONDENT["name"],
         "Michigan court filing",
+        "rockenhaus.net",
         "litigation.rockenhaus.net",
     ]
     lower_heading = heading.lower()
