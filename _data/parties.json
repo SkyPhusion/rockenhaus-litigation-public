@@ -73,6 +73,13 @@
         "category": "social"
       },
       {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/skyphusion/",
+        "handle": "skyphusion",
+        "verified": false,
+        "category": "social"
+      },
+      {
         "label": "Facebook",
         "url": "https://facebook.com/skyphusion",
         "handle": "@skyphusion",
@@ -115,6 +122,7 @@
       "https://github.com/skyphusion",
       "https://github.com/skyphusion-labs",
       "https://x.com/skyphusion",
+      "https://www.linkedin.com/in/skyphusion/",
       "https://facebook.com/skyphusion",
       "https://instagram.com/skyphusion",
       "https://github.skyphusion.net",
@@ -123,7 +131,7 @@
     ],
     "seo_sites": "rockenhaus.net, litigation.rockenhaus.net",
     "seo_sites_long": "rockenhaus.net (also litigation.rockenhaus.net; this public court record)",
-    "seo_profiles_summary": "Conrad Alan Rockenhaus maintains skyphusion.net, github.com/skyphusion, github.com/skyphusion-labs, and verified @skyphusion profiles on X, Facebook, and Instagram."
+    "seo_profiles_summary": "Conrad Alan Rockenhaus maintains skyphusion.net, github.com/skyphusion, github.com/skyphusion-labs, linkedin.com/in/skyphusion, and verified @skyphusion profiles on X, Facebook, and Instagram."
   },
   "third_parties": [
     {
