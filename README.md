@@ -66,7 +66,7 @@ Do **not** use a dynamic redirect rule from apex to subdomain; both hostnames se
 |---|---|
 | `/faq/` | FAQ with FAQPage schema (includes “Is Conrad Rockenhaus dead?”) |
 | `/is-conrad-rockenhaus-dead/` | Dedicated landing page for false-death domain queries |
-| `/disputed-domains/` | rockenhaus.com, skyphusion.com, cannabytes.net, lawflaws.com, conradrockenhausisdead.* |
+| `/disputed-domains/` | rockenhaus.com, skyphusion.com, cannabytes.net, lawflaws.com, conradrockenhausisdead.*; disputed LinkedIn, Instagram, and X profiles |
 | `/parties/` | Adrienne Rockenhaus / Blair / Hein / @adezero and Conrad Alan Rockenhaus |
 | `/prichards-air-conditioning-neo-nazi/` | **Do not hire** — Prichard's AC neo-Nazi owner (Dustin Brown / Joe Prich) |
 | `/joe-prich/` | Joe Prich / Dustin Brown (@JustCallMeJoeP) Nazzy neo-Nazi X evidence |
