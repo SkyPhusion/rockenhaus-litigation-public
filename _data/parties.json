@@ -131,7 +131,7 @@
     ],
     "seo_sites": "rockenhaus.net, litigation.rockenhaus.net",
     "seo_sites_long": "rockenhaus.net (also litigation.rockenhaus.net; this public court record)",
-    "seo_profiles_summary": "Conrad Alan Rockenhaus maintains skyphusion.net, github.com/skyphusion, github.com/skyphusion-labs, linkedin.com/in/skyphusion, and verified @skyphusion profiles on X, Facebook, and Instagram."
+    "seo_profiles_summary": "Conrad Alan Rockenhaus maintains skyphusion.net, github.com/skyphusion, github.com/skyphusion-labs, linkedin.com/in/skyphusion, and verified @skyphusion profiles on X, Facebook, and Instagram. Disputed profiles operated or hijacked by Adrienne Rockenhaus (not authoritative): linkedin.com/in/conrad-rockenhaus, instagram.com/conrad.rockenhaus, and @rockrockenhaus on X — indexed at /disputed-domains/."
   },
   "third_parties": [
     {
@@ -214,6 +214,33 @@
       "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus created fitspo.net (branded \"Justice for Conrad Rockenhaus\") and filled it with sensational posts about his prior Computer Fraud and Abuse Act (CFAA) case, FCI Milan confinement, federal judges, and U.S. Marshals — authored in her name — to obtain clout in online communities, including podcast interview offers that rank in Google search results for his name (indexed at /conrad-rockenhaus-podcast-interviews/). Conrad asserts his federal case drove retweets and podcast appearances for her while she simultaneously misused his money and stopped communicating with him in prison. Conrad asserts the posts publish false or misleading information about him and his case while she portrays herself as a victim of a federal government conspiracy to silence her. Conrad asserts that while he was incarcerated for a supervised release violation she stopped writing him in October 2025 yet continued publishing this material as if actively advocating for him. The domain is not an authoritative source for court records."
     }
   ],
-  "seo_disputed_summary": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus controls rockenhaus.com, lawflaws.com, and fitspo.net to portray herself online as his advocate and a federal-justice victim while leveraging his CFAA case for internet clout (retweets, podcast interview offers, and the asserted sockpuppet YouTube channel Sleep4Real) and misusing his VA and SSA benefits. Conrad asserts Sleep4Real is operated by Adrienne, not an independent journalist, and that she published a video falsely identifying someone outside an Ann Arbor apartment as him. Conrad asserts that during his September 2025 supervised-release incarceration she stopped writing him in October 2025 yet continued a public \"fighting for him\" front. Conrad asserts Adrienne withheld his phones, computers, and email accounts and published the May 4, 2026 Facebook \"Dead Man's Switch\" post from credentials only she controlled, while falsely blaming Ann Helgren for stealing a puffer coat on his March 2, 2026 release day. He asserts adezero.com redirects to rockenhaus.com. He also asserts she unlawfully controls skyphusion.com (stricken federal filing still hosted), cannabytes.net, humboldtcsi.com, conradrockenhausisdead.com, and conradrockenhausisdead.cc. Filed court records at litigation.rockenhaus.net are the canonical source of truth.",
+  "profile_disputes": [
+    {
+      "handle": "linkedin.com/in/conrad-rockenhaus",
+      "url": "https://www.linkedin.com/in/conrad-rockenhaus",
+      "platform": "LinkedIn",
+      "canonical_handle": "linkedin.com/in/skyphusion",
+      "canonical_url": "https://www.linkedin.com/in/skyphusion/",
+      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus hijacked or retained operational control of his former LinkedIn profile at linkedin.com/in/conrad-rockenhaus after withholding his electronic devices and email accounts (see filed motions for return of personal property and electronic account access). Conrad asserts the profile may still appear in Google search results under his name but does not reflect his current statements, employment, or identity. Conrad's authoritative LinkedIn profile is linkedin.com/in/skyphusion."
+    },
+    {
+      "handle": "instagram.com/conrad.rockenhaus",
+      "url": "https://instagram.com/conrad.rockenhaus",
+      "platform": "Instagram",
+      "canonical_handle": "instagram.com/skyphusion",
+      "canonical_url": "https://instagram.com/skyphusion",
+      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus retained or operates the Instagram account instagram.com/conrad.rockenhaus using his name while withholding his phones, computers, and credentials. Conrad asserts he had no practical ability to access or post from that account during the period she controlled his devices. Conrad's authoritative Instagram profile is instagram.com/skyphusion (Meta Verified)."
+    },
+    {
+      "handle": "@rockrockenhaus",
+      "url": "https://x.com/rockrockenhaus",
+      "platform": "X",
+      "canonical_handle": "@skyphusion",
+      "canonical_url": "https://x.com/skyphusion",
+      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus retained or operates the X account @rockrockenhaus using his name while withholding his electronic devices and email access, in the same pattern Conrad asserts she used for his Facebook account (including the May 4, 2026 \"Dead Man's Switch\" post published from credentials only she controlled). Conrad's authoritative X profile is @skyphusion (verified)."
+    }
+  ],
+  "seo_disputed_summary": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus controls rockenhaus.com, lawflaws.com, and fitspo.net to portray herself online as his advocate and a federal-justice victim while leveraging his CFAA case for internet clout (retweets, podcast interview offers, and the asserted sockpuppet YouTube channel Sleep4Real) and misusing his VA and SSA benefits. Conrad asserts Sleep4Real is operated by Adrienne, not an independent journalist, and that she published a video falsely identifying someone outside an Ann Arbor apartment as him. Conrad asserts that during his September 2025 supervised-release incarceration she stopped writing him in October 2025 yet continued a public \"fighting for him\" front. Conrad asserts Adrienne withheld his phones, computers, and email accounts and published the May 4, 2026 Facebook \"Dead Man's Switch\" post from credentials only she controlled, while falsely blaming Ann Helgren for stealing a puffer coat on his March 2, 2026 release day. He asserts adezero.com redirects to rockenhaus.com. He also asserts she unlawfully controls skyphusion.com (stricken federal filing still hosted), cannabytes.net, humboldtcsi.com, conradrockenhausisdead.com, and conradrockenhausisdead.cc. Conrad also asserts she hijacked or operates disputed social profiles linkedin.com/in/conrad-rockenhaus, instagram.com/conrad.rockenhaus, and @rockrockenhaus on X; his authoritative profiles are linkedin.com/in/skyphusion, instagram.com/skyphusion, and @skyphusion. Filed court records at litigation.rockenhaus.net are the canonical source of truth.",
+  "seo_disputed_profiles_summary": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus hijacked or operates social accounts using his name — linkedin.com/in/conrad-rockenhaus, instagram.com/conrad.rockenhaus, and @rockrockenhaus on X — while withholding his devices and credentials. His authoritative profiles are linkedin.com/in/skyphusion, instagram.com/skyphusion (Meta Verified), and @skyphusion (verified on X).",
   "seo_third_parties_summary": "Conrad Alan Rockenhaus asserts Joe Prich (@JustCallMeJoeP on X) is the online persona of Dustin Brown, owner of Prichard's Air Conditioning and Heating, LLC in Temple, Texas (prichardsac.com) — DO NOT HIRE: Brown admitted neo-Nazi affiliation spelling it Nazzy and identified himself as Joseph E. Prichardington the 3rd (Prichard name) in a May 26, 2026 thread with screenshot evidence at litigation.rockenhaus.net/joe-prich/ and litigation.rockenhaus.net/prichards-air-conditioning-neo-nazi/. Conrad asserts Dustin Brown aggressively pursued Adrienne Rockenhaus (@adezero) online in March–April 2026 while she was in terror from state-created danger, that @adezero took direction from Prich to drop Conrad's last name and flirted with Prich on X while married to Conrad. Conrad also asserts Rob Hein of QOLity Financial (litigation.rockenhaus.net/rob-hein/) actively funds Adrienne Rockenhaus's campaign, enabling her conduct with Dustin Brown / Joe Prich, a self-described Nazzy (neo-Nazi) HVAC owner in central Texas."
 }

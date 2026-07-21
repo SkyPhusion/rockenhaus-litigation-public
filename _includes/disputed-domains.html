@@ -10,3 +10,19 @@
   </li>
   {% endfor %}
 </ul>
+
+<p class="disputed-domains disputed-domains--profiles">
+  <strong>Disputed social profiles (not authoritative):</strong>
+  {{ site.data.parties.seo_disputed_profiles_summary }}
+</p>
+<ul class="disputed-domains__list disputed-profiles__list">
+  {% for profile in site.data.parties.profile_disputes %}
+  <li>
+    <a href="{{ profile.url }}" rel="nofollow noopener">{{ profile.handle }}</a>
+    ({{ profile.platform }}):
+    {{ profile.assertion }}
+    Authoritative profile:
+    <a href="{{ profile.canonical_url }}" rel="me">{{ profile.canonical_handle }}</a>.
+  </li>
+  {% endfor %}
+</ul>
