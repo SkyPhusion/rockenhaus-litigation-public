@@ -494,3 +494,48 @@ Carried from the lead, listed so the design accounts for them:
 - The Cloudflare Pages SPA fallback setting (defect 3.1) may need a project-level
   change that is Strummer lane and a CR. I will establish on a preview deployment
   whether `_redirects` alone is sufficient before anyone touches the project.
+
+## 13. Why the tier split lives in the schema, not in judgement
+
+Added after the design was reviewed, because the review produced the evidence
+for it by accident.
+
+The lead and I independently measured third-party terms across the same five
+live pages, at the same moment, and disagreed on four of them. I reported head
+hits of 4, 4, 3 and 9 on `/conrad-rockenhaus-podcast-interviews/`, `/parties/`,
+`/disputed-domains/` and `/retractions/`; the lead measured 0, 0, 0 and 6.
+
+Neither measurement was wrong and neither tool was broken. Ruling out the
+ordinary suspects first: cache-busted and plain fetches of those four pages are
+**byte-identical** (18967 / 10911 / 21710 / 19320 bytes, plain `cf-cache-status:
+HIT` at age around 550s against a busted `MISS`), so it was not a stale edge and
+not a deploy landing between the two reads.
+
+The cause was the term lists. Recomputing my counts with exactly two terms
+removed reproduces the lead numbers on all five pages:
+
+| page | mine | lead | mine minus adezero and sockpuppet |
+| --- | ---: | ---: | ---: |
+| `/conrad-rockenhaus-podcast-interviews/` | 4 | 0 | 0 |
+| `/parties/` | 4 | 0 | 0 |
+| `/disputed-domains/` | 3 | 0 | 0 |
+| `/retractions/` | 9 | 6 | 6 |
+| `/retractions/rob-hein/` | 10 | 10 | 10 |
+
+The two terms are exactly the two interesting cases. `adezero` is the handle of
+the opposing party: she IS a party, so the only argument for excluding it is
+that a handle is a ranking token carrying no docket meaning. `sockpuppet` is not
+a name at all, it is a characterisation. Every term the two of us agreed on was
+an unambiguous non-party name.
+
+So two people who had both read the constraint drew the party line in different
+places on the same five pages, and neither knew the other had. That is the
+argument for the tier split, and it is stronger than any argument from first
+principles: the distinction is not obvious even to people applying it carefully,
+so it cannot live in the judgement of whoever last edited a denylist. It has to
+be named in the data.
+
+`_data/metadata_denylist.json` therefore keeps `third_party` and `party_handles`
+as separate keys even though phase 1 applies both to `<head>` identically.
+Ruling R1 is what will make them behave differently, and the structure is there
+before it is needed rather than retrofitted afterwards.
