@@ -1,0 +1,127 @@
+---
+// Index of the pre-rendered answers, plus the honest statement of what this
+// archive can and cannot answer from.
+//
+// The coverage disclosure is not a disclaimer for its own sake. 108 of 959 pages
+// in the filed record have no text layer, so a question whose answer lives only
+// on a scanned page cannot be answered from text. Saying "the filings do not
+// address that" in that situation would be false. The number is published so the
+// limit is visible rather than implied.
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import coverage from "../../../_corpus/coverage.json";
+
+const questions = (await getCollection("questions")).map((q) => q.data);
+
+interface Coverage {
+  documents: number;
+  total_pages: number;
+  pages_native_text: number;
+  pages_ocr_text: number;
+  pages_with_text: number;
+  pages_without_text: number;
+  coverage_pct: number;
+  native_coverage_pct: number;
+  ocr_engine: { name: string; version: string; dpi: number; min_confidence: number } | null;
+  documents_with_no_text_layer: string[];
+  documents_partially_scanned: Array<{ url: string; text_pages: number; total_pages: number }>;
+}
+const cov = coverage as Coverage;
+
+const title = "Answers from the filed court record | Rockenhaus v. Rockenhaus";
+const description =
+  `Questions about the Michigan court matters, answered with verbatim passages from ${cov.documents} ` +
+  "filed court documents. Every answer cites the filing it came from by name and page.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  breadcrumbs={[{ name: "Home", url: "/" }, { name: "Answers from the record" }]}
+>
+  <h1>Answers from the filed court record</h1>
+
+  <p class="hub-lead">
+    Each page below answers one question using verbatim passages from the filed
+    Michigan court documents, citing the filing by name and page. The answers are
+    quotations, not summaries: nothing on these pages paraphrases or interprets a
+    filing, and nothing is generated.
+  </p>
+
+  <ul class="answer-list">
+    {questions.map((q) => (
+      <li>
+        <a href={`/answers/${q.slug}/`}>{q.question}</a>
+        <p class="answer-list__framing">{q.framing}</p>
+      </li>
+    ))}
+  </ul>
+
+  <section aria-labelledby="coverage">
+    <h2 id="coverage">What this archive can and cannot answer</h2>
+    <p>
+      The text behind these answers comes from {cov.documents} filed PDFs totalling
+      {cov.total_pages} pages. {cov.pages_native_text} pages carry a real text layer
+      and can be quoted directly. A further {cov.pages_ocr_text} pages are scanned
+      images that have been put through optical character recognition, which makes
+      them searchable and describable. {cov.pages_without_text} pages have no usable
+      text at all.
+    </p>
+    <p>
+      <strong>Machine-transcribed pages are never quoted on this site.</strong> OCR of
+      these documents interleaves vertical margin text into body lines, so a passage
+      lifted from it can be wrong in ways that read perfectly plausibly. Quoting it
+      would put words in a court document that the document does not contain. Answers
+      that rest on a scanned filing therefore name the filing and the page and link
+      the PDF, without reproducing its words. The build enforces this: a quoted
+      citation to a transcribed page fails and the page does not publish.
+    </p>
+    <p>
+      This matters for a second reason. If a question is answered only on a page with
+      no usable text, an engine reading text alone would report that the filings do
+      not address it. That would be false. The filings below are affected, and any
+      question touching them should be checked against the PDF directly.
+    </p>
+
+    {cov.documents_with_no_text_layer.length > 0 ? (
+      <>
+        <h3>Filings with no searchable text at all</h3>
+        <ul>
+          {cov.documents_with_no_text_layer.map((url) => (
+            <li><a href={url}>{url}</a></li>
+          ))}
+        </ul>
+      </>
+    ) : (
+      <p>
+        <strong>Every filed document in this archive is now searchable.</strong> Before
+        transcription, seven filings carried no searchable text at all, including the
+        opposing party&rsquo;s Answer to Counterclaim, its Motion to Set Aside Default,
+        and the responses to Requests for Admissions.
+      </p>
+    )}
+
+    <h3>Filings only partly searchable</h3>
+    <p>
+      {cov.documents_partially_scanned.length} filings still have pages with no usable
+      text, generally handwritten or photographic exhibits where transcription
+      confidence fell below the threshold and the result was discarded rather than
+      published.
+    </p>
+    <ul>
+      {cov.documents_partially_scanned.slice(0, 12).map((d) => (
+        <li>
+          <a href={d.url}>{d.url}</a> &middot; {d.text_pages} of {d.total_pages} pages searchable
+        </li>
+      ))}
+    </ul>
+
+    {cov.ocr_engine && (
+      <p class="note">
+        Transcription: {cov.ocr_engine.name} {cov.ocr_engine.version} at
+        {" "}{cov.ocr_engine.dpi} dpi, discarding any page below
+        {" "}{cov.ocr_engine.min_confidence}% mean confidence.
+      </p>
+    )}
+  </section>
+</BaseLayout>

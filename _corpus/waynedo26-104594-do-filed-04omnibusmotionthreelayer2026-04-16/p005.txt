@@ -1,0 +1,59 @@
+Document: 04 Omnibus Motion Three Layer 2026-04-16
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-04-16
+Page: 5 of 6
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-04omnibusmotionthreelayer2026-04-16/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/04_Omnibus_Motion_Three_Layer_2026-04-16.pdf
+Text source: native
+
+---
+
+constitute contempt of court and may result in sanctions and adverse inference instructions at trial;
+
+                                B. As to Financial Disclosure and Accounting
+
+27. Requiring Plaintiff to immediately provide a complete verified financial disclosure statement pursuant to
+    MCR 3.206(C), including all income, assets, liabilities, and financial accounts;
+28. Requiring Plaintiff to provide a sworn accounting of every VA Disability Compensation payment and
+    every SSDI benefit payment belonging to Defendant that she received, controlled, or disbursed, including
+    the date, amount, account, and disposition of each payment;
+29. Requiring Plaintiff to provide a complete accounting of all Cannabytes, LLC revenues, accounts, assets,
+    and liabilities from the date of the parties' marriage through the present;
+30. Requiring Plaintiff to produce complete bank statements for all financial accounts in her name or under
+    her control from September 1, 2025 through the present;
+31. Requiring Plaintiff to provide her federal and state income tax returns for tax years 2023 and 2024;
+32. Enjoining Plaintiff from dissipating, transferring, concealing, or otherwise disposing of any marital assets
+    or any funds wrongfully diverted from Defendant pending further order of this Court;
+
+                               C. As to the Emergency TRO on rockenhaus.com
+33. Immediately entering a Temporary Restraining Order prohibiting Plaintiff from: (a) transferring, selling,
+    assigning, or conveying rockenhaus.com or any associated registrar credentials to any third party; (b)
+    allowing the registration of rockenhaus.com to lapse or expire without renewing it; (c) altering, deleting,
+    or destroying the DNS settings, hosting configuration, or website content associated with
+    rockenhaus.com; (d) encumbering the domain in any way; and (e) taking any action that would impair
+    Defendant's ability to recover full ownership and control of rockenhaus.com upon final judgment;
+34. Setting a hearing on Defendant's motion for a Preliminary Injunction at the Court's earliest convenience;
+35. Upon final judgment, ordering the immediate transfer of all registrar credentials, DNS settings, hosting
+    account credentials, and all associated access and control for rockenhaus.com to Defendant's sole
+    ownership and control;
+
+                                               D. As to All Relief
+36. Awarding Defendant costs incurred in bringing this motion; and
+37. Granting such other and further relief as this Court deems just and equitable.
+ Respectfully submitted,
+ /s/ Conrad A. Rockenhaus
+ Conrad Alan Rockenhaus, Defendant Pro Se
+ 1690 Brookfield Drive
+ Ann Arbor, Michigan 48103
+ (254) 340-7910
+ crockenhaus@icloud.com
+ Dated: April 16, 2026
+
+                         EXHIBIT A: WHOIS RECORD FOR ROCKENHAUS.COM
+ Domain Name: ROCKENHAUS.COM
+ Registry Domain ID: 76985439_DOMAIN_COM-VRSN
+ Creation Date: 2001-09-07
+ Registrar Registration Expiration Date: 2026-09-07
+ Registrar: Cloudflare, Inc.

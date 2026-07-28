@@ -1,0 +1,58 @@
+Document: 12c Supplemental Brief In Support Of Pending Emergency Motion 2026-05-14
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-14
+Page: 1 of 8
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12csupplementalbriefinsupportofpendingemergencymotion2026-05-14/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12c_Supplemental_Brief_in_Support_of_Pending_Emergency_Motion_2026-05-14.pdf
+Text source: native
+
+---
+
+STATE OF MICHIGAN
+
+                 IN THE THIRD JUDICIAL CIRCUIT FOR THE COUNTY OF WAYNE
+                               FAMILY DIVISION, DOMESTIC RELATIONS
+
+ ADRIENNE MARJORIE ROCKENHAUS,                                       Case No. 26-104594-DO
+   Plaintiff/Counter-Defendant,
+                                                                     Hon. Nicole N. Goodson
+ v.
+
+ CONRAD ALAN ROCKENHAUS,
+  Defendant/Counter-Plaintiff.
+
+      DEFENDANT/COUNTER-PLAINTIFF'S SUPPLEMENTAL BRIEF IN SUPPORT OF
+       PENDING EMERGENCY MOTION FOR PRESERVATION ORDER AND ORDER
+                    PROHIBITING SPOLIATION OF EVIDENCE
+
+                                             I. INTRODUCTION
+1. Defendant/Counter-Plaintiff Conrad Alan Rockenhaus, pro se, files this Supplemental Brief in support of
+   his Emergency Motion for Preservation Order and Order Prohibiting Spoliation of Evidence (the "Pending
+   Motion"), filed May 13, 2026. This Brief seeks no new or expanded relief. The relief already requested in
+   the Pending Motion, including preservation directives addressed to X Corp. for the named X-platform
+   accounts (including the @rosebuttcheeks account), Meta Platforms, Inc. (including Facebook and
+   Threads), and Google LLC (including the email account ecigaretteslut@gmail.com), is the relief sought.
+2. This Brief is filed solely to place before the Court four supplemental evidentiary findings developed by
+   Defendant/Counter-Plaintiff on May 14, 2026 that strengthen the inferential basis on which the Pending
+   Motion already rests. The findings are: (a) the cessation of publicly-attributable X-platform activity by the
+   twelve previously-monitored X-network accounts since May 9, 2026, together with the documentary
+   attribution of the @rosebuttcheeks account (already named in the Pending Motion) as a private-identity
+   X account operated by Plaintiff/Counter-Defendant Adrienne Marjorie Rockenhaus and continuing to post
+   throughout the relevant period; (b) a temporal synchronization at three-minute resolution on May 9, 2026
+   between an electronic mail message sent to Witness Ann Helgren and an X-platform reply by the
+   account @spuntpatrol; (c) the identification of @BiancaWestfall as a previously-undocumented
+   operational amplifier of the coordinated case-narrative content with a five-month history of such activity,
+   including the publication of original content targeting Defendant/Counter-Plaintiff's federal-court attorney;
+   and (d) the operational migration of the coordinated activity from publicly-attributable X accounts to Meta-
+   owned platforms and email channels while continuing under cover of the @rosebuttcheeks private-
+   identity account.
+3. The chain of custody, capture methodology, and SHA-256 hash manifest for the public-record X scrape
+   datasets supporting the findings stated in this Brief are set forth in the Second Chain of Custody
+   Supplement and the Third Chain of Custody Supplement, both filed contemporaneously herewith.
+
+                                       II. PROCEDURAL POSTURE
+4. On May 13, 2026, Defendant/Counter-Plaintiff filed the Pending Motion together with the Chain of
+   Custody Supplement supporting the May 12, 2026 Scrape Evidence (the "First Supplement"). Both filings
+   were accepted through the Third Judicial Circuit Court Applications (CCApps) filing system on the same

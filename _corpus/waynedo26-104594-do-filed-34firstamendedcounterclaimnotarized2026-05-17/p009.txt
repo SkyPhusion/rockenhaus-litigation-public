@@ -1,0 +1,61 @@
+Document: 34 First Amended Counterclaim Notarized 2026-05-17
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-17
+Page: 9 of 19
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-34firstamendedcounterclaimnotarized2026-05-17/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/34_First_Amended_Counterclaim_NOTARIZED_2026-05-17.pdf
+Text source: native
+
+---
+
+aggressive complaint containing false statements, and introducing his complete
+    psychiatric history, his private prescription records, and his most intimate medical details
+    into the public court record. Counter-Plaintiff now seeks full accountability through the
+    legal process that Counter-Defendant forced upon him. He has nothing left to forgive.
+
+   XIII. COORDINATED MULTI-PLATFORM HARASSMENT OPERATION (POST-
+                  FILING EVIDENTIARY DEVELOPMENT)
+63. Counter-Plaintiff incorporates by reference paragraphs 24 through 62 above. The matters
+    set forth in this Section XIII supplement and provide documentary evidentiary substrate
+    for the harassment-related allegations already pleaded in Sections VI and VII, and concern
+    the same conduct, transaction, and occurrence within the meaning of MCR 2.118(D). The
+    evidentiary development described herein was completed after April 15, 2026.
+
+                            A. May 12, 2026 Scrape Evidence Corpus
+64. Between approximately 22:21 UTC on May 12, 2026 and 01:01 UTC on May 13, 2026,
+    Counter-Plaintiff caused public-record content from the X/Twitter platform to be captured
+    using the Apify tweet-scraper actor service. The capture operation produced eighteen
+    JSON files (the "May 12, 2026 Scrape Evidence") aggregating approximately 114
+    megabytes and approximately 14,500 unique tweet records. The files were preserved with
+    SHA-256 cryptographic hashes immediately upon capture, and the hashes are documented
+    in a Chain of Custody Supplement filed contemporaneously with this Amended
+    Counterclaim's referenced Emergency Motion for Spoliation Prevention.
+65. The May 12, 2026 Scrape Evidence captures public-record activity across all eleven
+    sockpuppet accounts identified in paragraph 37 above (@spuntpatrol, @LeighCheri_,
+    @phatadvert,      @AllysonClermont,         @4chantress,     @alg0queen,        @LuceMargarita,
+    @blackjakkkk, @PunkyHomegirl, @picklepickleg, @p1ratech), plus Counter-Defendant's
+    verified main account @adezero, plus two additional accounts identified through
+    documentary evidence as integrated with Counter-Defendant's harassment architecture
+    (@rosebuttcheeks and @JustCallMeJoeP), plus the May 8, 2026 broadcast conversation
+    tree associated with the public dead-man's-switch post made via Counter-Plaintiff's
+    compromised X account.
+66. The May 12, 2026 Scrape Evidence documents 71 direct cross-account interactions
+    between @adezero and the eleven sockpuppet accounts during the period from March 2
+    through   April   11,   2026,   including    21   interactions   with   @spuntpatrol,     11   with
+    @LeighCheri_, 9 with @phatadvert, 7 with @AllysonClermont, 6 with @4chantress, 6 with
+    @alg0queen, 4 with @LuceMargarita, 3 with @blackjakkkk, 2 with @PunkyHomegirl, 1
+    with   @picklepickleg,    and   1   with    @p1ratech.   This    interaction   pattern,   captured
+    contemporaneously and preserved cryptographically, corroborates paragraph 37 above
+    and refutes any claim that the eleven accounts represent independent third-party
+    supporters.
+67. The May 12, 2026 Scrape Evidence further documents Counter-Defendant's continued
+    exploitation of the @rosebuttcheeks account as a self-reply amplification vehicle. On April
+    11, 2026 (conversation ID 2043052376794276350), the @adezero account posted "I am
+    hurting so bad today." On April 20, 2026, the @rosebuttcheeks account posted "Are you
+    okay?" purportedly in reply to @adezero. On April 25, 2026, the @rosebuttcheeks account
+    posted "???" with the in_reply_to_username field populated as "@rosebuttcheeks" itself,
+    that is, the account replying to its own prior message rather than to Counter-Defendant.
+    The structural impossibility of an arms-length third-party supporter replying to her own
+    message instead of to Counter-Defendant establishes single-operator architecture as a

@@ -1,0 +1,60 @@
+Document: 04a Supplement To Omnibus Part Three Rockenhaus Com 2026-05-04
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-04
+Page: 3 of 6
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-04asupplementtoomnibuspartthreerockenhauscom2026-05-04/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/04a_Supplement_to_Omnibus_Part_Three_rockenhaus_com_2026-05-04.pdf
+Text source: native
+
+---
+
+c. Maintain the continuity of an email-of-record relationship with creditors, banks, government agencies,
+    and consumer-finance entities that have used the address for years and may flag account changes to
+    alternative addresses as suspicious;
+    d. Recover account-recovery emails, password-reset emails, and identity-verification correspondence
+    routed by third parties to the longstanding email of record by default.
+14. The lockout from a longstanding surname-domain professional email is professional-identity deprivation,
+    not mere inconvenience. The harm accumulates daily and cannot be undone by retroactive credential
+    transfer because correspondence sent during the lockout window is, in many cases, irretrievably lost or
+    consumed by the controlling party.
+
+                              C. Background Facts (Not Operative Predicates)
+15. The following additional facts are part of the factual background and are noted here for the Court's
+    contextual reference. They are not operative predicates for the supplemental relief requested. The
+    supplement's substantive showing rests on Sections II.A and II.B above.
+    a. The skyphusion.com domain, registered to Defendant's longstanding online identity "SkyPhusion,"
+    used by Defendant pre-marriage in technology and information-security contexts, currently redirects to a
+    federal-docket document hosted on rockenhaus.com whose contents post-date and characterize
+    Defendant in inflammatory terms.
+    b. The current homepage of rockenhaus.com is titled "How the Feds Targeted Adrienne Rockenhaus for
+    Speaking Out," a narrative framing that uses the surname-domain to center Plaintiff as protagonist of the
+    federal-case narrative.
+    c. Public WHOIS history for rockenhaus.com reflects a registrar transfer from Cloudflare, Inc. to
+    Namecheap, Inc. occurring while Defendant was incarcerated.
+16. Defendant raises the foregoing background facts under MCR 2.116(C) only as context and reserves all
+    rights to address them through other procedural channels at the appropriate time. The Court is not asked
+    to make findings or grant relief on Section II.C.
+
+                                                III. AUTHORITY
+
+17. The four-factor preliminary-injunction analysis under Pontiac Fire Fighters Union Local 376 v. City of
+    Pontiac, 482 Mich 1, 7 (2008), as applied to rockenhaus.com, was set forth in full in Defendant's April 16,
+    2026 Omnibus Motion at Part Three and is incorporated herein by reference.
+18. Likelihood of success on the merits - unchanged. WHOIS creation date of September 7, 2001
+    establishes premarital separate-property status under MCL 552.401 as a matter of objective fact. The
+    supplemental facts in Section II.A do not change this analysis; they confirm the inverse, that Plaintiff's
+    contrary sworn assertion is unsupported by documentary evidence.
+19. Irreparable harm - strengthened. The Section II.B lockout creates ongoing, daily, accumulating harm
+    distinct from the lapse-or-transfer harm addressed in the original Part Three. The cessation of misuse
+    and the transfer of administrative custody requested below address an active, continuing deprivation that
+    money damages cannot redress.
+20. Balance of hardships - strengthened. The Section II.A false-swearing materially shifts the balance of
+    hardships. Plaintiff's interest in continued exclusive control of rockenhaus.com is no longer a neutral
+    status-quo interest. It is an interest that rests on, and is sustained by, a sworn statement contradicted by
+    the documentary record. Pontiac Fire Fighters does not require this Court to weigh, in Plaintiff's favor, an
+    interest that exists only by reference to a contradicted oath.
+21. Public interest - unchanged. Michigan courts have a strong public interest in protecting premarital
+    separate property from dissipation, misappropriation, or misuse during divorce proceedings. The
+    supplemental facts strengthen that interest by demonstrating that, absent court intervention, the

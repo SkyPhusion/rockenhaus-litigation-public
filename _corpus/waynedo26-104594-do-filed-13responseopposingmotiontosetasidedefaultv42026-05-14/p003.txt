@@ -1,0 +1,62 @@
+Document: 13 Response Opposing Motion To Set Aside Default V4 2026-05-14
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-14
+Page: 3 of 9
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-13responseopposingmotiontosetasidedefaultv42026-05-14/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/13_Response_Opposing_Motion_to_Set_Aside_Default_v4_2026-05-14.pdf
+Text source: native
+
+---
+
+or subject matter, shall be granted only upon verified motion of the defaulted party
+          showing good cause.
+
+(emphasis added).
+The phrase "shall be granted only upon" establishes the verified motion as a condition precedent to the
+Court's authority to grant relief. The rule does not vest the Court with discretion to grant an unverified
+motion. Where a court rule sets forth a mandatory procedural requirement in unambiguous terms, that
+requirement is binding on the Court, the litigants, and counsel. See MCR 1.105 (rules of civil procedure are
+to be construed to secure simplicity in procedure and fairness in administration).
+Because the Motion to Set Aside contains no verification under MCR 1.109(D)(3), the condition precedent to
+relief under MCR 3.210(B)(3) is not satisfied. The Court need not, and should not, reach any other issue.
+
+                               C. MCR 2.603(D)(1) Requires the Same Result
+In her Brief in Support, Plaintiff/CounterDefendant suggests that the standards of MCR 2.603(D)(1) may be
+applied to her motion (citing Koy v. Koy, 274 Mich App 653 (2007)). Counsel's invocation of this alternative
+rule does not assist Plaintiff/CounterDefendant. MCR 2.603(D)(1) provides, in pertinent part:
+
+          A motion to set aside a default or a default judgment, except when grounded on lack of
+          jurisdiction over the defendant, shall be granted only if good cause is shown and a
+          statement of facts showing a meritorious defense, verified in the manner prescribed by
+          MCR 1.109(D)(3), is filed.
+
+(emphasis added). MCR 2.603(D)(1) thus requires a statement of facts verified in the manner prescribed by
+MCR 1.109(D)(3). Plaintiff/CounterDefendant has not filed any such statement. The proposed Answer to
+Counterclaim is a pleading, not a verified statement of facts; it is signed only by counsel and contains no
+verification under MCR 1.109(D)(3).
+Whether the Court applies MCR 3.210(B)(3) or MCR 2.603(D)(1), the result is the same:
+Plaintiff/CounterDefendant has not provided the verified showing that either rule requires. The Motion to Set
+Aside must be denied on this basis alone.
+
+      D. In the Alternative, MCR 3.210(B)(3) Requires Verification by the Defaulted Party Herself
+Even if some form of verification by counsel were sufficient under MCR 1.109(D)(3) in some contexts (which
+Defendant/CounterPlaintiff does not concede), MCR 3.210(B)(3)'s additional requirement that the verified
+motion be that "of the defaulted party" places the verification obligation on the party herself rather than her
+counsel. Plaintiff/CounterDefendant Adrienne Marjorie Rockenhaus has not signed, sworn to, or affirmed
+any portion of the Motion to Set Aside. No accompanying affidavit from Plaintiff/CounterDefendant has been
+filed. This alternative ground        for   denial   reinforces,    but   is   not   necessary   to,   the   relief
+Defendant/CounterPlaintiff seeks.
+
+         III. EVEN IF VERIFIED, THE MOTION WOULD FAIL FOR LACK OF GOOD CAUSE
+If the Court reaches the merits of the good-cause showing, the Motion still fails.
+
+                                            A. The Saffian Standard
+The controlling authority is Saffian v. Simmons, 477 Mich 8, 727 NW2d 132 (2007), affirming 267 Mich App
+297, 704 NW2d 722 (2005). Under Saffian, good cause to set aside a default may be shown by:
+
+          (1) A substantial procedural defect or irregularity, or
+          (2) A reasonable excuse for failure to comply with the requirements that created the default.
+
+Plaintiff/CounterDefendant does not allege any procedural defect or irregularity in the entry of default. She

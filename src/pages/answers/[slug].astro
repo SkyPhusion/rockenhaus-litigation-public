@@ -1,0 +1,181 @@
+---
+// One pre-rendered page per question. THIS is the indexable surface.
+//
+// A client-rendered answer widget does not rank: search engines will not index
+// text generated in the browser. So the answers that can actually win a query
+// are these -- ordinary static HTML, with primary-source quotation and citations
+// to filed court documents that nobody else holds.
+//
+// ANSWERS ARE QUOTED, NEVER GENERATED. Every passage below is verbatim from a
+// filed document, and scripts/verify-citations.mjs proves at build time that each
+// passage appears on the page it is cited to. The only non-quoted prose is the
+// single human-authored framing sentence, attributed on the page.
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import corpusManifest from "../../../_corpus/manifest.json";
+
+export async function getStaticPaths() {
+  const questions = await getCollection("questions");
+  return questions.map((q) => ({
+    params: { slug: q.data.slug },
+    props: { q: q.data },
+  }));
+}
+
+const { q } = Astro.props;
+
+interface ManifestPage {
+  key: string;
+  doc_slug: string;
+  title: string;
+  url: string;
+  pdf_url: string;
+  case_number: string;
+  category: string;
+  filed_date: string | null;
+  page: number;
+  total_pages: number;
+  has_text: boolean;
+}
+
+const pages = (corpusManifest as { pages: ManifestPage[] }).pages;
+
+// Resolve each citation to the document it came from, so the page can render a
+// real title, a real link, and a real page reference rather than a slug.
+const cited = q.citations.map((c) => {
+  const page = pages.find((p) => p.doc_slug === c.doc_slug && p.page === c.page);
+  if (!page) {
+    // Unreachable if verify-citations ran, which CI enforces. Failing loudly
+    // beats rendering a citation to a document that is not in the corpus.
+    throw new Error(
+      `answers/${q.slug}: citation to ${c.doc_slug} p${c.page} has no matching corpus page. ` +
+        "Run scripts/verify-citations.mjs.",
+    );
+  }
+  return { ...c, page };
+});
+
+// Unquoted references: the filing is named and linked, its words are not
+// reproduced. Used where the only text available is a machine transcription.
+const referenced = (q.references ?? []).map((r) => {
+  const page = pages.find((p) => p.doc_slug === r.doc_slug && p.page === r.page);
+  if (!page) {
+    throw new Error(`answers/${q.slug}: reference to ${r.doc_slug} p${r.page} has no matching corpus page.`);
+  }
+  return { ...r, page };
+});
+
+const sources = Array.from(
+  new Map([...cited, ...referenced].map((c) => [c.page.doc_slug, c.page])).values(),
+);
+
+const title = `${q.question} | Rockenhaus v. Rockenhaus court record`;
+const description =
+  `${q.framing} Answered from the filed Michigan court record, citing ` +
+  `${sources.length} filed document${sources.length === 1 ? "" : "s"} by name and page.`;
+
+// QAPage describing DOCUMENTS. The accepted answer is quotation from the filed
+// record plus its citation; it makes no statement about any person.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "QAPage",
+  mainEntity: {
+    "@type": "Question",
+    name: q.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: [
+        ...cited.map(
+          (c) => `"${c.quote}" (${c.page.title}, page ${c.page.page}, case ${c.page.case_number})`,
+        ),
+        // References describe rather than quote, so the structured answer says
+        // what the filing is and where, never what it supposedly says.
+        ...referenced.map(
+          (r) => `${r.note} (${r.page.title}, page ${r.page.page}, case ${r.page.case_number})`,
+        ),
+      ].join(" "),
+      citation: sources.map((s) => ({
+        "@type": "CreativeWork",
+        name: s.title,
+        url: new URL(s.url, Astro.site).toString(),
+      })),
+    },
+  },
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  jsonLd={jsonLd}
+  breadcrumbs={[
+    { name: "Home", url: "/" },
+    { name: "Answers from the record", url: "/answers/" },
+    { name: q.question },
+  ]}
+>
+  <h1>{q.question}</h1>
+
+  <p class="answer-framing">{q.framing}</p>
+  <p class="answer-framing__byline">
+    Framing written by {q.framing_author}. Everything below is quoted verbatim from the filed record.
+  </p>
+
+  <section aria-labelledby="from-record">
+    <h2 id="from-record">What the filed record says</h2>
+    {cited.map((c) => (
+      <figure class="record-quote">
+        <blockquote cite={new URL(c.page.url, Astro.site).toString()}>
+          <p>{c.quote}</p>
+        </blockquote>
+        <figcaption>
+          <a href={c.page.url}>{c.page.title}</a>, page {c.page.page} of {c.page.total_pages}
+          {c.page.filed_date && <> &middot; filed {c.page.filed_date} </>}
+          &middot; case {c.page.case_number} 
+          &middot; <a href={c.page.pdf_url}>PDF</a>
+        </figcaption>
+      </figure>
+    ))}
+  </section>
+
+  {referenced.length > 0 && (
+    <section aria-labelledby="also-in-record">
+      <h2 id="also-in-record">Also in the record, not quoted here</h2>
+      <p class="answer-note">
+        These filings are scanned images. A machine transcription makes them
+        searchable, but that transcription contains errors, so they are cited by
+        document and page rather than quoted. Open the PDF for the actual text.
+      </p>
+      <ul class="record-references">
+        {referenced.map((r) => (
+          <li>
+            <a href={r.page.url}>{r.page.title}</a>, page {r.page.page} of {r.page.total_pages}
+            {r.page.filed_date && <> &middot; filed {r.page.filed_date} </>}
+            &middot; case {r.page.case_number} &middot; <a href={r.page.pdf_url}>PDF</a>
+            <p class="record-references__note">{r.note}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  {q.record_gap && (
+    <section aria-labelledby="gap">
+      <h2 id="gap">What the record does not say</h2>
+      <p>{q.record_gap}</p>
+    </section>
+  )}
+
+  <section aria-labelledby="sources">
+    <h2 id="sources">Source documents</h2>
+    <ul>
+      {sources.map((s) => (
+        <li>
+          <a href={s.url}>{s.title}</a> &middot; case {s.case_number}
+          {s.filed_date && <> &middot; filed {s.filed_date}</>}
+        </li>
+      ))}
+    </ul>
+    <p><a href="/answers/">All answers from the record</a> &middot; <a href="/all-documents/">All filed documents</a></p>
+  </section>
+</BaseLayout>

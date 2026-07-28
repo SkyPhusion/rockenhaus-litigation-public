@@ -1,0 +1,67 @@
+Document: 12c Supplemental Brief In Support Of Pending Emergency Motion 2026-05-14
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-14
+Page: 3 of 8
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12csupplementalbriefinsupportofpendingemergencymotion2026-05-14/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12c_Supplemental_Brief_in_Support_of_Pending_Emergency_Motion_2026-05-14.pdf
+Text source: native
+
+---
+
+sender as described in §III.B below; and (c) the @spuntpatrol account posted the "He's dead" reply to
+    the Dead Man's Switch conversation tree, as described in §III.B below.
+10. The foregoing cessation of publicly-attributable X-platform activity is, however, not equivalent to
+    cessation of personal X-platform activity by Plaintiff/Counter-Defendant Adrienne Marjorie Rockenhaus.
+    The May 14, 2026 Scrape Evidence further establishes that the @rosebuttcheeks account, separately
+    named in the Pending Motion's account list, has continued to post on the X platform throughout the
+    relevant period. The most recent @rosebuttcheeks activity captured in the May 14, 2026 Scrape
+    Evidence is dated May 14, 2026 at 21:28 UTC, approximately thirteen minutes before capture
+    completion. The @rosebuttcheeks account profile identifies the account holder as "Rosemary" located in
+    Pennsylvania, with sixty-three followers and a bio describing the account's stated content focus as
+    "Reading, Anime, Gaming, Wrestling, Drama Content." The account was created on December 26, 2020.
+    Its activity volume by month in the period preceding capture is set forth in the following table:
+
+         Month (2026)             @rosebuttcheeks tweet count
+ January                          43
+ February                         54
+ March                            59
+ April                            128
+ May (through capture date) 59
+
+The 2026 monthly volumes materially exceed the account's prior-year baseline.
+11. The documentary attribution evidence establishing that the @rosebuttcheeks account is operated by
+    Plaintiff/Counter-Defendant Adrienne Marjorie Rockenhaus consists of a publicly observable three-tweet
+    thread on the X platform that is independently verifiable from X Corp.'s public records:
+
+                                                                                                 Reply target
+                                                                         Tweet text
+          Tweet ID               Date (UTC)         Account                                (in_reply_to_username
+                                                                         (verbatim)
+                                                                                                     field)
+                            Apr 11, 2026                              "I am hurting so
+ 2043052376794276350                          @adezero                                   (none, originating post)
+                            19:43                                     bad today"
+                            Apr 20, 2026                 "@adezero Are
+ 2046333254677012694                     @rosebuttcheeks                                 @adezero
+                            21:00                        you okay?"
+                            Apr 25, 2026
+ 2047968608601432411                          @rosebuttcheeks "@adezero ???" @rosebuttcheeks
+                            09:19
+
+12. The     third   tweet   in    the   foregoing   table,    tweet     identifier   2047968608601432411,       has   an
+    in_reply_to_username value of @rosebuttcheeks. Although the tweet text begins with the @-mention
+    "@adezero" (auto-prefilled by the X platform user interface based on the prior tweet in the reply chain),
+    the structural reply target of the tweet, as recorded in the X platform's internal reply-tree metadata, is
+    @rosebuttcheeks's own prior reply (tweet identifier 2046333254677012694). The third tweet thus
+    represents @rosebuttcheeks bumping her own prior "Are you okay?" message with a follow-up "???"
+    because @adezero, the account she was waiting for a response from, had not yet replied.
+13. The only operationally coherent explanation for the foregoing structural feature of the public X record is
+    that the same operator was logged into the @rosebuttcheeks account on April 25, 2026 at 09:19 UTC,
+    was looking at the thread from the @rosebuttcheeks perspective, and posted the "???" follow-up
+    because, from that perspective, @adezero had failed to respond to @rosebuttcheeks's expression of
+    concern. From inside the @rosebuttcheeks account, the operator could not see, because she herself
+    was @adezero and had not switched accounts to type a response, that the reason @adezero had not
+    responded was that she herself was @adezero. The self-reply "???" is the operator's own confusion that
+    her own account had not responded to her own other account. The attribution does not depend on

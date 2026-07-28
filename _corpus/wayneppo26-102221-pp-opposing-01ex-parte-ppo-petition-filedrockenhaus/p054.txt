@@ -1,0 +1,67 @@
+Document: 01 Ex Parte PPO Petition, Filed Rockenhaus
+Case: Rockenhaus v. Rockenhaus (PPO), Case No. 26-102221-PP
+Court: Wayne County Circuit Court (Third Judicial Circuit)
+Category: Opposing party
+Page: 54 of 83
+Source: https://rockenhaus.net/documents/wayneppo26-102221-pp-opposing-01ex-parte-ppo-petition-filedrockenhaus/
+PDF: https://rockenhaus.net/wayne_ppo_26-102221-PP/opposing/01_EX PARTE PPO Petition, Filed_Rockenhaus.pdf
+Text source: native
+
+---
+
+05/16/2023 09:30 ANN SUD-MD 1
+05/16/2023 10:00 ANN VVC-VOD SUD-PSY 3
+05/19/2023 09:00 ANN SUD-PHD 5
+06/13/2023 11:00 ANN VVC-VOD NEURO MD-SHAT
+07/06/2023 09:00 CAN WHS ACUPUNCTURE 1
+10/12/2023 10:00 CAN PACT 2 YELLOW-MD 2
+=================================================================
+
+Influenza Immunization
+
+Resolution:
+
+No influenza vaccine recorded for this season.
+
+Information:
+ Reminder Term: VA-INFLUENZA IMM SEASON START DATE
+ Computed Finding: VA-FileMan Date
+  07/30/2022 value - 3220730
+
+ Influenza season start date: 7/30/2022
+  Influenza vaccine recorded after this date will resolve this reminder.
+
+Refusals
+ Reminder Term: VA-INFLUENZA IMM SEASONAL VACCINE FORMULATIONS
+ 04/20/2023@16:54 Reason: PATIENT DECISION, expires 05/20/2023.
+ Patient has refused all vaccines in the group.
+ 04/21/2023@14:07:55 Reason: PATIENT DECISION, expires 05/21/2023.
+ Comments: Patient states he got in December and it was not documented.
+ Patient has refused all vaccines in the group.
+ Immunization: INFLUENZA, UNSPECIFIED FORMULATION
+ 04/20/2023@16:54 Reason: PATIENT DECISION, expires 05/20/2023.
+ Patient has refused all vaccines in the group.
+ 04/21/2023@14:07:55 Reason: PATIENT DECISION, expires 05/21/2023.
+ Comments: Patient states he got in December and it was not documented.
+ Patient has refused all vaccines in the group.
+
+Precautions
+ Reminder Term: VA-INFLUENZA IMM SEASONAL VACCINE FORMULATIONS
+ 04/20/2023@18:31:09 Reason: UNSTABLE/EVOLVING NEURO DZ, expires 05/20/2023.
+ Immunization: INFLUENZA, UNSPECIFIED FORMULATION
+ 04/20/2023@18:31:09 Reason: UNSTABLE/EVOLVING NEURO DZ, expires 05/20/2023.
+Medication Reconciliation:
+ The patient received a printed list of their medications (including local
+and
+ remote VA active medications, non-VA medications, medications that expired
+or
+ were discontinued within the last 90 days and pending medication orders).
+ This list was reviewed-reconciled with the patient. Changes in medications
+ were discussed with the patient. A printed list of the new or changed
+ medications was given to the patient. Patient verbalized understanding of
+the
+ changes made.
+
+CHRISTINA MARIE CUTTER MD
+
+                                                                               00041

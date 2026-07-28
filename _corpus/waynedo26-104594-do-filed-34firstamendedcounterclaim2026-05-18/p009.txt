@@ -1,0 +1,61 @@
+Document: 34 First Amended Counterclaim 2026-05-18
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-18
+Page: 9 of 16
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-34firstamendedcounterclaim2026-05-18/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/34_First_Amended_Counterclaim_2026-05-18.pdf
+Text source: native
+
+---
+
+Evidence captures public posts establishing the relationship, including but not limited to:
+
+ a. March 28, 2026 at 03:56:32 UTC, @adezero post: " @JustCallMeJoeP what do I do?" with photograph;
+ b. March 28, 2026 at 03:57:54 UTC, @JustCallMeJoeP reply: "@adezero Sit tight. I'm on the way up. Just
+ packing the carry-on";
+ c. March 28, 2026, @adezero post: "@JustCallMeJoeP is my rack still hot to you or" (Counter-Defendant in
+ her own voice eliciting an in-person physical assessment from Joe Prich, a question only intelligible in a
+ context of his physical presence at her location);
+ d. March 28, 2026 at 14:50:47 UTC, @JustCallMeJoeP reply: "@adezero Photos did not do it justice. Much
+ better IRL, tbh..." (Joe Prich's direct in-person physical assessment in response to (c) above, confirming his
+ physical presence at Counter-Defendant's location and his comparative judgment of her appearance in
+ person versus in photographs);
+ e. March 30, 2026 at 14:31:29 UTC, @adezero post: "Hi @JustCallMeJoeP";
+ f. April 9, 2026 at 23:20:32 UTC, @JustCallMeJoeP post: "@adezero Skinny Minnie."
+
+70. On March 24, 2026, the @adezero account posted a tweet self-attributing to Joe Prich the source of
+    Counter-Defendant's public commitment to abandon the Rockenhaus surname. The captured text reads:
+    "I literally just digitally decapitated myself because @JustCallMeJoeP kept telling me to drop the 'dead
+    weight' (last name)." This tweet was authored by Counter-Defendant in her own voice from her verified
+    main account, captured contemporaneously, and preserved in the May 12, 2026 Scrape Evidence. It
+    constitutes an admission against interest, a public commitment to a future act, and an identification of the
+    third-party advisor whose counsel Counter-Defendant has elected to follow concerning the surname
+    carried during her marriage to Counter-Plaintiff.
+71. The May 12, 2026 Scrape Evidence further documents Joe Prich's active embedding in extremist online
+    networks that organize around white-nationalist and neo-Nazi ideology. Joe Prich's pinned conversation
+    on X (tweet ID 2052766745820033466) is participated in by accounts whose own bios and content self-
+    identify with the BloodTribe organization (a hate group designated by the Southern Poverty Law Center,
+    founded by Christopher Pohlhaus) and the Groyper movement. Participants documented in the captured
+    pinned conversation include but are not limited to: @BTCELT, bio "Grand Treasurer Of BloodTribe. Get
+    Vetted: contact@blutstamm.org," location "American Reich"; @derblutmeister4, bio "4th generation
+    Weimar survivor. Nothing will outlast our blood. No one else will lead our folk" with identical contact email
+    to @BTCELT; @bubgum34, bio "No One Else Will Lead Our Folk. we will have our home again";
+    @prof_groy, bio "OG Groyper since 2017"; @BuzzardGroyper, Groyper-movement self-identifier; and
+    @ILoveWypippo, bio "Race Realist. Pro White.," location "Occupied USA."
+72. Joe Prich's top retweet sources captured in the May 12, 2026 Scrape Evidence further establish the
+    network embedding. Frequent retweet sources include @BostonFren_88 (16 retweets, numeric "88"
+    being the Anti-Defamation League documented numeric code for "Heil Hitler"), @CM1488_87 (8
+    retweets, "1488" combining David Lane's "14 Words" with the same "88" code), and @Dark_Asgard_ (11
+    retweets, Nordic-mythology branding in common use within neo-Nazi recruitment networks).
+73. The factual matters set forth in this subsection B are pleaded to establish: first, the identity of the third-
+    party advisor whose counsel Counter-Defendant has publicly elected to follow regarding the surname;
+    second, the character of that advisor's network associations as documented in contemporaneous public-
+    record X content; and third, the corresponding harm to Counter-Plaintiff from continued public
+    association between Counter-Plaintiff's surname and the documented harassment campaign operating in
+    coordination with such a network. The factual matters set forth in this subsection are not pleaded as
+    direct claims against Joe Prich (who is not a party to this proceeding) but as factual context supporting
+    the equitable relief requested in paragraphs K through Q of the Relief section below.
+
+                                C. Cross-Account Coordination Architecture

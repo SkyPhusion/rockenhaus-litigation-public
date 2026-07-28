@@ -1,0 +1,59 @@
+Document: 12b Proposed Order Granting Emergency Motion Preservation 2026-05-13
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-13
+Page: 2 of 4
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12bproposedordergrantingemergencymotionpreservation2026-05-13/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12b_Proposed_Order_Granting_Emergency_Motion_Preservation_2026-05-13.pdf
+Text source: native
+
+---
+
+9 and 10, 2026 without forwarding information) and at §III.H of the Motion (coordinated multi-wave
+   cessation of public content across eleven X sockpuppet accounts between March 17 and April 11, 2026)
+   establish that the threatened spoliation is imminent on a timeline incompatible with the speed of ordinary
+   motion practice.
+6. The ex parte component of the relief is justified under MCR 3.310(B)(1)(a) on the showing of facts
+   demonstrating that immediate and irreparable injury, loss, or damage will result before Plaintiff/Counter-
+   Defendant can be heard in opposition.
+7. The security requirement of MCR 3.310(D) is appropriately waived on the basis that the relief imposes
+   no cognizable harm on Plaintiff/Counter-Defendant.
+NOW, THEREFORE, IT IS HEREBY ORDERED:
+
+                                   A. CATEGORICAL PRESERVATION
+Plaintiff/Counter-Defendant Adrienne Marjorie Rockenhaus, her agents, servants, employees, attorneys,
+and all persons acting in concert or participation with her with notice of this Order, shall preserve, in their
+current form and without alteration, all of the following categories of evidence:
+(i) All electronic content, metadata, account-settings records, recovery information, login-session histories,
+and connected-device histories associated with each of the email accounts adrienne@cannabytes.net,
+adrienne@rockenhaus.com, and conrad@cannabytes.net;
+(ii) All electronic content, including but not limited to posts, replies, retweets, quote tweets, deleted content
+within the platform's recovery window, direct messages, follower and following lists, and connected-app
+records, associated with each of the following X (formerly Twitter) accounts: @adezero, @spuntpatrol,
+@LeighCheri_, @phatadvert, @AllysonClermont, @4chantress, @alg0queen, @LuceMargarita,
+@blackjakkkk, @PunkyHomegirl, @picklepickleg, @p1ratech, @rosebuttcheeks, @JustCallMeJoeP, and
+any additional account operationally controlled by, coordinated with, or systematically amplifying content
+from Plaintiff/Counter-Defendant whether or not currently identified;
+(iii) All electronic content, including posts, comments, messages, group memberships, and account-settings
+records, associated with the Facebook accounts operating under the names "Demi-Jo Matthews," "Sherri
+Adair," and "Jenn Reede," and with any other Facebook account operationally controlled by
+Plaintiff/Counter-Defendant;
+(iv) All electronic content, including emails sent and received, drafts, attachments, contacts, and account-
+settings records, associated with the Gmail account ecigaretteslut@gmail.com operating under the display
+name "Angeline M";
+(v) All electronic content associated with any Signal Messenger account, Threads account, Discord account,
+or other messaging-platform account operationally controlled by Plaintiff/Counter-Defendant;
+(vi) All Apple iCloud records associated with the conrad@cannabytes.net account, including but not limited
+to AirTag pairing records, AirTag location-history records, iMessage records, Find My records, and account-
+activity logs;
+(vii) All electronic and documentary records of Cannabytes, LLC, including but not limited to bank records,
+transaction records, customer records, vendor records, tax filings, and operational communications,
+regardless of medium;
+(viii) All electronic and documentary records related to Plaintiff/Counter-Defendant's receipt and disposition
+of Defendant's VA Disability Compensation payments and Social Security Disability Insurance payments
+from September 2025 through the date of this Order, including but not limited to bank statements,
+transaction records, and id.me, va.gov, and ssa.gov account-access records. The preservation obligation
+applies with particular specificity to records of the USAA Federal Savings Bank account ending in -3818
+(routing number 314-074-269), at which the diverted federally-protected benefit payments at issue in the
+Counterclaim were concentrated, and to records of the closed SoFi Bank joint account ending in -1334

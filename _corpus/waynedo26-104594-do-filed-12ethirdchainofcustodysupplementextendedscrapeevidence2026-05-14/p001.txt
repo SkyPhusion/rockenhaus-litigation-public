@@ -1,0 +1,58 @@
+Document: 12e Third Chain Of Custody Supplement Extended Scrape Evidence 2026-05-14
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-14
+Page: 1 of 5
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12ethirdchainofcustodysupplementextendedscrapeevidence2026-05-14/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12e_Third_Chain_of_Custody_Supplement_Extended_Scrape_Evidence_2026-05-14.pdf
+Text source: native
+
+---
+
+STATE OF MICHIGAN
+
+                 IN THE THIRD JUDICIAL CIRCUIT FOR THE COUNTY OF WAYNE
+                               FAMILY DIVISION, DOMESTIC RELATIONS
+
+ ADRIENNE MARJORIE ROCKENHAUS,                                      Case No. 26-104594-DO
+   Plaintiff/Counter-Defendant,
+                                                                    Hon. Nicole N. Goodson
+ v.
+
+ CONRAD ALAN ROCKENHAUS,
+  Defendant/Counter-Plaintiff.
+
+  DEFENDANT/COUNTER-PLAINTIFF'S THIRD CHAIN OF CUSTODY SUPPLEMENT
+              (MAY 14, 2026 EXTENDED SCRAPE EVIDENCE)
+
+                                            I. INTRODUCTION
+1. This Third Chain of Custody Supplement is filed in further support of Defendant/Counter-Plaintiff's
+   Emergency Motion for Preservation Order and Order Prohibiting Spoliation of Evidence (the "Pending
+   Motion"), filed May 13, 2026. This Third Supplement is a continuation of the Chain of Custody
+   Supplement filed May 13, 2026 (the "First Supplement") and the Second Chain of Custody Supplement
+   filed contemporaneously herewith (the "Second Supplement").
+2. This Third Supplement adds to the chain-of-custody record nine additional public-record X-platform
+   scrape datasets captured on May 14, 2026 (the "May 14, 2026 Extended Scrape Evidence"). The
+   datasets in this Third Supplement fall into three categories: (a) timeline captures of three X accounts in
+   the network-adjacent space to the previously-identified amplification network (Joe Prich
+   @JustCallMeJoeP, lordofsinatra and BiancaWestfall as a paired capture, and @rosebuttcheeks); (b)
+   historical conversation-tree captures of five discrete X conversation threads from the @adezero account
+   dating from December 11, 2025 through March 30, 2026; and (c) one negative-result query capture
+   documenting an absence of quote-tweets to the May 8, 2026 "Dead Man's Switch" broadcast.
+3. This Third Supplement, taken together with the First Supplement and the Second Supplement, provides
+   the complete chain-of-custody record for the public-record X scrape datasets supporting the findings
+   asserted in Defendant/Counter-Plaintiff's Supplemental Brief in Support of Pending Emergency Motion
+   for Preservation Order and Order Prohibiting Spoliation of Evidence, filed contemporaneously herewith.
+
+                                      II. PROCEDURAL POSTURE
+4. On May 13, 2026, Defendant/Counter-Plaintiff filed the Pending Motion together with the First
+   Supplement, supporting the May 12, 2026 Scrape Evidence comprising eighteen public-record X scrape
+   datasets. Both filings were accepted through the Third Judicial Circuit Court Applications (CCApps) filing
+   system on the same date.
+5. By Order entered May 14, 2026, this Honorable Court denied the emergency framing of the Pending
+   Motion while leaving the Pending Motion alive on the regular motion docket. Defendant/Counter-Plaintiff
+   submitted the required ePraecipe on May 14, 2026 at approximately 16:45 UTC.
+6. On May 14, 2026, between approximately 22:02 UTC and 22:42 UTC, Defendant/Counter-Plaintiff
+   captured additional public-record X-platform scrape datasets. Three of those datasets, comprising the
+   captures performed between 22:02 UTC and 22:03 UTC, are inventoried in the Second Supplement filed

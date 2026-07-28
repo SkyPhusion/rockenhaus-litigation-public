@@ -1,0 +1,57 @@
+Document: 06a Supplement Motion Issuance Subpoenas 2026-05-11
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-11
+Page: 4 of 6
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-06asupplementmotionissuancesubpoenas2026-05-11/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/06a_Supplement_Motion_Issuance_Subpoenas_2026-05-11.pdf
+Text source: native
+
+---
+
+provisions of § 2703(c)(2).
+24. The supplemental subpoenas to Google LLC and Meta Platforms, Inc. seek only basic subscriber
+    information of the type expressly authorized for subpoena disclosure under § 2703(c)(2). Neither
+    subpoena seeks the content of any communication.
+
+                                            C. Procedural Authority
+25. The procedural rule governing issuance and service of all three supplemental subpoenas is MCR 2.305,
+    which authorizes issuance of subpoenas to non-parties for production of documents and tangible things
+    and requires fourteen days' pre-service notice to opposing counsel. MCR 2.305(A)(2). Defendant will
+    provide Plaintiff's counsel with the requisite fourteen days' notice before service of each supplemental
+    subpoena upon issuance.
+
+                           IV. SCOPE OF THE SUPPLEMENTAL SUBPOENAS
+                 A. Scope of the Michigan Department of State Subpoena (Eleventh Target)
+26. The supplemental subpoena to the Michigan Department of State seeks disclosure of records in the
+    custody of the Department of State Record Lookup Unit pertaining to license plate 7RBK87, narrowly
+    scoped to:
+a. The current vehicle registration record, including registered owner, registered address of record, vehicle
+identification number, and registration effective and expiration dates;
+b. The current title record, including titled owner, lien holder, and title-issuance date;
+c. Ownership-transfer history for the period January 1, 2024 through the date of subpoena service;
+d. Plate-issuance history, if the plate has been transferred between vehicles, for the period January 1, 2024
+through the date of subpoena service;
+e. Business or fleet registration designation, if applicable; and
+f. Insurance certification of record filed with the Department, to the extent retained.
+27. The scope is limited to what is reasonably necessary to identify the registered owner and ownership
+    history of the vehicle whose involvement in the events of May 9, 2026 is at issue. No financial detail (no
+    payment-card or bank-account information) is sought.
+
+                          B. Scope of the Google LLC Subpoena (Twelfth Target)
+28. The supplemental subpoena to Google LLC seeks disclosure of basic subscriber information in the
+    custody of Google LLC pertaining to the Gmail account ecigaretteslut@gmail.com, narrowly scoped to
+    the categories expressly authorized by 18 U.S.C. § 2703(c)(2):
+a. Subscriber name(s) of record at account creation and as updated thereafter;
+b. Subscriber address(es) of record at account creation and as updated thereafter;
+c. Account creation date, length of service, and account-status history;
+d. Recovery email address(es) and recovery telephone number(s) associated with the account;
+e. IP-address logs reflecting account creation and account access for the period April 1, 2026 through the
+date of subpoena service, including timestamps and originating IP addresses for sign-in events and email-
+send events;
+f. Means and source of payment for any paid Google service associated with the account, if applicable,
+limited to issuer name, last four digits of card number, and billing name and address; and
+g. Identifiers of any other Google account associated with ecigaretteslut@gmail.com by recovery email,
+recovery telephone number, or shared device, to the extent such association is reflected in Google's
+records.

@@ -1,0 +1,63 @@
+Document: 12d Second Chain Of Custody Supplement Scrape Evidence 2026-05-14
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-14
+Page: 2 of 4
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12dsecondchainofcustodysupplementscrapeevidence2026-05-14/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12d_Second_Chain_of_Custody_Supplement_Scrape_Evidence_2026-05-14.pdf
+Text source: native
+
+---
+
+5. Each capture was saved as a single JSON file with a filename incorporating the UTC timestamp of
+    capture completion. The files have not been modified after capture other than by file-naming. The
+    contents are byte-for-byte identical to the data returned by the Apify actor.
+
+                                  III. OPERATIONAL-SILENCE OBSERVATION
+ 6. The May 14, 2026 Scrape Evidence establishes that no monitored X-network account has posted any
+    new tweet on the X platform between May 12, 2026 and May 14, 2026. Across the full 1,000-record
+    sample returned by the multi-handle query, the latest activity by any of the twelve monitored accounts is
+    identified in the following table:
+
+      Account            Last activity (UTC)
+ @spuntpatrol          Sat May 09, 2026 18:51
+ @adezero              Sat Apr 11, 2026 19:43
+ @4chantress           Sun Apr 05, 2026 15:27
+ @p1ratech             Wed Apr 01, 2026 09:35
+ @phatadvert           Sun Mar 29, 2026 23:09
+ @LeighCheri_          Sat Mar 28, 2026 12:55
+ @alg0queen            Mon Mar 23, 2026 02:11
+ @LuceMargarita        Wed Mar 18, 2026 14:06
+ @PunkyHomegirl Wed Mar 18, 2026 14:07
+ @blackjakkkk          Wed Mar 18, 2026 05:54
+ @AllysonClermont Wed Mar 18, 2026 00:59
+ @picklepickleg        Tue Mar 17, 2026 16:15
+
+ 7. The May 14, 2026 Scrape Evidence further establishes that no new replies have been posted to the May
+    8, 2026 "Dead Man's Switch" conversation tree since the May 12, 2026 capture. The conversation tree
+    remains at three replies (BiancaWestfall, lordofsinatra, spuntpatrol) as preserved in the May 12, 2026
+    Scrape Evidence.
+ 8. The May 14, 2026 Scrape Evidence further establishes that no third-party X account has posted any
+    reply or mention directed to @spuntpatrol or @adezero since May 12, 2026. The open-mentions query
+    returned the "noResults" marker.
+ 9. Defendant/Counter-Plaintiff does not assert that the operational silence of the monitored X-network
+    accounts indicates cessation of the underlying coordinated witness-intimidation activity. To the contrary,
+    paragraph 17 below identifies parallel activity on other platforms during the same period, indicating that
+    the witness-targeting operation has continued but has migrated from X to other platforms with weaker
+    public-record scraping infrastructure.
+
+                  IV. CROSS-PLATFORM SYNCHRONIZATION FINDING: MAY 9, 2026
+10. Comparison of the May 14, 2026 Scrape Evidence with the documentary record of the
+    ecigaretteslut@gmail.com email messages received by witness Ann Helgren on May 9, 2026 (as
+    preserved on Witness Helgren's email account and as further authenticated in her Comprehensive
+    Witness Affidavit being executed contemporaneously herewith) reveals a temporal synchronization at
+    three-minute resolution between an electronic mail message and an X-platform reply.
+11. The synchronization is as follows:
+
+   UTC       EDT
+                       Platform                                       Event
+   Time      Time
+            05:31:00              First ecigaretteslut@gmail.com email to Ann Helgren, subject content
+ 09:31:00              Gmail
+            AM                    concerning the alleged death of Defendant/Counter-Plaintiff

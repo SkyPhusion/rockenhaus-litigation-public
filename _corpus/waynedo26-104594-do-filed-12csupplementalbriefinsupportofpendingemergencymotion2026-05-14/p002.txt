@@ -1,0 +1,61 @@
+Document: 12c Supplemental Brief In Support Of Pending Emergency Motion 2026-05-14
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-14
+Page: 2 of 8
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12csupplementalbriefinsupportofpendingemergencymotion2026-05-14/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12c_Supplemental_Brief_in_Support_of_Pending_Emergency_Motion_2026-05-14.pdf
+Text source: native
+
+---
+
+date.
+5. By Order entered May 14, 2026, this Honorable Court denied the emergency framing of the Pending
+   Motion while leaving the Pending Motion alive on the regular motion docket pending submission of an
+   ePraecipe for non-emergency hearing under Zoom. Defendant/Counter-Plaintiff submitted the required
+   ePraecipe on May 14, 2026 at approximately 16:45 UTC.
+6. On May 14, 2026, between approximately 22:02 UTC and 22:42 UTC, Defendant/Counter-Plaintiff
+   captured additional public-record X-platform scrape datasets covering the period from May 12, 2026
+   forward and discrete historical conversation trees (collectively, the "May 14, 2026 Scrape Evidence").
+   The capture methodology and the SHA-256 hash manifest for the May 14, 2026 Scrape Evidence are set
+   forth in the Second Chain of Custody Supplement and the Third Chain of Custody Supplement, both filed
+   contemporaneously herewith. This Brief is submitted in support of the Pending Motion now on the regular
+   docket, and presents the analytical findings supported by the May 14, 2026 Scrape Evidence for this
+   Honorable Court's consideration in connection with its ruling on the Pending Motion.
+
+                           III. SUPPLEMENTAL EVIDENTIARY FINDINGS
+     A. Cessation of publicly-attributable X-platform activity, and documentary attribution of the
+                  @rosebuttcheeks account already named in the Pending Motion
+
+7. The May 14, 2026 Scrape Evidence establishes that none of the twelve X-network accounts identified in
+   the First Supplement and preserved in the May 12, 2026 Scrape Evidence has posted any new tweet on
+   the X platform between May 12, 2026 and May 14, 2026. Across the full sample returned by the multi-
+   handle query, the latest activity by any of the twelve accounts is set forth in the following table. Each
+   entry reflects the most recent activity on the X platform by the named account up to the capture time of
+   approximately 22:02 UTC on May 14, 2026.
+
+    Account          Last activity (UTC)
+@spuntpatrol       Sat May 09, 2026 18:51
+@adezero           Sat Apr 11, 2026 19:43
+@4chantress        Sun Apr 05, 2026 15:27
+@p1ratech          Wed Apr 01, 2026 09:35
+@phatadvert        Sun Mar 29, 2026 23:09
+@LeighCheri_       Sat Mar 28, 2026 12:55
+@alg0queen         Mon Mar 23, 2026 02:11
+@LuceMargarita     Wed Mar 18, 2026 14:06
+@PunkyHomegirl Wed Mar 18, 2026 14:07
+@blackjakkkk       Wed Mar 18, 2026 05:54
+@AllysonClermont Wed Mar 18, 2026 00:59
+@picklepickleg     Tue Mar 17, 2026 16:15
+
+8. The May 14, 2026 Scrape Evidence further establishes that no new replies have been posted to the May
+   8, 2026 "Dead Man's Switch" broadcast conversation tree since the May 12, 2026 capture, and that no
+   third-party X account has posted any reply or mention directed to @spuntpatrol or @adezero since May
+   12, 2026.
+9. The May 9, 2026 last-activity timestamp for @spuntpatrol, the operational anchor account of the X-
+   network coordinated activity preserved in the May 12, 2026 Scrape Evidence, is significant. May 9, 2026
+   was the same day on which: (a) Plaintiff/Counter-Defendant vacated her residence at 26695 Ross Drive,
+   Redford Township, Michigan, as documented in the Amended Counterclaim §XIII ¶88 and the
+   Comprehensive Witness Affidavit of Ann Helgren executed contemporaneously with this filing; (b)
+   Witness Ann Helgren received two harassment emails from the ecigaretteslut@gmail.com / "Angeline M"

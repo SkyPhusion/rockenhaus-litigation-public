@@ -1,0 +1,59 @@
+Document: 12f Supplement To Emergency Motion Preservation V1 2026-05-15
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-15
+Page: 6 of 8
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12fsupplementtoemergencymotionpreservationv12026-05-15/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12f_Supplement_to_Emergency_Motion_Preservation_v1_2026-05-15.pdf
+Text source: native
+
+---
+
+MCR 3.707(A)(2), Second Supplemental Motion in Support of Termination of PPO, and Notice of
+    Updated Contact Information.
+27. The     transmissions      originated      from        two      independent    third-party     email       accounts:
+    brianhowell1980svc@gmail.com (at 12:42 UTC) and bhowellsvc@icloud.com (at 13:59 UTC). Neither
+    transmission produced a delivery failure or bounce. Both deliveries are documented in the corresponding
+    email-server records.
+28. The    May    6,   2026     deliveries     establish     that    the   direct-service   path    to     Plaintiff   via
+    adrienne@cannabytes.net is operative as of May 6, 2026, notwithstanding Plaintiff's physical departure
+    from the Ross Drive residence on or about May 9, 2026. The confirmed direct-service path is
+    procedurally relevant to the preservation order because any preservation directive entered by this Court
+    can be served on Plaintiff directly via that path following the Court's anticipated ruling on Aldrich Legal
+    Services, PLLC's pending Motion to Withdraw as Counsel (scheduled for hearing May 20, 2026 at 9:15
+    AM via Zoom).
+
+       VI. THE CUMULATIVE RECORD WARRANTS PRESERVATION RELIEF UNDER NON-
+                              EMERGENCY STANDARDS
+29. The Court's May 14, 2026 Order denied the emergency framing of the Emergency Motion but did not
+    reach the substantive merits of the preservation relief requested. The Order directed Defendant to renew
+    the request through ordinary calendar procedure, which Defendant has done.
+30. Even under non-emergency standards, the cumulative factual record now before the Court establishes
+    that preservation relief is warranted:
+    a. Continuing conduct. The course of conduct pleaded in the underlying Motion has not ceased. It has
+    continued into and beyond the date of filing through the May 13, 2026 Meta Threads friend request, the
+    May 14, 2026 Reaction-Window Scrape activity, the @lifelessAI account propagation, and the Montano
+    accounts' post-filing reaction patterns.
+    b. Specific spoliation risk. Each element of the post-filing conduct depends on digital evidence within
+    Plaintiff's or third-party platforms' exclusive control. The Meta Threads account credentials are within
+    Plaintiff's direct administrative control and can be rotated, the account can be deleted, or the linked
+    Instagram account can be deactivated, at Plaintiff's election and without notice. Twitter/X account data
+    for the @lifelessAI, @rosebuttcheeks, and Montano accounts is subject to platform retention-window
+    expiration and to account-holder deletion.
+    c. Withdrawal of counsel. Plaintiff's counsel has filed a Motion to Withdraw as Counsel, scheduled for
+    hearing May 20, 2026 at 9:15 AM. Counsel's Verified Motion to Set Aside Default of Counterclaim, filed
+    May 13, 2026, represents at Paragraph 17 that "[t]he attorney client relationship between
+    Plaintiff/Counter-Defendant and Aldrich legal services has broken down entirely making it impossible for
+    Aldrich Legal Services to respond to Defendant/Counter-Plaintiff's filings." The anticipated withdrawal of
+    counsel removes the procedural restraint that the presence of counsel of record imposes on a party's
+    individual conduct with respect to preservation obligations. Entry of a Court-issued preservation order
+    before or contemporaneous with withdrawal preserves the formal preservation duty after counsel exits.
+    d. Independent law-enforcement involvement. RPD Case 26-7649, opened during the pendency of
+    these proceedings on the welfare-of-Plaintiff dimension, places the broader pattern within a law-
+    enforcement record framework and supports the urgency of judicial preservation action notwithstanding
+    the denial of the emergency procedural framing.
+    e. Confirmed direct-service path. The May 6, 2026 Howell deliveries establish that the Court's
+    preservation order can be served on Plaintiff directly at adrienne@cannabytes.net, eliminating any
+    service-mechanic obstacle to enforcement of the order post-Aldrich-withdrawal.
+31. The cumulative record warrants the substantive preservation relief sought in the underlying Motion, on

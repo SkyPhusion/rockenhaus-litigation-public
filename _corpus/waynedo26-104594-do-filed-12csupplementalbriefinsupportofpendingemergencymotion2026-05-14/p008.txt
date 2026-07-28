@@ -1,0 +1,42 @@
+Document: 12c Supplemental Brief In Support Of Pending Emergency Motion 2026-05-14
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-14
+Page: 8 of 8
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12csupplementalbriefinsupportofpendingemergencymotion2026-05-14/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12c_Supplemental_Brief_in_Support_of_Pending_Emergency_Motion_2026-05-14.pdf
+Text source: native
+
+---
+
+addresses, account-recovery contact methods, and Google service usage patterns, is essential to
+    identification of the operator and is at material risk of deletion or alteration absent preservation. Google
+    LLC retention policies for free Gmail accounts and the absence of any service-of-process obligations in
+    the absence of a preservation directive give rise to specific and present risk of evidence loss.
+33. As to the inferential basis for the entire requested relief: The findings of §III.A through §III.D, read
+    together, establish that the coordinated witness-intimidation activity is presently ongoing; that the
+    operator has implemented a deliberate operational architecture under which publicly-attributable
+    accounts are silent while private-identity activity continues; that the activity has expanded across at least
+    three distinct technical platforms operated by three distinct service providers; and that the operators have
+    demonstrated operational awareness of the preservation posture by ceasing only the most publicly
+    observable component of the activity on the day immediately following the most intense documented
+    coordination event (May 9, 2026). The risk of evidence loss is not speculative but is supported by the
+    operators' own demonstrated pattern of platform-by-platform migration as preservation posture is
+    established.
+
+                                              V. CONCLUSION
+34. Defendant/Counter-Plaintiff respectfully requests that this Honorable Court consider the supplemental
+    evidentiary findings set forth in this Brief, together with the May 14, 2026 Scrape Evidence and SHA-256
+    manifest set forth in the Second Chain of Custody Supplement filed contemporaneously herewith, when
+    ruling on the Pending Motion now on the regular motion docket. This Brief seeks no new or expanded
+    relief beyond that already requested in the Pending Motion.
+
+Respectfully submitted,
+__________________________________
+Conrad Alan Rockenhaus
+Defendant/Counter-Plaintiff, pro se
+1690 Brookfield Drive
+Ann Arbor, Michigan 48103
+conrad@rockenhaus.net
+Dated: May 15, 2026

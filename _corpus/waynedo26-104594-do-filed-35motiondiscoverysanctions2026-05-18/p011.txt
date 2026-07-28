@@ -1,0 +1,60 @@
+Document: 35 Motion Discovery Sanctions 2026-05-18
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-18
+Page: 11 of 14
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-35motiondiscoverysanctions2026-05-18/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/35_Motion_Discovery_Sanctions_2026-05-18.pdf
+Text source: native
+
+---
+
+(d) in lieu of or in addition to the foregoing orders, an order treating as a contempt of court the
+          failure to obey any orders except an order to submit to a physical or mental examination;
+          (e) where a party has failed to comply with an order under MCR 2.311(A) requiring the party to
+          produce another for examination, such orders as are listed in subrules (B)(2)(a), (b), and (c),
+          unless the party failing to comply shows that he or she is unable to produce the other person.
+
+MCR 2.313(B)(2) (emphasis added).
+In addition to or in lieu of the foregoing orders, the Court "shall require the party failing to obey the order or
+the attorney advising the party, or both, to pay the reasonable expenses, including attorney fees, caused by
+the failure, unless the court finds that the failure was substantially justified or that other circumstances make
+an award of expenses unjust." MCR 2.313(B)(2).
+
+                                          B. The Sanctions Calculus
+The Michigan Supreme Court has identified the factors that guide a trial court's exercise of discretion in
+selecting sanctions under MCR 2.313(B)(2), including (1) whether the violation was wilful or accidental, (2)
+the party's history of refusing to comply with discovery requests, (3) the prejudice to the opposing party, (4)
+any actual notice to the defaulting party of the consequences of non-compliance, (5) attempts to correct the
+violation, (6) compliance with the time limits set by the rules, (7) whether the failure to provide discovery is
+part of a broader pattern of contumacious behavior, and (8) the appropriateness of a lesser sanction.
+Frankenmuth Mut Ins Co v ACO, Inc, 193 Mich App 389, 397; 484 NW2d 718 (1992); Bass v Combs, 238
+Mich App 16, 26; 604 NW2d 727 (1999).
+Each factor cuts decisively against Plaintiff/Counter-Defendant.
+Wilfulness. Plaintiff/Counter-Defendant's counsel received the meet-and-confer at 11:14 UTC on May 13,
+2026, and responded six hours later with a partial filing that addressed only the easiest of three discovery
+sets while omitting the others. The selection of which discovery to answer and which to ignore was a
+deliberate litigation choice. The Verified Motion to Set Aside Default of Counterclaim, filed in the same
+package on the same day, candidly admits at Paragraph 17 that the attorney-client relationship has "broken
+down entirely" and that Plaintiff/Counter-Defendant will not respond to her own counsel's communications.
+The discovery default is the predictable outcome of that client posture, and it is wilful.
+Pattern of non-compliance. The discovery default is part of a continuum of non-engagement.
+Plaintiff/Counter-Defendant failed to answer the Counterclaim by the May 6, 2026 deadline, resulting in entry
+of default by the Clerk on May 12, 2026. Plaintiff/Counter-Defendant's late-filed Answer to Counterclaim,
+served on the same May 13, 2026 date as the RFA Answers, uses the same identical "can neither be admit
+nor denied for lack of sufficient information" boilerplate addressed in Defendant's Response in Opposition to
+Motion to Set Aside Default filed May 14, 2026. The pattern is comprehensive and consistent across her
+pleading, her RFA Answers, and her Interrogatory and RFP defaults.
+Prejudice. Defendant is unable to obtain the documentary record that supports the central allegations of his
+Counterclaim, including unauthorized access to federally protected accounts, diversion of approximately
+$39,326.87 in federal disability benefits, fraudulent statements to the Redford Township Police Department,
+and coordinated pre-release conduct designed to render him homeless. The information sought is in
+Plaintiff/Counter-Defendant's exclusive possession or control. Defendant has subpoenaed third-party
+sources (USAA, SoFi, PayPal, Venmo, CashApp, Qolity, the Bureau of Prisons, Livingston County Jail, and
+witnesses Helgren, Berente, and Martin) where third-party records exist, but the bulk of Plaintiff/Counter-
+Defendant's own communications, her own records, her own emails, and her own representations to third
+parties are unavailable from any source other than her direct production. The prejudice from continued non-
+production is severe and increases with each passing day.
+Compliance with time limits. Zero of three discovery deadlines met. RFA response served on the cusp of
+the deadline, with content that fails to meet the rule. Interrogatory and RFP deadlines passed without

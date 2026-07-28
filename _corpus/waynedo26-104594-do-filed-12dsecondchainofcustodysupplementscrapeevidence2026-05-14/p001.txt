@@ -1,0 +1,58 @@
+Document: 12d Second Chain Of Custody Supplement Scrape Evidence 2026-05-14
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-14
+Page: 1 of 4
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12dsecondchainofcustodysupplementscrapeevidence2026-05-14/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12d_Second_Chain_of_Custody_Supplement_Scrape_Evidence_2026-05-14.pdf
+Text source: native
+
+---
+
+STATE OF MICHIGAN
+
+                IN THE THIRD JUDICIAL CIRCUIT FOR THE COUNTY OF WAYNE
+                              FAMILY DIVISION, DOMESTIC RELATIONS
+
+ ADRIENNE MARJORIE ROCKENHAUS,                                    Case No. 26-104594-DO
+   Plaintiff/Counter-Defendant,
+                                                                  Hon. Nicole N. Goodson
+ v.
+
+ CONRAD ALAN ROCKENHAUS,
+  Defendant/Counter-Plaintiff.
+
+DEFENDANT/COUNTER-PLAINTIFF'S SECOND CHAIN OF CUSTODY SUPPLEMENT:
+SHA-256 HASH MANIFEST FOR MAY 14, 2026 SCRAPE EVIDENCE; OPERATIONAL-
+   SILENCE OBSERVATION; CROSS-PLATFORM SYNCHRONIZATION FINDING
+
+                                              I. PURPOSE
+1. This Second Chain of Custody Supplement is filed in further support of Defendant/Counter-Plaintiff's
+   Emergency Motion for Preservation Order and Order Prohibiting Spoliation of Evidence, filed on May 13,
+   2026, and is a continuation of the Chain of Custody Supplement (the "First Supplement") filed
+   contemporaneously with that Motion. By Order entered May 14, 2026, this Honorable Court denied the
+   emergency framing of that Motion while leaving the Motion alive on the regular docket for hearing on
+   ePraecipe. This Second Supplement therefore supports both the preserved evidentiary record and the
+   pending Motion as it proceeds on the regular docket.
+2. This Second Supplement adds to the chain-of-custody record three additional public-record Twitter
+   scrape datasets captured on May 14, 2026 covering the period from May 12, 2026 forward (collectively,
+   the "May 14, 2026 Scrape Evidence"). It further reports two observations that follow from comparison of
+   the May 14, 2026 Scrape Evidence with the May 12, 2026 Scrape Evidence already on the record: (a)
+   the operational silence of the monitored X-network accounts since May 12, 2026, and (b) a cross-
+   platform temporal synchronization on May 9, 2026 between an electronic mail message sent to witness
+   Ann Helgren and an X-platform reply by the account @spuntpatrol.
+
+                                    II. CAPTURE METHODOLOGY
+3. The May 14, 2026 Scrape Evidence datasets were captured on May 14, 2026 between approximately
+   22:02 UTC and 22:03 UTC by Defendant/Counter-Plaintiff Conrad Rockenhaus using the Apify platform's
+   apidojo/tweet-scraper actor (https://apify.com), the same actor used for the May 12, 2026 Scrape
+   Evidence captures.
+4. Three separate queries were submitted to the actor. The first query was a multi-handle date-bounded
+   query covering the twelve X account handles preserved in the May 12, 2026 Scrape Evidence (adezero,
+   spuntpatrol, LeighCheri_, phatadvert, AllysonClermont, 4chantress, alg0queen, LuceMargarita,
+   blackjakkkk, PunkyHomegirl, picklepickleg, p1ratech) with date parameters start: 2026-05-12 and end:
+   2026-05-15, configured with maxItems: 1000, sort order Latest, and language filter English. The second
+   query targeted the conversation tree of the May 8, 2026 "Dead Man's Switch" broadcast tweet
+   (conversation identifier 2052837253408280726). The third query was an open mentions search targeting
+   replies to @spuntpatrol or @adezero since May 12, 2026.

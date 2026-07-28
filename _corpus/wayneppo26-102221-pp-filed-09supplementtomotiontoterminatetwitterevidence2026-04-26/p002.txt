@@ -1,0 +1,62 @@
+Document: 09 Supplement To Motion To Terminate Twitter Evidence 2026-04-26
+Case: Rockenhaus v. Rockenhaus (PPO), Case No. 26-102221-PP
+Court: Wayne County Circuit Court (Third Judicial Circuit)
+Category: Filed by Conrad
+Filed: 2026-04-26
+Page: 2 of 6
+Source: https://rockenhaus.net/documents/wayneppo26-102221-pp-filed-09supplementtomotiontoterminatetwitterevidence2026-04-26/
+PDF: https://rockenhaus.net/wayne_ppo_26-102221-PP/filed/09_Supplement_to_Motion_to_Terminate_Twitter_Evidence_2026-04-26.pdf
+Text source: native
+
+---
+
+5. A Solana blockchain transaction record establishes that approximately $128,000 in cumulative USD
+   value moved through a memecoin publicly created under Respondent's name during the alleged-fear
+   period, with approximately $63,000 flowing to a deployer wallet publicly designated as routing fees to
+   Petitioner.
+The corpus and blockchain record are documented at Exhibit F-9, transmitted herewith.
+
+                                  III. THE OPERATIVE LEGAL STANDARD
+Under MCL 600.2950(4)(b) and (c) and the predicate findings required for issuance and continuation of a
+PPO under Michigan's Domestic Relationship PPO statute, the Court must find that the petitioner is
+reasonably likely to suffer the type of harm the statute is designed to prevent absent the order, and that the
+conduct alleged constitutes stalking, harassment, or otherwise prohibited contact within the statutory
+definitions.
+The Petitioner's burden, on a motion to continue an ex parte PPO over respondent objection, is to make this
+showing by a preponderance of the evidence. Pickering v. Pickering, 253 Mich App 694 (2002).
+Where the petitioner's contemporaneous, public, voluntary conduct is materially inconsistent with the fear
+narrative the petition asserts, that contemporaneous conduct is admissible as direct evidence on the
+credibility of the fear allegation and on the petitioner's ability to satisfy the statutory predicate. See MRE 401,
+403, 613 (prior inconsistent statements), 801(d)(2) (party-opponent admissions), 902(7) (self-authenticating
+trade inscriptions).
+
+                   IV. THE DOCUMENTARY RECORD: VOLUME AND CHARACTER
+Exhibit F-9 documents a handle-targeted capture of 20,000 public posts from Petitioner's verified @adezero
+account on the X platform. The corpus has the following characteristics:
+
+                                   Metric                                                   Value
+Total posts captured                                                         20,000
+                                                                             January 2, 2023 through April 23,
+Period covered
+                                                                             2026
+Account verified blue-check status                                           Continuous
+Posts on day of Respondent's federal custody (Sept. 4, 2025)                 25
+Posts during alleged-fear period (Sept. 4, 2025 through Feb. 19,
+                                                                             7,577
+2026)
+Average daily posts during alleged-fear period (169 days)                    44.8 per day
+Posts containing "PPO" as a word-boundary token                              0
+Posts containing rape, sexual-assault, or molest allegations against
+                                                                             0
+Respondent
+
+A petitioner who fears the respondent does not post publicly under the respondent's name at an average
+rate of 45 posts per day across the period of alleged fear. The volume itself defeats the experiential reading
+the PPO Petition recites.
+
+                    V. PARTICULAR POSTS DISPOSITIVE OF FEAR ALLEGATION
+The following six categories of posts in Exhibit F-9 are individually and collectively dispositive of the fear
+narrative the Petition recites.
+
+                  A. Petitioner's November 25, 2024 Direct Public Praise of Respondent
+Approximately three months before filing the PPO Petition, Petitioner posted from her verified @adezero

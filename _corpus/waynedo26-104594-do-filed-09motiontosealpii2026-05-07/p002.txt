@@ -1,0 +1,60 @@
+Document: 09 Motion To Seal PII 2026-05-07
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-07
+Page: 2 of 4
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-09motiontosealpii2026-05-07/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/09_Motion_to_Seal_PII_2026-05-07.pdf
+Text source: native
+
+---
+
+5. MCR 8.119(I) governs sealed and restricted records and authorizes the Court, on motion, to limit access
+    to court records on a showing of good cause. Restriction of access to documents containing
+    inadvertently-disclosed protected personal identifying information falls squarely within the rule's purpose.
+ 6. Federal exposure considerations. Beyond the Michigan Court Rules, the disclosed information
+    includes federal benefits-administration identifiers and account routing information for federally-protected
+    veterans benefits. Continued public availability of those identifiers presents an ongoing risk of identity
+    theft, benefits fraud, and unauthorized access to Defendant's federal benefits accounts.
+
+                       III. PROTECTED INFORMATION REQUIRING REDACTION
+              A. Exhibit A to Defendant's Motion for Change of Venue (filed April 15, 2026)
+
+ 7. Exhibit A to Defendant's Motion for Change of Venue is a copy of the residential lease for 26695 Ross
+    Drive, Redford, Michigan, dated September 1, 2025, between EJK Group LLC as landlord and the
+    parties as tenants. The lease is the documentary anchor for the venue argument set forth in the Motion.
+ 8. The "Received from" header block on the face of the lease contains both parties' Social Security
+    numbers. The Social Security numbers are visible on the scanned image and are protected personal
+    identifying information under MCR 1.109(D)(9)(a)(ii).
+ 9. The substantive content of Exhibit A, the lease term September 1, 2025 through August 31, 2026; the
+    $1,900 deposit; the parties as joint tenants; the landlord's identity; the property address; the pet
+    addendum identifying Toro and Autumn, is not protected and need not be redacted. Only the Social
+    Security number block requires redaction.
+
+    B. Exhibit A to Defendant's Brief on Federal Preemption of VA and SSDI Benefits (filed April 15,
+                                                     2026)
+10. Exhibit A to Defendant's Brief on Federal Preemption is a screenshot of the Department of Veterans
+    Affairs Payment History Inquiry (TINQ) for Defendant's VA Disability Compensation account. The TINQ
+    screenshot is the documentary anchor for the federal preemption argument and for the financial-
+    architecture timeline at issue.
+11. The TINQ screenshot displays, on the face of the exhibit, the following protected personal identifying
+    information:
+a. Defendant's VA File Number, in the field labeled "Fae Number" on the screenshot. VA File Numbers
+historically were Social Security numbers and remain government-issued personal identification numbers
+within the meaning of MCR 1.109(D)(9)(a)(ii).
+b. The routing number for the destination financial account at USAA Federal Savings Bank receiving
+Defendant's diverted VA Disability Compensation payments. Routing numbers are financial account
+numbers within the meaning of MCR 1.109(D)(9)(a)(v).
+c. The full account number for the same destination financial account. Account numbers are financial
+account numbers within the meaning of MCR 1.109(D)(9)(a)(v).
+
+12. The substantive content of Exhibit A, the per-payment dates, the per-payment dollar amounts, the source
+    institution, the rate step-down between August 2025 and December 2025, the October 1, 2025 returned
+    payment marked "Undeliverable," the redirect to the destination account beginning October 9, 2025, is
+    not protected and is essential to the federal preemption argument. Only the VA File Number, the routing
+    number, and the account number require redaction.
+
+                                          IV. RELIEF REQUESTED
+WHEREFORE, Defendant Conrad Alan Rockenhaus respectfully requests that this Honorable Court enter
+an Order:

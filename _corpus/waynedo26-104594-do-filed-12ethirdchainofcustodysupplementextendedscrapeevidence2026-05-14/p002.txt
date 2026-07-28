@@ -1,0 +1,75 @@
+Document: 12e Third Chain Of Custody Supplement Extended Scrape Evidence 2026-05-14
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-14
+Page: 2 of 5
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12ethirdchainofcustodysupplementextendedscrapeevidence2026-05-14/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12e_Third_Chain_of_Custody_Supplement_Extended_Scrape_Evidence_2026-05-14.pdf
+Text source: native
+
+---
+
+contemporaneously herewith. The remaining nine datasets, comprising the captures performed between
+    22:14 UTC and 22:42 UTC, are inventoried in this Third Supplement.
+
+                                     III. CAPTURE METHODOLOGY
+ 7. The May 14, 2026 Extended Scrape Evidence datasets were captured on May 14, 2026 between
+    approximately 22:14 UTC and 22:42 UTC by Defendant/Counter-Plaintiff Conrad Rockenhaus using the
+    Apify platform's apidojo/tweet-scraper actor (https://apify.com), the same actor used for the May 12,
+    2026 Scrape Evidence captures inventoried in the First Supplement and for the May 14, 2026 Scrape
+    Evidence captures inventoried in the Second Supplement.
+ 8. The capture methodology was materially identical to that described in the First Supplement and the
+    Second Supplement: Apify task runs were initiated with structured JSON query parameters specifying
+    the target X account handles or conversation identifiers, the maximum item return count, the sort order,
+    and the language filter ("tweetLanguage": "en" for all captures). Apify executed the queries against the X
+    platform's public-facing API surface and returned the responsive tweet records as a JSON dataset. The
+    JSON datasets were downloaded by Defendant/Counter-Plaintiff in their as-returned form, without
+    modification, immediately upon completion of each Apify task run, and were stored on local disk at file
+    paths under Defendant/Counter-Plaintiff's working directory in chronological order of capture.
+ 9. Each JSON dataset preserves the raw return payload from the Apify actor, including all metadata fields
+    populated by Apify and by X Corp., for each tweet record. No record was edited, redacted, or otherwise
+    modified prior to or following download.
+
+                                  IV. INVENTORY AND DESCRIPTION
+                             A. Network-adjacent account timeline captures
+
+10. The first three datasets in the May 14, 2026 Extended Scrape Evidence are timeline captures of X
+    accounts in the network-adjacent space to the twelve previously-monitored network accounts identified in
+    the First Supplement.
+
+                     Subject
+      File                         Records                              Description
+                    account(s)
+                                             Timeline capture of the @JustCallMeJoeP account, self-
+                                             attributed by @adezero on March 24, 2026 as the source of
+                                             Plaintiff/Counter-Defendant's "name reversion" advice and
+ dataset_tweet-
+                                             identified as Plaintiff/Counter-Defendant's romantic partner
+ scraper_2026- @JustCallMeJoeP
+                               766           since on or about March 28, 2026. Capture demonstrates
+ 05-14_22-15- (Joe Prich)
+                                             continued X-platform posting by @JustCallMeJoeP through
+ 26-024.json
+                                             May 14, 2026 at 20:07 UTC, with content composition
+                                             unrelated to the case-narrative coordination preserved in the
+                                             May 12, 2026 Scrape Evidence.
+                                             Paired timeline capture of two X accounts adjacent to the
+ dataset_tweet-
+                                             coordinated amplification network. The @BiancaWestfall
+ scraper_2026- @lordofsinatra;
+                                   500       portion of this dataset supports the operational-amplifier finding
+ 05-14_22-15- @BiancaWestfall
+                                             set forth in §III.C of the Supplemental Brief filed
+ 37-251.json
+                                             contemporaneously herewith.
+                                             Timeline capture of the @rosebuttcheeks account, named in
+                                             the Pending Motion's account list. The complete
+                                             @rosebuttcheeks timeline supports the documentary-
+ dataset_tweet-
+                                             attribution finding set forth in §III.A of the Supplemental Brief
+ scraper_2026-
+               @rosebuttcheeks 825           filed contemporaneously herewith, including the April 11, 2026
+ 05-14_22-41-
+                                             to April 25, 2026 three-tweet thread (tweet identifiers
+ 50-468.json

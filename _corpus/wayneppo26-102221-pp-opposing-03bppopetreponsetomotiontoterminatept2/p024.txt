@@ -1,0 +1,61 @@
+Document: 03b PPO Pet Reponse To Motion To Terminate Pt 2
+Case: Rockenhaus v. Rockenhaus (PPO), Case No. 26-102221-PP
+Court: Wayne County Circuit Court (Third Judicial Circuit)
+Category: Opposing party
+Page: 24 of 26
+Source: https://rockenhaus.net/documents/wayneppo26-102221-pp-opposing-03bppopetreponsetomotiontoterminatept2/
+PDF: https://rockenhaus.net/wayne_ppo_26-102221-PP/opposing/03b_ppo_pet_reponse_to_motion_to_terminate_pt_2.pdf
+Text source: native
+
+---
+
+EMERGENCY DEPARTMENT TRIAGE
+-------------------------------------------
+Details
+
+ Date: May 4, 2023
+ Location: ANN ARBOR VA MEDICAL CENTER
+ Written by: BRANDON THOMAS TEMPLETON
+ Signed by: BRANDON THOMAS TEMPLETON
+ Date signed: May 4, 2023
+
+Notes
+
+LOCAL TITLE: EMERGENCY DEPARTMENT TRIAGE
+STANDARD TITLE: NURSING EMERGENCY DEPT NOTE
+DATE OF NOTE: MAY 04, 2023@14:34 ENTRY DATE: MAY 04, 2023@14:34:50
+  AUTHOR: TEMPLETON,BRANDON T EXP COSIGNER:
+  URGENCY:               STATUS: COMPLETED
+
+  *** EMERGENCY DEPARTMENT TRIAGE Has ADDENDA***
+
+EMERGENCY DEPT NURSING TRIAGE
+ ************************************************
+ Check-in Daterrime: 05/04/23 13:55
+ Triage Date/Time: MAY 04, 2023 14:34
+ ************************************************
+ The patient was asked if in the last 14 days they have had new onset of any
+ COVID-19 symptoms. They report the following:
+  No symptoms
+ Within the past 14 days, the patient reports no exposure to someone with a
+ febrile/respiratory illness or someone with a known or suspected case of
+ COVID-19 (within 6 feet for> 15 minutes).
+
+  Result:
+   Screen is negative.
+
+   Patient age:41     Sex: MALE
+   On arrival patient was: AMBULANCE
+   Patient phone number: PATIENT PHONE
+   Allergies: SULFA DRUGS, DARUNAVIR
+
+   Subjective/Chief Complaint:
+   Pt to ED w/ cc of SI from home after altercation with wife and local PD
+   were called.
+
+   Objective:
+
+   Current Medications:
+   Active Outpatient Medications (including Supplies):
+
+                                                                               00052

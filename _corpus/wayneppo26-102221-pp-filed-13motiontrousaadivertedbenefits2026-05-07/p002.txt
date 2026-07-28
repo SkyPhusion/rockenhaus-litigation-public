@@ -1,0 +1,63 @@
+Document: 13 Motion TRO USAA Diverted Benefits 2026-05-07
+Case: Rockenhaus v. Rockenhaus (PPO), Case No. 26-102221-PP
+Court: Wayne County Circuit Court (Third Judicial Circuit)
+Category: Filed by Conrad
+Filed: 2026-05-07
+Page: 2 of 6
+Source: https://rockenhaus.net/documents/wayneppo26-102221-pp-filed-13motiontrousaadivertedbenefits2026-05-07/
+PDF: https://rockenhaus.net/wayne_ppo_26-102221-PP/filed/13_Motion_TRO_USAA_Diverted_Benefits_2026-05-07.pdf
+Text source: native
+
+---
+
+income are VA Disability Compensation paid monthly by the Department of Veterans Affairs and Social
+    Security Disability Insurance benefits paid by the Social Security Administration.
+ 5. During Defendant's incarceration at FCI Milan beginning September 4, 2025, Plaintiff served as
+    Defendant's Social Security Administration designated Representative Payee, holding fiduciary
+    responsibility under 42 USC § 405(j). Plaintiff also held a Power of Attorney granted by Defendant during
+    the pre-incarceration period.
+
+                      B. The September 17, 2025 closure of the prior deposit account
+
+ 6. Defendant's VA Disability Compensation was historically deposited to a joint financial account at SoFi
+    Bank, routing number 031-101-334, Account 411003402583. The last successful deposit to that account
+    was on August 29, 2025 in the amount of $4,673.44.
+ 7. On September 17, 2025, while Defendant was incarcerated, Plaintiff closed the joint SoFi account
+    unilaterally. Plaintiff has admitted this fact in writing in her February 9, 2026 communication to
+    Defendant's federal appellate attorney, in which Plaintiff described the closure as "extra judiciously"
+    effected.
+ 8. The Department of Veterans Affairs attempted to deposit Defendant's October 1, 2025 monthly payment
+    of $4,673.44 to the closed SoFi account. The deposit was returned on October 3, 2025 marked
+    "Undeliverable" by the financial institution.
+
+                  C. The redirect to a USAA account under Plaintiff's operational control
+
+ 9. Following the closure of the joint SoFi account, Defendant's VA Disability Compensation was redirected
+    to a new destination account: Account 0350173818, routing number 314-074-269, at USAA Federal
+    Savings Bank. Defendant did not authorize this redirection. At the time of redirection, Defendant was
+    incarcerated at FCI Milan and had no operational access to his va.gov account or to the id.me
+    credentials necessary to redirect the deposit destination.
+10. The Department of Veterans Affairs Payment History Inquiry (TINQ) for Defendant documents the
+    following payments to USAA Account 0350173818 between October 9, 2025 and February 27, 2026:
+
+      Pay Date          Amount        Type
+ October 9, 2025      $4,673.44 Retroactive
+ October 31, 2025     $4,645.14 Regular
+ December 1, 2025 $4,567.30 Regular
+ December 31, 2025 $4,317.33 Regular
+ January 30, 2026     $4,317.33 Regular
+ February 27, 2026 $4,317.33 Regular
+ Total                $26,837.87
+
+11. Defendant did not receive any of the above-listed payments. The funds were deposited to the USAA
+    account under Plaintiff's operational control.
+
+                D. The SSDI Representative Payee overpayment to the same USAA account
+12. On March 12, 2026, the Social Security Administration issued a formal demand letter (BNC No.
+    26D1153B02352-A) addressed to Plaintiff in her capacity as Defendant's Representative Payee,
+    demanding return of $12,074.50 in overpayments. The SSA demand letter identifies Account
+    0350173818 as the deposit destination for the funds at issue. The same USAA account that received the
+    redirected VA Disability Compensation also received the SSDI Representative Payee overpayment.
+13. The Social Security Administration's Office of Inspector General has opened an investigation regarding
+    Plaintiff's conduct as Representative Payee. The Department of Veterans Affairs Office of Inspector
+    General has opened VA OIG Case No. 2026-18750 regarding the redirection of Defendant's VA

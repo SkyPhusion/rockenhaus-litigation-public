@@ -1,0 +1,61 @@
+Document: 35 Motion Discovery Sanctions 2026-05-18
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-18
+Page: 4 of 14
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-35motiondiscoverysanctions2026-05-18/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/35_Motion_Discovery_Sanctions_2026-05-18.pdf
+Text source: native
+
+---
+
+II. THE RFA ANSWERS ARE INSUFFICIENT AS A MATTER OF LAW
+                                              A. Legal Standard
+Under MCR 2.312(B)(1), a party served with a Request for Admission must, within twenty-eight days, serve
+a written answer or objection. The Rule prescribes the form of a permissible answer:
+
+          The answer must specifically deny the matter or state in detail the reasons why the answering
+          party cannot truthfully admit or deny the matter. A denial must fairly meet the substance of the
+          requested admission, and when good faith requires that a party qualify an answer or deny only
+          a part of the matter of which an admission is requested, the party shall specify so much of it as
+          is true and qualify or deny the remainder. An answering party may not give lack of
+          information or knowledge as a reason for failure to admit or deny unless the party states
+          that he or she has made reasonable inquiry and that the information known or readily
+          obtainable is insufficient to enable the party to admit or deny.
+
+MCR 2.312(B)(1) (emphasis added).
+Under MCR 2.312(B)(3), the propounding party "may move to determine the sufficiency of the answers or
+objections":
+
+          Unless the court determines that an objection is justified, it shall order that an answer be
+          served. If the court determines that an answer does not comply with the requirements of
+          this rule, it may order either that the matter is admitted or that an amended answer be
+          served. The court may, in lieu of these orders, determine that final disposition of the request be
+          made at a pretrial conference or at a designated time prior to trial.
+
+MCR 2.312(B)(3) (emphasis added).
+The "reasonable inquiry" qualifier in MCR 2.312(B)(1) is not a magic phrase. A party who recites the words
+"reasonable inquiry" without conducting any inquiry, or who recites the phrase as boilerplate for matters that
+are within the party's own personal knowledge, has not satisfied the rule. The rule "imposes upon a party a
+positive duty to make reasonable inquiry concerning matters in which the responding party may not currently
+have direct knowledge but which are reasonably within his power to ascertain." Medbury v Walsh, 190 Mich
+App 554, 556; 476 NW2d 470 (1991). When the matter is within the party's own personal knowledge, no
+inquiry is required, and the boilerplate recitation is dispositively insufficient.
+
+                                 B. Application: Every Answer Is Identical
+Plaintiff/Counter-Defendant served fifty-three Answers to Defendant's Requests for Admissions on May 13,
+2026. The substantive answer to each of the fifty-three Requests, without variation, is:
+
+          Plaintiff cannot truthfully admit nor deny for lack of information or knowledge. Plaintiff has made
+          reasonable inquiry and the information known or readily obtainable is insufficient at this time to
+          enable Plaintiff to admit or deny the request for admission.
+
+The verbatim formula appears as the substantive answer to RFA Nos. 1 through 53 inclusive. There is no
+qualification. There is no partial admission. There is no specific denial. There is no statement explaining
+what "reasonable inquiry" was made or why the matter is not within Plaintiff/Counter-Defendant's personal
+knowledge.
+A formulaic, undifferentiated response of identical phrasing to fifty-three distinct factual requests does not
+satisfy MCR 2.312(B)(1). It also strains credulity. The Requests cover discrete factual matters about
+Plaintiff/Counter-Defendant's own life, her own actions, her own writings, her own statements to others, and
+her own possessions over a defined period. They are not requests concerning the conduct of strangers,

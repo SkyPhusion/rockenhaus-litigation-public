@@ -1,0 +1,113 @@
+{
+  "_comment": "Questions for the pre-rendered Q&A pages at /answers/. ANSWERS ARE QUOTED, NEVER GENERATED. Each citation names a filing, a page, and a verbatim passage; scripts/verify-citations.mjs proves at build time that the passage appears on that page. `framing` is the single human-authored sentence per question, so a human owns every word on the page that is not a quotation from the record.",
+  "_scope_rule": "Court-record questions only. Questions that invite a characterisation of a third party are out of scope by construction and are not listed here. The question set is seeded from the court-record subset of the existing /faq/ and /is-conrad-rockenhaus-dead/ pages, and is designed to be swapped for real Google Search Console query data when that arrives: add or replace entries here and the pages regenerate.",
+  "questions": [
+    {
+      "id": "august-26-2026-hearing",
+      "slug": "when-is-the-next-hearing-wayne-divorce-26-104594-do",
+      "question": "When is the next motion hearing in Wayne County divorce case 26-104594-DO?",
+      "framing": "The hearing date, time, and judge are stated in the Consolidated Notice of Hearing filed July 2, 2026.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-41consolidatednoticeofhearing8-262026-07-02",
+          "page": 1,
+          "quote": "will be brought on for hearing before the Honorable Nicole N. Goodson, Third Judicial Circuit Court for the County of Wayne, Family Division, on August 26, 2026 at 11:30 a.m., or as soon thereafter as the parties may be heard"
+        }
+      ]
+    },
+    {
+      "id": "motions-calendared-august-26-2026",
+      "slug": "what-motions-are-scheduled-for-august-26-2026",
+      "question": "What motions are scheduled for hearing on August 26, 2026 in case 26-104594-DO?",
+      "framing": "The Consolidated Notice of Hearing lists ten motions set for the same date.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-41consolidatednoticeofhearing8-262026-07-02",
+          "page": 1,
+          "quote": "PLEASE TAKE NOTICE that the following ten (10) motions of Defendant/Counter-Plaintiff Conrad Alan Rockenhaus will be brought on for hearing"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-41consolidatednoticeofhearing8-262026-07-02",
+          "page": 1,
+          "quote": "Omnibus Motion (Preservation of Evidence; Financial Disclosure; rockenhaus.com Domain Temporary Restraining Order)"
+        }
+      ]
+    },
+    {
+      "id": "gal-motion-relief-requested",
+      "slug": "what-does-the-guardian-ad-litem-motion-ask-for",
+      "question": "What does the motion to appoint a guardian ad litem ask the court to do?",
+      "framing": "The relief requested is set out in the motion filed July 2, 2026 under MCR 2.201(E).",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-39motionappointgalforplaintiff2026-07-02",
+          "page": 2,
+          "quote": "Appointing a guardian ad litem for Plaintiff, or a next friend as the Court deems appropriate to Plaintiff's posture, pursuant to MCR 2.201(E), if the Court determines that Plaintiff lacks the capacity to represent her own interests"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-39motionappointgalforplaintiff2026-07-02",
+          "page": 2,
+          "quote": "Deferring entry of any default judgment or other dispositive relief against Plaintiff until Plaintiff is represented by a duly appointed guardian ad litem, next friend, or counsel"
+        }
+      ]
+    },
+    {
+      "id": "gal-motion-not-a-finding",
+      "slug": "does-a-guardian-ad-litem-appointment-decide-the-case",
+      "question": "Does appointing a guardian ad litem decide anything about the merits of the case?",
+      "framing": "The motion states expressly what an appointment does and does not determine.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-39motionappointgalforplaintiff2026-07-02",
+          "page": 2,
+          "quote": "Appointment does not resolve, and is not a finding upon, the merits of any claim or defense, or the liability of the person for whom a representative is appointed. It ensures only that the person is represented while the merits are decided."
+        }
+      ]
+    },
+    {
+      "id": "gal-motion-legal-standard",
+      "slug": "what-rule-governs-appointing-a-guardian-ad-litem-in-michigan",
+      "question": "What Michigan court rule governs appointing a guardian ad litem in a civil case?",
+      "framing": "The motion cites the rule and states the standard it applies.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-39motionappointgalforplaintiff2026-07-02",
+          "page": 2,
+          "quote": "MCR 2.201(E) governs the representation of incompetent persons in civil proceedings. Where an incompetent person who is subject to the jurisdiction of the court does not have a conservator or other legal representative, the court is to appoint a guardian ad litem or next friend to protect that person's interests"
+        }
+      ]
+    },
+    {
+      "id": "plaintiff-answer-to-counterclaim",
+      "slug": "did-the-plaintiff-answer-the-counterclaim-for-divorce",
+      "question": "Did the plaintiff file an answer to the counterclaim for divorce in case 26-104594-DO?",
+      "framing": "An Answer to Part III, Counterclaim for Divorce was filed on the plaintiff's behalf by counsel; the filing is in the record as a scanned document.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": "This filing is a scanned image with no text layer. A machine transcription makes it searchable, but that transcription is not reliable enough to quote, so it is cited by document and page rather than reproduced.",
+      "citations": [],
+      "references": [
+        {
+          "doc_slug": "waynedo26-104594-do-opposing-05answer-to-counterclaim",
+          "page": 1,
+          "note": "Caption page of the Answer to Part III, Counterclaim for Divorce, filed on the plaintiff's behalf by counsel of record."
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-opposing-04motion-to-set-aside-default-of-counterclaim",
+          "page": 1,
+          "note": "Related opposing filing: Motion to Set Aside Default of Counterclaim."
+        }
+      ]
+    }
+  ],
+  "_answer_support_note": "A question is supported by `citations` (verbatim, verified against a native-text page) or by `references` (the filing and page, named and linked, without reproducing its words). References exist because 77 pages of this record are readable only via machine transcription: OCR makes those filings findable and describable, but it interleaves margin text into body lines, so quoting it would put words in a court document that the document does not contain. scripts/verify-citations.mjs refuses a quoted citation to an OCR page, and the schema refuses a question with neither citations nor references."
+}

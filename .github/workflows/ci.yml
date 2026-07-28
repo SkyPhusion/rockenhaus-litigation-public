@@ -71,37 +71,80 @@ jobs:
             exit 1
           fi
 
+
+      # --- Astro half: the evidence system and the pre-rendered Q&A pages ---
+      #
+      # Added to the EXISTING ci job rather than a new workflow on purpose. The
+      # org ruleset requires a check literally named `ci`; a second workflow
+      # would not satisfy it, and a second job in this file would not either.
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Node dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Corpus is current
+        # The committed corpus must match the PDFs it was built from. A filing
+        # added without rebuilding would otherwise be invisible to the answer
+        # surface while looking perfectly fine in the repository.
+        run: node scripts/build-corpus.mjs --check
+
+      - name: Citations match the record
+        # Every Q&A answer is a quotation from a filed document. This proves each
+        # quoted passage actually appears on the page it is cited to, so a
+        # mistyped or drifted citation fails here rather than shipping as a
+        # citation to a court document.
+        run: node scripts/verify-citations.mjs
+
+      - name: Typecheck Astro
+        run: npx astro check
+
+      - name: Unit tests
+        run: npx vitest run
+
+      - name: Build Astro
+        # The denylist guard runs inside this build: a third-party
+        # characterisation reaching a title, description or JSON-LD field throws
+        # and the build fails.
+        run: npm run build
+
+      - name: Generators stay in their lanes
+        # Two generators, one domain, one Pages project. Fails if both emit the
+        # same path, or if Astro emits outside /evidence/ and /answers/.
+        run: node scripts/check-collisions.mjs _site dist
+
+      - name: Merge Astro output into the Jekyll site
+        # This is what the deploy does, so the accusation check below sees the
+        # MERGED site rather than only the Jekyll half.
+        run: cp -r dist/. _site/
+
       - name: No accusations in indexable metadata
         # The defect that put this site in the hole was third-party
         # characterisations reaching titles, descriptions and JSON-LD, where
         # search engines read them as structured claims. Fail the build rather
-        # than rediscover it. Scoped to the <head> of every built page, which
-        # deliberately INCLUDES /evidence/: that page is noindex, but if
-        # accusation text ever reached its own title or description this should
-        # still catch it. What the scoping excludes is page BODIES, where
-        # quotation of filings is legitimate and expected.
+        # than rediscover it.
         #
-        # SCOPE LIMIT, deliberate: this matches CHARACTERISATION terms, not every
-        # mention of a third party. Naming someone as the recipient of a served
-        # legal notice is a fact about Conrad's own conduct and is legitimate in
-        # a title; asserting what that person IS, is not. A name-based denylist
-        # would fail the second case and the first equally, so it would either be
-        # ignored or would delete legitimate content. This check caught three
-        # pages on its first run that two manual passes had missed; it did NOT
-        # catch two retraction titles, which were fixed by review. Both facts
-        # belong here: it is a floor, not the whole review.
-        run: |
-          set -uo pipefail
-          pattern='neo-nazi|nazzy|do not hire'
-          hits=$(grep -rIl -E -i "$pattern" _site \
-                   --include='*.html' 2>/dev/null \
-                 | while read -r f; do
-                     if sed -n '/<head>/,/<\/head>/p' "$f" \
-                        | grep -qE -i "$pattern"; then echo "$f"; fi
-                   done)
-          if [ -n "$hits" ]; then
-            echo "::error::accusation text reached indexable <head> metadata:"
-            echo "$hits"
-            exit 1
-          fi
-          echo "OK: no accusation text in any page's head metadata"
+        # Scoped to the <head> of EVERY built page plus every JSON-LD block
+        # anywhere in the document. That deliberately includes /evidence/:
+        # those pages are noindex, but if accusation text ever reached one of
+        # their own titles or descriptions this should still catch it. What the
+        # scoping excludes is page BODIES, where quotation of filings and of
+        # what an artifact shows on its face is legitimate and expected.
+        #
+        # Implemented as a script rather than inline sed. The previous
+        # `sed -n '/<head>/,/<\/head>/p'` is a LINE based range, and Astro emits
+        # minified single-line HTML, so the range never terminated and the
+        # "head" check silently scanned the entire document body. Measured on a
+        # real built page: the slice returned 3540 bytes of a 3540 byte file.
+        # Parsing the markup fixes that, and extending to JSON-LD anywhere makes
+        # it strictly stronger than the inline version it replaces.
+        #
+        # This replaced an inline `sed -n '/<head>/,/<\/head>/p'` slice. That
+        # slice is LINE based, and Astro emits minified single-line HTML, so the
+        # range never terminated and the "head" check silently scanned the whole
+        # document. Measured on a real page: the slice returned 3540 of 3540
+        # bytes. The replacement parses the markup instead, and additionally
+        # covers JSON-LD anywhere in the document, so it is strictly stronger.
+        run: python3 scripts/check_indexable_metadata.py _site

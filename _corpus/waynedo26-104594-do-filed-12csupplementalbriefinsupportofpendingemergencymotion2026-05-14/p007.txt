@@ -1,0 +1,66 @@
+Document: 12c Supplemental Brief In Support Of Pending Emergency Motion 2026-05-14
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-14
+Page: 7 of 8
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12csupplementalbriefinsupportofpendingemergencymotion2026-05-14/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12c_Supplemental_Brief_in_Support_of_Pending_Emergency_Motion_2026-05-14.pdf
+Text source: native
+
+---
+
+May 9     X          @spuntpatrol activity, including the "He's dead" reply identified in §III.B above
+ (X)
+ May 9
+           X          Cessation of activity across all thirteen publicly-attributable network accounts
+ forward
+ May 12
+           X          @rosebuttcheeks RT of the May 8, 2026 "Dead Man's Switch" broadcast
+ (X)
+ May 14
+           X          @rosebuttcheeks continuing activity through 21:28 UTC
+ (X)
+                      Threads platform contact attempt to Witness Helgren from an account presenting
+ May 14    Threads
+                      Defendant/Counter-Plaintiff's name and image, in the form of a Threads friend request,
+ (morning) (Meta)
+                      made without Defendant/Counter-Plaintiff's authorization
+
+28. The pattern is consistent with operational awareness of the public-record scraping and litigation-
+    preservation posture of the X-platform evidence preserved in the First Supplement, and consistent with a
+    deliberate migration of the publicly-coordinated component of the activity to communication platforms
+    with weaker public scraping infrastructure or to direct one-to-one communication channels (Gmail,
+    Threads direct contact), while the operator herself has retained personal X-platform activity through the
+    @rosebuttcheeks account. The continued cross-platform activity establishes that the underlying
+    coordinated operation has not ceased; rather, it has bifurcated into (i) public X-platform silence from
+    attributable accounts, (ii) continued private-identity X-platform activity from @rosebuttcheeks, and (iii)
+    active operations on Meta platforms and email channels.
+
+                             IV. SIGNIFICANCE TO THE PENDING MOTION
+29. The Pending Motion requests preservation directives addressed to X Corp. (covering the named X
+    accounts including @rosebuttcheeks), Meta Platforms, Inc. (including Facebook and Threads), and
+    Google LLC (including the email account ecigaretteslut@gmail.com), among other targets. The four
+    findings developed in §III above strengthen the inferential basis for each component of the relief already
+    requested in the Pending Motion.
+30. As to the X Corp. preservation directive: The cessation finding combined with the @rosebuttcheeks
+    documentary-attribution finding (§III.A) demonstrates that the operator of the coordinated network is
+    operationally sophisticated, is aware of the litigation-preservation posture, and has implemented a
+    private-identity continuity architecture under cover of which case-narrative activity continues. The
+    continued posting from the @rosebuttcheeks account during the same period that the publicly-
+    attributable accounts have gone silent is a contemporaneous demonstrated risk that operator-attributable
+    X-platform evidence will be deleted, account-disabled, or migrated to additional concealed accounts
+    absent immediate preservation. The @BiancaWestfall finding (§III.C) materially expands the scope of
+    accounts requiring X Corp. preservation to include an account whose existing posts include original-
+    content hostile-act posts targeting Defendant/Counter-Plaintiff's federal-court attorney and identifying
+    federal correctional officers as "Neo-Nazi."
+31. As to the Meta Platforms preservation directive: The operational migration finding (§III.D)
+    demonstrates active and continuing witness-targeting activity on Facebook (the "Demi-Jo Matthews"
+    account; the "Dead Man's Switch" post; the Michigan Missing Persons Alerts group share) and on
+    Threads (the May 14, 2026 morning friend-request contact to Witness Helgren). Each of these is an
+    ongoing operational use of a Meta platform during the period between filing of the Pending Motion and
+    ruling on the Pending Motion, creating an elevated and continuing risk of spoliation absent preservation.
+32. As to the Google LLC preservation directive: The cross-platform synchronization finding (§III.B)
+    directly implicates the ecigaretteslut@gmail.com account in coordinated witness-intimidation activity
+    timed to within three minutes and twenty-two seconds of the X-platform "He's dead" reply by
+    @spuntpatrol. Operator-level metadata on the ecigaretteslut@gmail.com account, including login IP

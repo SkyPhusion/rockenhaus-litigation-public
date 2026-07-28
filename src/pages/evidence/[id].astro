@@ -1,0 +1,180 @@
+---
+// One page per exhibit. Stable citable URL: /evidence/<id>/
+//
+// noindex, follow. The body reproduces what the artifact shows on its face,
+// verbatim where it quotes. Metadata carries no names and no characterisations;
+// the guard in BaseLayout fails the build if any reach it.
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { exhibitRef, artifactLabel, EVIDENCE_SOURCE_LABEL } from "../../lib/exhibits";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("exhibits");
+  const chains = await getCollection("chains");
+
+  const ordered = entries
+    .map((e) => e.data)
+    .sort((a, b) => (a.posted_date ?? "").localeCompare(b.posted_date ?? ""));
+
+  return ordered.map((exhibit, index) => ({
+    params: { id: exhibit.id },
+    props: {
+      exhibit,
+      ref: exhibitRef(index),
+      // Which chain steps this exhibit is cited for, so an exhibit page states
+      // its own evidentiary role rather than leaving it implied.
+      roles: chains.flatMap((c) =>
+        c.data.links
+          .filter((l) => l.evidence.includes(exhibit.id))
+          .map((l) => ({ subject: c.data.subject, statement: l.statement, status: l.status })),
+      ),
+    },
+  }));
+}
+
+const { exhibit, ref, roles } = Astro.props;
+
+const isImage = exhibit.artifact_type !== "pdf_correspondence";
+
+// Metadata describes the ARTIFACT and nothing else. No handle, no name, no claim.
+const title = `Exhibit ${ref} | rockenhaus.net exhibit index`;
+const description =
+  `Provenance record for exhibit ${ref}: ${artifactLabel(exhibit.artifact_type).toLowerCase()}` +
+  `${exhibit.posted_date ? `, dated ${exhibit.posted_date}` : ""}. ` +
+  "Exhibit index for filed Michigan court matters. Not indexed.";
+
+// NO structured data on exhibit pages, deliberately.
+//
+// These pages are noindex, so structured data has no consumer: a search engine
+// that is told not to index the page will not read its schema either. Emitting
+// it was pure downside, and the build guard proved it: the asset FILENAMES
+// contain account handles, so putting an asset URL in a contentUrl field leaked
+// a third-party handle into machine-readable metadata. That is the exact defect
+// class this whole change exists to remove, arriving through a side door.
+//
+// The asset path still appears in the page BODY, which is correct: the body is
+// where an exhibit is reproduced, and the page is not indexed.
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  noindex={true}
+  breadcrumbs={[
+    { name: "Home", url: "/" },
+    { name: "Exhibit index", url: "/evidence/" },
+    { name: `Exhibit ${ref}` },
+  ]}
+>
+  <h1>Exhibit {ref}</h1>
+  <p class="document-eyebrow">{artifactLabel(exhibit.artifact_type)}</p>
+
+  <section aria-labelledby="artifact">
+    <h2 id="artifact">The artifact</h2>
+    {isImage ? (
+      <img src={exhibit.file} alt={`Exhibit ${ref}: ${artifactLabel(exhibit.artifact_type).toLowerCase()}`} loading="lazy" />
+    ) : (
+      <p><a class="btn btn--primary" href={exhibit.file}>Open the PDF</a></p>
+    )}
+  </section>
+
+  <section aria-labelledby="face">
+    <h2 id="face">What it shows on its face</h2>
+    <p>{exhibit.shows_on_face}</p>
+  </section>
+
+  <section aria-labelledby="provenance">
+    <h2 id="provenance">Provenance</h2>
+    <dl class="document-details">
+      <div>
+        <dt>Publishing account</dt>
+        <dd>
+          {exhibit.source_account
+            ? exhibit.source_account
+            : "Not visible in this capture. The account name and handle are cropped out, so this artifact does not attribute itself to any account."}
+        </dd>
+      </div>
+      <div>
+        <dt>Date posted</dt>
+        <dd>
+          {exhibit.posted_date ? (
+            <>
+              {exhibit.posted_date}
+              {exhibit.posted_date_end ? ` to ${exhibit.posted_date_end}` : ""}
+              {" "}
+              <span class="provenance-qualifier">
+                (precision: {exhibit.posted_date_precision}; source:{" "}
+                {exhibit.posted_date_source === "visible_in_artifact"
+                  ? "visible in the artifact"
+                  : exhibit.posted_date_source === "archive_record"
+                    ? "archive record"
+                    : "inferred from the filename, not independently verified"})
+              </span>
+            </>
+          ) : (
+            "Not recorded."
+          )}
+        </dd>
+      </div>
+      <div>
+        <dt>Date captured</dt>
+        <dd>
+          {exhibit.captured_date ? (
+            exhibit.captured_date
+          ) : (
+            <>
+              Unknown. Not recorded at capture time and not visible in the artifact.
+              {exhibit.captured_upper_bound && (
+                <> The capture cannot be later than {exhibit.captured_upper_bound}, the date this file first appears in the repository history.</>
+              )}
+            </>
+          )}
+        </dd>
+      </div>
+      <div>
+        <dt>Platform status identifier</dt>
+        <dd>{exhibit.status_id ?? "Not recorded."}</dd>
+      </div>
+      <div>
+        <dt>Evidence source</dt>
+        <dd>{EVIDENCE_SOURCE_LABEL[exhibit.evidence_source]}</dd>
+      </div>
+      <div>
+        <dt>Independent archive</dt>
+        <dd>
+          {exhibit.archived_url ? (
+            <a href={exhibit.archived_url} rel="nofollow noopener">{exhibit.archived_url}</a>
+          ) : (
+            "None, and none can be made: the source account has been suspended and the post is no longer live. This is the expected state for every exhibit here, not an outstanding gap."
+          )}
+        </dd>
+      </div>
+      <div>
+        <dt>File</dt>
+        <dd><code>{exhibit.file}</code></dd>
+      </div>
+    </dl>
+  </section>
+
+  <section aria-labelledby="role">
+    <h2 id="role">What this exhibit is cited for</h2>
+    {roles.length > 0 ? (
+      <ul>
+        {roles.map((role) => (
+          <li>
+            <strong>{role.statement}</strong>
+            {role.status === "self_identification_only" && (
+              <> This exhibit supports that step only as a statement the account made about itself.</>
+            )}
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p>
+        This exhibit is not currently cited as support for any step in the
+        identification chains. It is retained for completeness.
+      </p>
+    )}
+    <p><a href="/evidence/">Back to the exhibit index</a></p>
+  </section>
+</BaseLayout>

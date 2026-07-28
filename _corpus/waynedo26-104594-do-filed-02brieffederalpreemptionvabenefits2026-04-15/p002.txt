@@ -1,0 +1,58 @@
+Document: 02 Brief Federal Preemption VA Benefits 2026-04-15
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-04-15
+Page: 2 of 5
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-02brieffederalpreemptionvabenefits2026-04-15/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/02_Brief_Federal_Preemption_VA_Benefits_2026-04-15.pdf
+Text source: native
+
+---
+
+shall not be assignable except to the extent specifically authorized by law, and such
+              payments made to, or on account of, a beneficiary shall be exempt from taxation, shall be
+              exempt from the claim of creditors, and shall not be liable to attachment, levy, or seizure by
+              or under any legal or equitable process whatever, either before or after receipt by the
+              beneficiary.
+
+ 5. The United States Supreme Court has twice confirmed that federal law completely preempts state courts
+    from dividing VA disability benefits as marital property. In Mansell v. Mansell, 490 U.S. 581 (1989), the
+    Court held that a state court may not treat veteran disability benefits as community property subject to
+    division. In Howell v. Howell, 581 U.S. ___ (2017), the Court unanimously reaffirmed this principle,
+    holding that state courts cannot order veterans to indemnify former spouses for reductions in retirement
+    pay caused by disability waivers.
+
+                III. DEFENDANT'S BENEFITS AND THE DOCUMENTED DIVERSION
+ 6. Defendant is rated 100% service-connected disabled by the Department of Veterans Affairs for combat-
+    related injuries sustained during active military service, including a Traumatic Brain Injury (TBI) with
+    seizure disorder, PTSD, obstructive sleep apnea, and migrainous headaches. His VA Disability
+    Compensation ranges from $4,317 to $4,764 per month. His SSDI benefits are approximately $2,198 per
+    month. These are his sole sources of income.
+ 7. VA Payment History records, official federal government documents, establish the following documented
+    diversion of Defendant's VA Disability Compensation during the period of September 2025 through
+    February 2026:
+    a. Payments ranging from $4,317 to $4,764 per month were directed to bank accounts under Plaintiff's
+    control;
+    b. A payment of $4,673.44 on October 1, 2025 was returned marked "Undeliverable: Bad Address",
+    during the same period Plaintiff sent Defendant a TRULINCS email on October 28, 2025 stating "The VA
+    pay has not been deposited for this month," a material misrepresentation designed to conceal the
+    ongoing diversion;
+    c. The total VA compensation diverted during this period is approximately $26,837.87;
+    d. Separately, Plaintiff received approximately $12,489.00 in SSDI benefits as Defendant's
+    Representative Payee;
+    e. The combined total of diverted federal benefits is approximately $39,326.87.
+
+         IV. PLAINTIFF HAD NO LEGAL AUTHORITY OVER DEFENDANT'S VA BENEFITS
+ 8. Plaintiff's access to Defendant's VA and SSDI benefits must be analyzed separately because the legal
+    basis for each was fundamentally different, and in the case of the VA benefits, entirely unauthorized.
+ 9. VA Benefits: Unauthorized Access. Plaintiff was not Defendant's VA fiduciary, VA representative
+    payee, or VA-appointed agent of any kind. Plaintiff gained access to Defendant's VA benefits by using
+    Defendant's personal id.me credentials to log into his va.gov account, a federal government portal, and
+    redirect his direct deposit to bank accounts under her control. This was unauthorized access to a federal
+    government account. Plaintiff had no legal authority whatsoever to access Defendant's va.gov account,
+    view his benefit information, or redirect his direct deposit. The unauthorized use of another person's
+    credentials to access a federal computer system and redirect federal funds may constitute a violation of
+    the Computer Fraud and Abuse Act, 18 U.S.C. §1030, and federal wire fraud statutes, 18 U.S.C. §1343.
+10. SSDI Benefits: Fiduciary Breach. Plaintiff served as Defendant's SSA-appointed Representative
+    Payee, a fiduciary role governed by 42 U.S.C. §405(j). As Representative Payee, Plaintiff had a federal

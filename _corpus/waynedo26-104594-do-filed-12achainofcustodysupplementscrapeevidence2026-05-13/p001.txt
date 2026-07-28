@@ -1,0 +1,88 @@
+Document: 12a Chain Of Custody Supplement Scrape Evidence 2026-05-13
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-13
+Page: 1 of 2
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12achainofcustodysupplementscrapeevidence2026-05-13/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12a_Chain_of_Custody_Supplement_Scrape_Evidence_2026-05-13.pdf
+Text source: native
+
+---
+
+STATE OF MICHIGAN
+
+                                                  IN THE THIRD JUDICIAL CIRCUIT FOR THE COUNTY OF WAYNE
+                                                                FAMILY DIVISION, DOMESTIC RELATIONS
+
+ ADRIENNE MARJORIE ROCKENHAUS,                                                                              Case No. 26-104594-DO
+      Plaintiff/Counter-Defendant,
+                                                                                                            Hon. Nicole N. Goodson
+ v.
+
+ CONRAD ALAN ROCKENHAUS,
+  Defendant/Counter-Plaintiff.
+
+     DEFENDANT/COUNTER-PLAINTIFF'S CHAIN OF CUSTODY SUPPLEMENT: SHA-256 HASH MANIFEST FOR MAY 12-13, 2026 SCRAPE
+                                                     EVIDENCE
+
+                                                                                I. PURPOSE
+1. This Chain of Custody Supplement is filed in support of Defendant/Counter-Plaintiff's Emergency Motion for Preservation Order and Order Prohibiting Spoliation of
+   Evidence, filed contemporaneously herewith. It documents the cryptographic integrity of the public-record Twitter scrape datasets referenced in that Motion at §III.G ¶31
+   ("the May 12, 2026 Scrape Evidence," used in the Motion and herein as a collective reference to the captures made on both May 12 and May 13, 2026).
+
+                                                                      II. CAPTURE METHODOLOGY
+2. The scrape datasets were captured between approximately 22:21 UTC on May 12, 2026 and 01:01 UTC on May 13, 2026 by Defendant using the Apify platform's tweet-
+   scraper actor (https://apify.com). Each capture targeted specified X (formerly Twitter) account handles, conversation identifiers, or date ranges via the actor's input
+   parameters. The actor returned aggregated tweet records as JSON arrays containing platform-native metadata fields including, but not limited to, tweet identifiers,
+   conversation identifiers, in-reply-to identifiers, author profile information, timestamps in Twitter time format, source application identifiers, and user_mentions entities.
+3. Each capture was saved as a single JSON file with a filename incorporating the targeted account or query subject and the UTC timestamp of capture completion. The files
+   have not been modified after capture other than by file-naming. The contents are byte-for-byte identical to the data returned by the Apify actor.
+
+                                                                      III. SHA-256 HASH MANIFEST
+4. The following table identifies each of the eighteen scrape files comprising the May 12, 2026 Scrape Evidence by filename, captured size in bytes, and SHA-256
+   cryptographic hash. The hash values were computed at approximately 02:00 UTC on May 13, 2026 using the Python hashlib.sha256 implementation. Verification of any
+   file's hash against the table value confirms the file is byte-for-byte identical to the captured original.
+
+                                                                                                               Size
+ #                                                Filename                                                                                                  SHA-256
+                                                                                                              (bytes)
+1 apify_adezero_rosebuttcheeks_2026-05-12_2237UTC.json                                                      23,151,037 9c3086e0d2cd97f8a541415a6c900f3936162fd1154e93048bc7beda1865f0ea
+2 apify_rosebuttcheeks_MintyCrafty_2026-05-12_2221UTC.json                                                  1,292,858 ab3fc7eb0e2bc431ae1749671c75b095c606c5642cbe1bbade6342ab50a4c6b4
+3 apify_adezero_thru_2026-04-11_2026-05-13_0021UTC.json                                                     3,737,523 92827c76af54dee83b64e9d728206cb47c8b0cf44ac152c1dde67e7a634df7ee
+4 apify_spuntpatrol_partial_2026-05-13_0022UTC.json                                                         4,683,064 092d13bfe00d20cabb312b5b9acaf28223a945e58705436532df095d1b0d65c5
+5 apify_DMS_replies_fallback_2026-05-13_0022UTC.json                                                        7,308       abd6d712ee48f3c46f2d706768f1eaa72f99bd974bf1c480c956e94648c2ee1c
+6 apify_DMS_conversation_primary_2026-05-13_0023UTC.json                                                    4,733       1d934768590a405617c5136f19623e4e69c6b68fb028c01d8a2bb216bf360fbf
+7 apify_JoePrich_pinned_conversation_2052766745820033466_2026-05-13_0033UTC.json                            64,149      daa1abce8b3c12fbb2f4efa98525d9839337ca988e24e8f8942d63d7bbe800d5
+8 apify_spuntpatrol_refresh_thru_2026-05-09_2026-05-13_0035UTC.json                                         3,581,797 5d864002cdb9c8ad33cabbdf83adf21c80ec803fce191f83da5d6359065f5705
+9 apify_smegma_joe_full_2026-05-13_0037UTC.json                                                             8,280,831 873a0309277070e988d5698aad8a8dca2b6985422220a8364e1fea3959901a2e
+10 apify_JustCallMeJoeP_full_2026-05-13_0037UTC.json                                                        7,154,111 4d601888e0e0293053db4b8d526660b93487fd60ac38e3fd7c4d33ed2d5b4b05
+11 apify_adezero_post_2026-04-11_NO_NEW_TWEETS_2026-05-13_0057UTC.json                                      100         09384b1d1258e7e58e3f6600e0e69afafabc1f4b387a6fc14cb76a9f49f642e7
+12 apify_AllysonClermont_full_2026-05-13_0059UTC.json                                                       5,176,715 16ca207556fc7b8627c0b5798589729daf7de1d3ea17f4e697a3bcacf227acc0
+13 apify_rosebuttcheeks_full_with_retweets_2026-05-13_0059UTC.json                                          12,412,108 a65200999ded64791209a7623501a75dc9d030ffa293b9b96a5f65085ddf72d6
+14 apify_alg0queen_full_2026-05-13_0059UTC.json                                                             7,041,031 d4d1e5f5f0cd0a4d415c5966db6860fe71ea4f902e87a7e075fb4835c9ddf8c9
+15 apify_LeighCheri_full_2026-05-13_0100UTC.json                                                            7,673,401 2a0e79898139914eaa9b36c1aa8e851c2dafa7f9df0560bb872ee1b8828f0dfb
+16 apify_4chantress_full_2026-05-13_0100UTC.json                                                            6,521,392 731babde6e60eff55aa3601603d70cb9f288ae30feb8ea1de11c4a2b0ccdc67b
+17 apify_p1ratech_full_2026-05-13_0100UTC.json                                                              7,489,939 5a1eae7293a4100daebeb0135761edd2d90581fc5a6dc030e41ae48380f98da6
+     apify_sockpuppet_batch5_blackjakkkk_PunkyHomegirl_LuceMargarita_picklepickleg_phatadvert_2026-
+18                                                                                                  21,285,182 ebff5d6c5db423c18365cf3d08fb6f9e2582172cfcd5d4b26f5459119e7fb4bf
+     05-13_0101UTC.json
+
+5. Aggregate size of the eighteen scrape files: 119,557,279 bytes (approximately 114 MB). Aggregate captured tweet record count: approximately 14,500 unique tweet
+   entries across the targeted accounts and conversation identifiers.
+
+                                                                        IV. CUSTODY STATEMENT
+6. Defendant has retained the eighteen scrape files in their original byte-for-byte form. Defendant has not modified the JSON content of any file. The files are preserved in
+   Defendant's Google Workspace cloud storage and on local working copies. Defendant will, on request of the Court or Plaintiff/Counter-Defendant, supply any or all of the
+   files for independent SHA-256 verification or for substantive review.
+7. Defendant declares under penalty of perjury that the foregoing statements regarding the capture, naming, hashing, and custody of the May 12, 2026 Scrape Evidence files
+   are true and correct to the best of his knowledge, information, and belief.
+
+Respectfully submitted,
+/s/ Conrad A. Rockenhaus
+Conrad Alan Rockenhaus, Defendant/Counter-Plaintiff Pro Se
+1690 Brookfield Drive
+Ann Arbor, Michigan 48103
+(254) 340-7910
+conrad@rockenhaus.net
+Dated: May 13, 2026

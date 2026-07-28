@@ -1,0 +1,64 @@
+Document: 01 Ex Parte PPO Petition, Filed Rockenhaus
+Case: Rockenhaus v. Rockenhaus (PPO), Case No. 26-102221-PP
+Court: Wayne County Circuit Court (Third Judicial Circuit)
+Category: Opposing party
+Page: 78 of 83
+Source: https://rockenhaus.net/documents/wayneppo26-102221-pp-opposing-01ex-parte-ppo-petition-filedrockenhaus/
+PDF: https://rockenhaus.net/wayne_ppo_26-102221-PP/opposing/01_EX PARTE PPO Petition, Filed_Rockenhaus.pdf
+Text source: native
+
+---
+
+NEUT% 41.9
+LYMPH% 36.4
+MONO% 7.6
+EOS% 13.3
+BASO% 0.5
+IGR  0.3   0.0 - 0.5
+
+-ID-  04/26/23 Range
+COVID-19 Negative Ref: Negative
+
+-URINE- 04/26/23 Range
+PH    6.0    5.0 - 9.0
+PROT    NEGATIVE Ref: Negative
+GLUC    NEGATIVE Ref: Negative
+KET    NEGATIVE Ref: Negative
+BILI   NEGATIVE Ref: Negative
+BLOOD     NEGATIVE Ref: Negative
+NIT    NEGATIVE Ref: Negative
+LEUK EST NEGATIVE Ref: Negative
+
+-TOX SCREEN- 04/26/23 Range
+AMPHETA     Not Detected Ref: Not Detected
+BARBIT    Not Detected Ref: Not Detected
+BENZOD     Not Detected Ref: Not Detected
+CANNAB     DETECTED Ref: Not Detected
+COCAINE    Not Detected Ref: Not Detected
+OPIATES    Not Detected Ref: Not Detected
+
+-DRUG LEVEL- 04/26/23 Range
+LITHIUM   0.57L    0.60 - 1.20
+
+ADDITIONAL LABS/STUDIES:
+A1c 5.7% (4/28)
+Triglycerides 136, cholesterol 119, HDL 25, LDL 67 (4/28)
+
+SIGNIFICANT FINDINGS ON DISCHARGE:
+MENTAL STATUS EXAM:
+Appearance: Adult male in no acute distress, fair grooming, fair attention
+ to hygiene, dressed in hospital scrubs
+Behavior: Cooperative, good eye contact eye contact
+Speech: Fluent. Non-dysarthric. Occasional stuttering
+Mood: "Good"
+Affect: Calm, euthymic. Restricted.
+Thought processes: Largely linear. Occasionally circumstantial. Concrete.
+Thought content: Expresses desire to discharge from hospital to be with his
+ fiance and receive outpatient care. Denies SI and HI.
+Perceptions: Denies all auditory or visual hallucinations.
+Insight/judgment: Fair/fair
+
+SUMMARY OF HOSPITAL COURSE:
+Patient was admitted voluntarily on 4/26/2023 due to worsening depression with
+
+                                                                                 00065

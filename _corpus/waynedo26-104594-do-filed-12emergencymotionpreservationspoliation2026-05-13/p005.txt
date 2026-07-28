@@ -1,0 +1,60 @@
+Document: 12 Emergency Motion Preservation Spoliation 2026-05-13
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-13
+Page: 5 of 13
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12emergencymotionpreservationspoliation2026-05-13/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12_Emergency_Motion_Preservation_Spoliation_2026-05-13.pdf
+Text source: native
+
+---
+
+28. On May 8, 2026, public-record Twitter scrape evidence captured a broadcast tweet posted by
+    sockpuppet account @spuntpatrol bearing tweet identifier 2052837253408280726, posted at 19:45:18
+    UTC on May 8, 2026, with URL field expanded to a Facebook profile under Defendant's name. The
+    broadcast tweet structure auto-populates the @-mention chain of all participants in the conversation. The
+    conversation includes @KiwiFarmsDotNet (numeric user identifier 1397654962742644736), placing the
+    official Kiwi Farms Twitter account in the upstream broadcast structure.
+29. Three reply tweets to the broadcast (tweet identifiers 2052873275735253491 from @BiancaWestfall on
+    May 8, 2026; 2053019730819314068 from @lordofsinatra on May 9, 2026; and 2053054715122888881
+    from @spuntpatrol on May 9, 2026) each carry @KiwiFarmsDotNet in their user_mentions entities. The
+    "He's dead." reply by @spuntpatrol exploited what the public record shows to have been a third-party
+    user's good-faith confusion as the setup line.
+30. The reply-tweet chain is currently in the X platform record. It will remain there only so long as
+    Plaintiff/Counter-Defendant does not delete @spuntpatrol or delete the underlying tweets. Once deleted,
+    the chain is recoverable only by subpoena to X Corp., and only within the platform's retention window for
+    deleted content.
+
+      G. Coordinated Account Operation Documented in Public-Record Twitter Scrape Evidence
+31. On May 12, 2026, Defendant captured public-record Twitter scrape datasets covering the X accounts
+    @adezero, @rosebuttcheeks, @spuntpatrol, @JustCallMeJoeP, and the conversation tree of the dead-
+    man's-switch broadcast tweet identified at ¶28 above. The captures were performed via the Apify
+    platform tweet-scraper actor and produced timestamped JSON datasets aggregating approximately
+    6,000 unique tweets across the targeted accounts. Each dataset includes complete metadata fields
+    (tweet identifiers, conversation identifiers, in-reply-to identifiers, timestamps, source application, user
+    identifiers, and user_mentions entities) as those fields are exposed by the X public API. The datasets are
+    preserved as documentary evidence (the "May 12, 2026 Scrape Evidence"). The cryptographic integrity
+    of each of the eighteen JSON files comprising the May 12, 2026 Scrape Evidence is documented in
+    Defendant's Chain of Custody Supplement filed contemporaneously herewith, which lists each file by
+    name, captured size in bytes, and SHA-256 cryptographic hash, totaling approximately 114 megabytes
+    of byte-for-byte preserved capture data. The relevant findings from the May 12, 2026 Scrape Evidence
+    are summarized at ¶¶32 through 35 below.
+32. The May 12, 2026 Scrape Evidence captures a thread structure on @adezero conversation identifier
+    2043052376794276350 that, on its face, establishes single-operator control of the @rosebuttcheeks
+    account by Plaintiff/Counter-Defendant:
+a. On April 11, 2026 at 19:43:39 UTC, @adezero (Plaintiff/Counter-Defendant's verified primary X account)
+posted the original message "I am hurting so bad today" as tweet identifier 2043052376794276350.
+b. On April 20, 2026 at 21:00:41 UTC, @rosebuttcheeks (display name "Rosemary," account created
+December 26, 2020, 63 followers, anime/wrestling-themed) posted the reply "Are you okay?" as tweet
+identifier 2046333254677012694, with in-reply-to identifier 2043052376794276350.
+c. On April 25, 2026 at 09:19:00 UTC, fourteen days after the original @adezero post and without any
+intervening response from @adezero to @rosebuttcheeks, the @rosebuttcheeks account posted the reply
+"???" as tweet identifier 2047968608601432411. The in-reply-to-username field on this tweet is
+@rosebuttcheeks. The @rosebuttcheeks account replied to its own prior message rather than to @adezero.
+d. The most parsimonious explanation for an account replying with a follow-up "???" to its own unanswered
+concern message about a stranger's emotional state, fourteen days later, is that the operator of
+@rosebuttcheeks is also the operator of @adezero and momentarily forgot, at the time of typing the April 25
+reply, that no response from @adezero existed because she had not yet typed one. The complete
+conversation graph (root tweet, both replies, and metadata) is preserved in the May 12, 2026 Scrape
+Evidence.

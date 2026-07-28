@@ -1,0 +1,65 @@
+Document: 12 Emergency Motion Preservation Spoliation 2026-05-13
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-13
+Page: 8 of 13
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12emergencymotionpreservationspoliation2026-05-13/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12_Emergency_Motion_Preservation_Spoliation_2026-05-13.pdf
+Text source: native
+
+---
+
+@spuntpatrol, @rosebuttcheeks, and @JustCallMeJoeP, the three accounts identified at §III.G above as
+    operational coordinators.
+
+              I. The Deemed-Admitted Counterclaim Creates Maximum Spoliation Incentive
+
+39. The May 12, 2026 entry of default on the Counterclaim renders the factual averments of the
+    Counterclaim conclusively admitted as to liability. Wood v. Detroit Auto. Inter-Ins. Exch., 413 Mich. 573,
+    582 (1982). The remaining contested matter on the Counterclaim is the quantum of damages and the
+    precise scope of equitable relief, which will be determined at the default-judgment hearing under MCR
+    2.603(B)(3).
+40. Plaintiff/Counter-Defendant accordingly stands at the moment of maximum incentive to destroy or impair
+    the evidence on which damages and equitable relief depend. That incentive applies with particular force
+    to (a) the electronic records that document the conversion mechanism, (b) the sockpuppet-network
+    records that document the deemed-admitted harassment pattern, (c) the physical devices in her
+    possession that contain Cannabytes, LLC business records, and (d) the AirTag-related records that
+    document the surveillance vector.
+41. The combined factual record at §§III.A through III.I demonstrates not only the abstract possibility of
+    spoliation but a specific pattern of conduct, on a specific timeline, with a specific identified conduit, and a
+    specific account inventory, sufficient to establish imminent and irreparable risk warranting injunctive
+    relief.
+
+   IV. LEGAL STANDARD FOR EMERGENCY PRESERVATION AND ANTI-SPOLIATION RELIEF
+
+                                A. Injunctive-Relief Authority Under MCR 3.310
+42. MCR 3.310(B)(1) authorizes the Court, on a showing of facts demonstrating that immediate and
+    irreparable injury, loss, or damage will result before the adverse party can be heard in opposition, to
+    grant a temporary restraining order. MCR 3.310(A) authorizes preliminary injunctive relief on hearing.
+
+43. The Michigan Supreme Court's four-factor test for preliminary injunctive relief, set forth in Pontiac Fire
+    Fighters Union Local 376 v. City of Pontiac, 482 Mich. 1, 8 (2008), is: (1) the likelihood that the moving
+    party will prevail on the merits, (2) the danger that the moving party will suffer irreparable injury if the
+    injunction is not issued, (3) the risk that the moving party would be harmed more by the absence of an
+    injunction than the opposing party would be by the granting of the relief, and (4) the harm to the public
+    interest if the injunction is issued.
+
+           B. Preservation-Order Authority Under MCR 2.310 and the Court's Inherent Power
+44. MCR 2.310 authorizes the Court to enter orders necessary to preserve documents and tangible things
+    material to discovery. MCR 2.302(B)(6), Michigan's electronically stored information ("ESI") preservation
+    provision, further provides for preservation of electronically stored information and recognizes the unique
+    vulnerabilities of ESI to alteration and destruction. The duty to preserve evidence material to litigation
+    arises independently of any court order at the point at which a party reasonably anticipates litigation.
+    Brenner v. Kolk, 226 Mich. App. 149, 162 (1997).
+45. Michigan courts possess inherent authority to enter orders necessary to preserve evidence and prevent
+    destruction. Brenner v. Kolk, 226 Mich. App. at 161; Hamann v. Ridge Tool Co., 213 Mich. App. 252, 254
+    (1995).
+
+                     C. The Spoliation Doctrine and the Adverse-Inference Framework
+
+46. The spoliation doctrine in Michigan, articulated in Teel v. Meredith, 284 Mich. App. 412, 420 (2009),
+    provides that when a party destroys, alters, conceals, or fails to preserve evidence material to litigation,
+    the trial court may impose sanctions including but not limited to an adverse inference instruction,
+    exclusion of evidence, or other relief commensurate with the prejudice. The trial court has broad
+    discretion to fashion the appropriate sanction. Brenner, 226 Mich. App. at 160.

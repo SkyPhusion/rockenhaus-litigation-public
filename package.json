@@ -1,0 +1,31 @@
+{
+  "name": "rockenhaus-litigation-public",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Evidence system and pre-rendered Q&A over the filed Michigan court record. Astro static, merged into the existing Jekyll Pages build.",
+  "license": "CC0-1.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "typecheck": "astro check",
+    "test": "vitest run",
+    "corpus": "node scripts/build-corpus.mjs",
+    "corpus:check": "node scripts/build-corpus.mjs --check",
+    "collisions": "node scripts/check-collisions.mjs",
+    "ocr": "node scripts/ocr-pass.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.1.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "@vitest/coverage-istanbul": "^4.1.10",
+    "tesseract.js": "^7.0.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true
+  }
+}

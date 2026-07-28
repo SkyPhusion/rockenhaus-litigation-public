@@ -1,0 +1,83 @@
+{
+  "_comment": "Identification chains. A screenshot proves that an ACCOUNT published something. It does not by itself prove that the account belongs to a named person, nor that the named person owns a named business. Those are separate links and they are presented separately here, each with its own evidence and its own honest status. A link with no supporting exhibit says so. This file records what the exhibits in this archive do and do not establish; it does not adjudicate anything and it makes no assertion about any person.",
+  "statuses": {
+    "supported": "One or more exhibits in this archive directly support this link.",
+    "self_identification_only": "The only support is a statement the account made about itself. Self-description is not independent identification.",
+    "asserted_in_filed_pleadings": "Asserted in a filed court document. The filing is linked. Filed allegations are allegations until adjudicated.",
+    "no_exhibit_in_this_archive": "No exhibit in this archive supports this link."
+  },
+  "chains": [
+    {
+      "id": "joep-identity",
+      "subject": "The X account @JustCallMeJoeP",
+      "summary": "What the exhibits establish about the account @JustCallMeJoeP, link by link.",
+      "links": [
+        {
+          "id": "A",
+          "statement": "The X account @JustCallMeJoeP published the posts reproduced in these exhibits.",
+          "status": "supported",
+          "evidence": [
+            "xpost-2025-07-07",
+            "xpost-2025-09-10",
+            "xpost-2025-10-01",
+            "xpost-2025-11-02",
+            "xpost-2025-11-07",
+            "xpost-2026-05-26-a"
+          ],
+          "caveats": [
+            "Four further exhibits are filed under names implying this account but have the posting account's name and handle cropped out of the capture. They are listed on their own exhibit pages with that limitation recorded, and they are not counted as support for this link.",
+            "No exhibit carries an independent third-party archive reference, and none can be made: the source account has been suspended and the posts are no longer live. The screenshots are the record this archive holds. Authenticated platform records would be stronger evidence than either a screenshot or a third-party crawl."
+          ]
+        },
+        {
+          "id": "B",
+          "statement": "The X account @JustCallMeJoeP is operated by a specific, legally identifiable individual.",
+          "status": "self_identification_only",
+          "evidence": [
+            "xpost-2026-05-26-a"
+          ],
+          "note": "In the May 26 2026 thread the account gives its own name as \"Joseph E. Prichardington the 3rd\" and applies the word \"Nazzy\" to itself. Both are statements the account published about itself. A self-description is not independent identification, and \"Joseph E. Prichardington the 3rd\" is not a name this archive has matched to any record. No exhibit here identifies the operator by legal name.",
+          "caveats": [
+            "The account's display name and the name it gives for itself are different strings, and neither has been corroborated against any public record in this archive."
+          ]
+        },
+        {
+          "id": "C",
+          "statement": "The operator of @JustCallMeJoeP owns or operates a named business.",
+          "status": "no_exhibit_in_this_archive",
+          "evidence": [],
+          "note": "No exhibit in this archive connects this account, or any name associated with it, to any business. This link is unsupported by the material collected here."
+        }
+      ]
+    },
+    {
+      "id": "adezero-contact",
+      "subject": "Public contact between the accounts @adezero and @JustCallMeJoeP",
+      "summary": "What the exhibits establish about public exchanges between the two accounts.",
+      "links": [
+        {
+          "id": "A",
+          "statement": "The accounts @adezero and @JustCallMeJoeP exchanged public posts in March 2026.",
+          "status": "supported",
+          "evidence": [
+            "xpost-2026-03-24",
+            "xpost-2026-03-28-a",
+            "xpost-2026-03-28-b",
+            "xpost-2026-03-a"
+          ],
+          "caveats": [
+            "The exchanges are public posts. This archive holds no direct messages and makes no claim about any communication not published publicly.",
+            "No exhibit carries an independent third-party archive reference, and none can be made: the source account has been suspended and the posts are no longer live. The screenshots are the record this archive holds. Authenticated platform records would be stronger evidence than either a screenshot or a third-party crawl."
+          ]
+        },
+        {
+          "id": "B",
+          "statement": "The X account @adezero is operated by the plaintiff in these matters.",
+          "status": "asserted_in_filed_pleadings",
+          "evidence": [],
+          "note": "This archive does not independently establish who operates the account. The association is asserted in filed pleadings, which are indexed under the case pages. Filed allegations are allegations until adjudicated."
+        }
+      ]
+    }
+  ]
+}

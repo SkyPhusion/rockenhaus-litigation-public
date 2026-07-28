@@ -1,0 +1,58 @@
+Document: 08 Motion Return Personal Property DO 2026-05-07
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-07
+Page: 3 of 6
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-08motionreturnpersonalpropertydo2026-05-07/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/08_Motion_Return_Personal_Property_DO_2026-05-07.pdf
+Text source: native
+
+---
+
+C. Financial Instruments and Records
+j. All bank cards, debit cards, and credit cards issued in Defendant's name;
+k. All financial documents in Defendant's name, including without limitation account statements, tax records,
+loan documents, retirement account documents, insurance records, and payment instruments.
+
+                                                  D. Records
+l. All military records in Defendant's name, including without limitation service records, decorations and
+awards documentation, training records, deployment records, and Veterans Administration correspondence;
+m. All education records in Defendant's name, including without limitation diplomas, transcripts, certificates,
+and continuing-education documentation;
+n. All health records in Defendant's name, including without limitation medical, dental, mental health,
+pharmacy, and Veterans Administration health records.
+
+                                   E. Clothing and Personal Care Items
+o. Personal clothing belonging to Defendant;
+p. Prescription medications and over-the-counter medications belonging to Defendant;
+q. Personal care and hygiene items belonging to Defendant.
+
+                                       F. Tools and Work Equipment
+r. One (1) red tool box belonging to Defendant;
+s. One (1) DeWalt tool bag belonging to Defendant;
+t. One (1) DeWalt drill set belonging to Defendant.
+
+                                        G. Other Personal Property
+u. All other personal property belonging to Defendant currently located at the marital residence not
+specifically enumerated above.
+12. The categories above reflect Defendant's current best knowledge of personal property held at the marital
+    residence. Defendant lacks current personal knowledge of the precise inventory of items at the
+    residence, having had no access since September 4, 2025. Defendant accordingly seeks an order
+    compelling Plaintiff to produce a sworn inventory as set forth at Section V below.
+
+          IV. ELECTRONIC ACCOUNTS AND FEDERAL IDENTITY-VERIFICATION CHAIN
+13. Separate from the physical property described above, Plaintiff retains operational control over electronic
+    accounts under Defendant's name and over the federal identity-verification chain that depends on those
+    accounts. The accounts and access pathways at issue are the following:
+a. Defendant's primary personal email account, conrad@rockenhaus.com;
+b. Defendant's secondary personal email account, conradrock@gmail.com;
+c. Defendant's professional email account, conrad@cannabytes.net;
+d. The two-factor authentication recovery chain dependent on the foregoing email accounts, including
+without limitation Defendant's Login.gov account, his ID.me account, his VA.gov account, and his CAC.mil
+military Common Access Card account.
+14. While Plaintiff retains operational control of the email accounts described above, Defendant cannot
+    reliably receive two-factor authentication codes necessary to access his Login.gov, ID.me, VA.gov, or
+    CAC.mil accounts. The practical consequence is that Plaintiff exercises operational control, by proxy,
+    over Defendant's federal identity-verification posture, his veterans benefits portal, his military records
+    portal, and any account that uses email-based two-factor authentication for recovery.

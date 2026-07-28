@@ -1,0 +1,61 @@
+Document: 35 Motion Discovery Sanctions 2026-05-18
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-18
+Page: 9 of 14
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-35motiondiscoverysanctions2026-05-18/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/35_Motion_Discovery_Sanctions_2026-05-18.pdf
+Text source: native
+
+---
+
+made available either as kept in the usual course of business or organized to correspond to the categories
+in the request. MCR 2.313(A)(2)(b) authorizes a motion to compel when a party "fails to respond that
+inspection will be permitted as requested or fails to permit inspection as requested." MCR 2.310 contains no
+numerical limit on the number of Requests for Production.
+
+                                        B. Failure to Respond Is Total
+Plaintiff/Counter-Defendant has not served any written response to Defendant's First Set of Requests for
+Production of Documents. The twenty-eight-day deadline under MCR 2.310(C)(2) expired on May 14, 2026
+by electronic service and on May 18, 2026 by physical mail service with the three-day mail rule applied. No
+documents have been produced. No objections have been served. No privilege log has been served. No
+protective order has been sought. The same meet-and-confer documented in Section I.7 covered the
+Requests for Production explicitly.
+
+                                       C. Subject Matter of the Requests
+The First Set of Requests for Production seeks documentary discovery on the same core subjects as the
+Interrogatories, including:
+   Financial account records (Requests 1-5): bank statements, account statements, and transaction
+   records for every financial account Plaintiff/Counter-Defendant held, controlled, or had access to
+   between September 1, 2025 and the present; records related to the SoFi account designated for
+   Defendant's VA benefits; records showing deposit, transfer, withdrawal, or disbursement of his VA
+   Disability Compensation and SSDI benefits; and communications with any financial institution regarding
+   his federally protected benefits.
+   VA and SSA records (Requests 6-10): communications with the Department of Veterans Affairs and the
+   Social Security Administration; records of access to Defendant's va.gov account using his id.me
+   credentials; records of the VA Office of Inspector General investigation (Case No. 2026-18750); and
+   records of the $12,074.50 SSA overpayment demand.
+   Communications        with   attorneys,     witnesses,   and   law    enforcement   (Requests    11-18):
+   communications with Defendant's federal appellate attorney between January 1, 2026 and April 1, 2026;
+   communications with Ann Helgren from February 1, 2026 through March 7, 2026; pre-release planning
+   communications regarding Defendant's March 2, 2026 release; communications with Krystal McConico
+   and Robert J. Delonis Center staff; communications with the Redford Township and Ann Arbor Police
+   Departments; communications with VA Ann Arbor Healthcare System staff regarding Defendant's
+   discharge and housing; and the complete unedited TRULINCS message record between
+   Plaintiff/Counter-Defendant and Defendant.
+   Personal property, digital accounts, and medical records (Requests 19-25): photographs and
+   inventories of Defendant's personal property; domain records for rockenhaus.com, skyphusion.com,
+   greyponyit.com, fitspo.net, lawflaws.com, adezero.com, and cannabytes.net; data extracted from
+   Defendant's email and cloud accounts; medical, psychiatric, and prescription records obtained through
+   Power of Attorney or VA portal access; records of attempts to obtain Defendant's protected health
+   information from the Bureau of Prisons or FCI Milan; and records relating to BOP Care Level 4
+   designation and seizure disorder information obtained from BOP sources.
+   Cannabytes, LLC records (Requests 26-31): financial records for Cannabytes, LLC from January 1,
+   2023 through the present; formation documents and officer designations; records of Defendant's role,
+   title, compensation, and contributions; communications with U.S. Probation regarding Defendant's
+   employment; records of new employees, contractors, and members added since January 1, 2025; and
+   records of technical access and system credentials reassignment.
+   PPO supporting materials and related federal court records (Requests 32-38): materials relied upon
+   in preparing the PPO Petition; communications with Dr. Robert Garcia regarding his December 11, 2025
+   letter; sworn declarations filed in Rockenhaus v. Agapiou and Rockenhaus v. Pringle; social media and

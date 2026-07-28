@@ -1,0 +1,60 @@
+Document: 12 Emergency Motion Preservation Spoliation 2026-05-13
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-13
+Page: 6 of 13
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12emergencymotionpreservationspoliation2026-05-13/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12_Emergency_Motion_Preservation_Spoliation_2026-05-13.pdf
+Text source: native
+
+---
+
+33. The May 12, 2026 Scrape Evidence further captures 71 documented public-record interactions between
+    @adezero and the eleven X accounts identified at ¶22(d) above as sockpuppets on Defendant's direct
+    personal knowledge, including @adezero-@AllysonClermont (29 interactions), @adezero-@alg0queen
+    (15 interactions), @adezero-@LeighCheri_ (7 interactions), @adezero-@4chantress (6 interactions),
+    @adezero-@p1ratech (6 interactions), and @adezero-@spuntpatrol (4 interactions in addition to the
+    May 8, 2026 broadcast at ¶28). The captured interactions include intimate-register communications, in-
+    joke exchanges, content amplification through retweet, and coordination in conversation threads
+    addressed to federal-court parties (@USDCMIED, @USAO_MIE, @TheJusticeDept). Each interaction is
+    independently documentable through X Corp.'s subpoena-responsive records.
+34. The May 12, 2026 Scrape Evidence captures the timeline of an additional X account, @JustCallMeJoeP
+    (display name "Joe Prich," account created June 23, 2025, location Austin, Texas, X Blue verified),
+    operating in documented coordination with @adezero:
+a. On January 8, 2026, @JustCallMeJoeP began retweeting @adezero content concerning Defendant's
+then-pending federal Bivens litigation, including retweets amplifying claims about Defendant's medical care,
+claims about U.S. Attorney conduct, and content under the framing "If something happens to me, if I
+disappear, please look into..." (January 13, 2026 retweet), a narrative arc that anticipates and prefigures the
+May 4, 2026 Dead Man's Switch post at §III.E above by approximately four months.
+b. On March 24, 2026, @adezero posted in her own voice a tweet identifying @JustCallMeJoeP as the
+source of advice directing Plaintiff/Counter-Defendant to drop her married surname. That tweet reads in
+pertinent part: "I literally just digitally decapitated myself because @JustCallMeJoeP kept telling me to drop
+the 'dead weight' (last name)." The "last name" referenced is the Rockenhaus surname.
+c. The May 12, 2026 Scrape Evidence captures @JustCallMeJoeP's pinned X tweet (X tweet identifier
+2052766745820033466) and its complete reply thread, including a reply from @spuntpatrol posted on May
+8, 2026 at 19:47:20 UTC asking @JustCallMeJoeP "Do you know where Ade is??". The @spuntpatrol-to-
+@JustCallMeJoeP communication is timestamped exactly two minutes after the @spuntpatrol broadcast
+tweet identified at ¶28 above and therefore occurred within the same operational window as the dead-
+man's-switch broadcast.
+d. On May 10, 2026 at 00:50:16 UTC, within approximately the same window during which Plaintiff/Counter-
+Defendant was vacating the marital residence at 26695 Ross Drive (¶¶11-12 above), @JustCallMeJoeP
+replied to @spuntpatrol in the same thread: "No I'm worried fucking sick about her, tbh." On the captured
+operational profile of @JustCallMeJoeP (740 tweets across the relevant window, comprising 238 originals,
+91 quote tweets, 409 retweets, and 2 replies including this one), this reply represents one of only two non-
+self direct replies from the @JustCallMeJoeP account in its entire scraped history. The exception-to-pattern
+character of the reply, in the temporal context of the marital-residence vacation, establishes the
+@JustCallMeJoeP account as operating in active coordination with Plaintiff/Counter-Defendant during the
+spoliation-risk window.
+35. The May 12 and May 13, 2026 Scrape Evidence further documents cross-account coordination among
+    the sockpuppet accounts identified at ¶22(d) above, and the additional accounts identified at §III.G,
+    independent of @adezero. The cross-account coordination is captured in the following specific patterns:
+a. On March 28, 2026, the sockpuppet account @phatadvert retweeted six successive tweets in the
+@adezero / @JustCallMeJoeP intimate-banter conversation, with two retweets spaced three seconds apart
+at 03:58:54 and 03:58:57 UTC and two further retweets spaced seven seconds apart at 14:57:59 and
+14:58:06 UTC. The retweeted content includes @adezero's tweet to @JustCallMeJoeP reading:
+"@JustCallMeJoeP is my rack still hot to you or." That content is of a character that arms-length supporter
+amplification cannot account for. The three-second and seven-second retweet intervals on a retweet
+sequence that spans both sides of a two-account conversation are operationally consistent with a single
+operator amplifying her own conversation from a third account.
+b. On March 18, 2026, five sockpuppet accounts (@picklepickleg, @AllysonClermont, @blackjakkkk,
