@@ -1,0 +1,81 @@
+name: coverage
+
+# Satisfies the `coverage` required status check on the aviation-grade org
+# ruleset. See ci.yml for why both were missing and what that cost.
+#
+# ALWAYS-RUN, no `on.paths` and no job-level `if:`, for the same reason: a
+# required check that skips at the job level never reports, which is the
+# deadlock rather than a fix for it.
+#
+# ON THE NUMBER, HONESTLY: the floor is 25%, which is low, and it is low
+# deliberately rather than aspirationally. The suite covers the PURE helpers in
+# generate_site.py, which are the ones where a bug is silent and consequential:
+# a misparsed date misdates a court filing, a bad label mislabels one, and a
+# broken yaml_quote emits front matter that breaks every document at once. The
+# remaining ~70% is filesystem and pdftotext work that is exercised end to end
+# by the real Jekyll build in `ci`, where a failure is loud. Unit-testing it
+# would mean mocking pdftotext, and a suite of mocks proves the mocks.
+#
+# The floor exists to catch regression, not to be a target to game. Raise it
+# when real tests are added; do not raise it by testing trivia.
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Deps
+        run: python3 -m pip install --quiet --disable-pip-version-check pytest pytest-cov
+
+      - name: Tests with coverage floor
+        run: |
+          python3 -m pytest tests/ -q \
+            --cov=generate_site \
+            --cov-report=term-missing \
+            --cov-fail-under=25
+
+      - name: Suite is not vacuous
+        # A suite that has only ever been green is indistinguishable from a
+        # suite that cannot fail. Mutate a real invariant, require RED, then
+        # restore and require GREEN. Without this the job proves nothing except
+        # that pytest ran.
+        #
+        # The mutation drops the month/day validation in parse_filing_date, so
+        # an impossible date like 2026-13-02 would be accepted. If the suite
+        # tolerates that, the tests are not testing.
+        run: |
+          set -euo pipefail
+          cp scripts/generate_site.py /tmp/gs.orig
+          trap 'cp /tmp/gs.orig scripts/generate_site.py' EXIT
+          python3 - <<'EOF'
+          p = "scripts/generate_site.py"
+          s = open(p).read()
+          old = "if 1 <= int(month) <= 12 and 1 <= int(day) <= 31:"
+          assert s.count(old) == 1, "mutation target moved; fix this check, do not delete it"
+          open(p, "w").write(s.replace(old, "if True:"))
+          EOF
+          find . -name '__pycache__' -prune -exec rm -rf {} + 2>/dev/null || true
+          if python3 -m pytest tests/ -q -p no:cacheprovider >/dev/null 2>&1; then
+            echo "::error::suite PASSED against a mutated generate_site.py; the tests are vacuous"
+            exit 1
+          fi
+          echo "OK: suite correctly went red on the mutant"
+          cp /tmp/gs.orig scripts/generate_site.py
+          find . -name '__pycache__' -prune -exec rm -rf {} + 2>/dev/null || true
+          python3 -m pytest tests/ -q -p no:cacheprovider
+          echo "OK: suite green again on the restored source"
