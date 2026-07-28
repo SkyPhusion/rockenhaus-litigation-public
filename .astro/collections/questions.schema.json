@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "anyOf": [
+    {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "question": {
+            "type": "string",
+            "minLength": 1
+          },
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "framing": {
+            "type": "string",
+            "minLength": 1
+          },
+          "framing_author": {
+            "type": "string",
+            "minLength": 1
+          },
+          "citations": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "doc_slug": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "page": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 20
+                }
+              },
+              "required": [
+                "doc_slug",
+                "page",
+                "quote"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "references": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "doc_slug": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "page": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "note": {
+                  "type": "string",
+                  "minLength": 10
+                }
+              },
+              "required": [
+                "doc_slug",
+                "page",
+                "note"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "record_gap": {
+            "default": null,
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "question",
+          "slug",
+          "framing",
+          "framing_author"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "question": {
+            "type": "string",
+            "minLength": 1
+          },
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "framing": {
+            "type": "string",
+            "minLength": 1
+          },
+          "framing_author": {
+            "type": "string",
+            "minLength": 1
+          },
+          "citations": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "doc_slug": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "page": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 20
+                }
+              },
+              "required": [
+                "doc_slug",
+                "page",
+                "quote"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "references": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "doc_slug": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "page": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "note": {
+                  "type": "string",
+                  "minLength": 10
+                }
+              },
+              "required": [
+                "doc_slug",
+                "page",
+                "note"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "record_gap": {
+            "default": null,
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "question",
+          "slug",
+          "framing",
+          "framing_author"
+        ],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

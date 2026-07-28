@@ -1,0 +1,360 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "anyOf": [
+    {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "file": {
+            "type": "string",
+            "pattern": "^\\/assets\\/.*"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "artifact_type": {
+            "type": "string",
+            "enum": [
+              "screenshot_of_public_post",
+              "pdf_correspondence"
+            ]
+          },
+          "source_kind": {
+            "type": "string",
+            "enum": [
+              "public_x_account",
+              "correspondence"
+            ]
+          },
+          "source_account": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "author_visible_in_artifact": {
+            "type": "boolean"
+          },
+          "status_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "posted_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "posted_date_end": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "posted_date_precision": {
+            "type": "string",
+            "enum": [
+              "day",
+              "month",
+              "range",
+              "unknown"
+            ]
+          },
+          "posted_date_source": {
+            "type": "string",
+            "enum": [
+              "visible_in_artifact",
+              "archive_record",
+              "filename_inference"
+            ]
+          },
+          "captured_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "captured_date_precision": {
+            "type": "string",
+            "enum": [
+              "day",
+              "month",
+              "range",
+              "unknown"
+            ]
+          },
+          "captured_upper_bound": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "evidence_source": {
+            "type": "string",
+            "enum": [
+              "screenshot",
+              "archive-capture",
+              "subpoena-return",
+              "correspondence"
+            ]
+          },
+          "archived_url": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "shows_on_face": {
+            "type": "string",
+            "minLength": 20
+          },
+          "supports_links": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "file",
+          "label",
+          "artifact_type",
+          "source_kind",
+          "source_account",
+          "author_visible_in_artifact",
+          "status_id",
+          "posted_date",
+          "posted_date_end",
+          "posted_date_precision",
+          "posted_date_source",
+          "captured_date",
+          "captured_date_precision",
+          "captured_upper_bound",
+          "evidence_source",
+          "archived_url",
+          "shows_on_face",
+          "supports_links"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "file": {
+            "type": "string",
+            "pattern": "^\\/assets\\/.*"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "artifact_type": {
+            "type": "string",
+            "enum": [
+              "screenshot_of_public_post",
+              "pdf_correspondence"
+            ]
+          },
+          "source_kind": {
+            "type": "string",
+            "enum": [
+              "public_x_account",
+              "correspondence"
+            ]
+          },
+          "source_account": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "author_visible_in_artifact": {
+            "type": "boolean"
+          },
+          "status_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "posted_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "posted_date_end": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "posted_date_precision": {
+            "type": "string",
+            "enum": [
+              "day",
+              "month",
+              "range",
+              "unknown"
+            ]
+          },
+          "posted_date_source": {
+            "type": "string",
+            "enum": [
+              "visible_in_artifact",
+              "archive_record",
+              "filename_inference"
+            ]
+          },
+          "captured_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "captured_date_precision": {
+            "type": "string",
+            "enum": [
+              "day",
+              "month",
+              "range",
+              "unknown"
+            ]
+          },
+          "captured_upper_bound": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "evidence_source": {
+            "type": "string",
+            "enum": [
+              "screenshot",
+              "archive-capture",
+              "subpoena-return",
+              "correspondence"
+            ]
+          },
+          "archived_url": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "shows_on_face": {
+            "type": "string",
+            "minLength": 20
+          },
+          "supports_links": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "file",
+          "label",
+          "artifact_type",
+          "source_kind",
+          "source_account",
+          "author_visible_in_artifact",
+          "status_id",
+          "posted_date",
+          "posted_date_end",
+          "posted_date_precision",
+          "posted_date_source",
+          "captured_date",
+          "captured_date_precision",
+          "captured_upper_bound",
+          "evidence_source",
+          "archived_url",
+          "shows_on_face",
+          "supports_links"
+        ],
+        "additionalProperties": false
+      }
+    }
+  ]
+}
