@@ -8,3 +8,12 @@ _data/indexnow.json
 _site/
 .wrangler/
 .playwright-mcp
+
+# Python test artifacts. These were committed by accident in the PR that added
+# the test suite; every local pytest run regenerates them with different bytes,
+# so a tracked copy makes the working tree dirty after any test run and buries
+# real changes in noise. A stale .pyc also served MUTATED bytecode during a
+# mutation test here, briefly making a restored source look broken.
+.coverage
+__pycache__/
+*.pyc

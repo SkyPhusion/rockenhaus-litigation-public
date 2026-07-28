@@ -75,8 +75,11 @@ jobs:
         # The defect that put this site in the hole was third-party
         # characterisations reaching titles, descriptions and JSON-LD, where
         # search engines read them as structured claims. Fail the build rather
-        # than rediscover it. Scoped to indexable metadata only: exhibit pages
-        # under /evidence/ are noindex and quotation of filings is legitimate.
+        # than rediscover it. Scoped to the <head> of every built page, which
+        # deliberately INCLUDES /evidence/: that page is noindex, but if
+        # accusation text ever reached its own title or description this should
+        # still catch it. What the scoping excludes is page BODIES, where
+        # quotation of filings is legitimate and expected.
         #
         # SCOPE LIMIT, deliberate: this matches CHARACTERISATION terms, not every
         # mention of a third party. Naming someone as the recipient of a served
