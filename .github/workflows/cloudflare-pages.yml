@@ -31,6 +31,33 @@ jobs:
       - name: Build Jekyll site
         run: bundle exec jekyll build --destination _site
 
+
+      # --- Astro half ---
+      #
+      # Astro builds ONLY /evidence/ and /answers/ as static HTML, then dist/ is
+      # merged into _site/ and ONE `pages deploy` ships both halves. No second
+      # Pages project, no Worker in front, no routing or DNS change.
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Node dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Verify citations against the corpus
+        run: node scripts/verify-citations.mjs
+
+      - name: Build Astro (evidence + answers)
+        run: npm run build
+
+      - name: Generators stay in their lanes
+        run: node scripts/check-collisions.mjs _site dist
+
+      - name: Merge Astro output into the site
+        run: cp -r dist/. _site/
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:

@@ -1,0 +1,132 @@
+---
+// Exhibit index. noindex, follow.
+//
+// Two sections, in this order deliberately:
+//   1. The identification chains, because the chain is the substance. A
+//      screenshot proves an ACCOUNT published something; it does not prove who
+//      operates the account, and it does not prove what that person owns. Those
+//      are three links and they are shown as three links.
+//   2. The exhibits themselves, each linking to its own stable, citable URL.
+//
+// Metadata carries no names and no characterisations. The guard in BaseLayout
+// enforces that rather than trusting this comment.
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { exhibitRef, STATUS_LABEL } from "../../lib/exhibits";
+
+const exhibitEntries = await getCollection("exhibits");
+const chainEntries = await getCollection("chains");
+
+const exhibits = exhibitEntries
+  .map((e) => e.data)
+  .sort((a, b) => (a.posted_date ?? "").localeCompare(b.posted_date ?? ""));
+
+const refOf = new Map(exhibits.map((e, i) => [e.id, exhibitRef(i)]));
+const chains = chainEntries.map((c) => c.data);
+
+const title = "Exhibit index | rockenhaus.net";
+const description =
+  "Provenance record for the exhibits referenced in filed Michigan court documents. " +
+  "Each exhibit has a stable citable URL, recorded provenance, and an explicit statement " +
+  "of what it does and does not establish. Not indexed.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  noindex={true}
+  breadcrumbs={[{ name: "Home", url: "/" }, { name: "Exhibit index" }]}
+>
+  <h1>Exhibit index</h1>
+
+  <p class="hub-lead">
+    This page records provenance for artifacts referenced in the filed court documents.
+    Each exhibit has a stable URL so a filing or letter can cite it directly. The index
+    describes what each artifact is and what it shows on its face. It does not
+    characterise anyone: allegations belong in filed pleadings, where they are
+    adjudicated.
+  </p>
+
+  <section aria-labelledby="chains">
+    <h2 id="chains">What the exhibits establish</h2>
+    <p>
+      A screenshot shows that an account published something. On its own it does not
+      show who operates that account, and it does not show what that person owns or
+      runs. Those are separate questions with separate evidence, so they are set out
+      separately below. Where this archive holds nothing supporting a step, it says so.
+    </p>
+
+    {chains.map((chain) => (
+      <article class="chain">
+        <h3>{chain.subject}</h3>
+        <p>{chain.summary}</p>
+        <ol class="chain-links">
+          {chain.links.map((link) => (
+            <li class={`chain-link chain-link--${link.status}`}>
+              <p class="chain-link__statement"><strong>{link.statement}</strong></p>
+              <p class="chain-link__status">{STATUS_LABEL[link.status]}</p>
+              {link.note && <p class="chain-link__note">{link.note}</p>}
+              {link.evidence.length > 0 ? (
+                <p class="chain-link__evidence">
+                  Supporting exhibits:{" "}
+                  {link.evidence.map((id, i) => (
+                    <>
+                      {i > 0 && ", "}
+                      <a href={`/evidence/${id}/`}>{refOf.get(id) ?? id}</a>
+                    </>
+                  ))}
+                </p>
+              ) : (
+                <p class="chain-link__evidence chain-link__evidence--none">
+                  No exhibit in this archive supports this step.
+                </p>
+              )}
+              {link.caveats && link.caveats.length > 0 && (
+                <ul class="chain-link__caveats">
+                  {link.caveats.map((c) => <li>{c}</li>)}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ol>
+      </article>
+    ))}
+  </section>
+
+  <section aria-labelledby="exhibits">
+    <h2 id="exhibits">Exhibits</h2>
+    <table class="exhibit-table">
+      <thead>
+        <tr>
+          <th scope="col">Ref</th>
+          <th scope="col">Artifact</th>
+          <th scope="col">Posted</th>
+          <th scope="col">Account visible</th>
+          <th scope="col">Archived</th>
+        </tr>
+      </thead>
+      <tbody>
+        {exhibits.map((e, i) => (
+          <tr>
+            <td><a href={`/evidence/${e.id}/`}>{exhibitRef(i)}</a></td>
+            <td>{e.artifact_type === "pdf_correspondence" ? "PDF correspondence" : "Screenshot of a public post"}</td>
+            <td>
+              {e.posted_date ?? "not recorded"}
+              {e.posted_date_end ? ` to ${e.posted_date_end}` : ""}
+              {e.posted_date_precision === "month" ? " (month only)" : ""}
+            </td>
+            <td>{e.author_visible_in_artifact ? "yes" : "no, cropped"}</td>
+            <td>{e.archived_url ? "yes" : "no"}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <p class="note">
+      No exhibit in this archive currently carries an independent archive reference
+      (Wayback or archive.today). If a post is deleted the screenshot is the only
+      remaining record, which is materially weaker. Capturing archive references is
+      possible now and impossible after deletion.
+    </p>
+  </section>
+</BaseLayout>

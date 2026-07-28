@@ -17,3 +17,16 @@ _site/
 .coverage
 __pycache__/
 *.pyc
+
+# Astro / Node
+node_modules/
+dist/
+.astro/
+
+# NOTE: _corpus/ is deliberately NOT ignored.
+#
+# Everything else generated here is ignored because it is derivable noise. The
+# corpus is different: it is the evidentiary surface a public answer engine
+# quotes from, so it must be reviewable in a pull request diff BEFORE it can be
+# quoted. It is also a hard requirement of the sync tooling, which uploads
+# git-tracked files only -- an ignored corpus cannot reach the index at all.

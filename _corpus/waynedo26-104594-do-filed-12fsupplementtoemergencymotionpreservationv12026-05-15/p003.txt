@@ -1,0 +1,59 @@
+Document: 12f Supplement To Emergency Motion Preservation V1 2026-05-15
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-15
+Page: 3 of 8
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12fsupplementtoemergencymotionpreservationv12026-05-15/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12f_Supplement_to_Emergency_Motion_Preservation_v1_2026-05-15.pdf
+
+---
+
+A. The Friend Request
+
+ 6. On the evening of May 13, 2026, within approximately three hours of the CCApps portal's acceptance of
+    the Emergency Motion at 14:27 EDT, a user account on the Meta Threads platform bearing the handle
+    conrad.rockenhaus sent a friend request to witness Ann Helgren via her Threads account.
+ 7. The conrad.rockenhaus account displayed to Ms. Helgren as if originating from Defendant. The profile
+    photograph is a photograph of Defendant. The profile URL incorporates Defendant's name. The
+    biographical text identifies the account as belonging to Defendant. The profile includes a clickable link to
+    Defendant's premarital domain rockenhaus.com.
+ 8. Ms. Helgren contacted Defendant by telephone the same evening to report the friend request and to
+    confirm whether the contact had originated from Defendant. Defendant confirmed to Ms. Helgren that the
+    contact had not originated from him.
+ 9. The conrad.rockenhaus Meta Threads account is Defendant's former Threads account, tied to an
+    Instagram account that Defendant created during the marriage and that Defendant has not had
+    administrative access to since the digital-account compromise described at paragraphs 44 and 50 of the
+    Counterclaim. Plaintiff has had administrative control of the credentials to that Instagram account, and
+    thereby of the linked Threads account, since at least early February 2026.
+10. Defendant did not send the friend request to Ms. Helgren. Defendant did not authorize any other person
+    to send the friend request on his behalf. Defendant did not have advance knowledge of the friend
+    request and learned of it only when Ms. Helgren contacted him to inquire. Defendant has no operative
+    administrative access to the conrad.rockenhaus Threads account or the linked Instagram account
+    through which the request was sent.
+11. Ms. Helgren did not accept the friend request. Ms. Helgren preserved screenshots of the friend request
+    notification, the profile page, and the request-pending state, with timestamps and device-of-receipt
+    metadata. The screenshots are preserved in Defendant's evidence custody chain and are available for in
+    camera review or production subject to a protective order, as the Court directs.
+
+                                        B. The Operational Significance
+12. Ms. Helgren is the most-evidenced witness in this matter. Ms. Helgren has a sworn affidavit on the
+    record in the related Personal Protection Order matter (Wayne PPO Case No. 26-102221-PP, Exhibit 15,
+    notarized April 24, 2026 by Candace Bowie) corroborating Plaintiff's March 2, 2026 false statements to
+    the Redford Township Police Department regarding Defendant's residency at 26695 Ross Drive, and
+    corroborating Plaintiff's solicitation of false statements to the Veterans Administration regarding
+    Defendant's mental health status. Ms. Helgren is the only witness named in the May 4, 2026 "Dead
+    Man's Switch" Facebook post described at paragraphs 84 through 85 of the Counterclaim. Ms. Helgren
+    is the witness who walked into the Redford Township Police Department with Defendant on May 5, 2026
+    in connection with RPD Case 26-7649 described in Section IV below.
+13. A communication to Ms. Helgren that appears on her own device as originating from Defendant is
+    structurally positioned to produce one or more of the following effects, each harmful to Defendant's
+    interest in this proceeding:
+a. Information elicitation. Ms. Helgren may share with the person she believes to be Defendant
+information regarding Defendant's litigation strategy, witness coordination, or evidentiary holdings that she
+would not share with Plaintiff or with third parties.
+b. Manipulated communication record. A back-and-forth exchange initiated by the impersonating account
+may later be produced in adversarial proceedings as a record of Defendant initiating contact with Ms.
+Helgren in violation of the Personal Protection Order entered against Defendant, of professional standards
+governing witness contact, or of any settlement or stay-away framework that the Court enters in this matter.
+c. Examination trap. Ms. Helgren may be confronted on cross-examination, deposition, or affidavit with the

@@ -1,0 +1,61 @@
+Document: 04d Third Supplement Omnibus Part One Airtag Cyberstalking 2026-05-12
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-12
+Page: 6 of 9
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-04dthirdsupplementomnibuspartoneairtagcyberstalking2026-05-12/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/04d_Third_Supplement_Omnibus_Part_One_AirTag_Cyberstalking_2026-05-12.pdf
+
+---
+
+at ¶¶22-23 above.
+30. The conversation-thread structure of the broadcast tweet identified at ¶27 auto-populates the @-mention
+    chain of participants. Each of the three reply tweets identified at ¶28 carries @KiwiFarmsDotNet (X
+    numeric user identifier 1397654962742644736) in its user_mentions entities. The KiwiFarms Twitter
+    account was therefore a participant in the broadcast conversation structure.
+31. Each of the X public-record items identified at ¶¶27 through 30 above is currently visible only because
+    Plaintiff/Counter-Defendant has not yet deleted the underlying tweets or deactivated the sockpuppet
+    accounts. Each item is subject to deletion or platform-level termination at any time.
+
+                 III. AUTHORITY FOR ADDITIONAL PRESERVATION CATEGORIES
+                              A. Michigan Stalking and Cyberstalking Statutes
+32. The conduct described in Section II above is conduct that, in Defendant's submission, constitutes
+    stalking within the meaning of MCL 750.411h. Specifically, MCL 750.411h(1)(d) defines "stalking" as "a
+    willful course of conduct involving repeated or continuing harassment of another individual that would
+    cause a reasonable individual to feel terrorized, frightened, intimidated, threatened, harassed, or
+    molested and that actually causes the victim to feel terrorized, frightened, intimidated, threatened,
+    harassed, or molested."
+33. The conduct described in Section II above includes conduct that constitutes "posting a message" within
+    the meaning of MCL 750.411s. Specifically, MCL 750.411s(1)(a) defines the offense to include the
+    posting of a message through the use of any medium of communication, including a computer or
+    computer network or telecommunications network, with the intent that the message be used to cause the
+    victim, or a member of the victim's family or household, to feel terrorized, frightened, intimidated,
+    threatened, harassed, or molested.
+34. Defendant does not request that this Court adjudicate the criminal-law question of whether the conduct
+    constitutes a stalking offense; that determination lies with the prosecuting agencies to which the conduct
+    has been reported, including Redford Police Department Case No. 26-7649 (assigned to Co-Response
+    Clinician Sonia McCain). Defendant references the statutes for the limited purpose of establishing the
+    discovery-relevance of the categories of evidence requested for preservation: the records identified in
+    Sections II.A through II.F are the records that would be material to any forum, civil or administrative, in
+    which the cyberstalking conduct is the subject of inquiry, including Defendant's deemed-admitted
+    Counterclaim in this proceeding (specifically the harassment-pattern allegations underlying Counterclaim
+    Count H sanctions analysis).
+
+                                   B. MCR 2.310 and the Duty to Preserve
+35. MCR 2.310 authorizes the Court to enter orders necessary to preserve documents and tangible things
+    material to discovery. The duty to preserve evidence material to litigation arises independently of any
+    court order at the point at which a party reasonably anticipates litigation. Brenner v. Kolk, 226 Mich. App.
+    149, 162 (1997).
+
+                                            C. Spoliation Doctrine
+
+36. The spoliation doctrine in Michigan, articulated in Teel v. Meredith, 284 Mich. App. 412, 420 (2009),
+    provides that when a party destroys, alters, conceals, or fails to preserve evidence material to litigation,
+    the trial court may impose sanctions including an adverse-inference instruction, exclusion of evidence, or
+    other relief commensurate with the prejudice. Where, as here, the categories of evidence at issue exist in
+    third-party platform records whose retention is limited and whose operator-side termination is at the
+    unilateral discretion of the party against whom the evidence would be deployed, the prospective
+    preservation order is the appropriate remedy.
+
+                            IV. ADDITIONAL PRESERVATION CATEGORIES

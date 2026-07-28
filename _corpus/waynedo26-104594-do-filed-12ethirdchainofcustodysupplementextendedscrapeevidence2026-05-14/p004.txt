@@ -1,0 +1,73 @@
+Document: 12e Third Chain Of Custody Supplement Extended Scrape Evidence 2026-05-14
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-14
+Page: 4 of 5
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12ethirdchainofcustodysupplementextendedscrapeevidence2026-05-14/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12e_Third_Chain_of_Custody_Supplement_Extended_Scrape_Evidence_2026-05-14.pdf
+
+---
+
+File            Query subject        Records                            Description
+                                                        Apify negative-result return. The hash digest of this file
+                   Quote-tweets of May 8,               is identical to the hash digest of the negative-result
+ dataset_tweet-
+               2026 "Dead Man's     1          return inventoried in the Second Supplement,
+ scraper_2026-
+               Switch" broadcast    (noResults paragraph 18 (file dataset_tweet-scraper_2026-05-
+ 05-14_22-14-
+               (tweet identifier    marker)    14_22-02-27-036.json), because the Apify platform's
+ 54-620.json
+               2052837253408280726)            noResults marker file content is identical across
+                                                        queries regardless of the originating query parameters.
+
+                                         V. SHA-256 HASH MANIFEST
+13. The following table identifies each of the nine scrape files comprising the May 14, 2026 Extended Scrape
+    Evidence by filename, captured size in bytes, and SHA-256 cryptographic hash. The hash values were
+      computed using the Python hashlib.sha256 implementation on the as-stored binary content of each file
+      at the file path under Defendant/Counter-Plaintiff's working directory.
+
+                        Size
+ #     Filename                                                      SHA-256
+                       (bytes)
+     dataset_tweet-
+     scraper_2026-
+ 1                 25            a716a5c7a0568f11009d07fa3a276a6f569511111d46f8320f40850368d1b642
+     05-14_22-14-
+     54-620.json
+     dataset_tweet-
+     scraper_2026-
+ 2                    7,469,189 10640d53fa9283580fece14771f9746247d3a7139d32d2f96a997530f69565aa
+     05-14_22-15-
+     26-024.json
+     dataset_tweet-
+     scraper_2026-
+ 3                    5,811,811 6cbb69b4626ac86277f1a134276304bde4d36241041b10d3f517af8bab6aa67a
+     05-14_22-15-
+     37-251.json
+     dataset_tweet-
+     scraper_2026-
+ 4                    28,478     fdba979b2271f06fbe4a116ab93497c6f807a5758e417267d396a0ac43853351
+     05-14_22-20-
+     14-436.json
+     dataset_tweet-
+     scraper_2026-
+ 5                    2,972      9c17828fb54b107325f158b50db853b2df10dfcba8a6742989e46e20a602feeb
+     05-14_22-20-
+     30-315.json
+     dataset_tweet-
+     scraper_2026-
+ 6                 27,001        a5b7809eecd3e42a9797e50b05e2749d158feca10c784563a94f7e721ca7f797
+     05-14_22-20-
+     46-755.json
+     dataset_tweet-
+     scraper_2026-
+ 7                    8,834      c5529327156a08a7b23bfdab3782b668461e99c2c94b99c6e910e2521b87f4d7
+     05-14_22-21-
+     05-308.json
+     dataset_tweet-
+     scraper_2026-
+ 8                    60,781     1fae3c56b6e3a6d1df1539b9d287d47ae8b468f8408a2cff5bf50d8e729019f4
+     05-14_22-21-
+     32-606.json

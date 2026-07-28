@@ -1,0 +1,60 @@
+Document: 11a Affidavit In Support Of Default Judgment 2026-05-12
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-12
+Page: 3 of 4
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-11aaffidavitinsupportofdefaultjudgment2026-05-12/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/11a_Affidavit_in_Support_of_Default_Judgment_2026-05-12.pdf
+
+---
+
+the Counterclaim establishes Counter-Defendant's retention of the property as enumerated.
+
+                                  VI. PREMARITAL INTERNET DOMAINS
+15. I have continuously owned the internet domain rockenhaus.com since 1999, more than two decades
+    before my marriage to Counter-Defendant on May 20, 2023. I have continuously owned skyphusion.com
+    and greyponyit.com since dates predating the marriage as well. WHOIS history records and registrar
+    records reflect these registrations, and a WhoisXMLAPI lookup of rockenhaus.com is included in the
+    case file as documentary corroboration.
+16. None of these domains was acquired during the marriage. Each is my premarital separate property.
+17. Since the filing of the Personal Protection Order in February 2026, Counter-Defendant has continued to
+    control rockenhaus.com (including its DNS records, hosting, and email), through her administration of the
+    Google Workspace tenancy at rockenhaus.com. She has used rockenhaus.com as a public-advocacy
+    hub during the same period in which she has represented to law enforcement and to this Court that she
+    is in fear of me. She has retained the registrar credentials, DNS settings, and hosting accounts
+    notwithstanding the premarital character of the domains.
+
+                               VII. CANNABYTES, LLC, OFFICER STATUS
+18. I am a formally designated officer of Cannabytes, LLC, holding the title of Vice President of Systems
+    Engineering. I am listed as such in the LLC formation documents on file with the Michigan Department of
+    Licensing and Regulatory Affairs and in the company's internal records. During the marriage, I served as
+    the systems engineer and technical infrastructure manager for Cannabytes, LLC, building, maintaining,
+    and administering the company's technical systems. Counter-Defendant was approved by U.S.
+    Probation as my employer through Cannabytes, LLC.
+19. Since the filing of the Personal Protection Order, I have been excluded from all Cannabytes, LLC
+    operations, systems, and accounts. I have received no accounting of business revenues, expenses,
+    assets, or liabilities. I have no access to the company's financial records, customer accounts, or internal
+    communications.
+
+            VIII. VERIFIED STATEMENT DEFECTS (MCR 3.206(C), SCAO FORM FOC 23)
+20. Counter-Defendant filed a Verified Statement on SCAO Form FOC 23 pursuant to MCR 3.206(C) with
+    her Verified Complaint on April 9, 2026. I have reviewed that Verified Statement as filed in the case
+    record. It is facially incomplete as to Counter-Defendant's own income. Item 18 (Occupation) is
+    completed as "Self Employed." Item 19 (Business/Employer) is completed as "Cannabytes, LLC." Item
+    20 (Gross weekly Income) is left blank. By contrast, the same form fields completed by Counter-
+    Defendant about me at items 41 and 43 include both my occupation and a specific dollar figure for gross
+    weekly income.
+21. From my direct testimonial knowledge gained during the marriage, I also know the following facts about
+    Counter-Defendant's income that are not disclosed anywhere in the Verified Statement. Counter-
+    Defendant is the income beneficiary of a third-party-settled trust established by her deceased mother.
+    The trustee is her nephew, Robby. Counter-Defendant receives approximately $2,000 per month in
+    distributions from the trust. The trust has been distributing to Counter-Defendant on a recurring monthly
+    basis throughout the marriage and through the present. To my knowledge, the corpus is held subject to a
+    spendthrift provision; the recurring monthly distributions to Counter-Defendant are post-distribution.
+22. None of the trust facts in Paragraph 21 is disclosed in Counter-Defendant's Verified Statement.
+    Combined with the blank gross-weekly-income field at item 20, the Verified Statement is incomplete both
+    on its face and substantively as to "all sources of income" required by MCR 3.206(C). I bring these facts
+    to this Court's attention not to seek separate relief in the Motion that this Affidavit supports, but to inform
+    the Court's exercise of discretion in entering default judgment and to provide context for any subsequent
+    damages-hearing or property-division proceedings under MCL 552.19, MCL 552.401, and MCL 552.452.

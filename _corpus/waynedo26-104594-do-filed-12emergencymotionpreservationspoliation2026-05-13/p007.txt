@@ -1,0 +1,62 @@
+Document: 12 Emergency Motion Preservation Spoliation 2026-05-13
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-13
+Page: 7 of 13
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12emergencymotionpreservationspoliation2026-05-13/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12_Emergency_Motion_Preservation_Spoliation_2026-05-13.pdf
+
+---
+
+@PunkyHomegirl, and @LuceMargarita) ceased producing public content on the same day or within a
+twenty-four-hour window. The May 12, 2026 Scrape Evidence does not capture any cross-account farewell,
+transition, or notification messages among those five accounts on the shutdown date. Five independent
+users separately losing interest in the X platform would not produce a same-day silence cluster of this
+character; coordinated single-operator shutdown is the most parsimonious explanation.
+c. Additional cross-sockpuppet interactions captured in the May 12, 2026 Scrape Evidence include
+@spuntpatrol ↔ @blackjakkkk (eight captured interactions), @spuntpatrol ↔ @LuceMargarita (seven),
+@spuntpatrol ↔ @phatadvert (five), @JustCallMeJoeP ↔ @phatadvert (nine), and @LeighCheri_ ↔
+@alg0queen (two). Each cross-sockpuppet pair is documented through third-party-observable X public-
+record metadata (user_mentions entities, in-reply-to fields, and retweet records) and is independently
+subpoena-confirmable through X Corp.'s records.
+
+36. The combined documentary record at ¶¶31 through 35 above establishes that @rosebuttcheeks,
+    @JustCallMeJoeP, @spuntpatrol, @adezero, and the eleven additional sockpuppet accounts at ¶22(d)
+    operate as a coordinated account architecture under common control or close coordination with
+    Plaintiff/Counter-Defendant. Content material to the deemed-admitted Counterclaim is distributed across
+    all of those accounts. Spoliation by any one of those accounts impairs the documentary record. The
+    records subject to spoliation include but are not limited to login session histories, source IP addresses,
+    direct-message records among the accounts, recovery-information records that would establish common
+    control, and the content of posts, replies, retweets, and quote tweets that document the coordination
+    pattern. Each of those record categories is preservable by subpoena to X Corp. but is subject to
+    alteration or termination by the operating party from any internet-connected device.
+
+                   H. Coordinated Operational Withdrawal of the Sockpuppet Network
+37. The May 12, 2026 Scrape Evidence further establishes a coordinated multi-wave pattern of activity-
+    cessation across the eleven X sockpuppet accounts identified at ¶22(d) above. Last-activity timestamps
+    captured for those accounts are as follows:
+
+a. Wave one, March 17 to March 18, 2026: Five accounts (@picklepickleg on March 17; @AllysonClermont,
+@blackjakkkk, @PunkyHomegirl, and @LuceMargarita all on March 18) ceased posting on or within twenty-
+four hours of each other.
+b. Wave two, March 20 to March 29, 2026: Three accounts (@LeighCheri_, @alg0queen, @phatadvert)
+ceased posting in the eleven-day window following wave one.
+c. Wave three, April 1 to April 5, 2026: Two accounts (@p1ratech and @4chantress) ceased posting in the
+four-day window approximately two weeks after wave one.
+d. The cessation of activity across eleven supposedly independent accounts within a nineteen-day window,
+including a same-day cessation across five accounts, is not consistent with eleven separate users
+independently losing interest in the X platform. The pattern is consistent with coordinated operator-side
+dormancy of accounts in preparation for litigation-driven scrutiny. The cessation waves preceded the April 9,
+2026 filing of Plaintiff/Counter-Defendant's Verified Complaint for Divorce in this proceeding and continued
+through the April 15, 2026 filing of Defendant's Counterclaim alleging the sockpuppet operation.
+
+38. Plaintiff/Counter-Defendant's verified primary X account @adezero, which on the months preceding April
+    11, 2026 had been a high-volume posting account producing on the captured data approximately 438
+    tweets in March 2026 alone, ceased posting on April 11, 2026 at 19:43:39 UTC. The final captured tweet
+    was the message "I am hurting so bad today." As of the filing of this Motion, the @adezero account
+    remains active on the X platform but has produced no new public content for more than thirty days. The
+    operational silence on the verified main account, coupled with the contemporaneous coordinated
+    cessation across the sockpuppet network described at ¶36 above, establishes operational capacity and
+    willingness on the part of Plaintiff/Counter-Defendant to wind down public-facing accounts on a litigation-
+    driven timeline. The accounts that remain active for new content as of the filing of this Motion are

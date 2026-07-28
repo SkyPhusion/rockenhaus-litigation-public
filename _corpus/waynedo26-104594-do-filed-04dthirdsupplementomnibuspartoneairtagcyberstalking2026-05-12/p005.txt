@@ -1,0 +1,58 @@
+Document: 04d Third Supplement Omnibus Part One Airtag Cyberstalking 2026-05-12
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-12
+Page: 5 of 9
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-04dthirdsupplementomnibuspartoneairtagcyberstalking2026-05-12/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/04d_Third_Supplement_Omnibus_Part_One_AirTag_Cyberstalking_2026-05-12.pdf
+
+---
+
+22. Between May 5 and May 7, 2026, a Facebook account operating under the name "Demi-Jo Matthews"
+    performed three operations that built on the May 4, 2026 Dead Man's Switch post:
+a. The Demi-Jo Matthews account shared the May 4, 2026 post into the Michigan Missing Persons Alerts
+Facebook group (a public group of approximately 1,700 members), framing the post as concerning a person
+"missing for at least a month, pinging in Ann Arbor";
+b. The Demi-Jo Matthews account commented on a public Facebook post by Defendant's witness Ann
+Helgren, dated April 24, 2026, with text reading "Is that right before you killed him?"; and
+c. The Demi-Jo Matthews account was configured to block Ms. Helgren from viewing the account's content,
+an operational configuration that permitted the account to comment on Ms. Helgren's posts while concealing
+the account's identity from her.
+23. On May 7, 2026, a third-party Facebook user (Matthew Angel Young) independently constructed a
+    Google Maps overlay from the fabricated GPS coordinates contained in the May 4, 2026 Dead Man's
+    Switch post. The Demi-Jo Matthews account interacted with that overlay and, on information and belief,
+    posted within approximately sixteen hours prior to May 7, 2026 at 10:46 AM, linking a coordinate labeled
+    "4288 Cloverlane Dr" to a real Mlive.com news story regarding a fire at that address, framing the linkage
+    as evidence "that Conrad was killed at that location."
+
+         E. The May 9, 2026 Witness-Targeting Email Campaign Under a Family-Identifier Alias
+24. On May 9, 2026, at 5:31 AM EDT and again at 6:06 AM EDT, two emails were transmitted to
+    Defendant's witness Ann Helgren from a Gmail address at ecigaretteslut@gmail.com, operating under
+    the display name "Angeline M." The two emails developed the narrative that Defendant had "died
+    horrifically in fire" and that Ms. Helgren was responsible.
+25. The "Angeline" display name corresponds to the first name of Ms. Helgren's adult daughter. The use of a
+    family-identifier as the display name on the harassment alias is, on the factual record before the Court,
+    an attacker-knowledge signal: the operator of the ecigaretteslut@gmail.com address possessed family-
+    identifier information specific to Ms. Helgren that is not publicly available, indicating an operator with
+    personal knowledge of Ms. Helgren's family.
+26. The ecigaretteslut@gmail.com account is held by Google LLC. Subscriber information, login-session
+    history with source IP addresses, account creation records, recovery information, and connected-device
+    records are preservable by subpoena to Google under MCR 2.305 and California UIDDA process, and
+    are subject to retention under Google's standard policies.
+
+                  F. Live Coordination Visible in the X (Formerly Twitter) Public Record
+27. On May 8, 2026 at 19:45:18 UTC, the X account at @spuntpatrol (one of the sockpuppet accounts
+    inventoried at Category T of the Second Supplement to Part One) published a broadcast tweet bearing
+    tweet identifier 2052837253408280726. The broadcast tweet expanded a URL field pointing to a
+    Facebook profile under Defendant's name. As of capture, the broadcast tweet had 861 views, 8 likes,
+    and 6 retweets.
+28. Three reply tweets to the broadcast tweet identified above appear in the X public record:
+a. Tweet identifier 2052873275735253491, posted by an aligned third-party amplifier account
+(@BiancaWestfall) on May 8, 2026 at 22:08 UTC;
+b. Tweet identifier 2053019730819314068, posted by an unaffiliated bystander account (@lordofsinatra) on
+May 9, 2026 at 07:50 UTC, containing the text "I don't understand"; and
+c. Tweet identifier 2053054715122888881, posted by @spuntpatrol on May 9, 2026 at 10:09 UTC,
+containing the text "He's dead."
+29. The "He's dead." reply exploited the unaffiliated bystander's good-faith confusion as the setup line,
+    building on the May 4, 2026 Dead Man's Switch post and the Demi-Jo Matthews amplification described

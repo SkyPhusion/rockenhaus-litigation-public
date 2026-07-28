@@ -1,0 +1,63 @@
+Document: 12d Second Chain Of Custody Supplement Scrape Evidence 2026-05-14
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-14
+Page: 4 of 4
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12dsecondchainofcustodysupplementscrapeevidence2026-05-14/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12d_Second_Chain_of_Custody_Supplement_Scrape_Evidence_2026-05-14.pdf
+
+---
+
+Evidence. The operators of the coordinated activity have, by the timing pattern, demonstrated awareness
+    that X is being preserved and have moved their activity to platforms with weaker scraping infrastructure
+    or to direct one-to-one communication channels (email, Threads friend request) that are not publicly
+    visible.
+17. Defendant/Counter-Plaintiff requests that this Honorable Court treat the operational migration
+    documented in this Supplement as an additional ground for entry of the requested Preservation Order,
+    since the cross-platform migration of the coordinated activity creates a continuing and elevated risk of
+    evidence loss on the migration-destination platforms (Meta-owned Facebook and Threads, and email
+    service providers) absent immediate preservation directives.
+
+                                       VI. SHA-256 HASH MANIFEST
+18. The following table identifies each of the three scrape files comprising the May 14, 2026 Scrape
+    Evidence by filename, captured size in bytes, and SHA-256 cryptographic hash. The hash values were
+    computed using the Python hashlib.sha256 implementation.
+
+                        Size
+     Filename                                                      SHA-256
+                     (bytes)
+ dataset_tweet-
+ scraper_2026-
+                   11,155,609 14275dd7fedc0c58eef48b894aacd9beff4e41d87203549957f48f681069be77
+ 05-14_22-02-06-
+ 039.json
+ dataset_tweet-
+ scraper_2026-
+                   7,309        512d5965c536d54d22d751fd58c525f9d1449ab0ba2cc03be5ef945027e2d782
+ 05-14_22-02-15-
+ 830.json
+ dataset_tweet-
+ scraper_2026-
+                   25           a716a5c7a0568f11009d07fa3a276a6f569511111d46f8320f40850368d1b642
+ 05-14_22-02-27-
+ 036.json
+
+19. The three foregoing files, together with the eighteen files identified in the First Supplement, constitute the
+    complete Scrape Evidence record for the X-network coordinated activity captured between May 12, 2026
+    and May 14, 2026.
+
+                                       VII. CONTINUING PRODUCTION
+20. Defendant/Counter-Plaintiff retains the three foregoing files on local storage in their original unmodified
+    form, with their original captured filenames intact, and is willing to produce them in their original Apify-
+    returned form to this Honorable Court or to opposing counsel on subpoena duces tecum or other
+    reasonable production directive.
+
+ Respectfully submitted,
+ __________________________________
+ Conrad Alan Rockenhaus
+ Defendant/Counter-Plaintiff, pro se
+ 1690 Brookfield Drive
+ Ann Arbor, Michigan 48103
+ conrad@rockenhaus.net
+ Dated: May 15, 2026

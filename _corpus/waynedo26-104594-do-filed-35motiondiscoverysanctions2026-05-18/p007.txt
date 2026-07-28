@@ -1,0 +1,61 @@
+Document: 35 Motion Discovery Sanctions 2026-05-18
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-18
+Page: 7 of 14
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-35motiondiscoverysanctions2026-05-18/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/35_Motion_Discovery_Sanctions_2026-05-18.pdf
+
+---
+
+same factual record.
+
+                                F. Requested Relief Under MCR 2.312(B)(3)
+The Court should determine, pursuant to MCR 2.312(B)(3), that Plaintiff/Counter-Defendant's Answers to
+Defendant's First Set of Requests for Admissions Nos. 1 through 53 are insufficient and that the matters set
+forth in those Requests are deemed admitted.
+
+  III. PLAINTIFF/COUNTER-DEFENDANT HAS FAILED TO ANSWER THE INTERROGATORIES
+
+                                              A. Legal Standard
+MCR 2.309(B)(3) requires that interrogatories be answered separately, fully, in writing, and under oath
+within twenty-eight days of service. MCR 2.313(A)(2)(b) authorizes a party seeking discovery to move for an
+order compelling answers when a party "fails to answer an interrogatory submitted under MCR 2.309." MCR
+2.313(A)(2)(a) requires that the motion include a certification that the movant has in good faith conferred or
+attempted to confer with the party failing to respond.
+
+                                        B. Failure to Answer Is Total
+Plaintiff/Counter-Defendant has not served Answers to any Interrogatory in Defendant's First Set of
+Interrogatories. The twenty-eight-day deadline under MCR 2.309(B)(3) expired on May 14, 2026 by
+electronic service and, at the outside, on May 18, 2026 by physical mail service with the three-day mail rule
+applied. No extension was sought. No protective order was sought. No partial response of any kind has
+been received as of the date of this Motion. The certification of meet-and-confer under MCR 2.313(A)(2)(a)
+is satisfied by the May 13, 2026 11:14 UTC written communication described in Section I.7 above.
+Plaintiff/Counter-Defendant's selective service of RFA Answers six hours after that communication, in the
+same email package that omitted Interrogatory Answers and RFP responses, confirms that the meet-and-
+confer was received and considered.
+
+                                  C. Subject Matter of the Interrogatories
+The First Set of Interrogatories on which Defendant moves to compel covers Nos. 1 through 20. The relief
+Defendant seeks in this Motion is without prejudice to Defendant's separately pending Motion for Leave to
+Serve Excess Interrogatories addressing the remaining Interrogatories Nos. 21 through 37. The first twenty
+Interrogatories address the following core subjects of the Counterclaim:
+Interrogatories 1-4 (Financial accounts). Identification of every bank, credit union, PayPal, Venmo, Cash
+App, and cryptocurrency wallet account Plaintiff/Counter-Defendant held, controlled, or had access to
+between January 1, 2023 and the present; identification of every account into which Defendant's VA
+Disability Compensation payments and SSDI benefits were deposited between September 2025 and the
+present; and identification of whether and when Plaintiff/Counter-Defendant accessed Defendant's va.gov
+account using his id.me credentials.
+Interrogatories 5-7 (VA and SSDI benefits). Month-by-month accounting of VA Disability Compensation
+belonging to Defendant that Plaintiff/Counter-Defendant received, accessed, controlled, or disbursed
+between September 2025 and the present; month-by-month accounting of SSDI benefits belonging to
+Defendant that Plaintiff/Counter-Defendant received, controlled, or disbursed in her capacity as SSA-
+appointed Representative Payee; and identification of the representations she made to Defendant or to his
+counsel regarding the status of his SSDI payments between September 2025 and March 2026.
+Interrogatories 8-9 (Personal property and domains). Identification of all personal property belonging to
+Defendant currently in Plaintiff/Counter-Defendant's possession (including his identification, financial
+documents, and Apple electronics), with current location; and identification of every internet domain
+previously registered to or used by Defendant (including rockenhaus.com, skyphusion.com, and
+greyponyit.com) that Plaintiff/Counter-Defendant possesses, controls, or has access to.
+Interrogatories 10-14 (Communications and pre-release conduct). Identification of all communications

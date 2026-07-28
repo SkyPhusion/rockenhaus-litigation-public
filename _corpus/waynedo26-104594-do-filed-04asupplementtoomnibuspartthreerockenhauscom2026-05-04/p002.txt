@@ -1,0 +1,60 @@
+Document: 04a Supplement To Omnibus Part Three Rockenhaus Com 2026-05-04
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-04
+Page: 2 of 6
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-04asupplementtoomnibuspartthreerockenhauscom2026-05-04/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/04a_Supplement_to_Omnibus_Part_Three_rockenhaus_com_2026-05-04.pdf
+
+---
+
+II. SUPPLEMENTAL FACTUAL CATEGORIES
+                     A. False-Swearing Misuse: The February 20, 2026 PPO Petition
+
+ 5. On February 20, 2026, Plaintiff filed an ex parte Petition for Personal Protection Order (Domestic
+    Relationship) in 26-102221-PP. The Petition contained an attached "Relief Requested - Other Relief"
+    page on which Plaintiff swore, under penalty of perjury, the following statement:
+
+          "As the owner of a digital software and web business (Cannabytes, LLC), my 'workplace'
+          consists of my digital infrastructure, servers, and domains (including cannabytes.net and
+          rockenhaus.com). The Respondent has recently weaponized my workplace infrastructure to
+          stalk me. ... I am requesting the court explicitly prohibit the Respondent from accessing,
+          interfering with, or utilizing my business domains and prohibit him from contacting any clients or
+          impairing my digital work environment in any way."
+
+ 6. The sworn assertion that rockenhaus.com is one of Plaintiff's "business domains" or part of her
+    "workplace" is false. The WHOIS record for rockenhaus.com, attached to the April 16, 2026 Omnibus
+    Motion as Exhibit A, conclusively establishes the domain's creation date as September 7, 2001, more
+    than twenty-one (21) years before the parties' marriage on May 20, 2023, and three years before
+    Plaintiff's own LARA filings show the formation of Cannabytes, LLC.
+ 7. Plaintiff used this sworn false statement to obtain ex parte court orders prohibiting Defendant from
+    "accessing" his own premarital separate-property domain, a domain that predates the marriage by more
+    than two decades.
+ 8. The misuse documented at paragraphs 5–7 is not historical. It is an ongoing operative misuse: Plaintiff
+    continues to assert exclusive control over rockenhaus.com on the basis of, and in reliance upon, the
+    same sworn statement she filed on February 20, 2026. The PPO order entered on the basis of that
+    sworn statement remains in force today, more than ten weeks after entry, and continues to reference
+    Plaintiff's "business domains" as the property she is entitled to protect from Defendant's "interference."
+ 9. Plaintiff's continued assertion that rockenhaus.com is hers, directly contradicting the WHOIS record
+    establishing Defendant's twenty-one-year premarital ownership, is itself a form of misuse warranting the
+    structural protection requested below. It is also pattern evidence of bad faith with this Court system that
+    the Court may consider in assessing the balance-of-hardships factor under Pontiac Fire Fighters.
+
+                    B. Lockout Misuse: The conrad@rockenhaus.com Email Account
+10. Defendant has used the email address conrad@rockenhaus.com as his professional email of record
+    continuously from on or about September 2001 through the date of his federal incarceration. The
+    account predates the marriage by approximately twenty-two (22) years.
+11. While Defendant was incarcerated at FCI Milan and unable to access his own digital infrastructure,
+    Plaintiff changed the administrative credentials for the rockenhaus.com mail configuration and locked
+    Defendant out of the conrad@rockenhaus.com email account.
+12. The lockout was documented contemporaneously in Defendant's affidavit filed in the federal district court
+    at Rockenhaus v. Agapiou, E.D. Mich. Docket No. 388083, Document 30. Defendant has since regained
+    limited functional access to his communications through other means but remains locked out of his own
+    surname-domain professional email account, which Plaintiff continues to administratively control.
+13. Each day the lockout continues is a day Defendant is unable to:
+    a. Receive professional correspondence at his longstanding professional email of record, including
+    correspondence from third parties (clients, vendors, federal agencies, financial institutions) who may not
+    have his current alternative addresses;
+    b. Send correspondence from his own surname-domain identity, which carries professional weight that
+    ad-hoc free-email addresses do not;

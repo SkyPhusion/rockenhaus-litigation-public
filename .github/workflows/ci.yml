@@ -71,6 +71,55 @@ jobs:
             exit 1
           fi
 
+
+      # --- Astro half: the evidence system and the pre-rendered Q&A pages ---
+      #
+      # Added to the EXISTING ci job rather than a new workflow on purpose. The
+      # org ruleset requires a check literally named `ci`; a second workflow
+      # would not satisfy it, and a second job in this file would not either.
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Node dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Corpus is current
+        # The committed corpus must match the PDFs it was built from. A filing
+        # added without rebuilding would otherwise be invisible to the answer
+        # surface while looking perfectly fine in the repository.
+        run: node scripts/build-corpus.mjs --check
+
+      - name: Citations match the record
+        # Every Q&A answer is a quotation from a filed document. This proves each
+        # quoted passage actually appears on the page it is cited to, so a
+        # mistyped or drifted citation fails here rather than shipping as a
+        # citation to a court document.
+        run: node scripts/verify-citations.mjs
+
+      - name: Typecheck Astro
+        run: npx astro check
+
+      - name: Unit tests
+        run: npx vitest run
+
+      - name: Build Astro
+        # The denylist guard runs inside this build: a third-party
+        # characterisation reaching a title, description or JSON-LD field throws
+        # and the build fails.
+        run: npm run build
+
+      - name: Generators stay in their lanes
+        # Two generators, one domain, one Pages project. Fails if both emit the
+        # same path, or if Astro emits outside /evidence/ and /answers/.
+        run: node scripts/check-collisions.mjs _site dist
+
+      - name: Merge Astro output into the Jekyll site
+        # This is what the deploy does, so the accusation check below sees the
+        # MERGED site rather than only the Jekyll half.
+        run: cp -r dist/. _site/
+
       - name: No accusations in indexable metadata
         # The defect that put this site in the hole was third-party
         # characterisations reaching titles, descriptions and JSON-LD, where

@@ -1,0 +1,61 @@
+Document: 04b Supplement Omnibus Part One 2026-05-06
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-06
+Page: 3 of 5
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-04bsupplementomnibuspartone2026-05-06/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/04b_Supplement_Omnibus_Part_One_2026-05-06.pdf
+
+---
+
+IP address records, device association records, two-factor authentication records, mail-forwarding
+ configurations, and account-control history associated with the email account at conrad@rockenhaus.com,
+ from September 1, 2025 through the present.
+
+                            K. conrad@cannabytes.net Email Account Records
+ All credentials, content, sent and received messages, draft messages, deleted messages, login activity logs,
+ IP address records, device association records, two-factor authentication records, mail-forwarding
+ configurations, and account-control history associated with the email account at conrad@cannabytes.net,
+ from September 1, 2025 through the present.
+
+                           L. Facebook Account "Conrad Rockenhaus" Records
+ All credentials, login activity logs, IP address records, device association records, posting activity records,
+ comment-control settings history, account-recovery records, and account-control history associated with the
+ Facebook account bearing the name "Conrad Rockenhaus," from September 1, 2025 through the present,
+ including but not limited to all records pertaining to the post published on May 4, 2026 referenced in
+ paragraph 6 above and the configuration changes to comments on that post.
+
+                            M. Facebook Account "Demi-Jo Matthews" Records
+ All credentials, login activity logs, IP address records, device association records, account-creation records,
+ posting activity records, friend graph data, account-blocking configurations, and account-control history
+ associated with the Facebook account bearing the user identifier "Demi-Jo Matthews," to the extent within
+ Plaintiff's possession or control, from the date of account creation through the present, including but not
+ limited to all records pertaining to the sharing of the May 4, 2026 post into the Facebook group titled
+ "Michigan Missing Persons Alerts" and the comment posted on Ann Helgren's photograph as documented in
+ the Second Supplemental Motion.
+
+                                  N. AirTag and Location Tracking Records
+ All records associated with any Apple AirTag or other tracking device registered to, operated by, or
+ controlled by Plaintiff that is or has been associated with property, possessions, or personal effects of
+ Defendant, including but not limited to the AirTag contained within Defendant's wallet. Records to be
+ preserved include the device registration records, device pairing history, location ping logs, location history,
+ alert records, and the Apple ID account records demonstrating the operational status of the tracking device,
+ from September 1, 2025 through the present.
+
+                 IV. AUTHORITY AND BASIS FOR SUPPLEMENTAL PRESERVATION
+11. The legal authority for the preservation order requested in this Supplement is the same authority set forth
+    in Part One of the Omnibus Motion: MCR 2.310, MCR 2.313, the Court's inherent authority, and the
+    spoliation framework of Teel v. Meredith, 284 Mich App 412 (2009).
+12. The categories identified in this Supplement are evidence within the meaning of MCR 2.310 because
+    they bear directly on the claims and defenses in this proceeding, including without limitation the
+    questions of: (a) Plaintiff's continued operational access to and control of Defendant's accounts and
+    digital infrastructure; (b) the authorship and provenance of public communications attributed to
+    Defendant; (c) the credibility of representations made in the public domain regarding Defendant's status,
+    location, and conduct; (d) the existence and operation of surveillance infrastructure directed at
+    Defendant; and (e) the use of digital and platform-based instrumentalities to influence the proceedings or
+    to affect witnesses material to the proceedings.
+13. The risk of spoliation as to these categories is concrete and specific. As set forth in paragraph 9 of Part
+    One of the original Omnibus Motion, Plaintiff demonstrated awareness of the evidentiary significance of
+    her digital records by going silent on social media platforms upon retaining counsel. The categories
+    identified in this Supplement are subject to deletion, modification, transfer, or other forms of spoliation by

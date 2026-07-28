@@ -1,0 +1,62 @@
+Document: 12 Emergency Motion Preservation Spoliation 2026-05-13
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-13
+Page: 9 of 13
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12emergencymotionpreservationspoliation2026-05-13/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12_Emergency_Motion_Preservation_Spoliation_2026-05-13.pdf
+
+---
+
+47. The availability of post-hoc spoliation sanctions does not foreclose the propriety of prospective
+    preservation relief. The two remedies operate at different stages and address different harms: the
+    prospective preservation order seeks to prevent the spoliation from occurring; the post-hoc spoliation
+    sanction seeks to remediate the prejudice from spoliation that has already occurred. Where, as here, the
+    moving party can demonstrate present risk of imminent spoliation, the prospective remedy is both
+    available and preferable.
+
+             V. APPLICATION OF THE PONTIAC FIRE FIGHTERS FOUR-FACTOR TEST
+                                   A. Likelihood of Success on the Merits
+
+48. The May 12, 2026 entry of default establishes liability on the Counterclaim conclusively. Wood, 413
+    Mich. at 582. The remaining merits question on the Counterclaim is the quantum of damages, which
+    Defendant has supported with a 21-page sworn Affidavit packet inclusive of an Index of Exhibits, the
+    Social Security Administration demand letter as Exhibit A, and the Department of Veterans Affairs
+    Payment History Inquiry with summary table as Exhibit B, filed contemporaneously with the Motion for
+    Default Judgment on May 12, 2026. The likelihood of success on the merits is therefore not merely high
+    but established.
+
+                                             B. Irreparable Injury
+49. Electronic evidence subject to spoliation by single-user operation at a platform with limited retention is,
+    as a matter of doctrine, uniquely susceptible to irreparable destruction. See Pontiac Fire Fighters, 482
+    Mich. at 9 (irreparable harm requires "an injury that cannot be adequately compensated by damages or
+    that cannot be redressed by a court of law"). Where the records that document the deemed-admitted
+    misconduct can be terminated by their operator at any moment, the harm from destruction cannot be
+    redressed; the records do not exist anywhere else. The risk in this case is not theoretical. The factual
+    record at §III.G above documents Plaintiff/Counter-Defendant's operation of an integrated multi-account
+    architecture spanning the verified primary account @adezero, the eleven sockpuppet accounts identified
+    at ¶22(d), the additional accounts @rosebuttcheeks and @JustCallMeJoeP, and associated Facebook
+    accounts at ¶22(e), each independently capable of being deactivated, suspended, or content-purged
+    from a single internet-connected device. The factual record at §III.H above documents that eleven of
+    those accounts have already ceased producing public content in a coordinated multi-wave pattern
+    between March 17 and April 11, 2026, and that the verified primary @adezero account has produced no
+    new public content for over thirty days. The combined predicate establishes that Plaintiff/Counter-
+    Defendant possesses both the operational capacity to effect spoliation across the integrated account
+    architecture and the demonstrated pattern of exercising that capacity on a litigation-aligned timeline.
+50. The harm is additionally irreparable because the deemed-admitted record incorporates conduct
+    (sockpuppet operation, witness intimidation, cyberstalking) for which the documentary substrate is
+    exclusively held in third-party platform records that the spoliating party can terminate. Subpoenas to
+    third-party platforms remediate the loss only to the extent the platform's retention window has not closed.
+    Once closed, subpoenas return nothing.
+51. The factual predicate at §§III.A through III.I demonstrates that Plaintiff/Counter-Defendant has both the
+    means and the motive to effect the spoliation that this Motion seeks to prevent, and that she has done so
+    on a timeline incompatible with the speed of ordinary motion practice.
+
+                                             C. Balance of Harms
+
+52. The order requested by this Motion would prohibit Plaintiff/Counter-Defendant from destroying, altering,
+    deleting, or transferring evidence she does not have a legitimate interest in destroying, altering, deleting,
+    or transferring. A party has no cognizable interest in destroying evidence material to litigation in which
+    she is a party; her duty is the opposite. Brenner, 226 Mich. App. at 162. The order accordingly imposes
+    no cognizable harm on her at all.

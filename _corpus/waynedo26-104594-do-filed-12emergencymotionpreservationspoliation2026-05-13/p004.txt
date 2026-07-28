@@ -1,0 +1,59 @@
+Document: 12 Emergency Motion Preservation Spoliation 2026-05-13
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-13
+Page: 4 of 13
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12emergencymotionpreservationspoliation2026-05-13/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12_Emergency_Motion_Preservation_Spoliation_2026-05-13.pdf
+
+---
+
+(display name "Rosemary"), and @JustCallMeJoeP (display name "Joe Prich").
+e. Facebook accounts operating under the names "Demi-Jo Matthews," "Sherri Adair," and "Jenn Reede."
+The "Demi-Jo Matthews" account was used between May 5 and May 7, 2026, to amplify a falsified "dead
+man's switch" post into the Michigan Missing Persons Alerts Facebook group (approximately 1,700
+members), to comment harassingly on Defendant's witness Ann Helgren's public posts, and to tie fabricated
+GPS coordinates to a real fire incident reported on Mlive.com. The "Sherri Adair" and "Jenn Reede"
+accounts were used on March 30-31, 2026, to direct false-criminal-allegation accusations at Ms. Helgren
+and to make location-specific assertions about Defendant's whereabouts that were knowable only from the
+AirTag surveillance dataset described at §III.E above. The "Sherri Adair" account was publicly identified on
+March 31, 2026 by Ms. Helgren on Facebook as operating under a Plaintiff/Counter-Defendant alias
+incorporating her former and reverted-to surname ("Blair").
+f. Gmail account ecigaretteslut@gmail.com, operating under the display name "Angeline M," which on the
+factual record before the Court was used on May 9, 2026, to send two harassment emails to Defendant's
+witness Ann Helgren developing the narrative that "Conrad died horrifically in fire, Annie is responsible." The
+"Angeline" display name corresponds to the first name of Ms. Helgren's daughter, indicating attacker
+knowledge of family identifiers.
+g. Signal Messenger account associated with phone number(s) under Plaintiff/Counter-Defendant's control.
+h. Additional cross-platform accounts that have surfaced in the factual record and may surface during
+discovery.
+23. Each of the accounts in ¶22 above is susceptible to immediate spoliation by the account holder. Deletion
+    of tweets, deletion of DMs, deletion of Facebook posts and group memberships, deletion of email
+    content, deactivation of accounts, and re-routing of recovery email or phone are all operations that can
+    be effected within minutes from any internet-connected device. Once the operation is executed, the
+    platform's retention policy in many cases erases the data permanently within a short post-deletion
+    window. See X Corp. transparency reporting policies; Meta Platforms, Inc. retention policies; Apple, Inc.
+    iCloud retention policies.
+
+       E. AirTag Cyberstalking Establishes Established Pattern of Surveillance and Evidentiary
+                                                 Manipulation
+24. On March 2, 2026, Plaintiff/Counter-Defendant returned to Defendant a wallet that on information and
+    belief contained an Apple AirTag tracking device paired to and registered on the iCloud account
+    conrad@cannabytes.net. The AirTag tracked Defendant's location from March 2, 2026, forward.
+25. The location-history dataset produced by that AirTag became the "telemetry" payload of the May 4,
+    2026, "Dead Man's Switch" Facebook post published from a compromised account in Defendant's name
+    and naming five persons "responsible for [Defendant's] death," including witnesses Helgren and Jordan
+    in this proceeding.
+26. Eyewitness Ann Helgren has preserved the Apple "Items detected with you" notifications she received
+    during the surveillance period on her personal iPhone, corroborating the AirTag chain of custody. The
+    wallet containing the AirTag currently sits at a third-party residence whose address is the last log entry in
+    the Dead Man's Switch post, namely the residence of DeAndre Connor.
+27. The AirTag pairing records, the AirTag location-history records, and the iCloud login records on the
+    conrad@cannabytes.net account are records held by Apple, Inc. Each of those record categories is
+    preservable by subpoena to Apple, but each is also alterable or terminable by the account-holding party
+    acting through the iCloud control panel. Re-pairing, deletion, deactivation, or account-credential change
+    at any time terminates further authoritative record creation and may, depending on the operation, destroy
+    retrospective records as well.
+
+                     F. Sockpuppet Network Coordination Evidence is Time-Limited

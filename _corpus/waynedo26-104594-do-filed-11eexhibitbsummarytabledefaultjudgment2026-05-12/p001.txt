@@ -1,0 +1,63 @@
+Document: 11e Exhibit B Summary Table Default Judgment 2026-05-12
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-12
+Page: 1 of 2
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-11eexhibitbsummarytabledefaultjudgment2026-05-12/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/11e_Exhibit_B_Summary_Table_Default_Judgment_2026-05-12.pdf
+
+---
+
+SUMMARY TABLE OF DIVERTED VA DISABILITY COMPENSATION PAYMENTS
+Source: Department of Veterans Affairs, Payment History Inquiry (TINQ), Payee CONRAD A
+ROCKENHAUS
+Period of Diversion: Pay dates 10/09/2025 through 02/27/2026, all routed to a single USAA Federal
+Savings Bank checking account under Counter-Defendant's control
+Conversion Theory: Common-law conversion of identifiable funds under Aroma Wines & Equipment, Inc.
+v. Columbia Distribution Services, Inc., 497 Mich. 337 (2015)
+
+                                  CONVERSION DAMAGES: $26,837.87
+
+                                                                   Routing     Account    Destination
+No. Pay Date      Type                                  Amount
+                                                                   No.         (Last 4)   Institution
+                  Retroactive (reissue of returned                                        USAA Federal
+1    10/09/2025                                         $4,673.44 314074269 ****3818
+                  10/01/2025 payment)                                                     Savings Bank
+                                                                                          USAA Federal
+2    10/31/2025 Regular                                 $4,645.14 314074269 ****3818
+                                                                                          Savings Bank
+                                                                                          USAA Federal
+3    12/01/2025 Regular                                 $4,567.30 314074269 ****3818
+                                                                                          Savings Bank
+                                                                                          USAA Federal
+4    12/31/2025 Regular                                 $4,317.33 314074269 ****3818
+                                                                                          Savings Bank
+                                                                                          USAA Federal
+5    01/30/2026 Regular                                 $4,317.33 314074269 ****3818
+                                                                                          Savings Bank
+                                                                                          USAA Federal
+6    02/27/2026 Regular                                 $4,317.33 314074269 ****3818
+                                                                                          Savings Bank
+    TOTAL CONVERSION DAMAGES (VA Component): $26,837.87
+
+                                RETURNED PAYMENT, OCTOBER 1, 2025
+The Department of Veterans Affairs Payment History also reflects a returned payment of $4,673.44 issued
+on 10/01/2025, cancelled on 10/03/2025, with Treasury check or trace number 0417299, marked
+"Undeliverable, Bad Address (1)." That returned payment was reissued on 10/09/2025 as the retroactive
+payment at Row 1 of the table above. During the precise period of the returned payment, Counter-
+Defendant represented to Defendant by TRULINCS electronic message that "the VA pay has not been
+deposited for this month."
+
+ PREDICATE DOCUMENTARY CONTEXT: PRE-REDIRECT SOFI PAYMENT, AUGUST 29, 2025
+The Payment History also reflects a regular Disability Compensation payment of $4,673.44 on 08/29/2025,
+routed to a previously joint SoFi account (Routing No. 031101334, account ending *2583), prior to the
+unauthorized direct-deposit redirect that caused all subsequent payments to be routed to the USAA
+Federal Savings Bank account under Counter-Defendant's exclusive control. The 08/29/2025
+payment is included in this Exhibit as documentary context establishing the routing baseline that
+immediately preceded the conversion period. It is *not included in the $26,837.87 measure of
+conversion damages.
+
+                                          NOTES ON REDACTION
+Personally identifying information has been redacted from this Exhibit in accordance with this Court's prior

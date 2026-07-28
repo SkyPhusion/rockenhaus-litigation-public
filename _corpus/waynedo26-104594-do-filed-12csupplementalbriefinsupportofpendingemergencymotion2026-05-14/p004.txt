@@ -1,0 +1,63 @@
+Document: 12c Supplemental Brief In Support Of Pending Emergency Motion 2026-05-14
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-14
+Page: 4 of 8
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12csupplementalbriefinsupportofpendingemergencymotion2026-05-14/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12c_Supplemental_Brief_in_Support_of_Pending_Emergency_Motion_2026-05-14.pdf
+
+---
+
+personal knowledge by Defendant/Counter-Plaintiff. The attribution is established by the public X-
+    platform record itself and is independently verifiable by any party retrieving the conversation tree at
+    conversation identifier 2043052376794276350 from X Corp.'s public records or from any third-party
+    preservation source.
+14. The May 14, 2026 Scrape Evidence further establishes two corroborating retweets by the
+    @rosebuttcheeks account of content authored by @adezero and @spuntpatrol respectively:
+
+  Date (UTC)                                    @rosebuttcheeks activity
+ Mar 16,
+               RT @adezero "Update on Conrad and me: [link]"
+ 2026 19:11
+ May 12,       RT @spuntpatrol "Conrad Rockenhaus just posted a dead man's switch 3 days ago..." (the
+ 2026 11:36    May 8, 2026 Dead Man's Switch broadcast tweet)
+
+The May 12, 2026 retweet is significant for an additional reason: it constitutes amplification by the
+@rosebuttcheeks account of the originating Dead Man's Switch broadcast tweet at the precise moment the
+publicly-attributable accounts were ceasing X-platform activity. The amplification has remained on the
+@rosebuttcheeks timeline continuously since May 12, 2026 and is preserved in the May 14, 2026 Scrape
+Evidence.
+15. Read together, the foregoing findings establish that the cessation of X-platform activity by the twelve
+    publicly-attributable accounts identified in paragraph 7 above is not a cessation of the coordinated X-
+    platform activity by the operator herself. The same operator has continued personal X-platform activity
+    throughout the relevant period via the @rosebuttcheeks account, including amplification of the May 8,
+    2026 Dead Man's Switch broadcast at the precise moment the publicly-attributable accounts were
+    ceasing X activity. The pattern is most consistent with a deliberate operational decision to perform public
+    cessation on attributable accounts while preserving continued operator activity from a private-identity
+    account, rather than with cessation of the underlying coordinated operation.
+
+           B. May 9, 2026 cross-platform temporal synchronization at three-minute resolution
+16. Comparison of the May 14, 2026 Scrape Evidence with the documentary record of two electronic mail
+    messages received by Witness Ann Helgren at her personal email account on the morning of May 9,
+    2026 from the email address ecigaretteslut@gmail.com displayed under the sender name "Angeline M"
+    reveals a temporal synchronization at three-minute resolution between an email harassment
+    communication and an X-platform reply.
+17. The two emails received by Witness Helgren on May 9, 2026 are authenticated by her
+    contemporaneously executed Comprehensive Witness Affidavit at paragraph 21 thereof. The first email,
+    received at approximately 09:31 UTC on May 9, 2026 (05:31 AM EDT), contained subject content
+    concerning the alleged death of Defendant/Counter-Plaintiff. The second email, received at
+    approximately 10:06 UTC on May 9, 2026 (06:06 AM EDT), contained content asserting that Witness
+    Helgren had "left him to burn and rot." The sender name "Angeline M" is the first and middle name of
+    Witness Helgren's adult daughter, Angeline Marie, and Plaintiff/Counter-Defendant is personally aware
+    of these names through her longstanding personal friendship with Witness Helgren.
+18. At approximately 10:09:22 UTC on May 9, 2026 (06:09:22 AM EDT), the @spuntpatrol account posted a
+    reply within the "Dead Man's Switch" conversation tree at tweet identifier 2053054715122888881
+    reading verbatim: "@lordofsinatra @KiwiFarmsDotNet He's dead." The reply text is preserved in the May
+    14, 2026 Scrape Evidence and is byte-for-byte identical to the text returned from X Corp. via the Apify
+    capture.
+19. The synchronization between these three communications is summarized as follows:
+
+   UTC
+            EDT Time Platform                                  Communication
+   Time

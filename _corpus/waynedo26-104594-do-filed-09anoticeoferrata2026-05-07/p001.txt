@@ -1,0 +1,56 @@
+Document: 09a Notice Of Errata 2026-05-07
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-07
+Page: 1 of 3
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-09anoticeoferrata2026-05-07/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/09a_Notice_of_Errata_2026-05-07.pdf
+
+---
+
+STATE OF MICHIGAN
+
+                  IN THE THIRD JUDICIAL CIRCUIT FOR THE COUNTY OF WAYNE
+                                 FAMILY DIVISION, DOMESTIC RELATIONS
+
+ ADRIENNE MARJORIE ROCKENHAUS,                                          Case No. 26-104594-DO
+   Plaintiff,
+                                                                        Hon. Nicole N. Goodson
+ v.
+
+ CONRAD ALAN ROCKENHAUS,
+  Defendant.
+
+DEFENDANT'S NOTICE OF ERRATA TO PLEADINGS FILED APRIL 15 AND APRIL 16,
+                               2026
+
+NOW COMES Defendant, Conrad Alan Rockenhaus, appearing pro se, and respectfully gives notice of
+the following corrections to pleadings previously filed in this matter. Each correction below is non-
+substantive in nature and is filed of record to ensure the docket reflects accurate text. No correction below
+alters the relief requested in any underlying pleading or affects the substantive arguments made therein.
+
+          I. CORRECTIONS TO DEFENDANT'S MOTION FOR LEAVE TO SERVE EXCESS
+                        INTERROGATORIES (FILED APRIL 16, 2026)
+1. Numbering inconsistency. The Motion's title-block narrative references "thirty-seven (37)"
+interrogatories; ¶1 references "thirty-eight (38)"; ¶¶4 and 7 and Prayer ¶2 reference "thirty-six." The number
+actually served upon Plaintiff with the discovery package is thirty-seven (37), and that number is the
+operative figure. All references in the Motion shall be read as conforming to "thirty-seven (37)."
+2. Roman-numeral section skip in accompanying Interrogatories. The Interrogatories served upon
+Plaintiff are sectioned I, II, III, V, VI, VIII, IX, X, XI, XII, XIII, XIV. Sections IV and VII are absent due to a
+final-assembly artifact. The sections shall be read as renumbered sequentially I through XII, with no
+substantive content gap.
+3. Duplicate request pairs in accompanying Requests for Production. Section XI (RFP Nos. 44 and 45)
+and Section XVI (RFP Nos. 57 and 58) contain textually identical requests. Defendant withdraws Section
+XVI, RFP Nos. 57 and 58, as duplicative of Section XI, RFP Nos. 44 and 45. Plaintiff is not required to
+separately respond to Section XVI, RFP Nos. 57 and 58.
+4. Numerical floor in accompanying Request for Admission No. 15. Request for Admission No. 15
+currently reads "nine or more sworn declarations." Defendant amends Request for Admission No. 15 to read
+"at least five sworn declarations." The substantive admission sought is the fact of volume of federal court
+declarations, not the precise count.
+
+II. CORRECTIONS TO DEFENDANT'S ANSWER AND COUNTERCLAIM (FILED APRIL 15, 2026)
+5. Counterclaim ¶32.a, quoted admission. Counterclaim ¶32.a quotes Plaintiff's February 9, 2026 written
+communication as describing the closure of the joint SoFi account as "extra judiciously" effected.1 The
+intended word is "extrajudicially," meaning without judicial process. Defendant's quotation reproduces
+Plaintiff's original wording verbatim and is not a drafting error by Defendant. Counterclaim ¶32.a shall be

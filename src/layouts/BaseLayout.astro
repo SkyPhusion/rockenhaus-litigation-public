@@ -1,0 +1,60 @@
+---
+// Shared shell for the Astro-generated surfaces.
+//
+// Every page that renders through this layout has its indexable metadata checked
+// against the denylist AT BUILD TIME. A third-party characterisation reaching a
+// title, description, or JSON-LD block fails the build rather than shipping.
+//
+// Styling reuses the existing /assets/css/site.css from the Jekyll half, because
+// the two halves are merged into one Pages deploy and should look like one site.
+import { assertCleanMetadata } from "../lib/guard";
+
+export interface Props {
+  title: string;
+  description: string;
+  /** Exhibit pages stay out of the index; Q&A pages are the ranking surface. */
+  noindex?: boolean;
+  jsonLd?: unknown;
+  breadcrumbs?: Array<{ name: string; url?: string }>;
+}
+
+const { title, description, noindex = false, jsonLd, breadcrumbs = [] } = Astro.props;
+
+// The guard. Runs for every page, on every build, before anything is written.
+assertCleanMetadata({ title, description, jsonLd }, Astro.url.pathname);
+
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    {jsonLd && (
+      <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd, null, 2)} />
+    )}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <main id="main" class="page">
+      {breadcrumbs.length > 0 && (
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            {breadcrumbs.map((crumb) => (
+              <li>
+                {crumb.url ? <a href={crumb.url}>{crumb.name}</a> : <span aria-current="page">{crumb.name}</span>}
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )}
+      <slot />
+    </main>
+  </body>
+</html>

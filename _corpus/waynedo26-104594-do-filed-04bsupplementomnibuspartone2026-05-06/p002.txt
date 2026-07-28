@@ -1,0 +1,60 @@
+Document: 04b Supplement Omnibus Part One 2026-05-06
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-06
+Page: 2 of 5
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-04bsupplementomnibuspartone2026-05-06/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/04b_Supplement_Omnibus_Part_One_2026-05-06.pdf
+
+---
+
+accounts including Login.gov, ID.me, VA.gov, and CAC.mil. Plaintiff retained operational access to these
+    accounts during Defendant's incarceration and has not relinquished that access.
+ 6. Compromise and operation of Defendant's Facebook account. As documented in the Second
+    Supplemental Motion in Case No. 26-102221-PP at paragraphs 8 through 19, an account bearing
+    Defendant's name and likeness on the Facebook social media platform was used on May 4, 2026 to
+    publish a post falsely representing that Defendant was deceased and naming five identified persons,
+    including witnesses material to this proceeding, as responsible for the purported death. Defendant did
+    not author that post, was not deceased on May 4, 2026, and was not in possession of the credentials
+    used to publish the post on that date. The login credentials, login records, and account control records
+    for that account are evidence directly relevant to the claims and defenses in this action.
+ 7. Operation of an additional Facebook account configured to amplify content adverse to
+    Defendant. As documented in the Second Supplemental Motion at paragraphs 20 through 28, an
+    account on the Facebook platform bearing the user identifier "Demi-Jo Matthews" shared the May 4,
+    2026 post into a public Facebook group titled "Michigan Missing Persons Alerts" with framing
+    representing that Defendant had been "missing for at least a month." That account also published a
+    public comment on a photograph posted by Ann Helgren, a witness in this proceeding, with text stating
+    "Is that right before you killed him?" The account is configured to block visibility to Ms. Helgren. The login
+    credentials, login records, IP records, device records, and account-creation records for the "Demi-Jo
+    Matthews" account, to the extent within Plaintiff's possession or control, are evidence directly relevant to
+    the claims and defenses in this action.
+ 8. Coordinated comment-lockout following amplification. As further documented in the Second
+    Supplemental Motion, comments on the May 4, 2026 post were locked approximately two hours after the
+    "Demi-Jo Matthews" account amplified the post. The comment-lockout function on the Facebook
+    platform requires control of the originating account, here the account bearing Defendant's name. The
+    technical configuration records demonstrating the time and source of the comment-lockout are evidence
+    directly relevant to the question of who controlled the originating account at the time of the lockout.
+ 9. AirTag tracking of Defendant's wallet. Defendant's wallet contains an Apple AirTag tracking device
+    that is registered to Plaintiff's Apple ID account and that has remained in continuous operational status
+    from September 2025 through the filing of this Supplement. Plaintiff has retained continuous location
+    tracking of Defendant's wallet and, by extension, Defendant. The May 4, 2026 post referenced at
+    paragraph 6 above contained a "GPS telemetry" segment purporting to log Defendant's locations over a
+    thirty-two-day period preceding the post. The locations referenced in that telemetry are consistent with
+    the location of Defendant's wallet during the same period. The AirTag tracking history, location records,
+    and Apple ID account records demonstrating the operational status of the tracking are evidence directly
+    relevant to the claims and defenses in this action and to the credibility of representations made in the
+    May 4, 2026 post.
+
+               III. SUPPLEMENTAL CATEGORIES OF EVIDENCE TO BE PRESERVED
+10. In addition to Categories A through H of Part One of the Omnibus Motion, the following categories of
+    evidence must also be immediately preserved by Plaintiff:
+
+                                         I. Apple ID Account Records
+All records, credentials, recovery contacts, recovery keys, login activity logs, device association records,
+two-factor authentication records, and account-control history associated with the Apple ID account or
+accounts registered to or operated by Defendant, including any Apple ID account previously associated with
+Defendant that has been transferred, modified, or assumed by Plaintiff or any other person.
+
+                           J. conrad@rockenhaus.com Email Account Records
+All credentials, content, sent and received messages, draft messages, deleted messages, login activity logs,

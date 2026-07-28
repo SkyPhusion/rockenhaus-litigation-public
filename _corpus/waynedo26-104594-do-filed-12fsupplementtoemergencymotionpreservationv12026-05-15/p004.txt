@@ -1,0 +1,60 @@
+Document: 12f Supplement To Emergency Motion Preservation V1 2026-05-15
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-15
+Page: 4 of 8
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12fsupplementtoemergencymotionpreservationv12026-05-15/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12f_Supplement_to_Emergency_Motion_Preservation_v1_2026-05-15.pdf
+
+---
+
+question, "Mr. Rockenhaus reached out to you on the evening of May 13, 2026 via Meta Threads, isn't that
+true?" The truthful answer (yes, she received a friend request from an account displaying as Mr.
+Rockenhaus) would be misleading to the trier of fact absent disclosure of the impersonation, and the
+impersonation cannot be disclosed without preservation of the digital evidence currently in Plaintiff's
+exclusive control.
+14. Each of the foregoing harms depends on the preservation of the underlying digital evidence: the account
+    credentials, the access logs, the friend-request transaction record, the device-of-origination metadata,
+    and the account-recovery history. All of this evidence is within Plaintiff's exclusive control or within the
+    records of Meta Platforms, Inc. Without a preservation order issued by this Court directed to Plaintiff and
+    supported by a separate preservation letter to Meta Platforms, Inc., the evidence is subject to spoliation
+    either by Plaintiff's deletion of the account, by her credential rotation, or by Meta's ordinary retention-
+    window expiration.
+
+                                C. The Conduct Is Continuing, Not Historical
+15. The Emergency Motion as filed on May 13, 2026 addressed the May 12, 2026 Scrape Evidence corpus
+    and the conduct documented therein as historical record. The Meta Threads friend request, occurring
+    three hours after CCApps acceptance of the Emergency Motion, is conduct continuing into and beyond
+    the moment of filing. The May 13, 2026 friend request is a discrete actus reus with a fresh date for
+    limitations purposes and for spoliation-doctrine purposes. The Court is not addressing past conduct
+    alone; the Court is addressing an ongoing pattern of conduct that has continued during the pendency of
+    the Motion.
+
+                  III. CONTINUED SOCKPUPPET NETWORK ACTIVITY POST-FILING
+                               A. The May 14, 2026 Reaction-Window Scrape
+16. Defendant conducted a reaction-window scrape capture of the social-media accounts catalogued in the
+    May 12, 2026 Scrape Evidence corpus in the early-morning hours of May 14, 2026, beginning shortly
+    after the CCApps acceptance of the Chain of Custody Supplement and Emergency Motion on May 13,
+    2026. The May 14, 2026 capture (the "May 14 Reaction-Window Scrape") is preserved with SHA-256
+    cryptographic hashes consistent with the protocols documented in the Chain of Custody Supplement.
+17. The May 14 Reaction-Window Scrape captures continuing public-record activity across the same
+    network of accounts catalogued at paragraphs 64 through 67 of the Counterclaim. The captured activity
+    establishes that the network has not gone dormant since Plaintiff's @adezero account ceased posting on
+    April 11, 2026; rather, the network continued to operate around Plaintiff's silence and now exhibits
+    identifiable reaction patterns in the post-filing window.
+
+                                          B. The @lifelessAI Account
+18. The May 14 Reaction-Window Scrape identified an additional account bearing the handle @lifelessAI.
+    The @lifelessAI account propagates the false-injury narrative published in the May 4, 2026 "Dead Man's
+    Switch" Facebook post, described at paragraphs 84 through 85 of the Counterclaim, in which a post
+    published from Defendant's compromised Facebook account named five persons (including Ms.
+    Helgren) as "responsible" for Defendant's death. The propagation of that narrative through @lifelessAI is
+    post-Emergency-Motion conduct and extends the witness-targeting and false-death-narrative course of
+    conduct pleaded in the Counterclaim and the Emergency Motion.
+
+                                           C. The Montano Accounts
+19. The Richard Montano accounts (@GordoMingYin and @OvenBenjamin), characterized in Defendant's
+    evidence record as Plaintiff's digital-household partner accounts and not as amplification sockpuppets,
+    registered measurable activity changes in the post-May-13-filing window consistent with operational
+    awareness of Defendant's filings. The reaction-window pattern is independent of the @adezero

@@ -1,0 +1,41 @@
+Document: 12e Third Chain Of Custody Supplement Extended Scrape Evidence 2026-05-14
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-14
+Page: 5 of 5
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12ethirdchainofcustodysupplementextendedscrapeevidence2026-05-14/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12e_Third_Chain_of_Custody_Supplement_Extended_Scrape_Evidence_2026-05-14.pdf
+
+---
+
+dataset_tweet-
+     scraper_2026-
+ 9                    12,453,096 59866a4852932b840ec36645633801eb8e0f78d578b844f25b2eb778877c9495
+     05-14_22-41-
+     50-468.json
+
+14. The nine foregoing files, together with the three files identified in the Second Supplement and the
+      eighteen files identified in the First Supplement, constitute the complete public-record X scrape
+      evidentiary record captured by Defendant/Counter-Plaintiff between May 12, 2026 and May 14, 2026 in
+      connection with the Pending Motion. The cryptographic hash of each file as recorded above represents
+      the file content as captured and stored. Any subsequent modification to any file would produce a
+      materially different hash digest and would be detectable by recomputation.
+
+                               VI. RELEVANCE TO THE PENDING MOTION
+15. This Third Supplement does not assert any new substantive finding. The analytical findings supported by
+      the May 14, 2026 Extended Scrape Evidence are set forth in Defendant/Counter-Plaintiff's Supplemental
+      Brief in Support of Pending Emergency Motion for Preservation Order and Order Prohibiting Spoliation of
+      Evidence, filed contemporaneously herewith. The function of this Third Supplement is to establish, on the
+      record, the chain of custody, capture methodology, and cryptographic integrity of the additional public-
+      record X scrape datasets on which those findings rest, so that the evidentiary record before this
+      Honorable Court when ruling on the Pending Motion is complete and authenticable.
+
+Respectfully submitted,
+__________________________________
+Conrad Alan Rockenhaus
+Defendant/Counter-Plaintiff, pro se
+1690 Brookfield Drive
+Ann Arbor, Michigan 48103
+conrad@rockenhaus.net
+Dated: May 15, 2026

@@ -1,0 +1,53 @@
+Document: 06 Motion For Issuance Of Subpoenas 2026-04-24
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-04-24
+Page: 2 of 4
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-06motionforissuanceofsubpoenas2026-04-24/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/06_Motion_for_Issuance_of_Subpoenas_2026-04-24.pdf
+
+---
+
+Necessity: Essential for identifying marital assets, tracing funds, and determining property division.
+    Proportionality: Limited timeframe covers separation period and post-separation financial activity.
+ 6. SoFi Bank, N.A. (Sacramento, CA)
+    Relevance: Records relating to joint checking account previously held by both parties from January 1,
+    2023 through present.
+    Necessity: Required to trace marital funds and identify potential dissipation of assets.
+    Proportionality: Focuses on specific joint account during relevant period.
+ 7. Block, Inc. d/b/a Cash App (Oakland, CA)
+    Relevance: Records relating to Cash App account associated with Plaintiff/Counter-Defendant from
+    January 1, 2023 through present.
+    Necessity: Digital payment records relevant to asset identification and spending patterns.
+    Proportionality: Limited to Plaintiff/Counter-Defendant's account and specific timeframe.
+ 8. QOLity Financial (Utica, MI)
+    Relevance: Records relating to the Deborah Dew Trust (settlor: Deborah Dew, deceased,
+    Plaintiff/Counter-Defendant's mother) of which Plaintiff/Counter-Defendant is a beneficiary.
+    Necessity: Trust assets may constitute marital property or affect property division.
+    Proportionality: Limited to trust records affecting marital estate valuation.
+ 9. PayPal, Inc. (San Jose, CA), PayPal Records
+    Relevance: Records relating to PayPal account(s) associated with Plaintiff/Counter-Defendant from
+    January 1, 2023 through present.
+    Necessity: Digital payment platform records relevant to asset identification.
+    Proportionality: Limited timeframe and specific to Plaintiff/Counter-Defendant's accounts.
+10. PayPal, Inc. (San Jose, CA), Venmo Records
+    Relevance: Records relating to Venmo account(s) associated with Plaintiff/Counter-Defendant from
+    January 1, 2023 through present.
+    Necessity: Venmo transactions may reveal undisclosed financial activity affecting property division.
+    Proportionality: Limited timeframe and platform scope.
+11. Kaycee Berente, Esq. (Federal Public Defender Office, Southern District of Ohio)
+    Relevance: Communications between Ms. Berente and Plaintiff/Counter-Defendant from November 1,
+    2025 through present.
+    Necessity: Attorney-client privileged communications are limited; scope expressly limited to non-
+    privileged third-party communications and communications made in furtherance of ongoing fraud.
+    Proportionality: Narrow timeframe and limited scope to admissible communications.
+12. Benton C. Martin, Esq. (Federal Community Defender, Detroit, MI)
+    Relevance: Communications between Mr. Martin and Plaintiff/Counter-Defendant from October 1, 2025
+    through present.
+    Necessity: Same as above, limited to non-privileged communications and communications in furtherance
+    of ongoing fraud.
+    Proportionality: Narrow scope and timeframe focused on admissible evidence.
+13. Livingston County Jail (Howell, MI)
+    Relevance: Defendant/Counter-Plaintiff's own detention records for September 2025, including phone
+    records, medical records, correspondence records, visitation records, and related documentation.

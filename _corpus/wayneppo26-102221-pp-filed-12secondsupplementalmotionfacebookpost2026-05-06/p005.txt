@@ -1,0 +1,60 @@
+Document: 12 Second Supplemental Motion Facebook Post 2026-05-06
+Case: Rockenhaus v. Rockenhaus (PPO), Case No. 26-102221-PP
+Court: Wayne County Circuit Court (Third Judicial Circuit)
+Category: Filed by Conrad
+Filed: 2026-05-06
+Page: 5 of 13
+Source: https://rockenhaus.net/documents/wayneppo26-102221-pp-filed-12secondsupplementalmotionfacebookpost2026-05-06/
+PDF: https://rockenhaus.net/wayne_ppo_26-102221-PP/filed/12_Second_Supplemental_Motion_Facebook_Post_2026-05-06.pdf
+
+---
+
+Matthews Account's missing-persons-group share is keyed to the same AirTag-derived geolocation as the
+GPS telemetry block in the original May 4 Post. The two publications draw from a common, non-public data
+source, namely the location of the AirTag wallet held by a third person, that would not be available to an
+unaffiliated Facebook user. The shared data source is itself a strong indicium of common authorship or
+coordinated direction.
+d. Target selection. The persons named in the May 4 Post (including Ms. Helgren) and the person directly
+targeted by the May 6 comment (Ms. Helgren) are the same. The Demi-Jo Matthews Account's selection of
+Ms. Helgren as a target tracks the witness-targeting pattern set forth in Section IV of this Motion, rather than
+reflecting any independent grievance the Account would plausibly have against Ms. Helgren.
+e. Temporal clustering. The Demi-Jo Matthews Account's actions occurred within a 24-to-48-hour window
+of the May 4, 2026 Post and contemporaneously with Petitioner's other documented conduct in the case
+(including the May 5, 2026 printed sign at her residence described in Section IV below). The temporal
+clustering across the Post, the missing-persons-group share, the comment on Ms. Helgren's wall, and
+Petitioner's printed sign is consistent with coordinated activity rather than independent action by an
+unrelated third party.
+f. Configuration with respect to Ms. Helgren. The Demi-Jo Matthews Account is configured to be invisible
+to Ms. Helgren while remaining visible to Ms. Helgren's broader social network. That configuration requires
+deliberate setup. It reflects an intent to damage Ms. Helgren's reputation among persons who know her
+without permitting Ms. Helgren to see, defend against, or report the conduct directly. This configuration is
+consistent with conduct directed at a witness rather than ordinary social media activity by an unaffiliated
+user.
+25. The actual identity of the holder of the Demi-Jo Matthews Account is properly determined through
+    subpoena to Meta Platforms, Inc., which can produce account-creation records, IP logs, and registration
+    information sufficient to identify the underlying user. Respondent does not, in this Motion, ask the Court
+    to make a definitive finding as to the identity of the Account holder. Respondent asks the Court to
+    consider the indicia above as part of the totality of the circumstances bearing on the appropriateness of
+    continued operation of the PPO.
+
+                               E. Legal Significance Under PPO Framework
+
+26. The Demi-Jo Matthews Account's activity has independent significance to the PPO posture in the
+    following respects:
+a. Materially expanded harm. The propagation of the May 4 Post into a 1,700-member public missing-
+persons group expands the audience of the Post by at least one order of magnitude beyond Respondent's
+personal Facebook network. The expanded audience increases proportionally the risk to the named
+persons, Ms. Helgren and Ms. Jordan, of inbound contact, harassment, or other conduct from third parties
+who act on the false predicate of the Post.
+b. Direct accusation of homicide against a witness. A public accusation that a named person committed
+homicide against Respondent in this PPO matter, posted on the named person's own publicly-visible
+Facebook wall, on the eve of a merits hearing in which the named person is a witness, is on its face conduct
+calculated to discourage that witness's continued involvement in the proceeding.
+c. Deliberate concealment from the witness. The Demi-Jo Matthews Account's configuration as invisible
+to Ms. Helgren reflects an intent to publish content damaging to Ms. Helgren's reputation while preventing
+her from observing or responding. This configuration removes any plausible characterization of the
+Account's activity as ordinary social-media expression and supports the inference that the Account is part of
+a coordinated effort directed at the witness.
+27. The conduct described in this Section also corroborates the inference that the conduct described in
+    Section II, the May 4, 2026 Post itself, was authored or directed by Petitioner. The Demi-Jo Matthews
+    Account's actions are tightly synchronized with the May 4 Post in subject matter, narrative framing,

@@ -1,0 +1,156 @@
+{
+  "generated_from": "scripts/build-corpus.mjs",
+  "extractor": "pdftotext -layout (poppler)",
+  "documents": 173,
+  "total_pages": 959,
+  "pages_with_text": 851,
+  "pages_without_text": 108,
+  "coverage_pct": 88.7,
+  "total_chars": 2156427,
+  "documents_with_no_text_layer": [
+    "/documents/waynedo26-104594-do-filed-11bmc07defaultjudgment2026-05-12/",
+    "/documents/waynedo26-104594-do-discovery-plaintiffsfirstresponsestorequestsforadmissions2026-05-13/",
+    "/documents/waynedo26-104594-do-opposing-03motion-to-withdraw-as-counsel/",
+    "/documents/waynedo26-104594-do-opposing-04motion-to-set-aside-default-of-counterclaim/",
+    "/documents/waynedo26-104594-do-opposing-05answer-to-counterclaim/",
+    "/documents/waynedo26-104594-do-opposing-notice-of-sc-06042026/",
+    "/documents/waynedo26-104594-do-opposing-rockenhaus-do-stip-to-dismiss-withdraw-for-signature/"
+  ],
+  "documents_partially_scanned": [
+    {
+      "url": "/documents/wayneppo26-102221-pp-filed-01motiontoterminateppocombined2026-03-12/",
+      "text_pages": 13,
+      "total_pages": 14
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-filed-11motiontocompelcompliancemcr37072026-05-06/",
+      "text_pages": 6,
+      "total_pages": 7
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit02feb12emailberente/",
+      "text_pages": 1,
+      "total_pages": 3
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit03poarevocation/",
+      "text_pages": 1,
+      "total_pages": 8
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit04valentinesdaypost/",
+      "text_pages": 1,
+      "total_pages": 3
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit05rossdrlease/",
+      "text_pages": 1,
+      "total_pages": 5
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit06orderaltservice/",
+      "text_pages": 1,
+      "total_pages": 3
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit07wootennonservice/",
+      "text_pages": 1,
+      "total_pages": 4
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit08redfordpdreport/",
+      "text_pages": 2,
+      "total_pages": 5
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit09bpa0629visitation/",
+      "text_pages": 1,
+      "total_pages": 5
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit10dec222025letter/",
+      "text_pages": 1,
+      "total_pages": 2
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit11vapaymenthistory/",
+      "text_pages": 1,
+      "total_pages": 2
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit12howellaffidavit/",
+      "text_pages": 1,
+      "total_pages": 4
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit13noticeofrelease/",
+      "text_pages": 1,
+      "total_pages": 2
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-filed-jc46/",
+      "text_pages": 2,
+      "total_pages": 7
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-opposing-01ex-parte-ppo-petition-filedrockenhaus/",
+      "text_pages": 82,
+      "total_pages": 83
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-opposing-03ppopetreponsetomotiontoterminate/",
+      "text_pages": 21,
+      "total_pages": 24
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-opposing-03cppopetreponsetomotiontoterminatept3/",
+      "text_pages": 17,
+      "total_pages": 18
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-opposing-03dppopetreponsetomotiontoterminatept4/",
+      "text_pages": 17,
+      "total_pages": 26
+    },
+    {
+      "url": "/documents/wayneppo26-102221-pp-opposing-03eppopetreponsetomotiontoterminatept5/",
+      "text_pages": 4,
+      "total_pages": 8
+    },
+    {
+      "url": "/documents/waynedo26-104594-do-filed-04cexhibit1omnibussupp2026-05-10page/",
+      "text_pages": 4,
+      "total_pages": 5
+    },
+    {
+      "url": "/documents/waynedo26-104594-do-filed-04cexhibit2omnibussupp2026-05-10page/",
+      "text_pages": 3,
+      "total_pages": 4
+    },
+    {
+      "url": "/documents/waynedo26-104594-do-filed-04cexhibit3omnibussupp2026-05-10page/",
+      "text_pages": 4,
+      "total_pages": 6
+    },
+    {
+      "url": "/documents/waynedo26-104594-do-filed-04cexhibit5omnibussupp2026-05-10page/",
+      "text_pages": 1,
+      "total_pages": 2
+    },
+    {
+      "url": "/documents/waynedo26-104594-do-filed-04csupplementomnibuspartone2026-05-10packet/",
+      "text_pages": 31,
+      "total_pages": 36
+    },
+    {
+      "url": "/documents/waynedo26-104594-do-filed-12hproofofservicesupplementalbriefsecondandthirdsupplements2026-05-15/",
+      "text_pages": 1,
+      "total_pages": 2
+    },
+    {
+      "url": "/documents/waynedo26-104594-do-filed-34firstamendedcounterclaimnotarized2026-05-17/",
+      "text_pages": 18,
+      "total_pages": 19
+    }
+  ]
+}

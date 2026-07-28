@@ -1,0 +1,94 @@
+---
+// Index of the pre-rendered answers, plus the honest statement of what this
+// archive can and cannot answer from.
+//
+// The coverage disclosure is not a disclaimer for its own sake. 108 of 959 pages
+// in the filed record have no text layer, so a question whose answer lives only
+// on a scanned page cannot be answered from text. Saying "the filings do not
+// address that" in that situation would be false. The number is published so the
+// limit is visible rather than implied.
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import coverage from "../../../_corpus/coverage.json";
+
+const questions = (await getCollection("questions")).map((q) => q.data);
+
+interface Coverage {
+  documents: number;
+  total_pages: number;
+  pages_with_text: number;
+  pages_without_text: number;
+  coverage_pct: number;
+  documents_with_no_text_layer: string[];
+  documents_partially_scanned: Array<{ url: string; text_pages: number; total_pages: number }>;
+}
+const cov = coverage as Coverage;
+
+const title = "Answers from the filed court record | Rockenhaus v. Rockenhaus";
+const description =
+  `Questions about the Michigan court matters, answered with verbatim passages from ${cov.documents} ` +
+  "filed court documents. Every answer cites the filing it came from by name and page.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  breadcrumbs={[{ name: "Home", url: "/" }, { name: "Answers from the record" }]}
+>
+  <h1>Answers from the filed court record</h1>
+
+  <p class="hub-lead">
+    Each page below answers one question using verbatim passages from the filed
+    Michigan court documents, citing the filing by name and page. The answers are
+    quotations, not summaries: nothing on these pages paraphrases or interprets a
+    filing, and nothing is generated.
+  </p>
+
+  <ul class="answer-list">
+    {questions.map((q) => (
+      <li>
+        <a href={`/answers/${q.slug}/`}>{q.question}</a>
+        <p class="answer-list__framing">{q.framing}</p>
+      </li>
+    ))}
+  </ul>
+
+  <section aria-labelledby="coverage">
+    <h2 id="coverage">What this archive can and cannot answer</h2>
+    <p>
+      The searchable text behind these answers is extracted from {cov.documents} filed
+      PDFs totalling {cov.total_pages} pages. {cov.pages_with_text} of those pages
+      ({cov.coverage_pct}%) carry a text layer and can be quoted.
+      <strong> {cov.pages_without_text} pages carry no text layer at all.</strong>
+      They are scans, and their contents cannot be searched or quoted from here even
+      though the pages are part of the filed record.
+    </p>
+    <p>
+      This matters for a specific reason. If a question is answered only on a scanned
+      page, an answer engine reading the text alone would report that the filings do
+      not address it. That would be wrong. The documents below are affected, and any
+      question touching them should be checked against the PDF directly.
+    </p>
+
+    <h3>Filings with no searchable text at all</h3>
+    <ul>
+      {cov.documents_with_no_text_layer.map((url) => (
+        <li><a href={url}>{url}</a></li>
+      ))}
+    </ul>
+
+    <h3>Filings only partly searchable</h3>
+    <p>
+      {cov.documents_partially_scanned.length} further filings have some pages scanned.
+      The exhibit sets attached to the PPO motions are the most affected: several carry
+      a text cover sheet with the exhibit content itself as an image.
+    </p>
+    <ul>
+      {cov.documents_partially_scanned.slice(0, 12).map((d) => (
+        <li>
+          <a href={d.url}>{d.url}</a> &middot; {d.text_pages} of {d.total_pages} pages searchable
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>

@@ -1,0 +1,76 @@
+Document: 12e Third Chain Of Custody Supplement Extended Scrape Evidence 2026-05-14
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-14
+Page: 3 of 5
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-12ethirdchainofcustodysupplementextendedscrapeevidence2026-05-14/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/12e_Third_Chain_of_Custody_Supplement_Extended_Scrape_Evidence_2026-05-14.pdf
+
+---
+
+2043052376794276350, 2046333254677012694,
+                                                  2047968608601432411) and the May 12, 2026 retweet of the
+                                                  May 8, 2026 "Dead Man's Switch" broadcast.
+
+                                       B. Historical conversation tree captures
+11. The next five datasets in the May 14, 2026 Extended Scrape Evidence are captures of discrete X
+   conversation threads originating from or implicating the @adezero account during the period from
+   December 11, 2025 through March 30, 2026. Each conversation thread is preserved as a self-contained
+   dataset to maintain the integrity of the reply-tree metadata returned by Apify.
+
+                  Conversation
+      File                         Records                                Description
+                  date / subject
+                                              Seven-tweet sequence by @adezero on December 11, 2025
+                                              directing hostile content at the Office of the Clerk of the United
+ dataset_tweet-
+               December 11,                   States District Court for the Eastern District of Michigan
+ scraper_2026-
+               2025: federal- 8               (referenced in the public record as the "Richard Loury" sequence).
+ 05-14_22-20-
+               court targeting                Preserved for record continuity supporting the federal-targeting
+ 46-755.json
+                                              pattern referenced in Defendant/Counter-Plaintiff's Amended
+                                              Counterclaim.
+                                              The originating January 7, 2026 @adezero tweet (tweet identifier
+ dataset_tweet- January 7,                    2008910835393904946) characterizing FCI Milan correctional
+ scraper_2026- 2026: ADL /                    officers as "Neo-Nazi." This tweet is the originating source content
+                                   2
+ 05-14_22-21- Nazi Guards                     that @BiancaWestfall subsequently amplified in her January 12,
+ 05-308.json      FCI Milan                   2026 original post identified in §III.C, paragraph 23 of the
+                                              Supplemental Brief.
+                                              The @adezero conversation thread including tweet identifier
+                  March 24,                   2036241895194521772 ("I literally just digitally decapitated myself
+ dataset_tweet-
+                2026: "digital                because @JustCallMeJoeP kept telling me to drop the dead
+ scraper_2026-
+                decapitation" / 9             weight (last name)"), which is the canonical public-record
+ 05-14_22-20-
+                Prich                         attribution by Plaintiff/Counter-Defendant of the name-reversion
+ 14-436.json
+                attribution                   advice to Joe Prich.
+
+                  March 24,
+ dataset_tweet- 2026:                         The @adezero conversation thread including tweet identifier
+ scraper_2026- monogamy /                     2036509018512818208 ("Cheating isn't the same as non-
+                                   2
+ 05-14_22-20- non-                            monogamy"), preserved for record continuity supporting the timing
+ 30-315.json      monogamy                    analysis of the romantic-partner attribution.
+                  framing
+                                              The @adezero conversation thread including tweet identifier
+ dataset_tweet- March 30,
+                                              2038505186310910253 ("a real man like Joe step up"), which is a
+ scraper_2026- 2026:
+                           14                 public-record characterization by Plaintiff/Counter-Defendant of her
+ 05-14_22-21- OvenBenjamin
+                                              romantic-partner status with Joe Prich contemporaneous with the
+ 32-606.json      sequence
+                                              period of Defendant/Counter-Plaintiff's incarceration.
+
+                                          C. Negative-result query capture
+12. The remaining dataset in the May 14, 2026 Extended Scrape Evidence is a negative-result query
+   capture, returned by the Apify platform in response to a query for quote-tweets of the May 8, 2026 "Dead
+   Man's Switch" broadcast. The capture is retained in the chain-of-custody record to document the
+   absence of additional quote-tweet activity beyond that already preserved in the May 12, 2026 Scrape
+   Evidence.

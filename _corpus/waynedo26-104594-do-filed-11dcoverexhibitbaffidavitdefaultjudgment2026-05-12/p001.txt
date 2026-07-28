@@ -1,0 +1,47 @@
+Document: 11d Cover Exhibit B Affidavit Default Judgment 2026-05-12
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-12
+Page: 1 of 1
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-11dcoverexhibitbaffidavitdefaultjudgment2026-05-12/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/11d_Cover_Exhibit_B_Affidavit_Default_Judgment_2026-05-12.pdf
+
+---
+
+COVER
+EXHIBIT B
+Department of Veterans Affairs Payment History Inquiry (Redacted)
+with Summary Table of Diverted Payments, September 2025 through February 2026
+**Source System:** Department of Veterans Affairs, Payment History Inquiry (commonly abbreviated TINQ)
+**Payee of Record:** CONRAD A ROCKENHAUS **Period Reflected:** Disability Compensation payment
+activity through 02/27/2026 **Period Relevant to Counterclaim Count C (VA Component):** September 2025
+through February 2026 **Total Diverted to Accounts Under Counter-Defendant's Control:** $26,837.87
+This Exhibit reproduces the redacted Payment History Inquiry record obtained by Defendant from the
+Department of Veterans Affairs, reflecting monthly Disability Compensation payments issued by the United
+States Treasury to the routing destination on file during the period September 2025 through February 2026.
+During that period, Defendant was incarcerated and had no access to the va.gov account, no ability to
+manage his own direct-deposit instructions, and no actual or constructive control over the routing destination
+on file. Counter-Defendant Adrienne Marjorie Rockenhaus accessed the va.gov account using Defendant's
+id.me credentials without authorization, redirected the direct-deposit instructions, and caused each monthly
+payment in the period to be deposited into accounts under her control. Counter-Defendant was not
+appointed Defendant's VA fiduciary at any relevant time and had no lawful authority to receive any payment
+reflected herein. The Payment History reflects a returned payment of $4,673.44 on October 1, 2025 marked
+"Undeliverable: Bad Address (1)," cancelled October 3, 2025, during the precise period in which Counter-
+Defendant represented to Defendant by TRULINCS electronic message that "the VA pay has not been
+deposited for this month." The Payment History also reflects the retroactive reissue of that same $4,673.44
+payment on October 9, 2025. This Exhibit is accompanied by a redacted summary table setting forth, for
+each diverted payment in the September 2025 through February 2026 period: (i) the date of payment, (ii) the
+dollar amount of the payment, and (iii) the routing destination as reflected in the Payment History. The
+summary table is the documentary foundation for the $26,837.87 figure pleaded at WHEREFORE Count C
+(VA component) of the Counterclaim and at Section IV of the Affidavit. Personally identifying information has
+been redacted in accordance with this Court's prior orders on PII. This Exhibit is the documentary foundation
+for the conversion claim pleaded in Counterclaim Count C (VA component) on the common-law theory
+recognized in Aroma Wines & Equipment, Inc. v. Columbia Distribution Services, Inc., 497 Mich. 337 (2015);
+Lawsuit Financial, L.L.C. v. Curry, 261 Mich. App. 579 (2004); and Head v. Phillips Camper Sales & Rental,
+Inc., 234 Mich. App. 94 (1999). Each diverted payment is specifically identifiable by date, amount, and
+routing destination. The total measure of damages on the VA component is $26,837.87.
+ROCKENHAUS v. ROCKENHAUS
+Case No. 26-104594-DO
+Hon. Nicole N. Goodson
+Third Judicial Circuit, Wayne County, Michigan

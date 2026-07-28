@@ -1,0 +1,66 @@
+Document: 00 Exhibit Index
+Case: Rockenhaus v. Rockenhaus (PPO), Case No. 26-102221-PP
+Court: Wayne County Circuit Court (Third Judicial Circuit)
+Category: Filed by Conrad
+Page: 3 of 11
+Source: https://rockenhaus.net/documents/wayneppo26-102221-pp-filed-exhibits-00exhibitindex/
+PDF: https://rockenhaus.net/wayne_ppo_26-102221-PP/filed/Exhibits/00_Exhibit_Index.pdf
+
+---
+
+Ex.   Title                                           Purpose
+
+10    December 22, 2025 Letter, Petitioner to         Voice-to-text letter dated 12/22/25, sixty (60) days before
+      Respondent                                      PPO filing. Petitioner explicitly disclaims grievance (“we don't
+                                                      think any of this is your fault”), expresses present-tense
+                                                      affection (“I love you so much”; “You mean everything to
+                                                      me”), and references future plans together. Contradicts the
+                                                      fear narrative the petition advances.
+
+11    U.S. Department of Veterans Affairs             Quantifies $26,837.87 in federal disability benefits at stake in
+      Payment History, Oct. 2025–Mar. 2026            the revocation that triggered the PPO filing. Pay-date column
+                                                      reflects the date of disbursement; under 38 C.F.R. § 3.31,
+                                                      monthly VA payments are advanced when the first of the
+                                                      month falls on a weekend or federal holiday. The line item
+                                                      dated February 27, 2026 is the March 2026 payment, paid
+                                                      early because March 1, 2026 was a Sunday.
+
+12    Affidavit of Brian Howell, Notarized Apr. 10,   Sworn third-party witness refuting the Motorola Moto G Play /
+      2026                                            Android allegations in Petitioner's Motion to Show Cause.
+
+13    BOP Notice of Release, Mar. 2, 2026             Official custody timeline establishing Respondent's
+                                                      continuous federal incarceration Sept. 4, 2025 through Mar.
+                                                      2, 2026.
+
+14    Affidavit of Conrad Alan Rockenhaus,            Respondent's sworn statement under penalty of perjury in
+      Notarized Apr. 24, 2026, with Supplemental      support of Motion to Terminate. Component 1 (notarized
+      Affidavit Notarized Apr. 25, 2026               April 24, 2026) addresses each operative factual element of
+                                                      the Petition with personal-knowledge testimony. Component
+                                                      2 (Supplemental Affidavit, notarized April 25, 2026)
+                                                      addresses three categories of evidence added to the bundle
+                                                      after the original affidavit: authentication of the March 4,
+                                                      2026 email (Exhibit 18), the 38 C.F.R. § 3.31 early-pay
+                                                      convention establishing that the February 27, 2026 line item
+                                                      on Exhibit 11 is the March 2026 VA payment, and the March
+                                                      26, 2026 process-server attempt narrative incorporated into
+                                                      Exhibit 7.
+
+15    Affidavit of Ann Helgren, Notarized Apr. 24,    Sworn third-party eyewitness to the events of March 2, 2026.
+      2026                                            Testifies that Petitioner instructed her to make false
+                                                      statements to the Veterans Administration regarding
+                                                      Respondent's mental health, witnessed Petitioner's false
+                                                      residency statement to Redford police, and ended the
+                                                      long-standing friendship the next day after Helgren refused
+                                                      to corroborate the false statements.
+
+16    Affidavit of Kevin Chavous, Notarized Apr.      Sworn third-party witness corroborating Exhibit 12 (Howell).
+      24, 2026                                        Testifies from personal observation throughout the March
+                                                      2026 period, including March 27–30, 2026, that Respondent
+                                                      possessed only an Apple iPhone and did not possess or use
+                                                      any Android device or Signal messaging application.
+
+17    Affidavit of Deandre Connor, Notarized Apr.     Sworn third-party witness corroborating Exhibit 12 (Howell).
+      24, 2026                                        Testifies from personal observation throughout the March
+                                                      2026 period, including March 27–30, 2026, that Respondent
+                                                      possessed only an Apple iPhone and did not possess or use
+                                                      any Android device or Signal messaging application.

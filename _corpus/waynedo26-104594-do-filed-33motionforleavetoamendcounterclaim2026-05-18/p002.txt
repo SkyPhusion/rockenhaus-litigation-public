@@ -1,0 +1,59 @@
+Document: 33 Motion For Leave To Amend Counterclaim 2026-05-18
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-18
+Page: 2 of 5
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-33motionforleavetoamendcounterclaim2026-05-18/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/33_Motion_for_Leave_to_Amend_Counterclaim_2026-05-18.pdf
+
+---
+
+where the amended claim "arose out of the conduct, transaction, or occurrence set forth, or attempted to
+    be set forth, in the original pleading." The relation-back doctrine applies here.
+
+                              III. REASONS SUPPORTING AMENDMENT
+10. Counter-Plaintiff's original Counterclaim, at §VI (¶¶34-43), described Counter-Defendant's coordinated
+    harassment of Counter-Plaintiff through online channels operating as Counter-Defendant's identity-
+    amplification network. The original Counterclaim identified Counter-Defendant's verified main account
+    @adezero and made allegations regarding her operation of sockpuppet accounts on the X/Twitter
+    platform.
+11. Since the April 15, 2026 filing date, Counter-Plaintiff has developed substantial new documentary
+    evidence of the coordinated harassment operation that was alleged in general terms in the original
+    pleading. The new evidence does not assert new claims; it provides the documentary substrate for the
+    same claims that have already been deemed admitted by default. Specifically, Counter-Plaintiff has
+    developed:
+a. A cryptographically preserved scrape evidence corpus comprising eighteen Apify JSON files (the "May
+12, 2026 Scrape Evidence") totaling approximately 114 megabytes and capturing approximately fourteen
+thousand five hundred tweet records across all eleven sockpuppet accounts plus @rosebuttcheeks,
+@JustCallMeJoeP, and the dead-man's-switch broadcast conversation tree, all preserved with SHA-256
+hash manifest under sworn chain of custody;
+b. Documentary identification of Joe Prich (@JustCallMeJoeP, located Austin, Texas, X Blue verified
+subscriber, user ID 1937294142633123840, account created June 23, 2025) as Counter-Defendant's
+documented romantic partner and the self-attributed source of her publicly announced intent to abandon the
+surname "Rockenhaus";
+c. Documented coordinated cessation of posting across all eleven sockpuppet accounts in three waves
+between March 17, 2026 and April 5, 2026, consistent with consciousness of guilt and preparation for
+evidence suppression;
+d. Documented cross-account coordination patterns independent of @adezero, including a March 28, 2026
+retweet sequence by @phatadvert demonstrating shared-operator architecture; and
+e. Documentation of Counter-Defendant's continuing wrongful conduct after the April 15, 2026 filing of the
+Counterclaim, including the May 4, 2026 "Dead Man's Switch" Facebook post under Counter-Plaintiff's
+compromised account naming five individuals (including Counter-Plaintiff's witnesses) as "responsible for
+my death," subsequent Demi-Jo Matthews Facebook sockpuppet activity, AirTag cyberstalking findings, and
+the May 9, 2026 vacation of Counter-Defendant's Ross Drive residence with no forwarding address as
+confirmed by the landlord.
+12. The amendment is timely. The Apify scrape evidence corpus was completed within the last 30 days. The
+    May 4, 2026 Dead Man's Switch post, May 5-7, 2026 Demi-Jo Matthews activity, and May 9, 2026
+    residence vacation all postdate the April 15, 2026 Counterclaim filing. The Joe Prich identification was
+    completed within the past week. Counter-Plaintiff has moved promptly to bring these matters before the
+    Court.
+13. The amendment seeks to add specific equitable relief and to clarify legal theories supported by the
+    factual basis but not expressly pleaded or itemized in the original Counterclaim. The amendment
+    includes: (a) explicit pleading of common-law conversion and statutory conversion under MCL 600.2919a
+    on the financial-misconduct and personal-property facts already pleaded in original Counterclaim
+    Sections III, IV, and IX, with corresponding addition of a statutory treble-damages claim under the same
+    statute; and (b) additional equitable relief items addressing the matters in paragraph 11 above. Most
+    critically, MCR 2.603(B)(3)(c) provides that a default judgment "may not be different in kind from, or
+    exceed in amount, that prayed for in the demand for judgment." If Counter-Plaintiff is to obtain the
+    statutory treble damages available on the conversion facts, or equitable relief addressing the

@@ -1,0 +1,56 @@
+Document: 06a Supplement Motion Issuance Subpoenas 2026-05-11
+Case: Rockenhaus v. Rockenhaus (Divorce), Case No. 26-104594-DO
+Court: Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson
+Category: Filed by Conrad
+Filed: 2026-05-11
+Page: 5 of 6
+Source: https://rockenhaus.net/documents/waynedo26-104594-do-filed-06asupplementmotionissuancesubpoenas2026-05-11/
+PDF: https://rockenhaus.net/wayne_do_26-104594-DO/filed/06a_Supplement_Motion_Issuance_Subpoenas_2026-05-11.pdf
+
+---
+
+29. The scope expressly excludes the content of any communication. No email body content, no Google
+    Drive file content, no Google Photos image content, and no other content data is requested.
+
+                   C. Scope of the Meta Platforms, Inc. Subpoena (Thirteenth Target)
+30. The supplemental subpoena to Meta Platforms, Inc. seeks disclosure of basic subscriber information in
+    the custody of Meta Platforms, Inc. pertaining to the Facebook account identified by:
+    Display name: "Demi-Jo Matthews";
+    Profile URL: https://www.facebook.com/amanda.berman.376; and
+    Numeric Facebook user-ID (owning_profile_id): 100003851214028.
+The records sought are narrowly scoped to the categories expressly authorized by 18 U.S.C. § 2703(c)(2):
+a. Subscriber name(s) of record at account creation and as updated thereafter, including any prior account-
+name changes recorded by Meta Platforms;
+b. Subscriber address(es) of record at account creation and as updated thereafter;
+c. Account creation date, length of service, and account-status history;
+d. Email address(es) of record associated with the account at any point during account life;
+e. Telephone number(s) of record associated with the account at any point during account life;
+f. IP-address logs reflecting account creation and account access for the period April 1, 2026 through the
+date of subpoena service, including timestamps and originating IP addresses for login events, post-
+publication events, and comment-publication events;
+g. Means and source of payment for any paid Meta service associated with the account, if applicable, limited
+to issuer name, last four digits of card number, and billing name and address; and
+h. Identifiers of any other Meta-platform account (Facebook, Instagram, Threads, WhatsApp) associated
+with the Demi-Jo Matthews account by shared email, shared telephone number, shared payment
+instrument, or shared device, to the extent such association is reflected in Meta's records.
+
+31. The scope expressly excludes the content of any communication, post body, photograph, video,
+    message, or other content data. No private-message content, no post-body content, no comment-body
+    content, no photograph or video file content, and no other content data is requested.
+
+                                         V. RELIEF REQUESTED
+WHEREFORE, Defendant Conrad Alan Rockenhaus respectfully requests that this Honorable Court enter
+an Order:
+32. Granting the Original Motion as supplemented herein, and authorizing chambers issuance of three
+    supplemental subpoenas duces tecum:
+a. A subpoena to the Michigan Department of State Record Lookup Unit at 7064 Crowner Drive,
+Lansing, Michigan 48918-1540, in the form of MC 11 with Attachment A scoped as set out in Section IV.A
+above;
+b. A subpoena to Google LLC, c/o Custodian of Records, Legal Investigations Support, 1600 Amphitheatre
+Parkway, Mountain View, California 94043, in the form of MC 11 with Attachment A scoped as set out in
+Section IV.B above; and
+c. A subpoena to Meta Platforms, Inc., c/o Custodian of Records, Law Enforcement Response Team, 1601
+Willow Road, Menlo Park, California 94025, in the form of MC 11 with Attachment A scoped as set out in
+Section IV.C above;
+33. Directing that all three supplemental subpoenas bear judicial signature or clerk-stamp issuance pursuant
+    to MCR 2.506(F) and chambers procedure;
