@@ -40,21 +40,24 @@ breadcrumbs:
   <a href="{{ '/disputed-domains/' | relative_url }}">Disputed domains</a>
 </p>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {% for item in site.data.faq.faqs %}
-    {
-      "@type": "Question",
-      "name": {{ item.question | jsonify }},
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": {{ item.answer | jsonify }}
-      }
-    }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ]
-}
-</script>
+{% comment %}
+  FAQPage JSON-LD REMOVED 2026-07-28.
+
+  This block emitted all 50 entries of _data/faq.json as machine-readable
+  Question/Answer pairs. Roughly half of them characterise named private
+  third parties, so the site was publishing those characterisations as
+  structured claims for rich results. That is the single defect most likely
+  to have put this site in the category search engines demote hardest, and
+  removing the standalone third-party PAGES did not close it, because this
+  page generates its own schema from the data file.
+
+  Deliberately removed wholesale rather than filtered: the 24 affected
+  entries are not one class. Some are third-party characterisation and should
+  go; others are legitimate (Conrad's own retraction demands, the
+  is-Conrad-dead question, entries about the opposing party). Filtering by
+  keyword would have cut real content, and deciding entry by entry is the
+  pass-2 content review, not a mechanical edit.
+
+  The visible page is unchanged. Restore a FAQPage block after pass 2 has
+  rewritten _data/faq.json, sourcing only the reviewed entries.
+{% endcomment %}
