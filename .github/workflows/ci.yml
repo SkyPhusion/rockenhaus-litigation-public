@@ -1,0 +1,104 @@
+name: ci
+
+# Satisfies the `ci` required status check on the aviation-grade org ruleset.
+#
+# Before this existed the repo had exactly one workflow (cloudflare-pages.yml),
+# so `ci` and `coverage` had never reported and EVERY pull request was
+# permanently blocked on "Expected -- waiting for status to be reported".
+# Admin bypass was the only way to merge, which is the escape hatch becoming the
+# routine path on the repo that publishes a court record.
+#
+# ALWAYS-RUN, no `on.paths` filter and no job-level `if:`. A required check that
+# is skipped at the job level never reports at all, which recreates the exact
+# deadlock this file exists to fix. Scope is decided INSIDE the job, so an
+# out-of-scope run still reports `ci` as green.
+#
+# What it actually checks is worth stating: a broken Jekyll build means
+# rockenhaus.net silently stops publishing filed documents. That failure is
+# invisible from the repo and would be noticed only when someone went looking
+# for a filing. This is the check that catches it.
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      - name: PDF tools
+        # generate_site.py shells out to pdftotext. Without it the generator
+        # silently produces documents with no extracted text rather than
+        # failing, so the build would pass while publishing empty pages.
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generator compiles
+        run: python3 -m compileall -q scripts/
+
+      - name: Site builds
+        # The real gate. Catches broken Liquid, malformed front matter, a
+        # dangling include, and a link to a page that no longer exists.
+        run: bundle exec jekyll build --trace
+
+      - name: Build produced pages
+        # A build can exit 0 and emit almost nothing if a collection stops
+        # resolving. Assert the output is the shape we expect rather than
+        # trusting the exit code.
+        run: |
+          set -euo pipefail
+          count=$(find _site -name '*.html' | wc -l)
+          echo "built $count html pages"
+          if [ "$count" -lt 10 ]; then
+            echo "::error::only $count pages built; the site collapsed"
+            exit 1
+          fi
+
+      - name: No accusations in indexable metadata
+        # The defect that put this site in the hole was third-party
+        # characterisations reaching titles, descriptions and JSON-LD, where
+        # search engines read them as structured claims. Fail the build rather
+        # than rediscover it. Scoped to indexable metadata only: exhibit pages
+        # under /evidence/ are noindex and quotation of filings is legitimate.
+        #
+        # SCOPE LIMIT, deliberate: this matches CHARACTERISATION terms, not every
+        # mention of a third party. Naming someone as the recipient of a served
+        # legal notice is a fact about Conrad's own conduct and is legitimate in
+        # a title; asserting what that person IS, is not. A name-based denylist
+        # would fail the second case and the first equally, so it would either be
+        # ignored or would delete legitimate content. This check caught three
+        # pages on its first run that two manual passes had missed; it did NOT
+        # catch two retraction titles, which were fixed by review. Both facts
+        # belong here: it is a floor, not the whole review.
+        run: |
+          set -uo pipefail
+          pattern='neo-nazi|nazzy|do not hire'
+          hits=$(grep -rIl -E -i "$pattern" _site \
+                   --include='*.html' 2>/dev/null \
+                 | while read -r f; do
+                     if sed -n '/<head>/,/<\/head>/p' "$f" \
+                        | grep -qE -i "$pattern"; then echo "$f"; fi
+                   done)
+          if [ -n "$hits" ]; then
+            echo "::error::accusation text reached indexable <head> metadata:"
+            echo "$hits"
+            exit 1
+          fi
+          echo "OK: no accusation text in any page's head metadata"

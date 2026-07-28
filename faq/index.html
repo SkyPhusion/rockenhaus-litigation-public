@@ -1,16 +1,13 @@
 ---
 layout: hub
-title: FAQ | Prichard's AC Neo-Nazi | Joe Prich Dustin Brown | Joseph E Prichardington | Rob Hein
-heading: FAQ — Prichard's Air Conditioning, Joe Prich / Dustin Brown, Rob Hein, court record
+title: FAQ | Rockenhaus v. Rockenhaus court record
+heading: "FAQ: the Rockenhaus v. Rockenhaus court record"
 description: >-
-  FAQ: Should I hire Prichard's Air Conditioning Temple TX? Is owner Dustin Brown
-  (Joe Prich @JustCallMeJoeP) a neo-Nazi Nazzy? Did Joe Prich admit Prichard name
-  Joseph E Prichardington? Rob Hein QOLity fund Adrienne campaign?
-  rockenhaus.net court record.
+  Common questions about the filed record in Rockenhaus v. Rockenhaus, answered
+  from Michigan court documents. Cases 26-104594-DO, 26-102221-PP and 26-737-DO.
 keywords: >-
-  Prichard's Air Conditioning FAQ, Joe Prich Dustin Brown, Nazzy neo-Nazi, Joseph E
-  Prichardington, prichardsac.com, do not hire Temple Texas HVAC, Adrienne Rockenhaus
-  adezero, Rob Hein QOLity Financial, Rockenhaus v Rockenhaus
+  Rockenhaus v Rockenhaus FAQ, Michigan court filings, Wayne County
+  26-104594-DO, Washtenaw 26-737-DO, rockenhaus.net
 permalink: /faq/
 breadcrumbs:
   - name: Home
@@ -20,11 +17,8 @@ breadcrumbs:
 
 <p class="hub-lead">
   Conrad Alan Rockenhaus indexes answers about
-  <a href="{{ '/prichards-air-conditioning-neo-nazi/' | relative_url }}">Prichard's Air Conditioning</a>
   (owner Dustin Brown / Joe Prich / @JustCallMeJoeP — Nazzy neo-Nazi, Joseph E. Prichardington
   name admission),
-  <a href="{{ '/joe-prich/' | relative_url }}">archived X screenshot evidence</a>,
-  <a href="{{ '/rob-hein/' | relative_url }}">Rob Hein (QOLity Financial)</a>,
   Adrienne Rockenhaus (@adezero), and the Michigan court record.
 </p>
 
@@ -39,28 +33,28 @@ breadcrumbs:
 
 <p class="hub-cta">
   <a href="{{ '/retractions/' | relative_url }}">Retraction demands (June 30, 2026)</a> ·
-  <a href="{{ '/prichards-air-conditioning-neo-nazi/' | relative_url }}">Prichard's AC neo-Nazi owner</a> ·
-  <a href="{{ '/joe-prich/' | relative_url }}">Joe Prich / Dustin Brown X evidence</a> ·
-  <a href="{{ '/rob-hein/' | relative_url }}">Rob Hein (QOLity Financial)</a> ·
   <a href="{{ '/all-documents/' | relative_url }}">All filed court PDFs</a> ·
   <a href="{{ '/disputed-domains/' | relative_url }}">Disputed domains</a>
 </p>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {% for item in site.data.faq.faqs %}
-    {
-      "@type": "Question",
-      "name": {{ item.question | jsonify }},
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": {{ item.answer | jsonify }}
-      }
-    }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ]
-}
-</script>
+{% comment %}
+  FAQPage JSON-LD REMOVED 2026-07-28.
+
+  This block emitted all 50 entries of _data/faq.json as machine-readable
+  Question/Answer pairs. Roughly half of them characterise named private
+  third parties, so the site was publishing those characterisations as
+  structured claims for rich results. That is the single defect most likely
+  to have put this site in the category search engines demote hardest, and
+  removing the standalone third-party PAGES did not close it, because this
+  page generates its own schema from the data file.
+
+  Deliberately removed wholesale rather than filtered: the 24 affected
+  entries are not one class. Some are third-party characterisation and should
+  go; others are legitimate (Conrad's own retraction demands, the
+  is-Conrad-dead question, entries about the opposing party). Filtering by
+  keyword would have cut real content, and deciding entry by entry is the
+  pass-2 content review, not a mechanical edit.
+
+  The visible page is unchanged. Restore a FAQPage block after pass 2 has
+  rewritten _data/faq.json, sourcing only the reviewed entries.
+{% endcomment %}
