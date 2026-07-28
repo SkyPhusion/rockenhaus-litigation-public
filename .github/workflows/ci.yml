@@ -77,6 +77,16 @@ jobs:
         # search engines read them as structured claims. Fail the build rather
         # than rediscover it. Scoped to indexable metadata only: exhibit pages
         # under /evidence/ are noindex and quotation of filings is legitimate.
+        #
+        # SCOPE LIMIT, deliberate: this matches CHARACTERISATION terms, not every
+        # mention of a third party. Naming someone as the recipient of a served
+        # legal notice is a fact about Conrad's own conduct and is legitimate in
+        # a title; asserting what that person IS, is not. A name-based denylist
+        # would fail the second case and the first equally, so it would either be
+        # ignored or would delete legitimate content. This check caught three
+        # pages on its first run that two manual passes had missed; it did NOT
+        # catch two retraction titles, which were fixed by review. Both facts
+        # belong here: it is a floor, not the whole review.
         run: |
           set -uo pipefail
           pattern='neo-nazi|nazzy|do not hire'
