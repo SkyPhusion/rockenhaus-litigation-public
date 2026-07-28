@@ -12,7 +12,7 @@
 // enforces that rather than trusting this comment.
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { exhibitRef, STATUS_LABEL } from "../../lib/exhibits";
+import { exhibitRef, STATUS_LABEL, EVIDENCE_SOURCE_SHORT } from "../../lib/exhibits";
 
 const exhibitEntries = await getCollection("exhibits");
 const chainEntries = await getCollection("chains");
@@ -102,6 +102,7 @@ const description =
           <th scope="col">Artifact</th>
           <th scope="col">Posted</th>
           <th scope="col">Account visible</th>
+          <th scope="col">Evidence source</th>
           <th scope="col">Archived</th>
         </tr>
       </thead>
@@ -116,6 +117,7 @@ const description =
               {e.posted_date_precision === "month" ? " (month only)" : ""}
             </td>
             <td>{e.author_visible_in_artifact ? "yes" : "no, cropped"}</td>
+            <td>{EVIDENCE_SOURCE_SHORT[e.evidence_source]}</td>
             <td>{e.archived_url ? "yes" : "no"}</td>
           </tr>
         ))}
@@ -123,10 +125,12 @@ const description =
     </table>
 
     <p class="note">
-      No exhibit in this archive currently carries an independent archive reference
-      (Wayback or archive.today). If a post is deleted the screenshot is the only
-      remaining record, which is materially weaker. Capturing archive references is
-      possible now and impossible after deletion.
+      No exhibit here carries an independent third-party archive reference, and none
+      can be made: the source account has been suspended and the posts are no longer
+      live. That is the permanent state of this material rather than an outstanding
+      task. Where an exhibit is evidenced only by a screenshot, the index says so in
+      the evidence-source column, and the identification chains above are stated in
+      terms of what that evidence does and does not establish.
     </p>
   </section>
 </BaseLayout>

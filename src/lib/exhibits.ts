@@ -27,3 +27,32 @@ export function artifactLabel(artifactType: string): string {
     ? "PDF correspondence"
     : "Screenshot of a public post";
 }
+
+/**
+ * How an exhibit is evidenced, strongest last.
+ *
+ * A screenshot shows what a page looked like to whoever captured it. An
+ * authenticated platform record is stronger, because it answers a "that
+ * screenshot is fabricated" challenge directly rather than inviting it.
+ *
+ * No third-party archive capture exists for any exhibit in this archive and
+ * none can be made: the source account was suspended and the posts are down. A
+ * missing archive reference is therefore the permanent expected state.
+ */
+export const EVIDENCE_SOURCE_LABEL: Record<string, string> = {
+  screenshot:
+    "Screenshot of a public post. Shows what the page displayed at capture time; it is not an authenticated platform record.",
+  "archive-capture":
+    "Independent third-party archive capture.",
+  "subpoena-return":
+    "Authenticated platform record produced by the platform. Stronger than a screenshot or a third-party crawl.",
+  correspondence:
+    "Correspondence retained as filed or served.",
+};
+
+export const EVIDENCE_SOURCE_SHORT: Record<string, string> = {
+  screenshot: "screenshot",
+  "archive-capture": "archive capture",
+  "subpoena-return": "platform record",
+  correspondence: "correspondence",
+};

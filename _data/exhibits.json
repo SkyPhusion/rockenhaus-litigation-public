@@ -20,7 +20,8 @@
       "captured_upper_bound": "2026-07-01",
       "archived_url": null,
       "shows_on_face": "Correspondence from American Airlines regarding an AAdvantage account profile update.",
-      "supports_links": []
+      "supports_links": [],
+      "evidence_source": "correspondence"
     },
     {
       "id": "xpost-2025-07-07",
@@ -42,7 +43,8 @@
       "shows_on_face": "A post from the account @JustCallMeJoeP (display name \"Joe Prich\", verified badge) replying to @ElijahSchaffer, timestamped 4:13 AM Jul 7 2025, reading: \"My favorite thing is how they convinced Christians their 2000-year old sacred texts demand they protect a country that didn't even exist until 1948\".",
       "supports_links": [
         "joep-identity:A"
-      ]
+      ],
+      "evidence_source": "screenshot"
     },
     {
       "id": "xpost-2025-09-01",
@@ -62,7 +64,8 @@
       "captured_upper_bound": "2026-07-01",
       "archived_url": null,
       "shows_on_face": "A post replying to @GenerationNews, timestamped 8:27 PM Sep 1 2025, reading: \"47% of Puerto Rican households are on welfare. The highest rates of all United States' territories, states, municipalities and regions. So, by all means..do us a favor\", with an attached AI Overview screenshot. IMPORTANT: the posting account's name and handle are cropped out of this capture. The author is not visible on the face of this artifact.",
-      "supports_links": []
+      "supports_links": [],
+      "evidence_source": "screenshot"
     },
     {
       "id": "xpost-2025-09-10",
@@ -84,7 +87,8 @@
       "shows_on_face": "A post from the account @JustCallMeJoeP (display name \"Joe Prich\", verified badge) replying to @FBIDirectorKash and @FBI, timestamped 10:35 PM Sep 10 2025, reading: \"They'll identify him just as soon as they can scrub all his social media and adjust the contrast on his mugshot\".",
       "supports_links": [
         "joep-identity:A"
-      ]
+      ],
+      "evidence_source": "screenshot"
     },
     {
       "id": "xpost-2025-10-01",
@@ -106,7 +110,8 @@
       "shows_on_face": "A post from the account @JustCallMeJoeP (display name \"Joe Prich\", verified badge) replying to @camhigby, timestamped 7:37 PM Oct 1 2025, reading: \"You really thought you were going to get some kind of Internet applause for this?! You'd be on your way to the fucking Camps for 60 Days minimum, if *I* were in charge of this place.\"",
       "supports_links": [
         "joep-identity:A"
-      ]
+      ],
+      "evidence_source": "screenshot"
     },
     {
       "id": "xpost-2025-10-03",
@@ -126,7 +131,8 @@
       "captured_upper_bound": "2026-07-01",
       "archived_url": null,
       "shows_on_face": "A post replying to @MissLauraMarcus, timestamped 10:27 AM Oct 3 2025, reading: \"This you?? You made your bed. Now fuckin' lay it in.\", quote-stacking five older posts by the account @MissLauraMarcus dated between Feb 2020 and May 2023. IMPORTANT: the posting account's name and handle are cropped out of this capture. The author is not visible on the face of this artifact.",
-      "supports_links": []
+      "supports_links": [],
+      "evidence_source": "screenshot"
     },
     {
       "id": "xpost-2025-11-02",
@@ -148,7 +154,8 @@
       "shows_on_face": "A post from the account @JustCallMeJoeP (display name \"Joe Prich\", verified badge) replying to @Bushra1Shaikh, timestamped 7:39 PM Nov 2 2025, reading: \"I get so God damn tired of brown foreigners lecturing us about what our countries are. Fuck You\".",
       "supports_links": [
         "joep-identity:A"
-      ]
+      ],
+      "evidence_source": "screenshot"
     },
     {
       "id": "xpost-2025-11-07",
@@ -170,7 +177,8 @@
       "shows_on_face": "A post from the account @JustCallMeJoeP (display name \"Joe Prich\", verified badge) replying to @Inevitablewest, timestamped 2:14 PM Nov 7 2025, reading: \"Sorry we shipped in millions of invaders that destroyed the country all your friends died for...but here, have a CD\".",
       "supports_links": [
         "joep-identity:A"
-      ]
+      ],
+      "evidence_source": "screenshot"
     },
     {
       "id": "xpost-2026-03-24",
@@ -192,7 +200,8 @@
       "shows_on_face": "A post from the account @adezero, timestamped 12:41 AM Mar 24 2026, reading: \">\"Under review\" I literally just digitally decapitated myself because @JustCallMeJoeP kept telling me to drop the \"dead weight\" (last name).\", with an attached profile screenshot. The superseded index recorded this exhibit's date as unknown; the date is visible in the artifact.",
       "supports_links": [
         "adezero-contact:A"
-      ]
+      ],
+      "evidence_source": "screenshot"
     },
     {
       "id": "xpost-2026-03-28-b",
@@ -214,7 +223,8 @@
       "shows_on_face": "A public exchange dated Mar 28 2026. @adezero posts \"@JustCallMeJoeP what do I do?\" with an attached screenshot of a direct-message request from an account named \"Dan Ferris\". @JustCallMeJoeP replies \"Sit tight. I'm on the way up. Just packing the carry-on\". @adezero replies with emoji.",
       "supports_links": [
         "adezero-contact:A"
-      ]
+      ],
+      "evidence_source": "screenshot"
     },
     {
       "id": "xpost-2026-03-28-a",
@@ -236,7 +246,8 @@
       "shows_on_face": "A public exchange dated Mar 28 2026 between @adezero (display name \"Adrienne\", verified) and @JustCallMeJoeP (display name \"Joe Prich\", verified), personal in character, timestamps 2:40 PM through 2:51 PM.",
       "supports_links": [
         "adezero-contact:A"
-      ]
+      ],
+      "evidence_source": "screenshot"
     },
     {
       "id": "xpost-2026-03-a",
@@ -258,7 +269,8 @@
       "shows_on_face": "A compilation of six public posts between @adezero (display name \"Adrienne\", verified) and @JustCallMeJoeP (display name \"Joe Prich\", verified), individually timestamped between Mar 18 2026 and Mar 31 2026, personal in character. The superseded index recorded a single month-precision date; the constituent posts carry visible day-precision timestamps spanning a range.",
       "supports_links": [
         "adezero-contact:A"
-      ]
+      ],
+      "evidence_source": "screenshot"
     },
     {
       "id": "xpost-2026-05-26-a",
@@ -281,7 +293,8 @@
       "supports_links": [
         "joep-identity:A",
         "joep-identity:B"
-      ]
+      ],
+      "evidence_source": "screenshot"
     },
     {
       "id": "xpost-2026-05-26-b",
@@ -301,8 +314,10 @@
       "captured_upper_bound": "2026-06-29",
       "archived_url": null,
       "shows_on_face": "A single-post detail view timestamped 2:33 AM May 26 2026, reading: \"I can subtweet too. Watch / Your bitch calls me Daddy. Literally. I'm the one who convinced her to drop your name / First man she EVER called Sir, I kept her ass right in line, walking the chalk and she loved every second of it because she recognizes a REAL man when she sees one\", with an attached image. IMPORTANT: the posting account's name and handle are cropped out of this capture. The author is not visible on the face of this artifact; the status identifier is recorded from the filename.",
-      "supports_links": []
+      "supports_links": [],
+      "evidence_source": "screenshot"
     }
   ],
-  "_id_note": "Exhibit ids are deliberately neutral and date-anchored. The id IS the URL, and the canonical link is indexable metadata, so an id carrying an account handle or a characterisation would put a claim into machine-readable metadata by construction. The `file` field still points at the original asset filename, which is body content on a noindex page."
+  "_id_note": "Exhibit ids are deliberately neutral and date-anchored. The id IS the URL, and the canonical link is indexable metadata, so an id carrying an account handle or a characterisation would put a claim into machine-readable metadata by construction. The `file` field still points at the original asset filename, which is body content on a noindex page.",
+  "_evidence_source_note": "evidence_source records HOW this exhibit is evidenced, so a page can render the strongest chain it currently has and upgrade visibly rather than being rebuilt later. `screenshot` is a capture of a public post. `archive-capture` would be an independent third-party crawl. `subpoena-return` is an authenticated platform record, which is stronger than either because it defeats a fabrication challenge directly. No archive-capture exists or can be made for any exhibit here: the source account was suspended and the posts are down, so a missing archive reference is the permanent expected state and not a gap to chase. archived_url stays nullable only in case an incidental pre-suspension crawl surfaces later."
 }

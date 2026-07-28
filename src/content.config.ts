@@ -66,6 +66,22 @@ const exhibits = defineCollection({
       captured_date_precision: datePrecision,
       captured_upper_bound: z.string().nullable(),
 
+      // How this exhibit is evidenced, so a page renders the strongest chain it
+      // currently has and upgrades visibly rather than being rebuilt around a
+      // stronger source later. `subpoena-return` is an authenticated platform
+      // record and outranks both a screenshot and a third-party crawl, because
+      // it answers a fabrication challenge directly.
+      evidence_source: z.enum([
+        "screenshot",
+        "archive-capture",
+        "subpoena-return",
+        "correspondence",
+      ]),
+
+      // Nullable and expected to stay null. The source account was suspended and
+      // the posts are down, so no third-party archive capture exists or can be
+      // made for any exhibit here. Retained only in case an incidental
+      // pre-suspension crawl surfaces. A null here is NOT a defect to chase.
       archived_url: z.string().url().nullable(),
 
       shows_on_face: z.string().min(20),

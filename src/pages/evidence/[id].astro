@@ -6,7 +6,7 @@
 // the guard in BaseLayout fails the build if any reach it.
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { exhibitRef, artifactLabel } from "../../lib/exhibits";
+import { exhibitRef, artifactLabel, EVIDENCE_SOURCE_LABEL } from "../../lib/exhibits";
 
 export async function getStaticPaths() {
   const entries = await getCollection("exhibits");
@@ -136,12 +136,16 @@ const description =
         <dd>{exhibit.status_id ?? "Not recorded."}</dd>
       </div>
       <div>
+        <dt>Evidence source</dt>
+        <dd>{EVIDENCE_SOURCE_LABEL[exhibit.evidence_source]}</dd>
+      </div>
+      <div>
         <dt>Independent archive</dt>
         <dd>
           {exhibit.archived_url ? (
             <a href={exhibit.archived_url} rel="nofollow noopener">{exhibit.archived_url}</a>
           ) : (
-            "None. No Wayback or archive.today reference has been captured for this artifact. If the original post is deleted, this screenshot is the only remaining record."
+            "None, and none can be made: the source account has been suspended and the post is no longer live. This is the expected state for every exhibit here, not an outstanding gap."
           )}
         </dd>
       </div>
