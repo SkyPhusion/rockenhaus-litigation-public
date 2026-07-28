@@ -1,0 +1,145 @@
+{
+  "_comment": "Exhibit index for /evidence/. Provenance only: what the artifact is, where it came from, when it was captured. Deliberately carries no characterisation of any person -- allegations belong in filed pleadings, not in site metadata. Generated from the asset filenames 2026-07-28; captured dates and matter references should be corrected by hand where the filename is imprecise.",
+  "exhibits": [
+    {
+      "id": "aadvantage-account-update-email-2026-06-10",
+      "file": "/assets/evidence/aadvantage-account-update-email-2026-06-10.pdf",
+      "label": "Aadvantage account update email 2026 06 10",
+      "source": "correspondence",
+      "captured": "2026-06-10",
+      "status_id": null,
+      "type": "PDF correspondence",
+      "matter": null
+    },
+    {
+      "id": "adezero-joep-flirt-physical-thread-2026-03-28",
+      "file": "/assets/images/evidence/adezero-joep-flirt-physical-thread-2026-03-28.png",
+      "label": "Adezero joep flirt physical thread 2026 03 28",
+      "source": "public X account @adezero",
+      "captured": "2026-03-28",
+      "status_id": null,
+      "type": "screenshot of a public post",
+      "matter": null
+    },
+    {
+      "id": "adezero-joep-flirt-posts-2026-03",
+      "file": "/assets/images/evidence/adezero-joep-flirt-posts-2026-03.png",
+      "label": "Adezero joep flirt posts 2026 03",
+      "source": "public X account @adezero",
+      "captured": "2026-03",
+      "status_id": null,
+      "type": "screenshot of a public post",
+      "matter": null
+    },
+    {
+      "id": "adezero-joep-flirt-travel-thread-2026-03-28",
+      "file": "/assets/images/evidence/adezero-joep-flirt-travel-thread-2026-03-28.png",
+      "label": "Adezero joep flirt travel thread 2026 03 28",
+      "source": "public X account @adezero",
+      "captured": "2026-03-28",
+      "status_id": null,
+      "type": "screenshot of a public post",
+      "matter": null
+    },
+    {
+      "id": "adezero-status-2036241895194521772",
+      "file": "/assets/images/evidence/adezero-status-2036241895194521772.png",
+      "label": "Adezero (status 2036241895194521772)",
+      "source": "public X account @adezero",
+      "captured": "date not encoded in filename",
+      "status_id": "2036241895194521772",
+      "type": "screenshot of a public post",
+      "matter": null
+    },
+    {
+      "id": "joe-prich-nazzy-thread-2026-05-26",
+      "file": "/assets/images/evidence/joe-prich-nazzy-thread-2026-05-26.png",
+      "label": "Joe prich nazzy thread 2026 05 26",
+      "source": "public X account @JustCallMeJoeP",
+      "captured": "2026-05-26",
+      "status_id": null,
+      "type": "screenshot of a public post",
+      "matter": null
+    },
+    {
+      "id": "joe-prich-status-2059100661354999996",
+      "file": "/assets/images/evidence/joe-prich-status-2059100661354999996.png",
+      "label": "Joe prich (status 2059100661354999996)",
+      "source": "public X account @JustCallMeJoeP",
+      "captured": "date not encoded in filename",
+      "status_id": "2059100661354999996",
+      "type": "screenshot of a public post",
+      "matter": null
+    },
+    {
+      "id": "joep-brown-foreigners-2025-11-02",
+      "file": "/assets/images/evidence/joep-brown-foreigners-2025-11-02.png",
+      "label": "Joep brown foreigners 2025 11 02",
+      "source": "public X account @JustCallMeJoeP",
+      "captured": "2025-11-02",
+      "status_id": null,
+      "type": "screenshot of a public post",
+      "matter": null
+    },
+    {
+      "id": "joep-camps-60-days-2025-10-01",
+      "file": "/assets/images/evidence/joep-camps-60-days-2025-10-01.png",
+      "label": "Joep camps 60 days 2025 10 01",
+      "source": "public X account @JustCallMeJoeP",
+      "captured": "2025-10-01",
+      "status_id": null,
+      "type": "screenshot of a public post",
+      "matter": null
+    },
+    {
+      "id": "joep-invaders-cd-2025-11-07",
+      "file": "/assets/images/evidence/joep-invaders-cd-2025-11-07.png",
+      "label": "Joep invaders cd 2025 11 07",
+      "source": "public X account @JustCallMeJoeP",
+      "captured": "2025-11-07",
+      "status_id": null,
+      "type": "screenshot of a public post",
+      "matter": null
+    },
+    {
+      "id": "joep-israel-1948-2025-07-07",
+      "file": "/assets/images/evidence/joep-israel-1948-2025-07-07.png",
+      "label": "Joep israel 1948 2025 07 07",
+      "source": "public X account @JustCallMeJoeP",
+      "captured": "2025-07-07",
+      "status_id": null,
+      "type": "screenshot of a public post",
+      "matter": null
+    },
+    {
+      "id": "joep-mugshot-scrub-2025-09-10",
+      "file": "/assets/images/evidence/joep-mugshot-scrub-2025-09-10.png",
+      "label": "Joep mugshot scrub 2025 09 10",
+      "source": "public X account @JustCallMeJoeP",
+      "captured": "2025-09-10",
+      "status_id": null,
+      "type": "screenshot of a public post",
+      "matter": null
+    },
+    {
+      "id": "joep-puerto-rican-welfare-2025-09-01",
+      "file": "/assets/images/evidence/joep-puerto-rican-welfare-2025-09-01.png",
+      "label": "Joep puerto rican welfare 2025 09 01",
+      "source": "public X account @JustCallMeJoeP",
+      "captured": "2025-09-01",
+      "status_id": null,
+      "type": "screenshot of a public post",
+      "matter": null
+    },
+    {
+      "id": "joep-woman-bed-2025-10-03",
+      "file": "/assets/images/evidence/joep-woman-bed-2025-10-03.png",
+      "label": "Joep woman bed 2025 10 03",
+      "source": "public X account @JustCallMeJoeP",
+      "captured": "2025-10-03",
+      "status_id": null,
+      "type": "screenshot of a public post",
+      "matter": null
+    }
+  ]
+}

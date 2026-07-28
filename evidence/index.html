@@ -1,0 +1,79 @@
+---
+layout: default
+title: "Archived exhibits | Rockenhaus v. Rockenhaus"
+description: "Archived screenshot exhibits preserved for the Michigan and federal matters. Not indexed; linked from filings and correspondence."
+permalink: /evidence/
+robots: "noindex, follow"
+---
+
+<div class="page">
+  <h1>Archived exhibits</h1>
+
+  <p class="lede">
+    Archived copies of public social-media posts and correspondence, preserved with capture
+    dates and source identifiers so they can be cited in filings and retraction correspondence.
+  </p>
+
+  <div class="notice">
+    <p>
+      <strong>This page is deliberately not indexed by search engines</strong>
+      (<code>noindex, follow</code>). It exists so exhibits remain reachable at a stable URL for
+      litigation use. It is a record of what was posted publicly and when. Descriptions below
+      identify the artifact and its provenance; they are not findings of fact, and no
+      characterisation of any person's beliefs or conduct is asserted here. Allegations belong in
+      filed pleadings, where they are subject to the rules of the court.
+    </p>
+  </div>
+
+  <h2>Provenance</h2>
+  <p>
+    Each exhibit is a screenshot of a publicly visible post captured on or about the date in its
+    filename. Where a post carries a numeric status identifier, that identifier is given so the
+    original can be located or subpoenaed. Original files are in
+    <code>assets/images/evidence/</code> and <code>assets/evidence/</code> in the
+    <a href="https://github.com/skyphusion-labs/rockenhaus-litigation-public">public repository</a>,
+    whose commit history records when each was added.
+  </p>
+
+  <h2>Exhibit index</h2>
+
+  <table class="exhibits">
+    <thead>
+      <tr><th>Exhibit</th><th>Source</th><th>Captured</th><th>Identifier</th></tr>
+    </thead>
+    <tbody>
+      {% for ex in site.data.exhibits.exhibits %}
+      <tr>
+        <td><a href="{{ ex.file | relative_url }}">{{ ex.label }}</a></td>
+        <td>{{ ex.source }}</td>
+        <td>{{ ex.captured }}</td>
+        <td>{% if ex.status_id %}<code>{{ ex.status_id }}</code>{% else %}&mdash;{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h2>Exhibits</h2>
+
+  {% for ex in site.data.exhibits.exhibits %}
+  <figure class="exhibit" id="{{ ex.id }}">
+    {% if ex.file contains '.pdf' %}
+    <p><a href="{{ ex.file | relative_url }}">{{ ex.label }} (PDF)</a></p>
+    {% else %}
+    <img src="{{ ex.file | relative_url }}" alt="Archived screenshot: {{ ex.label }}" loading="lazy" width="900">
+    {% endif %}
+    <figcaption>
+      <strong>{{ ex.label }}</strong><br>
+      Archived {{ ex.type }} from {{ ex.source }}, captured {{ ex.captured }}.
+      {% if ex.status_id %}Status identifier <code>{{ ex.status_id }}</code>.{% endif %}
+      {% if ex.matter %}Relevant to {{ ex.matter }}.{% endif %}
+    </figcaption>
+  </figure>
+  {% endfor %}
+
+  <h2>Related</h2>
+  <ul>
+    <li><a href="{{ '/retractions/' | relative_url }}">Retraction and correction demands</a></li>
+    <li><a href="{{ '/all-documents/' | relative_url }}">All filed documents</a></li>
+  </ul>
+</div>
