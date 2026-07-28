@@ -1,0 +1,32 @@
+# Cloudflare Pages redirect rules.
+#
+# WHAT THIS FIXES. Every unknown path on this site currently answers HTTP 200
+# with the homepage, byte for byte, because the Pages project serves a
+# single-page-app fallback. Verified against the live site: an invented path
+# returns 200 and 29,083 bytes identical to /. So do the three pages deleted in
+# PR #7, which therefore never signalled their removal to a search engine, and
+# which _data/indexnow.json still re-submits to Bing on every deploy.
+#
+# The three rules below stop those three specific URLs resolving. They cannot
+# shadow anything: no asset is published at any of these paths.
+/joe-prich/                             /404.html  404
+/rob-hein/                              /404.html  404
+/prichards-air-conditioning-neo-nazi/   /404.html  404
+
+# THE CATCH-ALL IS DELIBERATELY ABSENT.
+#
+# The general fix for the soft-404 behaviour is a final `/*  /404.html  404`
+# rule. It is not here, and must not be added without being tested on a preview
+# deployment first, because if Cloudflare Pages evaluates redirect rules BEFORE
+# static assets rather than after, a catch-all takes the entire court record
+# offline. That is not a risk worth reasoning about from documentation on a live
+# litigation site.
+#
+# I could not run that test: this seat holds no Cloudflare credentials, so it
+# can neither deploy a preview nor read the Pages project configuration to see
+# whether the fallback is a project setting. Escalated rather than guessed.
+#
+# Whoever enables it: deploy to a preview branch, confirm that a known-good path
+# still returns its own content and 200, and only then confirm that an unknown
+# path returns 404. Checking the unknown path alone proves nothing, because a
+# rule that breaks every page also makes unknown paths 404.

@@ -1,0 +1,49 @@
+---
+// The 404 page the site has never had.
+//
+// Every unknown path on rockenhaus.net currently answers HTTP 200 with the
+// homepage, byte for byte. That is the Cloudflare Pages single-page-app
+// fallback, and on a court record it is the worst available behaviour: a
+// mistyped or stale rockenhaus.net citation in a filed document resolves to a
+// page that looks correct instead of erroring, so nobody ever discovers the
+// citation was wrong. It also means the pages deleted in #7 never signalled
+// their removal to a search engine.
+//
+// This page is half the fix. The other half is public/_redirects, and the
+// catch-all rule that would route unmatched paths here is NOT enabled yet;
+// see the comments in that file for why.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteChrome from "../components/SiteChrome.astro";
+import courts from "../../_data/courts.json";
+
+const cases = [...courts.cases].sort((a, b) => a.sort - b.sort);
+---
+
+<BaseLayout
+  title="Page not found | Rockenhaus v. Rockenhaus court record"
+  description="That page does not exist on the Rockenhaus v. Rockenhaus public court record."
+  noindex={true}
+  chrome={true}
+>
+  <SiteChrome slot="chrome" />
+  <article class="hub-page">
+    <header class="hub-header">
+      <h1>That page does not exist</h1>
+    </header>
+    <p class="hub-lead">
+      Nothing is published at this address. If you followed a link from a filed
+      court document and expected a filing, the document index below lists every
+      PDF on this site, and the address may have changed.
+    </p>
+    <ul>
+      <li><a href="/all-documents/">Every filed document, complete index</a></li>
+      <li><a href="/answers/">Answers from the filed record</a></li>
+      {cases.map((c) => (
+        <li>
+          <a href={`/cases/${c.id}/`}>{c.short_title}, case {c.case_number}</a>
+        </li>
+      ))}
+      <li><a href="/">The court record home page</a></li>
+    </ul>
+  </article>
+</BaseLayout>
