@@ -7,6 +7,14 @@
 // cited filing. A quote that was mistyped, drifted after a refiling, or invented
 // fails the build instead of shipping as a citation to a court document.
 //
+// OCR PAGES ARE NOT QUOTABLE. A page with no text layer may carry a machine
+// transcription so the filing is findable and describable, but that text
+// contains transcription errors -- OCR of these documents interleaves vertical
+// margin text into body lines -- so a passage lifted from it can be wrong in
+// ways that read perfectly plausibly. A quoted citation to an OCR page is
+// refused here. Use a `reference` instead, which points at the filing and page
+// without claiming to reproduce its words.
+//
 // Whitespace is normalised on both sides before comparing: pdftotext -layout
 // preserves column alignment, so a passage that reads as one sentence on the
 // page is full of runs of spaces and hard line breaks in the extracted text.
@@ -35,11 +43,26 @@ export function pageBody(raw) {
   return at === -1 ? raw : raw.slice(at + marker.length);
 }
 
+/** True when a corpus page is a machine transcription rather than native text. */
+export function isOcrPage(raw) {
+  const header = raw.split("\n\n---\n\n")[0] || "";
+  return /^Text source: ocr\b/m.test(header);
+}
+
 export function verifyCitation(citation, readPage) {
   const key = `${citation.doc_slug}/p${String(citation.page).padStart(3, "0")}.txt`;
   const raw = readPage(key);
   if (raw == null) {
     return { ok: false, key, reason: "cited page does not exist in the corpus" };
+  }
+  if (isOcrPage(raw)) {
+    return {
+      ok: false,
+      key,
+      reason:
+        "cited page is a machine transcription (OCR) and is not quotable; " +
+        "use a reference to the filing and page instead of a quotation",
+    };
   }
   const body = normalise(pageBody(raw));
   const quote = normalise(citation.quote);
@@ -68,6 +91,7 @@ function main() {
   };
 
   let checked = 0;
+  let referenced = 0;
   const failures = [];
   for (const q of questions) {
     for (const c of q.citations) {
@@ -75,6 +99,16 @@ function main() {
       const result = verifyCitation(c, readPage);
       if (!result.ok) {
         failures.push(`  [${q.id}] ${result.key}: ${result.reason}\n      quote: "${c.quote.slice(0, 90)}..."`);
+      }
+    }
+    // References point at a filing and page WITHOUT quoting it, which is how an
+    // answer cites a scanned document honestly. They must still resolve to a
+    // real page; they simply carry no quotation to verify.
+    for (const r of q.references || []) {
+      referenced += 1;
+      const key = `${r.doc_slug}/p${String(r.page).padStart(3, "0")}.txt`;
+      if (readPage(key) == null) {
+        failures.push(`  [${q.id}] ${key}: referenced page does not exist in the corpus`);
       }
     }
   }
@@ -89,7 +123,10 @@ function main() {
     process.exit(1);
   }
 
-  console.log(`verify-citations: ${checked} citations verified against the corpus.`);
+  console.log(
+    `verify-citations: ${checked} quoted citation(s) verified, ` +
+      `${referenced} unquoted reference(s) resolved.`,
+  );
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) main();

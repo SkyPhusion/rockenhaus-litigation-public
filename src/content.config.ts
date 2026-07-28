@@ -214,6 +214,8 @@ const questions = defineCollection({
       slug: z.string().regex(/^[a-z0-9-]+$/),
       framing: z.string().min(1),
       framing_author: z.string().min(1),
+      // QUOTED support. Only native-text pages may be quoted;
+      // scripts/verify-citations.mjs refuses a quoted citation to an OCR page.
       citations: z
         .array(
           z
@@ -224,11 +226,38 @@ const questions = defineCollection({
             })
             .strict(),
         )
-        .min(1),
+        .default([]),
+
+      // UNQUOTED support: a pointer to a filing and page without reproducing its
+      // words. This is how an answer honestly cites a scanned document. OCR makes
+      // such a filing findable and describable, but its transcription interleaves
+      // margin text into body lines, so quoting it would put words in a court
+      // document that the document does not contain.
+      references: z
+        .array(
+          z
+            .object({
+              doc_slug: z.string().min(1),
+              page: z.number().int().positive(),
+              note: z.string().min(10),
+            })
+            .strict(),
+        )
+        .default([]),
       // Recorded when the record is thin, so the page can say so out loud.
       record_gap: z.string().nullable().default(null),
     })
-    .strict(),
+    .strict()
+    .superRefine((q, ctx) => {
+      // An answer page with neither a quotation nor a reference has no support
+      // in the record at all, which is the one thing these pages must never be.
+      if (q.citations.length === 0 && q.references.length === 0) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: `question ${q.id}: no citations and no references; an answer must rest on the record`,
+        });
+      }
+    }),
 });
 
 export const collections = { exhibits, chains, questions };

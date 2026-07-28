@@ -86,6 +86,28 @@
           "quote": "MCR 2.201(E) governs the representation of incompetent persons in civil proceedings. Where an incompetent person who is subject to the jurisdiction of the court does not have a conservator or other legal representative, the court is to appoint a guardian ad litem or next friend to protect that person's interests"
         }
       ]
+    },
+    {
+      "id": "plaintiff-answer-to-counterclaim",
+      "slug": "did-the-plaintiff-answer-the-counterclaim-for-divorce",
+      "question": "Did the plaintiff file an answer to the counterclaim for divorce in case 26-104594-DO?",
+      "framing": "An Answer to Part III, Counterclaim for Divorce was filed on the plaintiff's behalf by counsel; the filing is in the record as a scanned document.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": "This filing is a scanned image with no text layer. A machine transcription makes it searchable, but that transcription is not reliable enough to quote, so it is cited by document and page rather than reproduced.",
+      "citations": [],
+      "references": [
+        {
+          "doc_slug": "waynedo26-104594-do-opposing-05answer-to-counterclaim",
+          "page": 1,
+          "note": "Caption page of the Answer to Part III, Counterclaim for Divorce, filed on the plaintiff's behalf by counsel of record."
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-opposing-04motion-to-set-aside-default-of-counterclaim",
+          "page": 1,
+          "note": "Related opposing filing: Motion to Set Aside Default of Counterclaim."
+        }
+      ]
     }
-  ]
+  ],
+  "_answer_support_note": "A question is supported by `citations` (verbatim, verified against a native-text page) or by `references` (the filing and page, named and linked, without reproducing its words). References exist because 77 pages of this record are readable only via machine transcription: OCR makes those filings findable and describable, but it interleaves margin text into body lines, so quoting it would put words in a court document that the document does not contain. scripts/verify-citations.mjs refuses a quoted citation to an OCR page, and the schema refuses a question with neither citations nor references."
 }

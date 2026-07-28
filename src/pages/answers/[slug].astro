@@ -55,12 +55,24 @@ const cited = q.citations.map((c) => {
   return { ...c, page };
 });
 
-const sources = Array.from(new Map(cited.map((c) => [c.page.doc_slug, c.page])).values());
+// Unquoted references: the filing is named and linked, its words are not
+// reproduced. Used where the only text available is a machine transcription.
+const referenced = (q.references ?? []).map((r) => {
+  const page = pages.find((p) => p.doc_slug === r.doc_slug && p.page === r.page);
+  if (!page) {
+    throw new Error(`answers/${q.slug}: reference to ${r.doc_slug} p${r.page} has no matching corpus page.`);
+  }
+  return { ...r, page };
+});
+
+const sources = Array.from(
+  new Map([...cited, ...referenced].map((c) => [c.page.doc_slug, c.page])).values(),
+);
 
 const title = `${q.question} | Rockenhaus v. Rockenhaus court record`;
 const description =
-  `${q.framing} Answered with verbatim passages from the filed Michigan court record, ` +
-  `citing ${sources.length} filed document${sources.length === 1 ? "" : "s"} by name and page.`;
+  `${q.framing} Answered from the filed Michigan court record, citing ` +
+  `${sources.length} filed document${sources.length === 1 ? "" : "s"} by name and page.`;
 
 // QAPage describing DOCUMENTS. The accepted answer is quotation from the filed
 // record plus its citation; it makes no statement about any person.
@@ -72,9 +84,16 @@ const jsonLd = {
     name: q.question,
     acceptedAnswer: {
       "@type": "Answer",
-      text: cited
-        .map((c) => `"${c.quote}" (${c.page.title}, page ${c.page.page}, case ${c.page.case_number})`)
-        .join(" "),
+      text: [
+        ...cited.map(
+          (c) => `"${c.quote}" (${c.page.title}, page ${c.page.page}, case ${c.page.case_number})`,
+        ),
+        // References describe rather than quote, so the structured answer says
+        // what the filing is and where, never what it supposedly says.
+        ...referenced.map(
+          (r) => `${r.note} (${r.page.title}, page ${r.page.page}, case ${r.page.case_number})`,
+        ),
+      ].join(" "),
       citation: sources.map((s) => ({
         "@type": "CreativeWork",
         name: s.title,
@@ -118,6 +137,27 @@ const jsonLd = {
       </figure>
     ))}
   </section>
+
+  {referenced.length > 0 && (
+    <section aria-labelledby="also-in-record">
+      <h2 id="also-in-record">Also in the record, not quoted here</h2>
+      <p class="answer-note">
+        These filings are scanned images. A machine transcription makes them
+        searchable, but that transcription contains errors, so they are cited by
+        document and page rather than quoted. Open the PDF for the actual text.
+      </p>
+      <ul class="record-references">
+        {referenced.map((r) => (
+          <li>
+            <a href={r.page.url}>{r.page.title}</a>, page {r.page.page} of {r.page.total_pages}
+            {r.page.filed_date && <> &middot; filed {r.page.filed_date} </>}
+            &middot; case {r.page.case_number} &middot; <a href={r.page.pdf_url}>PDF</a>
+            <p class="record-references__note">{r.note}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
 
   {q.record_gap && (
     <section aria-labelledby="gap">

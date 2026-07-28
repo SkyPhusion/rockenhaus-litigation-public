@@ -5,6 +5,7 @@ Category: Opposing party
 Page: 12 of 24
 Source: https://rockenhaus.net/documents/wayneppo26-102221-pp-opposing-03ppopetreponsetomotiontoterminate/
 PDF: https://rockenhaus.net/wayne_ppo_26-102221-PP/opposing/03_ppo_pet_reponse_to_motion_to_terminate.pdf
+Text source: none
 
 ---
 
@@ -13,3 +14,5 @@ NO TEXT LAYER ON THIS PAGE.
 This page of the filing is a scanned image and carries no extractable text.
 The page exists in the filed record and may be responsive to a question, but
 its contents cannot be quoted from this archive. Open the linked PDF to read it.
+
+OCR was attempted on this page and the result was not trusted (confidence 91%, below the 60% threshold).
