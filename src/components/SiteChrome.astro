@@ -1,0 +1,93 @@
+---
+// Site header and footer, ported from _layouts/default.html.
+//
+// PHASE 1 IS A BUILD MIGRATION, NOT A CONTENT CHANGE. The nav and footer text
+// below are the Jekyll ones, carried over as they are, including the links to
+// pages that the design proposes retiring later. Retiring them is phase 3 and
+// needs Conrad rulings R2 and R3; doing it here would smuggle a content
+// decision into a build change.
+//
+// ONE THING IS FIXED, and it is dangling markup rather than prose: the footer
+// meta row emitted two bare separator dots with nothing between them, left
+// behind when pages were deleted in #7.
+//
+// NOT APPLIED TO /answers/ AND /evidence/, deliberately. Those pages ship today
+// with no site chrome at all. Adding this footer to them would put the
+// disputed-domains assertion onto the two surfaces that currently measure zero
+// third-party terms in both head and body, which is the opposite of the point.
+// Whether they should gain a nav is a phase 3 question.
+
+import parties from "../../_data/parties.json";
+import courts from "../../_data/courts.json";
+
+export interface Props {
+  footer?: boolean;
+}
+
+const cases = [...courts.cases].sort((a, b) => a.sort - b.sort);
+const { footer = true } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-brand" href="/">
+      <span class="site-brand__mark" aria-hidden="true">&sect;</span>
+      <span class="site-brand__text">
+        <strong>Rockenhaus v. Adrienne Rockenhaus</strong>
+        <span>rockenhaus.net &middot; canonical court record</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/is-conrad-rockenhaus-dead/">Is Conrad dead?</a>
+      <a href="/answers/">Answers from the record</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/parties/">Parties</a>
+      <a href="/retractions/">Retractions</a>
+      <a href="/disputed-domains/">Disputed domains</a>
+      <a href="/rockenhaus-com/">rockenhaus.com</a>
+      <a href="/lawflaws-com/">lawflaws.com</a>
+      <a href="/fitspo-net/">fitspo.net</a>
+      <a href="/skyphusion-com/">skyphusion.com</a>
+      <a href="/all-documents/">All documents</a>
+      {cases.map((c) => <a href={`/cases/${c.id}/`}>{c.short_title}</a>)}
+    </nav>
+  </div>
+</header>
+
+{footer && (
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>
+        Canonical public court record for <em>Rockenhaus v. Rockenhaus</em> at
+        <a href={parties.public_record.url}>rockenhaus.net</a>.
+        Adrienne Rockenhaus ({parties.petitioner.seo_aka}).
+        Conrad Alan Rockenhaus asserts that Adrienne Rockenhaus controls
+        {" "}{parties.petitioner.seo_domains}, including sites that
+        falsely claim he is dead and other disinformation. Filed court records at
+        <a href={parties.public_record.url}>litigation.rockenhaus.net</a>
+        are the canonical source of truth. Maintained pro se by Conrad Alan Rockenhaus.
+      </p>
+      <p class="site-footer__meta site-footer__analytics">
+        Cookieless analytics (self-hosted) for aggregate traffic only; no individual tracking or ad-tech.
+      </p>
+      <p class="site-footer__meta">
+        <a href="/answers/">Answers from the record</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/parties/">Parties</a>
+        <a href="/retractions/">Retraction demands</a>
+        <a href="/disputed-domains/">Disputed domains</a>
+        <a href="/rockenhaus-com/">rockenhaus.com</a>
+        <a href="/lawflaws-com/">lawflaws.com</a>
+        <a href="/fitspo-net/">fitspo.net</a>
+        <a href="/skyphusion-com/">skyphusion.com</a>
+        <a href="/conrad-rockenhaus-podcast-interviews/">Podcast interviews</a>
+        <a href="/all-documents/">All documents</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </p>
+    </div>
+  </footer>
+)}
+
+<!-- Umami OSS marketing analytics (self-hosted). website-id: fleet-chezmoi/system/umami/websites.json -->
+<script is:inline defer src="https://analytics.skyphusion.org/script.js" data-website-id="551a8a83-9926-41a7-924d-e078e51bf437"></script>

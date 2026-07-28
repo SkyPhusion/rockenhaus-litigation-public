@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
+    "@types/node": "^24.13.3",
     "@vitest/coverage-istanbul": "^4.1.10",
     "tesseract.js": "^7.0.0",
     "typescript": "^6.0.3",
