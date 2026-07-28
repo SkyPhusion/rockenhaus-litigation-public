@@ -1,0 +1,83 @@
+{
+  "_comment": [
+    "THE single list of terms that must never reach indexable metadata.",
+    "",
+    "It lives in a data file, not in code, because it previously lived in TWO",
+    "places and they disagreed. src/lib/guard.ts denylisted 15 terms but ran only",
+    "at Astro build time, so it covered /evidence/ and /answers/.",
+    "scripts/check_indexable_metadata.py ran over every built page but its list",
+    "was four characterisation patterns with no names in it. The result was that",
+    "/retractions/rob-hein/ shipped a non-party name seven times inside its",
+    "<head> with CI green: the stronger guard could not see the page, and the",
+    "guard that could see it was not looking for names.",
+    "",
+    "Both consumers now read this file, and tests/guard.test.ts asserts they",
+    "agree, so the two cannot drift apart again."
+  ],
+
+  "scope": [
+    "INDEXABLE METADATA ONLY: <title>, <meta name=description>, and every string",
+    "inside a JSON-LD block. Deliberately NOT page bodies. Exhibit pages quote",
+    "what an artifact shows on its face and those pages are noindex; a guard that",
+    "blocked quotation would force the evidence to be paraphrased, which is worse",
+    "evidence. The distinction is publishing a claim versus reproducing an",
+    "artifact."
+  ],
+
+  "third_party": {
+    "_why": [
+      "Tier A. People who are NOT parties to any of these cases. A non-party has",
+      "no reason to appear in the metadata of a court-record site at all, and a",
+      "name in a title is pure ranking signal and nothing else."
+    ],
+    "terms": [
+      "neo-nazi",
+      "neo nazi",
+      "nazzy",
+      "nazi",
+      "do not hire",
+      "dustin brown",
+      "joe prich",
+      "justcallmejoep",
+      "prichardington",
+      "prichard",
+      "prichardsac",
+      "rob hein",
+      "qolity",
+      "sockpuppet"
+    ]
+  },
+
+  "party_handles": {
+    "_why": [
+      "Tier B. The opposing party IS a party: her name belongs in the caption, in",
+      "metadata, and on document pages, because the case is named for her. Her",
+      "social handle is a different thing. It carries no docket meaning and its",
+      "only function in a title is to rank for it, which is the pattern this",
+      "rebuild is removing.",
+      "",
+      "How far a filing-sourced allegation about a party may go on an indexable",
+      "page is Conrad ruling R1 and is NOT decided here. This entry only keeps a",
+      "handle out of metadata; it says nothing about page bodies."
+    ],
+    "terms": [
+      "adezero"
+    ]
+  },
+
+  "allowed": {
+    "_why": [
+      "Recorded so that nobody later mistakes these for oversights. The site is",
+      "SUPPOSED to rank for them: they are the case caption and the parties of",
+      "record."
+    ],
+    "terms": [
+      "Conrad Alan Rockenhaus",
+      "Adrienne Rockenhaus",
+      "Rockenhaus v. Rockenhaus",
+      "26-104594-DO",
+      "26-102221-PP",
+      "26-737-DO"
+    ]
+  }
+}

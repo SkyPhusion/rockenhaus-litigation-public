@@ -17,31 +17,33 @@
 // exhibit index; a guard that blocked it would force the evidence to be
 // paraphrased, which is worse evidence. The distinction is not cosmetic: it is
 // the difference between publishing a claim and reproducing an artifact.
+//
+// WHERE THE LIST LIVES, and why it moved out of this file. It used to be the
+// array below. That meant two guards with two lists: this one, 15 terms but
+// reaching only the Astro pages, and scripts/check_indexable_metadata.py,
+// reaching every built page but carrying four characterisation patterns and no
+// names at all. So /retractions/rob-hein/ shipped a non-party name seven times
+// inside its <head> with CI green: the stronger guard could not see the page,
+// and the guard that could see it was not looking for names. Both consumers now
+// read _data/metadata_denylist.json, and tests/guard.test.ts asserts they agree,
+// so they cannot drift apart again.
+
+import denylist from "../../_data/metadata_denylist.json";
 
 /**
  * Terms that must never appear in indexable metadata. Matched case-insensitively
  * on word-ish boundaries so that ordinary prose cannot trip them by accident.
  *
- * These are third-party names and characterisations. Conrad's own name and the
- * case numbers are NOT here: the site is his court record and is supposed to
- * rank for those.
+ * Two tiers, unioned here because the rule for metadata is the same for both.
+ * They are kept apart in the data file because they rest on different arguments:
+ * a non-party has no business in the metadata of a court record at all, whereas
+ * the HANDLE of a party is excluded only because it is a ranking token carrying
+ * no docket meaning. The name Conrad Alan Rockenhaus and the case numbers are in
+ * neither list: this is his court record and is supposed to rank for those.
  */
 export const DENYLIST: readonly string[] = [
-  "neo-nazi",
-  "neo nazi",
-  "nazzy",
-  "nazi",
-  "do not hire",
-  "dustin brown",
-  "joe prich",
-  "justcallmejoep",
-  "prichardington",
-  "prichard",
-  "prichardsac",
-  "rob hein",
-  "qolity",
-  "adezero",
-  "sockpuppet",
+  ...denylist.third_party.terms,
+  ...denylist.party_handles.terms,
 ];
 
 export interface DenylistHit {
