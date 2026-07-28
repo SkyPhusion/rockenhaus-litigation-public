@@ -1,0 +1,53 @@
+{
+  "_comment": [
+    "Court metadata for the three matters. HAND AUTHORED and stable: this is",
+    "docket identity (which court, which judge, what role Conrad appears in), not",
+    "anything derived from the files on disk.",
+    "",
+    "Everything else about a case (its documents, categories, counts, filing",
+    "dates) is derived from _corpus/manifest.json at build time. That is the whole",
+    "point: the site is a projection of the filed record, so a filing appears on",
+    "the site because it is in the corpus, never because someone remembered to",
+    "add it to a list.",
+    "",
+    "Replaces the CASES dict that lived in scripts/generate_site.py."
+  ],
+  "cases": [
+    {
+      "id": "wayne_ppo_26-102221-PP",
+      "title": "Rockenhaus v. Rockenhaus (PPO)",
+      "short_title": "Wayne County PPO",
+      "court": "Wayne County Circuit Court (Third Judicial Circuit)",
+      "case_number": "26-102221-PP",
+      "matter": "Personal Protection Order (PPO)",
+      "role": "Respondent, pro se",
+      "sort": 1
+    },
+    {
+      "id": "wayne_do_26-104594-DO",
+      "title": "Rockenhaus v. Rockenhaus (Divorce)",
+      "short_title": "Wayne County Divorce",
+      "court": "Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson",
+      "case_number": "26-104594-DO",
+      "matter": "Divorce",
+      "role": "Defendant, pro se",
+      "sort": 2
+    },
+    {
+      "id": "washtenaw_do_26-737-DO",
+      "title": "Rockenhaus v. Rockenhaus (Divorce)",
+      "short_title": "Washtenaw County Divorce",
+      "court": "Washtenaw County Circuit Court (22nd Circuit), Hon. Darlene A. O'Brien",
+      "case_number": "26-737-DO",
+      "matter": "Divorce",
+      "role": "Plaintiff, pro se",
+      "sort": 3
+    }
+  ],
+  "categories": [
+    { "id": "filed", "label": "Filed by Conrad", "sort": 1 },
+    { "id": "discovery", "label": "Discovery", "sort": 2 },
+    { "id": "opposing", "label": "Opposing party", "sort": 3 },
+    { "id": "orders", "label": "Court orders", "sort": 4 }
+  ]
+}
