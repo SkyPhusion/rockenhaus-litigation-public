@@ -7,6 +7,14 @@
 //
 // Styling reuses the existing /assets/css/site.css from the Jekyll half, because
 // the two halves are merged into one Pages deploy and should look like one site.
+//
+// SITE CHROME IS OPT-IN, via the `chrome` prop and the matching slot. It is
+// deliberately NOT the default: /evidence/ and /answers/ ship today with no
+// header or footer, and the ported footer carries the disputed-domains
+// assertion. Switching it on for them would push that text onto the only two
+// surfaces measuring zero third-party terms in both head and body. Pages
+// migrating over from Jekyll pass chrome={true} so they keep the shell they
+// already have. Whether the other two should gain a nav is a phase 3 question.
 import { assertCleanMetadata } from "../lib/guard";
 
 export interface Props {
@@ -16,16 +24,27 @@ export interface Props {
   noindex?: boolean;
   jsonLd?: unknown;
   breadcrumbs?: Array<{ name: string; url?: string }>;
+  /** Render the ported site header and footer around the page. */
+  chrome?: boolean;
+  /** Path to the PDF this page is about, advertised to clients that want it. */
+  pdfPath?: string;
 }
 
-const { title, description, noindex = false, jsonLd, breadcrumbs = [] } = Astro.props;
+const {
+  title,
+  description,
+  noindex = false,
+  jsonLd,
+  breadcrumbs = [],
+  chrome = false,
+  pdfPath,
+} = Astro.props;
 
 // The guard. Runs for every page, on every build, before anything is written.
 assertCleanMetadata({ title, description, jsonLd }, Astro.url.pathname);
 
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 ---
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,7 +53,13 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    {noindex && <meta name="robots" content="noindex, follow" />}
+    {noindex ? (
+      <meta name="robots" content="noindex, follow" />
+    ) : (
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    )}
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM site summary" />
+    {pdfPath && <link rel="alternate" type="application/pdf" href={pdfPath} />}
     <link rel="stylesheet" href="/assets/css/site.css" />
     {jsonLd && (
       <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd, null, 2)} />
@@ -42,6 +67,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    {chrome && <slot name="chrome" />}
     <main id="main" class="page">
       {breadcrumbs.length > 0 && (
         <nav class="breadcrumb" aria-label="Breadcrumb">

@@ -22,6 +22,18 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 /** Paths Astro owns. Anything it emits must be under one of these. */
 export const ASTRO_OWNED_PREFIXES = ["evidence/", "answers/"];
 
+/**
+ * Site-level files Astro owns outright, named one by one rather than by a
+ * prefix. These sit at the root, where a blanket allowance would stop this
+ * check noticing a page that escaped its lane, which is the whole job.
+ *
+ * Neither is emitted by Jekyll, so neither can collide:
+ *   404.html    the site had no 404 page at all; every unknown path answered
+ *               200 with the homepage
+ *   _redirects  Cloudflare Pages redirect rules
+ */
+export const ASTRO_OWNED_FILES = ["404.html", "_redirects"];
+
 export function walk(dir, base = dir, out = []) {
   if (!existsSync(dir)) return out;
   for (const entry of readdirSync(dir)) {
@@ -44,6 +56,7 @@ export function findOutOfLane(astroFiles, prefixes = ASTRO_OWNED_PREFIXES) {
     .filter((f) => !prefixes.some((p) => f.startsWith(p)))
     // Astro emits build metadata at the root; it is not a published page.
     .filter((f) => !f.startsWith("_astro/") && f !== "favicon.svg")
+    .filter((f) => !ASTRO_OWNED_FILES.includes(f))
     .sort();
 }
 
