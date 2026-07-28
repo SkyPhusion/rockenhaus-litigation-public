@@ -25,7 +25,6 @@ const COURTS = JSON.parse(readFileSync(join(ROOT, "_data", "courts.json"), "utf8
 export const CASES = COURTS.cases;
 export const CATEGORIES = COURTS.categories;
 
-const CASE_BY_ID = new Map(CASES.map((c) => [c.id, c]));
 const CATEGORY_BY_ID = new Map(CATEGORIES.map((c) => [c.id, c]));
 
 // Ported verbatim from generate_site.py humanize_filename().
