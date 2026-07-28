@@ -17,12 +17,12 @@
           "statement": "The X account @JustCallMeJoeP published the posts reproduced in these exhibits.",
           "status": "supported",
           "evidence": [
-            "joep-israel-1948-2025-07-07",
-            "joep-mugshot-scrub-2025-09-10",
-            "joep-camps-60-days-2025-10-01",
-            "joep-brown-foreigners-2025-11-02",
-            "joep-invaders-cd-2025-11-07",
-            "joe-prich-nazzy-thread-2026-05-26"
+            "xpost-2025-07-07",
+            "xpost-2025-09-10",
+            "xpost-2025-10-01",
+            "xpost-2025-11-02",
+            "xpost-2025-11-07",
+            "xpost-2026-05-26-a"
           ],
           "caveats": [
             "Four further exhibits are filed under names implying this account but have the posting account's name and handle cropped out of the capture. They are listed on their own exhibit pages with that limitation recorded, and they are not counted as support for this link.",
@@ -33,7 +33,9 @@
           "id": "B",
           "statement": "The X account @JustCallMeJoeP is operated by a specific, legally identifiable individual.",
           "status": "self_identification_only",
-          "evidence": ["joe-prich-nazzy-thread-2026-05-26"],
+          "evidence": [
+            "xpost-2026-05-26-a"
+          ],
           "note": "In the May 26 2026 thread the account gives its own name as \"Joseph E. Prichardington the 3rd\" and applies the word \"Nazzy\" to itself. Both are statements the account published about itself. A self-description is not independent identification, and \"Joseph E. Prichardington the 3rd\" is not a name this archive has matched to any record. No exhibit here identifies the operator by legal name.",
           "caveats": [
             "The account's display name and the name it gives for itself are different strings, and neither has been corroborated against any public record in this archive."
@@ -58,10 +60,10 @@
           "statement": "The accounts @adezero and @JustCallMeJoeP exchanged public posts in March 2026.",
           "status": "supported",
           "evidence": [
-            "adezero-status-2036241895194521772",
-            "adezero-joep-flirt-physical-thread-2026-03-28",
-            "adezero-joep-flirt-travel-thread-2026-03-28",
-            "adezero-joep-flirt-posts-2026-03"
+            "xpost-2026-03-24",
+            "xpost-2026-03-28-a",
+            "xpost-2026-03-28-b",
+            "xpost-2026-03-a"
           ],
           "caveats": [
             "The exchanges are public posts. This archive holds no direct messages and makes no claim about any communication not published publicly.",

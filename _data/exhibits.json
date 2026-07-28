@@ -3,7 +3,7 @@
   "_provenance_note": "The superseded version of this file carried a single `captured` field populated from the filename. That value is the POST date, not a capture date: all 14 claimed dates precede the date the asset first appears in git by two to nine months, and a screenshot cannot be captured before it exists. posted_date and captured_date are now separate. captured_date is genuinely unknown for every exhibit and is bounded above by captured_upper_bound, which is the first commit containing the asset.",
   "exhibits": [
     {
-      "id": "aadvantage-account-update-email-2026-06-10",
+      "id": "correspondence-2026-06-10",
       "file": "/assets/evidence/aadvantage-account-update-email-2026-06-10.pdf",
       "label": "American Airlines AAdvantage account update email",
       "artifact_type": "pdf_correspondence",
@@ -23,7 +23,7 @@
       "supports_links": []
     },
     {
-      "id": "joep-israel-1948-2025-07-07",
+      "id": "xpost-2025-07-07",
       "file": "/assets/images/evidence/joep-israel-1948-2025-07-07.png",
       "label": "Post by @JustCallMeJoeP, July 7 2025",
       "artifact_type": "screenshot_of_public_post",
@@ -40,10 +40,12 @@
       "captured_upper_bound": "2026-07-01",
       "archived_url": null,
       "shows_on_face": "A post from the account @JustCallMeJoeP (display name \"Joe Prich\", verified badge) replying to @ElijahSchaffer, timestamped 4:13 AM Jul 7 2025, reading: \"My favorite thing is how they convinced Christians their 2000-year old sacred texts demand they protect a country that didn't even exist until 1948\".",
-      "supports_links": ["joep-identity:A"]
+      "supports_links": [
+        "joep-identity:A"
+      ]
     },
     {
-      "id": "joep-puerto-rican-welfare-2025-09-01",
+      "id": "xpost-2025-09-01",
       "file": "/assets/images/evidence/joep-puerto-rican-welfare-2025-09-01.png",
       "label": "Post replying to @GenerationNews, September 1 2025",
       "artifact_type": "screenshot_of_public_post",
@@ -63,7 +65,7 @@
       "supports_links": []
     },
     {
-      "id": "joep-mugshot-scrub-2025-09-10",
+      "id": "xpost-2025-09-10",
       "file": "/assets/images/evidence/joep-mugshot-scrub-2025-09-10.png",
       "label": "Post by @JustCallMeJoeP, September 10 2025",
       "artifact_type": "screenshot_of_public_post",
@@ -80,10 +82,12 @@
       "captured_upper_bound": "2026-07-01",
       "archived_url": null,
       "shows_on_face": "A post from the account @JustCallMeJoeP (display name \"Joe Prich\", verified badge) replying to @FBIDirectorKash and @FBI, timestamped 10:35 PM Sep 10 2025, reading: \"They'll identify him just as soon as they can scrub all his social media and adjust the contrast on his mugshot\".",
-      "supports_links": ["joep-identity:A"]
+      "supports_links": [
+        "joep-identity:A"
+      ]
     },
     {
-      "id": "joep-camps-60-days-2025-10-01",
+      "id": "xpost-2025-10-01",
       "file": "/assets/images/evidence/joep-camps-60-days-2025-10-01.png",
       "label": "Post by @JustCallMeJoeP, October 1 2025",
       "artifact_type": "screenshot_of_public_post",
@@ -100,10 +104,12 @@
       "captured_upper_bound": "2026-07-01",
       "archived_url": null,
       "shows_on_face": "A post from the account @JustCallMeJoeP (display name \"Joe Prich\", verified badge) replying to @camhigby, timestamped 7:37 PM Oct 1 2025, reading: \"You really thought you were going to get some kind of Internet applause for this?! You'd be on your way to the fucking Camps for 60 Days minimum, if *I* were in charge of this place.\"",
-      "supports_links": ["joep-identity:A"]
+      "supports_links": [
+        "joep-identity:A"
+      ]
     },
     {
-      "id": "joep-woman-bed-2025-10-03",
+      "id": "xpost-2025-10-03",
       "file": "/assets/images/evidence/joep-woman-bed-2025-10-03.png",
       "label": "Post replying to @MissLauraMarcus, October 3 2025",
       "artifact_type": "screenshot_of_public_post",
@@ -123,7 +129,7 @@
       "supports_links": []
     },
     {
-      "id": "joep-brown-foreigners-2025-11-02",
+      "id": "xpost-2025-11-02",
       "file": "/assets/images/evidence/joep-brown-foreigners-2025-11-02.png",
       "label": "Post by @JustCallMeJoeP, November 2 2025",
       "artifact_type": "screenshot_of_public_post",
@@ -140,10 +146,12 @@
       "captured_upper_bound": "2026-07-01",
       "archived_url": null,
       "shows_on_face": "A post from the account @JustCallMeJoeP (display name \"Joe Prich\", verified badge) replying to @Bushra1Shaikh, timestamped 7:39 PM Nov 2 2025, reading: \"I get so God damn tired of brown foreigners lecturing us about what our countries are. Fuck You\".",
-      "supports_links": ["joep-identity:A"]
+      "supports_links": [
+        "joep-identity:A"
+      ]
     },
     {
-      "id": "joep-invaders-cd-2025-11-07",
+      "id": "xpost-2025-11-07",
       "file": "/assets/images/evidence/joep-invaders-cd-2025-11-07.png",
       "label": "Post by @JustCallMeJoeP, November 7 2025",
       "artifact_type": "screenshot_of_public_post",
@@ -160,10 +168,12 @@
       "captured_upper_bound": "2026-07-01",
       "archived_url": null,
       "shows_on_face": "A post from the account @JustCallMeJoeP (display name \"Joe Prich\", verified badge) replying to @Inevitablewest, timestamped 2:14 PM Nov 7 2025, reading: \"Sorry we shipped in millions of invaders that destroyed the country all your friends died for...but here, have a CD\".",
-      "supports_links": ["joep-identity:A"]
+      "supports_links": [
+        "joep-identity:A"
+      ]
     },
     {
-      "id": "adezero-status-2036241895194521772",
+      "id": "xpost-2026-03-24",
       "file": "/assets/images/evidence/adezero-status-2036241895194521772.png",
       "label": "Post by @adezero, March 24 2026",
       "artifact_type": "screenshot_of_public_post",
@@ -180,10 +190,12 @@
       "captured_upper_bound": "2026-06-29",
       "archived_url": null,
       "shows_on_face": "A post from the account @adezero, timestamped 12:41 AM Mar 24 2026, reading: \">\"Under review\" I literally just digitally decapitated myself because @JustCallMeJoeP kept telling me to drop the \"dead weight\" (last name).\", with an attached profile screenshot. The superseded index recorded this exhibit's date as unknown; the date is visible in the artifact.",
-      "supports_links": ["adezero-contact:A"]
+      "supports_links": [
+        "adezero-contact:A"
+      ]
     },
     {
-      "id": "adezero-joep-flirt-travel-thread-2026-03-28",
+      "id": "xpost-2026-03-28-b",
       "file": "/assets/images/evidence/adezero-joep-flirt-travel-thread-2026-03-28.png",
       "label": "Exchange between @adezero and @JustCallMeJoeP, March 28 2026",
       "artifact_type": "screenshot_of_public_post",
@@ -200,10 +212,12 @@
       "captured_upper_bound": "2026-06-29",
       "archived_url": null,
       "shows_on_face": "A public exchange dated Mar 28 2026. @adezero posts \"@JustCallMeJoeP what do I do?\" with an attached screenshot of a direct-message request from an account named \"Dan Ferris\". @JustCallMeJoeP replies \"Sit tight. I'm on the way up. Just packing the carry-on\". @adezero replies with emoji.",
-      "supports_links": ["adezero-contact:A"]
+      "supports_links": [
+        "adezero-contact:A"
+      ]
     },
     {
-      "id": "adezero-joep-flirt-physical-thread-2026-03-28",
+      "id": "xpost-2026-03-28-a",
       "file": "/assets/images/evidence/adezero-joep-flirt-physical-thread-2026-03-28.png",
       "label": "Exchange between @adezero and @JustCallMeJoeP, March 28 2026",
       "artifact_type": "screenshot_of_public_post",
@@ -220,10 +234,12 @@
       "captured_upper_bound": "2026-06-29",
       "archived_url": null,
       "shows_on_face": "A public exchange dated Mar 28 2026 between @adezero (display name \"Adrienne\", verified) and @JustCallMeJoeP (display name \"Joe Prich\", verified), personal in character, timestamps 2:40 PM through 2:51 PM.",
-      "supports_links": ["adezero-contact:A"]
+      "supports_links": [
+        "adezero-contact:A"
+      ]
     },
     {
-      "id": "adezero-joep-flirt-posts-2026-03",
+      "id": "xpost-2026-03-a",
       "file": "/assets/images/evidence/adezero-joep-flirt-posts-2026-03.png",
       "label": "Compilation of exchanges between @adezero and @JustCallMeJoeP, March 2026",
       "artifact_type": "screenshot_of_public_post",
@@ -240,10 +256,12 @@
       "captured_upper_bound": "2026-06-29",
       "archived_url": null,
       "shows_on_face": "A compilation of six public posts between @adezero (display name \"Adrienne\", verified) and @JustCallMeJoeP (display name \"Joe Prich\", verified), individually timestamped between Mar 18 2026 and Mar 31 2026, personal in character. The superseded index recorded a single month-precision date; the constituent posts carry visible day-precision timestamps spanning a range.",
-      "supports_links": ["adezero-contact:A"]
+      "supports_links": [
+        "adezero-contact:A"
+      ]
     },
     {
-      "id": "joe-prich-nazzy-thread-2026-05-26",
+      "id": "xpost-2026-05-26-a",
       "file": "/assets/images/evidence/joe-prich-nazzy-thread-2026-05-26.png",
       "label": "Thread by @JustCallMeJoeP addressed to @SkyPhusion, May 26 2026",
       "artifact_type": "screenshot_of_public_post",
@@ -260,10 +278,13 @@
       "captured_upper_bound": "2026-06-29",
       "archived_url": null,
       "shows_on_face": "A thread of posts from the account @JustCallMeJoeP (display name \"Joe Prich\", verified badge), timestamped between 2:33 AM and 3:19 AM on May 26 2026, several replying to @SkyPhusion and @jeff_peebles. In one post the account writes: \"Just a broke dick, multiple felon, half-a-joo whose wife fell for a thick dicked JACKED Nazzy, who decided it'd be a good idea to run his fucking mouth to Joseph E. Prichardington the 3rd\". In another: \"Two days ago you were bellyaching about some f*g playing with her hair. Now you're unbothered by finding out she's smitten with a literal Nazzy?\". The account thereby applies the word \"Nazzy\" to itself and gives its own name as \"Joseph E. Prichardington the 3rd\". Both are self-descriptions published by the account. Neither identifies the operator by legal name, and neither refers to any business.",
-      "supports_links": ["joep-identity:A", "joep-identity:B"]
+      "supports_links": [
+        "joep-identity:A",
+        "joep-identity:B"
+      ]
     },
     {
-      "id": "joe-prich-status-2059100661354999996",
+      "id": "xpost-2026-05-26-b",
       "file": "/assets/images/evidence/joe-prich-status-2059100661354999996.png",
       "label": "Post detail view, May 26 2026",
       "artifact_type": "screenshot_of_public_post",
@@ -282,5 +303,6 @@
       "shows_on_face": "A single-post detail view timestamped 2:33 AM May 26 2026, reading: \"I can subtweet too. Watch / Your bitch calls me Daddy. Literally. I'm the one who convinced her to drop your name / First man she EVER called Sir, I kept her ass right in line, walking the chalk and she loved every second of it because she recognizes a REAL man when she sees one\", with an attached image. IMPORTANT: the posting account's name and handle are cropped out of this capture. The author is not visible on the face of this artifact; the status identifier is recorded from the filename.",
       "supports_links": []
     }
-  ]
+  ],
+  "_id_note": "Exhibit ids are deliberately neutral and date-anchored. The id IS the URL, and the canonical link is indexable metadata, so an id carrying an account handle or a characterisation would put a claim into machine-readable metadata by construction. The `file` field still points at the original asset filename, which is body content on a noindex page."
 }
