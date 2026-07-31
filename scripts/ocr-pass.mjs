@@ -37,7 +37,6 @@ import { tmpdir } from "node:os";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const CORPUS_DIR = join(ROOT, "_corpus");
 // Lives in _data/, NOT _corpus/: build-corpus wipes _corpus on every run, so a
 // cache stored there would be destroyed by the very build that consumes it.
 const CACHE_PATH = join(ROOT, "_data", "ocr-cache.json");

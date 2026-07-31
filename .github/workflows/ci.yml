@@ -91,6 +91,13 @@ jobs:
         # surface while looking perfectly fine in the repository.
         run: node scripts/build-corpus.mjs --check
 
+      - name: Record parity
+        # The document slugs are derived in JS now, and /documents/<slug>/ URLs
+        # are cited in filed court documents. This proves the derivation still
+        # reproduces the 173 published slugs exactly, checked against artifacts
+        # the retired Python produced rather than against itself.
+        run: node scripts/check-record-parity.mjs
+
       - name: Citations match the record
         # Every Q&A answer is a quotation from a filed document. This proves each
         # quoted passage actually appears on the page it is cited to, so a
@@ -101,14 +108,20 @@ jobs:
       - name: Typecheck Astro
         run: npx astro check
 
-      - name: Unit tests
-        run: npx vitest run
-
       - name: Build Astro
         # The denylist guard runs inside this build: a third-party
         # characterisation reaching a title, description or JSON-LD field throws
         # and the build fails.
         run: npm run build
+
+      - name: Unit tests
+        # AFTER the build, deliberately. tests/redirects.test.ts asserts on the
+        # BUILT artifact: that dist/404.html exists and that every redirect rule
+        # points at a file the build actually emits. Running before the build
+        # gave the test nothing to look at, which is how it first failed here.
+        # Checking the artifact rather than the source is the point, so the
+        # ordering follows from that rather than the other way round.
+        run: npx vitest run
 
       - name: Generators stay in their lanes
         # Two generators, one domain, one Pages project. Fails if both emit the
@@ -119,6 +132,24 @@ jobs:
         # This is what the deploy does, so the accusation check below sees the
         # MERGED site rather than only the Jekyll half.
         run: cp -r dist/. _site/
+
+      - name: Sitemap and IndexNow, derived from the merged site
+        # THE STEP THAT PROVES THE MIGRATION. Nothing else can: Jekyll owns 360
+        # of the 367 published URLs and there is no Ruby on the crew box, so the
+        # merged tree cannot be built anywhere but here. The unit tests exercise
+        # this generator on the Astro half and on fixtures, which proves the
+        # decision path and nothing about the shipped artifact.
+        #
+        # --baseline fails the build if any URL the live site published is
+        # neither emitted by this build nor listed in _data/retired_urls.json.
+        # /documents/<slug>/ URLs are cited inside filed court documents, so a
+        # page dropped by a template change is a broken citation in a court
+        # record, and it should stop the build rather than be discovered by
+        # somebody going looking for a filing.
+        run: |
+          set -euo pipefail
+          node scripts/build-sitemap.mjs _site --baseline _data/sitemap_baseline.txt
+          node scripts/build-indexnow.mjs _site
 
       - name: No accusations in indexable metadata
         # The defect that put this site in the hole was third-party

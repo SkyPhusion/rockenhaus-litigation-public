@@ -25,7 +25,9 @@ export default defineConfig({
     // style already in use across the site.
     format: "directory",
   },
-  // No sitemap integration here on purpose: jekyll-sitemap already owns
-  // /sitemap.xml for the merged site. Two generators emitting a sitemap
-  // would be exactly the silent collision the collision check exists to catch.
+  // No sitemap integration here on purpose. An Astro sitemap would cover the
+  // Astro half only, which is the same half-blind sitemap the retired
+  // jekyll-sitemap produced, pointed the other way. /sitemap.xml is built by
+  // scripts/build-sitemap.mjs after both generators have run and their output
+  // has been merged, so it describes the site that is actually deployed.
 });
