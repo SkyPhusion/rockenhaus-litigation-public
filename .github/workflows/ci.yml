@@ -178,7 +178,7 @@ jobs:
         # public, so a CI log is a published document, and a failure naming file,
         # page and pattern would be an index of where unredacted material sits.
         # Run it locally with --detail to see locations.
-        run: python3 scripts/check_pii.py _corpus _data _site
+        run: python3 scripts/check_pii.py _corpus _data _site --check-allowlist
 
       - name: No accusations in indexable metadata
         # The defect that put this site in the hole was third-party
