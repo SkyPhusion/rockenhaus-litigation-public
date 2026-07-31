@@ -73,6 +73,12 @@ jobs:
         # source for that claim is the sitemap being deployed in this same run.
         run: node scripts/build-indexnow.mjs _site
 
+      - name: Protected personal information
+        # Fails the deploy rather than the build. This is the last point at
+        # which anything can be stopped: after the next step the content is
+        # public, CC0, and mirrorable, and there is no unpublish.
+        run: python3 scripts/check_pii.py _corpus _data _site
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:

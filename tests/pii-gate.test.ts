@@ -9,7 +9,7 @@
 
 import { describe, it, expect } from "vitest";
 import { execFileSync } from "node:child_process";
-import { mkdtempSync, writeFileSync, rmSync, mkdirSync } from "node:fs";
+import { mkdtempSync, writeFileSync, rmSync, mkdirSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
@@ -135,5 +135,113 @@ describe("the allowlist accepts by hash, never by value", () => {
     } finally {
       rmSync(dir, { recursive: true, force: true });
     }
+  });
+});
+
+// ---------------------------------------------------------------------------
+// The allowlist, and the promise it must not quietly break.
+//
+// An allowlist is where a gate goes to die. The failure mode is not dramatic:
+// somebody hits a red build, adds the hash, and the category that mattered is
+// now permanently accepted with a one-line reason nobody rereads. These tests
+// make the two things that must stay true into assertions.
+// ---------------------------------------------------------------------------
+
+describe("the allowlist cannot swallow the categories that matter", () => {
+  const allowlist = JSON.parse(
+    readFileSync(join(ROOT, "_data", "pii_allowlist.json"), "utf8"),
+  ) as {
+    policy: { high_severity_patterns_never_allowlisted: string[] };
+    accepted: Array<{ hash: string; pattern: string; reason: string }>;
+  };
+
+  it("has entries, so these tests are checking something", () => {
+    expect(allowlist.accepted.length).toBeGreaterThan(0);
+  });
+
+  it("contains no entry for a high-severity pattern", () => {
+    // Every high-severity match found on 2026-07-31 was resolved by REMOVING
+    // the document or withholding the page. None was allowlisted, and none may
+    // be: an SSN accepted here is an SSN published with a note saying it is
+    // fine. This is the assertion that makes that a rule rather than a habit.
+    const forbidden = new Set(allowlist.policy.high_severity_patterns_never_allowlisted);
+    expect(forbidden.size).toBeGreaterThan(0);
+    const violations = allowlist.accepted.filter((e) => forbidden.has(e.pattern));
+    expect(
+      violations.map((v) => v.pattern),
+      "a high-severity match was allowlisted; it must be removed at the source instead",
+    ).toEqual([]);
+  });
+
+  it("stores a hash and never a value or a location", () => {
+    // The allowlist lives in a public repository. A value would be the
+    // disclosure; a document name would be a map to it.
+    for (const e of allowlist.accepted) {
+      expect(e.hash, "an entry has no hash").toMatch(/^[a-f0-9]{32}$/);
+      expect(Object.keys(e).sort()).toEqual(["hash", "occurrences", "pattern", "reason", "status"]);
+      expect(JSON.stringify(e)).not.toMatch(/\d{3}-\d{2}-\d{4}/);
+    }
+  });
+
+  it("gives every entry a reason", () => {
+    for (const e of allowlist.accepted) {
+      expect(e.reason.length, `entry ${e.hash} has no meaningful reason`).toBeGreaterThan(20);
+    }
+  });
+});
+
+describe("the gate is armed", () => {
+  // A gate that exists but runs nowhere is a comfort. These assert it is
+  // actually wired, and wired BEFORE the step that publishes.
+  const ci = readFileSync(join(ROOT, ".github", "workflows", "ci.yml"), "utf8");
+  const deploy = readFileSync(join(ROOT, ".github", "workflows", "cloudflare-pages.yml"), "utf8");
+
+  it("runs in CI over the corpus, the data files AND the built site", () => {
+    expect(ci).toContain("scripts/check_pii.py");
+    const line = ci.split("\n").find((l) => l.includes("scripts/check_pii.py"))!;
+    for (const path of ["_corpus", "_data", "_site"]) {
+      expect(line, `CI scan omits ${path}`).toContain(path);
+    }
+  });
+
+  it("runs on deploy BEFORE the upload, which is the last stoppable point", () => {
+    // Compared by STEP ORDER, not by string position. The first version of
+    // this test used indexOf("pages deploy"), which matched a COMMENT near the
+    // top of the file explaining the merge, so it reported the gate as running
+    // after a deploy that had not happened yet. It was the test that was wrong,
+    // not the wiring, and a substring in prose is not a step.
+    const steps = deploy
+      .split("\n")
+      .map((l, i) => ({ i, m: /^\s{6}- name:\s*(.+)$/.exec(l) }))
+      .filter((x) => x.m)
+      .map((x) => ({ line: x.i, name: x.m![1]!.trim() }));
+
+    expect(steps.length, "no steps parsed; this test is checking nothing").toBeGreaterThan(3);
+
+    const scanStep = steps.find((st) => {
+      const next = steps[steps.indexOf(st) + 1];
+      const body = deploy.split("\n").slice(st.line, next ? next.line : undefined).join("\n");
+      return body.includes("scripts/check_pii.py");
+    });
+    const deployStep = steps.find((st) => {
+      const next = steps[steps.indexOf(st) + 1];
+      const body = deploy.split("\n").slice(st.line, next ? next.line : undefined).join("\n");
+      return /command:\s*pages deploy/.test(body);
+    });
+
+    expect(scanStep, "no step runs the scan").toBeDefined();
+    expect(deployStep, "no step runs `pages deploy`").toBeDefined();
+    expect(
+      scanStep!.line,
+      `the scan (${scanStep!.name}) runs after the upload (${deployStep!.name}), which is cleanup rather than a gate`,
+    ).toBeLessThan(deployStep!.line);
+  });
+
+  it("scans _data on deploy too, not only the corpus", () => {
+    // The false-clean that actually happened: _data/ocr-cache.json holds a
+    // second text copy of every scanned page, so a corpus-only scan reports
+    // zero while the same string is still published.
+    const line = deploy.split("\n").find((l) => l.includes("scripts/check_pii.py"))!;
+    expect(line).toContain("_data");
   });
 });
