@@ -106,13 +106,52 @@ def indexable_regions(html: str) -> list[tuple[str, str]]:
     return regions
 
 
+def check_ldjson_parses(path: Path, html: str) -> list[str]:
+    """Every ld+json block on the page must actually be JSON.
+
+    WHY THIS LIVES HERE. This guard already extracts every block in order to
+    scan it for denylisted terms, so it is standing in the right place and the
+    parse costs one call.
+
+    WHY IT IS NEEDED AT ALL. Removing an element from a hand-written JSON-LD
+    array leaves the PRECEDING element's comma behind, so the block renders as
+    "}, ]". A structured-data consumer discards the ENTIRE block rather than the
+    element that was removed, and every other check here still passes: the
+    denylist looks for terms, not syntax, so a page can be perfectly clean of
+    accusations while publishing no usable structured data at all. That is a
+    worse outcome than the defect the denylist exists to catch, and it is
+    invisible from the repository.
+
+    A source-level check for this already exists in tests/metadata-guard.test.ts,
+    but it reads Jekyll SOURCE and only recognises the shape where an element was
+    replaced by a Liquid comment. It cannot see a break that appears when Liquid
+    RENDERS: an empty loop leaving "[ , ]", a conditional emitting a stray comma,
+    a data value that is not valid JSON. Parsing the built artifact catches all
+    of those, and does not care how the break got there.
+
+    The parse error is reported WITHOUT the block contents. A structured-data
+    block can carry names and quoted passages, and this repository is public, so
+    a CI log is a published document. Position and message are enough to find it.
+    """
+    problems = []
+    for i, block in enumerate(LDJSON_RE.findall(html)):
+        try:
+            json.loads(block)
+        except json.JSONDecodeError as err:
+            problems.append(
+                f"{path} [json-ld[{i}]] is not valid JSON: {err.msg} at line {err.lineno} column {err.colno}. "
+                "A consumer discards the whole block. Most often an element was removed and its comma left behind."
+            )
+    return problems
+
+
 def check_file(path: Path) -> list[str]:
     try:
         html = path.read_text(encoding="utf-8", errors="replace")
     except OSError as err:
         return [f"{path}: unreadable ({err})"]
 
-    problems = []
+    problems = check_ldjson_parses(path, html)
     for label, text in indexable_regions(html):
         for match in PATTERN_RE.finditer(text):
             start = max(0, match.start() - 40)
@@ -142,14 +181,27 @@ def main() -> int:
         problems.extend(check_file(path))
 
     if problems:
-        print("::error::denylisted term reached indexable metadata:")
-        for p in problems:
-            print(f"  {p}")
+        unparseable = [p for p in problems if "is not valid JSON" in p]
+        denylisted = [p for p in problems if "is not valid JSON" not in p]
+
+        if unparseable:
+            print("::error::a JSON-LD block on a built page is not valid JSON:")
+            for p in unparseable:
+                print(f"  {p}")
+            print(
+                "  A structured-data consumer discards the WHOLE block, so the page publishes\n"
+                "  with none of its structured data and every other check here still passes."
+            )
+        if denylisted:
+            print("::error::denylisted term reached indexable metadata:")
+            for p in denylisted:
+                print(f"  {p}")
         return 1
 
     print(
         f"OK: {len(files)} page(s) checked (head + JSON-LD) against {len(TERMS)} "
-        "denylisted term(s), no denylisted text in indexable metadata"
+        "denylisted term(s): no denylisted text in indexable metadata, and every "
+        "JSON-LD block parses"
     )
     return 0
 
