@@ -1,0 +1,156 @@
+{
+  "_comment": [
+    "THE single list of terms that must never reach indexable metadata.",
+    "",
+    "It lives in a data file, not in code, because it previously lived in TWO",
+    "places and they disagreed. src/lib/guard.ts denylisted 15 terms but ran only",
+    "at Astro build time, so it covered /evidence/ and /answers/.",
+    "scripts/check_indexable_metadata.py ran over every built page but its list",
+    "was four characterisation patterns with no names in it. The result was that",
+    "/retractions/rob-hein/ shipped a non-party name seven times inside its",
+    "<head> with CI green: the stronger guard could not see the page, and the",
+    "guard that could see it was not looking for names.",
+    "",
+    "Both consumers now read this file, and tests/guard.test.ts asserts they",
+    "agree, so the two cannot drift apart again."
+  ],
+  "ruling": [
+    "CONRAD, 2026-07-31: indexable metadata names the CASE, not PEOPLE.",
+    "",
+    "Parties and non-parties alike stay out of <title>, descriptions and JSON-LD.",
+    "The body and the filings still name whoever they name; nothing about the",
+    "record changes.",
+    "",
+    "His reasoning, kept verbatim because it is what generalises to the cases he",
+    "did not anticipate: a handle is an identifier rather than a characterisation,",
+    "so naming her in the record is legitimate. Stuffing that handle into 177 page",
+    "titles is not naming her in the record, it is SEO-targeting a person, which",
+    "is structurally the same move as her site targeting his name. That is what",
+    "makes a site read as an attack site whether or not every word is true.",
+    "",
+    "So the test for a new term is not is-it-true and not is-she-a-party. It is:",
+    "does this string identify a PERSON, and is it in metadata? Then it is out."
+  ],
+  "scope": [
+    "INDEXABLE METADATA ONLY: <title>, <meta name=description>, and every string",
+    "inside a JSON-LD block. Deliberately NOT page bodies. Exhibit pages quote",
+    "what an artifact shows on its face and those pages are noindex; a guard that",
+    "blocked quotation would force the evidence to be paraphrased, which is worse",
+    "evidence. The distinction is publishing a claim versus reproducing an",
+    "artifact."
+  ],
+  "denied_tiers": [
+    "third_party",
+    "opposing_party"
+  ],
+  "third_party": {
+    "_why": [
+      "Tier A. People who are NOT parties to any of these cases, plus the",
+      "characterisations attached to them. A non-party has no reason to appear in",
+      "the metadata of a court-record site at all, and a name in a title is pure",
+      "ranking signal and nothing else."
+    ],
+    "terms": [
+      "neo-nazi",
+      "neo nazi",
+      "nazzy",
+      "nazi",
+      "do not hire",
+      "dustin brown",
+      "joe prich",
+      "justcallmejoep",
+      "prichardington",
+      "prichard",
+      "prichardsac",
+      "rob hein",
+      "qolity",
+      "sockpuppet"
+    ]
+  },
+  "opposing_party": {
+    "_why": [
+      "Tier B, and the tier the ruling above rewrote. It was called",
+      "`party_handles` and held one term, `adezero`, on the argument that her NAME",
+      "belonged in metadata because the case is named for her and only the handle",
+      "was a bare ranking token.",
+      "",
+      "That argument is now overruled, and the distinction it drew is gone: her",
+      "name, her aliases and her handle are all out of metadata together, because",
+      "all four identify a person and metadata names the case. The case caption",
+      "`Rockenhaus v. Rockenhaus` still names the case, and both parties share that",
+      "surname, so nothing is lost by naming the case instead of the person.",
+      "",
+      "The tier is kept SEPARATE from Tier A rather than merged into it, because",
+      "the two rest on different arguments and a future ruling could move one",
+      "without the other. She is a party; the Tier A names are not."
+    ],
+    "terms": [
+      "adezero",
+      "adrienne rockenhaus",
+      "adrienne blair",
+      "adrienne hein"
+    ]
+  },
+  "allowed": {
+    "_why": [
+      "Recorded so that nobody later mistakes these for oversights.",
+      "",
+      "The case caption and the case numbers are what the ruling says metadata is",
+      "FOR, so they are not merely tolerated, they are the intended content.",
+      "",
+      "ONE INFERENCE, FLAGGED RATHER THAN BURIED. Conrad's ruling says `parties and",
+      "non-parties alike` stay out, and he is a party, so read at its most literal",
+      "his own name would be denied too. It is kept allowed here because the",
+      "reasoning he gave is about SEO-targeting a person, and a site cannot target",
+      "its owner in that sense: this is his own court record, and ranking for his",
+      "own name against pages attacking it is the reason the site exists. If that",
+      "reading is wrong, the correction is one line in this file and nothing else."
+    ],
+    "terms": [
+      "Conrad Alan Rockenhaus",
+      "Rockenhaus v. Rockenhaus",
+      "26-104594-DO",
+      "26-102221-PP",
+      "26-737-DO"
+    ]
+  },
+  "person_bearing_fields": {
+    "_why": [
+      "Liquid paths whose VALUES name a person. They may not appear inside a",
+      "JSON-LD block, in a page or in a layout.",
+      "",
+      "WHY THIS EXISTS AS A SEPARATE LIST. The term denylist matches STRINGS,",
+      "so it catches a name hardcoded in markup and it catches a name in built",
+      "HTML. What it cannot catch, before the site is built, is",
+      "{{ letter.recipient_name }}: the term is not in the source at all, it",
+      "arrives when Liquid renders. Building the Jekyll half needs Ruby, which",
+      "is not on the crew box, so on the machine where these edits are made",
+      "that whole class was invisible until CI ran.",
+      "",
+      "It cost three CI round trips in one change: the page front matter, then",
+      "inline JSON-LD in three pages, then JSON-LD in two layouts. Each round",
+      "found a real defect, and each was the same class seen through a",
+      "different template. This list is that class written down.",
+      "",
+      "Adding a path here is cheap and the check is exact. It does not replace",
+      "scripts/check_indexable_metadata.py, which reads built HTML and is the",
+      "authority; it shortens the loop from a CI run to a test run."
+    ],
+    "paths": [
+      "recipient_name",
+      "recipient_aliases",
+      "letter.heading",
+      "letter.description",
+      "petitioner.name",
+      "petitioner.aliases",
+      "petitioner.handles",
+      "petitioner.seo_title",
+      "petitioner.seo_short",
+      "petitioner.seo_long",
+      "petitioner.seo_aka",
+      "faq.faqs",
+      "podcast_interviews",
+      "social_evidence"
+    ]
+  }
+}

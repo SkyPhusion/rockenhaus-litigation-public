@@ -74,6 +74,21 @@ CASES = {
     },
 }
 
+# The court WITHOUT the assigned judge, for structured data.
+#
+# Two of the three `court` strings end ", Hon. <name>". That field is emitted
+# into JSON-LD as schema.org Courthouse.name on all 173 document pages and all
+# three case pages, which is wrong twice over: a courthouse is not a judge, so
+# the structured data was factually incorrect regardless of policy, and it put a
+# named person into the metadata of every page on the site.
+#
+# The judge stays in `court`, which the page BODY renders, because the assigned
+# judge is docket information and belongs in the record. Only the metadata
+# projection drops it.
+for _case in CASES.values():
+    _case["court_name"] = re.sub(r",\s*Hon\..*$", "", _case["court"]).strip()
+
+
 CATEGORIES = {
     "filed": {"label": "Filed by Conrad", "seo_phrase": "filing by Conrad Alan Rockenhaus", "sort": 1},
     "discovery": {"label": "Discovery", "seo_phrase": "discovery filing", "sort": 2},
@@ -163,23 +178,36 @@ def extract_pdf_text(pdf_path: Path) -> dict:
 
 
 def seo_document_title(heading: str, case: dict) -> str:
+    # CAPTION, not PETITIONER['seo_title']. That field expands to
+    # "Adrienne Rockenhaus / Adrienne Blair / Adrienne Hein (@adezero)", which
+    # put a private person's name, two aliases and a social handle into the
+    # <title> of all 173 document pages. Per Conrad's 2026-07-31 ruling that is
+    # not naming her in the record, it is SEO-targeting a person. The caption
+    # names the case, which is what a court-record title is for, and both
+    # parties share the surname so nothing identifying is lost.
     return (
-        f"{heading} PDF | Rockenhaus v. {PETITIONER['seo_title']} "
+        f"{heading} PDF | {PARTIES['caption']} "
         f"Case {case['case_number']} ({case['seo_county']} {case['seo_matter_short']})"
     )
 
 
 def seo_case_title(case: dict) -> str:
     return (
-        f"Rockenhaus v. {PETITIONER['seo_title']} {case['seo_matter']} "
+        f"{PARTIES['caption']} {case['seo_matter']} "
         f"Case {case['case_number']} | {case['seo_county']} Circuit Court Filings"
     )
 
 
 def seo_case_description(case: dict) -> str:
+    # NOT case['court']. That string carries the assigned judge for two of the
+    # three cases ("... , Hon. Nicole N. Goodson"), which puts a named person
+    # into the meta description of a case page. The judge stays in the DATA and
+    # on the page body, where docket information belongs; the description names
+    # the court. See the PR for why a judge is the one place this ruling was
+    # applied to a case Conrad did not anticipate.
     return (
         f"Public Rockenhaus v. Rockenhaus {case['seo_matter']} court filings "
-        f"for Michigan Case No. {case['case_number']} in {case['court']}. "
+        f"for Michigan Case No. {case['case_number']} in the {case['seo_county']} Circuit Court. "
         f"Filed motions, discovery, exhibits, opposing filings, and court orders "
         f"as searchable PDFs at {PUBLIC_RECORD['host']} (canonical record). "
         f"Disputed third-party domains indexed at /disputed-domains/."
@@ -187,11 +215,10 @@ def seo_case_description(case: dict) -> str:
 
 
 def category_seo_phrase(category: str) -> str:
-    if category == "opposing":
-        return (
-            f"opposing-party filing by {PETITIONER['name']} "
-            f"({PETITIONER['seo_aka']})"
-        )
+    # The "opposing" branch used to expand the party's name plus her aliases and
+    # handle into the meta description of every opposing-party filing. The
+    # category already says whose filing it is in the only sense a docket cares
+    # about, and the document page body still names her. Metadata names the case.
     return CATEGORIES[category]["seo_phrase"]
 
 
@@ -207,15 +234,20 @@ def seo_document_description(heading: str, case: dict, category: str) -> str:
 
 def seo_document_keywords(heading: str, case: dict, filename: str) -> str:
     """Comma-separated meta keywords tuned for search discovery."""
+    # NO PERSON IDENTIFIERS. This list used to carry PETITIONER["name"],
+    # "Adrienne Blair", "Adrienne Hein" and "@adezero", appended to the meta
+    # keywords of all 173 document pages. That is the keyword stuffing Conrad's
+    # 2026-07-31 ruling names directly, and it is the single largest source of a
+    # person's name in this site's indexable metadata.
+    #
+    # RESPONDENT["name"] stays. See the `allowed` block in
+    # _data/metadata_denylist.json for that reading of the ruling and the one
+    # inference it rests on.
     parts = [
         "Rockenhaus v Rockenhaus",
         case["case_number"],
         case["seo_county"],
         case["seo_matter_short"],
-        PETITIONER["name"],
-        "Adrienne Blair",
-        "Adrienne Hein",
-        "@adezero",
         RESPONDENT["name"],
         "Michigan court filing",
         "rockenhaus.net",
@@ -230,7 +262,6 @@ def seo_document_keywords(heading: str, case: dict, filename: str) -> str:
             "motion hearing",
             "August 26 2026",
             "August 26 2026 11:30 AM",
-            "Hon Nicole N Goodson",
             "Wayne County divorce",
             "Zoom hearing",
         ])
@@ -239,7 +270,6 @@ def seo_document_keywords(heading: str, case: dict, filename: str) -> str:
             "August 26 2026 hearing",
             "August 26 2026 11:30 AM",
             "Wayne County divorce hearing",
-            "Hon Nicole N Goodson",
         ])
     if "consolidated" in lower_heading and "hearing" in lower_heading:
         parts.extend([
@@ -255,7 +285,6 @@ def seo_document_keywords(heading: str, case: dict, filename: str) -> str:
             "GAL",
             "MCR 2.201(E)",
             "plaintiff capacity",
-            "Adrienne Rockenhaus unrepresented",
         ])
     if "notice of hearing" in lower_heading or "noh" in lower_name:
         parts.extend(["notice of hearing", "August 26 2026"])
@@ -271,9 +300,11 @@ def seo_document_keywords(heading: str, case: dict, filename: str) -> str:
 
 
 def seo_case_heading(case: dict) -> str:
-    return (
-        f"Rockenhaus v. Adrienne Rockenhaus ({case['seo_matter']}, Case {case['case_number']})"
-    )
+    # This looks like a body heading and is one, but _layouts/case.html also
+    # feeds it to the JSON-LD `name` field, so it is metadata as well and the
+    # ruling reaches it. Checked rather than assumed: the guard scope is titles,
+    # descriptions and every string inside a JSON-LD block.
+    return f"{PARTIES['caption']} ({case['seo_matter']}, Case {case['case_number']})"
 
 
 def write_document_page(
@@ -307,6 +338,7 @@ case_id: {yaml_quote(case_id)}
 case_title: {yaml_quote(case["title"])}
 case_number: {yaml_quote(case["case_number"])}
 court: {yaml_quote(case["court"])}
+court_name: {yaml_quote(case["court_name"])}
 category: {yaml_quote(category)}
 category_label: {yaml_quote(category_label)}
 pdf_path: {yaml_quote(relative_pdf)}
@@ -333,6 +365,7 @@ description: {yaml_quote(description)}
 case_id: {yaml_quote(case_id)}
 case_number: {yaml_quote(case["case_number"])}
 court: {yaml_quote(case["court"])}
+court_name: {yaml_quote(case["court_name"])}
 role: {yaml_quote(case["role"])}
 permalink: /cases/{case_id}/
 ---

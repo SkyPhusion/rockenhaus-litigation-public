@@ -1,6 +1,4 @@
 {
-  "hub_title": "Retraction demands | Rockenhaus defamation notice Texas Michigan",
-  "hub_description": "Executed June 30, 2026 retraction and correction demands from Conrad Alan Rockenhaus to Adrienne Rockenhaus (Adrienne Blair, Adrienne Hein, @adezero) and Rob Hein (QOLity Financial, Deborah Dew Survivable Trust). Notice under MCL 600.2911(2)(b) and Texas Defamation Mitigation Act Sec. 73.055. Delivered by email and certified mail. Federal civil action intended in U.S. District Court, Western District of Texas, Waco Division if demands are not met.",
   "date_executed": "2026-06-30",
   "delivery": {
     "email": true,
@@ -27,7 +25,12 @@
     {
       "id": "adrienne-rockenhaus",
       "recipient_name": "Adrienne M. Rockenhaus",
-      "recipient_aliases": ["Adrienne Rockenhaus", "Adrienne Blair", "Adrienne Hein", "@adezero"],
+      "recipient_aliases": [
+        "Adrienne Rockenhaus",
+        "Adrienne Blair",
+        "Adrienne Hein",
+        "@adezero"
+      ],
       "recipient_address": "15900 W. 10 Mile Rd., Suite 211, PMB 1046, Southfield, MI 48075",
       "subject": "Formal demand for retraction and correction of false and defamatory statements",
       "filename": "Adrienne_Rockenhaus_30JUN26_Retraction_Executed.pdf",
@@ -58,7 +61,9 @@
         "skyphusion.com",
         "Texas Defamation Mitigation Act",
         "MCL 600.2911"
-      ]
+      ],
+      "seo_name": "Retraction and correction demand served on the opposing party, June 30, 2026",
+      "seo_description": "Executed June 30, 2026 formal retraction and correction demand served by Conrad Alan Rockenhaus on the opposing party in Rockenhaus v. Rockenhaus. Notice under MCL 600.2911(2)(b) and Tex. Civ. Prac. & Rem. Code Sec. 73.055. Delivered by email and certified mail. Federal civil action intended in the Western District of Texas, Waco Division, if the demands are not met."
     },
     {
       "id": "rob-hein",
@@ -91,7 +96,20 @@
         "litigation hold",
         "Texas Defamation Mitigation Act",
         "MCL 600.2911"
-      ]
+      ],
+      "seo_name": "Retraction demand and cease-funding notice served on a trustee, June 30, 2026",
+      "seo_description": "Executed June 30, 2026 retraction demand, cease-funding notice and litigation-hold demand served by Conrad Alan Rockenhaus on the trustee of a third-party trust. Notice under MCL 600.2911(2)(b) and Tex. Civ. Prac. & Rem. Code Sec. 73.055. Delivered by email and certified mail. Federal civil action intended in the Western District of Texas, Waco Division, if the demands are not met."
     }
+  ],
+  "_seo_why": [
+    "seo_name and seo_description exist because `heading` and `description` are",
+    "rendered in the page BODY, where naming the recipient is legitimate, AND",
+    "were fed to the JSON-LD block in _layouts/retraction.html, where under",
+    "Conrad's 2026-07-31 ruling they are not: indexable metadata names the CASE,",
+    "not PEOPLE. Same split as court / court_name in _data/courts.json.",
+    "",
+    "The recipient is identified by ROLE here (the opposing party, a trustee)",
+    "rather than dropped, so the two letters still have distinct titles and a",
+    "reader can tell them apart without the metadata naming anybody."
   ]
 }
