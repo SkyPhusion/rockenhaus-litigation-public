@@ -111,6 +111,28 @@ export function baselineGaps(baseline, published, retired) {
  * silently shrinks, and on a court record the additions are the half a human
  * should actually read, so they get printed rather than discovered later.
  */
+/**
+ * URLs the build still emits that _data/retired_urls.json says are withdrawn.
+ *
+ * THE DIRECTION THE GATE DID NOT COVER. Everything else here is built to catch
+ * a DISAPPEARANCE: a URL that was published and is not any more. Restoring a
+ * withdrawn document is the opposite motion, and it has its own failure mode.
+ *
+ * If a document comes back but its retirement entry stays, three things
+ * disagree: the build emits the page, the sitemap omits it because this
+ * generator excludes retired paths, and public/_redirects answers 404 for it.
+ * The document is published and unreachable at the same time, and every check
+ * that existed before this one passed, because none of them looked in this
+ * direction.
+ *
+ * A retired path should not be emitted by the build at all: withdrawal means
+ * the file is gone from the tree. So an exclusion with reason "retired" is not
+ * housekeeping, it is a contradiction, and it fails the build.
+ */
+export function retiredButPublished(excluded) {
+  return excluded.filter((e) => e.reason === "retired").map((e) => e.path).sort();
+}
+
 export function baselineAdditions(baseline, published) {
   const known = new Set(baseline);
   return published.filter((path) => !known.has(encodePath(path)));
@@ -129,6 +151,24 @@ function main() {
   }
 
   const { included, excluded } = collectIndexable(builtDir);
+
+  // Checked before the baseline, because a contradiction here means the two
+  // sources of truth disagree, and every number below is derived from them.
+  const contradictions = retiredButPublished(excluded);
+  if (contradictions.length) {
+    console.error(
+      `\nbuild-sitemap: ${contradictions.length} URL(s) are listed as retired but the build still publishes them:\n`,
+    );
+    contradictions.forEach((p) => console.error(`  ${p}`));
+    console.error(
+      "\nThese are published and unreachable at the same time: the page is built, the\n" +
+        "sitemap omits it, and public/_redirects answers 404 for it. If the document was\n" +
+        "restored on purpose, remove its entry from _data/retired_urls.json AND its rule\n" +
+        "from public/_redirects. If it was meant to stay withdrawn, it should not be in\n" +
+        "the build.",
+    );
+    process.exit(1);
+  }
 
   if (included.length === 0) {
     console.error("build-sitemap: the built tree contains no indexable page. Refusing to write an empty sitemap.");
