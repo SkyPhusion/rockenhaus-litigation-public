@@ -14,7 +14,6 @@
     "Both consumers now read this file, and tests/guard.test.ts asserts they",
     "agree, so the two cannot drift apart again."
   ],
-
   "ruling": [
     "CONRAD, 2026-07-31: indexable metadata names the CASE, not PEOPLE.",
     "",
@@ -32,7 +31,6 @@
     "So the test for a new term is not is-it-true and not is-she-a-party. It is:",
     "does this string identify a PERSON, and is it in metadata? Then it is out."
   ],
-
   "scope": [
     "INDEXABLE METADATA ONLY: <title>, <meta name=description>, and every string",
     "inside a JSON-LD block. Deliberately NOT page bodies. Exhibit pages quote",
@@ -41,9 +39,10 @@
     "evidence. The distinction is publishing a claim versus reproducing an",
     "artifact."
   ],
-
-  "denied_tiers": ["third_party", "opposing_party"],
-
+  "denied_tiers": [
+    "third_party",
+    "opposing_party"
+  ],
   "third_party": {
     "_why": [
       "Tier A. People who are NOT parties to any of these cases, plus the",
@@ -68,7 +67,6 @@
       "sockpuppet"
     ]
   },
-
   "opposing_party": {
     "_why": [
       "Tier B, and the tier the ruling above rewrote. It was called",
@@ -93,7 +91,6 @@
       "adrienne hein"
     ]
   },
-
   "allowed": {
     "_why": [
       "Recorded so that nobody later mistakes these for oversights.",
@@ -115,6 +112,45 @@
       "26-104594-DO",
       "26-102221-PP",
       "26-737-DO"
+    ]
+  },
+  "person_bearing_fields": {
+    "_why": [
+      "Liquid paths whose VALUES name a person. They may not appear inside a",
+      "JSON-LD block, in a page or in a layout.",
+      "",
+      "WHY THIS EXISTS AS A SEPARATE LIST. The term denylist matches STRINGS,",
+      "so it catches a name hardcoded in markup and it catches a name in built",
+      "HTML. What it cannot catch, before the site is built, is",
+      "{{ letter.recipient_name }}: the term is not in the source at all, it",
+      "arrives when Liquid renders. Building the Jekyll half needs Ruby, which",
+      "is not on the crew box, so on the machine where these edits are made",
+      "that whole class was invisible until CI ran.",
+      "",
+      "It cost three CI round trips in one change: the page front matter, then",
+      "inline JSON-LD in three pages, then JSON-LD in two layouts. Each round",
+      "found a real defect, and each was the same class seen through a",
+      "different template. This list is that class written down.",
+      "",
+      "Adding a path here is cheap and the check is exact. It does not replace",
+      "scripts/check_indexable_metadata.py, which reads built HTML and is the",
+      "authority; it shortens the loop from a CI run to a test run."
+    ],
+    "paths": [
+      "recipient_name",
+      "recipient_aliases",
+      "letter.heading",
+      "letter.description",
+      "petitioner.name",
+      "petitioner.aliases",
+      "petitioner.handles",
+      "petitioner.seo_title",
+      "petitioner.seo_short",
+      "petitioner.seo_long",
+      "petitioner.seo_aka",
+      "faq.faqs",
+      "podcast_interviews",
+      "social_evidence"
     ]
   }
 }

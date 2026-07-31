@@ -116,7 +116,7 @@ breadcrumbs:
         {% for letter in site.data.retractions.letters %}
         {
           "@type": "LegalDocument",
-          "name": {{ letter.seo_name | default: letter.heading | jsonify }},
+          "name": {{ letter.seo_name | jsonify }},
           "url": "{{ site.url }}{{ site.baseurl }}{{ letter.permalink }}",
           "encoding": {
             "@type": "MediaObject",

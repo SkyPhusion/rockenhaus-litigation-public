@@ -156,8 +156,8 @@ layout: default
       {
         "@type": "LegalDocument",
         "@id": "{{ site.url }}{{ site.baseurl }}{{ letter.permalink }}#document",
-        "name": {{ letter.seo_name | default: letter.heading | jsonify }},
-        "description": {{ letter.seo_description | default: letter.description | jsonify }},
+        "name": {{ letter.seo_name | jsonify }},
+        "description": {{ letter.seo_description | jsonify }},
         "datePublished": {{ site.data.retractions.date_executed | jsonify }},
         "author": {
           "@type": "Person",
@@ -170,12 +170,21 @@ layout: default
           "contentUrl": "{{ site.url }}{{ site.baseurl }}{{ letter.pdf_path }}"
         },
         "about": [
+          {%- comment -%}
+            A Person block naming the RECIPIENT sat here, with
+            letter.recipient_aliases as alternateName, so the executed demand
+            was published as structured data about a named private individual
+            and, for one of the two letters, their aliases and social handle.
+
+            Conrad's 2026-07-31 ruling: indexable metadata names the CASE, not
+            PEOPLE. The recipient is still named in the page BODY, in the
+            document header, in the Recipient row of the details list and in the
+            letter text itself. Nothing left the record.
+          {%- endcomment -%}
           {
-            "@type": "Person",
-            "name": {{ letter.recipient_name | jsonify }}
-            {% if letter.recipient_aliases %},
-            "alternateName": {{ letter.recipient_aliases | jsonify }}
-            {% endif %}
+            "@type": "Organization",
+            "name": "Recipient of record",
+            "description": "Identified in the executed letter and on this page. Not published as structured data about a named individual."
           },
           {
             "@type": "Courthouse",
@@ -189,7 +198,7 @@ layout: default
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}{{ site.baseurl }}/" },
           { "@type": "ListItem", "position": 2, "name": "Retraction demands", "item": "{{ site.url }}{{ site.baseurl }}/retractions/" },
-          { "@type": "ListItem", "position": 3, "name": {{ letter.recipient_name | jsonify }}, "item": "{{ site.url }}{{ site.baseurl }}{{ letter.permalink }}" }
+          { "@type": "ListItem", "position": 3, "name": {{ letter.seo_name | jsonify }}, "item": "{{ site.url }}{{ site.baseurl }}{{ letter.permalink }}" }
         ]
       }
     ]

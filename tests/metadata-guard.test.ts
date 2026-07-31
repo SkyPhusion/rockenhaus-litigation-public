@@ -488,3 +488,110 @@ describe("removing a JSON-LD element does not orphan its comma", () => {
     expect(orphanedIn(twoComments)).toBe(false);
   });
 });
+
+// ---------------------------------------------------------------------------
+// The class the term denylist structurally cannot catch before a build.
+//
+// The denylist matches STRINGS. It catches a name hardcoded in markup and it
+// catches a name in built HTML. What it cannot catch, in source, is
+// {{ letter.recipient_name }}: the term is not there, it arrives when Liquid
+// renders. Building the Jekyll half needs Ruby, which is not on the crew box,
+// so on the machine where these edits are made that whole class was invisible
+// until CI ran.
+//
+// It cost three CI round trips in one change: page front matter, then inline
+// JSON-LD in three pages, then JSON-LD in two layouts. Same class each time,
+// seen through a different template. This is that class written down.
+// ---------------------------------------------------------------------------
+
+describe("structured data does not reference a person-bearing field", () => {
+  const denylist = JSON.parse(
+    readFileSync(join(ROOT, "_data", "metadata_denylist.json"), "utf8"),
+  ) as { person_bearing_fields: { paths: string[] } };
+  const paths = denylist.person_bearing_fields.paths;
+
+  /** Every JSON-LD block in page sources AND layouts, which pages inherit. */
+  function jsonLdBlocks(): Array<[string, string]> {
+    const out: Array<[string, string]> = [...pagesWithSource].map(([p, , full]) => [p, full] as [string, string]);
+    for (const entry of readdirSync(join(ROOT, "_layouts"), { withFileTypes: true })) {
+      if (entry.isFile() && entry.name.endsWith(".html")) {
+        out.push([`_layouts/${entry.name}`, readFileSync(join(ROOT, "_layouts", entry.name), "utf8")]);
+      }
+    }
+    const blocks: Array<[string, string]> = [];
+    for (const [path, full] of out) {
+      for (const m of full.matchAll(/<script[^>]*application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)) {
+        // Liquid comments are documentation, not emitted output. The removal
+        // notes in these blocks necessarily name the fields they removed.
+        blocks.push([path, m[1]!.replace(/\{%-?\s*comment\s*-?%\}[\s\S]*?\{%-?\s*endcomment\s*-?%\}/g, "")]);
+      }
+    }
+    return blocks;
+  }
+
+  const blocks = jsonLdBlocks();
+
+  it("checks the layouts too, not only the pages", () => {
+    // The gap that produced the third CI round trip: the pages were clean and
+    // the LAYOUT they inherit was not.
+    expect(blocks.some(([p]) => p.startsWith("_layouts/"))).toBe(true);
+    expect(blocks.length).toBeGreaterThan(4);
+    expect(paths.length).toBeGreaterThan(5);
+  });
+
+  it("references no field whose value names a person", () => {
+    const hits: string[] = [];
+    for (const [path, block] of blocks) {
+      for (const field of paths) {
+        if (block.includes(field)) hits.push(`${path}: ${field}`);
+      }
+    }
+    expect(
+      hits,
+      `JSON-LD references fields whose values name people:\n${hits.join("\n")}\n\n` +
+        "Metadata names the CASE, not PEOPLE. Add a person-free projection to the data " +
+        "(the court/court_name and heading/seo_name pattern) and reference that instead.",
+    ).toEqual([]);
+  });
+
+  it("would catch a reference, including one behind a default filter", () => {
+    // The control, in both the shapes this actually appeared in.
+    const direct = '{ "name": {{ letter.recipient_name | jsonify }} }';
+    const behindDefault = '{ "name": {{ letter.seo_name | default: letter.heading | jsonify }} }';
+    const clean = '{ "name": {{ letter.seo_name | jsonify }} }';
+    expect(paths.some((f) => direct.includes(f))).toBe(true);
+    // A safety-net default is the defect with a fallback attached, and reads as
+    // harmless, which is exactly why it needs to fail.
+    expect(paths.some((f) => behindDefault.includes(f))).toBe(true);
+    expect(paths.some((f) => clean.includes(f))).toBe(false);
+  });
+});
+
+describe("every retraction letter has its person-free projection", () => {
+  // The precondition for dropping the `| default:` fallbacks. Without this, a
+  // letter added later with no seo_name renders an empty JSON-LD name rather
+  // than falling back to something that names the recipient.
+  const retractions = JSON.parse(readFileSync(join(ROOT, "_data", "retractions.json"), "utf8")) as {
+    letters: Array<{ id: string; seo_name?: string; seo_description?: string }>;
+  };
+
+  it("has letters to check", () => {
+    expect(retractions.letters.length).toBeGreaterThan(0);
+  });
+
+  it("gives every letter a seo_name and a seo_description", () => {
+    for (const letter of retractions.letters) {
+      expect(letter.seo_name, `${letter.id} has no seo_name`).toBeTruthy();
+      expect(letter.seo_description, `${letter.id} has no seo_description`).toBeTruthy();
+    }
+  });
+
+  it("keeps the person-naming fields, because the BODY still uses them", () => {
+    // The ruling is about metadata only. If these ever disappeared, the page
+    // would stop naming the recipient anywhere, which is not what was ruled.
+    for (const letter of retractions.letters as Array<Record<string, unknown>>) {
+      expect(letter.heading, `${letter.id} lost its body heading`).toBeTruthy();
+      expect(letter.recipient_name, `${letter.id} lost its recipient name`).toBeTruthy();
+    }
+  });
+});
