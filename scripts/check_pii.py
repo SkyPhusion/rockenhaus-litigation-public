@@ -44,6 +44,10 @@ short list a human reads. That is a prompt for review, not a proof of absence.
 
 Usage:
   python3 scripts/check_pii.py <path> [<path> ...]     scan files or directories
+  python3 scripts/check_pii.py ... --detail            print locations (local only)
+  python3 scripts/check_pii.py ... --check-allowlist   also fail on stale allowlist
+                                                       entries; only meaningful
+                                                       over the whole published set
   python3 scripts/check_pii.py --self-test             prove the patterns fire
 """
 
@@ -223,6 +227,29 @@ def print_coverage(states: dict) -> None:
     print()
 
 
+def stale_allowlist_entries(allowed: dict[str, dict], matched: set[str]) -> list[dict]:
+    """Allowlist entries whose value no longer appears anywhere scanned.
+
+    WHY THIS IS A FAILURE AND NOT HOUSEKEEPING. An entry says "this exact value
+    does not stop the build". When the value has been resolved at the source,
+    by withdrawing a document or withholding a page, the entry outlives the
+    thing it described and becomes a standing pre-authorisation: if that value
+    ever reappears, through a restored document or a re-added exhibit, the gate
+    stays green and nobody is told.
+
+    Resolved-at-source and allowlisted are mutually exclusive states, and until
+    now nothing enforced that. It held only because the file happened to be
+    regenerated from the live corpus each time it changed.
+
+    NOT CHECKED ON A NARROWED RUN. A local scan without _site sees less content,
+    so entries would look stale that are merely out of view, and a check that
+    cries wolf gets ignored. Only a full-scope run can distinguish "gone" from
+    "not looked at", which is the same distinction the coverage report exists to
+    make.
+    """
+    return [e for h, e in sorted(allowed.items()) if h not in matched]
+
+
 def load_allowlist() -> dict[str, dict]:
     if not ALLOWLIST_PATH.exists():
         return {}
@@ -230,7 +257,7 @@ def load_allowlist() -> dict[str, dict]:
     return {entry["hash"]: entry for entry in data.get("accepted", [])}
 
 
-def scan_text(text: str, path: str, allowed: dict[str, dict]) -> list[dict]:
+def scan_text(text: str, path: str, allowed: dict[str, dict], matched: set[str] | None = None) -> list[dict]:
     findings = []
     for name, pattern, description in PATTERNS:
         for m in pattern.finditer(text):
@@ -239,6 +266,8 @@ def scan_text(text: str, path: str, allowed: dict[str, dict]) -> list[dict]:
                 continue
             h = digest(value)
             if h in allowed:
+                if matched is not None:
+                    matched.add(h)
                 continue
             line = text.count("\n", 0, m.start()) + 1
             findings.append(
@@ -319,6 +348,11 @@ def self_test() -> int:
 def main() -> int:
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     detail = "--detail" in sys.argv
+    # Opt-in, because staleness is only meaningful over the WHOLE published set.
+    # A scan of one directory, a fixture, or a single document is a legitimate
+    # use and must not report every entry as stale. The workflows pass this;
+    # ad-hoc runs do not.
+    check_allowlist = "--check-allowlist" in sys.argv
     if "--self-test" in sys.argv:
         return self_test()
 
@@ -329,6 +363,7 @@ def main() -> int:
     print_coverage(page_states())
 
     allowed = load_allowlist()
+    matched: set[str] = set()
     findings: list[dict] = []
     scanned = 0
 
@@ -362,11 +397,40 @@ def main() -> int:
             except OSError as exc:
                 print(f"check_pii: cannot read {path}: {exc}", file=sys.stderr)
                 return 2
-            findings.extend(scan_text(text, str(path), allowed))
+            findings.extend(scan_text(text, str(path), allowed, matched))
 
     if scanned == 0:
         print("check_pii: nothing was scanned. Refusing to report clean on an empty run.", file=sys.stderr)
         return 2
+
+    if check_allowlist and not missing:
+        stale = stale_allowlist_entries(allowed, matched)
+        if stale:
+            print(
+                f"::error::{len(stale)} allowlist entry/entries no longer match anything",
+                file=sys.stderr,
+            )
+            print(
+                "\nAn allowlist entry says a specific value does not stop the build. These\n"
+                "values are no longer present anywhere scanned, which means they were\n"
+                "resolved at the source: a document withdrawn, or a page withheld.\n"
+                "\n"
+                "Leaving the entry is not tidy-up debt. It is a standing pre-authorisation:\n"
+                "if that exact value ever comes back, through a restored document or a\n"
+                "re-added exhibit, the gate stays green and nobody is told. Resolved at the\n"
+                "source and allowlisted are mutually exclusive states.\n",
+                file=sys.stderr,
+            )
+            for e in stale:
+                print(f"  {e['hash']}  [{e.get('pattern', 'unknown')}]  {e.get('status', '')}", file=sys.stderr)
+            print("\nRemove these entries from _data/pii_allowlist.json.", file=sys.stderr)
+            return 1
+    elif check_allowlist and allowed:
+        print(
+            "check_pii: allowlist staleness NOT checked, because the scan scope was narrower\n"
+            "  than CI. An entry can only be called stale when everything has been looked at.",
+            file=sys.stderr,
+        )
 
     if findings:
         by_pattern: dict[str, int] = {}

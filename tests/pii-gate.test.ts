@@ -403,3 +403,86 @@ describe("account_number can no longer be allowlisted", () => {
     }
   });
 });
+
+// ---------------------------------------------------------------------------
+// A stale allowlist entry is a standing pre-authorisation.
+//
+// An entry says "this exact value does not stop the build". Once the value has
+// been resolved at the source, by withdrawing a document or withholding a page,
+// the entry outlives the thing it described: if that value ever reappears,
+// through a restored document or a re-added exhibit, the gate stays green and
+// nobody is told.
+//
+// This repository restored a withdrawn document today, so reappearance is not
+// hypothetical. Until now the property held only because the file happened to
+// be regenerated from the live corpus each time it changed.
+// ---------------------------------------------------------------------------
+
+describe("the allowlist cannot outlive what it describes", () => {
+  function runWithAllowlist(extra: object | null): { status: number; out: string } {
+    const path = join(ROOT, "_data", "pii_allowlist.json");
+    const original = readFileSync(path, "utf8");
+    try {
+      if (extra) {
+        const d = JSON.parse(original) as { accepted: object[] };
+        d.accepted.push(extra);
+        writeFileSync(path, JSON.stringify(d, null, 2) + "\n", "utf8");
+      }
+      const r = spawnSync("python3", [SCRIPT, "_corpus", "_data", "dist", "--check-allowlist"], { encoding: "utf8", cwd: ROOT });
+      return { status: r.status ?? -1, out: (r.stdout ?? "") + (r.stderr ?? "") };
+    } finally {
+      writeFileSync(path, original, "utf8");
+    }
+  }
+
+  it("passes when every entry still describes something present", () => {
+    const { status, out } = runWithAllowlist(null);
+    expect(status, out.slice(-400)).toBe(0);
+  });
+
+  it("FAILS on an entry whose value is no longer anywhere", () => {
+    const { status, out } = runWithAllowlist({
+      hash: "f".repeat(32),
+      pattern: "street_address",
+      occurrences: 3,
+      status: "reviewed_not_protected",
+      reason: "value since resolved at the source",
+    });
+    expect(status).toBe(1);
+    expect(out).toContain("no longer match anything");
+    expect(out).toContain("f".repeat(32));
+    // The message has to say WHY, or the next person deletes the check instead
+    // of the entry.
+    expect(out).toContain("pre-authorisation");
+  });
+
+  it("is opt-in, so scanning a fixture does not report every entry as stale", () => {
+    // THE DEFECT THIS ENCODES. The first version inferred "full scope" from
+    // "no missing paths", which is true of any fixture directory. Every
+    // allowlist entry then looked resolved-at-source and the tool failed on
+    // every subset scan. Four existing tests caught it. Scope is stated now,
+    // not guessed.
+    const dir = mkdtempSync(join(tmpdir(), "pii-optin-"));
+    try {
+      writeFileSync(join(dir, "a.txt"), "Ordinary text with no identifiers.", "utf8");
+      const r = spawnSync("python3", [SCRIPT, dir], { encoding: "utf8", cwd: ROOT });
+      expect(r.status, (r.stdout ?? "") + (r.stderr ?? "")).toBe(0);
+      expect((r.stdout ?? "") + (r.stderr ?? "")).not.toContain("no longer match anything");
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  it("does NOT judge staleness on a narrowed scan, and says so", () => {
+    // A local run without _site sees less content, so entries would look stale
+    // that are merely out of view. Only a full-scope run can tell "gone" from
+    // "not looked at" -- the same distinction the coverage report exists to
+    // make, and a check that cries wolf gets deleted.
+    const r = spawnSync("python3", [SCRIPT, "_corpus", "_data", "dist", "_absent_path_for_test", "--check-allowlist"], {
+      encoding: "utf8", cwd: ROOT,
+    });
+    const out = (r.stdout ?? "") + (r.stderr ?? "");
+    expect(r.status).toBe(0);
+    expect(out).toContain("staleness NOT checked");
+  });
+});
