@@ -123,6 +123,24 @@ PATTERNS: list[tuple[str, re.Pattern[str], str]] = [
         "a street address",
     ),
     (
+        "ssn_label_ocr",
+        re.compile(r"\bs\.?\s?s\.?\s?n\b[^\n]{0,24}?\d", re.IGNORECASE),
+        "digits following an SSN label, tolerant of OCR noise between the two",
+    ),
+    (
+        "drivers_licence_label",
+        re.compile(
+            r"driver'?s?\s+lic[a-z]{0,4}se[^\n]{0,28}?([A-Za-z]?[\s.-]{0,2}\d[\d\s.-]{6,})",
+            re.IGNORECASE,
+        ),
+        "an identifier following a driver's licence label",
+    ),
+    (
+        "drivers_licence_shape",
+        re.compile(r"\b[A-Za-z][\s.-]{0,2}\d{3}[\s.-]{0,2}\d{3}[\s.-]{0,2}\d{3}[\s.-]{0,2}\d{3}\b"),
+        "a Michigan driver's licence number shape",
+    ),
+    (
         "minor_named",
         re.compile(
             r"(?:minor child|minor children|the minor|my minor|our minor)[^.\n]{0,40}?"
@@ -131,6 +149,58 @@ PATTERNS: list[tuple[str, re.Pattern[str], str]] = [
         "a full name in a minor-child context, where the rule requires initials",
     ),
 ]
+
+
+def page_states(root: Path = ROOT) -> dict:
+    """What the gate can and cannot read, from the corpus manifest.
+
+    THE POINT OF THIS FUNCTION. A text-based gate reads text. Pages with no text
+    layer are not scanned at all, and OCR pages are scanned imperfectly: today
+    the same corpus defeated a tight pattern in one place and a loose one in
+    another. So a clean result means "no match in the text we could extract",
+    which is a different claim from "the corpus is clean".
+
+    The difference is invisible unless the gate says so itself, which is why
+    these counts print on every run, pass or fail, and why the unreadable pages
+    are named rather than counted. Scanned pages are where filled-in forms live,
+    forms are where identity data is, and a page nobody can machine-read is
+    exactly the page a person should look at.
+    """
+    manifest = root / "_corpus" / "manifest.json"
+    if not manifest.is_file():
+        return {}
+    pages = json.loads(manifest.read_text(encoding="utf-8")).get("pages", [])
+    counts: dict[str, int] = {}
+    unreadable = []
+    for page in pages:
+        source = page.get("text_source", "unknown")
+        counts[source] = counts.get(source, 0) + 1
+        if source == "none":
+            unreadable.append(f"{page['doc_slug']} p{page['page']:03d} of {page['total_pages']}")
+    return {"counts": counts, "total": len(pages), "unreadable": sorted(unreadable)}
+
+
+def print_coverage(states: dict) -> None:
+    """Print coverage before any verdict, so the verdict is read in context."""
+    if not states:
+        print("check_pii: no corpus manifest found; page-state coverage unknown.")
+        return
+    c = states["counts"]
+    native, ocr, none = c.get("native", 0), c.get("ocr", 0), c.get("none", 0)
+    print(f"check_pii: corpus coverage, {states['total']} page(s)")
+    print(f"  {native:5}  native text   scanned")
+    print(f"  {ocr:5}  OCR text      scanned, imperfectly: OCR noise can hide a value from any pattern")
+    print(f"  {none:5}  no text layer NOT SCANNED, this gate cannot read these at all")
+    if states["unreadable"]:
+        print("\n  Pages this gate cannot read, which a person has to:")
+        for entry in states["unreadable"]:
+            print(f"    {entry}")
+        print(
+            "\n  These are named rather than counted because a silence is not a result.\n"
+            "  They are already published, so listing them discloses nothing new; what it\n"
+            "  does is turn an unstated blind spot into a review list."
+        )
+    print()
 
 
 def load_allowlist() -> dict[str, dict]:
@@ -183,8 +253,22 @@ def self_test() -> int:
         ("date_of_birth", "Date of Birth: 01/01/1900"),
         ("street_address", "served at 1234 Example Street, Detroit"),
         ("minor_named", "the minor child Example Personname attends school"),
+        # OCR noise between a label and its value, which is how the real one
+        # was missed: the label rendered with punctuation and a stray letter
+        # before the digits, so a tight pattern found nothing.
+        ("ssn_label_ocr", "Name Example Person SSN. S 00 or 0 -0000"),
+        ("drivers_licence_label", "Driver's license number (if known) B 000 000 000 000"),
+        ("drivers_licence_shape", "issued as A 000 000 000 000 by the state"),
     ]
     negatives = [
+        # These four are real prose from this corpus. The first draft of the
+        # licence pattern matched all of them: a label in a sentence is not a
+        # value, and a gate that cannot tell them apart trains people to ignore
+        # it. Conrad's own motion to seal PII names every category by design.
+        "driver's license, VA ID, bank statements and other records",
+        "protected identifiers include a driver's license number or state",
+        "Exhibit 5 includes a driver's license photocopy, redacted.",
+        "MCR 1.109(D)(9) covers a driver's license number among other identifiers.",
         "Case No. 26-104594-DO was filed on 2026-04-15.",
         "MCR 2.302(B)(3) governs work product.",
         "The motion filed 2026-07-02 alleges the account was misused.",
@@ -221,15 +305,35 @@ def main() -> int:
         print("Usage: check_pii.py <path> [<path> ...] | --self-test", file=sys.stderr)
         return 2
 
+    print_coverage(page_states())
+
     allowed = load_allowlist()
     findings: list[dict] = []
     scanned = 0
 
+    missing = [a for a in args if not Path(a).exists()]
+    if missing:
+        # NOT a silent skip. The local npm script and the CI workflows must scan
+        # the same thing, and _site only exists after a build, so a dev running
+        # this locally would otherwise get a narrower scan than CI and read a
+        # clean result as clean. Same family as scanning _corpus without _data.
+        print(
+            "check_pii: SCOPE IS NARROWER THAN CI. These paths do not exist here and were NOT scanned:",
+            file=sys.stderr,
+        )
+        for a in missing:
+            print(f"  {a}", file=sys.stderr)
+        print(
+            "  CI scans _corpus, _data and _site. _site exists only after a full build, so a\n"
+            "  local run without it has NOT checked what actually publishes. A clean result\n"
+            "  below covers the paths listed as scanned and nothing else.\n",
+            file=sys.stderr,
+        )
+
     for arg in args:
         target = Path(arg)
         if not target.exists():
-            print(f"check_pii: {arg} does not exist", file=sys.stderr)
-            return 2
+            continue
         for path in files_under(target):
             scanned += 1
             try:
@@ -280,7 +384,11 @@ def main() -> int:
         )
         return 1
 
-    print(f"check_pii: {scanned} file(s) scanned against {len(PATTERNS)} patterns, no findings.")
+    print(
+        f"check_pii: {scanned} file(s) scanned against {len(PATTERNS)} patterns, no findings.\n"
+        "  This means no match in the text that could be extracted. It is not a\n"
+        "  statement about pages with no text layer, which are listed above."
+    )
     return 0
 
 

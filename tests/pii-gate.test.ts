@@ -8,7 +8,7 @@
 // "improved" into a more informative failure later.
 
 import { describe, it, expect } from "vitest";
-import { execFileSync } from "node:child_process";
+import { execFileSync, spawnSync } from "node:child_process";
 import { mkdtempSync, writeFileSync, rmSync, mkdirSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -243,5 +243,89 @@ describe("the gate is armed", () => {
     // zero while the same string is still published.
     const line = deploy.split("\n").find((l) => l.includes("scripts/check_pii.py"))!;
     expect(line).toContain("_data");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// The gate must state its own blind spot.
+//
+// "A clean scan is not evidence of absence" is only useful if the gate says so
+// itself. A green line read by somebody who was not part of the conversation
+// that produced it will be taken as "the corpus is clean", and the difference
+// between that and "no match in the text we could extract" is 36 pages.
+// ---------------------------------------------------------------------------
+
+describe("the gate reports what it cannot read", () => {
+  const out = (() => {
+    try {
+      return execFileSync("python3", [SCRIPT, "_corpus", "_data"], { encoding: "utf8", cwd: ROOT, stdio: "pipe" });
+    } catch (err) {
+      const e = err as { stdout?: string; stderr?: string };
+      return (e.stdout ?? "") + (e.stderr ?? "");
+    }
+  })();
+
+  it("prints per-page-state counts on every run", () => {
+    expect(out).toContain("corpus coverage");
+    expect(out).toContain("native text");
+    expect(out).toContain("OCR text");
+    expect(out).toContain("no text layer");
+  });
+
+  it("says plainly that no-text pages are NOT scanned", () => {
+    // The wording is load-bearing. "0 findings" next to a page count reads as
+    // coverage; this has to say the opposite about those pages.
+    expect(out).toContain("NOT SCANNED");
+  });
+
+  it("names the unreadable pages rather than counting them", () => {
+    const manifest = JSON.parse(readFileSync(join(ROOT, "_corpus", "manifest.json"), "utf8")) as {
+      pages: Array<{ doc_slug: string; page: number; text_source: string }>;
+    };
+    const unreadable = manifest.pages.filter((p) => p.text_source === "none");
+    expect(unreadable.length, "no unreadable pages; this test is checking nothing").toBeGreaterThan(0);
+    for (const p of unreadable) {
+      expect(out, `${p.doc_slug} p${p.page} is unreadable but not named in the output`).toContain(p.doc_slug);
+    }
+  });
+
+  it("does not claim more than it checked, even when clean", () => {
+    expect(out).toContain("no match in the text that could be extracted");
+  });
+});
+
+describe("local and CI scan scopes do not diverge quietly", () => {
+  it("warns loudly when a path CI scans is missing here", () => {
+    // _site exists only after a full build, and building the Jekyll half needs
+    // Ruby, which is not on the crew box. So a local run is routinely narrower
+    // than CI, and the danger is reading its clean result as clean.
+    const r = spawnSync("python3", [SCRIPT, "_corpus", "_data", "_definitely_absent_path"], {
+      encoding: "utf8", cwd: ROOT,
+    });
+    const out = (r.stdout ?? "") + (r.stderr ?? "");
+    expect(out).toContain("SCOPE IS NARROWER THAN CI");
+    expect(out).toContain("_definitely_absent_path");
+  });
+
+  it("still scans the paths that DO exist rather than refusing outright", () => {
+    // A missing path must not become a reason to scan nothing: that would turn
+    // a narrower scan into no scan, which is worse.
+    const r = spawnSync("python3", [SCRIPT, "_corpus", "_definitely_absent_path"], {
+      encoding: "utf8", cwd: ROOT,
+    });
+    const out = (r.stdout ?? "") + (r.stderr ?? "");
+    expect(out).toMatch(/\d+ file\(s\) scanned/);
+  });
+
+  it("runs the same three paths locally as in CI", () => {
+    const pkg = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")) as {
+      scripts: Record<string, string>;
+    };
+    const ci = readFileSync(join(ROOT, ".github", "workflows", "ci.yml"), "utf8");
+    const ciLine = ci.split("\n").find((l) => l.includes("scripts/check_pii.py"))!;
+    for (const path of ["_corpus", "_data", "_site"]) {
+      expect(pkg.scripts.pii, `npm run pii omits ${path}, which CI scans`).toContain(path);
+      expect(ciLine).toContain(path);
+    }
   });
 });
