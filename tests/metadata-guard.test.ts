@@ -595,3 +595,68 @@ describe("every retraction letter has its person-free projection", () => {
     }
   });
 });
+
+// ---------------------------------------------------------------------------
+// Built JSON-LD must actually be JSON.
+//
+// THE GAP THIS CLOSES, stated exactly, because a weaker version of this check
+// already existed and was mistaken for this one.
+//
+// tests/metadata-guard.test.ts already checks Jekyll SOURCE for the shape where
+// a JSON-LD element was replaced by a Liquid comment and its comma left behind.
+// That is source-level and shape-specific. It cannot see a break that appears
+// only when Liquid RENDERS: an empty loop leaving "[ , ]", a conditional
+// emitting a stray comma, a data value that is not valid JSON.
+//
+// Parsing the BUILT artifact catches all of those and does not care how the
+// break got there. The failure mode is the worst kind available here: every
+// other guard passes, the page publishes, and consumers silently discard all of
+// its structured data. A check that cannot tell valid structured data from
+// broken structured data reports the reassuring one.
+// ---------------------------------------------------------------------------
+
+describe("the python guard parses every built JSON-LD block", () => {
+  const DANGLING = `<!DOCTYPE html><html><head><title>Rockenhaus v. Rockenhaus, case 26-104594-DO</title>
+<meta name="description" content="Filed Michigan court documents."></head>
+<body><script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "WebPage",
+  "about": [ { "@type": "Thing", "name": "Rockenhaus v. Rockenhaus" }, ] }
+</script></body></html>`;
+
+  const VALID = `<!DOCTYPE html><html><head><title>Rockenhaus v. Rockenhaus, case 26-104594-DO</title>
+<meta name="description" content="Filed Michigan court documents."></head>
+<body><script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "WebPage",
+  "about": [ { "@type": "Thing", "name": "Rockenhaus v. Rockenhaus" } ] }
+</script></body></html>`;
+
+  it("fails on a block whose last array element was removed and comma left", () => {
+    // THE CONTROL, written as the defect actually appeared twice in #15.
+    const { code, out } = run(fixture("ldjson-dangling", DANGLING));
+    expect(code, `guard passed a block that is not JSON:\n${out}`).toBe(1);
+    expect(out).toContain("not valid JSON");
+    expect(out).toContain("json-ld[0]");
+  });
+
+  it("passes the same block once the comma is gone", () => {
+    // Pairs with the control: proves the failure above is about the comma and
+    // not about the fixture being rejected for some unrelated reason.
+    const { code, out } = run(fixture("ldjson-valid", VALID));
+    expect(code, out).toBe(0);
+  });
+
+  it("is a NEW capability, not one the denylist already provided", () => {
+    // The dangling block carries no denylisted term at all. Before this change
+    // the guard reported it clean, which is precisely why reading the diff was
+    // the only thing standing between it and publication.
+    expect(DANGLING).not.toMatch(/adezero|adrienne|rob hein|qolity|sockpuppet/i);
+  });
+
+  it("reports position without printing the block contents", () => {
+    // A structured-data block carries names and quoted passages, and a CI log
+    // on a public repository is a published document.
+    const { out } = run(fixture("ldjson-dangling-2", DANGLING));
+    expect(out).toMatch(/line \d+ column \d+/);
+    expect(out).not.toContain("Rockenhaus v. Rockenhaus");
+  });
+});
