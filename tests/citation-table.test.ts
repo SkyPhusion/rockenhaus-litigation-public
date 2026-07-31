@@ -263,3 +263,59 @@ describe("the search interface doc states the corpus it actually describes", () 
     }
   });
 });
+
+// ---------------------------------------------------------------------------
+// The repository must not contradict itself about its own licence.
+//
+// The README said "No license is granted for redistribution, reuse, or
+// republication of any content" and asserted privilege, while LICENSE is a CC0
+// public-domain dedication. Both on the same public `main`. A reuser was going
+// to be misled whichever they read first, and the privilege assertion was
+// factually wrong: the privileged material is in a different repository.
+// ---------------------------------------------------------------------------
+
+describe("the repository states its licence consistently", () => {
+  const readme = readFileSync(join(ROOT, "README.md"), "utf8");
+  const license = readFileSync(join(ROOT, "LICENSE"), "utf8");
+  const notice = readFileSync(join(ROOT, "NOTICE"), "utf8");
+
+  it("has a CC0 LICENSE and a NOTICE that scopes it", () => {
+    expect(license).toContain("CC0 1.0 Universal");
+    expect(notice.length).toBeGreaterThan(500);
+  });
+
+  it("does not claim reuse is forbidden while dedicating to the public domain", () => {
+    expect(readme).not.toMatch(/no license is granted/i);
+  });
+
+  it("does not assert privilege over a public repository", () => {
+    // The privileged work product is in a separate private repository and has
+    // never been here. Claiming otherwise on a public CC0 repo is both wrong
+    // and the kind of wrong that a reader would reasonably act on.
+    expect(readme).not.toMatch(/does not waive privilege/i);
+    expect(readme).not.toMatch(/contains private litigation work product/i);
+  });
+
+  it("does not describe itself as private", () => {
+    expect(readme).not.toMatch(/\bthe repo is private\b/i);
+    expect(readme).not.toMatch(/private build repo/i);
+  });
+
+  it("points a reader from LICENSE to the scoping NOTICE", () => {
+    expect(readme).toContain("NOTICE");
+  });
+
+  it("says what CC0 cannot cover", () => {
+    // The load-bearing half. A dedication can only be made by someone holding
+    // the rights, and other parties' filings are not this project's to dedicate.
+    expect(notice).toMatch(/filing a document with a court does not\s+transfer its copyright/i);
+    expect(notice).toMatch(/third-party material inside exhibits/i);
+  });
+
+  it("describes only the cases the site actually publishes", () => {
+    // The PPO case was withdrawn on 2026-07-31. A README listing it as an
+    // active matter of this site would be describing a site that no longer
+    // exists, which is the same cold-read defect as a stale figure.
+    expect(readme).not.toContain("26-102221-PP");
+  });
+});

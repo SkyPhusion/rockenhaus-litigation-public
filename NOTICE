@@ -1,0 +1,70 @@
+NOTICE
+======
+
+What the CC0 dedication in LICENSE covers, and what it cannot.
+
+This repository builds https://rockenhaus.net/, a public archive of filed court
+documents in two Michigan divorce cases. It is dedicated CC0 1.0 Universal.
+
+A dedication can only be made by someone who holds the rights being dedicated.
+This one is written to be precise about that, because a repo-wide LICENSE with
+no scoping asserts a dedication over material the dedicator does not hold, and a
+downstream reuser relying on it inherits the gap.
+
+
+CC0 APPLIES TO
+--------------
+
+  * the site's source: templates, stylesheets, build scripts, tests
+  * documents authored by Conrad Alan Rockenhaus, including his own filings
+  * data this project derived from the record: the text extracted from the PDFs
+    under _corpus/, the generated manifests, citations.json, and the answer
+    pages built from them
+
+For the derived data, the dedication also clears database-right ambiguity for
+reusers in jurisdictions that recognise one.
+
+
+CC0 CANNOT APPLY TO
+-------------------
+
+  * DOCUMENTS AUTHORED BY OTHER PARTIES. Filing a document with a court does not
+    transfer its copyright. Motions, responses and correspondence authored by
+    another party remain their author's work. They are reproduced here as public
+    court records; that reproduction does not, and cannot, dedicate them.
+
+  * THIRD-PARTY MATERIAL INSIDE EXHIBITS. Screenshots, emails and documents
+    created by people who are not parties to these cases remain their authors'
+    work, whatever exhibit they appear in.
+
+Their authors' rights are unaffected by anything in LICENSE.
+
+
+COURT ORDERS ARE A SEPARATE CASE
+--------------------------------
+
+Orders and opinions written by judges in their judicial capacity are not subject
+to copyright at all, so no dedication is needed or possible for them. They are
+free to reuse because of what they are, not because of this file.
+
+
+WHAT THIS MEANS IF YOU ARE REUSING THIS MATERIAL
+------------------------------------------------
+
+Take the code, the extracted text and the derived data freely; that is what the
+dedication is for, and mirroring is expected.
+
+For the filed documents themselves, you are reusing public court records, which
+carries its own considerations that this file does not attempt to resolve for
+you. What it does tell you is which parts of this repository this project is in
+a position to dedicate, and which it is not.
+
+
+ON PERMANENCE
+-------------
+
+CC0 is irrevocable and mirror-friendly by design. If a court later seals a
+document, this site can comply and remove it; mirrors cannot be recalled. Every
+publication decision here is therefore permanent in practice, which is why the
+build refuses to publish content carrying protected personal identifiers rather
+than relying on removing it afterwards. See scripts/check_pii.py.
