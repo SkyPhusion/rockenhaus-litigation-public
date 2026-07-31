@@ -82,6 +82,32 @@ Three files have to agree, and a test enforces that they do.
 `tests/sitemap.test.ts` fails if a retired path has no redirect rule, and also
 if a `404` rule has no retired entry, so neither file can lead the other.
 
+## Paths on disk, URLs in the sitemap
+
+These are not the same thing and the code keeps them apart deliberately. 26 of
+the 173 filed PDFs have spaces in their names and one has an ampersand, so the
+raw path is not a legal `<loc>` value.
+
+`encodePath` is `encodeURI`, and that is a measured choice rather than a
+preference: decoding all 367 `<loc>` values from the live sitemap and
+re-encoding them with `encodeURI` reproduces every one byte for byte, zero
+mismatches. So the URLs emitted here are the URLs search engines already hold
+for this site.
+
+Three rules follow, and the first CI run of the baseline gate broke on the third:
+
+1. **Encode, then XML-escape.** `encodeURI` leaves `&` alone because it is legal
+   in a URL path; the XML layer turns it into `&amp;` inside the document. Doing
+   it in the other order double-escapes and changes the URL.
+2. **The baseline holds what a `<loc>` value MEANS,** not what the XML document
+   had to write to say it, so `readBaseline` unescapes entities. One filing
+   reads `&amp;` on disk for this reason.
+3. **The comparison happens on the encoded form, on both sides.** Comparing a
+   raw disk path against a percent-encoded baseline entry reports all 26 filings
+   with spaces in their names as missing. That is exactly what the gate reported
+   on its first contact with the merged tree, which is the gate working: it
+   caught a defect in itself before it could ship one.
+
 ## The baseline gate
 
 `_data/sitemap_baseline.txt` holds the 367 URLs the live site published on

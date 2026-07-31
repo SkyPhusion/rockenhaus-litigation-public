@@ -126,7 +126,22 @@ export function collectIndexable(builtDir, { root = ROOT } = {}) {
   return { included: [...new Set(included)].sort(), excluded };
 }
 
-/** Absolute URL for a site path. */
+/**
+ * A filesystem path is not a URL. 26 of the 173 filed PDFs have spaces in their
+ * names, and one has an ampersand, so the raw path is not a legal <loc> value.
+ *
+ * encodeURI is the right function here, and that is a measured claim rather
+ * than a preference: decoding all 367 <loc> values from the live sitemap and
+ * re-encoding them with encodeURI reproduces every one of them byte for byte,
+ * zero mismatches. It escapes the space and leaves the sub-delimiters that
+ * jekyll-sitemap also left alone, so the URLs this emits are the URLs search
+ * engines already hold for this site.
+ */
+export function encodePath(path) {
+  return encodeURI(path);
+}
+
+/** Absolute URL for a site path, percent-encoded. */
 export function absolute(path) {
-  return SITE_URL + path;
+  return SITE_URL + encodePath(path);
 }

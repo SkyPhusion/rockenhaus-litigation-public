@@ -31,7 +31,7 @@
 import { writeFileSync, readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { collectIndexable, absolute, retiredPaths } from "./lib/site-urls.mjs";
+import { collectIndexable, absolute, encodePath, retiredPaths } from "./lib/site-urls.mjs";
 import { loadDocuments } from "./lib/record.mjs";
 
 /**
@@ -67,12 +67,23 @@ export function renderSitemap(paths, lastmod = new Map()) {
   ].join("\n");
 }
 
-/** Baseline paths, one per line, # comments and blanks ignored. */
+/**
+ * Baseline paths, one per line, # comments and blanks ignored.
+ *
+ * The file was taken from the live sitemap, so its entries are percent-encoded
+ * AND were XML-escaped inside the document they came from. One filing has an
+ * ampersand in its name and therefore reads `&amp;` on disk. Unescaping here
+ * means the baseline holds exactly what a <loc> value means, rather than what
+ * an XML document had to write to say it.
+ */
+const XML_ENTITIES = { "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"', "&apos;": "'" };
+
 export function readBaseline(file) {
   return readFileSync(file, "utf8")
     .split("\n")
     .map((line) => line.trim())
-    .filter((line) => line && !line.startsWith("#"));
+    .filter((line) => line && !line.startsWith("#"))
+    .map((line) => line.replace(/&(amp|lt|gt|quot|apos);/g, (m) => XML_ENTITIES[m]));
 }
 
 /**
@@ -81,9 +92,15 @@ export function readBaseline(file) {
  * hopeful: a document page dropped by a template change fails the build here
  * rather than being noticed when somebody goes looking for a filing.
  */
+/**
+ * Both sides are compared as ENCODED paths, because that is what a sitemap
+ * publishes and what the baseline recorded. Comparing a raw filesystem path
+ * against a percent-encoded one reports every filing with a space in its name
+ * as missing, which is what the first run of this gate did.
+ */
 export function baselineGaps(baseline, published, retired) {
-  const have = new Set(published);
-  const gone = new Set(retired);
+  const have = new Set(published.map(encodePath));
+  const gone = new Set(retired.map(encodePath));
   return baseline.filter((path) => !have.has(path) && !gone.has(path));
 }
 
@@ -96,7 +113,7 @@ export function baselineGaps(baseline, published, retired) {
  */
 export function baselineAdditions(baseline, published) {
   const known = new Set(baseline);
-  return published.filter((path) => !known.has(path));
+  return published.filter((path) => !known.has(encodePath(path)));
 }
 
 function main() {

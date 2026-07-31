@@ -23,7 +23,7 @@
 import { describe, it, expect } from "vitest";
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
-import { isNoindex, urlPathFor, collectIndexable, retiredPaths } from "../scripts/lib/site-urls.mjs";
+import { isNoindex, urlPathFor, collectIndexable, retiredPaths, encodePath, absolute } from "../scripts/lib/site-urls.mjs";
 import { renderSitemap, baselineGaps, baselineAdditions, readBaseline, lastmodIndex } from "../scripts/build-sitemap.mjs";
 import { locsFrom, buildPayload } from "../scripts/build-indexnow.mjs";
 
@@ -139,8 +139,69 @@ describe("sitemap rendering", () => {
   });
 });
 
+describe("a filesystem path is not a URL", () => {
+  // THE REGRESSION TEST FOR A DEFECT THIS GATE CAUGHT ON ITSELF. The first CI
+  // run of the baseline check failed on 26 filings, because the generator
+  // emitted raw filesystem paths while the baseline held the percent-encoded
+  // URLs the live sitemap publishes. A <loc> containing a literal space is not
+  // a legal sitemap entry, so this was wrong in its own right, not only
+  // inconsistent with the baseline.
+
+  it("percent-encodes a space, which 26 of the filed PDFs contain", () => {
+    expect(encodePath("/wayne_do_26-104594-DO/opposing/05_Answer to Counterclaim.pdf")).toBe(
+      "/wayne_do_26-104594-DO/opposing/05_Answer%20to%20Counterclaim.pdf",
+    );
+  });
+
+  it("leaves an ampersand raw in the URL, as the live sitemap does", () => {
+    // Escaping it belongs to the XML layer, not the URL layer. Doing it here
+    // too would double-escape and change the URL.
+    expect(encodePath("/a & b.pdf")).toBe("/a%20&%20b.pdf");
+    expect(renderSitemap(["/a & b.pdf"])).toContain("<loc>https://rockenhaus.net/a%20&amp;%20b.pdf</loc>");
+  });
+
+  it("encodes a literal percent sign, because its input is a disk path", () => {
+    // encodePath takes what the walker read off disk, never a URL, so a file
+    // whose NAME contains a percent sign must become %25 or the URL would
+    // decode back to a different filename. No filing is named that way today
+    // (checked across all 173 PDFs), but the direction of the transform is the
+    // thing worth pinning: paths in, URLs out, never the reverse.
+    expect(encodePath("/already%20encoded.pdf")).toBe("/already%2520encoded.pdf");
+  });
+
+  it("builds absolute URLs through the same encoder", () => {
+    expect(absolute("/a b/")).toBe("https://rockenhaus.net/a%20b/");
+  });
+
+  it("matches a raw path against its encoded baseline entry", () => {
+    // The exact shape of the CI failure: published paths come off the disk raw,
+    // baseline entries are encoded, and comparing them directly reports every
+    // filing with a space in its name as missing.
+    const baseline = ["/wayne_do_26-104594-DO/opposing/05_Answer%20to%20Counterclaim.pdf"];
+    const published = ["/wayne_do_26-104594-DO/opposing/05_Answer to Counterclaim.pdf"];
+    expect(baselineGaps(baseline, published, [])).toEqual([]);
+    expect(baselineAdditions(baseline, published)).toEqual([]);
+  });
+
+  it("still reports a genuinely missing encoded path", () => {
+    // The control for the test above: making the comparison encoding-aware
+    // must not make it blind.
+    expect(baselineGaps(["/gone%20now.pdf"], ["/something else.pdf"], [])).toEqual(["/gone%20now.pdf"]);
+  });
+});
+
 describe("the baseline parity gate", () => {
   const baseline = readBaseline(join(ROOT, "_data", "sitemap_baseline.txt"));
+
+  it("unescapes the XML entity in the one filing whose name has an ampersand", () => {
+    // The baseline was taken from an XML document, so that filing reads
+    // "&amp;" on disk. A <loc> value means "&", and the comparison has to be
+    // against what the value MEANS, not what the document had to write.
+    const amp = baseline.filter((p) => p.includes("&"));
+    expect(amp.length).toBe(1);
+    expect(amp[0]).toContain("Set%20Aside%20&%20Answer");
+    expect(amp[0]).not.toContain("&amp;");
+  });
 
   it("carries the 367 URLs the live site published", () => {
     expect(baseline.length).toBe(367);
@@ -148,20 +209,34 @@ describe("the baseline parity gate", () => {
     expect(baseline.filter((p) => p.startsWith("/documents/")).length).toBe(173);
   });
 
+  // What the walker hands the gate: paths as they exist on disk, decoded. The
+  // baseline is encoded because it came from a published sitemap. Keeping the
+  // two forms distinct in the tests is the point, since collapsing them is
+  // exactly the mistake the first CI run caught.
+  const onDisk = baseline.map((p) => decodeURI(p));
+
   it("passes when every baseline URL is still published", () => {
-    expect(baselineGaps(baseline, baseline, [])).toEqual([]);
+    expect(baselineGaps(baseline, onDisk, [])).toEqual([]);
   });
 
   it("FAILS when a published page silently disappears", () => {
     // THE NEGATIVE CONTROL. Without this the gate could be permanently green
     // for the wrong reason, and a dropped /documents/ page is a broken citation
     // inside a filed court document.
-    const dropped = baseline.filter((p) => p !== "/all-documents/");
+    const dropped = onDisk.filter((p) => p !== "/all-documents/");
     expect(baselineGaps(baseline, dropped, [])).toEqual(["/all-documents/"]);
   });
 
+  it("FAILS when a filing with a space in its name disappears", () => {
+    // The same control aimed at the encoded half, which is the half that broke.
+    const target = "/wayne_do_26-104594-DO/opposing/05_Answer to Counterclaim.pdf";
+    expect(onDisk, "fixture path is no longer in the baseline").toContain(target);
+    const dropped = onDisk.filter((p) => p !== target);
+    expect(baselineGaps(baseline, dropped, [])).toEqual([encodePath(target)]);
+  });
+
   it("accepts a deliberate retirement, and only through the retired list", () => {
-    const withoutRetired = baseline.filter((p) => p !== "/faq/");
+    const withoutRetired = onDisk.filter((p) => p !== "/faq/");
     expect(baselineGaps(baseline, withoutRetired, ["/faq/"])).toEqual([]);
     expect(baselineGaps(baseline, withoutRetired, [])).toEqual(["/faq/"]);
   });
@@ -174,8 +249,8 @@ describe("the baseline parity gate", () => {
     // /answers/ is an addition and is the point of the change, so additions
     // cannot be an error. They are still the half of the diff a human should
     // read on a court record, so they are reported rather than swallowed.
-    expect(baselineAdditions(baseline, [...baseline, "/answers/"])).toEqual(["/answers/"]);
-    expect(baselineAdditions(baseline, baseline)).toEqual([]);
+    expect(baselineAdditions(baseline, [...onDisk, "/answers/"])).toEqual(["/answers/"]);
+    expect(baselineAdditions(baseline, onDisk)).toEqual([]);
   });
 
   it("names /answers/ as an addition against the real Astro output", () => {
