@@ -105,6 +105,14 @@ jobs:
         # citation to a court document.
         run: node scripts/verify-citations.mjs
 
+      - name: Citation table
+        # Built from the same manifest the pre-rendered answer pages are built
+        # from. The live search surface will cite the same corpus, so if it
+        # derived a filing's title or URL from anywhere else the two surfaces
+        # would eventually disagree, and the disagreement would be invisible:
+        # both look like citations and only one is right.
+        run: node scripts/build-citations.mjs
+
       - name: Typecheck Astro
         run: npx astro check
 

@@ -49,6 +49,9 @@ jobs:
       - name: Verify citations against the corpus
         run: node scripts/verify-citations.mjs
 
+      - name: Build the citation table
+        run: node scripts/build-citations.mjs
+
       - name: Build Astro (evidence + answers)
         run: npm run build
 
