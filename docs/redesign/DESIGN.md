@@ -433,7 +433,33 @@ on R1 through R6.
 This is his court record during active litigation. Each of these changes what
 the site says about a person, so I am surfacing them rather than absorbing them.
 
-**R1. How far does a filing-sourced allegation about the opposing party go?**
+**R1. RULED: position (a), the widest.** Conrad's words: *"Publish everything in
+every case and then I want to use the AI search with it."*
+
+Two things it does NOT relax, and the design holds to both:
+  1. The attribution mechanism is unchanged. R1 widens what may be SOURCED; it
+     does not create a site voice. There is still no `site_says` variant. "The
+     motion filed 2026-07-02 alleges X" is in scope; "X is true" is not.
+  2. OCR pages remain unquotable. That is transcription fidelity, not content
+     policy: 77 of the 959 corpus pages are OCR, and they are searchable and
+     citable but never quotable.
+
+Framing, verbatim: *"I don't want to seem as an attack site even though we have
+screenshots of the claims."* Characterisations stay out of indexable metadata,
+and the `ci` denylist guard keeps enforcing that at build time.
+
+**What R1 did not settle, and is now blocking: the metadata boundary.** R1
+decided what may be PUBLISHED. It did not say whether the opposing party's
+handle `@adezero` belongs in indexable METADATA, and the unified guard fails on
+177 pages over exactly that term (all 173 `/documents/` pages plus four hubs).
+If `party_handles` may appear in `<head>`, those 177 clear and the guard lands;
+if not, the keyword stuffing in `generate_site.py` has to go first, which pulls
+part of the build migration forward. Both are implementable and neither is mine
+to choose. Raised on the PR with the measurements attached.
+
+The original question, kept for the record:
+
+**R1 (as asked). How far does a filing-sourced allegation about the opposing party go?**
 She is a party, so the distinction is real, but "sourced to a filing" still spans
 a wide range. Three positions:
   (a) any allegation appearing in any filing may be published, quoted and cited;
@@ -479,6 +505,21 @@ URLs have is authority for the wrong topic.
 litigation and that this is a public record site? Not my call and not my lane; I
 raise it because publishing a claim-provenance table is a deliberate change in
 what the site is doing.
+
+## 11a. The AI search surface
+
+R1 made live AI search a first-class goal rather than a later bolt-on, so the
+interface it needs is specified alongside this design in
+[`AI-SEARCH-INTERFACE.md`](AI-SEARCH-INTERFACE.md): one R2 object per corpus
+page keyed `<doc_slug>/pNNN.txt`, three fields back per hit, and a build-time
+`/citations.json` (173 entries, 8.2 KB gzipped, measured) so that a citation
+rendered live and a citation rendered at build time come from the same table and
+cannot drift apart.
+
+It carries two questions for Conrad that this document does not: whether the
+widget renders generated prose at all, given that generated prose is by
+construction the site speaking and the mechanism in section 5 has no slot for
+it, and whether the search covers the noindex exhibits.
 
 ## 12. Dependencies outside my lane
 
