@@ -3,12 +3,12 @@ layout: hub
 title: Retraction and correction demands (June 30, 2026)
 heading: Retraction and correction demands (June 30, 2026)
 description: >-
-  Executed June 30, 2026 retraction demands from Conrad Alan Rockenhaus to
-  Adrienne Rockenhaus (Adrienne Blair, Adrienne Hein, @adezero) and Rob Hein
-  (QOLity Financial, Deborah Dew Survivable Trust). Notice under MCL 600.2911(2)(b)
-  and Texas Defamation Mitigation Act Sec. 73.055. Delivered by email and certified
-  mail. Federal civil action intended in U.S. District Court, Western District of
-  Texas, Waco Division if demands are not met.
+  Two executed June 30, 2026 retraction and correction demands served by Conrad
+  Alan Rockenhaus, one on the opposing party in Rockenhaus v. Rockenhaus and one
+  on a third-party trustee. Notice under MCL 600.2911(2)(b) and Texas Defamation
+  Mitigation Act Sec. 73.055. Delivered by email and certified mail. Federal civil
+  action intended in U.S. District Court, Western District of Texas, Waco Division
+  if demands are not met.
 permalink: /retractions/
 breadcrumbs:
   - name: Home
@@ -93,16 +93,12 @@ breadcrumbs:
           "name": "Conrad Alan Rockenhaus",
           "url": {{ site.data.parties.public_record.url | jsonify }}
         },
-        {
-          "@type": "Person",
-          "name": "Adrienne Rockenhaus",
-          "alternateName": ["Adrienne Blair", "Adrienne Hein", "@adezero"]
-        },
-        {
-          "@type": "Person",
-          "name": "Rob Hein",
-          "worksFor": { "@type": "Organization", "name": "QOLity Financial" }
-        },
+        {%- comment -%}
+          Two Person blocks used to sit here: the opposing party with her two
+          aliases and her handle as alternateName, and a non-party with his
+          organisation. Removed under Conrad's 2026-07-31 ruling. What this page
+          is about is the demands and the venue, both of which are still here.
+        {%- endcomment -%}
         {
           "@type": "Courthouse",
           "name": {{ site.data.retractions.federal_venue.court | jsonify }},
@@ -120,7 +116,7 @@ breadcrumbs:
         {% for letter in site.data.retractions.letters %}
         {
           "@type": "LegalDocument",
-          "name": {{ letter.heading | jsonify }},
+          "name": {{ letter.seo_name | jsonify }},
           "url": "{{ site.url }}{{ site.baseurl }}{{ letter.permalink }}",
           "encoding": {
             "@type": "MediaObject",
@@ -130,36 +126,21 @@ breadcrumbs:
         }{% unless forloop.last %},{% endunless %}
         {% endfor %}
       ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Did Conrad Rockenhaus send Adrienne Rockenhaus a retraction demand?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Conrad Alan Rockenhaus executed a formal retraction and correction demand to Adrienne Rockenhaus on June 30, 2026, under MCL 600.2911(2)(b) and Tex. Civ. Prac. & Rem. Code Sec. 73.055, delivered by email and certified mail. The executed PDF is published at {{ site.url }}{{ site.baseurl }}/retractions/adrienne-rockenhaus/."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Did Conrad Rockenhaus send Rob Hein a retraction demand?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Conrad Alan Rockenhaus executed a retraction demand, cease-funding notice, and litigation-hold demand to Rob Hein as Trustee of the Deborah Dew Survivable Trust on June 30, 2026, delivered by email and certified mail. The executed PDF is at {{ site.url }}{{ site.baseurl }}/retractions/rob-hein/."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Where will Conrad Rockenhaus file a federal defamation lawsuit?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If retraction demands are not fully satisfied, Conrad Alan Rockenhaus intends to file a federal civil action in the United States District Court for the Western District of Texas, Waco Division. See {{ site.url }}{{ site.baseurl }}/retractions/."
-          }
-        }
-      ]
     }
+    {%- comment -%}
+      A FAQPage block with three questions sat here, every one of them naming a
+      retraction recipient in both the question and the answer, hardcoded into
+      the markup rather than pulled from data.
+
+      A FAQPage `text` field is read by a search engine as a machine-readable
+      claim, which is what makes it the worst place on a page for a person's
+      name to appear, and it is the construct that put this site in the hole to
+      begin with. Removed under Conrad's 2026-07-31 ruling.
+
+      The same three questions are answered in the page BODY, which is where the
+      ruling puts them. This costs the page its FAQ rich result; that is the
+      price the ruling names.
+    {%- endcomment -%}
   ]
 }
 </script>

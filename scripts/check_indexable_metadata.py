@@ -1,10 +1,22 @@
 #!/usr/bin/env python3
-"""Fail if a third-party characterisation reaches INDEXABLE metadata.
+"""Fail if a denylisted term reaches INDEXABLE metadata on any built page.
 
 The defect that put this site in the hole was structured data: FAQPage blocks
 whose every `text` field asserted that a named private individual is a neo-Nazi.
 Search engines read structured data as machine-readable claims, so that is the
 worst possible place for an accusation to live.
+
+WHERE THE LIST COMES FROM, and why that changed
+  This script used to carry its own four-pattern list: neo-nazi, neo nazi,
+  nazzy, do not hire. No names. src/lib/guard.ts carried a different list of
+  fifteen, names included, but ran only at Astro build time and so could not see
+  the Jekyll-era pages. The two guards had different reaches AND different
+  lists, and the gap between them was not theoretical: /retractions/rob-hein/
+  shipped a non-party name seven times inside its <head> with CI green.
+
+  Both consumers now read _data/metadata_denylist.json. tests/guard.test.ts
+  asserts this script and guard.ts resolve to the same terms, so a term added in
+  one place cannot silently fail to apply in the other.
 
 WHAT IS CHECKED
   - the <head> of EVERY page, including noindex ones
@@ -23,45 +35,64 @@ WHAT IS NOT CHECKED, deliberately
   that blocked it would force the evidence to be paraphrased, which is worse
   evidence.
 
-WHY THIS REPLACED THE INLINE SHELL VERSION
-  The previous check extracted the head with `sed -n '/<head>/,/<\\/head>/p'`,
-  which is LINE based. Astro emits minified single-line HTML, so the range never
-  terminated and the "head" check silently scanned the entire document body. It
-  reported a real string in a legitimate place and would have kept doing so for
-  any minified page. Parsing the markup instead of slicing lines fixes it, and
-  extending the check to JSON-LD anywhere in the document makes it strictly
-  stronger than what it replaces.
+WHY THIS PARSES RATHER THAN SLICES
+  An earlier version extracted the head with a LINE based sed range. Astro emits
+  minified single-line HTML, so the range never terminated and the head check
+  silently scanned the entire document body. Measured on a real built page: the
+  slice returned 3540 bytes of a 3540 byte file. Parsing the markup fixes that.
 
 Usage: python3 scripts/check_indexable_metadata.py [site_dir]
 """
 
 from __future__ import annotations
 
+import json
 import re
 import sys
 from pathlib import Path
 
-PATTERNS = [
-    r"neo-nazi",
-    r"neo nazi",
-    r"nazzy",
-    r"do not hire",
-]
+ROOT = Path(__file__).resolve().parent.parent
+DENYLIST_PATH = ROOT / "_data" / "metadata_denylist.json"
 
-PATTERN_RE = re.compile("|".join(PATTERNS), re.IGNORECASE)
+
+def load_terms() -> list[str]:
+    """The single denylist, shared with src/lib/guard.ts.
+
+    WHICH TIERS APPLY IS DATA, NOT CODE. `denied_tiers` in the JSON names them,
+    and guard.ts reads the same key. This used to hardcode `third_party` and
+    `party_handles` in both files, so Conrad's 2026-07-31 ruling, which renamed a
+    tier and widened it, would have been a change in four places of which two
+    could be forgotten and neither would have failed loudly.
+
+    Every denied tier applies identically. Tier membership is an argument about
+    WHY a term is listed, not a difference in how metadata is treated: metadata
+    names the CASE, not PEOPLE.
+    """
+    data = json.loads(DENYLIST_PATH.read_text(encoding="utf-8"))
+    tiers = data["denied_tiers"]
+    if not tiers:
+        raise SystemExit("denylist has no denied_tiers; refusing to run a guard that cannot fail")
+    terms: list[str] = []
+    for tier in tiers:
+        if tier not in data:
+            raise SystemExit(f"denied_tiers names {tier!r}, which is not in the denylist")
+        terms.extend(data[tier]["terms"])
+    return terms
+
+
+TERMS = load_terms()
+
+# Word-ish boundaries on both sides, matching the guard.ts matcher, so that a
+# short term cannot fire inside an unrelated longer token.
+PATTERN_RE = re.compile(
+    "|".join(rf"(?<![a-z0-9]){re.escape(t)}(?![a-z0-9])" for t in TERMS),
+    re.IGNORECASE,
+)
 HEAD_RE = re.compile(r"<head\b[^>]*>(.*?)</head>", re.IGNORECASE | re.DOTALL)
 LDJSON_RE = re.compile(
     r"<script[^>]*type\s*=\s*[\"']application/ld\+json[\"'][^>]*>(.*?)</script>",
     re.IGNORECASE | re.DOTALL,
 )
-NOINDEX_RE = re.compile(
-    r"<meta[^>]*name\s*=\s*[\"']robots[\"'][^>]*content\s*=\s*[\"'][^\"']*noindex",
-    re.IGNORECASE,
-)
-
-
-def is_noindex(html: str) -> bool:
-    return bool(NOINDEX_RE.search(html))
 
 
 def indexable_regions(html: str) -> list[tuple[str, str]]:
@@ -75,13 +106,52 @@ def indexable_regions(html: str) -> list[tuple[str, str]]:
     return regions
 
 
+def check_ldjson_parses(path: Path, html: str) -> list[str]:
+    """Every ld+json block on the page must actually be JSON.
+
+    WHY THIS LIVES HERE. This guard already extracts every block in order to
+    scan it for denylisted terms, so it is standing in the right place and the
+    parse costs one call.
+
+    WHY IT IS NEEDED AT ALL. Removing an element from a hand-written JSON-LD
+    array leaves the PRECEDING element's comma behind, so the block renders as
+    "}, ]". A structured-data consumer discards the ENTIRE block rather than the
+    element that was removed, and every other check here still passes: the
+    denylist looks for terms, not syntax, so a page can be perfectly clean of
+    accusations while publishing no usable structured data at all. That is a
+    worse outcome than the defect the denylist exists to catch, and it is
+    invisible from the repository.
+
+    A source-level check for this already exists in tests/metadata-guard.test.ts,
+    but it reads Jekyll SOURCE and only recognises the shape where an element was
+    replaced by a Liquid comment. It cannot see a break that appears when Liquid
+    RENDERS: an empty loop leaving "[ , ]", a conditional emitting a stray comma,
+    a data value that is not valid JSON. Parsing the built artifact catches all
+    of those, and does not care how the break got there.
+
+    The parse error is reported WITHOUT the block contents. A structured-data
+    block can carry names and quoted passages, and this repository is public, so
+    a CI log is a published document. Position and message are enough to find it.
+    """
+    problems = []
+    for i, block in enumerate(LDJSON_RE.findall(html)):
+        try:
+            json.loads(block)
+        except json.JSONDecodeError as err:
+            problems.append(
+                f"{path} [json-ld[{i}]] is not valid JSON: {err.msg} at line {err.lineno} column {err.colno}. "
+                "A consumer discards the whole block. Most often an element was removed and its comma left behind."
+            )
+    return problems
+
+
 def check_file(path: Path) -> list[str]:
     try:
         html = path.read_text(encoding="utf-8", errors="replace")
     except OSError as err:
         return [f"{path}: unreadable ({err})"]
 
-    problems = []
+    problems = check_ldjson_parses(path, html)
     for label, text in indexable_regions(html):
         for match in PATTERN_RE.finditer(text):
             start = max(0, match.start() - 40)
@@ -92,9 +162,13 @@ def check_file(path: Path) -> list[str]:
 
 
 def main() -> int:
-    site = Path(sys.argv[1] if len(sys.argv) > 1 else "_site")
+    site = Path(sys.argv[1] if len(sys.argv) > 1 else "dist")
     if not site.is_dir():
         print(f"::error::site directory not found: {site}")
+        return 1
+
+    if not TERMS:
+        print("::error::denylist resolved to zero terms; this check would pass vacuously")
         return 1
 
     files = sorted(site.rglob("*.html"))
@@ -107,14 +181,27 @@ def main() -> int:
         problems.extend(check_file(path))
 
     if problems:
-        print("::error::accusation text reached indexable metadata:")
-        for p in problems:
-            print(f"  {p}")
+        unparseable = [p for p in problems if "is not valid JSON" in p]
+        denylisted = [p for p in problems if "is not valid JSON" not in p]
+
+        if unparseable:
+            print("::error::a JSON-LD block on a built page is not valid JSON:")
+            for p in unparseable:
+                print(f"  {p}")
+            print(
+                "  A structured-data consumer discards the WHOLE block, so the page publishes\n"
+                "  with none of its structured data and every other check here still passes."
+            )
+        if denylisted:
+            print("::error::denylisted term reached indexable metadata:")
+            for p in denylisted:
+                print(f"  {p}")
         return 1
 
     print(
-        f"OK: {len(files)} page(s) checked (head + JSON-LD), "
-        "no accusation text in indexable metadata"
+        f"OK: {len(files)} page(s) checked (head + JSON-LD) against {len(TERMS)} "
+        "denylisted term(s): no denylisted text in indexable metadata, and every "
+        "JSON-LD block parses"
     )
     return 0
 

@@ -24,7 +24,7 @@ import { describe, it, expect } from "vitest";
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { isNoindex, urlPathFor, collectIndexable, retiredPaths, encodePath, absolute } from "../scripts/lib/site-urls.mjs";
-import { renderSitemap, baselineGaps, baselineAdditions, readBaseline, lastmodIndex } from "../scripts/build-sitemap.mjs";
+import { renderSitemap, baselineGaps, baselineAdditions, readBaseline, lastmodIndex, retiredButPublished } from "../scripts/build-sitemap.mjs";
 import { locsFrom, buildPayload } from "../scripts/build-indexnow.mjs";
 
 const ROOT = join(import.meta.dirname, "..");
@@ -241,8 +241,28 @@ describe("the baseline parity gate", () => {
     expect(baselineGaps(baseline, withoutRetired, [])).toEqual(["/faq/"]);
   });
 
-  it("does not list the already-retired pages, which were gone before it was taken", () => {
-    for (const path of retiredPaths()) expect(baseline).not.toContain(path);
+  it("distinguishes a retirement that predates the baseline from one that follows it", () => {
+    // This asserted the baseline contains no retired path at all, which held
+    // only while every retirement predated the baseline. Withdrawing documents
+    // that WERE published on 2026-07-31 broke it correctly: the baseline is the
+    // history of what was published, so a URL retired afterwards stays in it.
+    const retired = retiredPaths();
+    const inBaseline = retired.filter((p) => baseline.includes(encodePath(p)));
+    expect(retired.length, "nothing is retired; this would pass vacuously").toBeGreaterThan(0);
+    expect(inBaseline.length, "no retirement is reconciled against the baseline").toBeGreaterThan(0);
+
+    // The load-bearing half: the gate accepts a build that no longer publishes
+    // them. Without this every future withdrawal fails the build, and the
+    // pressure becomes editing the baseline, which erases what was published.
+    const published = baseline.filter((p) => !inBaseline.map(encodePath).includes(p)).map((p) => decodeURI(p));
+    expect(baselineGaps(baseline, published, retired)).toEqual([]);
+  });
+
+  it("still fails when a baseline URL vanishes WITHOUT being retired", () => {
+    // Accepting retirements must not become accepting disappearances.
+    const victim = baseline.find((p) => p.startsWith("/documents/") && !retiredPaths().map(encodePath).includes(p))!;
+    const published = baseline.filter((p) => p !== victim).map((p) => decodeURI(p));
+    expect(baselineGaps(baseline, published, retiredPaths())).toContain(victim);
   });
 
   it("reports what the build adds, without failing on it", () => {
@@ -266,17 +286,35 @@ describe("retired URLs and the redirect rules cannot drift apart", () => {
     .map((l) => l.split(/\s+/));
 
   it("gives every retired path a rule that stops it resolving", () => {
+    // Compared on the ENCODED form. public/_redirects is whitespace-delimited,
+    // so a rule whose FROM field contains a literal space parses as three
+    // fields and silently does nothing; seven withdrawn filenames contain
+    // spaces. Encoded is also the form the request arrives in.
     for (const path of retiredPaths()) {
-      const rule = rules.find((r) => r[0] === path);
+      const encoded = encodePath(path);
+      const rule = rules.find((r) => r[0] === encoded || r[0] === path);
       expect(rule, `_data/retired_urls.json lists ${path} with no rule in public/_redirects`).toBeDefined();
       expect(Number(rule![2]), `${path} is retired, so it must 404 rather than redirect`).toBe(404);
     }
   });
 
   it("has a retired entry for every 404 rule, so neither file leads the other", () => {
-    const retired = new Set(retiredPaths());
+    const retired = new Set(retiredPaths().map(encodePath));
     for (const rule of rules.filter((r) => Number(r[2]) === 404)) {
       expect(retired.has(rule[0]!), `public/_redirects 404s ${rule[0]} with no entry in _data/retired_urls.json`).toBe(true);
+    }
+  });
+
+  it("expresses a path containing a space in a form a rule can carry", () => {
+    // The control for the encoding. Without it these seven rules parse as three
+    // fields each and the URLs answer 200 instead of 404, which is the exact
+    // soft-404 behaviour public/_redirects exists to remove.
+    const spaced = retiredPaths().filter((p) => p.includes(" "));
+    expect(spaced.length, "no retired path has a space; this test is testing nothing").toBeGreaterThan(0);
+    for (const path of spaced) {
+      const rule = rules.find((r) => r[0] === encodePath(path));
+      expect(rule, `no encoded rule for ${path}`).toBeDefined();
+      expect(rule![0]).not.toContain(" ");
     }
   });
 });
@@ -309,5 +347,68 @@ describe("the IndexNow submission list", () => {
     const payload = buildPayload(["https://rockenhaus.net/"], "somekey");
     expect(payload.keyLocation).toBe("https://rockenhaus.net/somekey.txt");
     expect(existsSync(join(ROOT, "rockenhauslitigationindexnow2026.txt"))).toBe(true);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Un-retirement: the direction this gate did not cover.
+//
+// Everything else here catches a DISAPPEARANCE, a URL that was published and is
+// not any more. Restoring a withdrawn document is the opposite motion and has
+// its own failure mode, which nothing looked for until a document actually came
+// back.
+//
+// If a document returns but its retirement entry stays, three things disagree:
+// the build emits the page, the sitemap omits it because retired paths are
+// excluded, and public/_redirects answers 404 for it. The document is published
+// and unreachable at once, and every pre-existing check passes.
+// ---------------------------------------------------------------------------
+
+describe("a URL cannot be retired and published at the same time", () => {
+  it("reports a path the build emits while the retired list withdraws it", () => {
+    const excluded = [
+      { path: "/documents/restored/", reason: "retired" },
+      { path: "/evidence/x/", reason: "noindex" },
+      { path: "/404.html", reason: "not content" },
+    ];
+    expect(retiredButPublished(excluded)).toEqual(["/documents/restored/"]);
+  });
+
+  it("stays quiet when nothing contradicts", () => {
+    // The control. Exclusions are normal: every /evidence/ page and the 404 are
+    // excluded on every build. Only "retired" means two sources disagree.
+    const excluded = [
+      { path: "/evidence/x/", reason: "noindex" },
+      { path: "/404.html", reason: "not content" },
+    ];
+    expect(retiredButPublished(excluded)).toEqual([]);
+  });
+
+  it("is quiet on the real build, which is what restoring a document requires", () => {
+    // The live assertion. This document was withdrawn and is now restored with
+    // one page withheld, so its retirement entry and its 404 rules had to come
+    // out. If either had been left behind, this fails.
+    const { excluded } = collectIndexable(DIST);
+    expect(retiredButPublished(excluded)).toEqual([]);
+  });
+
+  it("leaves no retirement record for a document that is published again", () => {
+    // The same property checked from the data rather than the build, so a
+    // stale record is caught even on a machine that cannot build the site.
+    const redirectRules = readFileSync(join(ROOT, "public", "_redirects"), "utf8")
+      .split("\n")
+      .map((l) => l.trim())
+      .filter((l) => l && !l.startsWith("#"))
+      .map((l) => l.split(/\s+/));
+
+    const restored = "/documents/waynedo26-104594-do-opposing-01waynedivorcecomplaint/";
+    const restoredPdf = "/wayne_do_26-104594-DO/opposing/01_wayne_divorce_complaint.pdf";
+    for (const path of [restored, restoredPdf]) {
+      expect(retiredPaths(), `${path} is published but still recorded as retired`).not.toContain(path);
+      expect(
+        redirectRules.find((r) => r[0] === path || r[0] === encodePath(path)),
+        `${path} is published but still has a redirect rule`,
+      ).toBeUndefined();
+    }
   });
 });

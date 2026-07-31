@@ -125,52 +125,25 @@ breadcrumbs:
         {{ profile_url | jsonify }}{% unless forloop.last %},{% endunless %}
         {% endfor %}
       ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is Conrad Rockenhaus dead?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": {{ site.data.faq.faqs | where: "id", "is-conrad-rockenhaus-dead" | map: "answer" | first | jsonify }}
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Did criminals hijack Conrad Rockenhaus's American Airlines AAdvantage account?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": {{ site.data.faq.faqs | where: "id", "conradrockenhausisdead-cc-american-airlines-aadvantage-rebuttal" | map: "answer" | first | jsonify }}
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Did Conrad Rockenhaus post the Facebook Dead Man's Switch declaring himself dead?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": {{ site.data.faq.faqs | where: "id", "facebook-dead-mans-switch-not-conrad-rockenhaus" | map: "answer" | first | jsonify }}
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Did Ann Helgren steal Adrienne Rockenhaus's puffer coat in March 2026?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": {{ site.data.faq.faqs | where: "id", "adrienne-puffer-coat-ann-helgren-march-2026-rebuttal" | map: "answer" | first | jsonify }}
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Did Adrienne Rockenhaus withhold Conrad Rockenhaus's phones and email accounts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": {{ site.data.faq.faqs | where: "id", "adrienne-withheld-electronic-equipment-email-accounts" | map: "answer" | first | jsonify }}
-          }
-        }
-      ]
     }
+    {%- comment -%}
+      A FAQPage block used to sit here, pulling its answers straight out of
+      _data/faq.json. Those answers name the opposing party and at least one
+      non-party witness, and a FAQPage `text` field is exactly how this site got
+      into trouble in the first place: a search engine reads structured data as
+      a machine-readable claim rather than as prose.
+
+      Removed under Conrad's 2026-07-31 ruling, which is about metadata and only
+      about metadata. Every question and answer still renders in the page BODY,
+      unchanged, which is where the ruling says they belong.
+
+      This costs the page its FAQ rich result. That is the price the ruling
+      names, not an oversight.
+
+      NOT the same job as cleaning up _data/faq.json itself, which carries
+      roughly 400 accusation references into page bodies across the site and is
+      a separate pass with its own ruling still outstanding (R4 for this page).
+    {%- endcomment -%}
   ]
 }
 </script>

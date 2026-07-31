@@ -1,0 +1,31 @@
+{
+  "_comment": [
+    "Pages withheld from a published document.",
+    "",
+    "WHY THIS FILE EXISTS AND IS RENDERED. An undisclosed removal from a",
+    "published court record is falsification; a disclosed one is redaction.",
+    "Courts publish redacted versions routinely, and the thing that makes it",
+    "redaction rather than misrepresentation is that a reader can see a page",
+    "is missing and why.",
+    "",
+    "So this is not an internal note. Every entry renders as a visible notice",
+    "on the document page, and a test asserts the notice is present whenever",
+    "an entry exists. The site's credibility is that it IS the record; a",
+    "silent gap would undo exactly that.",
+    "",
+    "The page is withheld, never altered. Editing the content of another",
+    "party's filed pleading is not something this site does."
+  ],
+  "documents": {
+    "waynedo26-104594-do-opposing-01waynedivorcecomplaint": {
+      "withheld_pages": [
+        11
+      ],
+      "original_page_count": 12,
+      "published_page_count": 11,
+      "withheld_on": "2026-07-31",
+      "reason": "The page carried unredacted personal identifiers of the kind MCR 1.109(D)(9) keeps out of a public filing.",
+      "authority": "Withholding is consistent with the Court's standing redaction order in this case."
+    }
+  }
+}

@@ -23,6 +23,12 @@ node_modules/
 dist/
 .astro/
 
+# Derived from _corpus/manifest.json at build time, exactly like the sitemap and
+# the IndexNow list. Committing it would be a second copy of the corpus that can
+# disagree with the corpus, which is the whole thing citations.json exists to
+# prevent. `npm run citations -- --check` fails the build if it is stale.
+public/citations.json
+
 # NOTE: _corpus/ is deliberately NOT ignored.
 #
 # Everything else generated here is ignored because it is derivable noise. The

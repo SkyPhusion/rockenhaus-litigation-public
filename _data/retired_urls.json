@@ -29,6 +29,828 @@
       "status": 404,
       "retired_in": 7,
       "reason": "Third-party characterisation page. Deleted in PR #7. The slug itself is the characterisation, which is why a 301 that preserves its authority is the wrong answer."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit09bpa0629visitation/",
+      "status": 404,
+      "retired_in": 19,
+      "reason": "Withdrawn from the site on Conrad's instruction, 2026-07-31. The exhibit is a completed application form, and a labelled field on it carried protected personal identifying information of the kind MCR 1.109(D)(9) keeps out of a public filing. The document, its PDF and its extracted text were removed together: a partial removal leaves the same text served from another surface. Withdrawn from the site, not from the court record."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_09_BP_A0629_Visitation.pdf",
+      "status": 404,
+      "retired_in": 19,
+      "reason": "Withdrawn from the site on Conrad's instruction, 2026-07-31. The exhibit is a completed application form, and a labelled field on it carried protected personal identifying information of the kind MCR 1.109(D)(9) keeps out of a public filing. The document, its PDF and its extracted text were removed together: a partial removal leaves the same text served from another surface. Withdrawn from the site, not from the court record."
+    },
+    {
+      "path": "/documents/waynedo26-104594-do-discovery-defendantsinterrogatoriesfirstset2026-04-16/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "Served between the parties, never filed with the court, and so not a public court record. Confirmed by Conrad and against the index of exhibits to the filed default-judgment affidavit, which lists the SSA demand letter and the VA payment history and does not list these. The substance survives in the filed motion that describes them, which is a court record. Withdrawn 2026-07-31."
+    },
+    {
+      "path": "/wayne_do_26-104594-DO/discovery/Defendants_Interrogatories_First_Set_2026-04-16.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "Served between the parties, never filed with the court, and so not a public court record. Confirmed by Conrad and against the index of exhibits to the filed default-judgment affidavit, which lists the SSA demand letter and the VA payment history and does not list these. The substance survives in the filed motion that describes them, which is a court record. Withdrawn 2026-07-31."
+    },
+    {
+      "path": "/documents/waynedo26-104594-do-discovery-defendantsrequestsforadmissionsfirstset2026-04-16/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "Served between the parties, never filed with the court, and so not a public court record. Confirmed by Conrad and against the index of exhibits to the filed default-judgment affidavit, which lists the SSA demand letter and the VA payment history and does not list these. The substance survives in the filed motion that describes them, which is a court record. Withdrawn 2026-07-31."
+    },
+    {
+      "path": "/wayne_do_26-104594-DO/discovery/Defendants_Requests_for_Admissions_First_Set_2026-04-16.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "Served between the parties, never filed with the court, and so not a public court record. Confirmed by Conrad and against the index of exhibits to the filed default-judgment affidavit, which lists the SSA demand letter and the VA payment history and does not list these. The substance survives in the filed motion that describes them, which is a court record. Withdrawn 2026-07-31."
+    },
+    {
+      "path": "/documents/waynedo26-104594-do-discovery-defendantsrequestsforproductionfirstset2026-04-16/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "Served between the parties, never filed with the court, and so not a public court record. Confirmed by Conrad and against the index of exhibits to the filed default-judgment affidavit, which lists the SSA demand letter and the VA payment history and does not list these. The substance survives in the filed motion that describes them, which is a court record. Withdrawn 2026-07-31."
+    },
+    {
+      "path": "/wayne_do_26-104594-DO/discovery/Defendants_Requests_for_Production_First_Set_2026-04-16.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "Served between the parties, never filed with the court, and so not a public court record. Confirmed by Conrad and against the index of exhibits to the filed default-judgment affidavit, which lists the SSA demand letter and the VA payment history and does not list these. The substance survives in the filed motion that describes them, which is a court record. Withdrawn 2026-07-31."
+    },
+    {
+      "path": "/documents/waynedo26-104594-do-discovery-interrogatoriesfirstset2026-04-16/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "Served between the parties, never filed with the court, and so not a public court record. Confirmed by Conrad and against the index of exhibits to the filed default-judgment affidavit, which lists the SSA demand letter and the VA payment history and does not list these. The substance survives in the filed motion that describes them, which is a court record. Withdrawn 2026-07-31."
+    },
+    {
+      "path": "/wayne_do_26-104594-DO/discovery/Interrogatories_First_Set_2026-04-16.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "Served between the parties, never filed with the court, and so not a public court record. Confirmed by Conrad and against the index of exhibits to the filed default-judgment affidavit, which lists the SSA demand letter and the VA payment history and does not list these. The substance survives in the filed motion that describes them, which is a court record. Withdrawn 2026-07-31."
+    },
+    {
+      "path": "/documents/waynedo26-104594-do-discovery-plaintiffsfirstresponsestorequestsforadmissions2026-05-13/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "Served between the parties, never filed with the court, and so not a public court record. Confirmed by Conrad and against the index of exhibits to the filed default-judgment affidavit, which lists the SSA demand letter and the VA payment history and does not list these. The substance survives in the filed motion that describes them, which is a court record. Withdrawn 2026-07-31."
+    },
+    {
+      "path": "/wayne_do_26-104594-DO/discovery/Plaintiffs_First_Responses_to_Requests_for_Admissions_2026-05-13.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "Served between the parties, never filed with the court, and so not a public court record. Confirmed by Conrad and against the index of exhibits to the filed default-judgment affidavit, which lists the SSA demand letter and the VA payment history and does not list these. The substance survives in the filed motion that describes them, which is a court record. Withdrawn 2026-07-31."
+    },
+    {
+      "path": "/documents/waynedo26-104594-do-discovery-requestsforadmissionsfirstset2026-04-16/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "Served between the parties, never filed with the court, and so not a public court record. Confirmed by Conrad and against the index of exhibits to the filed default-judgment affidavit, which lists the SSA demand letter and the VA payment history and does not list these. The substance survives in the filed motion that describes them, which is a court record. Withdrawn 2026-07-31."
+    },
+    {
+      "path": "/wayne_do_26-104594-DO/discovery/Requests_for_Admissions_First_Set_2026-04-16.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "Served between the parties, never filed with the court, and so not a public court record. Confirmed by Conrad and against the index of exhibits to the filed default-judgment affidavit, which lists the SSA demand letter and the VA payment history and does not list these. The substance survives in the filed motion that describes them, which is a court record. Withdrawn 2026-07-31."
+    },
+    {
+      "path": "/documents/waynedo26-104594-do-discovery-requestsforproductionfirstset2026-04-16/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "Served between the parties, never filed with the court, and so not a public court record. Confirmed by Conrad and against the index of exhibits to the filed default-judgment affidavit, which lists the SSA demand letter and the VA payment history and does not list these. The substance survives in the filed motion that describes them, which is a court record. Withdrawn 2026-07-31."
+    },
+    {
+      "path": "/wayne_do_26-104594-DO/discovery/Requests_for_Production_First_Set_2026-04-16.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "Served between the parties, never filed with the court, and so not a public court record. Confirmed by Conrad and against the index of exhibits to the filed default-judgment affidavit, which lists the SSA demand letter and the VA payment history and does not list these. The substance survives in the filed motion that describes them, which is a court record. Withdrawn 2026-07-31."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-01motiontoterminateppocombined2026-03-12/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/01_Motion_to_Terminate_PPO_Combined_2026-03-12.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-02propertyshowcause2026-04-09/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/02_Property_Show_Cause_2026-04-09.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-03motiondenyfalseppoviolationclaims2026-04-10/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/03_Motion_Deny_False_PPO_Violation_Claims_2026-04-10.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-04supplementalmotionfcimilanphotomailing2026-04-12/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/04_Supplemental_Motion_FCI_Milan_Photo_Mailing_2026-04-12.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-05showcauseresponse2026-04-16/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/05_Show_Cause_Response_2026-04-16.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-06noticeofjudicialnoticeforhearing2026-04-22/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/06_Notice_of_Judicial_Notice_for_Hearing_2026-04-22.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-07motionforissuanceofsubpoenahelgren2026-04-24/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/07_Motion_for_Issuance_of_Subpoena_Helgren_2026-04-24.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-08proofofservice2026-04-25/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/08_Proof_of_Service_2026-04-25.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-09supplementtomotiontoterminatetwitterevidence2026-04-26/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/09_Supplement_to_Motion_to_Terminate_Twitter_Evidence_2026-04-26.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-10noticeofupdatedcontactinformation2026-05-05/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/10_Notice_of_Updated_Contact_Information_2026-05-05.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-11motiontocompelcompliancemcr37072026-05-06/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/11_Motion_to_Compel_Compliance_MCR_3707_2026-05-06.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-12aexhibitcoverssecondsupplementalmotion2026-05-06/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/12a_Exhibit_Covers_Second_Supplemental_Motion_2026-05-06.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-12secondsupplementalmotionfacebookpost2026-05-06/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/12_Second_Supplemental_Motion_Facebook_Post_2026-05-06.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-13motiontrousaadivertedbenefits2026-05-07/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/13_Motion_TRO_USAA_Diverted_Benefits_2026-05-07.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-13noticeofwithdrawalofsubpoenamotion2026-05-07/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/13_Notice_of_Withdrawal_of_Subpoena_Motion_2026-05-07.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-14noticeofwithdrawalofsubpoenamotion2026-05-07/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/14_Notice_of_Withdrawal_of_Subpoena_Motion_2026-05-07.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-15noticeoffilinghelgrenmaysupplemental2026-05-19/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/15_Notice_of_Filing_Helgren_May_Supplemental_2026-05-19.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-16noticeofchangeofaddress2026-07-02/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/16_Notice_of_Change_of_Address_2026-07-02.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-17noticeofwithdrawalmotiontoterminateppo2026-07-02/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/17_Notice_of_Withdrawal_Motion_to_Terminate_PPO_2026-07-02.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-cosepraecipesubpoenamotion42926/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/CoS_ePraecipe_Subpoena_Motion_4_29_26.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-00exhibitindex/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/00_Exhibit_Index.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit01feb9emailberente/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_01_Feb9_Email_Berente.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit02feb12emailberente/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_02_Feb12_Email_Berente.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit03poarevocation/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_03_POA_Revocation.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit04valentinesdaypost/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_04_Valentines_Day_Post.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit05rossdrlease/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_05_Ross_Dr_Lease.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit06orderaltservice/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_06_Order_Alt_Service.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit07wootennonservice/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_07_Wooten_NonService.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit08redfordpdreport/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_08_Redford_PD_Report.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit10dec222025letter/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_10_Dec22_2025_Letter.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit11vapaymenthistory/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_11_VA_Payment_History.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit12howellaffidavit/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_12_Howell_Affidavit.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit13noticeofrelease/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_13_Notice_of_Release.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit14rockenhausaffidavit/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_14_Rockenhaus_Affidavit.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit15helgrenaffidavit/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_15_Helgren_Affidavit.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit16chavousaffidavit/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_16_Chavous_Affidavit.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit17connoraffidavit/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_17_Connor_Affidavit.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit18counterexhibitj/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_18_Counter_Exhibit_J.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit19helgrenfamilygroup/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_19_Helgren_Family_Group.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-jc46/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/jc46.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-proof-of-nonservice-ppo-termination/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Proof of Nonservice PPO Termination.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-rockenhausaffidavitppohearingnotarized/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Rockenhaus_Affidavit_PPO_Hearing_Notarized.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-supplementalaffidavitfornotary/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Supplemental_Affidavit_for_Notary.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-opposing-01ex-parte-ppo-petition-filedrockenhaus/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/opposing/01_EX PARTE PPO Petition, Filed_Rockenhaus.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-opposing-02ppopetmotiontoshowcause/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/opposing/02_ppo_pet_motion_to_show_cause.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-opposing-03appopetreponsetomotiontoterminatept1/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/opposing/03a_ppo_pet_reponse_to_motion_to_terminate_pt_1.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-opposing-03bppopetreponsetomotiontoterminatept2/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/opposing/03b_ppo_pet_reponse_to_motion_to_terminate_pt_2.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-opposing-03cppopetreponsetomotiontoterminatept3/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/opposing/03c_ppo_pet_reponse_to_motion_to_terminate_pt_3.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-opposing-03dppopetreponsetomotiontoterminatept4/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/opposing/03d_ppo_pet_reponse_to_motion_to_terminate_pt_4.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-opposing-03eppopetreponsetomotiontoterminatept5/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/opposing/03e_ppo_pet_reponse_to_motion_to_terminate_pt_5.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-opposing-03ppopetreponsetomotiontoterminate/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/opposing/03_ppo_pet_reponse_to_motion_to_terminate.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-opposing-aldrichproofofserviceppo2026-04-14/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/opposing/Aldrich_Proof_of_Service_PPO_2026-04-14.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-opposing-proof-of-service-2-orders/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/opposing/Proof of Service 2 - Orders.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-opposing-rockenhaus-ppo-stipulated-order-to-withdraw-as-counsel/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/opposing/ROCKENHAUS PPO- Stipulated Order to Withdraw as Counsel.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-orders-esig-order-regarding-alternate-service-for-ppo-only/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/orders/eSig Order Regarding Alternate Service for PPO Only.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-orders-ppopetordermotiontoshowcause/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/orders/ppo_pet_order_motion_to_show_cause.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-orders-reassignmentfromabraham2026-04-30/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/orders/Reassignment_from_Abraham_2026-04-30.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-orders-reassignmenttoabraham2026-04-14/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/orders/Reassignment_to_Abraham_2026-04-14.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-orders-tc-order-following-42926-motion-hearings/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/orders/TC-Order Following 4.29.26 Motion Hearings.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-orders-tc-order-to-withdraw/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/orders/TC-Order to Withdraw.pdf",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
+    },
+    {
+      "path": "/cases/wayne_ppo_26-102221-PP/",
+      "status": 404,
+      "retired_in": 20,
+      "reason": "The site's scope is the Wayne County and Washtenaw divorce litigation. The Wayne County PPO case 26-102221-PP is outside it, withdrawn 2026-07-31 on Conrad's instruction. The divorce filings reference the PPO case only in seeking its dismissal, and that argument is published in full; the PPO record itself is published by the opposing party elsewhere, so this site's copy added nothing to the public record. Scope, not selection: inside the published cases everything publishes on the same terms."
     }
   ]
 }

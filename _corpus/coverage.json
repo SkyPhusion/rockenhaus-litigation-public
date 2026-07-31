@@ -7,72 +7,17 @@
     "dpi": 300,
     "min_confidence": 60
   },
-  "documents": 173,
-  "total_pages": 959,
-  "pages_native_text": 851,
-  "pages_ocr_text": 77,
-  "pages_with_text": 928,
-  "pages_without_text": 31,
-  "coverage_pct": 96.8,
-  "native_coverage_pct": 88.7,
-  "total_chars": 2284346,
+  "documents": 105,
+  "total_pages": 440,
+  "pages_native_text": 404,
+  "pages_ocr_text": 29,
+  "pages_with_text": 433,
+  "pages_without_text": 7,
+  "coverage_pct": 98.4,
+  "native_coverage_pct": 91.8,
+  "total_chars": 1173535,
   "documents_with_no_text_layer": [],
   "documents_partially_scanned": [
-    {
-      "url": "/documents/wayneppo26-102221-pp-filed-01motiontoterminateppocombined2026-03-12/",
-      "text_pages": 13,
-      "total_pages": 14
-    },
-    {
-      "url": "/documents/wayneppo26-102221-pp-filed-11motiontocompelcompliancemcr37072026-05-06/",
-      "text_pages": 6,
-      "total_pages": 7
-    },
-    {
-      "url": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit02feb12emailberente/",
-      "text_pages": 2,
-      "total_pages": 3
-    },
-    {
-      "url": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit03poarevocation/",
-      "text_pages": 3,
-      "total_pages": 8
-    },
-    {
-      "url": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit04valentinesdaypost/",
-      "text_pages": 1,
-      "total_pages": 3
-    },
-    {
-      "url": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit11vapaymenthistory/",
-      "text_pages": 1,
-      "total_pages": 2
-    },
-    {
-      "url": "/documents/wayneppo26-102221-pp-filed-jc46/",
-      "text_pages": 6,
-      "total_pages": 7
-    },
-    {
-      "url": "/documents/wayneppo26-102221-pp-opposing-03ppopetreponsetomotiontoterminate/",
-      "text_pages": 21,
-      "total_pages": 24
-    },
-    {
-      "url": "/documents/wayneppo26-102221-pp-opposing-03cppopetreponsetomotiontoterminatept3/",
-      "text_pages": 17,
-      "total_pages": 18
-    },
-    {
-      "url": "/documents/wayneppo26-102221-pp-opposing-03dppopetreponsetomotiontoterminatept4/",
-      "text_pages": 20,
-      "total_pages": 26
-    },
-    {
-      "url": "/documents/wayneppo26-102221-pp-opposing-03eppopetreponsetomotiontoterminatept5/",
-      "text_pages": 6,
-      "total_pages": 8
-    },
     {
       "url": "/documents/waynedo26-104594-do-filed-04cexhibit2omnibussupp2026-05-10page/",
       "text_pages": 3,

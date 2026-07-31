@@ -986,3 +986,48 @@ main {
 .site-footer__meta {
   opacity: 0.8;
 }
+
+/* ---------------------------------------------------------------------------
+   Withheld-page notice.
+
+   Rendered above the PDF viewer on any document with a withheld page, so a
+   reader meets it BEFORE reading a document that is not complete. An
+   undisclosed removal from a published court record misrepresents the record;
+   a disclosed one is redaction. This notice is the entire difference, so it is
+   styled to be read rather than skimmed past: it uses the gold rule already
+   reserved for the site's editorial voice, and it does not collapse or hide on
+   small screens.
+   --------------------------------------------------------------------------- */
+.document-withheld {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  background: var(--paper-elevated);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius);
+}
+
+.document-withheld h2 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.document-withheld p {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 0.925rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+}
+
+.document-withheld p:last-child {
+  margin-bottom: 0;
+}
+
+.document-withheld__note {
+  font-size: 0.85rem;
+}

@@ -1,0 +1,662 @@
+// The consolidated metadata guard, exercised against real fixtures.
+//
+// Two guards read _data/metadata_denylist.json now: src/lib/guard.ts at Astro
+// build time, and scripts/check_indexable_metadata.py over the built HTML. This
+// suite proves three things that the previous arrangement did not:
+//
+//   1. the two resolve to the SAME terms, so they cannot drift apart again
+//      (they had drifted: 15 terms versus 4, and the 4 had no names in them)
+//   2. the Python check actually FAILS on a poisoned page, watched failing
+//      rather than assumed, with a clean page as the positive control so that a
+//      pass means the check ran rather than the check being broken
+//   3. its scope is metadata, not a blunt grep: the same term in a page BODY
+//      must NOT fail, because exhibit pages quote artifacts and that quotation
+//      is the point of an exhibit index
+
+import { describe, it, expect, beforeAll, afterAll } from "vitest";
+import { execFileSync } from "node:child_process";
+import { mkdtempSync, writeFileSync, rmSync, mkdirSync, readFileSync, readdirSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { DENYLIST, findDenylisted } from "../src/lib/guard";
+
+const ROOT = join(import.meta.dirname, "..");
+
+/** Front matter of every page source, keyed by path. */
+function frontMatters(): Array<[string, string, string]> {
+  const out: Array<[string, string, string]> = [];
+  const skip = new Set(["node_modules", "dist", "_site", "src", ".git", "docs", "tests", "scripts", "assets", "public"]);
+
+  function walk(dir: string, depth: number): void {
+    if (depth > 3) return;
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      if (entry.name.startsWith(".") || skip.has(entry.name)) continue;
+      const abs = join(dir, entry.name);
+      if (entry.isDirectory()) walk(abs, depth + 1);
+      else if (entry.name.endsWith(".html")) {
+        const text = readFileSync(abs, "utf8");
+        const m = /^---\n([\s\S]*?)\n---/.exec(text);
+        if (m) out.push([abs.slice(ROOT.length + 1), m[1]!, text]);
+      }
+    }
+  }
+  walk(ROOT, 0);
+  return out;
+}
+
+
+/** Every page source: [path, front matter, whole file]. */
+const pagesWithSource = frontMatters();
+
+
+const SCRIPT = "scripts/check_indexable_metadata.py";
+
+let dir: string;
+beforeAll(() => {
+  dir = mkdtempSync(join(tmpdir(), "metaguard-"));
+});
+afterAll(() => {
+  rmSync(dir, { recursive: true, force: true });
+});
+
+/** Run the checker over a directory. Returns exit code and combined output. */
+function run(siteDir: string): { code: number; out: string } {
+  try {
+    const out = execFileSync("python3", [SCRIPT, siteDir], { encoding: "utf8", stdio: "pipe" });
+    return { code: 0, out };
+  } catch (err) {
+    const e = err as { status?: number; stdout?: string; stderr?: string };
+    return { code: e.status ?? -1, out: `${e.stdout ?? ""}${e.stderr ?? ""}` };
+  }
+}
+
+function fixture(name: string, html: string): string {
+  const sub = join(dir, name);
+  mkdirSync(sub, { recursive: true });
+  writeFileSync(join(sub, "index.html"), html, "utf8");
+  return sub;
+}
+
+const CLEAN = `<!DOCTYPE html><html><head><title>Rockenhaus v. Rockenhaus, case 26-104594-DO</title>
+<meta name="description" content="Filed Michigan court documents."></head>
+<body><p>A filing in the Wayne County matter.</p></body></html>`;
+
+describe("the two guards read one list", () => {
+  it("python resolves exactly the terms guard.ts resolves", () => {
+    const printed = execFileSync(
+      "python3",
+      [
+        "-c",
+        [
+          "import importlib.util,json",
+          `spec=importlib.util.spec_from_file_location("m","${SCRIPT}")`,
+          "m=importlib.util.module_from_spec(spec); spec.loader.exec_module(m)",
+          "print(json.dumps(m.TERMS))",
+        ].join("\n"),
+      ],
+      { encoding: "utf8" },
+    );
+    const pythonTerms: string[] = JSON.parse(printed);
+    expect([...pythonTerms].sort()).toEqual([...DENYLIST].sort());
+  });
+
+  it("the list is not empty, so neither guard can pass vacuously", () => {
+    expect(DENYLIST.length).toBeGreaterThan(0);
+  });
+});
+
+describe("the python check fails on poisoned metadata", () => {
+  // POSITIVE CONTROL. Without this, every negative test below would also pass
+  // if the script were simply broken and always exited 0.
+  it("passes a clean page", () => {
+    const result = run(fixture("clean", CLEAN));
+    expect(result.code).toBe(0);
+    expect(result.out).toContain("no denylisted text in indexable metadata");
+  });
+
+  it("fails when a denylisted term is in the title", () => {
+    const html = CLEAN.replace("<title>Rockenhaus", "<title>Rob Hein and Rockenhaus");
+    const result = run(fixture("title", html));
+    expect(result.code).toBe(1);
+    expect(result.out.toLowerCase()).toContain("rob hein");
+    expect(result.out).toContain("[head]");
+  });
+
+  it("fails when a denylisted term is in the meta description", () => {
+    const html = CLEAN.replace("Filed Michigan court documents.", "Filed documents about a neo-Nazi.");
+    const result = run(fixture("description", html));
+    expect(result.code).toBe(1);
+    expect(result.out.toLowerCase()).toContain("neo-nazi");
+  });
+
+  it("fails when a denylisted term is inside a JSON-LD block in the BODY", () => {
+    const html = CLEAN.replace(
+      "</body>",
+      `<script type="application/ld+json">{"name":"@adezero"}</script></body>`,
+    );
+    const result = run(fixture("jsonld", html));
+    expect(result.code).toBe(1);
+    expect(result.out).toContain("json-ld[0]");
+  });
+
+  it("fails on a noindex page too, because noindex is a request not a guarantee", () => {
+    const html = CLEAN.replace(
+      "<title>",
+      `<meta name="robots" content="noindex, follow"><title>QOLity `,
+    );
+    const result = run(fixture("noindex", html));
+    expect(result.code).toBe(1);
+    expect(result.out.toLowerCase()).toContain("qolity");
+  });
+});
+
+describe("scope is metadata, not a blunt grep", () => {
+  it("does NOT fail when the term appears only in the page body", () => {
+    const html = CLEAN.replace(
+      "<p>A filing in the Wayne County matter.</p>",
+      "<p>The exhibit shows a post by @adezero on its face.</p>",
+    );
+    const result = run(fixture("bodyonly", html));
+    expect(result.code).toBe(0);
+  });
+
+  it("does NOT fire inside a longer token", () => {
+    const html = CLEAN.replace("<title>Rockenhaus", "<title>Prichardson Road Rockenhaus");
+    const result = run(fixture("boundary", html));
+    expect(result.code).toBe(0);
+  });
+});
+
+describe("the check refuses to pass vacuously", () => {
+  it("fails when the directory contains no HTML at all", () => {
+    const empty = join(dir, "empty");
+    mkdirSync(empty, { recursive: true });
+    const result = run(empty);
+    expect(result.code).toBe(1);
+    expect(result.out).toContain("produced nothing to check");
+  });
+
+  it("fails when the directory does not exist", () => {
+    const result = run(join(dir, "nope"));
+    expect(result.code).toBe(1);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Conrad's 2026-07-31 ruling: indexable metadata names the CASE, not PEOPLE.
+//
+// The ruling is enforced by DATA (which tiers are denied) rather than by code,
+// so these tests are aimed at the data and at the loader that reads it. They
+// are what stops the ruling being quietly narrowed later by an edit that still
+// passes every other test in this file.
+// ---------------------------------------------------------------------------
+
+describe("metadata names the case, not people", () => {
+  const denylist = JSON.parse(
+    readFileSync(join(ROOT, "_data", "metadata_denylist.json"), "utf8"),
+  ) as {
+    denied_tiers: string[];
+    allowed: { terms: string[] };
+    [tier: string]: unknown;
+  };
+
+  const deniedTerms = denylist.denied_tiers.flatMap(
+    (t) => (denylist[t] as { terms: string[] }).terms,
+  );
+
+  it("names its denied tiers in data, so a tier can be added without a code change", () => {
+    // Before the ruling, both guards hardcoded `third_party` and
+    // `party_handles`. Renaming a tier was therefore a four-file change of
+    // which two files could be forgotten, and neither would have failed loudly.
+    expect(denylist.denied_tiers.length).toBeGreaterThan(0);
+    for (const tier of denylist.denied_tiers) {
+      expect(denylist[tier], `denied_tiers names ${tier}, which does not exist`).toBeDefined();
+    }
+  });
+
+  it("denies the opposing party's name, both aliases and the handle together", () => {
+    // The pre-ruling denylist held ONLY the handle, on the argument that her
+    // name belonged in metadata because the case is named for her. That
+    // argument was overruled. All four go together or the ruling is not applied.
+    for (const term of ["adrienne rockenhaus", "adrienne blair", "adrienne hein", "adezero"]) {
+      expect(deniedTerms, `${term} identifies a person and must be denied in metadata`).toContain(term);
+    }
+  });
+
+  it("still denies the non-parties and the characterisations", () => {
+    for (const term of ["rob hein", "qolity", "sockpuppet", "neo-nazi"]) {
+      expect(deniedTerms).toContain(term);
+    }
+  });
+
+  it("allows the case caption and the case numbers, which are what metadata is FOR", () => {
+    const allowed = denylist.allowed.terms.map((t) => t.toLowerCase());
+    expect(allowed).toContain("rockenhaus v. rockenhaus");
+    expect(allowed).toContain("26-104594-do");
+  });
+
+  it("never lists a term as both allowed and denied", () => {
+    // The consistency control. Two lists that can disagree eventually will,
+    // and this one would fail silently in the direction of publishing.
+    const denied = new Set(deniedTerms.map((t) => t.toLowerCase()));
+    const conflicts = denylist.allowed.terms.filter((t) => denied.has(t.toLowerCase()));
+    expect(conflicts, `listed as both allowed and denied: ${conflicts.join(", ")}`).toEqual([]);
+  });
+
+  it("does not let the case caption trip the party-name denial", () => {
+    // "Rockenhaus v. Rockenhaus" must survive a denylist that contains
+    // "adrienne rockenhaus". If this ever fails, every title on the site fails.
+    expect(findDenylisted("Rockenhaus v. Rockenhaus Case 26-104594-DO")).toEqual([]);
+    expect(findDenylisted("39 Motion Appoint GAL PDF | Rockenhaus v. Rockenhaus Case 26-104594-DO")).toEqual([]);
+  });
+
+  it("catches the party's name in a title, which is the defect being fixed", () => {
+    // The positive control for the widening. Without this the test above could
+    // pass because the term was quietly dropped rather than because the caption
+    // is distinguishable from it.
+    const hits = findDenylisted("Adrienne Rockenhaus retraction demand | MCL 600.2911");
+    expect(hits.map((h) => h.term)).toContain("adrienne rockenhaus");
+  });
+});
+
+describe("the generator no longer stuffs person identifiers into metadata", () => {
+  // Source-level regression. The keyword stuffing lived in one function and
+  // reached all 173 document pages; this is what stops it coming back in a
+  // later edit that nobody runs the whole site build against.
+  const pyRaw = readFileSync(join(ROOT, "scripts", "generate_site.py"), "utf8");
+
+  /**
+   * Source with comment lines removed.
+   *
+   * These tests assert on what the generator DOES, and the comments explaining
+   * what was removed necessarily quote the very literals being tested for. The
+   * first version of this test failed on its own explanation, which is a fair
+   * warning that grepping source text is a blunt instrument: it is used here
+   * only because it catches reintroduction in a later edit that nobody runs the
+   * full site build against.
+   */
+  const py = pyRaw
+    .split("\n")
+    .filter((line) => !line.trimStart().startsWith("#"))
+    .join("\n");
+
+  const metadataFns = py.slice(py.indexOf("def seo_document_title"), py.indexOf("def write_document_page"));
+
+  it("builds titles and descriptions from the caption, not the party fields", () => {
+    expect(metadataFns).not.toContain("PETITIONER['seo_title']");
+    expect(metadataFns).not.toContain("PETITIONER['seo_aka']");
+    expect(metadataFns).not.toContain('PETITIONER["name"]');
+  });
+
+  it("has no alias or handle literals left in the keyword list", () => {
+    const keywords = py.slice(py.indexOf("def seo_document_keywords"), py.indexOf("def seo_case_heading"));
+    for (const literal of ["Adrienne Blair", "Adrienne Hein", "@adezero", "Adrienne Rockenhaus"]) {
+      expect(keywords, `${literal} is back in the meta keywords`).not.toContain(literal);
+    }
+  });
+
+  it("keeps the assigned judge out of the metadata projection but in the record", () => {
+    // court_name is the judge-free projection used by JSON-LD; court still
+    // carries the judge, because docket information belongs in the record.
+    expect(pyRaw).toContain("court_name");
+    const courts = JSON.parse(readFileSync(join(ROOT, "_data", "courts.json"), "utf8")) as {
+      cases: Array<{ court: string; court_name: string }>;
+    };
+    const withJudge = courts.cases.filter((c) => c.court.includes("Hon."));
+    expect(withJudge.length, "no case names a judge; this test is testing nothing").toBeGreaterThan(0);
+    for (const c of courts.cases) {
+      expect(c.court_name, `court_name still names a judge: ${c.court_name}`).not.toContain("Hon.");
+    }
+  });
+});
+
+// ---------------------------------------------------------------------------
+// The front-matter sweep.
+//
+// WHY THIS EXISTS ALONGSIDE THE PYTHON GUARD. The Python guard is the real one:
+// it reads BUILT HTML, so it sees what a search engine sees, including whatever
+// the Liquid templates decided to emit. But it needs a built site, and building
+// the Jekyll half needs Ruby, which is not on the crew box. So on the machine
+// where the edits are actually made, the authoritative guard cannot run at all,
+// and the first feedback would be a red CI run.
+//
+// This sweep reads Jekyll SOURCE front matter instead. It is strictly weaker:
+// it cannot see the templates, and a term introduced by a layout would sail
+// past it. It is not a substitute and must never be treated as one.
+//
+// It earns its place empirically. Applying Conrad's ruling, I had rewritten the
+// three pages named in the failing CI run and believed the change complete.
+// This sweep found SIX more pages carrying the party's name in a description,
+// which would otherwise have been a red CI run and a second round trip.
+// ---------------------------------------------------------------------------
+
+describe("no denylisted term in Jekyll front matter", () => {
+  const denylist = JSON.parse(
+    readFileSync(join(ROOT, "_data", "metadata_denylist.json"), "utf8"),
+  ) as { denied_tiers: string[]; [tier: string]: unknown };
+  const terms = denylist.denied_tiers.flatMap((t) => (denylist[t] as { terms: string[] }).terms);
+
+  const pages: Array<[string, string]> = pagesWithSource.map(([p, fm]) => [p, fm]);
+
+  it("finds the page sources at all, so this cannot pass vacuously", () => {
+    // The failure mode this guards: a path change makes the walk find nothing
+    // and the sweep reports clean forever. The hand-written pages are always in
+    // the tree; _documents/ is generated and may legitimately be absent.
+    expect(pages.length, "no front matter found; the sweep is looking in the wrong place").toBeGreaterThan(10);
+    expect(terms.length).toBeGreaterThan(10);
+  });
+
+  it("carries no denylisted term in any page's front matter", () => {
+    const pattern = new RegExp(
+      terms.map((t) => `(?<![a-z0-9])${t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?![a-z0-9])`).join("|"),
+      "gi",
+    );
+    const hits: string[] = [];
+    for (const [path, fm] of pages) {
+      for (const m of fm.matchAll(pattern)) hits.push(`${path}: ${m[0]}`);
+    }
+    expect(hits, `denylisted terms in front matter:\n${hits.join("\n")}`).toEqual([]);
+  });
+
+  it("carries no denylisted LITERAL inside an inline JSON-LD block", () => {
+    // A SECOND BLIND SPOT, found the same way as the first. Front matter is not
+    // the only metadata a page source carries: several pages hand-write a
+    // <script type="application/ld+json"> block. The podcast page had the party
+    // name hardcoded in its JSON-LD `name`, and an ItemList enumerating
+    // accusations, none of which front matter could show.
+    //
+    // Liquid expressions are stripped before matching, because their VALUES
+    // cannot be known without rendering. So this catches hardcoded literals
+    // only, and a term arriving through {{ some.data.field }} still sails past.
+    // That is a real hole and the Python guard over built HTML is what closes
+    // it; this only shortens the loop on the machine where the edits are made.
+    const pattern = new RegExp(
+      terms.map((t) => `(?<![a-z0-9])${t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?![a-z0-9])`).join("|"),
+      "gi",
+    );
+    const hits: string[] = [];
+    for (const [path, , full] of pagesWithSource) {
+      for (const block of full.matchAll(/<script[^>]*application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)) {
+        const literalsOnly = block[1]!.replace(/\{\{[\s\S]*?\}\}/g, "").replace(/\{%[\s\S]*?%\}/g, "");
+        for (const m of literalsOnly.matchAll(pattern)) hits.push(`${path}: ${m[0]}`);
+      }
+    }
+    expect(hits, `denylisted literals in inline JSON-LD:\n${hits.join("\n")}`).toEqual([]);
+  });
+
+  it("would catch a term reintroduced into a description", () => {
+    // The control. Without it, a broken pattern would report clean.
+    const pattern = new RegExp(
+      terms.map((t) => `(?<![a-z0-9])${t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?![a-z0-9])`).join("|"),
+      "gi",
+    );
+    expect("description: a demand served on Rob Hein".match(pattern)).not.toBeNull();
+    expect("description: filings in Rockenhaus v. Rockenhaus".match(pattern)).toBeNull();
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Inline JSON-LD has to still be JSON.
+//
+// WHY THIS EXISTS. Removing a Person block from a hand-written JSON-LD array
+// leaves the PRECEDING element's comma behind, so the block renders as
+// "}, ]" and a structured-data consumer discards the ENTIRE block rather than
+// the element that was removed. Nothing else in this repository would notice:
+// the denylist guards look for terms, not for syntax, so a page could pass
+// every metadata check while publishing no usable structured data at all.
+//
+// That is not hypothetical. Both FAQPage removals in this change produced
+// exactly that, and it was caught by reading the diff rather than by any check,
+// which is precisely the reason to write one.
+// ---------------------------------------------------------------------------
+
+describe("removing a JSON-LD element does not orphan its comma", () => {
+  // THE DEFECT. Deleting an element from a hand-written JSON-LD array leaves
+  // the PRECEDING element's comma behind, so the block renders as "}, ]" and a
+  // structured-data consumer discards the ENTIRE block, not the element that
+  // was removed. Nothing else here would notice: the denylist guards look for
+  // terms, not syntax, so the page passes every metadata check while publishing
+  // no usable structured data at all.
+  //
+  // Both FAQPage removals in this change produced exactly that. It was caught
+  // by reading the diff, which is the reason to write a check instead.
+  //
+  // WHAT THIS DELIBERATELY DOES NOT DO: parse the block. A crude Liquid
+  // neutraliser cannot tell a bare output expression from one inside a string
+  // literal, and it renders `{% unless forloop.last %},{% endunless %}` as a
+  // bare comma, so a full parse reports failures on five files that are
+  // perfectly correct. A check that cries wolf gets ignored, and an ignored
+  // check is worse than none. This one is narrow enough to be exactly right:
+  // it looks only where an element was removed and left a comment behind.
+
+  const blocks: Array<[string, string]> = [];
+  for (const [path, , full] of pagesWithSource) {
+    for (const m of full.matchAll(/<script[^>]*application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)) {
+      blocks.push([path, m[1]!]);
+    }
+  }
+
+  /**
+   * Each Liquid comment, matched on its own.
+   *
+   * The first version of this check was a single regex spanning comma, comment
+   * and closing bracket. It reported a false positive: the lazy body ran past
+   * the nearest `endcomment` to a LATER one that happened to be followed by a
+   * bracket, so two unrelated comments in the same block looked like one. Two
+   * steps, no backtracking across comments.
+   */
+  const COMMENT = /\{%-?\s*comment\s*-?%\}[\s\S]*?\{%-?\s*endcomment\s*-?%\}/g;
+
+  /** Paths whose JSON-LD has a comma left dangling by a removed element. */
+  function orphanedIn(raw: string): boolean {
+    for (const m of raw.matchAll(COMMENT)) {
+      const before = raw.slice(0, m.index).trimEnd();
+      const after = raw.slice(m.index! + m[0].length).trimStart();
+      // A comma before AND a closing bracket after means the comment stands
+      // where the array's last element used to be, and its comma survived.
+      // A comment in the MIDDLE keeps its comma legitimately: an element still
+      // follows it, and firing there is the false positive that would make this
+      // check useless.
+      if (before.endsWith(",") && (after.startsWith("]") || after.startsWith("}"))) return true;
+    }
+    return false;
+  }
+
+  it("finds inline JSON-LD blocks to check, so this cannot pass vacuously", () => {
+    expect(blocks.length).toBeGreaterThan(2);
+  });
+
+  it("leaves no comma orphaned by a removed element", () => {
+    const orphaned = blocks.filter(([, raw]) => orphanedIn(raw)).map(([path]) => path);
+    expect(
+      orphaned,
+      `a JSON-LD element was removed but the preceding comma was left, so the whole block is invalid: ${orphaned.join(", ")}`,
+    ).toEqual([]);
+  });
+
+  it("would catch it, and does not fire on a correct removal", () => {
+    // The controls, written as the defect actually appeared.
+    const bad = `{ "about": [ { "@type": "Person" }, {%- comment -%} removed {%- endcomment -%} ] }`;
+    const good = `{ "about": [ { "@type": "Person" } {%- comment -%} removed {%- endcomment -%} ] }`;
+    const middle = `{ "about": [ { "@type": "A" }, {%- comment -%} removed {%- endcomment -%} { "@type": "B" } ] }`;
+    const twoComments = `{ "a": [ { "x": 1 }, {%- comment -%} one {%- endcomment -%} { "y": 2 } ] , "b": [ { "z": 3 } {%- comment -%} two {%- endcomment -%} ] }`;
+    expect(orphanedIn(bad)).toBe(true);
+    expect(orphanedIn(good)).toBe(false);
+    expect(orphanedIn(middle)).toBe(false);
+    // The regression control for this check's OWN bug: two comments in one
+    // block, the first legitimate, must not be joined into a false positive.
+    expect(orphanedIn(twoComments)).toBe(false);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// The class the term denylist structurally cannot catch before a build.
+//
+// The denylist matches STRINGS. It catches a name hardcoded in markup and it
+// catches a name in built HTML. What it cannot catch, in source, is
+// {{ letter.recipient_name }}: the term is not there, it arrives when Liquid
+// renders. Building the Jekyll half needs Ruby, which is not on the crew box,
+// so on the machine where these edits are made that whole class was invisible
+// until CI ran.
+//
+// It cost three CI round trips in one change: page front matter, then inline
+// JSON-LD in three pages, then JSON-LD in two layouts. Same class each time,
+// seen through a different template. This is that class written down.
+// ---------------------------------------------------------------------------
+
+describe("structured data does not reference a person-bearing field", () => {
+  const denylist = JSON.parse(
+    readFileSync(join(ROOT, "_data", "metadata_denylist.json"), "utf8"),
+  ) as { person_bearing_fields: { paths: string[] } };
+  const paths = denylist.person_bearing_fields.paths;
+
+  /** Every JSON-LD block in page sources AND layouts, which pages inherit. */
+  function jsonLdBlocks(): Array<[string, string]> {
+    const out: Array<[string, string]> = [...pagesWithSource].map(([p, , full]) => [p, full] as [string, string]);
+    for (const entry of readdirSync(join(ROOT, "_layouts"), { withFileTypes: true })) {
+      if (entry.isFile() && entry.name.endsWith(".html")) {
+        out.push([`_layouts/${entry.name}`, readFileSync(join(ROOT, "_layouts", entry.name), "utf8")]);
+      }
+    }
+    const blocks: Array<[string, string]> = [];
+    for (const [path, full] of out) {
+      for (const m of full.matchAll(/<script[^>]*application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)) {
+        // Liquid comments are documentation, not emitted output. The removal
+        // notes in these blocks necessarily name the fields they removed.
+        blocks.push([path, m[1]!.replace(/\{%-?\s*comment\s*-?%\}[\s\S]*?\{%-?\s*endcomment\s*-?%\}/g, "")]);
+      }
+    }
+    return blocks;
+  }
+
+  const blocks = jsonLdBlocks();
+
+  it("checks the layouts too, not only the pages", () => {
+    // The gap that produced the third CI round trip: the pages were clean and
+    // the LAYOUT they inherit was not.
+    expect(blocks.some(([p]) => p.startsWith("_layouts/"))).toBe(true);
+    expect(blocks.length).toBeGreaterThan(4);
+    expect(paths.length).toBeGreaterThan(5);
+  });
+
+  it("references no field whose value names a person", () => {
+    const hits: string[] = [];
+    for (const [path, block] of blocks) {
+      for (const field of paths) {
+        if (block.includes(field)) hits.push(`${path}: ${field}`);
+      }
+    }
+    expect(
+      hits,
+      `JSON-LD references fields whose values name people:\n${hits.join("\n")}\n\n` +
+        "Metadata names the CASE, not PEOPLE. Add a person-free projection to the data " +
+        "(the court/court_name and heading/seo_name pattern) and reference that instead.",
+    ).toEqual([]);
+  });
+
+  it("would catch a reference, including one behind a default filter", () => {
+    // The control, in both the shapes this actually appeared in.
+    const direct = '{ "name": {{ letter.recipient_name | jsonify }} }';
+    const behindDefault = '{ "name": {{ letter.seo_name | default: letter.heading | jsonify }} }';
+    const clean = '{ "name": {{ letter.seo_name | jsonify }} }';
+    expect(paths.some((f) => direct.includes(f))).toBe(true);
+    // A safety-net default is the defect with a fallback attached, and reads as
+    // harmless, which is exactly why it needs to fail.
+    expect(paths.some((f) => behindDefault.includes(f))).toBe(true);
+    expect(paths.some((f) => clean.includes(f))).toBe(false);
+  });
+});
+
+describe("every retraction letter has its person-free projection", () => {
+  // The precondition for dropping the `| default:` fallbacks. Without this, a
+  // letter added later with no seo_name renders an empty JSON-LD name rather
+  // than falling back to something that names the recipient.
+  const retractions = JSON.parse(readFileSync(join(ROOT, "_data", "retractions.json"), "utf8")) as {
+    letters: Array<{ id: string; seo_name?: string; seo_description?: string }>;
+  };
+
+  it("has letters to check", () => {
+    expect(retractions.letters.length).toBeGreaterThan(0);
+  });
+
+  it("gives every letter a seo_name and a seo_description", () => {
+    for (const letter of retractions.letters) {
+      expect(letter.seo_name, `${letter.id} has no seo_name`).toBeTruthy();
+      expect(letter.seo_description, `${letter.id} has no seo_description`).toBeTruthy();
+    }
+  });
+
+  it("keeps the person-naming fields, because the BODY still uses them", () => {
+    // The ruling is about metadata only. If these ever disappeared, the page
+    // would stop naming the recipient anywhere, which is not what was ruled.
+    for (const letter of retractions.letters as Array<Record<string, unknown>>) {
+      expect(letter.heading, `${letter.id} lost its body heading`).toBeTruthy();
+      expect(letter.recipient_name, `${letter.id} lost its recipient name`).toBeTruthy();
+    }
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Built JSON-LD must actually be JSON.
+//
+// THE GAP THIS CLOSES, stated exactly, because a weaker version of this check
+// already existed and was mistaken for this one.
+//
+// tests/metadata-guard.test.ts already checks Jekyll SOURCE for the shape where
+// a JSON-LD element was replaced by a Liquid comment and its comma left behind.
+// That is source-level and shape-specific. It cannot see a break that appears
+// only when Liquid RENDERS: an empty loop leaving "[ , ]", a conditional
+// emitting a stray comma, a data value that is not valid JSON.
+//
+// Parsing the BUILT artifact catches all of those and does not care how the
+// break got there. The failure mode is the worst kind available here: every
+// other guard passes, the page publishes, and consumers silently discard all of
+// its structured data. A check that cannot tell valid structured data from
+// broken structured data reports the reassuring one.
+// ---------------------------------------------------------------------------
+
+describe("the python guard parses every built JSON-LD block", () => {
+  const DANGLING = `<!DOCTYPE html><html><head><title>Rockenhaus v. Rockenhaus, case 26-104594-DO</title>
+<meta name="description" content="Filed Michigan court documents."></head>
+<body><script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "WebPage",
+  "about": [ { "@type": "Thing", "name": "Rockenhaus v. Rockenhaus" }, ] }
+</script></body></html>`;
+
+  const VALID = `<!DOCTYPE html><html><head><title>Rockenhaus v. Rockenhaus, case 26-104594-DO</title>
+<meta name="description" content="Filed Michigan court documents."></head>
+<body><script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "WebPage",
+  "about": [ { "@type": "Thing", "name": "Rockenhaus v. Rockenhaus" } ] }
+</script></body></html>`;
+
+  it("fails on a block whose last array element was removed and comma left", () => {
+    // THE CONTROL, written as the defect actually appeared twice in #15.
+    const { code, out } = run(fixture("ldjson-dangling", DANGLING));
+    expect(code, `guard passed a block that is not JSON:\n${out}`).toBe(1);
+    expect(out).toContain("not valid JSON");
+    expect(out).toContain("json-ld[0]");
+  });
+
+  it("passes the same block once the comma is gone", () => {
+    // Pairs with the control: proves the failure above is about the comma and
+    // not about the fixture being rejected for some unrelated reason.
+    const { code, out } = run(fixture("ldjson-valid", VALID));
+    expect(code, out).toBe(0);
+  });
+
+  it("is a NEW capability, not one the denylist already provided", () => {
+    // The dangling block carries no denylisted term at all. Before this change
+    // the guard reported it clean, which is precisely why reading the diff was
+    // the only thing standing between it and publication.
+    expect(DANGLING).not.toMatch(/adezero|adrienne|rob hein|qolity|sockpuppet/i);
+  });
+
+  it("reports position without printing the block contents", () => {
+    // A structured-data block carries names and quoted passages, and a CI log
+    // on a public repository is a published document.
+    const { out } = run(fixture("ldjson-dangling-2", DANGLING));
+    expect(out).toMatch(/line \d+ column \d+/);
+    expect(out).not.toContain("Rockenhaus v. Rockenhaus");
+  });
+});

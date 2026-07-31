@@ -17,32 +17,65 @@
 // exhibit index; a guard that blocked it would force the evidence to be
 // paraphrased, which is worse evidence. The distinction is not cosmetic: it is
 // the difference between publishing a claim and reproducing an artifact.
+//
+// WHERE THE LIST LIVES, and why it moved out of this file. It used to be the
+// array below. That meant two guards with two lists: this one, 15 terms but
+// reaching only the Astro pages, and scripts/check_indexable_metadata.py,
+// reaching every built page but carrying four characterisation patterns and no
+// names at all. So /retractions/rob-hein/ shipped a non-party name seven times
+// inside its <head> with CI green: the stronger guard could not see the page,
+// and the guard that could see it was not looking for names. Both consumers now
+// read _data/metadata_denylist.json, and tests/guard.test.ts asserts they agree,
+// so they cannot drift apart again.
+
+import denylist from "../../_data/metadata_denylist.json";
 
 /**
  * Terms that must never appear in indexable metadata. Matched case-insensitively
  * on word-ish boundaries so that ordinary prose cannot trip them by accident.
  *
- * These are third-party names and characterisations. Conrad's own name and the
- * case numbers are NOT here: the site is his court record and is supposed to
- * rank for those.
+ * WHICH TIERS APPLY IS DATA, NOT CODE. `denied_tiers` in the JSON names them.
+ * The previous version hardcoded `third_party` and `party_handles` here and in
+ * the Python, so Conrad's 2026-07-31 ruling, which renamed one tier and widened
+ * it, would have been a four-file change of which two files could be forgotten.
+ * Now a tier is added, renamed or retired in the data file alone.
+ *
+ * The tiers are unioned because the rule for metadata is the same for all of
+ * them: metadata names the CASE, not PEOPLE. They stay separate in the data file
+ * because they rest on different arguments and a future ruling could move one
+ * without the other. The case caption, the case numbers and the name Conrad Alan
+ * Rockenhaus are in no denied tier: this is his court record.
  */
-export const DENYLIST: readonly string[] = [
-  "neo-nazi",
-  "neo nazi",
-  "nazzy",
-  "nazi",
-  "do not hire",
-  "dustin brown",
-  "joe prich",
-  "justcallmejoep",
-  "prichardington",
-  "prichard",
-  "prichardsac",
-  "rob hein",
-  "qolity",
-  "adezero",
-  "sockpuppet",
-];
+interface Tier {
+  terms: string[];
+}
+
+/**
+ * The denylist JSON has heterogeneous values: string arrays for `_comment`,
+ * `ruling`, `scope` and `denied_tiers`, and tier objects for the rest. Reading
+ * a tier by name therefore needs a widening step, and it is done through
+ * `unknown` and a runtime check rather than a direct cast, which does not
+ * typecheck and would be a lie either way: the compiler cannot know a name in
+ * `denied_tiers` corresponds to a tier object, so something has to verify it.
+ * That something should fail loudly at build time rather than yield undefined.
+ */
+function tier(name: string): Tier {
+  const value = (denylist as unknown as Record<string, unknown>)[name];
+  if (!value || !Array.isArray((value as Tier).terms)) {
+    throw new Error(
+      `metadata_denylist.json: denied_tiers names "${name}", which is not a tier with a terms array.`,
+    );
+  }
+  return value as Tier;
+}
+
+const DENIED_TIERS: readonly string[] = denylist.denied_tiers;
+
+if (DENIED_TIERS.length === 0) {
+  throw new Error("metadata_denylist.json: denied_tiers is empty; refusing to run a guard that cannot fail.");
+}
+
+export const DENYLIST: readonly string[] = DENIED_TIERS.flatMap((name) => tier(name).terms);
 
 export interface DenylistHit {
   term: string;
