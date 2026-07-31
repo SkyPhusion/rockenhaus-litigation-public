@@ -3,21 +3,6 @@
   "date_display": "July 2, 2026",
   "groups": [
     {
-      "case_id": "wayne_ppo_26-102221-PP",
-      "case_label": "Wayne County PPO 26-102221-PP",
-      "case_url": "/cases/wayne_ppo_26-102221-PP/",
-      "filings": [
-        {
-          "title": "16 Notice Of Change Of Address 2026-07-02",
-          "url": "/documents/wayneppo26-102221-pp-filed-16noticeofchangeofaddress2026-07-02/"
-        },
-        {
-          "title": "17 Notice Of Withdrawal Motion To Terminate PPO 2026-07-02",
-          "url": "/documents/wayneppo26-102221-pp-filed-17noticeofwithdrawalmotiontoterminateppo2026-07-02/"
-        }
-      ]
-    },
-    {
       "case_id": "wayne_do_26-104594-DO",
       "case_label": "Wayne County Divorce 26-104594-DO",
       "case_url": "/cases/wayne_do_26-104594-DO/",
