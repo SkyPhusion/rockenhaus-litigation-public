@@ -133,6 +133,24 @@ jobs:
         # MERGED site rather than only the Jekyll half.
         run: cp -r dist/. _site/
 
+      - name: Sitemap and IndexNow, derived from the merged site
+        # THE STEP THAT PROVES THE MIGRATION. Nothing else can: Jekyll owns 360
+        # of the 367 published URLs and there is no Ruby on the crew box, so the
+        # merged tree cannot be built anywhere but here. The unit tests exercise
+        # this generator on the Astro half and on fixtures, which proves the
+        # decision path and nothing about the shipped artifact.
+        #
+        # --baseline fails the build if any URL the live site published is
+        # neither emitted by this build nor listed in _data/retired_urls.json.
+        # /documents/<slug>/ URLs are cited inside filed court documents, so a
+        # page dropped by a template change is a broken citation in a court
+        # record, and it should stop the build rather than be discovered by
+        # somebody going looking for a filing.
+        run: |
+          set -euo pipefail
+          node scripts/build-sitemap.mjs _site --baseline _data/sitemap_baseline.txt
+          node scripts/build-indexnow.mjs _site
+
       - name: No accusations in indexable metadata
         # The defect that put this site in the hole was third-party
         # characterisations reaching titles, descriptions and JSON-LD, where

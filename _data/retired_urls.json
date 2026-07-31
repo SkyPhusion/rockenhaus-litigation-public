@@ -1,0 +1,34 @@
+{
+  "_comment": [
+    "Paths that were published, are gone, and must stay gone.",
+    "",
+    "ONE source of truth, read by three consumers, because the defect being",
+    "fixed here was exactly a path that was deleted in one place and kept",
+    "alive in two others. public/_redirects turns each of these into a real",
+    "404; scripts/build-sitemap.mjs refuses to list them; the IndexNow list is",
+    "derived from that sitemap, so it cannot resubmit them either.",
+    "",
+    "tests/sitemap.test.ts asserts every entry here has a matching rule in",
+    "public/_redirects, so the two files cannot drift apart silently."
+  ],
+  "retired": [
+    {
+      "path": "/joe-prich/",
+      "status": 404,
+      "retired_in": 7,
+      "reason": "Third-party characterisation page about a non-party. Deleted in PR #7; the deletion never reached search engines because every unknown path answered 200 with the homepage."
+    },
+    {
+      "path": "/rob-hein/",
+      "status": 404,
+      "retired_in": 7,
+      "reason": "Third-party characterisation page about a non-party. Deleted in PR #7. Not to be confused with /retractions/rob-hein/, which is a live page about a served retraction demand."
+    },
+    {
+      "path": "/prichards-air-conditioning-neo-nazi/",
+      "status": 404,
+      "retired_in": 7,
+      "reason": "Third-party characterisation page. Deleted in PR #7. The slug itself is the characterisation, which is why a 301 that preserves its authority is the wrong answer."
+    }
+  ]
+}

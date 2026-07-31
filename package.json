@@ -13,6 +13,8 @@
     "corpus": "node scripts/build-corpus.mjs",
     "corpus:check": "node scripts/build-corpus.mjs --check",
     "collisions": "node scripts/check-collisions.mjs",
+    "sitemap": "node scripts/build-sitemap.mjs",
+    "indexnow": "node scripts/build-indexnow.mjs",
     "ocr": "node scripts/ocr-pass.mjs"
   },
   "dependencies": {
