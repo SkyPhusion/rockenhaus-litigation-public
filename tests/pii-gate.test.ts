@@ -329,3 +329,77 @@ describe("local and CI scan scopes do not diverge quietly", () => {
     }
   });
 });
+
+// ---------------------------------------------------------------------------
+// A routing number is not an account number.
+//
+// The gate reported eight account_number matches. All eight were routing
+// numbers, matched because "routing" was one of the trigger words in the
+// account pattern. That is not a small mislabel: an account number identifies a
+// person's account and is named in MCR 1.109(D)(9), while a routing number
+// identifies a BANK, is printed on every cheque, and is published by the
+// institutions themselves. One of the filings carrying these argues exactly
+// that in its own text.
+//
+// Reporting eight protected identifiers where there are none is the same class
+// of defect as reporting none where there are some: the number stops meaning
+// what it says, and the next person reads past it.
+// ---------------------------------------------------------------------------
+
+describe("routing numbers are classified separately from account numbers", () => {
+  function scan(text: string): string[] {
+    const r = spawnSync("python3", ["-c", [
+      "import importlib.util,sys,json",
+      `spec=importlib.util.spec_from_file_location("m", "${SCRIPT}")`,
+      "m=importlib.util.module_from_spec(spec); spec.loader.exec_module(m)",
+      "print(json.dumps([f['pattern'] for f in m.scan_text(sys.argv[1], 'x', {})]))",
+    ].join("\n"), text], { encoding: "utf8", cwd: ROOT });
+    return JSON.parse(r.stdout.trim());
+  }
+
+  it("reports a routing number as a routing number", () => {
+    const hits = scan("The routing number 000000000 identifies USAA Federal Savings Bank.");
+    expect(hits).toContain("routing_number");
+    expect(hits, "a routing number must not be counted as an account number").not.toContain("account_number");
+  });
+
+  it("still reports a genuine account number as one", () => {
+    // The control. Splitting the pattern must not blunt the one that matters.
+    const hits = scan("USAA account no. 0000000000 was drawn on.");
+    expect(hits).toContain("account_number");
+  });
+
+  it("does not fire account_number on a last-four reference", () => {
+    // How the filings actually write it, having complied with the redaction
+    // order: the account is already reduced to four digits at the source.
+    const hits = scan("records of the account ending in -0000 at which payments landed");
+    expect(hits).not.toContain("account_number");
+  });
+});
+
+describe("account_number can no longer be allowlisted", () => {
+  const allowlist = JSON.parse(
+    readFileSync(join(ROOT, "_data", "pii_allowlist.json"), "utf8"),
+  ) as {
+    policy: { high_severity_patterns_never_allowlisted: string[] };
+    accepted: Array<{ pattern: string }>;
+  };
+
+  it("is on the never-allowlist list", () => {
+    // Added while the true count is zero, which is the only comfortable moment
+    // to close a door: nobody is under pressure to open it.
+    expect(allowlist.policy.high_severity_patterns_never_allowlisted).toContain("account_number");
+  });
+
+  it("has no entry, because the true count is zero", () => {
+    expect(allowlist.accepted.filter((e) => e.pattern === "account_number")).toEqual([]);
+  });
+
+  it("allowlists the routing numbers instead, with a reason that says why", () => {
+    const routing = allowlist.accepted.filter((e) => e.pattern === "routing_number");
+    expect(routing.length).toBeGreaterThan(0);
+    for (const e of routing) {
+      expect((e as { reason: string }).reason).toMatch(/identifies a financial institution/i);
+    }
+  });
+});
