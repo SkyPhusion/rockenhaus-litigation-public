@@ -241,8 +241,41 @@ describe("the baseline parity gate", () => {
     expect(baselineGaps(baseline, withoutRetired, [])).toEqual(["/faq/"]);
   });
 
-  it("does not list the already-retired pages, which were gone before it was taken", () => {
-    for (const path of retiredPaths()) expect(baseline).not.toContain(path);
+  it("distinguishes a retirement that predates the baseline from one that follows it", () => {
+    // THIS TEST USED TO ASSERT the baseline contains no retired path at all,
+    // which was true only while every retirement predated the baseline. The
+    // first withdrawal of a document that WAS published on 2026-07-31 broke it,
+    // correctly: the baseline is the history of what was published, so a URL
+    // retired afterwards is supposed to still be in it.
+    //
+    // The real rule, which is what is asserted now:
+    //   retired BEFORE the baseline  -> absent from it, nothing to reconcile
+    //   retired AFTER  the baseline  -> present in it, and the gate must accept
+    //                                   its absence from the build
+    const retired = retiredPaths();
+    const inBaseline = retired.filter((p) => baseline.includes(encodePath(p)));
+    const notInBaseline = retired.filter((p) => !baseline.includes(encodePath(p)));
+
+    expect(retired.length, "nothing is retired; this test would pass vacuously").toBeGreaterThan(0);
+    expect(
+      inBaseline.length + notInBaseline.length,
+      "a retired path matched neither case, which means the comparison forms disagree",
+    ).toBe(retired.length);
+
+    // The load-bearing half: for anything retired after the baseline was taken,
+    // the gate accepts a build that no longer publishes it. Without this, every
+    // future withdrawal fails the build and the pressure is to edit the
+    // baseline, which would erase the record of what was once published.
+    const publishedWithoutRetired = baseline.filter((p) => !inBaseline.map(encodePath).includes(p));
+    expect(baselineGaps(baseline, publishedWithoutRetired.map((p) => decodeURI(p)), retired)).toEqual([]);
+  });
+
+  it("still fails when a baseline URL vanishes WITHOUT being retired", () => {
+    // The control for the test above. Accepting retirements must not become
+    // accepting disappearances, which is the one thing this gate exists for.
+    const victim = baseline.find((p) => p.startsWith("/documents/"))!;
+    const published = baseline.filter((p) => p !== victim).map((p) => decodeURI(p));
+    expect(baselineGaps(baseline, published, retiredPaths())).toEqual([victim]);
   });
 
   it("reports what the build adds, without failing on it", () => {
