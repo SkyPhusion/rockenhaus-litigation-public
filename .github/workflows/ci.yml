@@ -159,6 +159,27 @@ jobs:
           node scripts/build-sitemap.mjs _site --baseline _data/sitemap_baseline.txt
           node scripts/build-indexnow.mjs _site
 
+      - name: Protected personal information
+        # THE GATE THAT RUNS BEFORE PUBLISH, because nothing can run after it.
+        # The site is dedicated CC0, which invites mirrors, and a mirror cannot
+        # be recalled: there is no effective unpublish, so a scan that runs
+        # afterwards is cleanup rather than a control.
+        #
+        # Scans three things, and the second is the one that is easy to forget:
+        #   _corpus  the extracted text of every filed page
+        #   _data    including ocr-cache.json, a SECOND text copy of every
+        #            scanned page, and the pdf_text excerpts that render into
+        #            pages. A scan of _corpus alone reports clean while the same
+        #            string sits in _data; that false clean happened once and is
+        #            the reason this list is explicit.
+        #   _site    what actually publishes, after both generators and the merge
+        #
+        # Output is counts by pattern and nothing else. This repository is
+        # public, so a CI log is a published document, and a failure naming file,
+        # page and pattern would be an index of where unredacted material sits.
+        # Run it locally with --detail to see locations.
+        run: python3 scripts/check_pii.py _corpus _data _site
+
       - name: No accusations in indexable metadata
         # The defect that put this site in the hole was third-party
         # characterisations reaching titles, descriptions and JSON-LD, where

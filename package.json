@@ -14,6 +14,8 @@
     "corpus:check": "node scripts/build-corpus.mjs --check",
     "collisions": "node scripts/check-collisions.mjs",
     "citations": "node scripts/build-citations.mjs",
+    "pii": "python3 scripts/check_pii.py _corpus _data",
+    "pii:detail": "python3 scripts/check_pii.py _corpus _data --detail",
     "sitemap": "node scripts/build-sitemap.mjs",
     "indexnow": "node scripts/build-indexnow.mjs",
     "ocr": "node scripts/ocr-pass.mjs"
