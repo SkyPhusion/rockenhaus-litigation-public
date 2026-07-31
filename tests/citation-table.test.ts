@@ -8,7 +8,7 @@
 import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { buildTable, objectKeyFor, parseObjectKey } from "../scripts/build-citations.mjs";
+import { buildTable, objectKeyFor, parseObjectKey, frameFor } from "../scripts/build-citations.mjs";
 
 const ROOT = join(import.meta.dirname, "..");
 const manifest = JSON.parse(readFileSync(join(ROOT, "_corpus", "manifest.json"), "utf8")) as {
@@ -129,6 +129,137 @@ describe("the R2 object key is the citation", () => {
     // slug and page number is only safe if it reproduces that one exactly.
     for (const page of manifest.pages) {
       expect(objectKeyFor(page.doc_slug as string, page.page as number)).toBe(page.key);
+    }
+  });
+});
+
+// ---------------------------------------------------------------------------
+// The allegation-or-adjudication frame.
+//
+// "The motion filed 2026-07-02 alleges X" and "the court ordered X" are
+// different sentences with different weight, and that difference is the
+// strongest signal a court-record archive carries. If the verb comes from
+// whoever wrote the answer, or from a model generating live, it drifts: a
+// paraphrase can carry a perfectly valid citation and still say the record
+// FOUND something it merely alleges. That is worse than an uncited sentence,
+// because it launders the claim through a real source.
+// ---------------------------------------------------------------------------
+
+describe("the frame is looked up, never written", () => {
+  it("gives every document a frame", () => {
+    expect(table.documents.length).toBeGreaterThan(0);
+    for (const doc of table.documents) {
+      expect(doc.frame, `${doc.slug} has no frame`).toBeDefined();
+      expect(doc.frame.class).toMatch(/^(allegation|adjudication|unknown)$/);
+      expect(doc.frame.verb.length).toBeGreaterThan(0);
+    }
+  });
+
+  it("derives the frame from category alone, for every document", () => {
+    // The property that makes the verb un-driftable: nothing about the frame
+    // depends on the document's title, its prose, or who entered it.
+    for (const doc of table.documents) {
+      expect(doc.frame, `${doc.slug}: frame does not match its category`).toEqual(frameFor(doc.category));
+    }
+  });
+
+  it("calls a court order an adjudication and a motion an allegation", () => {
+    expect(frameFor("orders").class).toBe("adjudication");
+    expect(frameFor("orders").verb).toBe("ordered");
+    expect(frameFor("filed").class).toBe("allegation");
+    expect(frameFor("opposing").class).toBe("allegation");
+  });
+
+  it("frames BOTH parties' filings identically", () => {
+    // Completeness cutting both ways, enforced rather than intended. An archive
+    // that framed one side's motions as "states" and the other's as "alleges"
+    // would be editorialising through grammar, and it would collapse the
+    // archive framing exactly where it matters most.
+    expect(frameFor("filed")).toEqual(frameFor("opposing"));
+  });
+
+  it("falls back to a neutral frame rather than guessing", () => {
+    // A category nobody anticipated must not silently inherit "ordered".
+    const unknown = frameFor("some-future-category");
+    expect(unknown.class).toBe("unknown");
+    expect(unknown.verb).not.toBe("ordered");
+    expect(unknown.verb).not.toBe("alleges");
+  });
+
+  it("counts the classes present, so a consumer can see the shape", () => {
+    const counted = Object.values(table.framing.classes).reduce((a, b) => a + b, 0);
+    expect(counted).toBe(table.documents.length);
+  });
+});
+
+describe("pairing an allegation with its disposition is NOT claimed", () => {
+  it("says so in the artifact rather than leaving the absence to be discovered", () => {
+    // The record as published cannot support it: 2 documents in `orders`,
+    // neither dated, and 19 opposing filings with no dates either. There is no
+    // field linking a motion to its disposition and no date arithmetic that
+    // could stand in for one. Guessing from filename order would invent a
+    // relationship between court documents, which is the opposite of the point.
+    expect(table.framing.pairing.supported).toBe(false);
+    expect(table.framing.pairing.why.join(" ")).toMatch(/cannot be derived/i);
+  });
+
+  it("is honest about the numbers behind that claim", () => {
+    const orders = table.documents.filter((d) => d.category === "orders");
+    const datedOrders = orders.filter((d) => d.filed_date);
+    expect(orders.length).toBeLessThan(5);
+    expect(datedOrders.length, "orders now carry dates; pairing may be derivable, revisit").toBe(0);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// The interface doc must not go stale.
+//
+// It is written to be read cold by someone who was not here, and it states
+// corpus figures. A document whose numbers have drifted from the artifact is
+// worse than one with no numbers: it is confidently wrong, and the reader has
+// no way to tell. Older drafts of this contract still say 173 documents and 959
+// pages, which is why this test exists.
+// ---------------------------------------------------------------------------
+
+describe("the search interface doc states the corpus it actually describes", () => {
+  const doc = readFileSync(join(ROOT, "docs", "search", "AI-SEARCH-INTERFACE.md"), "utf8");
+
+  it("exists and is substantial, so this cannot pass vacuously", () => {
+    expect(doc.length).toBeGreaterThan(2000);
+  });
+
+  it("quotes the live document and page counts", () => {
+    // Matched inside the figures table, so a passing mention of a number
+    // elsewhere in prose cannot satisfy it.
+    expect(doc).toMatch(new RegExp(`\\|\\s*documents\\s*\\|\\s*${table.totals.documents}\\s*\\|`));
+    expect(doc).toMatch(new RegExp(`\\|\\s*corpus pages\\s*\\|\\s*${table.totals.pages}\\s*\\|`));
+  });
+
+  it("quotes the live per-page-state counts", () => {
+    for (const [label, n] of [
+      ["native text, quotable", table.totals.native_pages],
+      ["OCR text, never quotable", table.totals.ocr_pages],
+      ["no text layer at all", table.totals.no_text_pages],
+    ] as const) {
+      expect(doc, `the doc's "${label}" figure has drifted from the artifact`).toMatch(
+        new RegExp(`${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s*\\|\\s*${n}\\s*\\|`),
+      );
+    }
+  });
+
+  it("states the object key format the corpus actually uses", () => {
+    expect(doc).toContain("<doc_slug>/pNNN.txt");
+    expect(objectKeyFor("x", 7)).toBe("x/p007.txt");
+  });
+
+  it("carries no stale figure from the pre-withdrawal corpus", () => {
+    // 173 documents and 959 pages were the figures before a PPO case and seven
+    // discovery documents were withdrawn. They appear here only in the sentence
+    // explaining that they are stale.
+    const staleMentions = [...doc.matchAll(/\b(173 documents|959 pages)\b/g)];
+    for (const m of staleMentions) {
+      const context = doc.slice(Math.max(0, m.index! - 200), m.index! + 100);
+      expect(context, `"${m[0]}" appears without being marked as stale`).toMatch(/stale|older document/i);
     }
   });
 });
