@@ -58,6 +58,18 @@ jobs:
       - name: Merge Astro output into the site
         run: cp -r dist/. _site/
 
+      - name: Build the sitemap from the merged site
+        # AFTER the merge and BEFORE the deploy, deliberately. jekyll-sitemap
+        # ran inside the Jekyll build, before dist/ was merged in, so it could
+        # not see /answers/ and never listed it. Running here means the sitemap
+        # describes the tree that is actually being uploaded.
+        run: node scripts/build-sitemap.mjs _site --baseline _data/sitemap_baseline.txt
+
+      - name: Derive the IndexNow submission list from that sitemap
+        # Submitting a URL is a claim that the URL exists. The only honest
+        # source for that claim is the sitemap being deployed in this same run.
+        run: node scripts/build-indexnow.mjs _site
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:

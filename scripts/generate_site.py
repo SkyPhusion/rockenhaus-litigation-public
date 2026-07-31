@@ -16,9 +16,17 @@ HUB_PAGES_DIR = ROOT / "all-documents"
 DATA_DIR = ROOT / "_data"
 PDF_TEXT_DIR = DATA_DIR / "pdf_text"
 PARTIES_PATH = DATA_DIR / "parties.json"
-INDEXNOW_KEY_FILE = ROOT / "rockenhauslitigationindexnow2026.txt"
 EXCERPT_MAX_CHARS = 4000
-SITE_URL = "https://rockenhaus.net"
+
+# This generator no longer owns the IndexNow submission list, and no longer
+# owns any list of site URLs at all. Both are derived from the deployed
+# artifact now: scripts/build-sitemap.mjs walks the merged site and
+# scripts/build-indexnow.mjs reads the sitemap it wrote.
+#
+# The list that used to live here drifted from what the site publishes in both
+# directions. It kept naming the three pages deleted in PR #7 and re-submitted
+# them to Bing on every deploy for three weeks, and it omitted all 173 filed
+# PDFs, which are the record.
 
 
 def load_parties() -> dict:
@@ -73,26 +81,6 @@ CATEGORIES = {
     "orders": {"label": "Court orders", "seo_phrase": "court order", "sort": 4},
 }
 
-STATIC_URLS = [
-    "/",
-    "/faq/",
-    "/is-conrad-rockenhaus-dead/",
-    "/is-conrad-rockenhaus-dead/aadvantage-account-update/",
-    "/parties/",
-    "/disputed-domains/",
-    "/rockenhaus-com/",
-    "/lawflaws-com/",
-    "/fitspo-net/",
-    "/conrad-rockenhaus-podcast-interviews/",
-    "/skyphusion-com/",
-    "/retractions/",
-    "/retractions/adrienne-rockenhaus/",
-    "/retractions/rob-hein/",
-    "/all-documents/",
-    "/llms.txt",
-    "/robots.txt",
-    "/sitemap.xml",
-]
 
 RETRACTIONS_DATA_PATH = DATA_DIR / "retractions.json"
 
@@ -504,7 +492,6 @@ def main() -> None:
     case_list: list[dict] = []
     all_docs: list[dict] = []
     filed_docs: list[dict] = []
-    document_urls: list[str] = []
     document_count = 0
 
     for case_id, case_meta in sorted(CASES.items(), key=lambda x: x[1]["sort"]):
@@ -556,7 +543,6 @@ def main() -> None:
             )
 
             doc_url = f"/documents/{slug}/"
-            document_urls.append(doc_url)
             doc_entry = {
                 "title": heading,
                 "filename": filename,
@@ -609,26 +595,9 @@ def main() -> None:
 
     process_retraction_letters()
 
-    case_urls = [f"/cases/{c['id']}/" for c in case_list]
-    indexnow_urls = [f"{SITE_URL}{path}" for path in STATIC_URLS + case_urls + document_urls]
-    indexnow_key = INDEXNOW_KEY_FILE.read_text(encoding="utf-8").strip()
-    (DATA_DIR / "indexnow.json").write_text(
-        json.dumps(
-            {
-                "host": PUBLIC_RECORD["host"],
-                "key": indexnow_key,
-                "keyLocation": f"{SITE_URL}/{indexnow_key}.txt",
-                "urlList": indexnow_urls,
-            },
-            indent=2,
-        ),
-        encoding="utf-8",
-    )
-
     text_count = sum(1 for f in PDF_TEXT_DIR.glob("*.json") if json.loads(f.read_text()).get("char_count", 0) > 0)
     print(f"Generated {document_count} document pages in {DOCUMENTS_DIR}")
     print(f"Extracted text from {text_count} PDFs into {PDF_TEXT_DIR}")
-    print(f"Wrote {len(indexnow_urls)} URLs for IndexNow")
 
 
 if __name__ == "__main__":
