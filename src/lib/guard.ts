@@ -46,11 +46,36 @@ import denylist from "../../_data/metadata_denylist.json";
  * without the other. The case caption, the case numbers and the name Conrad Alan
  * Rockenhaus are in no denied tier: this is his court record.
  */
+interface Tier {
+  terms: string[];
+}
+
+/**
+ * The denylist JSON has heterogeneous values: string arrays for `_comment`,
+ * `ruling`, `scope` and `denied_tiers`, and tier objects for the rest. Reading
+ * a tier by name therefore needs a widening step, and it is done through
+ * `unknown` and a runtime check rather than a direct cast, which does not
+ * typecheck and would be a lie either way: the compiler cannot know a name in
+ * `denied_tiers` corresponds to a tier object, so something has to verify it.
+ * That something should fail loudly at build time rather than yield undefined.
+ */
+function tier(name: string): Tier {
+  const value = (denylist as unknown as Record<string, unknown>)[name];
+  if (!value || !Array.isArray((value as Tier).terms)) {
+    throw new Error(
+      `metadata_denylist.json: denied_tiers names "${name}", which is not a tier with a terms array.`,
+    );
+  }
+  return value as Tier;
+}
+
 const DENIED_TIERS: readonly string[] = denylist.denied_tiers;
 
-export const DENYLIST: readonly string[] = DENIED_TIERS.flatMap(
-  (tier) => (denylist as Record<string, { terms: string[] }>)[tier]!.terms,
-);
+if (DENIED_TIERS.length === 0) {
+  throw new Error("metadata_denylist.json: denied_tiers is empty; refusing to run a guard that cannot fail.");
+}
+
+export const DENYLIST: readonly string[] = DENIED_TIERS.flatMap((name) => tier(name).terms);
 
 export interface DenylistHit {
   term: string;
