@@ -1,0 +1,288 @@
+#!/usr/bin/env python3
+"""Fail the build if protected personal information reaches anything published.
+
+WHY THIS GATE RUNS BEFORE PUBLISH AND NOT AFTER
+
+MCR 1.109(D)(9) names the categories of protected personal identifying
+information that stay out of a public filing: Social Security numbers, dates of
+birth, financial account numbers, minors' names, home addresses. Upstream
+enforcement is uneven, and a document served between parties was never screened
+by a clerk at all, so the site cannot assume the documents it publishes arrived
+already scrubbed.
+
+The site is dedicated CC0, which invites mirrors. A mirror cannot be recalled.
+So there is no effective unpublish, and a scan that runs after publication is
+cleanup rather than a control. This runs before, and it fails closed: any hit
+stops the build.
+
+WHAT THIS FILE NEVER DOES
+
+It never prints a match, and by default it never prints a LOCATION either.
+
+Writing a suspected Social Security number into a CI log publishes it to
+everyone who can read the log, which is the defect rather than the report of it.
+So values are always masked. But this repository is public, so a CI log is
+itself a published document, and a failure naming file, page and pattern would
+be a public index of exactly where unredacted material sits: a worse disclosure
+than the one being reported. The default output is therefore counts by pattern
+and nothing else, which is all a build needs in order to stop. `--detail` prints
+locations and is for local runs, where the output is not published.
+
+The allowlist stores a salted hash rather than the value, and deliberately does
+not record which document a hash came from, for the same reason: accepting a
+false positive must never require writing the value, or a map to it, into a
+public repository.
+
+WHAT IT CAN AND CANNOT DO
+
+Shapes are mechanical and it finds them well: SSN, account-number, date-of-birth
+and street-address patterns. Minors' names are NOT mechanically detectable, and
+a list of them in a public repository would be the very disclosure being
+prevented. So the minor rule is inverted: it flags the CONTEXTS where MCR
+1.109(D)(9) requires initials and a full name appears anyway, which produces a
+short list a human reads. That is a prompt for review, not a proof of absence.
+
+Usage:
+  python3 scripts/check_pii.py <path> [<path> ...]     scan files or directories
+  python3 scripts/check_pii.py --self-test             prove the patterns fire
+"""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import re
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+ALLOWLIST_PATH = ROOT / "_data" / "pii_allowlist.json"
+
+# Salt for allowlist hashes. NOT a secret: it exists so that a hash in a public
+# file cannot be brute-forced back to a short value like a date of birth by
+# anyone who guesses the format. A per-repo constant is enough for that.
+HASH_SALT = "rockenhaus-pii-allowlist-v1"
+
+SCAN_SUFFIXES = {".txt", ".html", ".json", ".md", ".xml"}
+
+
+def digest(value: str) -> str:
+    return hashlib.sha256((HASH_SALT + value).encode("utf-8")).hexdigest()[:32]
+
+
+def mask(value: str) -> str:
+    """A match, rendered so the finding is actionable and the value is not."""
+    keep = 2 if len(value) > 6 else 1
+    return value[:keep] + "*" * max(3, len(value) - 2 * keep) + value[-keep:]
+
+
+# --- the patterns -----------------------------------------------------------
+#
+# Each carries the MCR 1.109(D)(9) category it serves. Ordered most specific
+# first so a finding names the narrowest rule that caught it.
+
+PATTERNS: list[tuple[str, re.Pattern[str], str]] = [
+    (
+        "ssn",
+        re.compile(r"(?<![\d-])\d{3}-\d{2}-\d{4}(?![\d-])"),
+        "Social Security number, hyphenated",
+    ),
+    (
+        "ssn_labelled",
+        re.compile(
+            r"(?:social security(?:\s+(?:number|no\.?|#))?|ssn|ss#)\s*[:#]?\s*(?:x{0,5}[-\s]?)?(\d[\d\s-]{6,})",
+            re.IGNORECASE,
+        ),
+        "digits following a Social Security label",
+    ),
+    (
+        "account_number",
+        re.compile(
+            r"(?:account|acct\.?|policy|routing|card)\s*(?:number|no\.?|#)?\s*[:#]?\s*(?:x{2,}[-\s]?)?(\d[\d\s-]{5,})",
+            re.IGNORECASE,
+        ),
+        "digits following a financial account label",
+    ),
+    (
+        "date_of_birth",
+        re.compile(
+            r"(?:date of birth|d\.?o\.?b\.?|born on|birth date)\s*[:#]?\s*"
+            r"(\d{1,2}[/-]\d{1,2}[/-]\d{2,4}|[A-Z][a-z]+ \d{1,2},? \d{4})",
+            re.IGNORECASE,
+        ),
+        "a date following a date-of-birth label",
+    ),
+    (
+        "street_address",
+        re.compile(
+            r"\b\d{2,6}\s+(?:[NSEW]\.?\s+)?[A-Z][A-Za-z.'-]*(?:\s+[A-Z][A-Za-z.'-]*){0,3}\s+"
+            r"(?:Street|St\.?|Avenue|Ave\.?|Road|Rd\.?|Drive|Dr\.?|Lane|Ln\.?|Court|Ct\.?|"
+            r"Boulevard|Blvd\.?|Way|Circle|Cir\.?|Place|Pl\.?|Terrace|Trail|Parkway|Pkwy\.?)"
+            r"(?![A-Za-z])",
+        ),
+        "a street address",
+    ),
+    (
+        "minor_named",
+        re.compile(
+            r"(?:minor child|minor children|the minor|my minor|our minor)[^.\n]{0,40}?"
+            r"\b([A-Z][a-z]{2,}\s+[A-Z][a-z]{2,})\b",
+        ),
+        "a full name in a minor-child context, where the rule requires initials",
+    ),
+]
+
+
+def load_allowlist() -> dict[str, dict]:
+    if not ALLOWLIST_PATH.exists():
+        return {}
+    data = json.loads(ALLOWLIST_PATH.read_text(encoding="utf-8"))
+    return {entry["hash"]: entry for entry in data.get("accepted", [])}
+
+
+def scan_text(text: str, path: str, allowed: dict[str, dict]) -> list[dict]:
+    findings = []
+    for name, pattern, description in PATTERNS:
+        for m in pattern.finditer(text):
+            value = (m.group(1) if m.groups() else m.group(0)).strip()
+            if not value:
+                continue
+            h = digest(value)
+            if h in allowed:
+                continue
+            line = text.count("\n", 0, m.start()) + 1
+            findings.append(
+                {
+                    "path": path,
+                    "line": line,
+                    "pattern": name,
+                    "description": description,
+                    "masked": mask(value),
+                    "hash": h,
+                }
+            )
+    return findings
+
+
+def files_under(target: Path) -> list[Path]:
+    if target.is_file():
+        return [target]
+    return [p for p in sorted(target.rglob("*")) if p.is_file() and p.suffix.lower() in SCAN_SUFFIXES]
+
+
+def self_test() -> int:
+    """Prove every pattern fires, and that ordinary record text does not.
+
+    A guard nobody has watched catch something is a guard nobody knows works.
+    The positives use invalid, obviously-synthetic values.
+    """
+    positives = [
+        ("ssn", "Respondent SSN 000-00-0000 appears in the exhibit."),
+        ("ssn_labelled", "Social Security Number: 000 00 0000"),
+        ("account_number", "USAA account no. 0000000000 was drawn on."),
+        ("date_of_birth", "Date of Birth: 01/01/1900"),
+        ("street_address", "served at 1234 Example Street, Detroit"),
+        ("minor_named", "the minor child Example Personname attends school"),
+    ]
+    negatives = [
+        "Case No. 26-104594-DO was filed on 2026-04-15.",
+        "MCR 2.302(B)(3) governs work product.",
+        "The motion filed 2026-07-02 alleges the account was misused.",
+        "Page 3 of 11, exhibit 12, ECF 44-1.",
+        "Wayne County Circuit Court (Third Judicial Circuit)",
+    ]
+
+    failures = []
+    for name, sample in positives:
+        hits = {f["pattern"] for f in scan_text(sample, "<self-test>", {})}
+        if name not in hits:
+            failures.append(f"pattern {name!r} did not fire on its own positive sample")
+    for sample in negatives:
+        hits = scan_text(sample, "<self-test>", {})
+        if hits:
+            failures.append(f"false positive on ordinary record text: {hits[0]['pattern']}")
+
+    if failures:
+        print("check_pii --self-test FAILED:", file=sys.stderr)
+        for f in failures:
+            print(f"  {f}", file=sys.stderr)
+        return 1
+    print(f"check_pii --self-test: {len(positives)} patterns fire, {len(negatives)} negative controls clean.")
+    return 0
+
+
+def main() -> int:
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    detail = "--detail" in sys.argv
+    if "--self-test" in sys.argv:
+        return self_test()
+
+    if not args:
+        print("Usage: check_pii.py <path> [<path> ...] | --self-test", file=sys.stderr)
+        return 2
+
+    allowed = load_allowlist()
+    findings: list[dict] = []
+    scanned = 0
+
+    for arg in args:
+        target = Path(arg)
+        if not target.exists():
+            print(f"check_pii: {arg} does not exist", file=sys.stderr)
+            return 2
+        for path in files_under(target):
+            scanned += 1
+            try:
+                text = path.read_text(encoding="utf-8", errors="replace")
+            except OSError as exc:
+                print(f"check_pii: cannot read {path}: {exc}", file=sys.stderr)
+                return 2
+            findings.extend(scan_text(text, str(path), allowed))
+
+    if scanned == 0:
+        print("check_pii: nothing was scanned. Refusing to report clean on an empty run.", file=sys.stderr)
+        return 2
+
+    if findings:
+        by_pattern: dict[str, int] = {}
+        for f in findings:
+            by_pattern[f["pattern"]] = by_pattern.get(f["pattern"], 0) + 1
+
+        print("::error::possible protected personal information in published content", file=sys.stderr)
+        print(f"\n{len(findings)} match(es) across {len({f['path'] for f in findings})} file(s):\n", file=sys.stderr)
+        for name, count in sorted(by_pattern.items(), key=lambda kv: -kv[1]):
+            print(f"  {count:5}  {name}", file=sys.stderr)
+
+        if detail:
+            print("\n--- locations (--detail) ---", file=sys.stderr)
+            for f in findings:
+                print(f"  {f['path']}:{f['line']}  [{f['pattern']}] match={f['masked']}  hash={f['hash']}", file=sys.stderr)
+        else:
+            print(
+                "\nLOCATIONS ARE NOT PRINTED HERE, and that is deliberate.\n"
+                "\n"
+                "This repository is public, so a CI log is a published document. A failure that\n"
+                "named the file, the page and the pattern would be a public index of exactly where\n"
+                "unredacted material sits, which is a worse disclosure than the one being reported.\n"
+                "The summary above is enough to know the build must stop.\n"
+                "\n"
+                "To see locations, run it locally, where the output is not published:\n"
+                "    python3 scripts/check_pii.py _corpus --detail\n"
+                "Values stay masked even then: printing one publishes it.",
+                file=sys.stderr,
+            )
+
+        print(
+            "\nA match is either real, and the SOURCE PDF must be redacted and the corpus rebuilt\n"
+            "before it can publish, or a false positive, accepted by adding its hash to\n"
+            "_data/pii_allowlist.json with a reason. Never paste a matched value anywhere.",
+            file=sys.stderr,
+        )
+        return 1
+
+    print(f"check_pii: {scanned} file(s) scanned against {len(PATTERNS)} patterns, no findings.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
