@@ -43,6 +43,35 @@ layout: default
     </div>
   </header>
 
+  {% if page.withheld_pages %}
+  {%- comment -%}
+    THE NOTICE THAT MAKES THIS REDACTION RATHER THAN FALSIFICATION.
+
+    An undisclosed removal from a published court record misrepresents the
+    record. A disclosed one is redaction, which is what courts do routinely.
+    The entire difference is whether a reader can see that a page is missing and
+    why, so this renders ABOVE the viewer rather than as a footnote: a reader
+    must meet it before they read a document that is not complete.
+
+    The page is withheld, never altered. Editing another party's filed pleading
+    is not something this site does.
+  {%- endcomment -%}
+  <aside class="document-withheld" role="note" aria-label="Withheld page notice">
+    <h2>Page {{ page.withheld_pages }} is withheld from this copy</h2>
+    <p>
+      This document was filed with {{ page.withheld_original_page_count }} pages.
+      {{ page.withheld_published_page_count }} are published here.
+      Page {{ page.withheld_pages }} is withheld: {{ page.withheld_reason }}
+    </p>
+    <p>{{ page.withheld_authority }}</p>
+    <p class="document-withheld__note">
+      The page is withheld in full rather than altered. The remaining pages are
+      reproduced exactly as filed, and the complete document remains part of the
+      court record. Withheld {{ page.withheld_on }}.
+    </p>
+  </aside>
+  {% endif %}
+
   <section class="document-viewer" aria-label="PDF viewer">
     <div id="pdf-viewer" class="pdf-viewer" data-pdf="{{ page.pdf_path | relative_url }}">
       <p class="pdf-viewer__loading">Loading document…</p>

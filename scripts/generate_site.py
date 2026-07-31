@@ -16,6 +16,7 @@ HUB_PAGES_DIR = ROOT / "all-documents"
 DATA_DIR = ROOT / "_data"
 PDF_TEXT_DIR = DATA_DIR / "pdf_text"
 PARTIES_PATH = DATA_DIR / "parties.json"
+WITHHELD_PATH = DATA_DIR / "withheld_pages.json"
 EXCERPT_MAX_CHARS = 4000
 
 # This generator no longer owns the IndexNow submission list, and no longer
@@ -34,6 +35,21 @@ def load_parties() -> dict:
 
 
 PARTIES = load_parties()
+
+
+def load_withheld() -> dict:
+    """Pages withheld from a published document, by slug.
+
+    Rendered as a visible notice. An undisclosed removal from a published court
+    record is falsification; a disclosed one is redaction, which is what courts
+    do routinely. The difference is entirely whether the reader can see it.
+    """
+    if not WITHHELD_PATH.is_file():
+        return {}
+    return json.loads(WITHHELD_PATH.read_text(encoding="utf-8")).get("documents", {})
+
+
+WITHHELD = load_withheld()
 PETITIONER = PARTIES["petitioner"]
 RESPONDENT = PARTIES["respondent"]
 PUBLIC_RECORD = PARTIES["public_record"]
@@ -175,6 +191,22 @@ def extract_pdf_text(pdf_path: Path) -> dict:
         "truncated": char_count > EXCERPT_MAX_CHARS,
         "char_count": char_count,
     }
+
+
+def withheld_front_matter(slug: str) -> str:
+    """Front-matter lines for a document with withheld pages, or nothing."""
+    w = WITHHELD.get(slug)
+    if not w:
+        return ""
+    pages = ", ".join(str(n) for n in w["withheld_pages"])
+    return (
+        f"\nwithheld_pages: {yaml_quote(pages)}"
+        f"\nwithheld_original_page_count: {w['original_page_count']}"
+        f"\nwithheld_published_page_count: {w['published_page_count']}"
+        f"\nwithheld_on: {yaml_quote(w['withheld_on'])}"
+        f"\nwithheld_reason: {yaml_quote(w['reason'])}"
+        f"\nwithheld_authority: {yaml_quote(w['authority'])}"
+    )
 
 
 def seo_document_title(heading: str, case: dict) -> str:
@@ -339,7 +371,7 @@ case_title: {yaml_quote(case["title"])}
 case_number: {yaml_quote(case["case_number"])}
 court: {yaml_quote(case["court"])}
 court_name: {yaml_quote(case["court_name"])}
-category: {yaml_quote(category)}
+category: {yaml_quote(category)}{withheld_front_matter(slug)}
 category_label: {yaml_quote(category_label)}
 pdf_path: {yaml_quote(relative_pdf)}
 filename: {yaml_quote(filename)}
