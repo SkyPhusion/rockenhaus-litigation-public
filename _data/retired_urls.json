@@ -29,6 +29,18 @@
       "status": 404,
       "retired_in": 7,
       "reason": "Third-party characterisation page. Deleted in PR #7. The slug itself is the characterisation, which is why a 301 that preserves its authority is the wrong answer."
+    },
+    {
+      "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit09bpa0629visitation/",
+      "status": 404,
+      "retired_in": 19,
+      "reason": "Withdrawn from the site on Conrad's instruction, 2026-07-31. The exhibit is a completed application form, and a labelled field on it carried protected personal identifying information of the kind MCR 1.109(D)(9) keeps out of a public filing. The document, its PDF and its extracted text were removed together: a partial removal leaves the same text served from another surface. Withdrawn from the site, not from the court record."
+    },
+    {
+      "path": "/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_09_BP_A0629_Visitation.pdf",
+      "status": 404,
+      "retired_in": 19,
+      "reason": "Withdrawn from the site on Conrad's instruction, 2026-07-31. The exhibit is a completed application form, and a labelled field on it carried protected personal identifying information of the kind MCR 1.109(D)(9) keeps out of a public filing. The document, its PDF and its extracted text were removed together: a partial removal leaves the same text served from another surface. Withdrawn from the site, not from the court record."
     }
   ]
 }

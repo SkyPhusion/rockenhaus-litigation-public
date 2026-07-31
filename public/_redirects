@@ -13,6 +13,14 @@
 /rob-hein/                              /404.html  404
 /prichards-air-conditioning-neo-nazi/   /404.html  404
 
+# Withdrawn 2026-07-31 on Conrad's instruction. A completed application form
+# filed as an exhibit; a labelled field on it carried protected personal
+# identifying information. The document, its PDF and its extracted text were
+# removed together, because a partial removal leaves a published document whose
+# text the site still serves from another surface.
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit09bpa0629visitation/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_09_BP_A0629_Visitation.pdf  /404.html  404
+
 # THE CATCH-ALL IS DELIBERATELY ABSENT.
 #
 # The general fix for the soft-404 behaviour is a final `/*  /404.html  404`
