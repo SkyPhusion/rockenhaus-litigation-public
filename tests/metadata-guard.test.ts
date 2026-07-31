@@ -22,6 +22,33 @@ import { DENYLIST, findDenylisted } from "../src/lib/guard";
 
 const ROOT = join(import.meta.dirname, "..");
 
+/** Front matter of every page source, keyed by path. */
+function frontMatters(): Array<[string, string, string]> {
+  const out: Array<[string, string, string]> = [];
+  const skip = new Set(["node_modules", "dist", "_site", "src", ".git", "docs", "tests", "scripts", "assets", "public"]);
+
+  function walk(dir: string, depth: number): void {
+    if (depth > 3) return;
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      if (entry.name.startsWith(".") || skip.has(entry.name)) continue;
+      const abs = join(dir, entry.name);
+      if (entry.isDirectory()) walk(abs, depth + 1);
+      else if (entry.name.endsWith(".html")) {
+        const text = readFileSync(abs, "utf8");
+        const m = /^---\n([\s\S]*?)\n---/.exec(text);
+        if (m) out.push([abs.slice(ROOT.length + 1), m[1]!, text]);
+      }
+    }
+  }
+  walk(ROOT, 0);
+  return out;
+}
+
+
+/** Every page source: [path, front matter, whole file]. */
+const pagesWithSource = frontMatters();
+
+
 const SCRIPT = "scripts/check_indexable_metadata.py";
 
 let dir: string;
@@ -309,29 +336,7 @@ describe("no denylisted term in Jekyll front matter", () => {
   ) as { denied_tiers: string[]; [tier: string]: unknown };
   const terms = denylist.denied_tiers.flatMap((t) => (denylist[t] as { terms: string[] }).terms);
 
-  /** Front matter of every page source, keyed by path. */
-  function frontMatters(): Array<[string, string]> {
-    const out: Array<[string, string]> = [];
-    const skip = new Set(["node_modules", "dist", "_site", "src", ".git", "docs", "tests", "scripts", "assets", "public"]);
-
-    function walk(dir: string, depth: number): void {
-      if (depth > 3) return;
-      for (const entry of readdirSync(dir, { withFileTypes: true })) {
-        if (entry.name.startsWith(".") || skip.has(entry.name)) continue;
-        const abs = join(dir, entry.name);
-        if (entry.isDirectory()) walk(abs, depth + 1);
-        else if (entry.name.endsWith(".html")) {
-          const text = readFileSync(abs, "utf8");
-          const m = /^---\n([\s\S]*?)\n---/.exec(text);
-          if (m) out.push([abs.slice(ROOT.length + 1), m[1]!]);
-        }
-      }
-    }
-    walk(ROOT, 0);
-    return out;
-  }
-
-  const pages = frontMatters();
+  const pages: Array<[string, string]> = pagesWithSource.map(([p, fm]) => [p, fm]);
 
   it("finds the page sources at all, so this cannot pass vacuously", () => {
     // The failure mode this guards: a path change makes the walk find nothing
@@ -353,6 +358,32 @@ describe("no denylisted term in Jekyll front matter", () => {
     expect(hits, `denylisted terms in front matter:\n${hits.join("\n")}`).toEqual([]);
   });
 
+  it("carries no denylisted LITERAL inside an inline JSON-LD block", () => {
+    // A SECOND BLIND SPOT, found the same way as the first. Front matter is not
+    // the only metadata a page source carries: several pages hand-write a
+    // <script type="application/ld+json"> block. The podcast page had the party
+    // name hardcoded in its JSON-LD `name`, and an ItemList enumerating
+    // accusations, none of which front matter could show.
+    //
+    // Liquid expressions are stripped before matching, because their VALUES
+    // cannot be known without rendering. So this catches hardcoded literals
+    // only, and a term arriving through {{ some.data.field }} still sails past.
+    // That is a real hole and the Python guard over built HTML is what closes
+    // it; this only shortens the loop on the machine where the edits are made.
+    const pattern = new RegExp(
+      terms.map((t) => `(?<![a-z0-9])${t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?![a-z0-9])`).join("|"),
+      "gi",
+    );
+    const hits: string[] = [];
+    for (const [path, , full] of pagesWithSource) {
+      for (const block of full.matchAll(/<script[^>]*application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)) {
+        const literalsOnly = block[1]!.replace(/\{\{[\s\S]*?\}\}/g, "").replace(/\{%[\s\S]*?%\}/g, "");
+        for (const m of literalsOnly.matchAll(pattern)) hits.push(`${path}: ${m[0]}`);
+      }
+    }
+    expect(hits, `denylisted literals in inline JSON-LD:\n${hits.join("\n")}`).toEqual([]);
+  });
+
   it("would catch a term reintroduced into a description", () => {
     // The control. Without it, a broken pattern would report clean.
     const pattern = new RegExp(
@@ -361,5 +392,99 @@ describe("no denylisted term in Jekyll front matter", () => {
     );
     expect("description: a demand served on Rob Hein".match(pattern)).not.toBeNull();
     expect("description: filings in Rockenhaus v. Rockenhaus".match(pattern)).toBeNull();
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Inline JSON-LD has to still be JSON.
+//
+// WHY THIS EXISTS. Removing a Person block from a hand-written JSON-LD array
+// leaves the PRECEDING element's comma behind, so the block renders as
+// "}, ]" and a structured-data consumer discards the ENTIRE block rather than
+// the element that was removed. Nothing else in this repository would notice:
+// the denylist guards look for terms, not for syntax, so a page could pass
+// every metadata check while publishing no usable structured data at all.
+//
+// That is not hypothetical. Both FAQPage removals in this change produced
+// exactly that, and it was caught by reading the diff rather than by any check,
+// which is precisely the reason to write one.
+// ---------------------------------------------------------------------------
+
+describe("removing a JSON-LD element does not orphan its comma", () => {
+  // THE DEFECT. Deleting an element from a hand-written JSON-LD array leaves
+  // the PRECEDING element's comma behind, so the block renders as "}, ]" and a
+  // structured-data consumer discards the ENTIRE block, not the element that
+  // was removed. Nothing else here would notice: the denylist guards look for
+  // terms, not syntax, so the page passes every metadata check while publishing
+  // no usable structured data at all.
+  //
+  // Both FAQPage removals in this change produced exactly that. It was caught
+  // by reading the diff, which is the reason to write a check instead.
+  //
+  // WHAT THIS DELIBERATELY DOES NOT DO: parse the block. A crude Liquid
+  // neutraliser cannot tell a bare output expression from one inside a string
+  // literal, and it renders `{% unless forloop.last %},{% endunless %}` as a
+  // bare comma, so a full parse reports failures on five files that are
+  // perfectly correct. A check that cries wolf gets ignored, and an ignored
+  // check is worse than none. This one is narrow enough to be exactly right:
+  // it looks only where an element was removed and left a comment behind.
+
+  const blocks: Array<[string, string]> = [];
+  for (const [path, , full] of pagesWithSource) {
+    for (const m of full.matchAll(/<script[^>]*application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)) {
+      blocks.push([path, m[1]!]);
+    }
+  }
+
+  /**
+   * Each Liquid comment, matched on its own.
+   *
+   * The first version of this check was a single regex spanning comma, comment
+   * and closing bracket. It reported a false positive: the lazy body ran past
+   * the nearest `endcomment` to a LATER one that happened to be followed by a
+   * bracket, so two unrelated comments in the same block looked like one. Two
+   * steps, no backtracking across comments.
+   */
+  const COMMENT = /\{%-?\s*comment\s*-?%\}[\s\S]*?\{%-?\s*endcomment\s*-?%\}/g;
+
+  /** Paths whose JSON-LD has a comma left dangling by a removed element. */
+  function orphanedIn(raw: string): boolean {
+    for (const m of raw.matchAll(COMMENT)) {
+      const before = raw.slice(0, m.index).trimEnd();
+      const after = raw.slice(m.index! + m[0].length).trimStart();
+      // A comma before AND a closing bracket after means the comment stands
+      // where the array's last element used to be, and its comma survived.
+      // A comment in the MIDDLE keeps its comma legitimately: an element still
+      // follows it, and firing there is the false positive that would make this
+      // check useless.
+      if (before.endsWith(",") && (after.startsWith("]") || after.startsWith("}"))) return true;
+    }
+    return false;
+  }
+
+  it("finds inline JSON-LD blocks to check, so this cannot pass vacuously", () => {
+    expect(blocks.length).toBeGreaterThan(2);
+  });
+
+  it("leaves no comma orphaned by a removed element", () => {
+    const orphaned = blocks.filter(([, raw]) => orphanedIn(raw)).map(([path]) => path);
+    expect(
+      orphaned,
+      `a JSON-LD element was removed but the preceding comma was left, so the whole block is invalid: ${orphaned.join(", ")}`,
+    ).toEqual([]);
+  });
+
+  it("would catch it, and does not fire on a correct removal", () => {
+    // The controls, written as the defect actually appeared.
+    const bad = `{ "about": [ { "@type": "Person" }, {%- comment -%} removed {%- endcomment -%} ] }`;
+    const good = `{ "about": [ { "@type": "Person" } {%- comment -%} removed {%- endcomment -%} ] }`;
+    const middle = `{ "about": [ { "@type": "A" }, {%- comment -%} removed {%- endcomment -%} { "@type": "B" } ] }`;
+    const twoComments = `{ "a": [ { "x": 1 }, {%- comment -%} one {%- endcomment -%} { "y": 2 } ] , "b": [ { "z": 3 } {%- comment -%} two {%- endcomment -%} ] }`;
+    expect(orphanedIn(bad)).toBe(true);
+    expect(orphanedIn(good)).toBe(false);
+    expect(orphanedIn(middle)).toBe(false);
+    // The regression control for this check's OWN bug: two comments in one
+    // block, the first legitimate, must not be joined into a false positive.
+    expect(orphanedIn(twoComments)).toBe(false);
   });
 });
