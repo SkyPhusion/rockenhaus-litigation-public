@@ -7,15 +7,15 @@
     "dpi": 300,
     "min_confidence": 60
   },
-  "documents": 104,
-  "total_pages": 429,
-  "pages_native_text": 393,
+  "documents": 105,
+  "total_pages": 440,
+  "pages_native_text": 404,
   "pages_ocr_text": 29,
-  "pages_with_text": 422,
+  "pages_with_text": 433,
   "pages_without_text": 7,
   "coverage_pct": 98.4,
-  "native_coverage_pct": 91.6,
-  "total_chars": 1139187,
+  "native_coverage_pct": 91.8,
+  "total_chars": 1173535,
   "documents_with_no_text_layer": [],
   "documents_partially_scanned": [
     {
