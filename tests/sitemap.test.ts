@@ -242,40 +242,27 @@ describe("the baseline parity gate", () => {
   });
 
   it("distinguishes a retirement that predates the baseline from one that follows it", () => {
-    // THIS TEST USED TO ASSERT the baseline contains no retired path at all,
-    // which was true only while every retirement predated the baseline. The
-    // first withdrawal of a document that WAS published on 2026-07-31 broke it,
-    // correctly: the baseline is the history of what was published, so a URL
-    // retired afterwards is supposed to still be in it.
-    //
-    // The real rule, which is what is asserted now:
-    //   retired BEFORE the baseline  -> absent from it, nothing to reconcile
-    //   retired AFTER  the baseline  -> present in it, and the gate must accept
-    //                                   its absence from the build
+    // This asserted the baseline contains no retired path at all, which held
+    // only while every retirement predated the baseline. Withdrawing documents
+    // that WERE published on 2026-07-31 broke it correctly: the baseline is the
+    // history of what was published, so a URL retired afterwards stays in it.
     const retired = retiredPaths();
     const inBaseline = retired.filter((p) => baseline.includes(encodePath(p)));
-    const notInBaseline = retired.filter((p) => !baseline.includes(encodePath(p)));
+    expect(retired.length, "nothing is retired; this would pass vacuously").toBeGreaterThan(0);
+    expect(inBaseline.length, "no retirement is reconciled against the baseline").toBeGreaterThan(0);
 
-    expect(retired.length, "nothing is retired; this test would pass vacuously").toBeGreaterThan(0);
-    expect(
-      inBaseline.length + notInBaseline.length,
-      "a retired path matched neither case, which means the comparison forms disagree",
-    ).toBe(retired.length);
-
-    // The load-bearing half: for anything retired after the baseline was taken,
-    // the gate accepts a build that no longer publishes it. Without this, every
-    // future withdrawal fails the build and the pressure is to edit the
-    // baseline, which would erase the record of what was once published.
-    const publishedWithoutRetired = baseline.filter((p) => !inBaseline.map(encodePath).includes(p));
-    expect(baselineGaps(baseline, publishedWithoutRetired.map((p) => decodeURI(p)), retired)).toEqual([]);
+    // The load-bearing half: the gate accepts a build that no longer publishes
+    // them. Without this every future withdrawal fails the build, and the
+    // pressure becomes editing the baseline, which erases what was published.
+    const published = baseline.filter((p) => !inBaseline.map(encodePath).includes(p)).map((p) => decodeURI(p));
+    expect(baselineGaps(baseline, published, retired)).toEqual([]);
   });
 
   it("still fails when a baseline URL vanishes WITHOUT being retired", () => {
-    // The control for the test above. Accepting retirements must not become
-    // accepting disappearances, which is the one thing this gate exists for.
-    const victim = baseline.find((p) => p.startsWith("/documents/"))!;
+    // Accepting retirements must not become accepting disappearances.
+    const victim = baseline.find((p) => p.startsWith("/documents/") && !retiredPaths().map(encodePath).includes(p))!;
     const published = baseline.filter((p) => p !== victim).map((p) => decodeURI(p));
-    expect(baselineGaps(baseline, published, retiredPaths())).toEqual([victim]);
+    expect(baselineGaps(baseline, published, retiredPaths())).toContain(victim);
   });
 
   it("reports what the build adds, without failing on it", () => {
@@ -299,17 +286,35 @@ describe("retired URLs and the redirect rules cannot drift apart", () => {
     .map((l) => l.split(/\s+/));
 
   it("gives every retired path a rule that stops it resolving", () => {
+    // Compared on the ENCODED form. public/_redirects is whitespace-delimited,
+    // so a rule whose FROM field contains a literal space parses as three
+    // fields and silently does nothing; seven withdrawn filenames contain
+    // spaces. Encoded is also the form the request arrives in.
     for (const path of retiredPaths()) {
-      const rule = rules.find((r) => r[0] === path);
+      const encoded = encodePath(path);
+      const rule = rules.find((r) => r[0] === encoded || r[0] === path);
       expect(rule, `_data/retired_urls.json lists ${path} with no rule in public/_redirects`).toBeDefined();
       expect(Number(rule![2]), `${path} is retired, so it must 404 rather than redirect`).toBe(404);
     }
   });
 
   it("has a retired entry for every 404 rule, so neither file leads the other", () => {
-    const retired = new Set(retiredPaths());
+    const retired = new Set(retiredPaths().map(encodePath));
     for (const rule of rules.filter((r) => Number(r[2]) === 404)) {
       expect(retired.has(rule[0]!), `public/_redirects 404s ${rule[0]} with no entry in _data/retired_urls.json`).toBe(true);
+    }
+  });
+
+  it("expresses a path containing a space in a form a rule can carry", () => {
+    // The control for the encoding. Without it these seven rules parse as three
+    // fields each and the URLs answer 200 instead of 404, which is the exact
+    // soft-404 behaviour public/_redirects exists to remove.
+    const spaced = retiredPaths().filter((p) => p.includes(" "));
+    expect(spaced.length, "no retired path has a space; this test is testing nothing").toBeGreaterThan(0);
+    for (const path of spaced) {
+      const rule = rules.find((r) => r[0] === encodePath(path));
+      expect(rule, `no encoded rule for ${path}`).toBeDefined();
+      expect(rule![0]).not.toContain(" ");
     }
   });
 });

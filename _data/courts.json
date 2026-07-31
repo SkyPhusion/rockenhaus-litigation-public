@@ -14,17 +14,6 @@
   ],
   "cases": [
     {
-      "id": "wayne_ppo_26-102221-PP",
-      "title": "Rockenhaus v. Rockenhaus (PPO)",
-      "short_title": "Wayne County PPO",
-      "court": "Wayne County Circuit Court (Third Judicial Circuit)",
-      "case_number": "26-102221-PP",
-      "matter": "Personal Protection Order (PPO)",
-      "role": "Respondent, pro se",
-      "sort": 1,
-      "court_name": "Wayne County Circuit Court (Third Judicial Circuit)"
-    },
-    {
       "id": "wayne_do_26-104594-DO",
       "title": "Rockenhaus v. Rockenhaus (Divorce)",
       "short_title": "Wayne County Divorce",

@@ -38,3 +38,163 @@
 # still returns its own content and 200, and only then confirm that an unknown
 # path returns 404. Checking the unknown path alone proves nothing, because a
 # rule that breaks every page also makes unknown paths 404.
+
+
+# ---------------------------------------------------------------------------
+# Withdrawn 2026-07-31. Three groups, one operation:
+#
+#   the Wayne County PPO case 26-102221-PP, which is outside the site's scope
+#   seven discovery documents, served between the parties and never filed
+#   one filed document carrying protected personal identifying information
+#
+# Reasons per URL are in _data/retired_urls.json. 404 and not 301: whatever
+# authority these URLs hold is authority for material the site no longer
+# publishes, and a redirect would carry it onto a page that does.
+#
+# One rule per URL rather than a wildcard. Pages evaluates these in order, and a
+# wildcard over /documents/ or over a case directory could shadow a surviving
+# filing; an explicit list cannot.
+#
+# PATHS ARE PERCENT-ENCODED. This file is whitespace-delimited, so a FROM field
+# containing a literal space parses as three fields and the rule is malformed:
+# the URL then never 404s, it falls through to the catch-all behaviour and
+# answers 200. Seven of these filenames contain spaces. Encoded is also the form
+# the request actually arrives in.
+# ---------------------------------------------------------------------------
+/documents/waynedo26-104594-do-discovery-defendantsinterrogatoriesfirstset2026-04-16/  /404.html  404
+/wayne_do_26-104594-DO/discovery/Defendants_Interrogatories_First_Set_2026-04-16.pdf  /404.html  404
+/documents/waynedo26-104594-do-discovery-defendantsrequestsforadmissionsfirstset2026-04-16/  /404.html  404
+/wayne_do_26-104594-DO/discovery/Defendants_Requests_for_Admissions_First_Set_2026-04-16.pdf  /404.html  404
+/documents/waynedo26-104594-do-discovery-defendantsrequestsforproductionfirstset2026-04-16/  /404.html  404
+/wayne_do_26-104594-DO/discovery/Defendants_Requests_for_Production_First_Set_2026-04-16.pdf  /404.html  404
+/documents/waynedo26-104594-do-discovery-interrogatoriesfirstset2026-04-16/  /404.html  404
+/wayne_do_26-104594-DO/discovery/Interrogatories_First_Set_2026-04-16.pdf  /404.html  404
+/documents/waynedo26-104594-do-discovery-plaintiffsfirstresponsestorequestsforadmissions2026-05-13/  /404.html  404
+/wayne_do_26-104594-DO/discovery/Plaintiffs_First_Responses_to_Requests_for_Admissions_2026-05-13.pdf  /404.html  404
+/documents/waynedo26-104594-do-discovery-requestsforadmissionsfirstset2026-04-16/  /404.html  404
+/wayne_do_26-104594-DO/discovery/Requests_for_Admissions_First_Set_2026-04-16.pdf  /404.html  404
+/documents/waynedo26-104594-do-discovery-requestsforproductionfirstset2026-04-16/  /404.html  404
+/wayne_do_26-104594-DO/discovery/Requests_for_Production_First_Set_2026-04-16.pdf  /404.html  404
+/documents/waynedo26-104594-do-opposing-01waynedivorcecomplaint/  /404.html  404
+/wayne_do_26-104594-DO/opposing/01_wayne_divorce_complaint.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-01motiontoterminateppocombined2026-03-12/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/01_Motion_to_Terminate_PPO_Combined_2026-03-12.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-02propertyshowcause2026-04-09/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/02_Property_Show_Cause_2026-04-09.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-03motiondenyfalseppoviolationclaims2026-04-10/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/03_Motion_Deny_False_PPO_Violation_Claims_2026-04-10.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-04supplementalmotionfcimilanphotomailing2026-04-12/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/04_Supplemental_Motion_FCI_Milan_Photo_Mailing_2026-04-12.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-05showcauseresponse2026-04-16/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/05_Show_Cause_Response_2026-04-16.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-06noticeofjudicialnoticeforhearing2026-04-22/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/06_Notice_of_Judicial_Notice_for_Hearing_2026-04-22.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-07motionforissuanceofsubpoenahelgren2026-04-24/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/07_Motion_for_Issuance_of_Subpoena_Helgren_2026-04-24.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-08proofofservice2026-04-25/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/08_Proof_of_Service_2026-04-25.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-09supplementtomotiontoterminatetwitterevidence2026-04-26/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/09_Supplement_to_Motion_to_Terminate_Twitter_Evidence_2026-04-26.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-10noticeofupdatedcontactinformation2026-05-05/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/10_Notice_of_Updated_Contact_Information_2026-05-05.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-11motiontocompelcompliancemcr37072026-05-06/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/11_Motion_to_Compel_Compliance_MCR_3707_2026-05-06.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-12aexhibitcoverssecondsupplementalmotion2026-05-06/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/12a_Exhibit_Covers_Second_Supplemental_Motion_2026-05-06.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-12secondsupplementalmotionfacebookpost2026-05-06/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/12_Second_Supplemental_Motion_Facebook_Post_2026-05-06.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-13motiontrousaadivertedbenefits2026-05-07/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/13_Motion_TRO_USAA_Diverted_Benefits_2026-05-07.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-13noticeofwithdrawalofsubpoenamotion2026-05-07/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/13_Notice_of_Withdrawal_of_Subpoena_Motion_2026-05-07.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-14noticeofwithdrawalofsubpoenamotion2026-05-07/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/14_Notice_of_Withdrawal_of_Subpoena_Motion_2026-05-07.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-15noticeoffilinghelgrenmaysupplemental2026-05-19/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/15_Notice_of_Filing_Helgren_May_Supplemental_2026-05-19.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-16noticeofchangeofaddress2026-07-02/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/16_Notice_of_Change_of_Address_2026-07-02.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-17noticeofwithdrawalmotiontoterminateppo2026-07-02/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/17_Notice_of_Withdrawal_Motion_to_Terminate_PPO_2026-07-02.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-cosepraecipesubpoenamotion42926/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/CoS_ePraecipe_Subpoena_Motion_4_29_26.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-00exhibitindex/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/00_Exhibit_Index.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit01feb9emailberente/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_01_Feb9_Email_Berente.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit02feb12emailberente/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_02_Feb12_Email_Berente.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit03poarevocation/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_03_POA_Revocation.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit04valentinesdaypost/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_04_Valentines_Day_Post.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit05rossdrlease/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_05_Ross_Dr_Lease.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit06orderaltservice/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_06_Order_Alt_Service.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit07wootennonservice/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_07_Wooten_NonService.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit08redfordpdreport/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_08_Redford_PD_Report.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit10dec222025letter/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_10_Dec22_2025_Letter.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit11vapaymenthistory/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_11_VA_Payment_History.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit12howellaffidavit/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_12_Howell_Affidavit.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit13noticeofrelease/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_13_Notice_of_Release.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit14rockenhausaffidavit/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_14_Rockenhaus_Affidavit.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit15helgrenaffidavit/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_15_Helgren_Affidavit.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit16chavousaffidavit/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_16_Chavous_Affidavit.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit17connoraffidavit/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_17_Connor_Affidavit.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit18counterexhibitj/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_18_Counter_Exhibit_J.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-exhibits-exhibit19helgrenfamilygroup/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Exhibits/Exhibit_19_Helgren_Family_Group.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-jc46/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/jc46.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-proof-of-nonservice-ppo-termination/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Proof%20of%20Nonservice%20PPO%20Termination.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-rockenhausaffidavitppohearingnotarized/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Rockenhaus_Affidavit_PPO_Hearing_Notarized.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-filed-supplementalaffidavitfornotary/  /404.html  404
+/wayne_ppo_26-102221-PP/filed/Supplemental_Affidavit_for_Notary.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-opposing-01ex-parte-ppo-petition-filedrockenhaus/  /404.html  404
+/wayne_ppo_26-102221-PP/opposing/01_EX%20PARTE%20PPO%20Petition,%20Filed_Rockenhaus.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-opposing-02ppopetmotiontoshowcause/  /404.html  404
+/wayne_ppo_26-102221-PP/opposing/02_ppo_pet_motion_to_show_cause.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-opposing-03appopetreponsetomotiontoterminatept1/  /404.html  404
+/wayne_ppo_26-102221-PP/opposing/03a_ppo_pet_reponse_to_motion_to_terminate_pt_1.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-opposing-03bppopetreponsetomotiontoterminatept2/  /404.html  404
+/wayne_ppo_26-102221-PP/opposing/03b_ppo_pet_reponse_to_motion_to_terminate_pt_2.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-opposing-03cppopetreponsetomotiontoterminatept3/  /404.html  404
+/wayne_ppo_26-102221-PP/opposing/03c_ppo_pet_reponse_to_motion_to_terminate_pt_3.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-opposing-03dppopetreponsetomotiontoterminatept4/  /404.html  404
+/wayne_ppo_26-102221-PP/opposing/03d_ppo_pet_reponse_to_motion_to_terminate_pt_4.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-opposing-03eppopetreponsetomotiontoterminatept5/  /404.html  404
+/wayne_ppo_26-102221-PP/opposing/03e_ppo_pet_reponse_to_motion_to_terminate_pt_5.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-opposing-03ppopetreponsetomotiontoterminate/  /404.html  404
+/wayne_ppo_26-102221-PP/opposing/03_ppo_pet_reponse_to_motion_to_terminate.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-opposing-aldrichproofofserviceppo2026-04-14/  /404.html  404
+/wayne_ppo_26-102221-PP/opposing/Aldrich_Proof_of_Service_PPO_2026-04-14.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-opposing-proof-of-service-2-orders/  /404.html  404
+/wayne_ppo_26-102221-PP/opposing/Proof%20of%20Service%202%20-%20Orders.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-opposing-rockenhaus-ppo-stipulated-order-to-withdraw-as-counsel/  /404.html  404
+/wayne_ppo_26-102221-PP/opposing/ROCKENHAUS%20PPO-%20Stipulated%20Order%20to%20Withdraw%20as%20Counsel.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-orders-esig-order-regarding-alternate-service-for-ppo-only/  /404.html  404
+/wayne_ppo_26-102221-PP/orders/eSig%20Order%20Regarding%20Alternate%20Service%20for%20PPO%20Only.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-orders-ppopetordermotiontoshowcause/  /404.html  404
+/wayne_ppo_26-102221-PP/orders/ppo_pet_order_motion_to_show_cause.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-orders-reassignmentfromabraham2026-04-30/  /404.html  404
+/wayne_ppo_26-102221-PP/orders/Reassignment_from_Abraham_2026-04-30.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-orders-reassignmenttoabraham2026-04-14/  /404.html  404
+/wayne_ppo_26-102221-PP/orders/Reassignment_to_Abraham_2026-04-14.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-orders-tc-order-following-42926-motion-hearings/  /404.html  404
+/wayne_ppo_26-102221-PP/orders/TC-Order%20Following%204.29.26%20Motion%20Hearings.pdf  /404.html  404
+/documents/wayneppo26-102221-pp-orders-tc-order-to-withdraw/  /404.html  404
+/wayne_ppo_26-102221-PP/orders/TC-Order%20to%20Withdraw.pdf  /404.html  404
+/cases/wayne_ppo_26-102221-PP/  /404.html  404
