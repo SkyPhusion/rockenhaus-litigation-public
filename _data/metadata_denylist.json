@@ -15,6 +15,24 @@
     "agree, so the two cannot drift apart again."
   ],
 
+  "ruling": [
+    "CONRAD, 2026-07-31: indexable metadata names the CASE, not PEOPLE.",
+    "",
+    "Parties and non-parties alike stay out of <title>, descriptions and JSON-LD.",
+    "The body and the filings still name whoever they name; nothing about the",
+    "record changes.",
+    "",
+    "His reasoning, kept verbatim because it is what generalises to the cases he",
+    "did not anticipate: a handle is an identifier rather than a characterisation,",
+    "so naming her in the record is legitimate. Stuffing that handle into 177 page",
+    "titles is not naming her in the record, it is SEO-targeting a person, which",
+    "is structurally the same move as her site targeting his name. That is what",
+    "makes a site read as an attack site whether or not every word is true.",
+    "",
+    "So the test for a new term is not is-it-true and not is-she-a-party. It is:",
+    "does this string identify a PERSON, and is it in metadata? Then it is out."
+  ],
+
   "scope": [
     "INDEXABLE METADATA ONLY: <title>, <meta name=description>, and every string",
     "inside a JSON-LD block. Deliberately NOT page bodies. Exhibit pages quote",
@@ -24,11 +42,14 @@
     "artifact."
   ],
 
+  "denied_tiers": ["third_party", "opposing_party"],
+
   "third_party": {
     "_why": [
-      "Tier A. People who are NOT parties to any of these cases. A non-party has",
-      "no reason to appear in the metadata of a court-record site at all, and a",
-      "name in a title is pure ranking signal and nothing else."
+      "Tier A. People who are NOT parties to any of these cases, plus the",
+      "characterisations attached to them. A non-party has no reason to appear in",
+      "the metadata of a court-record site at all, and a name in a title is pure",
+      "ranking signal and nothing else."
     ],
     "terms": [
       "neo-nazi",
@@ -48,32 +69,48 @@
     ]
   },
 
-  "party_handles": {
+  "opposing_party": {
     "_why": [
-      "Tier B. The opposing party IS a party: her name belongs in the caption, in",
-      "metadata, and on document pages, because the case is named for her. Her",
-      "social handle is a different thing. It carries no docket meaning and its",
-      "only function in a title is to rank for it, which is the pattern this",
-      "rebuild is removing.",
+      "Tier B, and the tier the ruling above rewrote. It was called",
+      "`party_handles` and held one term, `adezero`, on the argument that her NAME",
+      "belonged in metadata because the case is named for her and only the handle",
+      "was a bare ranking token.",
       "",
-      "How far a filing-sourced allegation about a party may go on an indexable",
-      "page is Conrad ruling R1 and is NOT decided here. This entry only keeps a",
-      "handle out of metadata; it says nothing about page bodies."
+      "That argument is now overruled, and the distinction it drew is gone: her",
+      "name, her aliases and her handle are all out of metadata together, because",
+      "all four identify a person and metadata names the case. The case caption",
+      "`Rockenhaus v. Rockenhaus` still names the case, and both parties share that",
+      "surname, so nothing is lost by naming the case instead of the person.",
+      "",
+      "The tier is kept SEPARATE from Tier A rather than merged into it, because",
+      "the two rest on different arguments and a future ruling could move one",
+      "without the other. She is a party; the Tier A names are not."
     ],
     "terms": [
-      "adezero"
+      "adezero",
+      "adrienne rockenhaus",
+      "adrienne blair",
+      "adrienne hein"
     ]
   },
 
   "allowed": {
     "_why": [
-      "Recorded so that nobody later mistakes these for oversights. The site is",
-      "SUPPOSED to rank for them: they are the case caption and the parties of",
-      "record."
+      "Recorded so that nobody later mistakes these for oversights.",
+      "",
+      "The case caption and the case numbers are what the ruling says metadata is",
+      "FOR, so they are not merely tolerated, they are the intended content.",
+      "",
+      "ONE INFERENCE, FLAGGED RATHER THAN BURIED. Conrad's ruling says `parties and",
+      "non-parties alike` stay out, and he is a party, so read at its most literal",
+      "his own name would be denied too. It is kept allowed here because the",
+      "reasoning he gave is about SEO-targeting a person, and a site cannot target",
+      "its owner in that sense: this is his own court record, and ranking for his",
+      "own name against pages attacking it is the reason the site exists. If that",
+      "reading is wrong, the correction is one line in this file and nothing else."
     ],
     "terms": [
       "Conrad Alan Rockenhaus",
-      "Adrienne Rockenhaus",
       "Rockenhaus v. Rockenhaus",
       "26-104594-DO",
       "26-102221-PP",

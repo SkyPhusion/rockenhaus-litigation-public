@@ -115,6 +115,8 @@ layout: default
     </dl>
   </section>
 
+{% assign case_subject = page.case_title | append: ", Case " | append: page.case_number %}
+{% capture case_subject_url %}{{ site.url }}{{ site.baseurl }}/cases/{{ page.case_id }}/{% endcapture %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -136,21 +138,30 @@ layout: default
       "caseNumber": {{ page.case_number | jsonify }},
       "court": {
         "@type": "Courthouse",
-        "name": {{ page.court | jsonify }}
+        "name": {{ page.court_name | default: page.court | jsonify }}
       }
     },
     "about": [
+      {%- comment -%}
+        WHAT THIS PAGE IS ABOUT: the case.
+
+        This slot used to hold a Person block naming the opposing party with her
+        two aliases and her social handle as alternateName, on all 173 document
+        pages and all three case pages. In machine-readable form that told every
+        search engine "this page is about <person>, also known as <alias>,
+        <alias>, <handle>", which is SEO-targeting a person rather than
+        publishing a record, and structured data is the worst place for it
+        because a search engine reads it as a claim rather than as prose.
+
+        Conrad's 2026-07-31 ruling: indexable metadata names the CASE, not
+        PEOPLE. The case caption names the case, and both parties share the
+        surname, so nothing identifying is lost. The page BODY still names her,
+        and the filings still say whatever they say.
+      {%- endcomment -%}
       {
-        "@type": "Person",
-        "name": {{ site.data.parties.petitioner.name | jsonify }},
-        "alternateName": [
-          {% for alias in site.data.parties.petitioner.aliases %}
-          {{ alias | jsonify }}{% unless forloop.last %},{% endunless %}
-          {% endfor %}{% if site.data.parties.petitioner.handles.size > 0 %},{% endif %}
-          {% for handle in site.data.parties.petitioner.handles %}
-          {{ handle | jsonify }}{% unless forloop.last %},{% endunless %}
-          {% endfor %}
-        ]
+        "@type": "Thing",
+        "name": {{ case_subject | jsonify }},
+        "url": {{ case_subject_url | jsonify }}
       },
       {
         "@type": "Person",

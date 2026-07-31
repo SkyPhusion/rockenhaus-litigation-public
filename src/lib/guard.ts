@@ -34,17 +34,23 @@ import denylist from "../../_data/metadata_denylist.json";
  * Terms that must never appear in indexable metadata. Matched case-insensitively
  * on word-ish boundaries so that ordinary prose cannot trip them by accident.
  *
- * Two tiers, unioned here because the rule for metadata is the same for both.
- * They are kept apart in the data file because they rest on different arguments:
- * a non-party has no business in the metadata of a court record at all, whereas
- * the HANDLE of a party is excluded only because it is a ranking token carrying
- * no docket meaning. The name Conrad Alan Rockenhaus and the case numbers are in
- * neither list: this is his court record and is supposed to rank for those.
+ * WHICH TIERS APPLY IS DATA, NOT CODE. `denied_tiers` in the JSON names them.
+ * The previous version hardcoded `third_party` and `party_handles` here and in
+ * the Python, so Conrad's 2026-07-31 ruling, which renamed one tier and widened
+ * it, would have been a four-file change of which two files could be forgotten.
+ * Now a tier is added, renamed or retired in the data file alone.
+ *
+ * The tiers are unioned because the rule for metadata is the same for all of
+ * them: metadata names the CASE, not PEOPLE. They stay separate in the data file
+ * because they rest on different arguments and a future ruling could move one
+ * without the other. The case caption, the case numbers and the name Conrad Alan
+ * Rockenhaus are in no denied tier: this is his court record.
  */
-export const DENYLIST: readonly string[] = [
-  ...denylist.third_party.terms,
-  ...denylist.party_handles.terms,
-];
+const DENIED_TIERS: readonly string[] = denylist.denied_tiers;
+
+export const DENYLIST: readonly string[] = DENIED_TIERS.flatMap(
+  (tier) => (denylist as Record<string, { terms: string[] }>)[tier]!.terms,
+);
 
 export interface DenylistHit {
   term: string;

@@ -21,7 +21,8 @@
       "case_number": "26-102221-PP",
       "matter": "Personal Protection Order (PPO)",
       "role": "Respondent, pro se",
-      "sort": 1
+      "sort": 1,
+      "court_name": "Wayne County Circuit Court (Third Judicial Circuit)"
     },
     {
       "id": "wayne_do_26-104594-DO",
@@ -31,7 +32,8 @@
       "case_number": "26-104594-DO",
       "matter": "Divorce",
       "role": "Defendant, pro se",
-      "sort": 2
+      "sort": 2,
+      "court_name": "Wayne County Circuit Court (Third Judicial Circuit)"
     },
     {
       "id": "washtenaw_do_26-737-DO",
@@ -41,13 +43,30 @@
       "case_number": "26-737-DO",
       "matter": "Divorce",
       "role": "Plaintiff, pro se",
-      "sort": 3
+      "sort": 3,
+      "court_name": "Washtenaw County Circuit Court (22nd Circuit)"
     }
   ],
   "categories": [
-    { "id": "filed", "label": "Filed by Conrad", "sort": 1 },
-    { "id": "discovery", "label": "Discovery", "sort": 2 },
-    { "id": "opposing", "label": "Opposing party", "sort": 3 },
-    { "id": "orders", "label": "Court orders", "sort": 4 }
+    {
+      "id": "filed",
+      "label": "Filed by Conrad",
+      "sort": 1
+    },
+    {
+      "id": "discovery",
+      "label": "Discovery",
+      "sort": 2
+    },
+    {
+      "id": "opposing",
+      "label": "Opposing party",
+      "sort": 3
+    },
+    {
+      "id": "orders",
+      "label": "Court orders",
+      "sort": 4
+    }
   ]
 }

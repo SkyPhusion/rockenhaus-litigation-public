@@ -58,13 +58,26 @@ DENYLIST_PATH = ROOT / "_data" / "metadata_denylist.json"
 def load_terms() -> list[str]:
     """The single denylist, shared with src/lib/guard.ts.
 
-    Both tiers apply: a non-party has no business in the metadata of a court
-    record, and the handle of a party is a ranking token with no docket meaning.
-    Tier membership is an argument about WHY a term is listed, not a difference
-    in how metadata is treated.
+    WHICH TIERS APPLY IS DATA, NOT CODE. `denied_tiers` in the JSON names them,
+    and guard.ts reads the same key. This used to hardcode `third_party` and
+    `party_handles` in both files, so Conrad's 2026-07-31 ruling, which renamed a
+    tier and widened it, would have been a change in four places of which two
+    could be forgotten and neither would have failed loudly.
+
+    Every denied tier applies identically. Tier membership is an argument about
+    WHY a term is listed, not a difference in how metadata is treated: metadata
+    names the CASE, not PEOPLE.
     """
     data = json.loads(DENYLIST_PATH.read_text(encoding="utf-8"))
-    return list(data["third_party"]["terms"]) + list(data["party_handles"]["terms"])
+    tiers = data["denied_tiers"]
+    if not tiers:
+        raise SystemExit("denylist has no denied_tiers; refusing to run a guard that cannot fail")
+    terms: list[str] = []
+    for tier in tiers:
+        if tier not in data:
+            raise SystemExit(f"denied_tiers names {tier!r}, which is not in the denylist")
+        terms.extend(data[tier]["terms"])
+    return terms
 
 
 TERMS = load_terms()
