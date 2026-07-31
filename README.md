@@ -1,8 +1,10 @@
-# Rockenhaus litigation site (private build repo)
+# Rockenhaus litigation site (build repo)
 
 **Public front door:** [https://rockenhaus.net/](https://rockenhaus.net/) (also served at [https://litigation.rockenhaus.net/](https://litigation.rockenhaus.net/))
 
-This private GitHub repository exists only to build and deploy that site. Visitors, search engines, and citations should use **rockenhaus.net** as the canonical URL. The repo is private; there is no public source link on the rendered site.
+This repository builds and deploys that site. Visitors, search engines, and citations should use **rockenhaus.net** as the canonical URL.
+
+**This repository is public.** It was transferred into the `skyphusion-labs` organisation on 2026-07-30. Earlier revisions of this file described it as private, which was true then and is not now; if you are reading a copy that still says so, it is out of date.
 
 Maintained pro se by Conrad Alan Rockenhaus for active state-court litigation in Michigan.
 
@@ -18,8 +20,8 @@ Each PDF gets a dedicated HTML page with:
 
 - Embedded PDF viewer (PDF.js) and direct download links
 - Searchable text excerpts extracted from PDFs at build time (`pdftotext`)
-- Case metadata, breadcrumbs, FAQPage/LegalDocument JSON-LD, and keyword-rich descriptions
-- Hub pages for parties, disputed domains, false-death domains, and third parties
+- Case metadata, breadcrumbs, and LegalDocument JSON-LD
+- Hub pages for parties, disputed domains, and false-death domains
 - Automatic [sitemap](https://rockenhaus.net/sitemap.xml), `robots.txt`, and [llms.txt](https://rockenhaus.net/llms.txt)
 - IndexNow pings to Bing after each deploy
 
@@ -67,7 +69,7 @@ Do **not** use a dynamic redirect rule from apex to subdomain; both hostnames se
 | `/faq/` | FAQ with FAQPage schema (includes “Is Conrad Rockenhaus dead?”) |
 | `/is-conrad-rockenhaus-dead/` | Dedicated landing page for false-death domain queries |
 | `/disputed-domains/` | rockenhaus.com, skyphusion.com, cannabytes.net, lawflaws.com, conradrockenhausisdead.*; disputed LinkedIn, Instagram, and X profiles |
-| `/parties/` | Adrienne Rockenhaus / Blair / Hein / @adezero and Conrad Alan Rockenhaus |
+| `/parties/` | The parties of record in the published cases |
 | `/prichards-air-conditioning-neo-nazi/` | **Do not hire** — Prichard's AC neo-Nazi owner (Dustin Brown / Joe Prich) |
 | `/joe-prich/` | Joe Prich / Dustin Brown (@JustCallMeJoeP) Nazzy neo-Nazi X evidence |
 | `/retractions/` | June 30, 2026 retraction demands to Adrienne Rockenhaus and Rob Hein (executed PDFs) |
@@ -98,7 +100,6 @@ wrangler pages deploy _site --project-name=rockenhaus-litigation --branch=main
 
 | Case | Court | Case Number | Role |
 |---|---|---|---|
-| Rockenhaus v. Rockenhaus (PPO) | Wayne County Circuit Court (Third Judicial Circuit) | 26-102221-PP | Respondent, pro se |
 | Rockenhaus v. Rockenhaus (Divorce) | Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson | 26-104594-DO | Defendant, pro se |
 | Rockenhaus v. Rockenhaus (Divorce) | Washtenaw County Circuit Court (22nd Circuit), Hon. Darlene A. O'Brien | 26-737-DO | Plaintiff, pro se |
 
@@ -107,7 +108,7 @@ wrangler pages deploy _site --project-name=rockenhaus-litigation --branch=main
 Private build and deploy repo for the public site at rockenhaus.net:
 
 ```
-├── <case_id>/                          Per-matter directory (e.g. wayne_ppo_26-102221-PP)
+├── <case_id>/                          Per-matter directory (e.g. wayne_do_26-104594-DO)
 │   ├── filed/                          Motions, notices, responses authored by Conrad
 │   ├── discovery/                      Discovery requests and responses
 │   ├── opposing/                       Motions, notices, responses authored by opposing party
@@ -122,4 +123,22 @@ The Third Judicial Circuit Case Search Portal is available at [https://cmspublic
 
 ## License
 
-This repository contains private litigation work product and personal records. No license is granted for redistribution, reuse, or republication of any content. Inadvertent disclosure does not waive privilege.
+**This repository is dedicated CC0 1.0 Universal.** See [`LICENSE`](LICENSE), and
+[`NOTICE`](NOTICE) for what that dedication can and cannot cover.
+
+Earlier revisions of this section said the opposite: that the repository held
+privileged work product and that no license was granted for reuse. That was
+wrong on a repository whose `LICENSE` file is a public-domain dedication, and
+the two statements contradicted each other on the same public `main`. A reuser
+reading one would have been misled whichever they read first.
+
+Privileged litigation work product lives in a separate private repository and
+has never been here. Nothing in this repository is offered as privileged, and
+nothing here should be read as asserting privilege over published court records.
+
+**The short version of `NOTICE`:** CC0 covers what this project authored or
+derived, which is the site code, the build scripts, the text extracted from the
+PDFs, and the generated data files. It cannot cover documents authored by other
+parties, whose copyright survives their being filed, or third-party material
+reproduced inside exhibits. Those are published here as public court records,
+and their authors' rights are unaffected by this dedication.
