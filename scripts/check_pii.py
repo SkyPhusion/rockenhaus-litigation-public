@@ -98,10 +98,30 @@ PATTERNS: list[tuple[str, re.Pattern[str], str]] = [
     (
         "account_number",
         re.compile(
-            r"(?:account|acct\.?|policy|routing|card)\s*(?:number|no\.?|#)?\s*[:#]?\s*(?:x{2,}[-\s]?)?(\d[\d\s-]{5,})",
+            r"(?:account|acct\.?|policy|card)\s*(?:number|no\.?|#)?\s*[:#]?\s*(?:x{2,}[-\s]?)?(\d[\d\s-]{5,})",
             re.IGNORECASE,
         ),
         "digits following a financial account label",
+    ),
+    (
+        # SPLIT OUT OF account_number, because they are not the same thing.
+        #
+        # An account number identifies a person's account and is named in MCR
+        # 1.109(D)(9). A routing number identifies a BANK: it is printed on
+        # every cheque, published by the institutions themselves, and looked up
+        # freely. Every one of the eight "account_number" matches this gate
+        # reported was in fact a routing number, and one of the filings that
+        # carries them argues the point in its own text.
+        #
+        # Kept as a pattern rather than dropped: a routing number is worth
+        # seeing, and beside a full account number it would matter. Reported
+        # under its own name so the account_number count means what it says.
+        "routing_number",
+        re.compile(
+            r"routing\s*(?:number|no\.?|#)?\s*[:#]?\s*(\d[\d\s-]{5,})",
+            re.IGNORECASE,
+        ),
+        "digits following a routing-number label (identifies a bank, not a person)",
     ),
     (
         "date_of_birth",
@@ -250,6 +270,7 @@ def self_test() -> int:
         ("ssn", "Respondent SSN 000-00-0000 appears in the exhibit."),
         ("ssn_labelled", "Social Security Number: 000 00 0000"),
         ("account_number", "USAA account no. 0000000000 was drawn on."),
+        ("routing_number", "The routing number 000000000 identifies the bank."),
         ("date_of_birth", "Date of Birth: 01/01/1900"),
         ("street_address", "served at 1234 Example Street, Detroit"),
         ("minor_named", "the minor child Example Personname attends school"),

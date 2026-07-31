@@ -8,16 +8,15 @@
     "map to unredacted material, which is exactly what the gate's own reporting",
     "refuses to print. To find an entry, run the gate locally with --detail.",
     "",
-    "WHAT AN ENTRY MEANS. That this match does not stop the build today. It is",
-    "NOT a finding that the content is fine, and it is not a decision anyone has",
-    "made about publishing it.",
+    "WHAT AN ENTRY MEANS. That this match was reviewed and is not a protected",
+    "identifier. It is NOT a backlog and not a deferral: everything here has been",
+    "looked at and ruled on.",
     "",
-    "WHAT IS DELIBERATELY NOT HERE. Every high-severity match found on 2026-07-31",
-    "was resolved by REMOVING the document or withholding the page, not by being",
-    "listed here: Social Security numbers, dates of birth, and the driver's",
-    "licence and residence data that travelled with them. Those categories stand",
-    "at zero. If one ever appears in this file, something has gone wrong with how",
-    "it is being used.",
+    "WHAT IS DELIBERATELY NOT HERE. Every genuinely protected identifier found on",
+    "2026-07-31 was resolved by REMOVING the document or withholding the page,",
+    "never by being listed here. Social Security numbers, dates of birth, and the",
+    "driver's licence and residence data that travelled with them all stand at",
+    "zero. So does account_number, once routing numbers were split out of it.",
     "",
     "CLEARING AN ENTRY means redacting the source PDF and rebuilding the corpus,",
     "or withdrawing the document. Deleting the line only makes the build red."
@@ -26,318 +25,330 @@
     "high_severity_patterns_never_allowlisted": [
       "ssn",
       "ssn_labelled",
-      "date_of_birth"
+      "ssn_label_ocr",
+      "date_of_birth",
+      "account_number",
+      "drivers_licence_label",
+      "drivers_licence_shape"
     ],
-    "note": "A test asserts this file contains no entry for those patterns."
+    "note": [
+      "A test asserts this file contains no entry for any of these.",
+      "",
+      "account_number joined this list on 2026-07-31, when triage found that all",
+      "eight of its matches were routing numbers and the true count was zero. It",
+      "is an MCR 1.109(D)(9) category, so a future match must be resolved at the",
+      "source rather than accepted here. Adding it while the count is zero costs",
+      "nothing and closes the door before anyone is under pressure to open it."
+    ]
   },
   "accepted": [
     {
-      "hash": "3c51c47addd9450c01b0a1245f9b1d52",
-      "pattern": "account_number",
-      "occurrences": 3,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "hash": "00b121ada60060c0f91260d68d9ead02",
+      "pattern": "routing_number",
+      "occurrences": 2,
+      "status": "reviewed_not_protected",
+      "reason": "Triaged 2026-07-31 and found not to be an account number. A routing number identifies a financial institution, not a person: it is printed on every cheque and published by the institutions themselves. One of the filings carrying these makes the same point in its own text, and the account numbers alongside them are already reduced to their last four digits at the source."
     },
     {
-      "hash": "00b121ada60060c0f91260d68d9ead02",
-      "pattern": "account_number",
+      "hash": "3c51c47addd9450c01b0a1245f9b1d52",
+      "pattern": "routing_number",
       "occurrences": 2,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Triaged 2026-07-31 and found not to be an account number. A routing number identifies a financial institution, not a person: it is printed on every cheque and published by the institutions themselves. One of the filings carrying these makes the same point in its own text, and the account numbers alongside them are already reduced to their last four digits at the source."
     },
     {
       "hash": "d47b103e8cf971d228a267cf1f2db8a5",
-      "pattern": "account_number",
+      "pattern": "routing_number",
       "occurrences": 2,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Triaged 2026-07-31 and found not to be an account number. A routing number identifies a financial institution, not a person: it is printed on every cheque and published by the institutions themselves. One of the filings carrying these makes the same point in its own text, and the account numbers alongside them are already reduced to their last four digits at the source."
     },
     {
       "hash": "eac96a7f70e9fb394f50f55173bea7fe",
-      "pattern": "account_number",
+      "pattern": "routing_number",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Triaged 2026-07-31 and found not to be an account number. A routing number identifies a financial institution, not a person: it is printed on every cheque and published by the institutions themselves. One of the filings carrying these makes the same point in its own text, and the account numbers alongside them are already reduced to their last four digits at the source."
     },
     {
       "hash": "cf96eed4ae14690046fa0ccb0e019cf0",
       "pattern": "street_address",
-      "occurrences": 122,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
-    },
-    {
-      "hash": "b37be0992d7b725de4ec83523d02ff93",
-      "pattern": "street_address",
-      "occurrences": 70,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "occurrences": 91,
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "5c1c87d352b5e49760c5eda4a0a60f7f",
       "pattern": "street_address",
-      "occurrences": 62,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "occurrences": 56,
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
-      "hash": "e12d76d74dc522e4af734204668aefa4",
+      "hash": "b37be0992d7b725de4ec83523d02ff93",
       "pattern": "street_address",
-      "occurrences": 38,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "occurrences": 41,
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "965e5229a6b0a972fd2b93ccafbc333e",
       "pattern": "street_address",
-      "occurrences": 32,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "occurrences": 27,
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
+    },
+    {
+      "hash": "e12d76d74dc522e4af734204668aefa4",
+      "pattern": "street_address",
+      "occurrences": 27,
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "a8df26d2bc9ea7d9cdda024d30a26d8f",
       "pattern": "street_address",
-      "occurrences": 25,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "occurrences": 22,
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "24485523eb41691cbccd13ede25df4ba",
       "pattern": "street_address",
-      "occurrences": 12,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "occurrences": 11,
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "14663cffe0208422d407cb66f1d92c96",
       "pattern": "street_address",
-      "occurrences": 11,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
-    },
-    {
-      "hash": "3a4b0112d6fc3ab392d1cb9ed12198b6",
-      "pattern": "street_address",
-      "occurrences": 7,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
-    },
-    {
-      "hash": "2622340d5410e8f4dfc94f7e15c6ee39",
-      "pattern": "street_address",
-      "occurrences": 5,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "occurrences": 6,
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "766153a2b863446f5159d28a1c4a6db1",
       "pattern": "street_address",
       "occurrences": 5,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
-      "hash": "08f57980ef401dba49294c49f529aab7",
+      "hash": "2622340d5410e8f4dfc94f7e15c6ee39",
       "pattern": "street_address",
       "occurrences": 4,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
+    },
+    {
+      "hash": "3a4b0112d6fc3ab392d1cb9ed12198b6",
+      "pattern": "street_address",
+      "occurrences": 4,
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "965eec4747cae4ca3883f25869c983e9",
       "pattern": "street_address",
       "occurrences": 4,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "d08010cffb432a15e8d78867fe57f68c",
       "pattern": "street_address",
       "occurrences": 4,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "2401f9646f19e01fc4b9467ac8703194",
       "pattern": "street_address",
       "occurrences": 3,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
+    },
+    {
+      "hash": "08f57980ef401dba49294c49f529aab7",
+      "pattern": "street_address",
+      "occurrences": 2,
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "0e537f42aa272cafb2f2989410f74c0f",
       "pattern": "street_address",
       "occurrences": 2,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "1878f8ca6ee2a038a7b2c2cf62f70fb8",
       "pattern": "street_address",
       "occurrences": 2,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "2185f5594af728c9e8535e54298e057b",
       "pattern": "street_address",
       "occurrences": 2,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "4dc6e2d27e24d3939c4b16c0d8d1b0f8",
       "pattern": "street_address",
       "occurrences": 2,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "6147dfbbea24daad0a2066c8707d4795",
       "pattern": "street_address",
       "occurrences": 2,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "9f785f04552dae284d60e084f68136ce",
       "pattern": "street_address",
       "occurrences": 2,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
-    },
-    {
-      "hash": "bbaf2544f172d04f8297c914e1eec2b0",
-      "pattern": "street_address",
-      "occurrences": 2,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
-    },
-    {
-      "hash": "cab2da4ea3474caa6041fa31c7b9063e",
-      "pattern": "street_address",
-      "occurrences": 2,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "0dcfc4c2942f91c06eb48616eb42248e",
       "pattern": "street_address",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "0e2a6fbe2e4d916ee590d62fa7ed9ed3",
       "pattern": "street_address",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "1c74753dcd3e320047967560f258c6cc",
       "pattern": "street_address",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "1fc7c854944d5d788d140468af25908e",
       "pattern": "street_address",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "6afbdef916b49e33ec2473fbc9b98565",
       "pattern": "street_address",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "6bee7630d3acaa9e539a73595474ad58",
       "pattern": "street_address",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "7fb8ef8e1d2e2c40dd29d113f2b3f879",
       "pattern": "street_address",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "870f6a3d82a49f071a6f05ead56328a3",
       "pattern": "street_address",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "ab52ab6043ef0efea882d056e1dcaa8a",
       "pattern": "street_address",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "babe278ef3b0625f40b6000b7b51e9a5",
       "pattern": "street_address",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
+    },
+    {
+      "hash": "bbaf2544f172d04f8297c914e1eec2b0",
+      "pattern": "street_address",
+      "occurrences": 1,
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "c1179dce023921d01321634f0a313c07",
       "pattern": "street_address",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "c31d8577a12754f757851ac307310ad4",
       "pattern": "street_address",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
+    },
+    {
+      "hash": "cab2da4ea3474caa6041fa31c7b9063e",
+      "pattern": "street_address",
+      "occurrences": 1,
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "ccfdffbe6a3af414095c4b2da1ccb42f",
       "pattern": "street_address",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "cd7b84e232ae87498048b498e492e347",
       "pattern": "street_address",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "de121b015d7734f97549ff84ccfbfa08",
       "pattern": "street_address",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "f0fced118e9882b8a0704dab174b3014",
       "pattern": "street_address",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     },
     {
       "hash": "f725e54f416a8a07e07b7f59474aee05",
       "pattern": "street_address",
       "occurrences": 1,
-      "status": "pre_existing_reviewed",
-      "reason": "Present before the gate was armed. Accepted so the gate can fail closed on anything NEW. Not a finding that the content is beyond review."
+      "status": "reviewed_not_protected",
+      "reason": "Reviewed and closed by the site owner, 2026-07-31. The addresses in these filings are variously no longer current, private-mailbox addresses, or already public. Street addresses are also not among the categories MCR 1.109(D)(9) protects."
     }
   ]
 }
