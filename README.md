@@ -81,7 +81,7 @@ Both hostnames are attached to the Cloudflare Pages project `rockenhaus-litigati
 |---|---|
 | `rockenhaus.net` | Canonical public URL |
 | `litigation.rockenhaus.net` | Alias (same content, no redirect) |
-| `www.rockenhaus.net` | CNAME to apex (optional) |
+| `www.rockenhaus.net` | **301 → apex** (Cloudflare bulk redirect; path+query preserved) |
 
 Do **not** use a dynamic redirect rule from apex to subdomain; both hostnames serve the same build. Canonical tags and the sitemap use `https://rockenhaus.net`.
 
