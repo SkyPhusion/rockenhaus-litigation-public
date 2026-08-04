@@ -16,19 +16,22 @@ breadcrumbs:
 
 {% include parties-context.html %}
 
-<h2>Respondent / filer</h2>
+<h2>Defendant (Wayne DO) / site maintainer</h2>
 <p>
-  <strong>{{ site.data.parties.respondent.name }}</strong>, disabled veteran, pro se litigant.
+  <strong>{{ site.data.parties.respondent.name }}</strong>, disabled veteran, pro se
+  <strong>Defendant</strong> in Wayne County divorce <strong>26-104594-DO</strong>
+  (and Plaintiff in superseded Washtenaw <strong>26-737-DO</strong>).
   Maintains the canonical public court record at
   <a href="{{ site.data.parties.public_record.url }}">{{ site.data.parties.public_record.host }}</a>.
 </p>
 
 {% include respondent-profiles.html %}
 
-<h2>Petitioner / opposing party</h2>
+<h2>Plaintiff (Wayne DO) / opposing party</h2>
 <p>
   <strong>{{ site.data.parties.petitioner.name }}</strong>
-  ({{ site.data.parties.petitioner.seo_aka }}).
+  ({{ site.data.parties.petitioner.seo_aka }}) is the <strong>Plaintiff</strong> in
+  Wayne <strong>26-104594-DO</strong>.
   Court caption: <em>{{ site.data.parties.caption }}</em>.
 </p>
 
