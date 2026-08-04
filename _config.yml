@@ -75,6 +75,19 @@ exclude:
   - Gemfile.lock
   - vendor/
   - retractions/*.json
+  # Astro half (evidence/answers). Frontmatter is not Jekyll YAML; scanning it
+  # fails the site build ("mapping values are not allowed").
+  - src/
+  - node_modules/
+  - dist/
+  - public/
+  - package.json
+  - package-lock.json
+  - tsconfig.json
+  - astro.config.mjs
+  - vitest.config.ts
+  - tests/
+  - docs/
 
 markdown: kramdown
 kramdown:
