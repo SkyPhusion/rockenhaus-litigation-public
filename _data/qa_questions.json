@@ -325,6 +325,142 @@
         }
       ],
       "references": []
+    },
+    {
+      "id": "official-court-record-location",
+      "slug": "where-is-the-official-rockenhaus-court-record",
+      "question": "Where is the official public court record for Rockenhaus v. Rockenhaus?",
+      "framing": "This site publishes filed Michigan circuit court PDFs; the Wayne County divorce caption and case number appear on the face of the pleadings.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-01answerandcounterclaim2026-04-15",
+          "page": 1,
+          "quote": "Case No. 26-104594-DO"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-01answerandcounterclaim2026-04-15",
+          "page": 1,
+          "quote": "ADRIENNE MARJORIE ROCKENHAUS,"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-01answerandcounterclaim2026-04-15",
+          "page": 1,
+          "quote": "CONRAD ALAN ROCKENHAUS,"
+        }
+      ],
+      "references": []
+    },
+    {
+      "id": "omnibus-domain-tro-rockenhaus-com",
+      "slug": "what-does-the-omnibus-motion-ask-about-rockenhaus-com-and-other-domains",
+      "question": "What does the omnibus motion ask the court to do about rockenhaus.com and related domains?",
+      "framing": "The April 16, 2026 omnibus motion seeks preservation, financial disclosure, and emergency temporary relief regarding the premarital domain rockenhaus.com, and inventories domain credentials among property sought.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-04omnibusmotionthreelayer2026-04-16",
+          "page": 1,
+          "quote": "DEFENDANT'S OMNIBUS MOTION FOR ORDER TO PRESERVE EVIDENCE, FOR FINANCIAL DISCLOSURE AND ACCOUNTING, AND FOR EMERGENCY TEMPORARY RESTRAINING ORDER REGARDING PREMARITAL DOMAIN ROCKENHAUS.COM"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-04omnibusmotionthreelayer2026-04-16",
+          "page": 3,
+          "quote": "All domain registration records, DNS settings, hosting account records, website content, and associated credentials for rockenhaus.com, skyphusion.com, greyponyit.com, fitspo.net, lawflaws.com, adezero.com, and cannabytes.net."
+        }
+      ],
+      "references": []
+    },
+    {
+      "id": "va-ssdi-accounting-omnibus",
+      "slug": "what-accounting-of-va-and-ssdi-benefits-does-the-omnibus-motion-seek",
+      "question": "What accounting of VA and Social Security benefits does the omnibus motion seek?",
+      "framing": "The omnibus motion's financial-disclosure requests include a sworn accounting of VA disability and SSDI payments belonging to Defendant.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-04omnibusmotionthreelayer2026-04-16",
+          "page": 5,
+          "quote": "Requiring Plaintiff to provide a sworn accounting of every VA Disability Compensation payment and every SSDI benefit payment belonging to Defendant that she received, controlled, or disbursed"
+        }
+      ],
+      "references": []
+    },
+    {
+      "id": "default-judgment-counterclaim",
+      "slug": "what-does-the-motion-for-default-judgment-on-the-counterclaim-ask-for",
+      "question": "What does the motion for default judgment on the counterclaim ask the court to do?",
+      "framing": "The May 12, 2026 motion seeks default judgment on the counterclaim for failure to plead within the time allowed.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-11motionfordefaultjudgmentoncounterclaim2026-05-12",
+          "page": 1,
+          "quote": "MOTION FOR DEFAULT JUDGMENT ON COUNTERCLAIM"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-11motionfordefaultjudgmentoncounterclaim2026-05-12",
+          "page": 1,
+          "quote": "for entry of default judgment in his favor on the Counterclaim served and filed April 15, 2026, pursuant to MCR 2.603(B)(3)"
+        }
+      ],
+      "references": []
+    },
+    {
+      "id": "preservation-spoliation-emergency",
+      "slug": "what-does-the-emergency-preservation-and-spoliation-motion-ask-for",
+      "question": "What does the emergency preservation and anti-spoliation motion ask the court to do?",
+      "framing": "The May 13, 2026 emergency motion seeks a preservation order and an order prohibiting spoliation of evidence directed to Plaintiff.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-12emergencymotionpreservationspoliation2026-05-13",
+          "page": 1,
+          "quote": "EMERGENCY MOTION FOR PRESERVATION ORDER AND ORDER PROHIBITING SPOLIATION OF EVIDENCE"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-12emergencymotionpreservationspoliation2026-05-13",
+          "page": 1,
+          "quote": "for entry of a Preservation Order and an Order Prohibiting Spoliation of Evidence directed to Plaintiff/Counter-Defendant Adrienne Marjorie Rockenhaus"
+        }
+      ],
+      "references": []
+    },
+    {
+      "id": "case-caption-parties-wayne",
+      "slug": "who-is-plaintiff-and-defendant-in-wayne-county-divorce-26-104594-do",
+      "question": "Who is the plaintiff and who is the defendant in Wayne County divorce case 26-104594-DO?",
+      "framing": "The face of the Answer and Counterclaim states the parties and case number.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-01answerandcounterclaim2026-04-15",
+          "page": 1,
+          "quote": "ADRIENNE MARJORIE ROCKENHAUS,"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-01answerandcounterclaim2026-04-15",
+          "page": 1,
+          "quote": "Plaintiff,"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-01answerandcounterclaim2026-04-15",
+          "page": 1,
+          "quote": "CONRAD ALAN ROCKENHAUS,"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-01answerandcounterclaim2026-04-15",
+          "page": 1,
+          "quote": "Defendant."
+        }
+      ],
+      "references": []
     }
   ],
   "_answer_support_note": "A question is supported by `citations` (verbatim, verified against a native-text page) or by `references` (the filing and page, named and linked, without reproducing its words). References exist because some pages of this record are readable only via machine transcription: OCR makes those filings findable and describable, but it interleaves margin text into body lines, so quoting it would put words in a court document that the document does not contain. scripts/verify-citations.mjs refuses a quoted citation to an OCR page, and the schema refuses a question with neither citations nor references. Death-hoax claim letters retained in VA EMMS are described on /is-conrad-rockenhaus-dead/ but are not quoted here until public PDF publication after PII review. AAdvantage and puffer-coat hub sections remain narrative with document/FAQ links until native-text quotes are available."

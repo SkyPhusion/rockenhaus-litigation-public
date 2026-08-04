@@ -1,0 +1,49 @@
+name: notify-corpus-sync
+
+# After main deploys new filed PDFs / corpus text, ask search-mcp to re-sync R2
+# and reindex rockenhaus-public. Fire-and-forget; never gates the site deploy.
+#
+# Requires org Actions secret SEARCH_DISPATCH_TOKEN (repo/org visibility that
+# includes this repository). If the secret is missing, the job skips green.
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "_corpus/**"
+      - "wayne_*/**"
+      - "washtenaw_*/**"
+      - "scripts/build-corpus.mjs"
+      - "scripts/generate_site.py"
+
+permissions:
+  contents: read
+
+jobs:
+  notify-corpus-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger search-mcp corpus-sync
+        env:
+          SEARCH_DISPATCH_TOKEN: ${{ secrets.SEARCH_DISPATCH_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${SEARCH_DISPATCH_TOKEN:+SET}" ]; then
+            echo "SEARCH_DISPATCH_TOKEN unset for this repo; skip corpus-sync notify."
+            exit 0
+          fi
+          payload="$(jq -nc --arg repo "${{ github.repository }}" --arg sha "${{ github.sha }}" \
+            '{event_type:"corpus-sync",client_payload:{source:$repo,sha:$sha,target:"rockenhaus"}}')"
+          code="$(curl -sS -o /tmp/dispatch_resp.txt -w '%{http_code}' \
+            -X POST \
+            -H "Authorization: Bearer ${SEARCH_DISPATCH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/skyphusion-labs/search-mcp/dispatches \
+            -d "$payload")"
+          if [ "$code" != "204" ]; then
+            echo "::warning::corpus-sync dispatch returned HTTP ${code} (non-blocking)."
+            cat /tmp/dispatch_resp.txt || true
+            exit 0
+          fi
+          echo "corpus-sync dispatch accepted for ${{ github.repository }}@${{ github.sha }}"
