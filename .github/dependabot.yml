@@ -1,12 +1,42 @@
-# Dependabot version updates for rockenhaus-litigation-public.
-# TypeScript majors are pinned to what @astrojs/check peers allow (closed PR #32).
-
 version: 2
+
+# skyphusion-labs Dependabot standard -- see fleet-chezmoi/docs/runbooks/dependabot-standard.md
+# PRs only (never auto-merge). Group minor/patch; majors stay separate. Peer families bump together.
+# TypeScript majors stay ignored: @astrojs/check peers still cap TS (closed PR #32).
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: github-actions
+    directory: /
     schedule:
-      interval: "weekly"
+      interval: weekly
+    commit-message:
+      prefix: ci
+    groups:
+      actions:
+        patterns: ["*"]
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: deps
     ignore:
       - dependency-name: "typescript"
         update-types: ["version-update:semver-major"]
+    groups:
+      astro-toolchain:
+        patterns:
+          - "astro"
+          - "@astrojs/*"
+      vitest-toolchain:
+        patterns:
+          - "vitest"
+          - "@vitest/*"
+      npm-minor-patch:
+        patterns: ["*"]
+        exclude-patterns:
+          - "astro"
+          - "@astrojs/*"
+          - "vitest"
+          - "@vitest/*"
+        update-types: ["minor", "patch"]
