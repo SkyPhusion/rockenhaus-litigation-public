@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-02",
-  "date_display": "July 2, 2026",
+  "date": "2026-08-04",
+  "date_display": "August 3-4, 2026",
   "groups": [
     {
       "case_id": "wayne_do_26-104594-DO",
@@ -8,24 +8,28 @@
       "case_url": "/cases/wayne_do_26-104594-DO/",
       "filings": [
         {
-          "title": "38 Notice Of Change Of Address DO 2026-07-02",
-          "url": "/documents/waynedo26-104594-do-filed-38noticeofchangeofaddressdo2026-07-02/"
+          "title": "45 Consolidated Notice of Hearing (In Person, CAYMC Rm 1501) 2026-08-04",
+          "url": "/documents/waynedo26-104594-do-filed-45consolidatednoticeofhearinginperson8-262026-08-04/"
         },
         {
-          "title": "39 Motion Appoint GAL For Plaintiff 2026-07-02",
+          "title": "46 Proof of Service NOH In Person 2026-08-04",
+          "url": "/documents/waynedo26-104594-do-filed-46proofofservicenohinperson2026-08-04/"
+        },
+        {
+          "title": "43 Notice of Hearing GAL 8-26 2026-08-03",
+          "url": "/documents/waynedo26-104594-do-filed-43noticeofhearinggal8-262026-08-03/"
+        },
+        {
+          "title": "44 Proof of Service GAL 2026-08-03",
+          "url": "/documents/waynedo26-104594-do-filed-44proofofservicegal2026-08-03/"
+        },
+        {
+          "title": "41k ePraecipe Accepted GAL Capacity 8-26 Hearing 2026-07-28",
+          "url": "/documents/waynedo26-104594-do-filed-41kepraecipeacceptedgalcapacity8-26hearing2026-07-28/"
+        },
+        {
+          "title": "39 Motion Appoint GAL for Plaintiff 2026-07-02",
           "url": "/documents/waynedo26-104594-do-filed-39motionappointgalforplaintiff2026-07-02/"
-        },
-        {
-          "title": "40 Certificate Of Service EPRAECIPES 8-26 Hearing 2026-07-02",
-          "url": "/documents/waynedo26-104594-do-filed-40certificateofserviceepraecipes8-26hearing2026-07-02/"
-        },
-        {
-          "title": "41 Consolidated Notice Of Hearing 8-26 2026-07-02",
-          "url": "/documents/waynedo26-104594-do-filed-41consolidatednoticeofhearing8-262026-07-02/"
-        },
-        {
-          "title": "42 Proof Of Service Consolidated NOH 2026-07-02",
-          "url": "/documents/waynedo26-104594-do-filed-42proofofserviceconsolidatednoh2026-07-02/"
         }
       ]
     }

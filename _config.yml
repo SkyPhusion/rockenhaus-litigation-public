@@ -1,8 +1,10 @@
-title: Rockenhaus v. Rockenhaus | Michigan Court Filings
-title_separator: "|"
+title: "Rockenhaus v. Rockenhaus | Michigan Court Filings"
+title_separator: " | "
+# Keep description short so jekyll-seo-tag does not produce 200-char <title> tags.
 description: >-
-  Canonical public archive of filed court documents in Rockenhaus v. Rockenhaus:
-  Wayne County 26-104594-DO, 26-102221-PP, and Washtenaw 26-737-DO.
+  Official public archive of filed Michigan court documents in Rockenhaus v.
+  Rockenhaus (Wayne 26-104594-DO, 26-102221-PP; Washtenaw 26-737-DO).
+tagline: "Official Michigan court record"
 url: "https://rockenhaus.net"
 baseurl: ""
 lang: en_US

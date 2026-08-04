@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preload" href="{{ '/assets/fonts/eb-garamond-700.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ '/assets/fonts/ibm-plex-sans-400.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-  {% seo %}
+  {%- comment -%}
+    title=false: jekyll-seo-tag was concatenating site.description into <title>,
+    producing 200+ character SERP titles. We set a short explicit title below.
+  {%- endcomment -%}
+  {% seo title=false %}
+  <title>{% if page.title and page.title != site.title %}{{ page.title | escape }}{{ site.title_separator | default: ' | ' }}{{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   {% include seo-extras.html %}
   <link rel="alternate" type="text/plain" href="{{ '/llms.txt' | relative_url }}" title="LLM site summary">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
