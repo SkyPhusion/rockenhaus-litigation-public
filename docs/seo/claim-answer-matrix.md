@@ -15,6 +15,18 @@ Every public answer page quotes filed PDFs only (`scripts/verify-citations.mjs`)
 | What rule governs GAL? | 39 (MCR 2.201(E)) | [/answers/what-rule-governs-appointing-a-guardian-ad-litem-in-michigan/](/answers/what-rule-governs-appointing-a-guardian-ad-litem-in-michigan/) |
 | Did plaintiff answer the counterclaim? | Opposing answer + motion to set aside default (scanned; reference only) | [/answers/did-the-plaintiff-answer-the-counterclaim-for-divorce/](/answers/did-the-plaintiff-answer-the-counterclaim-for-divorce/) |
 
+
+## Docket facts (plain statements from filings)
+
+| Claim / query | Filing anchor | Public URL |
+| --- | --- | --- |
+| Was the 8/26 NOH served? | 46 Proof of Service (2026-08-04) | [/answers/was-the-august-26-2026-hearing-notice-served/](/answers/was-the-august-26-2026-hearing-notice-served/) |
+| Full list of eleven motions | 45 Consolidated NOH | [/answers/what-are-the-eleven-motions-listed-on-the-august-26-2026-notice-of-hearing/](/answers/what-are-the-eleven-motions-listed-on-the-august-26-2026-notice-of-hearing/) |
+| Which judge is named? | 45 | [/answers/which-judge-is-named-on-the-august-26-2026-notice-of-hearing/](/answers/which-judge-is-named-on-the-august-26-2026-notice-of-hearing/) |
+| Release date + PPO service (Answer admission) | 01 Answer p.2 | [/answers/when-does-the-answer-say-defendant-was-released-from-federal-custody/](/answers/when-does-the-answer-say-defendant-was-released-from-federal-custody/) |
+| Defendant address of record | 38 Notice of Change of Address | [/answers/what-address-of-record-does-the-july-2-2026-notice-state-for-defendant/](/answers/what-address-of-record-does-the-july-2-2026-notice-state-for-defendant/) |
+| First Amended Counterclaim section headings | 34 (headings only) | [/answers/what-subjects-does-the-first-amended-counterclaim-organize-under/](/answers/what-subjects-does-the-first-amended-counterclaim-organize-under/) |
+
 ## More docket and domain claims
 
 | Official record location | Caption case number on Answer | [/answers/where-is-the-official-rockenhaus-court-record/](/answers/where-is-the-official-rockenhaus-court-record/) |
