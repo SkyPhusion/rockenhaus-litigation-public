@@ -22,6 +22,10 @@ Every public answer page quotes filed PDFs only (`scripts/verify-citations.mjs`)
 | --- | --- | --- |
 | Was the 8/26 NOH served? | 46 Proof of Service (2026-08-04) | [/answers/was-the-august-26-2026-hearing-notice-served/](/answers/was-the-august-26-2026-hearing-notice-served/) |
 | Full list of eleven motions | 45 Consolidated NOH | [/answers/what-are-the-eleven-motions-listed-on-the-august-26-2026-notice-of-hearing/](/answers/what-are-the-eleven-motions-listed-on-the-august-26-2026-notice-of-hearing/) |
+| How was the 8/26 NOH served? | 46 Proof of Service (methods) | [/answers/how-was-the-august-26-2026-hearing-notice-served/](/answers/how-was-the-august-26-2026-hearing-notice-served/) |
+| GAL ePraecipe date/time vs in-person NOH | 41k accepted ePraecipe + 45 | [/answers/what-does-the-accepted-gal-epraecipe-show-for-the-august-26-2026-hearing/](/answers/what-does-the-accepted-gal-epraecipe-show-for-the-august-26-2026-hearing/) |
+| Title of April 15 Answer/Counterclaim | 01 | [/answers/what-is-the-title-of-defendants-april-15-2026-responsive-pleading/](/answers/what-is-the-title-of-defendants-april-15-2026-responsive-pleading/) |
+
 | Which judge is named? | 45 | [/answers/which-judge-is-named-on-the-august-26-2026-notice-of-hearing/](/answers/which-judge-is-named-on-the-august-26-2026-notice-of-hearing/) |
 | Release date + PPO service (Answer admission) | 01 Answer p.2 | [/answers/when-does-the-answer-say-defendant-was-released-from-federal-custody/](/answers/when-does-the-answer-say-defendant-was-released-from-federal-custody/) |
 | Defendant address of record | 38 Notice of Change of Address | [/answers/what-address-of-record-does-the-july-2-2026-notice-state-for-defendant/](/answers/what-address-of-record-does-the-july-2-2026-notice-state-for-defendant/) |
@@ -62,7 +66,7 @@ Hub: [/is-conrad-rockenhaus-dead/](/is-conrad-rockenhaus-dead/) links the Facebo
 | --- | --- |
 | UI | `/ask/`, home, `/answers/` (`{% include ask-the-record %}` / `AskTheRecord.astro`) |
 | Script | `/assets/js/ask-widget.js` (from search-mcp) |
-| Endpoint | `https://search.rockenhaus.net/ask` (Worker deploy still required) |
+| Endpoint | `https://search.rockenhaus.net/ask` (Worker `rockenhaus-search` live; Turnstile required) |
 | Manifest | `/corpus-manifest.json` (published from `_corpus/manifest.json` at deploy) |
 | Turnstile | `ask_search.turnstile_sitekey` in `_config.yml` when sitekey exists |
 
