@@ -1,19 +1,39 @@
 {
   "_comment": "Questions for the pre-rendered Q&A pages at /answers/. ANSWERS ARE QUOTED, NEVER GENERATED. Each citation names a filing, a page, and a verbatim passage; scripts/verify-citations.mjs proves at build time that the passage appears on that page. `framing` is the single human-authored sentence per question, so a human owns every word on the page that is not a quotation from the record.",
-  "_scope_rule": "Court-record questions only. Questions that invite a characterisation of a third party are out of scope by construction and are not listed here. The question set is seeded from the court-record subset of the existing /faq/ and /is-conrad-rockenhaus-dead/ pages, and is designed to be swapped for real Google Search Console query data when that arrives: add or replace entries here and the pages regenerate.",
+  "_scope_rule": "Court-record questions only. Questions that invite a characterisation of a third party are out of scope by construction and are not listed here. Seeded from the court-record subset of /faq/ and /is-conrad-rockenhaus-dead/; not an attack blog. Claim letters to VA/SSA/banks are not quoted here until public PDF publication after PII review.",
   "questions": [
     {
       "id": "august-26-2026-hearing",
       "slug": "when-is-the-next-hearing-wayne-divorce-26-104594-do",
       "question": "When is the next motion hearing in Wayne County divorce case 26-104594-DO?",
-      "framing": "The hearing date, time, and judge are stated in the Consolidated Notice of Hearing filed July 2, 2026.",
+      "framing": "The operative date, time, and judge are stated in the in-person Consolidated Notice of Hearing filed August 4, 2026 (Filing 45).",
       "framing_author": "Conrad Alan Rockenhaus",
       "record_gap": null,
       "citations": [
         {
-          "doc_slug": "waynedo26-104594-do-filed-41consolidatednoticeofhearing8-262026-07-02",
+          "doc_slug": "waynedo26-104594-do-filed-45consolidatednoticeofhearinginperson8-262026-08-04",
           "page": 1,
           "quote": "will be brought on for hearing before the Honorable Nicole N. Goodson, Third Judicial Circuit Court for the County of Wayne, Family Division, on August 26, 2026 at 11:30 a.m., or as soon thereafter as the parties may be heard"
+        }
+      ]
+    },
+    {
+      "id": "hearing-in-person-caymc",
+      "slug": "is-the-august-26-2026-hearing-in-person-or-remote",
+      "question": "Is the August 26, 2026 hearing in person or remote?",
+      "framing": "Filing 45 states the appearance mode and location and supersedes earlier Zoom instructions.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-45consolidatednoticeofhearinginperson8-262026-08-04",
+          "page": 1,
+          "quote": "APPEARANCE: This hearing will be conducted in person at the Coleman A. Young Municipal Center (CAYMC), 2 Woodward Avenue, Detroit, Michigan 48226, in the courtroom of the Honorable Nicole N. Goodson, Room 1501."
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-45consolidatednoticeofhearinginperson8-262026-08-04",
+          "page": 1,
+          "quote": "This Notice amends and supersedes the Zoom appearance instructions set forth in Defendant's Consolidated Notice of Hearing filed August 3, 2026."
         }
       ]
     },
@@ -21,19 +41,24 @@
       "id": "motions-calendared-august-26-2026",
       "slug": "what-motions-are-scheduled-for-august-26-2026",
       "question": "What motions are scheduled for hearing on August 26, 2026 in case 26-104594-DO?",
-      "framing": "The Consolidated Notice of Hearing lists ten motions set for the same date.",
+      "framing": "The operative Consolidated Notice of Hearing (Filing 45) lists eleven motions set for the same date, including the guardian ad litem motion.",
       "framing_author": "Conrad Alan Rockenhaus",
       "record_gap": null,
       "citations": [
         {
-          "doc_slug": "waynedo26-104594-do-filed-41consolidatednoticeofhearing8-262026-07-02",
+          "doc_slug": "waynedo26-104594-do-filed-45consolidatednoticeofhearinginperson8-262026-08-04",
           "page": 1,
-          "quote": "PLEASE TAKE NOTICE that the following ten (10) motions of Defendant/Counter-Plaintiff Conrad Alan Rockenhaus will be brought on for hearing"
+          "quote": "PLEASE TAKE NOTICE that the following eleven (11) motions of Defendant/Counter-Plaintiff Conrad Alan Rockenhaus will be brought on for hearing"
         },
         {
-          "doc_slug": "waynedo26-104594-do-filed-41consolidatednoticeofhearing8-262026-07-02",
+          "doc_slug": "waynedo26-104594-do-filed-45consolidatednoticeofhearinginperson8-262026-08-04",
           "page": 1,
           "quote": "Omnibus Motion (Preservation of Evidence; Financial Disclosure; rockenhaus.com Domain Temporary Restraining Order)"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-45consolidatednoticeofhearinginperson8-262026-08-04",
+          "page": 1,
+          "quote": "Motion to Inquire into Plaintiff's Capacity and to Appoint a Guardian Ad Litem for Plaintiff."
         }
       ]
     },
@@ -107,7 +132,87 @@
           "note": "Related opposing filing: Motion to Set Aside Default of Counterclaim."
         }
       ]
+    },
+    {
+      "id": "facebook-dead-mans-switch-record",
+      "slug": "what-does-the-court-record-say-about-the-may-4-2026-facebook-dead-mans-switch-post",
+      "question": "What does the filed court record say about the May 4, 2026 Facebook \"Dead Man's Switch\" post?",
+      "framing": "The First Amended Counterclaim and a witness affidavit describe the post and state that it was published from a compromised account bearing Conrad's name.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-34firstamendedcounterclaim2026-05-18",
+          "page": 11,
+          "quote": "The post was styled \"[SYSTEM ALERT] DEAD MAN'S SWITCH\" and named five individuals as \"responsible for my death\""
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-34firstamendedcounterclaim2026-05-18",
+          "page": 11,
+          "quote": "The post falsely represents Counter-Plaintiff as dead, includes fabricated GPS coordinates"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-37cjordancomprehensivewitnessaffidavitfinal2026-05-14",
+          "page": 2,
+          "quote": "I have no knowledge or reason to believe that Counter-Plaintiff authored or authorized the post; I understand the post to have been published while his Facebook account was compromised."
+        }
+      ]
+    },
+    {
+      "id": "personal-property-withheld",
+      "slug": "what-does-the-motion-for-return-of-personal-property-ask-for",
+      "question": "What does the motion for return of personal property and electronic account access ask the court to do?",
+      "framing": "The relief requested is set out in the motion filed May 7, 2026.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-08motionreturnpersonalpropertydo2026-05-07",
+          "page": 1,
+          "quote": "directing Plaintiff to return Defendant's personal property, identification documents, records, and tools currently held at 26695 Ross Drive, Redford, Michigan"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-08motionreturnpersonalpropertydo2026-05-07",
+          "page": 1,
+          "quote": "restoring Defendant's access to electronic accounts and the federal identity-verification chain currently under Plaintiff's operational control"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-08motionreturnpersonalpropertydo2026-05-07",
+          "page": 2,
+          "quote": "From September 4, 2025 to the present date, Plaintiff has had exclusive operational control over the marital residence and the personal property located within it."
+        }
+      ]
+    },
+    {
+      "id": "electronic-accounts-controlled",
+      "slug": "which-electronic-accounts-does-the-property-motion-identify",
+      "question": "Which electronic accounts and devices does the personal-property motion identify as outside Conrad's control?",
+      "framing": "The motion inventories devices at the marital residence and names the email accounts and identity-verification chain at issue.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-08motionreturnpersonalpropertydo2026-05-07",
+          "page": 2,
+          "quote": "One (1) Apple iPhone 16e;"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-08motionreturnpersonalpropertydo2026-05-07",
+          "page": 2,
+          "quote": "One (1) Apple Mac Mini computer;"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-08motionreturnpersonalpropertydo2026-05-07",
+          "page": 3,
+          "quote": "Defendant's primary personal email account, conrad@rockenhaus.com;"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-08motionreturnpersonalpropertydo2026-05-07",
+          "page": 3,
+          "quote": "While Plaintiff retains operational control of the email accounts described above, Defendant cannot reliably receive two-factor authentication codes necessary to access his Login.gov, ID.me, VA.gov, or CAC.mil accounts."
+        }
+      ]
     }
   ],
-  "_answer_support_note": "A question is supported by `citations` (verbatim, verified against a native-text page) or by `references` (the filing and page, named and linked, without reproducing its words). References exist because 77 pages of this record are readable only via machine transcription: OCR makes those filings findable and describable, but it interleaves margin text into body lines, so quoting it would put words in a court document that the document does not contain. scripts/verify-citations.mjs refuses a quoted citation to an OCR page, and the schema refuses a question with neither citations nor references."
+  "_answer_support_note": "A question is supported by `citations` (verbatim, verified against a native-text page) or by `references` (the filing and page, named and linked, without reproducing its words). References exist because some pages of this record are readable only via machine transcription: OCR makes those filings findable and describable, but it interleaves margin text into body lines, so quoting it would put words in a court document that the document does not contain. scripts/verify-citations.mjs refuses a quoted citation to an OCR page, and the schema refuses a question with neither citations nor references. Death-hoax claim letters retained in VA EMMS are described on /is-conrad-rockenhaus-dead/ but are not quoted here until public PDF publication after PII review. AAdvantage and puffer-coat hub sections remain narrative with document/FAQ links until native-text quotes are available."
 }
