@@ -53,12 +53,21 @@ describe("the redirect rules", () => {
     expect(rules.length).toBeGreaterThan(0);
   });
 
-  it("retires the three pages deleted in #7 with a 404", () => {
-    for (const path of ["/joe-prich/", "/rob-hein/", "/prichards-air-conditioning-neo-nazi/"]) {
+  it("retires characterisation / HVAC / standalone third-party paths with a 404", () => {
+    // /joe-prich/ is a deliberate noindex exhibit index (live page, not retired).
+    for (const path of [
+      "/rob-hein/",
+      "/prichards-air-conditioning/",
+      "/prichards-air-conditioning-neo-nazi/",
+    ]) {
       const rule = matchedBy(path);
       expect(rule, `no rule for ${path}`).toBeDefined();
       expect(rule!.status, `${path} should 404, not redirect`).toBe(404);
     }
+  });
+
+  it("does not 404 /joe-prich/, which is a live noindex exhibit index", () => {
+    expect(matchedBy("/joe-prich/")).toBeUndefined();
   });
 
   it("points every rule at a target the build actually emits", () => {

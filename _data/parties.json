@@ -11,22 +11,54 @@
   "petitioner": {
     "_role_note": "JSON key is historical (PPO-era 'petitioner'). In Wayne DO 26-104594-DO she is Plaintiff.",
     "name": "Adrienne Rockenhaus",
-    "aliases": ["Adrienne Blair", "Adrienne Hein"],
-    "handles": ["@adezero"],
+    "aliases": [
+      "Adrienne Blair",
+      "Adrienne Hein"
+    ],
+    "handles": [
+      "@adezero"
+    ],
     "seo_title": "Adrienne Rockenhaus / Adrienne Blair / Adrienne Hein (@adezero)",
     "seo_short": "Adrienne Rockenhaus (Adrienne Blair, Adrienne Hein, @adezero)",
     "seo_long": "Adrienne Rockenhaus, also known as Adrienne Blair and Adrienne Hein (social media handle @adezero)",
     "seo_aka": "aka Adrienne Blair aka Adrienne Hein (@adezero)",
     "domains": [
-      { "host": "rockenhaus.com", "url": "https://rockenhaus.com" },
-      { "host": "adezero.com", "url": "https://adezero.com" },
-      { "host": "skyphusion.com", "url": "https://skyphusion.com" },
-      { "host": "cannabytes.net", "url": "https://cannabytes.net" },
-      { "host": "humboldtcsi.com", "url": "https://humboldtcsi.com" },
-      { "host": "conradrockenhausisdead.com", "url": "https://conradrockenhausisdead.com" },
-      { "host": "conradrockenhausisdead.cc", "url": "https://conradrockenhausisdead.cc" },
-      { "host": "lawflaws.com", "url": "https://lawflaws.com" },
-      { "host": "fitspo.net", "url": "https://fitspo.net" }
+      {
+        "host": "rockenhaus.com",
+        "url": "https://rockenhaus.com"
+      },
+      {
+        "host": "adezero.com",
+        "url": "https://adezero.com"
+      },
+      {
+        "host": "skyphusion.com",
+        "url": "https://skyphusion.com"
+      },
+      {
+        "host": "cannabytes.net",
+        "url": "https://cannabytes.net"
+      },
+      {
+        "host": "humboldtcsi.com",
+        "url": "https://humboldtcsi.com"
+      },
+      {
+        "host": "conradrockenhausisdead.com",
+        "url": "https://conradrockenhausisdead.com"
+      },
+      {
+        "host": "conradrockenhausisdead.cc",
+        "url": "https://conradrockenhausisdead.cc"
+      },
+      {
+        "host": "lawflaws.com",
+        "url": "https://lawflaws.com"
+      },
+      {
+        "host": "fitspo.net",
+        "url": "https://fitspo.net"
+      }
     ],
     "seo_domains": "rockenhaus.com, adezero.com, skyphusion.com, cannabytes.net, humboldtcsi.com, conradrockenhausisdead.com, conradrockenhausisdead.cc, lawflaws.com, fitspo.net"
   },
@@ -134,7 +166,7 @@
     ],
     "seo_sites": "rockenhaus.net, litigation.rockenhaus.net",
     "seo_sites_long": "rockenhaus.net (also litigation.rockenhaus.net; this public court record)",
-    "seo_profiles_summary": "Conrad Alan Rockenhaus maintains skyphusion.net, github.com/skyphusion, github.com/skyphusion-labs, linkedin.com/in/skyphusion, and verified @skyphusion profiles on X, Facebook, and Instagram. Disputed profiles operated or hijacked by Adrienne Rockenhaus (not authoritative): linkedin.com/in/conrad-rockenhaus, instagram.com/conrad.rockenhaus, and @rockrockenhaus on X — indexed at /disputed-domains/."
+    "seo_profiles_summary": "Conrad Alan Rockenhaus maintains skyphusion.net, github.com/skyphusion, github.com/skyphusion-labs, linkedin.com/in/skyphusion, and verified @skyphusion profiles on X, Facebook, and Instagram. Disputed profiles operated or hijacked by Adrienne Rockenhaus (not authoritative): linkedin.com/in/conrad-rockenhaus, instagram.com/conrad.rockenhaus, and @rockrockenhaus on X \u2014 indexed at /disputed-domains/."
   },
   "third_parties": [
     {
@@ -143,20 +175,18 @@
       "real_name": "Dustin Brown",
       "handle": "@JustCallMeJoeP",
       "platform": "Twitter",
-      "aliases": ["Dustin Brown", "Joe Prich", "JoeP", "JustCallMeJoeP", "Joseph E. Prichardington the 3rd", "Joseph E Prichardington"],
+      "aliases": [
+        "Dustin Brown",
+        "Joe Prich",
+        "JoeP",
+        "JustCallMeJoeP",
+        "Joseph E. Prichardington the 3rd",
+        "Joseph E Prichardington"
+      ],
       "spouse": "Angela Brown",
-      "business": {
-        "name": "Prichard's Air Conditioning and Heating, LLC",
-        "short_name": "Prichard's Air Conditioning and Heating",
-        "url": "https://prichardsac.com/",
-        "address": "5451 Spar Circle, Temple, TX 76502",
-        "phone": "(254) 715-5182",
-        "location": "Temple, Texas (central Texas)",
-        "name_connection": "Conrad Alan Rockenhaus asserts the online name Joe Prich is not a coincidence: it matches the Prich in Prichard's Air Conditioning and Heating, LLC — the HVAC company Dustin Brown publicly operates at prichardsac.com. In archived X screenshot evidence (May 26, 2026 Nazzy thread), Joe Prich identifies himself as \"Joseph E. Prichardington the 3rd\" — admitting the Prichard name on X. The X handle @JustCallMeJoeP pairs \"Joe\" with \"Prich\"; the business is Prichard's Air Conditioning and Heating, LLC. Conrad asserts Joe Prich on X and the owner of Prichard's Air Conditioning in Temple, Texas are the same person."
-      },
-      "seo_label": "Dustin Brown / Joe Prich (@JustCallMeJoeP) — Prichard's Air Conditioning neo-Nazi owner DO NOT HIRE",
+      "seo_label": "Dustin Brown / Joe Prich (@JustCallMeJoeP)",
       "seo_short": "Dustin Brown (Joe Prich, @JustCallMeJoeP)",
-      "assertion": "Conrad Alan Rockenhaus asserts Joe Prich (@JustCallMeJoeP on X) is the online persona of Dustin Brown of Temple, Texas, married to Angela Brown, who publicly operates Prichard's Air Conditioning and Heating, LLC (prichardsac.com). Conrad asserts the name connection is documented in archived X screenshots: Joe Prich identifies himself as \"Joseph E. Prichardington the 3rd\" — admitting the Prichard name on X — in the same May 26, 2026 thread where he calls himself a \"Nazzy\" (Nazi). The X handle @JustCallMeJoeP is literally \"Just Call Me Joe P.\" Conrad asserts Dustin Brown admitted neo-Nazi affiliation on X, spelling it \"Nazzy\" in a May 26, 2026 thread archived at /joe-prich/ with screenshot evidence, that Brown's X timeline includes xenophobic, anti-Black, anti-Jew, and misogynistic posts archived at /joe-prich/#joep-hate-speech-timeline, and that Brown repeatedly references \"The Camps\" on X — evoking concentration camps — archived at /joe-prich/#joep-camps-references. Conrad asserts Dustin Brown maintained a double life of covert online e-relationships behind his HVAC business and marriage. Conrad asserts that in March and April 2026, while Adrienne Rockenhaus (@adezero) was in a state of absolute terror — actively hunted by criminal proxies while Redford police and Wayne County courts engineered state-created danger — Dustin Brown saw her extreme vulnerability as an opportunity and aggressively pursued a sexually charged online relationship with her. Conrad asserts Adrienne Rockenhaus took direction from Prich to drop Conrad's last name and engaged in openly flirtatious X interactions with Prich while they remained married, as archived at /joe-prich/. Conrad also asserts Adrienne Rockenhaus agreed to stealing his military pension and apologizing for ever mentioning his name in Joe Prich's presence."
+      "assertion": "Conrad Alan Rockenhaus asserts Joe Prich (@JustCallMeJoeP on X) is the online persona of Dustin Brown of Temple, Texas, married to Angela Brown. Conrad asserts that in archived X screenshots (May 26, 2026) Joe Prich identifies himself as \"Joseph E. Prichardington the 3rd\" and calls himself a \"Nazzy\" (Nazi). Conrad indexes screenshot exhibits at /joe-prich/ (noindex exhibit index) and under /evidence/. Conrad asserts Brown's X timeline includes xenophobic, anti-Black, anti-Jew, and misogynistic posts, and recurring \"The Camps\" references. Conrad asserts that in March and April 2026 Dustin Brown aggressively pursued a sexually charged online relationship with Adrienne Rockenhaus (@adezero), that she took direction from Prich to drop Conrad's last name, and that she engaged in openly flirtatious X interactions with Prich while they remained married. Conrad also asserts Adrienne Rockenhaus agreed to stealing his military pension and apologizing for ever mentioning his name in Joe Prich's presence."
     },
     {
       "id": "robhein",
@@ -172,7 +202,7 @@
     {
       "host": "rockenhaus.com",
       "url": "https://rockenhaus.com",
-      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus took rockenhaus.com from him and uses it, together with lawflaws.com and fitspo.net, to portray herself as his advocate and a victim of federal-justice harassment while portraying him as a helpless person who relied on her to fight \"to right injustice.\" Conrad asserts she leveraged his federal CFAA case and incarceration narrative on these sites and on social media (@adezero) to obtain internet clout — including retweets from third parties and podcast interview offers — while simultaneously misusing his money. Conrad asserts that while he served approximately six months in federal custody for a supervised release violation beginning in September 2025, she stopped writing him in October 2025 (one month into the sentence) and effectively stopped communicating with him, yet continued publishing online as if she were still fighting for him and still in contact. Conrad asserts court documents indexed at litigation.rockenhaus.net allege she redirected his VA disability benefits to her personal checking account and stopped sending him money; Conrad asserts she told him SSA payments had stopped but continued collecting them and he is now fighting SSA recoupment; and Conrad asserts she pursued relationships with other men during this period. The domain is not an authoritative source."
+      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus took rockenhaus.com from him and uses it, together with lawflaws.com and fitspo.net, to portray herself as his advocate and a victim of federal-justice harassment while portraying him as a helpless person who relied on her to fight \"to right injustice.\" Conrad asserts she leveraged his federal CFAA case and incarceration narrative on these sites and on social media (@adezero) to obtain internet clout \u2014 including retweets from third parties and podcast interview offers \u2014 while simultaneously misusing his money. Conrad asserts that while he served approximately six months in federal custody for a supervised release violation beginning in September 2025, she stopped writing him in October 2025 (one month into the sentence) and effectively stopped communicating with him, yet continued publishing online as if she were still fighting for him and still in contact. Conrad asserts court documents indexed at litigation.rockenhaus.net allege she redirected his VA disability benefits to her personal checking account and stopped sending him money; Conrad asserts she told him SSA payments had stopped but continued collecting them and he is now fighting SSA recoupment; and Conrad asserts she pursued relationships with other men during this period. The domain is not an authoritative source."
     },
     {
       "host": "adezero.com",
@@ -209,12 +239,12 @@
     {
       "host": "lawflaws.com",
       "url": "https://lawflaws.com",
-      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus created lawflaws.com (branded \"Law Flaws: How the Legal System Harmed Conrad and Adrienne Rockenhaus\") together with rockenhaus.com to publish lengthy \"investigative advocacy\" posts portraying herself as his spouse-advocate fighting a federal conspiracy — including posts naming FCI Milan officials, framing his CFAA/Tor history as innocence, and stating that \"Adrienne has not been silent\" and \"Conrad has not been silent.\" Conrad asserts she leveraged his federal case through these sites and on social media to obtain internet clout — including retweets from third parties and podcast interview offers — while misusing his VA and SSA benefits. Conrad asserts that while he was in federal custody for a supervised release violation (September 2025 onward), she stopped writing him in October 2025 and was not in meaningful contact with him, yet continued this public front. The domain is not an authoritative source."
+      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus created lawflaws.com (branded \"Law Flaws: How the Legal System Harmed Conrad and Adrienne Rockenhaus\") together with rockenhaus.com to publish lengthy \"investigative advocacy\" posts portraying herself as his spouse-advocate fighting a federal conspiracy \u2014 including posts naming FCI Milan officials, framing his CFAA/Tor history as innocence, and stating that \"Adrienne has not been silent\" and \"Conrad has not been silent.\" Conrad asserts she leveraged his federal case through these sites and on social media to obtain internet clout \u2014 including retweets from third parties and podcast interview offers \u2014 while misusing his VA and SSA benefits. Conrad asserts that while he was in federal custody for a supervised release violation (September 2025 onward), she stopped writing him in October 2025 and was not in meaningful contact with him, yet continued this public front. The domain is not an authoritative source."
     },
     {
       "host": "fitspo.net",
       "url": "https://fitspo.net",
-      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus created fitspo.net (branded \"Justice for Conrad Rockenhaus\") and filled it with sensational posts about his prior Computer Fraud and Abuse Act (CFAA) case, FCI Milan confinement, federal judges, and U.S. Marshals — authored in her name — to obtain clout in online communities, including podcast interview offers that rank in Google search results for his name (indexed at /conrad-rockenhaus-podcast-interviews/). Conrad asserts his federal case drove retweets and podcast appearances for her while she simultaneously misused his money and stopped communicating with him in prison. Conrad asserts the posts publish false or misleading information about him and his case while she portrays herself as a victim of a federal government conspiracy to silence her. Conrad asserts that while he was incarcerated for a supervised release violation she stopped writing him in October 2025 yet continued publishing this material as if actively advocating for him. The domain is not an authoritative source for court records."
+      "assertion": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus created fitspo.net (branded \"Justice for Conrad Rockenhaus\") and filled it with sensational posts about his prior Computer Fraud and Abuse Act (CFAA) case, FCI Milan confinement, federal judges, and U.S. Marshals \u2014 authored in her name \u2014 to obtain clout in online communities, including podcast interview offers that rank in Google search results for his name (indexed at /conrad-rockenhaus-podcast-interviews/). Conrad asserts his federal case drove retweets and podcast appearances for her while she simultaneously misused his money and stopped communicating with him in prison. Conrad asserts the posts publish false or misleading information about him and his case while she portrays herself as a victim of a federal government conspiracy to silence her. Conrad asserts that while he was incarcerated for a supervised release violation she stopped writing him in October 2025 yet continued publishing this material as if actively advocating for him. The domain is not an authoritative source for court records."
     }
   ],
   "profile_disputes": [
@@ -244,6 +274,6 @@
     }
   ],
   "seo_disputed_summary": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus controls rockenhaus.com, lawflaws.com, and fitspo.net to portray herself online as his advocate and a federal-justice victim while leveraging his CFAA case for internet clout (retweets, podcast interview offers, and the asserted sockpuppet YouTube channel Sleep4Real) and misusing his VA and SSA benefits. Conrad asserts Sleep4Real is operated by Adrienne, not an independent journalist, and that she published a video falsely identifying someone outside an Ann Arbor apartment as him. Conrad asserts that during his September 2025 supervised-release incarceration she stopped writing him in October 2025 yet continued a public \"fighting for him\" front. Conrad asserts Adrienne withheld his phones, computers, and email accounts and published the May 4, 2026 Facebook \"Dead Man's Switch\" post from credentials only she controlled, while falsely blaming Ann Helgren for stealing a puffer coat on his March 2, 2026 release day. He asserts adezero.com redirects to rockenhaus.com. He also asserts she unlawfully controls skyphusion.com (stricken federal filing still hosted), cannabytes.net, humboldtcsi.com, conradrockenhausisdead.com, and conradrockenhausisdead.cc. Conrad also asserts she hijacked or operates disputed social profiles linkedin.com/in/conrad-rockenhaus, instagram.com/conrad.rockenhaus, and @rockrockenhaus on X; his authoritative profiles are linkedin.com/in/skyphusion, instagram.com/skyphusion, and @skyphusion. Filed court records at litigation.rockenhaus.net are the canonical source of truth.",
-  "seo_disputed_profiles_summary": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus hijacked or operates social accounts using his name — linkedin.com/in/conrad-rockenhaus, instagram.com/conrad.rockenhaus, and @rockrockenhaus on X — while withholding his devices and credentials. His authoritative profiles are linkedin.com/in/skyphusion, instagram.com/skyphusion (Meta Verified), and @skyphusion (verified on X).",
-  "seo_third_parties_summary": "Conrad Alan Rockenhaus asserts Joe Prich (@JustCallMeJoeP on X) is the online persona of Dustin Brown, owner of Prichard's Air Conditioning and Heating, LLC in Temple, Texas (prichardsac.com) — DO NOT HIRE: Brown admitted neo-Nazi affiliation spelling it Nazzy and identified himself as Joseph E. Prichardington the 3rd (Prichard name) in a May 26, 2026 thread with screenshot evidence at litigation.rockenhaus.net/joe-prich/ and litigation.rockenhaus.net/prichards-air-conditioning-neo-nazi/. Conrad asserts Dustin Brown aggressively pursued Adrienne Rockenhaus (@adezero) online in March–April 2026 while she was in terror from state-created danger, that @adezero took direction from Prich to drop Conrad's last name and flirted with Prich on X while married to Conrad. Conrad also asserts Rob Hein of QOLity Financial (litigation.rockenhaus.net/rob-hein/) actively funds Adrienne Rockenhaus's campaign, enabling her conduct with Dustin Brown / Joe Prich, a self-described Nazzy (neo-Nazi) HVAC owner in central Texas."
+  "seo_disputed_profiles_summary": "Conrad Alan Rockenhaus asserts Adrienne Rockenhaus hijacked or operates social accounts using his name \u2014 linkedin.com/in/conrad-rockenhaus, instagram.com/conrad.rockenhaus, and @rockrockenhaus on X \u2014 while withholding his devices and credentials. His authoritative profiles are linkedin.com/in/skyphusion, instagram.com/skyphusion (Meta Verified), and @skyphusion (verified on X).",
+  "seo_third_parties_summary": "Conrad Alan Rockenhaus asserts Joe Prich (@JustCallMeJoeP on X) is the online persona of Dustin Brown. Conrad indexes related-party public post exhibits (noindex) at rockenhaus.net/joe-prich/ and under /evidence/. Conrad asserts archived screenshots show self-identification as \"Nazzy\" and \"Joseph E. Prichardington the 3rd,\" and interactions with Adrienne Rockenhaus (@adezero). Conrad also asserts Rob Hein of QOLity Financial funds Adrienne Rockenhaus's campaign (retraction demand at /retractions/rob-hein/; standalone /rob-hein/ is retired)."
 }

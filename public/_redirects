@@ -4,12 +4,13 @@
 # with the homepage, byte for byte, because the Pages project serves a
 # single-page-app fallback. Verified against the live site: an invented path
 # returns 200 and 29,083 bytes identical to /. So do the three pages deleted in
-# PR #7, which therefore never signalled their removal to a search engine, and
-# which _data/indexnow.json still re-submits to Bing on every deploy.
+# PR #7, which therefore never signalled their removal to a search engine.
 #
-# The three rules below stop those three specific URLs resolving. They cannot
-# shadow anything: no asset is published at any of these paths.
+# Retired third-party / characterisation paths 404 below. /joe-prich/ is a
+# deliberate noindex exhibit index (not retired): accessible for humans, not
+# for ranking. HVAC business paths stay retired as attack-surface.
 /rob-hein/                              /404.html  404
+/prichards-air-conditioning/           /404.html  404
 /prichards-air-conditioning-neo-nazi/   /404.html  404
 
 # Withdrawn 2026-07-31 on Conrad's instruction. A completed application form
