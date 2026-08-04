@@ -16,19 +16,19 @@ breadcrumbs:
 ---
 
 <p class="hub-lead">
-  <strong>Podcast episodes titled with Conrad Alan Rockenhaus's name are not authoritative.</strong>
+  <strong>Podcast episodes and videos titled with Conrad Alan Rockenhaus's name are not
+  filed court records.</strong>
   {{ site.data.podcast_interviews.summary }}
-  Conrad asserts Adrienne Rockenhaus stopped writing him in
-  <strong>October 2025</strong> during his supervised-release incarceration yet continued
-  podcast and media appearances portraying herself as his advocate — while misusing his
-  VA and SSA benefits and pursuing other relationships.
+  For primary sources use
+  <a href="{{ '/answers/' | relative_url }}">/answers/</a> and
+  <a href="{{ '/all-documents/' | relative_url }}">filed PDFs</a>.
 </p>
 
-<section class="hub-section" aria-label="Sockpuppet YouTube accounts">
-  <h2>Sockpuppet YouTube accounts Conrad asserts Adrienne operates</h2>
+<section class="hub-section" aria-label="Disputed YouTube accounts">
+  <h2>YouTube accounts Conrad disputes</h2>
   {% for account in site.data.podcast_interviews.sockpuppet_accounts %}
   <article class="hub-entry">
-    <h3>{{ account.name }} ({{ account.platform }}) — asserted sockpuppet</h3>
+    <h3>{{ account.name }} ({{ account.platform }}) — disputed</h3>
     <p>
       <strong>Presented as:</strong> {{ account.presented_as }}
       {% if account.handle %} · <strong>Handle:</strong> {{ account.handle }}{% endif %}
@@ -140,7 +140,7 @@ breadcrumbs:
 {%- comment -%}
   WHAT WAS HERE, and why it is gone.
 
-  An ItemList enumerating every asserted sockpuppet account and every disputed
+  An ItemList enumerating every disputed account and every disputed
   appearance, each with an `assertion` string from _data/podcast_interviews.json
   as its description, plus a hardcoded page name carrying the opposing party's
   name. Structured data is read by a search engine as a machine-readable claim,
