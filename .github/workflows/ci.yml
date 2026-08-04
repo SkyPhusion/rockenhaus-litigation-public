@@ -3,10 +3,15 @@ name: ci
 # Satisfies the `ci` required status check on the aviation-grade org ruleset.
 #
 # Before this existed the repo had exactly one workflow (cloudflare-pages.yml),
-# so `ci` and `coverage` had never reported and EVERY pull request was
+# so the required `ci` check had never reported and EVERY pull request was
 # permanently blocked on "Expected -- waiting for status to be reported".
 # Admin bypass was the only way to merge, which is the escape hatch becoming the
 # routine path on the repo that publishes a court record.
+#
+# The separate `coverage` workflow was retired 2026-08-04: repo ruleset
+# rockenhaus-litigation-public-required-checks requires only `ci` (enterprise
+# supplies the PR/no-ff gate). Pytest still runs inside the Astro half of this
+# job; a second status context for a coverage floor was not earning its keep.
 #
 # ALWAYS-RUN, no `on.paths` filter and no job-level `if:`. A required check that
 # is skipped at the job level never reports at all, which recreates the exact
