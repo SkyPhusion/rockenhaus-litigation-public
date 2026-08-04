@@ -1,24 +1,49 @@
-# Rockenhaus litigation site (build repo)
+# Rockenhaus litigation site (public build repo)
 
-**Public front door:** [https://rockenhaus.net/](https://rockenhaus.net/) (also served at [https://litigation.rockenhaus.net/](https://litigation.rockenhaus.net/))
+**Public front door:** [https://rockenhaus.net/](https://rockenhaus.net/)  
+**Alias (same site, no redirect):** [https://litigation.rockenhaus.net/](https://litigation.rockenhaus.net/)
 
-This repository builds and deploys that site. Visitors, search engines, and citations should use **rockenhaus.net** as the canonical URL.
+Visitors, search engines, and citations should use **rockenhaus.net** as the
+canonical URL. Maintained pro se by Conrad Alan Rockenhaus for active Michigan
+state-court litigation.
 
-**This repository is public.** It was transferred into the `skyphusion-labs` organisation on 2026-07-30. Earlier revisions of this file described it as private, which was true then and is not now; if you are reading a copy that still says so, it is out of date.
+**This repository is public** (transferred into `skyphusion-labs` on 2026-07-30).
+The private source repo is `rockenhaus-litigation` (markdown filings, privileged
+work product, evidence). **Nothing auto-publishes from private to here.**
 
-Maintained pro se by Conrad Alan Rockenhaus for active state-court litigation in Michigan.
+## What ships from this repo
 
-Filed/served PDFs are published here **manually** after PII review (the private
-source repository no longer auto-syncs). Other paths (`opposing/`, `orders/`,
-`filed/Exhibits/`, etc.) are also maintained by hand.
+| Surface | Role |
+| --- | --- |
+| Case PDFs under `wayne_do_*` / `washtenaw_do_*` | Filed/served court documents |
+| Jekyll document pages | PDF viewer + searchable excerpts + LegalDocument JSON-LD |
+| `/answers/` | Pre-rendered Q&A with **verified quotations** only |
+| `/ask/` | AI Search widget over the court-record corpus (`search.rockenhaus.net`) |
+| Hub pages | Parties, disputed domains, death-hoax rebuttals, retractions |
+
+## Publish model (read this first)
+
+1. **Private** builds PDFs and holds sources / evidence.
+2. **Human PII review** before any PDF is copied into this repo.
+3. **PR on this repo** → required check **`ci`** → merge to `main`.
+4. **Deploy** (GitHub Actions → Cloudflare Pages) indexes PDFs, builds Jekyll +
+   Astro (`/answers/`, `/evidence/`), deploys `_site`, IndexNow, dual-host cache purge.
+
+Ops detail:
+
+- [docs/ops/publish-runbook.md](docs/ops/publish-runbook.md) -- step checklist
+- [docs/ops/publish-matrix.md](docs/ops/publish-matrix.md) -- private↔public status
+- [docs/seo/claim-answer-matrix.md](docs/seo/claim-answer-matrix.md) -- claim → filing → URL
+
+**Do not** restore CI auto-open of public PRs from the private repo. That path
+was removed deliberately.
 
 ## Deploy target: Cloudflare Pages
 
-**Canonical domain:** **rockenhaus.net**
+**Canonical domain:** **rockenhaus.net**  
+**Alias:** **litigation.rockenhaus.net**
 
-**Alias (same site, no redirect):** **litigation.rockenhaus.net**
-
-Each PDF gets a dedicated HTML page with:
+Each case PDF gets a dedicated HTML page with:
 
 - Embedded PDF viewer (PDF.js) and direct download links
 - Searchable text excerpts extracted from PDFs at build time (`pdftotext`)
@@ -27,7 +52,9 @@ Each PDF gets a dedicated HTML page with:
 - Automatic [sitemap](https://rockenhaus.net/sitemap.xml), `robots.txt`, and [llms.txt](https://rockenhaus.net/llms.txt)
 - IndexNow pings to Bing after each deploy
 
-On every push to `main`, GitHub Actions runs `scripts/generate_site.py` to index all PDFs, builds Jekyll, deploys `_site` to Cloudflare Pages, pings IndexNow, and purges Cloudflare cache for both hostnames.
+On every push to `main`, GitHub Actions runs `scripts/generate_site.py`, builds
+Jekyll, builds Astro, merges, deploys `_site` to Cloudflare Pages, pings IndexNow,
+and purges Cloudflare cache for both hostnames.
 
 **GitHub Actions secrets** (Settings → Secrets and variables → Actions):
 
@@ -70,6 +97,9 @@ Do **not** use a dynamic redirect rule from apex to subdomain; both hostnames se
 |---|---|
 | `/faq/` | FAQ with FAQPage schema (includes “Is Conrad Rockenhaus dead?”) |
 | `/is-conrad-rockenhaus-dead/` | Dedicated landing page for false-death domain queries |
+| `/is-conrad-rockenhaus-dead/claim-letters/` | Death-hoax claim letter PDFs (VA EMMS best copies) |
+| `/ask/` | AI Search over the filed-record corpus |
+| `/answers/` | Static answers with verified court-record quotations |
 | `/disputed-domains/` | rockenhaus.com, skyphusion.com, cannabytes.net, lawflaws.com, conradrockenhausisdead.*; disputed LinkedIn, Instagram, and X profiles |
 | `/parties/` | The parties of record in the published cases |
 | `/prichards-air-conditioning-neo-nazi/` | **Do not hire** — Prichard's AC neo-Nazi owner (Dustin Brown / Joe Prich) |

@@ -31,7 +31,7 @@ Hub: [/is-conrad-rockenhaus-dead/](/is-conrad-rockenhaus-dead/) links the Facebo
 | --- | --- | --- |
 | American Airlines AAdvantage "identity theft" narrative | No native-text quote in the public PDF corpus yet; archived email is correspondence, not a filed pleading | Hub section + FAQ + [/is-conrad-rockenhaus-dead/aadvantage-account-update/](/is-conrad-rockenhaus-dead/aadvantage-account-update/) |
 | Puffer coat / Ann Helgren | No native-text "puffer"/"coat" hit in public corpus for a clean quotation | Hub section + FAQ + document links |
-| Death-hoax claim letters (VA EMMS) | PDFs private until PII/metadata review; not on public docket | Hub prose only; private `evidence/death_hoax_claim_letters/` |
+| Death-hoax claim letters (VA EMMS) | Published P2 after Conrad PII review 2026-08-04 | [/is-conrad-rockenhaus-dead/claim-letters/](/is-conrad-rockenhaus-dead/claim-letters/) + assets under `/assets/evidence/death_hoax_claim_letters/` |
 
 ## Live AI Search widget
 
