@@ -15,7 +15,8 @@
           "page": 1,
           "quote": "will be brought on for hearing before the Honorable Nicole N. Goodson, Third Judicial Circuit Court for the County of Wayne, Family Division, on August 26, 2026 at 11:30 a.m., or as soon thereafter as the parties may be heard"
         }
-      ]
+      ],
+      "references": []
     },
     {
       "id": "hearing-in-person-caymc",
@@ -35,7 +36,8 @@
           "page": 1,
           "quote": "This Notice amends and supersedes the Zoom appearance instructions set forth in Defendant's Consolidated Notice of Hearing filed August 3, 2026."
         }
-      ]
+      ],
+      "references": []
     },
     {
       "id": "motions-calendared-august-26-2026",
@@ -60,7 +62,8 @@
           "page": 1,
           "quote": "Motion to Inquire into Plaintiff's Capacity and to Appoint a Guardian Ad Litem for Plaintiff."
         }
-      ]
+      ],
+      "references": []
     },
     {
       "id": "gal-motion-relief-requested",
@@ -80,7 +83,8 @@
           "page": 2,
           "quote": "Deferring entry of any default judgment or other dispositive relief against Plaintiff until Plaintiff is represented by a duly appointed guardian ad litem, next friend, or counsel"
         }
-      ]
+      ],
+      "references": []
     },
     {
       "id": "gal-motion-not-a-finding",
@@ -95,7 +99,8 @@
           "page": 2,
           "quote": "Appointment does not resolve, and is not a finding upon, the merits of any claim or defense, or the liability of the person for whom a representative is appointed. It ensures only that the person is represented while the merits are decided."
         }
-      ]
+      ],
+      "references": []
     },
     {
       "id": "gal-motion-legal-standard",
@@ -110,7 +115,8 @@
           "page": 2,
           "quote": "MCR 2.201(E) governs the representation of incompetent persons in civil proceedings. Where an incompetent person who is subject to the jurisdiction of the court does not have a conservator or other legal representative, the court is to appoint a guardian ad litem or next friend to protect that person's interests"
         }
-      ]
+      ],
+      "references": []
     },
     {
       "id": "plaintiff-answer-to-counterclaim",
@@ -156,7 +162,8 @@
           "page": 2,
           "quote": "I have no knowledge or reason to believe that Counter-Plaintiff authored or authorized the post; I understand the post to have been published while his Facebook account was compromised."
         }
-      ]
+      ],
+      "references": []
     },
     {
       "id": "personal-property-withheld",
@@ -181,7 +188,8 @@
           "page": 2,
           "quote": "From September 4, 2025 to the present date, Plaintiff has had exclusive operational control over the marital residence and the personal property located within it."
         }
-      ]
+      ],
+      "references": []
     },
     {
       "id": "electronic-accounts-controlled",
@@ -211,7 +219,112 @@
           "page": 3,
           "quote": "While Plaintiff retains operational control of the email accounts described above, Defendant cannot reliably receive two-factor authentication codes necessary to access his Login.gov, ID.me, VA.gov, or CAC.mil accounts."
         }
-      ]
+      ],
+      "references": []
+    },
+    {
+      "id": "is-conrad-rockenhaus-dead-record",
+      "slug": "is-conrad-rockenhaus-dead-according-to-the-court-record",
+      "question": "Does the filed court record treat Conrad Rockenhaus as deceased?",
+      "framing": "The First Amended Counterclaim describes a Facebook post that falsely represents him as dead; he continues as Defendant/Counter-Plaintiff on the docket through the August 2026 notices of hearing.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-34firstamendedcounterclaim2026-05-18",
+          "page": 11,
+          "quote": "The post falsely represents Counter-Plaintiff as dead, includes fabricated GPS coordinates"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-45consolidatednoticeofhearinginperson8-262026-08-04",
+          "page": 1,
+          "quote": "PLEASE TAKE NOTICE that the following eleven (11) motions of Defendant/Counter-Plaintiff Conrad Alan Rockenhaus will be brought on for hearing"
+        }
+      ],
+      "references": []
+    },
+    {
+      "id": "aadvantage-account-control-context",
+      "slug": "what-does-the-record-say-about-control-of-conrad-email-accounts",
+      "question": "What does the filed record say about who controlled Conrad Rockenhaus's email accounts used for identity recovery?",
+      "framing": "The May 7, 2026 personal-property motion identifies the email accounts and two-factor recovery chain at issue. Separate archived American Airlines correspondence (not a court filing) is indexed at /is-conrad-rockenhaus-dead/aadvantage-account-update/ as rebuttal to the AAdvantage identity-theft narrative on conradrockenhausisdead.cc.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": "The June 10, 2026 AAdvantage account-update email is correspondence evidence, not a Michigan circuit filing, so it is not quoted here as a court document.",
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-08motionreturnpersonalpropertydo2026-05-07",
+          "page": 3,
+          "quote": "Defendant's primary personal email account, conrad@rockenhaus.com;"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-08motionreturnpersonalpropertydo2026-05-07",
+          "page": 3,
+          "quote": "While Plaintiff retains operational control of the email accounts described above, Defendant cannot reliably receive two-factor authentication codes necessary to access his Login.gov, ID.me, VA.gov, or CAC.mil accounts."
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-08motionreturnpersonalpropertydo2026-05-07",
+          "page": 1,
+          "quote": "restoring Defendant's access to electronic accounts and the federal identity-verification chain currently under Plaintiff's operational control"
+        }
+      ],
+      "references": []
+    },
+    {
+      "id": "puffer-coat-release-day-property",
+      "slug": "what-does-the-record-say-about-property-and-clothing-on-conrad-release-day",
+      "question": "What does the filed record say about personal property and clothing when Conrad Rockenhaus was released on March 2, 2026?",
+      "framing": "The record describes release-day PPO service, exclusive control of the residence by Plaintiff, Defendant's clothing at the marital home, and a witness account that Plaintiff refused to release his property. A specific 'puffer coat' allegation against Ann Helgren is not a quoted finding in these native-text pages.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": "No native-text filing page in the public corpus uses the words 'puffer coat.' Hub and FAQ state Conrad's full rebuttal; the quotations here are the property and clothing facts that are in the record.",
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-08motionreturnpersonalpropertydo2026-05-07",
+          "page": 2,
+          "quote": "On or about March 2, 2026, the day of Defendant's release, the Personal Protection Order in Case No. 26-102221-PP was served."
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-08motionreturnpersonalpropertydo2026-05-07",
+          "page": 2,
+          "quote": "From September 4, 2025 to the present date, Plaintiff has had exclusive operational control over the marital residence and the personal property located within it."
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-08motionreturnpersonalpropertydo2026-05-07",
+          "page": 3,
+          "quote": "Personal clothing belonging to Defendant;"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-37ahelgrencomprehensivewitnessaffidavitfinal2026-05-14",
+          "page": 4,
+          "quote": "Adrienne refused to release any of Counter-Plaintiff's property or funds to me on each occasion."
+        }
+      ],
+      "references": []
+    },
+    {
+      "id": "va-benefits-preemption",
+      "slug": "what-does-the-record-say-about-va-benefits-in-the-wayne-divorce",
+      "question": "What does the filed record say about federal VA benefits in the Wayne County divorce?",
+      "framing": "Defendant filed a brief on federal preemption of VA benefits and calendared a TRO motion concerning diversion of federal veterans and Social Security benefits to a USAA account.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-02brieffederalpreemptionvabenefits2026-04-15",
+          "page": 2,
+          "quote": "shall not be assignable except to the extent specifically authorized by law, and such payments made to, or on account of, a beneficiary shall be exempt from taxation, shall be exempt from the claim of creditors"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-02brieffederalpreemptionvabenefits2026-04-15",
+          "page": 3,
+          "quote": "Plaintiff violated this duty by retaining the funds for her own use while Defendant was incarcerated"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-45consolidatednoticeofhearinginperson8-262026-08-04",
+          "page": 1,
+          "quote": "Motion for Temporary Restraining Order Prohibiting Dissipation of the USAA Account Receiving Diverted Federal Veterans and Social Security Benefits"
+        }
+      ],
+      "references": []
     }
   ],
   "_answer_support_note": "A question is supported by `citations` (verbatim, verified against a native-text page) or by `references` (the filing and page, named and linked, without reproducing its words). References exist because some pages of this record are readable only via machine transcription: OCR makes those filings findable and describable, but it interleaves margin text into body lines, so quoting it would put words in a court document that the document does not contain. scripts/verify-citations.mjs refuses a quoted citation to an OCR page, and the schema refuses a question with neither citations nor references. Death-hoax claim letters retained in VA EMMS are described on /is-conrad-rockenhaus-dead/ but are not quoted here until public PDF publication after PII review. AAdvantage and puffer-coat hub sections remain narrative with document/FAQ links until native-text quotes are available."

@@ -1,5 +1,6 @@
 {
   "caption": "Rockenhaus v. Rockenhaus",
+  "caption_note": "Short form used by the Michigan courts when both parties share the surname. Active Wayne DO 26-104594-DO: Adrienne Rockenhaus is Plaintiff; Conrad Alan Rockenhaus is Defendant. Washtenaw DO 26-737-DO (Conrad as Plaintiff) is superseded.",
   "public_record": {
     "title": "Rockenhaus Litigation Public Record",
     "url": "https://rockenhaus.net/",
@@ -8,6 +9,7 @@
     "seo_tagline": "Canonical source of truth for Michigan court filings in Rockenhaus v. Rockenhaus"
   },
   "petitioner": {
+    "_role_note": "JSON key is historical (PPO-era 'petitioner'). In Wayne DO 26-104594-DO she is Plaintiff.",
     "name": "Adrienne Rockenhaus",
     "aliases": ["Adrienne Blair", "Adrienne Hein"],
     "handles": ["@adezero"],
@@ -29,6 +31,7 @@
     "seo_domains": "rockenhaus.com, adezero.com, skyphusion.com, cannabytes.net, humboldtcsi.com, conradrockenhausisdead.com, conradrockenhausisdead.cc, lawflaws.com, fitspo.net"
   },
   "respondent": {
+    "_role_note": "JSON key is historical (PPO-era 'respondent'). In Wayne DO 26-104594-DO he is Defendant; in superseded Washtenaw DO 26-737-DO he was Plaintiff.",
     "name": "Conrad Alan Rockenhaus",
     "alternate_name": "Conrad Rockenhaus",
     "sites": [

@@ -29,9 +29,11 @@ Hub: [/is-conrad-rockenhaus-dead/](/is-conrad-rockenhaus-dead/) links the Facebo
 
 | Claim | Why parked | Where it lives today |
 | --- | --- | --- |
-| American Airlines AAdvantage "identity theft" narrative | No native-text quote in the public PDF corpus yet; archived email is correspondence, not a filed pleading | Hub section + FAQ + [/is-conrad-rockenhaus-dead/aadvantage-account-update/](/is-conrad-rockenhaus-dead/aadvantage-account-update/) |
-| Puffer coat / Ann Helgren | No native-text "puffer"/"coat" hit in public corpus for a clean quotation | Hub section + FAQ + document links |
-| Death-hoax claim letters (VA EMMS) | Published P2 after Conrad PII review 2026-08-04 | [/is-conrad-rockenhaus-dead/claim-letters/](/is-conrad-rockenhaus-dead/claim-letters/) + assets under `/assets/evidence/death_hoax_claim_letters/` |
+| American Airlines AAdvantage "identity theft" narrative | Email-control facts from Filing 08; AA email is correspondence (not quoted as a filing) | [/answers/what-does-the-record-say-about-control-of-conrad-email-accounts/](/answers/what-does-the-record-say-about-control-of-conrad-email-accounts/) + [/is-conrad-rockenhaus-dead/aadvantage-account-update/](/is-conrad-rockenhaus-dead/aadvantage-account-update/) |
+| Puffer coat / Ann Helgren | Release-day property + clothing + Helgren refusal quotes; no native "puffer coat" string | [/answers/what-does-the-record-say-about-property-and-clothing-on-conrad-release-day/](/answers/what-does-the-record-say-about-property-and-clothing-on-conrad-release-day/) |
+| Is Conrad dead? | Counterclaim false-death post + ongoing pro se NOH | [/answers/is-conrad-rockenhaus-dead-according-to-the-court-record/](/answers/is-conrad-rockenhaus-dead-according-to-the-court-record/) |
+| VA benefits in divorce | Preemption brief + USAA TRO on calendar | [/answers/what-does-the-record-say-about-va-benefits-in-the-wayne-divorce/](/answers/what-does-the-record-say-about-va-benefits-in-the-wayne-divorce/) |
+| Death-hoax claim letters (VA EMMS) | Published P2 after Conrad PII review 2026-08-04 | [/is-conrad-rockenhaus-dead/claim-letters/](/is-conrad-rockenhaus-dead/claim-letters/) |
 
 ## Live AI Search widget
 
