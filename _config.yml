@@ -21,6 +21,16 @@ twitter:
 author:
   name: Conrad Alan Rockenhaus
 
+# AI Search (search-mcp) browser widget. Corpus is rockenhaus-litigation-public
+# `_corpus/` only -- separate Worker/host from search.vivijure.com (vivijure docs).
+# Turnstile sitekey is empty until a CF Turnstile widget is created for rockenhaus.net
+# and the search Worker secret is set; without it the client still loads (server skips
+# verification when TURNSTILE_SECRET is unset).
+ask_search:
+  endpoint: "https://search.rockenhaus.net/ask"
+  turnstile_sitekey: ""
+  manifest: "/corpus-manifest.json"
+
 plugins:
   - jekyll-seo-tag
 

@@ -118,6 +118,9 @@ jobs:
         # both look like citations and only one is right.
         run: node scripts/build-citations.mjs
 
+      - name: Publish corpus page manifest for the AI Search widget
+        run: cp _corpus/manifest.json public/corpus-manifest.json
+
       - name: Typecheck Astro
         run: npx astro check
 

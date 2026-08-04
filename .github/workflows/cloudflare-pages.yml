@@ -52,6 +52,11 @@ jobs:
       - name: Build the citation table
         run: node scripts/build-citations.mjs
 
+      - name: Publish corpus page manifest for the AI Search widget
+        # The ask-widget resolves R2 object keys to title/URL/page via this file.
+        # Shape matches _corpus/manifest.json ({ pages: [...] }).
+        run: cp _corpus/manifest.json public/corpus-manifest.json
+
       - name: Build Astro (evidence + answers)
         run: npm run build
 
@@ -60,6 +65,20 @@ jobs:
 
       - name: Merge Astro output into the site
         run: cp -r dist/. _site/
+
+      - name: Ensure corpus-manifest is on the deploy root
+        # Jekyll does not publish public/; Astro copies public/ into dist. After
+        # merge, also keep a root copy if the file only landed under dist.
+        run: |
+          set -euo pipefail
+          if [ -f public/corpus-manifest.json ]; then
+            cp public/corpus-manifest.json _site/corpus-manifest.json
+          elif [ -f _corpus/manifest.json ]; then
+            cp _corpus/manifest.json _site/corpus-manifest.json
+          else
+            echo "::error::no corpus manifest to publish for the ask widget"
+            exit 1
+          fi
 
       - name: Build the sitemap from the merged site
         # AFTER the merge and BEFORE the deploy, deliberately. jekyll-sitemap

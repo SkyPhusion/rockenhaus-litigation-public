@@ -9,6 +9,7 @@
 // limit is visible rather than implied.
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import AskTheRecord from "../../components/AskTheRecord.astro";
 import coverage from "../../../_corpus/coverage.json";
 
 const questions = (await getCollection("questions")).map((q) => q.data);
@@ -47,6 +48,8 @@ const description =
     quotations, not summaries: nothing on these pages paraphrases or interprets a
     filing, and nothing is generated.
   </p>
+
+  <AskTheRecord />
 
   <ul class="answer-list">
     {questions.map((q) => (

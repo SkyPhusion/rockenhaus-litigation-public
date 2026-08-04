@@ -33,8 +33,21 @@ Hub: [/is-conrad-rockenhaus-dead/](/is-conrad-rockenhaus-dead/) links the Facebo
 | Puffer coat / Ann Helgren | No native-text "puffer"/"coat" hit in public corpus for a clean quotation | Hub section + FAQ + document links |
 | Death-hoax claim letters (VA EMMS) | PDFs private until PII/metadata review; not on public docket | Hub prose only; private `evidence/death_hoax_claim_letters/` |
 
+## Live AI Search widget
+
+| Item | Value |
+| --- | --- |
+| UI | `/ask/`, home, `/answers/` (`{% include ask-the-record %}` / `AskTheRecord.astro`) |
+| Script | `/assets/js/ask-widget.js` (from search-mcp) |
+| Endpoint | `https://search.rockenhaus.net/ask` (Worker deploy still required) |
+| Manifest | `/corpus-manifest.json` (published from `_corpus/manifest.json` at deploy) |
+| Turnstile | `ask_search.turnstile_sitekey` in `_config.yml` when sitekey exists |
+
+Pre-rendered `/answers/` pages remain the SEO ranking surface; the widget does not rank.
+
 ## Non-goals
 
 - No narrative blog mirroring conradrockenhausisdead.cc story graph
 - No unreviewed auto-push of private claim-letter PDFs
-- No generated answers: only human framing + verified quotation
+- No generated answers on static pages: only human framing + verified quotation
+- No sharing the vivijure docs corpus (`search.vivijure.com`) for court-record Q&A
