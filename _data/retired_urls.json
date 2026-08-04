@@ -13,22 +13,22 @@
   ],
   "retired": [
     {
-      "path": "/joe-prich/",
+      "path": "/prichards-air-conditioning/",
+      "status": 404,
+      "retired_in": 40,
+      "reason": "HVAC business identification page is consumer attack-surface SEO. Removed; not a court-record surface."
+    },
+    {
+      "path": "/prichards-air-conditioning-neo-nazi/",
       "status": 404,
       "retired_in": 7,
-      "reason": "Third-party characterisation page about a non-party. Deleted in PR #7; the deletion never reached search engines because every unknown path answered 200 with the homepage."
+      "reason": "Characterisation slug (PR #7). Stays 404; do not 301."
     },
     {
       "path": "/rob-hein/",
       "status": 404,
       "retired_in": 7,
       "reason": "Third-party characterisation page about a non-party. Deleted in PR #7. Not to be confused with /retractions/rob-hein/, which is a live page about a served retraction demand."
-    },
-    {
-      "path": "/prichards-air-conditioning-neo-nazi/",
-      "status": 404,
-      "retired_in": 7,
-      "reason": "Third-party characterisation page. Deleted in PR #7. The slug itself is the characterisation, which is why a 301 that preserves its authority is the wrong answer."
     },
     {
       "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit09bpa0629visitation/",

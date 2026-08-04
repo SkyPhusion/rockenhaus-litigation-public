@@ -48,12 +48,19 @@ describe("the IndexNow submission list is derived, not maintained", () => {
     expect(collectIndexable(DIST).included.length).toBeGreaterThan(0);
   });
 
-  it("cannot carry the three pages deleted in #7", () => {
+  it("cannot publish retired third-party / HVAC paths, or index the joe-prich exhibit index", () => {
     const published = collectIndexable(DIST).included;
-    for (const dead of ["/joe-prich/", "/rob-hein/", "/prichards-air-conditioning-neo-nazi/"]) {
+    for (const dead of [
+      "/rob-hein/",
+      "/prichards-air-conditioning/",
+      "/prichards-air-conditioning-neo-nazi/",
+    ]) {
       expect(retiredPaths(), `${dead} must be in the retired list`).toContain(dead);
-      expect(published, `${dead} is deleted and must not be published`).not.toContain(dead);
+      expect(published, `${dead} is retired and must not be published`).not.toContain(dead);
     }
+    // Live noindex page: not retired, but must never enter sitemap/IndexNow.
+    expect(retiredPaths()).not.toContain("/joe-prich/");
+    expect(published, "/joe-prich/ is noindex and must not be published").not.toContain("/joe-prich/");
   });
 
   it("still allows /retractions/rob-hein/, which is a live page", () => {
