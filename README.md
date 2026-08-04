@@ -102,8 +102,9 @@ Do **not** use a dynamic redirect rule from apex to subdomain; both hostnames se
 | `/answers/` | Static answers with verified court-record quotations |
 | `/disputed-domains/` | rockenhaus.com, skyphusion.com, cannabytes.net, lawflaws.com, conradrockenhausisdead.*; disputed LinkedIn, Instagram, and X profiles |
 | `/parties/` | The parties of record in the published cases |
-| `/prichards-air-conditioning-neo-nazi/` | **Do not hire** — Prichard's AC neo-Nazi owner (Dustin Brown / Joe Prich) |
-| `/joe-prich/` | Joe Prich / Dustin Brown (@JustCallMeJoeP) Nazzy neo-Nazi X evidence |
+| `/joe-prich/` | **noindex** related-party public post exhibit index (stable links into `/evidence/`) |
+| `/prichards-air-conditioning/` | **noindex** short HVAC business-identification note for labeling exhibits |
+| `/prichards-air-conditioning-neo-nazi/` | **404** (retired characterisation slug; do not 301) |
 | `/retractions/` | June 30, 2026 retraction demands to Adrienne Rockenhaus and Rob Hein (executed PDFs) |
 | `/all-documents/` | HTML index of all document pages (generated at build) |
 

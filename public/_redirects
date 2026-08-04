@@ -9,7 +9,6 @@
 #
 # The three rules below stop those three specific URLs resolving. They cannot
 # shadow anything: no asset is published at any of these paths.
-/joe-prich/                             /404.html  404
 /rob-hein/                              /404.html  404
 /prichards-air-conditioning-neo-nazi/   /404.html  404
 

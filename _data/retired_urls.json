@@ -13,12 +13,6 @@
   ],
   "retired": [
     {
-      "path": "/joe-prich/",
-      "status": 404,
-      "retired_in": 7,
-      "reason": "Third-party characterisation page about a non-party. Deleted in PR #7; the deletion never reached search engines because every unknown path answered 200 with the homepage."
-    },
-    {
       "path": "/rob-hein/",
       "status": 404,
       "retired_in": 7,
@@ -28,7 +22,7 @@
       "path": "/prichards-air-conditioning-neo-nazi/",
       "status": 404,
       "retired_in": 7,
-      "reason": "Third-party characterisation page. Deleted in PR #7. The slug itself is the characterisation, which is why a 301 that preserves its authority is the wrong answer."
+      "reason": "Slug contained characterisation language (PR #7). Content, if any, lives only as noindex evidence indexes at neutral paths; do not 301 this slug (would transfer ranking authority)."
     },
     {
       "path": "/documents/wayneppo26-102221-pp-filed-exhibits-exhibit09bpa0629visitation/",
