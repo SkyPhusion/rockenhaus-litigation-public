@@ -1,6 +1,6 @@
 {
   "_comment": "Questions for the pre-rendered Q&A pages at /answers/. ANSWERS ARE QUOTED, NEVER GENERATED. Each citation names a filing, a page, and a verbatim passage; scripts/verify-citations.mjs proves at build time that the passage appears on that page. `framing` is the single human-authored sentence per question, so a human owns every word on the page that is not a quotation from the record.",
-  "_scope_rule": "Court-record questions only. Questions that invite a characterisation of a third party are out of scope by construction and are not listed here. Seeded from the court-record subset of /faq/ and /is-conrad-rockenhaus-dead/; not an attack blog. Claim letters to VA/SSA/banks are not quoted here until public PDF publication after PII review.",
+  "_scope_rule": "Court-record questions only. Framing is a short neutral sentence that points at the filing; answers are verified quotations (or unquoted references for OCR-only pages). Third-party characterisation questions are out of scope. Not an attack blog.",
   "questions": [
     {
       "id": "august-26-2026-hearing",
@@ -143,7 +143,7 @@
       "id": "facebook-dead-mans-switch-record",
       "slug": "what-does-the-court-record-say-about-the-may-4-2026-facebook-dead-mans-switch-post",
       "question": "What does the filed court record say about the May 4, 2026 Facebook \"Dead Man's Switch\" post?",
-      "framing": "The First Amended Counterclaim and a witness affidavit describe the post and state that it was published from a compromised account bearing Conrad's name.",
+      "framing": "The First Amended Counterclaim and a witness affidavit describe a May 4, 2026 Facebook post styled as a dead-man's switch. The quotations are from those filings.",
       "framing_author": "Conrad Alan Rockenhaus",
       "record_gap": null,
       "citations": [
@@ -169,7 +169,7 @@
       "id": "personal-property-withheld",
       "slug": "what-does-the-motion-for-return-of-personal-property-ask-for",
       "question": "What does the motion for return of personal property and electronic account access ask the court to do?",
-      "framing": "The relief requested is set out in the motion filed May 7, 2026.",
+      "framing": "The May 7, 2026 personal-property motion states the relief requested and the property and accounts it identifies.",
       "framing_author": "Conrad Alan Rockenhaus",
       "record_gap": null,
       "citations": [
@@ -195,7 +195,7 @@
       "id": "electronic-accounts-controlled",
       "slug": "which-electronic-accounts-does-the-property-motion-identify",
       "question": "Which electronic accounts and devices does the personal-property motion identify as outside Conrad's control?",
-      "framing": "The motion inventories devices at the marital residence and names the email accounts and identity-verification chain at issue.",
+      "framing": "The personal-property motion lists specific accounts and devices. The quotations are that inventory language from the motion.",
       "framing_author": "Conrad Alan Rockenhaus",
       "record_gap": null,
       "citations": [
@@ -226,7 +226,7 @@
       "id": "is-conrad-rockenhaus-dead-record",
       "slug": "is-conrad-rockenhaus-dead-according-to-the-court-record",
       "question": "Does the filed court record treat Conrad Rockenhaus as deceased?",
-      "framing": "The First Amended Counterclaim describes a Facebook post that falsely represents him as dead; he continues as Defendant/Counter-Plaintiff on the docket through the August 2026 notices of hearing.",
+      "framing": "Two filings place the false-death narrative and ongoing pro se activity in the record. The quotations state what those filings say; they are not a medical or vital-records finding.",
       "framing_author": "Conrad Alan Rockenhaus",
       "record_gap": null,
       "citations": [
@@ -247,7 +247,7 @@
       "id": "aadvantage-account-control-context",
       "slug": "what-does-the-record-say-about-control-of-conrad-email-accounts",
       "question": "What does the filed record say about who controlled Conrad Rockenhaus's email accounts used for identity recovery?",
-      "framing": "The May 7, 2026 personal-property motion identifies the email accounts and two-factor recovery chain at issue. Separate archived American Airlines correspondence (not a court filing) is indexed at /is-conrad-rockenhaus-dead/aadvantage-account-update/ as rebuttal to the AAdvantage identity-theft narrative on conradrockenhausisdead.cc.",
+      "framing": "The personal-property motion identifies email accounts and recovery control. Separate American Airlines correspondence is linked from the death-hoax hub and is not quoted here as a court filing.",
       "framing_author": "Conrad Alan Rockenhaus",
       "record_gap": "The June 10, 2026 AAdvantage account-update email is correspondence evidence, not a Michigan circuit filing, so it is not quoted here as a court document.",
       "citations": [
@@ -273,7 +273,7 @@
       "id": "puffer-coat-release-day-property",
       "slug": "what-does-the-record-say-about-property-and-clothing-on-conrad-release-day",
       "question": "What does the filed record say about personal property and clothing when Conrad Rockenhaus was released on March 2, 2026?",
-      "framing": "The record describes release-day PPO service, exclusive control of the residence by Plaintiff, Defendant's clothing at the marital home, and a witness account that Plaintiff refused to release his property. A specific 'puffer coat' allegation against Ann Helgren is not a quoted finding in these native-text pages.",
+      "framing": "The record describes release-day PPO service, control of the residence, clothing at the marital home, and a witness account of property not being released. No native-text page in this corpus uses the words \"puffer coat.\"",
       "framing_author": "Conrad Alan Rockenhaus",
       "record_gap": "No native-text filing page in the public corpus uses the words 'puffer coat.' Hub and FAQ state Conrad's full rebuttal; the quotations here are the property and clothing facts that are in the record.",
       "citations": [
@@ -453,6 +453,207 @@
           "doc_slug": "waynedo26-104594-do-filed-01answerandcounterclaim2026-04-15",
           "page": 1,
           "quote": "Case No. 26-104594-DO"
+        }
+      ],
+      "references": []
+    },
+    {
+      "id": "proof-of-service-august-4-2026-noh",
+      "slug": "was-the-august-26-2026-hearing-notice-served",
+      "question": "Was the Consolidated Notice of Hearing for August 26, 2026 served on the plaintiff?",
+      "framing": "Filing 46 is a Proof of Service dated August 4, 2026. It states who served what, on whom, and for which hearing.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-46proofofservicenohinperson2026-08-04",
+          "page": 1,
+          "quote": "I, Conrad Alan Rockenhaus, Defendant appearing pro se in the above-captioned matter, hereby certify under penalty of perjury that on August 4, 2026, I served a true and correct copy of Defendant's Consolidated Notice of Hearing"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-46proofofservicenohinperson2026-08-04",
+          "page": 1,
+          "quote": "setting all eleven of Defendant's motions for hearing before the Honorable Nicole N. Goodson on August 26, 2026 at 11:30 a.m., in person at the Coleman A. Young Municipal Center, 2 Woodward Avenue, Detroit, Michigan 48226, Courtroom of the Hon. Nicole N. Goodson, Room 1501"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-46proofofservicenohinperson2026-08-04",
+          "page": 1,
+          "quote": "upon Plaintiff, Adrienne Marjorie Rockenhaus, who is self-represented"
+        }
+      ],
+      "references": []
+    },
+    {
+      "id": "release-date-and-ppo-service-march-2-2026",
+      "slug": "when-does-the-answer-say-defendant-was-released-from-federal-custody",
+      "question": "When does Defendant's Answer say Conrad Rockenhaus was released from federal custody, and what was served that day?",
+      "framing": "In answering paragraph 9 of the complaint, the Answer admits a release date and that an ex parte PPO was served the same day. It is a pleading admission, not a court finding.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-01answerandcounterclaim2026-04-15",
+          "page": 2,
+          "quote": "Defendant admits that he was released from federal custody on March 2, 2026, and that an ex parte Personal Protection Order was served on that date."
+        }
+      ],
+      "references": []
+    },
+    {
+      "id": "defendant-address-of-record-july-2026",
+      "slug": "what-address-of-record-does-the-july-2-2026-notice-state-for-defendant",
+      "question": "What address of record does Defendant's July 2, 2026 Notice of Change of Address state?",
+      "framing": "Filing 38 is a notice of change of address. The quotations below are the address and email of record as filed.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-38noticeofchangeofaddressdo2026-07-02",
+          "page": 1,
+          "quote": "DEFENDANT'S NOTICE OF CHANGE OF ADDRESS"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-38noticeofchangeofaddressdo2026-07-02",
+          "page": 1,
+          "quote": "Address of Record: Conrad Alan Rockenhaus 116 Neely Road Hewitt, Texas 76643"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-38noticeofchangeofaddressdo2026-07-02",
+          "page": 1,
+          "quote": "Email Address of Record: conrad@rockenhaus.net"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-38noticeofchangeofaddressdo2026-07-02",
+          "page": 1,
+          "quote": "This Notice supersedes any prior address of record for Defendant"
+        }
+      ],
+      "references": []
+    },
+    {
+      "id": "eleven-motions-full-list-filing-45",
+      "slug": "what-are-the-eleven-motions-listed-on-the-august-26-2026-notice-of-hearing",
+      "question": "What are the eleven motions listed on the August 26, 2026 Consolidated Notice of Hearing?",
+      "framing": "Filing 45 enumerates the eleven motions by title and states when each was calendared by accepted ePraecipe. The list is the court's hearing notice content, not a ruling on any motion.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-45consolidatednoticeofhearinginperson8-262026-08-04",
+          "page": 1,
+          "quote": "1. Motion for Leave to Exceed Interrogatories; 2. Motion for Issuance of Subpoenas; 3. Omnibus Motion (Preservation of Evidence; Financial Disclosure; rockenhaus.com Domain Temporary Restraining Order); 4. Motion for Temporary Restraining Order Prohibiting Dissipation of the USAA Account Receiving Diverted Federal Veterans and Social Security Benefits; 5. Motion to Restrict Access to Protected Personal Identifying Information on Filed Exhibits and to File Redacted Replacement Exhibits; 6. Motion for Return of Personal Property, Restoration of Electronic Account Access, Inventory and Accounting, and Court-Supervised Retrieval Mechanism; 7. Motion for Preservation Order and Order Prohibiting Spoliation of Evidence; 8. Motion for Leave to File First Amended Counterclaim; 9. Motion to Determine Sufficiency of Answers to Requests for Admissions, to Compel Responses to Interrogatories and Requests for Production of Documents, and for Discovery Sanctions; 10. Motion for Default Judgment on Counterclaim; and 11. Motion to Inquire into Plaintiff's Capacity and to Appoint a Guardian Ad Litem for Plaintiff."
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-45consolidatednoticeofhearinginperson8-262026-08-04",
+          "page": 1,
+          "quote": "Motions 1-10 were calendared for the above date and time by ePraecipe accepted by the Court on June 10, 2026."
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-45consolidatednoticeofhearinginperson8-262026-08-04",
+          "page": 1,
+          "quote": "Motion 11 was calendared for the above date and time by ePraecipe accepted by the Court on July 28, 2026."
+        }
+      ],
+      "references": []
+    },
+    {
+      "id": "first-amended-counterclaim-section-headings",
+      "slug": "what-subjects-does-the-first-amended-counterclaim-organize-under",
+      "question": "What subjects does the First Amended Counterclaim organize under section headings?",
+      "framing": "The First Amended Counterclaim (Filing 34) uses numbered section headings. The quotations below are those headings as filed. They describe how the pleading is organized; they are not findings by the court.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-34firstamendedcounterclaimnotarized2026-05-17",
+          "page": 1,
+          "quote": "I. PARTIES AND JURISDICTION"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-34firstamendedcounterclaimnotarized2026-05-17",
+          "page": 1,
+          "quote": "II. GROUNDS FOR DIVORCE"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-34firstamendedcounterclaimnotarized2026-05-17",
+          "page": 2,
+          "quote": "III. FINANCIAL MISCONDUCT, UNAUTHORIZED ACCESS TO FEDERAL ACCOUNTS"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-34firstamendedcounterclaimnotarized2026-05-17",
+          "page": 2,
+          "quote": "IV. FINANCIAL MISCONDUCT, SSA REPRESENTATIVE PAYEE FRAUD"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-34firstamendedcounterclaimnotarized2026-05-17",
+          "page": 2,
+          "quote": "V. PREMEDITATED PLAN TO RENDER COUNTER-PLAINTIFF HOMELESS AND DESTITUTE"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-34firstamendedcounterclaimnotarized2026-05-17",
+          "page": 3,
+          "quote": "VI. RETALIATORY PPO AND ABUSE OF PROCESS"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-34firstamendedcounterclaimnotarized2026-05-17",
+          "page": 5,
+          "quote": "VII. INVASION OF PRIVACY AND WEAPONIZATION OF PRIVILEGED INFORMATION"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-34firstamendedcounterclaimnotarized2026-05-17",
+          "page": 5,
+          "quote": "VIII. FALSE STATEMENTS TO LAW ENFORCEMENT"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-34firstamendedcounterclaimnotarized2026-05-17",
+          "page": 6,
+          "quote": "IX. PROPERTY AND PERSONAL EFFECTS"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-34firstamendedcounterclaimnotarized2026-05-17",
+          "page": 6,
+          "quote": "X. CANNABYTES, LLC: BUSINESS INTEREST AND ACCOUNTING"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-34firstamendedcounterclaimnotarized2026-05-17",
+          "page": 7,
+          "quote": "XI. ACTIVE FEDERAL AND STATE INVESTIGATIONS"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-34firstamendedcounterclaimnotarized2026-05-17",
+          "page": 7,
+          "quote": "XII. COUNTER-PLAINTIFF OFFERED RESOLUTION"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-34firstamendedcounterclaimnotarized2026-05-17",
+          "page": 9,
+          "quote": "XIII. COORDINATED MULTI-PLATFORM HARASSMENT OPERATION"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-34firstamendedcounterclaimnotarized2026-05-17",
+          "page": 14,
+          "quote": "XIV. CONVERSION (COMMON-LAW AND STATUTORY UNDER MCL 600.2919A)"
+        }
+      ],
+      "references": []
+    },
+    {
+      "id": "who-presides-august-26-hearing",
+      "slug": "which-judge-is-named-on-the-august-26-2026-notice-of-hearing",
+      "question": "Which judge is named on the August 26, 2026 Consolidated Notice of Hearing?",
+      "framing": "Filing 45 names the judge and courtroom for the in-person hearing. That is notice language, not a ruling.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-45consolidatednoticeofhearinginperson8-262026-08-04",
+          "page": 1,
+          "quote": "will be brought on for hearing before the Honorable Nicole N. Goodson, Third Judicial Circuit Court for the County of Wayne, Family Division, on August 26, 2026 at 11:30 a.m., or as soon thereafter as the parties may be heard"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-45consolidatednoticeofhearinginperson8-262026-08-04",
+          "page": 1,
+          "quote": "in the courtroom of the Honorable Nicole N. Goodson, Room 1501"
         }
       ],
       "references": []
