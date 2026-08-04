@@ -295,7 +295,6 @@ def seo_document_keywords(heading: str, case: dict, filename: str) -> str:
             "August 26 2026",
             "August 26 2026 11:30 AM",
             "Wayne County divorce",
-            "Zoom hearing",
         ])
     if re.search(r"8[-_]?26", lower_name) or "august 26" in lower_heading:
         parts.extend([
@@ -308,9 +307,18 @@ def seo_document_keywords(heading: str, case: dict, filename: str) -> str:
             "consolidated notice of hearing",
             "NOH",
             "August 26 2026",
-            "Zoom hearing",
-            "ten motions",
+            "eleven motions",
         ])
+    if "in_person" in lower_name or "in person" in lower_heading:
+        parts.extend([
+            "in person hearing",
+            "CAYMC",
+            "2 Woodward Avenue Detroit",
+            "Room 1501",
+            "Hon Nicole N Goodson",
+        ])
+    elif "zoom" in lower_name or "zoom" in lower_heading:
+        parts.append("Zoom hearing")
     if "gal" in lower_name or "guardian ad litem" in lower_heading:
         parts.extend([
             "guardian ad litem",

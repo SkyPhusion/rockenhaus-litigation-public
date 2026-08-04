@@ -8,7 +8,9 @@ This repository builds and deploys that site. Visitors, search engines, and cita
 
 Maintained pro se by Conrad Alan Rockenhaus for active state-court litigation in Michigan.
 
-Rendered filings and discovery PDFs for each active matter are synced automatically from a separate private source repository on each successful CI build. Other paths (`opposing/`, `orders/`, `filed/Exhibits/`, etc.) are maintained manually.
+Filed/served PDFs are published here **manually** after PII review (the private
+source repository no longer auto-syncs). Other paths (`opposing/`, `orders/`,
+`filed/Exhibits/`, etc.) are also maintained by hand.
 
 ## Deploy target: Cloudflare Pages
 
