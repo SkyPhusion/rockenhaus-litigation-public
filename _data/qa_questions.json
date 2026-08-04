@@ -657,6 +657,84 @@
         }
       ],
       "references": []
+    },
+    {
+      "id": "noh-service-methods-august-4-2026",
+      "slug": "how-was-the-august-26-2026-hearing-notice-served",
+      "question": "How does Filing 46 say the August 26, 2026 hearing notice was served?",
+      "framing": "The Proof of Service lists the service methods. That is a certificate of service, not a ruling on any motion.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-46proofofservicenohinperson2026-08-04",
+          "page": 1,
+          "quote": "by the following methods: (i) Electronic mail to adrienne@cannabytes.net; (ii) First Class U.S. Mail, postage prepaid, to her last known residential address at 26695 Ross Drive, Redford, Michigan 48239, with no representation as to current occupancy; and (iii) First Class U.S. Mail, postage prepaid, to her private mailbox address of record used in related proceedings at 15900 W. 10 Mile Road, Suite 211, PMB 1046, Southfield, Michigan 48075"
+        }
+      ],
+      "references": []
+    },
+    {
+      "id": "gal-epraecipe-accepted-july-28-2026",
+      "slug": "what-does-the-accepted-gal-epraecipe-show-for-the-august-26-2026-hearing",
+      "question": "What does the accepted guardian ad litem ePraecipe show for the August 26, 2026 hearing?",
+      "framing": "The court-accepted ePraecipe for the capacity/GAL motion sets a date and time. A later Consolidated Notice of Hearing (Filing 45) states the appearance is in person and supersedes Zoom instructions.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-41kepraecipeacceptedgalcapacity8-26hearing2026-07-28",
+          "page": 1,
+          "quote": "TO APPOINT A GUARDIAN AD LITEM FOR PLAINTIFF"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-41kepraecipeacceptedgalcapacity8-26hearing2026-07-28",
+          "page": 1,
+          "quote": "Judge Nicole N. Goodson 53653 08/26/2026 11:30 AM"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-41kepraecipeacceptedgalcapacity8-26hearing2026-07-28",
+          "page": 1,
+          "quote": "NOTE : ALL HEARINGS ARE CONDUCTED VIA ZOOM UNLESS OTHERWISE ORDERED BY THE COURT."
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-45consolidatednoticeofhearinginperson8-262026-08-04",
+          "page": 1,
+          "quote": "This Notice amends and supersedes the Zoom appearance instructions set forth in Defendant's Consolidated Notice of Hearing filed August 3, 2026."
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-45consolidatednoticeofhearinginperson8-262026-08-04",
+          "page": 1,
+          "quote": "APPEARANCE: This hearing will be conducted in person at the Coleman A. Young Municipal Center (CAYMC), 2 Woodward Avenue, Detroit, Michigan 48226, in the courtroom of the Honorable Nicole N. Goodson, Room 1501."
+        }
+      ],
+      "references": []
+    },
+    {
+      "id": "answer-counterclaim-document-title",
+      "slug": "what-is-the-title-of-defendants-april-15-2026-responsive-pleading",
+      "question": "What is the title of Defendant's April 15, 2026 responsive pleading in Case 26-104594-DO?",
+      "framing": "The caption of Filing 01 states the document title and that Defendant appears pro se.",
+      "framing_author": "Conrad Alan Rockenhaus",
+      "record_gap": null,
+      "citations": [
+        {
+          "doc_slug": "waynedo26-104594-do-filed-01answerandcounterclaim2026-04-15",
+          "page": 1,
+          "quote": "DEFENDANT'S ANSWER TO VERIFIED COMPLAINT FOR DIVORCE, AFFIRMATIVE DEFENSES, AND COUNTERCLAIM"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-01answerandcounterclaim2026-04-15",
+          "page": 1,
+          "quote": "NOW COMES Defendant, Conrad Alan Rockenhaus, appearing pro se"
+        },
+        {
+          "doc_slug": "waynedo26-104594-do-filed-01answerandcounterclaim2026-04-15",
+          "page": 1,
+          "quote": "Case No. 26-104594-DO"
+        }
+      ],
+      "references": []
     }
   ],
   "_answer_support_note": "A question is supported by `citations` (verbatim, verified against a native-text page) or by `references` (the filing and page, named and linked, without reproducing its words). References exist because some pages of this record are readable only via machine transcription: OCR makes those filings findable and describable, but it interleaves margin text into body lines, so quoting it would put words in a court document that the document does not contain. scripts/verify-citations.mjs refuses a quoted citation to an OCR page, and the schema refuses a question with neither citations nor references. Death-hoax claim letters retained in VA EMMS are described on /is-conrad-rockenhaus-dead/ but are not quoted here until public PDF publication after PII review. AAdvantage and puffer-coat hub sections remain narrative with document/FAQ links until native-text quotes are available."
