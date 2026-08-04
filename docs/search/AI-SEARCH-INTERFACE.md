@@ -27,9 +27,9 @@ A live search widget has to hold that claim, not weaken it.
 
 | | |
 | --- | ---: |
-| documents | 105 |
-| corpus pages | 440 |
-| native text, quotable | 404 |
+| documents | 110 |
+| corpus pages | 448 |
+| native text, quotable | 412 |
 | OCR text, never quotable | 29 |
 | no text layer at all | 7 |
 
@@ -54,7 +54,7 @@ filing looks like.
 <doc_slug>/p002.txt
 ```
 
-440 objects across 105 documents. Do not concatenate documents into one object,
+448 objects across 110 documents. Do not concatenate documents into one object,
 and do not let a chunker straddle a page boundary: a passage spanning two pages
 cannot be cited to either without being wrong about one of them. A 1024-token
 chunk holds a full page here, so the retrieval unit and the citation unit agree.
@@ -80,7 +80,7 @@ disagree with the pre-rendered pages.
 ## 5. `/citations.json`, the derivation table
 
 Built at build time from `_corpus/manifest.json` by `scripts/build-citations.mjs`
-and served at `https://rockenhaus.net/citations.json`. 105 entries, **5.8 KB
+and served at `https://rockenhaus.net/citations.json`. 110 entries, **6.2 KB
 gzipped**. Fetch once and hold; rendering a citation never needs a second round
 trip, and a live citation and a pre-rendered one cannot drift because both read
 this table.
@@ -152,7 +152,7 @@ curated links in the data, which is a content task, not a derivation.
 
 | `text_source` | pages | searchable | quotable | how a hit must render |
 | --- | ---: | --- | --- | --- |
-| `native` | 404 | yes | **yes** | quotation, with the citation |
+| `native` | 412 | yes | **yes** | quotation, with the citation |
 | `ocr` | 29 | yes | **NO** | reference only: name the filing and page, do not reproduce the words |
 | `none` | 7 | no, there is no text | no | cannot appear as a hit at all |
 
@@ -210,7 +210,7 @@ Generated output is framed visibly as machine-generated.
 ## 11. Build order
 
 1. `/citations.json` at build time. **Done and live.**
-2. Upload the 440 corpus pages to object storage, one object per page, keyed
+2. Upload the 448 corpus pages to object storage, one object per page, keyed
    `<doc_slug>/pNNN.txt`. Not the frontend's task.
 3. An AI Search instance over that bucket, returning key plus matched text.
    Not the frontend's task.

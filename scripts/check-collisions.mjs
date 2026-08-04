@@ -31,11 +31,12 @@ export const ASTRO_OWNED_PREFIXES = ["evidence/", "answers/"];
  *   404.html       the site had no 404 page at all; every unknown path answered
  *                  200 with the homepage
  *   _redirects     Cloudflare Pages redirect rules
+ *   _headers       Cloudflare Pages header rules (HTML TTL, security headers)
  *   citations.json the citation lookup table the search surface renders from,
  *                  built from _corpus/manifest.json into public/ and copied to
  *                  the dist root by Astro
  */
-export const ASTRO_OWNED_FILES = ["404.html", "_redirects", "citations.json"];
+export const ASTRO_OWNED_FILES = ["404.html", "_redirects", "_headers", "citations.json"];
 
 export function walk(dir, base = dir, out = []) {
   if (!existsSync(dir)) return out;
