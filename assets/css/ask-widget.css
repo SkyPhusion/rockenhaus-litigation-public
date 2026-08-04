@@ -1,0 +1,122 @@
+/* AI Search ask widget (from @skyphusion/search-mcp public/ask-widget.css).
+   Themed to rockenhaus.net paper/ink tokens. */
+
+.vjask {
+  --vjask-fg: var(--ink, #1a1f2e);
+  --vjask-muted: var(--ink-muted, #4a5568);
+  --vjask-bg: var(--paper-elevated, #fffdf9);
+  --vjask-border: rgba(26, 31, 46, 0.14);
+  --vjask-accent: var(--accent, #2c4a6e);
+  --vjask-radius: 8px;
+  font-family: inherit;
+  color: var(--vjask-fg);
+}
+
+.vjask-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.vjask-label {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.vjask-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.vjask-input {
+  flex: 1;
+  min-width: 12rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: var(--vjask-radius);
+  border: 1px solid var(--vjask-border);
+  background: var(--vjask-bg);
+  color: var(--vjask-fg);
+  font: inherit;
+}
+
+.vjask-input:focus {
+  outline: none;
+  border-color: var(--vjask-accent);
+}
+
+.vjask-btn {
+  padding: 0.7rem 1.2rem;
+  border-radius: var(--vjask-radius);
+  border: 1px solid transparent;
+  background: var(--vjask-accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.vjask-btn:disabled {
+  opacity: 0.55;
+  cursor: progress;
+}
+
+.vjask-answer {
+  white-space: pre-wrap;
+  line-height: 1.7;
+  min-height: 1.5rem;
+  color: var(--vjask-fg);
+  padding: 0.75rem 0;
+}
+
+.vjask-sources {
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 0 0;
+  border-top: 1px solid var(--vjask-border);
+  font-size: 0.85rem;
+  color: var(--vjask-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.9rem;
+}
+
+.vjask-sources-title {
+  width: 100%;
+  font-weight: 700;
+  color: var(--vjask-fg);
+}
+
+.vjask-sources a {
+  color: var(--vjask-accent);
+}
+
+.vjask-source-meta {
+  color: var(--vjask-muted);
+}
+
+/* Page shell around the widget */
+.ask-the-record {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(26, 31, 46, 0.12);
+  border-radius: 10px;
+  background: var(--paper-elevated, #fffdf9);
+}
+
+.ask-the-record__title {
+  margin: 0 0 0.35rem;
+  font-size: 1.25rem;
+}
+
+.ask-the-record__intro {
+  margin: 0 0 1rem;
+  color: var(--ink-muted, #4a5568);
+  max-width: 42rem;
+}
+
+.ask-the-record__note {
+  margin: 0.85rem 0 0;
+  font-size: 0.9rem;
+  color: var(--ink-muted, #4a5568);
+}

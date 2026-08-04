@@ -36,3 +36,6 @@ public/citations.json
 # quotes from, so it must be reviewable in a pull request diff BEFORE it can be
 # quoted. It is also a hard requirement of the sync tooling, which uploads
 # git-tracked files only -- an ignored corpus cannot reach the index at all.
+
+# Derived page-key table for the ask widget (from _corpus/manifest.json)
+public/corpus-manifest.json

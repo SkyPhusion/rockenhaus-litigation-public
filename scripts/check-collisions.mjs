@@ -36,7 +36,14 @@ export const ASTRO_OWNED_PREFIXES = ["evidence/", "answers/"];
  *                  built from _corpus/manifest.json into public/ and copied to
  *                  the dist root by Astro
  */
-export const ASTRO_OWNED_FILES = ["404.html", "_redirects", "_headers", "citations.json"];
+export const ASTRO_OWNED_FILES = [
+  "404.html",
+  "_redirects",
+  "_headers",
+  "citations.json",
+  // Page-key → title/URL table for the search-mcp ask widget (from _corpus/manifest).
+  "corpus-manifest.json",
+];
 
 export function walk(dir, base = dir, out = []) {
   if (!existsSync(dir)) return out;

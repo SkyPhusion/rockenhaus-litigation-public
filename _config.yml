@@ -7,7 +7,9 @@ description: >-
 tagline: "Official Michigan court record"
 url: "https://rockenhaus.net"
 baseurl: ""
-lang: en_US
+# BCP 47 language tag for <html lang>. Underscore forms (en_US) fail PageSpeed /
+# Lighthouse "valid lang attribute". Use hyphen: en-US.
+lang: en-US
 
 # Google Search Console: owner verified via DNS on rockenhaus.net (no HTML tag).
 # Bing Webmaster Tools synced with Search Console.
@@ -20,6 +22,16 @@ twitter:
 
 author:
   name: Conrad Alan Rockenhaus
+
+# AI Search (search-mcp) browser widget. Corpus is rockenhaus-litigation-public
+# `_corpus/` only -- separate Worker/host from search.vivijure.com (vivijure docs).
+# Turnstile sitekey is empty until a CF Turnstile widget is created for rockenhaus.net
+# and the search Worker secret is set; without it the client still loads (server skips
+# verification when TURNSTILE_SECRET is unset).
+ask_search:
+  endpoint: "https://search.rockenhaus.net/ask"
+  turnstile_sitekey: ""
+  manifest: "/corpus-manifest.json"
 
 plugins:
   - jekyll-seo-tag
@@ -63,6 +75,19 @@ exclude:
   - Gemfile.lock
   - vendor/
   - retractions/*.json
+  # Astro half (evidence/answers). Frontmatter is not Jekyll YAML; scanning it
+  # fails the site build ("mapping values are not allowed").
+  - src/
+  - node_modules/
+  - dist/
+  - public/
+  - package.json
+  - package-lock.json
+  - tsconfig.json
+  - astro.config.mjs
+  - vitest.config.ts
+  - tests/
+  - docs/
 
 markdown: kramdown
 kramdown:

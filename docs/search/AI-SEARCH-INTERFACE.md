@@ -9,7 +9,11 @@ everything you need is here. Figures are from the corpus as it stands, not from
 an earlier draft, and where something is NOT supported that is stated rather
 than left to be discovered.
 
-Status: the contract is settled and the rulings are in. The widget is not built.
+Status: the contract is settled and the rulings are in. The **browser widget is
+installed** on rockenhaus.net (`/ask/`, home, `/answers/`); it posts to
+`https://search.rockenhaus.net/ask` and cites via `/corpus-manifest.json`. The
+search Worker + AI Search index over `_corpus/` remain the operator deploy step
+(separate from `search.vivijure.com`).
 
 ## 1. What the site is, in one paragraph
 
@@ -211,11 +215,12 @@ Generated output is framed visibly as machine-generated.
 
 1. `/citations.json` at build time. **Done and live.**
 2. Upload the 448 corpus pages to object storage, one object per page, keyed
-   `<doc_slug>/pNNN.txt`. Not the frontend's task.
+   `<doc_slug>/pNNN.txt`. Not the frontend's task (search-mcp corpus-sync).
 3. An AI Search instance over that bucket, returning key plus matched text.
-   Not the frontend's task.
-4. The widget. Frontend, gated on nothing now; the rulings in sections 6, 8, 9
-   and 10 are settled.
+   Not the frontend's task (search.rockenhaus.net Worker).
+4. The widget. **Installed** (`assets/js/ask-widget.js`, include
+   `ask-the-record`, pages `/ask/`, home, `/answers/`). Needs live endpoint +
+   optional Turnstile sitekey in `_config.yml` (`ask_search`).
 
 Steps 2 and 3 do not block anything else: every `/answers/` page is static HTML
 built from verified citations, which is what ranks. A client-rendered widget does

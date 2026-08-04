@@ -1,0 +1,41 @@
+---
+// Browser AI Search widget (search-mcp ask-widget). Corpus is the court-record
+// `_corpus/` via a dedicated search host, not search.vivijure.com.
+//
+// Endpoint and Turnstile sitekey match _config.yml ask_search until Astro gains
+// its own config file for this.
+
+const endpoint = "https://search.rockenhaus.net/ask";
+const turnstileSitekey = ""; // set when CF Turnstile is created for rockenhaus.net
+const manifest = "/corpus-manifest.json";
+---
+
+<section class="ask-the-record" id="ask" aria-labelledby="ask-the-record-title">
+  <h2 class="ask-the-record__title" id="ask-the-record-title">Ask the court record</h2>
+  <p class="ask-the-record__intro">
+    Search the filed Michigan court PDFs with AI Search. Answers stream from the
+    indexed corpus; sources link to the document and page. This is not legal advice
+    and does not replace reading the filing.
+  </p>
+  <div id="rockenhaus-ask"></div>
+  <p class="ask-the-record__note">
+    Prefer a pre-verified quotation when one exists:
+    <a href="/answers/">Answers from the record</a>. Generated answers cite the
+    corpus; check the linked page before relying on them.
+  </p>
+</section>
+<link rel="stylesheet" href="/assets/css/ask-widget.css" />
+{turnstileSitekey ? (
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+) : null}
+<script
+  defer
+  src="/assets/js/ask-widget.js"
+  data-endpoint={endpoint}
+  data-target="#rockenhaus-ask"
+  data-label="Ask the court record"
+  data-placeholder="e.g. When is the August 26 hearing and is it in person?"
+  data-manifest={manifest}
+  data-empty-text="Nothing in the indexed court-record corpus addresses that."
+  data-sitekey={turnstileSitekey || undefined}
+></script>
