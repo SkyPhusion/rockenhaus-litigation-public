@@ -30,7 +30,7 @@ author:
 # verification when TURNSTILE_SECRET is unset).
 ask_search:
   endpoint: "https://search.rockenhaus.net/ask"
-  turnstile_sitekey: ""
+  turnstile_sitekey: "0x4AAAAAAEGVUMRWEHFOJbQm"
   manifest: "/corpus-manifest.json"
 
 plugins:
