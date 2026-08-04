@@ -27,7 +27,9 @@ Short procedure for landing a new filed/served PDF on rockenhaus.net.
 6. **Merge** when green. Pages deploy runs on `main`.
 7. **Spot-check** apex + alias (`rockenhaus.net` and `litigation.rockenhaus.net`);
    deploy purges both.
-8. **Search index** (if corpus changed):
+8. **Search index** (if corpus changed): push to `main` with `_corpus/**` changes
+   fires `.github/workflows/notify-corpus-sync.yml` when org secret
+   `SEARCH_DISPATCH_TOKEN` is available (soft-skips if not). Manual fallback:
    ```bash
    # from search-mcp, with rockenhaus R2 creds + targets entry
    node scripts/sync.mjs rockenhaus --no-github-verify
