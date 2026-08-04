@@ -7,7 +7,9 @@ description: >-
 tagline: "Official Michigan court record"
 url: "https://rockenhaus.net"
 baseurl: ""
-lang: en_US
+# BCP 47 language tag for <html lang>. Underscore forms (en_US) fail PageSpeed /
+# Lighthouse "valid lang attribute". Use hyphen: en-US.
+lang: en-US
 
 # Google Search Console: owner verified via DNS on rockenhaus.net (no HTML tag).
 # Bing Webmaster Tools synced with Search Console.
