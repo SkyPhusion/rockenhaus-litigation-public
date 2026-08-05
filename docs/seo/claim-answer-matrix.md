@@ -46,7 +46,7 @@ Every public answer page quotes filed PDFs only (`scripts/verify-citations.mjs`)
 | --- | --- | --- |
 | Facebook "Dead Man's Switch" post | 34 First Amended Counterclaim p.11; 37c Jordan affidavit p.2 | [/answers/what-does-the-court-record-say-about-the-may-4-2026-facebook-dead-mans-switch-post/](/answers/what-does-the-court-record-say-about-the-may-4-2026-facebook-dead-mans-switch-post/) |
 | Withheld personal property / electronics | 08 Motion Return Personal Property | [/answers/what-does-the-motion-for-return-of-personal-property-ask-for/](/answers/what-does-the-motion-for-return-of-personal-property-ask-for/) |
-| Which accounts/devices | 08 p.2–3 | [/answers/which-electronic-accounts-does-the-property-motion-identify/](/answers/which-electronic-accounts-does-the-property-motion-identify/) |
+| Which accounts/devices | 08 p.2-3 | [/answers/which-electronic-accounts-does-the-property-motion-identify/](/answers/which-electronic-accounts-does-the-property-motion-identify/) |
 
 Hub: [/is-conrad-rockenhaus-dead/](/is-conrad-rockenhaus-dead/) links the Facebook and electronics sections to the answer pages above.
 

@@ -39,7 +39,7 @@ Private sources live under
 Public PDFs live under `wayne_do_26-104594-DO/filed/*.pdf`.
 
 **As of 2026-08-04:** every private numbered filing markdown that maps to a
-public PDF basename is **published** through **46** (incl. **41k**, **43–46**).
+public PDF basename is **published** through **46** (incl. **41k**, **43-46**).
 No private-only numbered filing gap detected by basename/`N_` prefix match.
 
 High-water mark on public:

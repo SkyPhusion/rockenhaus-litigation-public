@@ -87,9 +87,9 @@ Do **not** use a dynamic redirect rule from apex to subdomain; both hostnames se
 
 ### Search engine setup
 
-1. **Google Search Console** — Property `https://rockenhaus.net/` is owner-verified via DNS on `rockenhaus.net`. Keep `https://litigation.rockenhaus.net/` as a domain property or URL-prefix alias if already verified.
+1. **Google Search Console** -- Property `https://rockenhaus.net/` is owner-verified via DNS on `rockenhaus.net`. Keep `https://litigation.rockenhaus.net/` as a domain property or URL-prefix alias if already verified.
 2. Submit sitemap: `https://rockenhaus.net/sitemap.xml`
-3. **Bing Webmaster Tools** — Synced with Search Console; same sitemap (IndexNow runs automatically on deploy).
+3. **Bing Webmaster Tools** -- Synced with Search Console; same sitemap (IndexNow runs automatically on deploy).
 
 ### Hub pages
 
