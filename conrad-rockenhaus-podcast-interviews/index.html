@@ -28,7 +28,7 @@ breadcrumbs:
   <h2>YouTube accounts Conrad disputes</h2>
   {% for account in site.data.podcast_interviews.sockpuppet_accounts %}
   <article class="hub-entry">
-    <h3>{{ account.name }} ({{ account.platform }}) — disputed</h3>
+    <h3>{{ account.name }} ({{ account.platform }}) -- disputed</h3>
     <p>
       <strong>Presented as:</strong> {{ account.presented_as }}
       {% if account.handle %} · <strong>Handle:</strong> {{ account.handle }}{% endif %}
@@ -48,7 +48,7 @@ breadcrumbs:
       <li>
         <strong>{{ video.title }}</strong>
         {% if video.date %} ({{ video.date }}){% endif %}
-        {% if video.assertion %} — {{ video.assertion }}{% endif %}
+        {% if video.assertion %} -- {{ video.assertion }}{% endif %}
       </li>
       {% endfor %}
     </ul>
@@ -62,7 +62,7 @@ breadcrumbs:
   <p>
     Searching Google for <strong>Conrad Rockenhaus</strong> surfaces links like those below.
     Conrad Alan Rockenhaus asserts Adrienne Rockenhaus (@adezero) was the speaker or
-    promoter — not Conrad — and that she used his case for internet clout (retweets,
+    promoter -- not Conrad -- and that she used his case for internet clout (retweets,
     podcast offers) while publishing disinformation on
     <a href="{{ '/rockenhaus-com/' | relative_url }}">rockenhaus.com</a>,
     <a href="{{ '/lawflaws-com/' | relative_url }}">lawflaws.com</a>, and
@@ -111,7 +111,7 @@ breadcrumbs:
   <p>
     Filed Michigan court PDFs indexed at
     <a href="{{ site.data.parties.public_record.url }}">rockenhaus.net</a>
-    — not podcast interviews or rockenhaus.com — are Conrad Alan Rockenhaus's public court record.
+    -- not podcast interviews or rockenhaus.com -- are Conrad Alan Rockenhaus's public court record.
   </p>
   <ul>
     <li><a href="{{ '/all-documents/' | relative_url }}">All court filings</a></li>

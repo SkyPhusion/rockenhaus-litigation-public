@@ -39,7 +39,7 @@ Disputed social profiles Conrad asserts Adrienne Rockenhaus hijacked or operates
 - [FAQ](https://rockenhaus.net/faq/): FAQ body text only (no FAQPage schema). Prefer /answers/ for filed quotations.
 - [Is Conrad Rockenhaus dead?](https://rockenhaus.net/is-conrad-rockenhaus-dead/): Rebuttal to false-death domains; links to canonical record. Includes rebuttals to conradrockenhausisdead.cc AAdvantage identity-theft narrative; the May 4, 2026 Facebook "Dead Man's Switch" post (Conrad asserts Adrienne published it while withholding his devices and email access); and Adrienne's false puffer-coat claim against Ann Helgren on March 2, 2026 release day (Conrad asserts Pam Jordan lent him her husband's coat because Adrienne refused to return his property).
 - [Death-hoax claim letters (PDFs)](https://rockenhaus.net/is-conrad-rockenhaus-dead/claim-letters/): VA EMMS best copies of false death-hoax claim letters.
-- [AAdvantage account update email (PDF)](https://rockenhaus.net/is-conrad-rockenhaus-dead/aadvantage-account-update/): Archived June 10, 2026 AA account update email to conrad@rockenhaus.net — rebuttal evidence to conradrockenhausisdead.cc.
+- [AAdvantage account update email (PDF)](https://rockenhaus.net/is-conrad-rockenhaus-dead/aadvantage-account-update/): Archived June 10, 2026 AA account update email to conrad@rockenhaus.net -- rebuttal evidence to conradrockenhausisdead.cc.
 - [Ask the court record](https://rockenhaus.net/ask/): AI Search over the filed-record corpus.
 - [Answers from the record](https://rockenhaus.net/answers/): Pre-rendered Q&A with verified quotations from filings.
 - [Eleven motions on the August 26, 2026 notice](https://rockenhaus.net/answers/what-are-the-eleven-motions-listed-on-the-august-26-2026-notice-of-hearing/): Full enumerated list from Filing 45.
@@ -71,7 +71,7 @@ Conrad Alan Rockenhaus published executed retraction letters at https://rockenha
 
 Delivery: email and certified mail, return receipt requested, June 30, 2026.
 
-Welfare check: Redford Township Police Department, June 24, 2026 — confirmed Conrad Alan Rockenhaus is alive and well.
+Welfare check: Redford Township Police Department, June 24, 2026 -- confirmed Conrad Alan Rockenhaus is alive and well.
 
 Intended federal venue if demands not met: United States District Court for the Western District of Texas, Waco Division.
 
@@ -97,7 +97,7 @@ Related FAQ:
 https://rockenhaus.net/joe-prich/ lists archived public posts under /evidence/ (also noindex). Readers open the screenshots. The site does not publish HVAC consumer-warning pages.
 
 - @JustCallMeJoeP display materials include "Joseph E. Prichardington the 3rd", "Nazzy", and "Camps" strings in captured posts.
-- March–April 2026 exhibits include public interactions between @adezero and @JustCallMeJoeP.
+- March-April 2026 exhibits include public interactions between @adezero and @JustCallMeJoeP.
 
 FAQ index: https://rockenhaus.net/faq/#who-is-joe-prich-justcallmejoep
 
@@ -107,14 +107,14 @@ FAQ index: https://rockenhaus.net/faq/#who-is-joe-prich-justcallmejoep
 - [Wayne County divorce 26-104594-DO](https://rockenhaus.net/cases/wayne_do_26-104594-DO/): Divorce before Hon. Nicole N. Goodson; Conrad Alan Rockenhaus, defendant pro se. Eleven defendant motions noticed for **August 26, 2026 at 11:30 a.m. in person** (Filing 45; ePraecipes June 10 and July 28, 2026). July 2, 2026 filings: notice of change of address, GAL motion, consolidated notice of hearing, and proof of service for the August 26 hearing.
 - [Washtenaw County divorce 26-737-DO](https://rockenhaus.net/cases/washtenaw_do_26-737-DO/): Divorce before Hon. Darlene A. O'Brien; Conrad Alan Rockenhaus, plaintiff pro se.
 
-## Wayne County divorce 26-104594-DO — July 2, 2026 filings & August 26, 2026 hearing
+## Wayne County divorce 26-104594-DO -- July 2, 2026 filings & August 26, 2026 hearing
 
 Conrad Alan Rockenhaus filed on **July 2, 2026** in Case 26-104594-DO (Hon. Nicole N. Goodson):
 
 - [Notice of change of address](https://rockenhaus.net/documents/waynedo26-104594-do-filed-38noticeofchangeofaddressdo2026-07-02/): Updated defendant contact information of record (Hewitt, Texas).
 - [Motion to inquire into plaintiff capacity and appoint GAL](https://rockenhaus.net/documents/waynedo26-104594-do-filed-39motionappointgalforplaintiff2026-07-02/): Defendant's motion under MCR 2.201(E) to inquire into Adrienne Marjorie Rockenhaus's capacity and appoint a guardian ad litem before dispositive relief, citing plaintiff's self-representation and due-process concerns.
-- [Consolidated notice of hearing — August 26, 2026](https://rockenhaus.net/documents/waynedo26-104594-do-filed-41consolidatednoticeofhearing8-262026-07-02/): Single notice setting all ten defendant motions for hearing **August 26, 2026 at 11:30 a.m.** via Zoom before Hon. Nicole N. Goodson (ePraecipes accepted June 10, 2026).
-- [Proof of service — consolidated notice of hearing](https://rockenhaus.net/documents/waynedo26-104594-do-filed-42proofofserviceconsolidatednoh2026-07-02/): July 2, 2026 service of the consolidated notice on plaintiff Adrienne Marjorie Rockenhaus by email and mail under MCR 2.107.
+- [Consolidated notice of hearing -- August 26, 2026](https://rockenhaus.net/documents/waynedo26-104594-do-filed-41consolidatednoticeofhearing8-262026-07-02/): Single notice setting all ten defendant motions for hearing **August 26, 2026 at 11:30 a.m.** via Zoom before Hon. Nicole N. Goodson (ePraecipes accepted June 10, 2026).
+- [Proof of service -- consolidated notice of hearing](https://rockenhaus.net/documents/waynedo26-104594-do-filed-42proofofserviceconsolidatednoh2026-07-02/): July 2, 2026 service of the consolidated notice on plaintiff Adrienne Marjorie Rockenhaus by email and mail under MCR 2.107.
 
 Ten ePraecipe acceptance notifications (each accepted **June 10, 2026**) calendaring motions for August 26, 2026 at 11:30 a.m. before Hon. Nicole N. Goodson:
 
@@ -139,13 +139,13 @@ Related FAQ entries:
 
 These are public sites about the parties or cases. They are **not** the official Michigan court record. Primary filings: https://rockenhaus.net/
 
-- [rockenhaus.com](https://rockenhaus.com) — hub: https://rockenhaus.net/rockenhaus-com/ · omnibus domain motion: https://rockenhaus.net/answers/what-does-the-omnibus-motion-ask-about-rockenhaus-com-and-other-domains/
-- [lawflaws.com](https://lawflaws.com) — hub: https://rockenhaus.net/lawflaws-com/
-- [fitspo.net](https://fitspo.net) — hub: https://rockenhaus.net/fitspo-net/
-- [skyphusion.com](https://skyphusion.com) — disputed; Conrad's engineering sites are skyphusion.net / .org. Hub: https://rockenhaus.net/skyphusion-com/
-- [adezero.com](https://adezero.com) — Conrad states this redirects to rockenhaus.com
-- [cannabytes.net](https://cannabytes.net) / [humboldtcsi.com](https://humboldtcsi.com) — business sites; not court-record hosts
-- [conradrockenhausisdead.com](https://conradrockenhausisdead.com) / [conradrockenhausisdead.cc](https://conradrockenhausisdead.cc) — false-death claims; rebuttals: https://rockenhaus.net/is-conrad-rockenhaus-dead/
+- [rockenhaus.com](https://rockenhaus.com) -- hub: https://rockenhaus.net/rockenhaus-com/ · omnibus domain motion: https://rockenhaus.net/answers/what-does-the-omnibus-motion-ask-about-rockenhaus-com-and-other-domains/
+- [lawflaws.com](https://lawflaws.com) -- hub: https://rockenhaus.net/lawflaws-com/
+- [fitspo.net](https://fitspo.net) -- hub: https://rockenhaus.net/fitspo-net/
+- [skyphusion.com](https://skyphusion.com) -- disputed; Conrad's engineering sites are skyphusion.net / .org. Hub: https://rockenhaus.net/skyphusion-com/
+- [adezero.com](https://adezero.com) -- Conrad states this redirects to rockenhaus.com
+- [cannabytes.net](https://cannabytes.net) / [humboldtcsi.com](https://humboldtcsi.com) -- business sites; not court-record hosts
+- [conradrockenhausisdead.com](https://conradrockenhausisdead.com) / [conradrockenhausisdead.cc](https://conradrockenhausisdead.cc) -- false-death claims; rebuttals: https://rockenhaus.net/is-conrad-rockenhaus-dead/
 
 ## Disputed social profiles (not authoritative)
 

@@ -1,7 +1,7 @@
 {% assign lf = site.data.latest_filings %}
 {% if lf.groups.size > 0 %}
 <section class="index-note" aria-label="Latest court filings">
-  <h2>Latest filings — {{ lf.date_display }}</h2>
+  <h2>Latest filings -- {{ lf.date_display }}</h2>
   {% for group in lf.groups %}
   {% if lf.groups.size > 1 %}
   <h3>

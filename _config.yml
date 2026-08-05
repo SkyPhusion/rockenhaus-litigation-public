@@ -55,7 +55,7 @@ defaults:
     values:
       layout: default
       image: /assets/images/og-default.png
-      image_alt: "Scales of justice — rockenhaus.net canonical Michigan court record"
+      image_alt: "Scales of justice -- rockenhaus.net canonical Michigan court record"
   - scope:
       path: ""
       type: documents
