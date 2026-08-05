@@ -131,10 +131,6 @@ wrangler pages deploy _site --project-name=rockenhaus-litigation --branch=main
 
 ## Active matters
 
-- Wayne PPO 26-102221-PP (in addition to divorce cases below)
-
-## Active matters
-
 | Case | Court | Case Number | Role |
 |---|---|---|---|
 | Rockenhaus v. Rockenhaus (Divorce) | Wayne County Circuit Court (Third Judicial Circuit), Hon. Nicole N. Goodson | 26-104594-DO | Defendant, pro se |
